@@ -1,0 +1,28 @@
+# Following The Sheep
+
+**Type:** Short story — horror  
+**Source:** `Master_Volume_2`, lines 12–32  
+**Text:** complete and verbatim — nothing cut, condensed, or rewritten.  
+
+---
+Following The Sheep
+
+Shaun, a young man in his late 20s fresh out of college, was on the lookout for his full-time career. One day, he stumbled upon an application for a job opening titled, "Young interns wanted!" As he scrolled through the requirements, he was pleasantly surprised to find that he met all of them, even the ones that seemed out of place. Without judgment, he called and scheduled an interview for the next day.
+
+Afterward, Shaun decided to head home and prepare his résumé. The following morning, he woke up early and followed his usual routine: working out at 6:00, having breakfast at 7:00, and by 8:00, he was dressed in his finest suit, ready to leave the house. Shaun was a highly driven individual, and there was nothing he wouldn't do to succeed.
+
+Approaching the grand building's stairs, Shaun couldn't help but notice its enormous size, towering 66 floors with 666 offices. The number worried him and sent a shiver down his spine. "It's just a crazy coincidence," he reassured himself quietly as he pushed through the doors and entered the lobby.
+
+Inside, an emblem on the floor caught his attention—a snake devouring a lion. It was a logo unlike any he had seen before, piquing his curiosity. Suddenly, a receptionist called his name over the speakers. The speakers emitted a hissing sound before abruptly cutting off. Shaun went to the front desk, where he was handed a sheet to fill out before his interview. The questions on the sheet were unusual, delving into personal information like his birthplace and background. Though uncomfortable, he reluctantly filled it out.
+
+Returning the sheet to the receptionist, Shaun noticed her blank expression, as if something was amiss. She took the sheet from him and swiftly pricked his finger, collecting a blood sample. Startled, Shaun recoiled and demanded answers, his voice a mix of rage and fear. The receptionist remained impassive and pointed towards a set of large double doors. Hesitant, he approached them, realizing that aside from the receptionist, he was the only person in the building. Puzzled, he wondered why a large corporation would have so few people present.
+
+Entering the double doors, Shaun discovered an elevator waiting for him. Without him making a selection, the doors closed, and the elevator began ascending. A voice, previously absent, emerged in the back of his mind, soothing him with a sense of calm. It reassured him that he was heading in the right direction, though he couldn't quite explain its presence.
+
+Upon reaching the 66th floor, Shaun exited the elevator and found himself in a long, dimly lit hallway. Surprisingly, there were no windows, and the only light source came from flickering overhead LEDs. The eerie atmosphere should have unsettled him, but an inexplicable feeling urged him to continue. Shaun navigated the hallways and turned with a familiarity he couldn't explain, considering he had never been there before. After an eternity, he arrived at a pair of imposing double doors resembling something from a dungeon. To his surprise, they opened independently, but Shaun's reaction was accepting rather than fearing.
+
+Inside the room, there was a large desk made of cobblestone, elevated to Shaun's height. He sat on a small wooden chair that didn't fit him and waited... and waited... until finally, a tall man dressed in dark attire entered through the door. The dim lighting and the man's imposing height made it difficult for Shaun to discern his features. As the man approached the enormous desk, it seemed to shrink in comparison. "Let's get down to business," a deep, booming voice emanated from the figure across from Shaun. In response, Shaun nodded, feeling as if his motor skills were no longer under his control, moving slowly and surrendering to whatever his body did.
+
+It was some time before the man spoke again. "I am a follower of the great one, the one who will return to vanquish the weak and rule in darkness. Your kind has defiled his name, and for that, you shall pay with your soul. Do you understand?" Once more, Shaun nodded mechanically. "Good. I'm pleased that we have agreed." The man slid a document in front of Shaun, but due to the poor lighting, he couldn't read its contents, even if he had tried. It felt as if his mind had been wiped clean of all previous knowledge leading up to this moment. The cacophony of voices in his head grew louder, screaming in unison. Shaun attempted to sign the document but realized he had no pen. "Sir, may I have a pen?" he asked shakily. "Of course, how could I forget?" the man replied, reaching forward and grabbing Shaun's hand.
+
+Shaun wondered what was happening, but before he could react, the man swiftly produced a knife and sliced through Shaun's right index finger. Shocked, Shaun tried to scream as blood gushed from the wound. Finally snapping back to reality, he realized this was no job interview; it was a demonic ritual. He desperately tried to resist, to run, but his body refused to obey his commands. It felt as though he had lost control of himself, becoming a mere passenger in his own body. The screams of the voices forced their way into his mind once more, and he felt himself sinking deeper within himself. In a trance-like state, he dragged his bleeding finger across the blank space of the document. As he finished, the last remnants of his will faded away, and he became a servant in the dark lord's empire. The voice sounded distant, but Shaun knew without a doubt that it was none other than the devil himself. 
