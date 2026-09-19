@@ -1,3 +1,19 @@
+---
+title: "Past, Present, and Future"
+type: poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: mixed
+tense: present
+themes: [self-transformation, identity, groundedness, self-worth]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "5809–5859"
+attachments: []
+tags: [type/poem, mode/confessional-poetry, theme/self-transformation, theme/identity]
+---
+
 # Past, Present, and Future
 
 **Type:** Poem  

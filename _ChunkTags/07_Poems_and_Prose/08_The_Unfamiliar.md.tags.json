@@ -1,0 +1,17 @@
+{
+  "file": "07_Poems_and_Prose/08_The_Unfamiliar.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:1f5817d1d1cf48de",
+  "chunks": [
+    {"chunk_index": 1, "heading": "The Unfamiliar", "start_line": 4, "end_line": 37, "content_fingerprint": "sha256:16:6114a70549d36d37",
+      "plot_tags": ["claim-statement", "anaphoric-catalog"], "context_tags": ["transformation", "self-knowledge", "courage", "existential-dread"],
+      "mood_tags": ["unease", "wonder"], "motif_tags": ["threshold"],
+      "notes": "The chunk opens with a direct claim about crossing from ordinary into extraordinary, then runs parallel stanzas contrasting a safe, deadening cage with an unsettling but transformative unknown."},
+    {"chunk_index": 2, "heading": "The Unfamiliar", "start_line": 39, "end_line": 67, "content_fingerprint": "sha256:16:3fe6536dbd990147",
+      "plot_tags": ["rising-action", "aphoristic-landing"], "context_tags": ["transformation", "self-knowledge", "courage"],
+      "mood_tags": ["clarity", "hope"], "motif_tags": ["threshold", "witness-and-observer"],
+      "notes": "This chunk narrates the physical/sensory experience of crossing and closes with an explicit, aphoristic image of the former self watching from a distance, grateful to be left behind."}
+  ]
+}

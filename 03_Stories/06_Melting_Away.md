@@ -1,3 +1,19 @@
+---
+title: "Melting Away"
+type: story
+mode: horror-prose
+genre: [horror, true-crime, campus-horror]
+status: complete
+pov: third-limited
+tense: past
+themes: [predatory-manipulation, hazing, social-pressure, deception]
+archetypes: [the-predator, the-naive-newcomer]
+source_volume: Master_Volume_1
+source_lines: "5484-5522"
+attachments: []
+tags: [type/story, mode/horror-prose, theme/predatory-manipulation, theme/hazing, status/complete]
+---
+
 # Melting Away
 
 **Type:** Short story  

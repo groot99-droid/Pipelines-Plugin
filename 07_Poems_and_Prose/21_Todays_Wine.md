@@ -1,3 +1,19 @@
+---
+title: "Today's Wine"
+type: poem
+mode: unclassified
+genre: [didactic, aphoristic]
+status: complete
+pov: second-person
+tense: present
+themes: [impermanence, present-moment, mindfulness, memory]
+archetypes: []
+source_volume: Master_Volume_2
+source_lines: "91–108"
+attachments: []
+tags: [type/poem, mode/unclassified, theme/impermanence, theme/present-moment]
+---
+
 # Todays Wine
 
 **Type:** Poem  

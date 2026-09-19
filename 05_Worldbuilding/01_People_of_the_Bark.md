@@ -1,3 +1,19 @@
+---
+title: "People of the Bark"
+type: worldbuilding
+mode: unclassified
+genre: [whimsical-fantasy, micro-civilization, screen-treatment]
+status: outline
+pov: third-omniscient
+tense: present
+themes: [scale-and-perspective, cosmic-insignificance, meaning-in-smallness, mythic-worldview]
+archetypes: [whimsical-micro-civilization]
+source_volume: Master_Volume_1
+source_lines: "1711–1811"
+attachments: []
+tags: [type/worldbuilding, mode/unclassified, archetype/whimsical-micro-civilization, theme/cosmic-insignificance]
+---
+
 # People of the Bark
 
 **Type:** World concept / screen treatment — the Endless Trunk  

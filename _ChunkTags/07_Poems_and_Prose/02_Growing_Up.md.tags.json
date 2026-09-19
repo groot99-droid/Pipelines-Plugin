@@ -1,0 +1,33 @@
+{
+  "file": "07_Poems_and_Prose/02_Growing_Up.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:8f66f7f2220b5267",
+  "chunks": [
+    {
+      "chunk_index": 1,
+      "heading": "Growing Up",
+      "start_line": 4,
+      "end_line": 8,
+      "content_fingerprint": "sha256:16:dee753ce0d9aeb9b",
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "This chunk is only the file's metadata block (Type/Source/verbatim note plus a horizontal rule) -- no narrative or poetic content to ground any tag."
+    },
+    {
+      "chunk_index": 2,
+      "heading": "Growing Up",
+      "start_line": 12,
+      "end_line": 39,
+      "content_fingerprint": "sha256:16:72c762a068ca2f9f",
+      "plot_tags": ["anaphoric-catalog", "aphoristic-landing", "grief-processing"],
+      "context_tags": ["coming-of-age", "mortality", "grief", "memory-and-forgetting"],
+      "mood_tags": ["melancholy", "clarity"],
+      "motif_tags": ["inventory-and-catalogue"],
+      "notes": "The poem builds toward its close via a triadic anaphora (\"Make it beautiful, make it memorable, make it a... CRESCENDO!!!\"), lands repeated gnomic/aphoristic statements about death and life throughout (\"Death is neither sad nor happy...\"), processes grief for a father-figure through catalogued sensory textures (peanuts in Coke, baseball, dirt under his nails, raised beds), and frames all of this explicitly as a coming-of-age realization about mortality and the fading of ordinary habits into memory."
+    }
+  ]
+}

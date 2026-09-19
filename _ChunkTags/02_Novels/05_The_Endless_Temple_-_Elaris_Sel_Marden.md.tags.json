@@ -1,0 +1,17 @@
+{
+  "file": "02_Novels/05_The_Endless_Temple_-_Elaris_Sel_Marden.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:5f1a9a6ac811638d",
+  "chunks": [
+    {"chunk_index": 1, "heading": "The Endless Temple - Elaris Sel Marden", "start_line": 4, "end_line": 14, "content_fingerprint": "sha256:16:23160cbed23e4c85",
+      "plot_tags": ["opening-hook", "exposition"], "context_tags": ["isolation", "institutional-control"],
+      "mood_tags": ["wonder", "unease"], "motif_tags": ["inventory-and-catalogue", "threshold", "witness-and-observer"],
+      "notes": "This chunk opens with an abstract-darkness vignette then pivots to introduce Elaris and the living-book temple through dense expository catalogue detail (shelves, jars, cuckoo clock) and establishes his enshrined, lifelong overseer role."},
+    {"chunk_index": 2, "heading": "The Endless Temple - Elaris Sel Marden", "start_line": 16, "end_line": 22, "content_fingerprint": "sha256:16:2b8a67a27914ae40",
+      "plot_tags": ["exposition", "rising-action"], "context_tags": ["institutional-control", "ambition", "poverty-and-inequality", "self-knowledge"],
+      "mood_tags": ["longing", "defiance", "wonder"], "motif_tags": ["inheritance-object", "tide-and-water", "found-document-framing"],
+      "notes": "Elaris begins reading the book-within-a-book about Xandri, whose desire to surpass his dead explorer father and escape his tribe's rigid rules drives him to flee into the sand-wave desert alone at night."}
+  ]
+}

@@ -1,3 +1,19 @@
+---
+title: "Trips Are Like Exes"
+type: prose-poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: first-person
+tense: mixed
+themes: [self-discovery, impermanence, duality]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "2858–2863"
+attachments: []
+tags: [type/prose-poem, mode/confessional-poetry, theme/self-discovery, theme/impermanence, theme/duality, status/complete]
+---
+
 # Trips Are Like Exes
 
 **Type:** Prose poem  

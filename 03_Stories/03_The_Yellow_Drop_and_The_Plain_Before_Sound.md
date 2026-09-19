@@ -1,3 +1,19 @@
+---
+title: "The Yellow Drop and The Plain Before Sound"
+type: story
+mode: unclassified
+genre: [prose-poem, speculative]
+status: complete
+pov: mixed
+tense: present
+themes: [sensory-genesis, sound-as-creation, waking-and-dreaming, origin-myth]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "1249-1301"
+attachments: []
+tags: [type/story, mode/unclassified, theme/sensory-genesis, theme/sound-as-creation, status/complete]
+---
+
 # The Yellow Drop and The Plain Before Sound
 
 **Type:** Prose poem / origin-by-sound narrative  

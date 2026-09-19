@@ -1,3 +1,19 @@
+---
+title: "A 9-5 Could Kill You"
+type: book-concept
+mode: unclassified
+genre: [literary, psychological-drama, contemporary]
+status: outline
+pov: third-limited
+tense: present
+themes: [isolation, mental-illness, self-duplication, recovery]
+archetypes: [incel-antihero, doppelganger, self-duplicate]
+source_volume: Master_Volume_1
+source_lines: "5544–5566"
+attachments: []
+tags: [type/book-concept, mode/unclassified, theme/isolation, theme/mental-illness]
+---
+
 # A 9-5 Could Kill You
 
 **Type:** Novel outline in five parts  

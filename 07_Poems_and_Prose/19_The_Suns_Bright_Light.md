@@ -1,3 +1,19 @@
+---
+title: "The Sun's Bright Light"
+type: poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: first-person
+tense: present
+themes: [gratitude, nature, permanence, vitality]
+archetypes: []
+source_volume: Master_Volume_2
+source_lines: "74–83"
+attachments: []
+tags: [type/poem, mode/confessional-poetry, theme/gratitude, theme/nature]
+---
+
 # The Sun's Bright Light
 
 **Type:** Poem  

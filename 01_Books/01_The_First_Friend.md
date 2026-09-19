@@ -1,3 +1,19 @@
+---
+title: "The First Friend"
+type: book
+mode: essay-self-help
+genre: [self-help, nonfiction, philosophy]
+status: complete
+pov: second-person
+tense: present
+themes: [self-friendship, identity-as-architecture, authenticity-vs-persona, trust-and-repair, communion]
+archetypes: [the-climber, the-pleaser]
+source_volume: Master_Volume_1
+source_lines: "1–932"
+attachments: []
+tags: [type/book, mode/essay-self-help, theme/self-friendship, theme/identity-as-architecture, theme/authenticity-vs-persona, status/complete]
+---
+
 # The First Friend
 
 **Type:** Nonfiction book (complete) + Core Truths + development notes  

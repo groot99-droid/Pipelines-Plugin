@@ -1,0 +1,29 @@
+{
+  "file": "07_Poems_and_Prose/17_How_It_Is.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:526cd247313d8144",
+  "chunks": [
+    {"chunk_index": 1, "heading": "How It Is", "start_line": 4, "end_line": 26, "content_fingerprint": "sha256:16:2b6636ba2c1bb393",
+      "plot_tags": ["anaphoric-catalog", "opening-hook"], "context_tags": ["poverty-and-inequality", "self-deception", "coming-of-age"],
+      "mood_tags": ["melancholy", "clarity"], "motif_tags": ["inventory-and-catalogue", "witness-and-observer"],
+      "notes": "The child-narrator recounts internalizing her parents' judgment of a homeless man, then catalogs poverty/hardship/hunger/overdose/pain in a stacked anaphoric list."},
+    {"chunk_index": 2, "heading": "How It Is", "start_line": 28, "end_line": 35, "content_fingerprint": "sha256:16:273e42aaede355a4",
+      "plot_tags": ["rhetorical-question-pivot", "aphoristic-landing"], "context_tags": ["self-knowledge", "poverty-and-inequality"],
+      "mood_tags": ["clarity", "defiance"], "motif_tags": [],
+      "notes": "The narrator turns from childhood belief to the aphoristic realization that \"how it is\" isn't how it has to be, closing on a rhetorical \"So why?\""},
+    {"chunk_index": 3, "heading": "Because that's just the way it is", "start_line": 39, "end_line": 67, "content_fingerprint": "sha256:16:11b5f3898866466c",
+      "plot_tags": ["anaphoric-catalog", "rhetorical-question-pivot", "aphoristic-landing"], "context_tags": ["poverty-and-inequality", "institutional-indifference"],
+      "mood_tags": ["resignation", "defiance"], "motif_tags": ["witness-and-observer", "hands-and-grip"],
+      "notes": "Catalogs society's whispered excuses and averted eyes at hunger/suffering, then lands on the aphorism that indifference is a choice, not a given."},
+    {"chunk_index": 4, "heading": "Because that's just the way it is", "start_line": 69, "end_line": 98, "content_fingerprint": "sha256:16:dd9e551d52f11863",
+      "plot_tags": ["anaphoric-catalog", "rhetorical-question-pivot"], "context_tags": ["poverty-and-inequality", "institutional-indifference", "existential-dread"],
+      "mood_tags": ["despair", "resignation"], "motif_tags": ["hunger", "inventory-and-catalogue"],
+      "notes": "Catalogs the wealthy's feasting, hoarding, and inherited excess turning to hollow ennui, closing on rhetorical questions about abundance that never nourishes."},
+    {"chunk_index": 5, "heading": "Because that's just the way it is", "start_line": 100, "end_line": 102, "content_fingerprint": "sha256:16:612e10d302468210",
+      "plot_tags": ["aphoristic-landing"], "context_tags": ["poverty-and-inequality"],
+      "mood_tags": ["resignation"], "motif_tags": [],
+      "notes": "A three-line closing aphorism reframing \"how it is\" as something \"bought to be,\" landing the poem's final point."}
+  ]
+}

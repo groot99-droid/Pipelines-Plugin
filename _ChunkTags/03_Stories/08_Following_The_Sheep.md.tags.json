@@ -1,0 +1,69 @@
+{
+  "file": "03_Stories/08_Following_The_Sheep.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:76d00d3bbb80bf8a",
+  "chunks": [
+    {
+      "chunk_index": 1,
+      "heading": "Following The Sheep",
+      "start_line": 4,
+      "end_line": 13,
+      "content_fingerprint": "sha256:16:74a5d90c88d6d7b6",
+      "plot_tags": ["opening-hook", "exposition"],
+      "context_tags": ["ambition"],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Sets up Shaun's job search and driven routine with no horror elements yet, purely establishing situation."
+    },
+    {
+      "chunk_index": 2,
+      "heading": "Following The Sheep",
+      "start_line": 15,
+      "end_line": 19,
+      "content_fingerprint": "sha256:16:31f4a82157a35204",
+      "plot_tags": ["catalogued-incident", "incident-shelved-denial", "rising-action"],
+      "context_tags": ["institutional-control", "paranoia", "bodily-autonomy"],
+      "mood_tags": ["unease", "dread"],
+      "motif_tags": ["naming-and-labeling", "hands-and-grip"],
+      "notes": "Shaun mentally shelves a stack of discrete wrongnesses (the number, the emblem, the hissing speakers, the blood sample) while reassuring himself, the classic catalogued-escalation-with-denial pattern."
+    },
+    {
+      "chunk_index": 3,
+      "heading": "Following The Sheep",
+      "start_line": 21,
+      "end_line": 23,
+      "content_fingerprint": "sha256:16:b317701d6248073f",
+      "plot_tags": ["escalation-stacking", "rising-action"],
+      "context_tags": ["unreliable-reality", "bodily-autonomy"],
+      "mood_tags": ["unease", "dread"],
+      "motif_tags": ["threshold", "architecture"],
+      "notes": "The self-operating elevator, unexplained intruding voice, and independently-opening dungeon-like doors escalate the wrongness while Shaun's own agency and perception grow unreliable."
+    },
+    {
+      "chunk_index": 4,
+      "heading": "Following The Sheep",
+      "start_line": 25,
+      "end_line": 27,
+      "content_fingerprint": "sha256:16:36928419e78cd723",
+      "plot_tags": ["climax-beat", "victim-to-complicit-turn"],
+      "context_tags": ["institutional-control", "bodily-autonomy", "cyclical-violence"],
+      "mood_tags": ["dread", "resignation"],
+      "motif_tags": ["complicit-authority-figure", "hands-and-grip", "cursed-object"],
+      "notes": "The dark figure names his demonic allegiance and Shaun, his motor control already surrendered, nods and reaches to sign a document he cannot read."
+    },
+    {
+      "chunk_index": 5,
+      "heading": "Following The Sheep",
+      "start_line": 29,
+      "end_line": 29,
+      "content_fingerprint": "sha256:16:c67251b025b2bad2",
+      "plot_tags": ["victim-to-complicit-turn", "gut-punch-close", "climax-beat"],
+      "context_tags": ["bodily-autonomy", "body-horror", "cyclical-violence", "complicity"],
+      "mood_tags": ["dread", "despair", "resignation"],
+      "motif_tags": ["hands-and-grip", "cursed-object", "complicit-authority-figure"],
+      "notes": "Shaun's finger is cut and his blood forced onto the document against his will, and the closing line confirms his transformation into a servant of the devil, a non-rescued ending."
+    }
+  ]
+}

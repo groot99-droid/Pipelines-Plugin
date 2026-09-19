@@ -1,0 +1,17 @@
+{
+  "file": "04_Book_Concepts/03_Beetles_for_Brains.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:ff7434d62969e723",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Beetles for Brains", "start_line": 4, "end_line": 24, "content_fingerprint": "sha256:16:4629577d6bc3ec78",
+      "plot_tags": ["opening-hook", "catalogued-incident"], "context_tags": ["institutional-control", "body-horror", "unreliable-reality"],
+      "mood_tags": ["unease", "dread"], "motif_tags": [],
+      "notes": "The chunk opens the pitch by establishing the boot camp's hidden sleep-cycle regimen and lists a stacking series of symptoms alongside rumors of \"the bugs\" interfering with neural pathways, all under an institution that keeps the recruits in the dark."},
+    {"chunk_index": 2, "heading": "Beetles for Brains", "start_line": 26, "end_line": 36, "content_fingerprint": "sha256:16:4bd3e5571023d785",
+      "plot_tags": ["escalation-stacking", "closing-callback"], "context_tags": ["institutional-control", "institutional-indifference", "body-horror", "paranoia", "unreliable-reality"],
+      "mood_tags": ["dread", "unease"], "motif_tags": [],
+      "notes": "This chunk escalates the symptoms while the camp's institutional denial (\"everything is normal\") deepens recruits' paranoia, and the pitch closes by naming control/paranoia/something-taking-hold as its explicit thematic frame."}
+  ]
+}

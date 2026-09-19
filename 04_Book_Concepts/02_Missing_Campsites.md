@@ -1,3 +1,19 @@
+---
+title: "Missing Campsites"
+type: book-concept
+mode: horror-prose
+genre: [horror, slow-burn, cosmic-dread]
+status: outline
+pov: mixed
+tense: present
+themes: [erasure, unreliable-reality, isolation, cosmic-dread]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "978–1019"
+attachments: []
+tags: [type/book-concept, mode/horror-prose, theme/erasure, theme/unreliable-reality]
+---
+
 # Missing Campsites
 
 **Type:** Novel pitch / slow-burn horror  

@@ -1,3 +1,19 @@
+---
+title: "Beetles for Brains"
+type: book-concept
+mode: horror-prose
+genre: [horror, psychological, body-horror]
+status: outline
+pov: mixed
+tense: present
+themes: [bodily-invasion, control, paranoia, sleep-as-threat]
+archetypes: [green-recruit, unreliable-institution]
+source_volume: Master_Volume_1
+source_lines: "1020–1048"
+attachments: []
+tags: [type/book-concept, mode/horror-prose, theme/bodily-invasion, theme/control]
+---
+
 # Beetles for Brains
 
 **Type:** Novel pitch / psychological horror  

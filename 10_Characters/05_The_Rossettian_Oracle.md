@@ -1,3 +1,19 @@
+---
+title: "The Rossettian Oracle"
+type: character-profile
+mode: essay-self-help
+genre: [philosophical-fiction, aphorism, archetype-study]
+status: complete
+pov: third-omniscient
+tense: mixed
+themes: [love, beauty, mortality, transcendence]
+archetypes: [wandering-mystic-rossettian]
+source_volume: The_Rossettian_Oracle_Overview
+source_lines: "complete file"
+attachments: []
+tags: [type/character-profile, mode/essay-self-help, archetype/wandering-mystic-rossettian, theme/mortality]
+---
+
 # The Rossettian Oracle
 
 **Type:** Character / archetype profile  

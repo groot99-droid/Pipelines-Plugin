@@ -1,0 +1,17 @@
+{
+  "file": "08_Letters/01_Dear_Katie.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:b0d28f66a2d98f99",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Dear Katie", "start_line": 4, "end_line": 15, "content_fingerprint": "sha256:16:6eb5b5d85ccc478b",
+      "plot_tags": ["anaphoric-catalog", "betrayal-reckoning"], "context_tags": ["love", "bodily-autonomy", "self-deception"],
+      "mood_tags": ["complicity", "melancholy"], "motif_tags": [],
+      "notes": "The chunk stacks first-person anaphoric clauses while confessing that pursuing sex to prove love led to crossed boundaries and shame."},
+    {"chunk_index": 2, "heading": "Dear Katie", "start_line": 17, "end_line": 21, "content_fingerprint": "sha256:16:6feb25723ba4b071",
+      "plot_tags": ["betrayal-reckoning", "aphoristic-landing"], "context_tags": ["redemption", "betrayal", "isolation"],
+      "mood_tags": ["melancholy", "clarity"], "motif_tags": [],
+      "notes": "The narrator names becoming \"just another example of the shitty men who leave,\" then closes on aphoristic resolutions that read as a self-forgiveness/amends turn."}
+  ]
+}

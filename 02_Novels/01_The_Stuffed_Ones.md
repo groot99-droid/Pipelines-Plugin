@@ -1,3 +1,19 @@
+---
+title: "The Stuffed Ones"
+type: novel
+mode: horror-prose
+genre: [horror, body-horror, folk-horror]
+status: complete
+pov: first-person
+tense: mixed
+themes: [body-horror, ritual-sacrifice, hospitality-inverted, loss-of-identity, cyclical-violence]
+archetypes: [monster-from-victim, keeper-crone, unwitting-guest]
+source_volume: Master_Volume_1
+source_lines: "3076–3564"
+attachments: []
+tags: [type/novel, mode/horror-prose, theme/body-horror, theme/ritual-sacrifice, theme/cyclical-violence, status/complete]
+---
+
 # The Stuffed Ones
 
 **Type:** Novel in three movements, 33 chapters — horror  

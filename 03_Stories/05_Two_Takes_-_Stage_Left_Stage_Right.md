@@ -1,3 +1,19 @@
+---
+title: "Two Takes: Stage Left, Stage Right"
+type: story
+mode: unclassified
+genre: [flash-fiction, dual-monologue, literary]
+status: complete
+pov: first-person
+tense: present
+themes: [dual-perspective, perception-gap, loneliness, small-kindness]
+archetypes: [the-observer, the-outsider]
+source_volume: Master_Volume_1
+source_lines: "5238-5286"
+attachments: []
+tags: [type/story, mode/unclassified, theme/dual-perspective, theme/perception-gap, status/complete]
+---
+
 # Two Takes - Stage Left, Stage Right
 
 **Type:** Paired monologues — five scenes, two viewpoints each  

@@ -1,3 +1,19 @@
+---
+title: "In Search Of Truth"
+type: prose-poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: first-person
+tense: present
+themes: [truth, self-deception, existentialism]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "5397–5424"
+attachments: []
+tags: [type/prose-poem, mode/confessional-poetry, theme/truth, theme/self-deception, theme/existentialism, status/complete]
+---
+
 # In Search Of Truth
 
 **Type:** Prose poem  

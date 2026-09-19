@@ -1,3 +1,19 @@
+---
+title: "The Knife I Chose"
+type: poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: third-person
+tense: present
+themes: [betrayal, trust, cyclical-harm]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "5566–5647"
+attachments: []
+tags: [type/poem, mode/confessional-poetry, theme/betrayal, theme/trust, theme/cyclical-harm, status/complete]
+---
+
 # The Knife I Chose
 
 **Type:** Narrative poem  

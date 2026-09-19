@@ -1,3 +1,19 @@
+---
+title: "The Cycle of Us"
+type: novel
+mode: unclassified
+genre: [reincarnation, literary-drama, family-saga]
+status: outline
+pov: mixed
+tense: mixed
+themes: [reincarnation, soul-lineage, familial-inheritance, grief, cyclical-healing]
+archetypes: [reincarnated-soul, wounded-father, healer-descendant]
+source_volume: Master_Volume_1
+source_lines: "5297–5397"
+attachments: []
+tags: [type/novel, mode/unclassified, theme/reincarnation, theme/soul-lineage, theme/familial-inheritance, status/outline]
+---
+
 # The Cycle of Us
 
 **Type:** Novel concept — nine lives, one soul-line  

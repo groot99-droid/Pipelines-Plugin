@@ -1,3 +1,20 @@
+---
+title: "A Journey Into the Heartstream: The Rite of the Blue-Born"
+type: story
+mode: epic-fantasy
+genre: [speculative, mythic, coming-of-age]
+status: complete
+pov: third-omniscient
+tense: present
+project: "A Journey Into (body-cosmology series)"
+themes: [coming-of-age, separation, mortality, brotherhood]
+archetypes: [the-initiate, the-elder]
+source_volume: Master_Volume_1
+source_lines: "1169-1248"
+attachments: []
+tags: [type/story, mode/epic-fantasy, theme/coming-of-age, theme/separation, status/complete]
+---
+
 # A Journey Into the Heartstream - The Rite of the Blue-Born
 
 **Type:** Speculative narrative — rite of passage in the body  

@@ -1,3 +1,19 @@
+---
+title: "My Wish"
+type: poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: first-person
+tense: present
+themes: [authenticity, self-acceptance, autonomy, identity]
+archetypes: []
+source_volume: Master_Volume_2
+source_lines: "44–64"
+attachments: []
+tags: [type/poem, mode/confessional-poetry, theme/authenticity, theme/self-acceptance]
+---
+
 # My Wish
 
 **Type:** Poem  

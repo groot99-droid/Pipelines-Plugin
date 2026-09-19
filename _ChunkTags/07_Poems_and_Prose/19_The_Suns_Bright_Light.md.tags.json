@@ -1,0 +1,13 @@
+{
+  "file": "07_Poems_and_Prose/19_The_Suns_Bright_Light.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:4d340433fa3131a8",
+  "chunks": [
+    {"chunk_index": 1, "heading": "The Sun's Bright Light", "start_line": 4, "end_line": 19, "content_fingerprint": "sha256:16:5a8f8e5e6bbe9b87",
+      "plot_tags": ["aphoristic-landing"], "context_tags": ["mortality", "memory-and-forgetting"],
+      "mood_tags": ["wonder", "tenderness", "hope"], "motif_tags": [],
+      "notes": "The single chunk is the whole verbatim poem, which builds an image of the sun's warmth and permanence and closes on an explicit stated point (\"A radiant gift that conquers death\")."}
+  ]
+}

@@ -1,3 +1,19 @@
+---
+title: "Building Dreams From the Top Down"
+type: essay
+mode: essay-self-help
+genre: [personal-philosophy, essay]
+status: fragment
+pov: first-person
+tense: present
+themes: [ambition-inventory, multi-domain-mastery, legacy-aspiration]
+archetypes: []
+source_volume: Master_Volume_2
+source_lines: "108–115"
+attachments: []
+tags: [type/essay, mode/essay-self-help, theme/ambition-inventory, theme/legacy-aspiration, status/fragment]
+---
+
 # Building Dreams From the Top Down
 
 **Type:** Ambition inventory  

@@ -1,3 +1,19 @@
+---
+title: "What is The Power of Art"
+type: essay
+mode: essay-self-help
+genre: [personal-philosophy, essay]
+status: complete
+pov: first-person-plural
+tense: mixed
+themes: [artistic-lineage, cultural-memory, art-as-meaning, cost-of-forgetting-artists]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "4935–4992"
+attachments: []
+tags: [type/essay, mode/essay-self-help, theme/artistic-lineage, theme/cultural-memory, status/complete]
+---
+
 # What is The Power of Art
 
 **Type:** Essay / manifesto on artistic lineage  

@@ -1,0 +1,13 @@
+{
+  "file": "10_Characters/02_The_Bottonian_Philosopher.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:22d67e742640aff8",
+  "chunks": [
+    {"chunk_index": 1, "heading": "The Bottonian Philosopher", "start_line": 4, "end_line": 53, "content_fingerprint": "sha256:16:4179749498cab92f",
+      "plot_tags": ["exposition", "codex-worldbuilding-aside", "aphoristic-landing"], "context_tags": ["existential-dread", "loneliness", "self-knowledge"],
+      "mood_tags": ["melancholy", "longing"], "motif_tags": ["witness-and-observer", "naming-and-labeling", "tide-and-water"],
+      "notes": "This is a single-chunk reference profile built around loneliness/suffering/self-knowledge themes, with the founding image of \"a quiet house overlooking a gray sea\" and the closing claim that his presence brings clarity \"by naming\" people's troubles."}
+  ]
+}

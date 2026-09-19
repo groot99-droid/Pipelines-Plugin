@@ -1,3 +1,20 @@
+---
+title: "A Journey Into the Soul"
+type: story
+mode: unclassified
+genre: [speculative, body-cosmology, prose-poem]
+status: complete
+pov: third-omniscient
+tense: present
+project: "A Journey Into (body-cosmology series)"
+themes: [body-as-world, perception, light-as-witness, inner-cosmos]
+archetypes: [the-traveler, the-witness]
+source_volume: Master_Volume_1
+source_lines: "1086-1168"
+attachments: []
+tags: [type/story, mode/unclassified, theme/body-as-world, theme/perception, status/complete]
+---
+
 # A Journey Into the Soul
 
 **Type:** Speculative expedition narrative — the biomes of the eye  

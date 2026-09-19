@@ -1,3 +1,19 @@
+---
+title: "Shoot for the Moon"
+type: essay
+mode: essay-self-help
+genre: [personal-philosophy, essay]
+status: draft
+pov: mixed
+tense: mixed
+themes: [maternal-wisdom, risk-and-ambition, fear-of-failure, collective-complacency]
+archetypes: []
+source_volume: Master_Volume_2
+source_lines: "116–147"
+attachments: []
+tags: [type/essay, mode/essay-self-help, theme/maternal-wisdom, theme/risk-and-ambition, status/draft]
+---
+
 # Shoot for the Moon
 
 **Type:** Aphorisms and reflections  

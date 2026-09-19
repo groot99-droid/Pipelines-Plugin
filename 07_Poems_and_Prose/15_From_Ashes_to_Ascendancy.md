@@ -1,3 +1,19 @@
+---
+title: "From Ashes to Ascendancy"
+type: poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: first-person
+tense: mixed
+themes: [childhood-abuse, resilience, reclamation, survivorship]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "5914–5977"
+attachments: []
+tags: [type/poem, mode/confessional-poetry, theme/childhood-abuse, theme/resilience]
+---
+
 # From Ashes to Ascendancy
 
 **Type:** Poem in five movements  

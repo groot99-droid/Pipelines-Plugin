@@ -1,0 +1,21 @@
+{
+  "file": "07_Poems_and_Prose/15_From_Ashes_to_Ascendancy.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:b81208a1b6c556b6",
+  "chunks": [
+    {"chunk_index": 1, "heading": "From Ashes to Ascendancy", "start_line": 4, "end_line": 28, "content_fingerprint": "sha256:16:69ed3648ea736c77",
+      "plot_tags": ["opening-hook", "betrayal-reckoning"], "context_tags": ["coming-of-age", "betrayal", "institutional-indifference", "self-worth", "courage"],
+      "mood_tags": ["defiance", "hope"], "motif_tags": [],
+      "notes": "Movement I recounts childhood scorn from a teacher and forged courage, and Movement II's opening stanza introduces abusers who stole trust."},
+    {"chunk_index": 2, "heading": "From Ashes to Ascendancy", "start_line": 30, "end_line": 54, "content_fingerprint": "sha256:16:7f1b4e35b0c609d1",
+      "plot_tags": ["betrayal-reckoning", "aphoristic-landing"], "context_tags": ["bodily-autonomy", "betrayal", "self-knowledge", "courage"],
+      "mood_tags": ["defiance", "clarity"], "motif_tags": ["fire"],
+      "notes": "This chunk names a \"breach of sacred boundaries\" and a \"flame of inner strength no terror can remove,\" then moves to Movement III's reclaiming of a \"stolen narrative.\""},
+    {"chunk_index": 3, "heading": "From Ashes to Ascendancy", "start_line": 56, "end_line": 72, "content_fingerprint": "sha256:16:20e2ba860bc5b474",
+      "plot_tags": ["aphoristic-landing", "denouement"], "context_tags": ["resilience", "courage", "transformation", "self-worth"],
+      "mood_tags": ["defiance", "hope"], "motif_tags": ["fire"],
+      "notes": "The closing stanzas use blaze/embers/phoenix imagery and land explicitly on survivor-affirmation lines."}
+  ]
+}

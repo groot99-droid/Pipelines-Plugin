@@ -1,3 +1,19 @@
+---
+title: "Narrative Voice"
+type: book-concept
+mode: unclassified
+genre: [literary, metaphysical, reincarnation]
+status: outline
+pov: mixed
+tense: present
+themes: [reincarnation, self-observation, cyclical-life, godhood]
+archetypes: [god-observer, self-duplicate, reincarnated-soul]
+source_volume: Master_Volume_2
+source_lines: "68–71"
+attachments: []
+tags: [type/book-concept, mode/unclassified, theme/reincarnation, theme/cyclical-life]
+---
+
 # Narrative Voice
 
 **Type:** Novel concept  

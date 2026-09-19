@@ -1,0 +1,13 @@
+{
+  "file": "09_Dream_Journal/02_Trip_Tracker_-_July_Fourteenth_2023.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:32f121dd4b3eb7b3",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Trip Tracker - July Fourteenth 2023", "start_line": 4, "end_line": 44, "content_fingerprint": "sha256:16:d715b00f6c0de8a4",
+      "plot_tags": ["exposition", "codex-worldbuilding-aside"], "context_tags": ["transformation", "self-knowledge", "unreliable-reality"],
+      "mood_tags": ["wonder", "dread"], "motif_tags": ["threshold", "doppelganger-and-shadow", "found-document-framing"],
+      "notes": "The chunk is a single expository, codex-style record walking through phases of altered perception, self-dissolution, a literal \"Threshold of the Infinite,\" and a \"Confrontation with the Shadow.\""}
+  ]
+}

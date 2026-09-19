@@ -1,3 +1,19 @@
+---
+title: "How i feel"
+type: song
+mode: unclassified
+genre: [song-lyric, alternative, introspective]
+status: complete
+pov: first-person
+tense: present
+themes: [isolation, creative-anxiety, mortality, disillusionment-with-fame]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "5647–5691"
+attachments: []
+tags: [type/song, mode/unclassified, theme/isolation, theme/creative-anxiety, theme/mortality, status/complete]
+---
+
 # How i feel
 
 **Type:** Song lyric  

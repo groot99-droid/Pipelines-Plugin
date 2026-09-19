@@ -1,3 +1,19 @@
+---
+title: "A Crown Without a Kingdom"
+type: prose-poem
+mode: unclassified
+genre: [philosophical, aphoristic]
+status: complete
+pov: mixed
+tense: present
+themes: [mortality, legacy, impermanence, ambition]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "5977–6019"
+attachments: []
+tags: [type/prose-poem, mode/unclassified, theme/mortality, theme/legacy]
+---
+
 # A Crown Without a Kingdom
 
 **Type:** Philosophical prose poem  

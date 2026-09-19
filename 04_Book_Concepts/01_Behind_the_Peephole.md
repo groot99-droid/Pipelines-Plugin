@@ -1,3 +1,19 @@
+---
+title: "Behind the Peephole"
+type: book-concept
+mode: horror-prose
+genre: [thriller, slow-burn, mystery]
+status: outline
+pov: mixed
+tense: present
+themes: [surveillance, hidden-lives, secrecy, mosaic-narrative]
+archetypes: [unwitting-detective, hidden-watcher]
+source_volume: Master_Volume_1
+source_lines: "933–977"
+attachments: []
+tags: [type/book-concept, mode/horror-prose, theme/surveillance, theme/hidden-lives]
+---
+
 # Behind the Peephole
 
 **Type:** Novel pitch / thriller  

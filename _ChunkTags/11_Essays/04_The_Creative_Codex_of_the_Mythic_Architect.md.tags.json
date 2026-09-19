@@ -1,0 +1,105 @@
+{
+  "file": "11_Essays/04_The_Creative_Codex_of_the_Mythic_Architect.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:b4d9c6550eaac4e5",
+  "chunks": [
+    {
+      "chunk_index": 1,
+      "heading": "The Creative Codex of the Mythic Architect",
+      "start_line": 4,
+      "end_line": 13,
+      "content_fingerprint": "sha256:16:c69ed89e5d488582",
+      "plot_tags": ["claim-statement"],
+      "context_tags": [],
+      "mood_tags": ["wonder"],
+      "motif_tags": ["architecture"],
+      "notes": "This chunk states the essay's core claim -- the codex is a \"living architecture\" of four layers governing meaning -- and explicitly names architecture as its own metaphor."
+    },
+    {
+      "chunk_index": 2,
+      "heading": "The Creative Codex of the Mythic Architect",
+      "start_line": 15,
+      "end_line": 17,
+      "content_fingerprint": "sha256:16:530f6aa6bdefe4e4",
+      "plot_tags": ["exposition"],
+      "context_tags": [],
+      "mood_tags": ["wonder"],
+      "motif_tags": [],
+      "notes": "Transitional exposition naming the codex's interdisciplinary sourcing and previewing the walk-through to come, with no concrete image or catalogue yet to ground a motif tag."
+    },
+    {
+      "chunk_index": 3,
+      "heading": "The Four Layers: The Architecture of Meaning",
+      "start_line": 21,
+      "end_line": 41,
+      "content_fingerprint": "sha256:16:22da2c429c31d77a",
+      "plot_tags": ["parable-illustration", "over-explain-turn"],
+      "context_tags": [],
+      "mood_tags": ["clarity"],
+      "motif_tags": [],
+      "notes": "Each layer (signatures, structures, systems) is given a concrete image (\"a spiral,\" \"the hero's journey\") immediately re-narrated in abstract terms -- the essay-mode's signature over-explain move."
+    },
+    {
+      "chunk_index": 4,
+      "heading": "The Four Layers: The Architecture of Meaning",
+      "start_line": 43,
+      "end_line": 55,
+      "content_fingerprint": "sha256:16:cd98c0a9b23d1637",
+      "plot_tags": ["parable-illustration", "over-explain-turn", "codex-worldbuilding-aside"],
+      "context_tags": [],
+      "mood_tags": ["wonder"],
+      "motif_tags": [],
+      "notes": "Continues the same illustrate-then-explain pattern and explicitly invokes worldbuilding via named domains (\"Middle-earth. Surrealism. Jazz.\")."
+    },
+    {
+      "chunk_index": 5,
+      "heading": "Interdisciplinary Branches: Where the Codex Expands",
+      "start_line": 59,
+      "end_line": 72,
+      "content_fingerprint": "sha256:16:77ed47a716c46f0f",
+      "plot_tags": ["anaphoric-catalog"],
+      "context_tags": [],
+      "mood_tags": ["clarity"],
+      "motif_tags": ["inventory-and-catalogue"],
+      "notes": "A repeated-syntax list (\"History reveals... Philosophy asks... Psychology maps...\") enumerating ten disciplines by identical sentence pattern."
+    },
+    {
+      "chunk_index": 6,
+      "heading": "New Frontiers: Where the Codex Pushes Beyond Itself",
+      "start_line": 76,
+      "end_line": 99,
+      "content_fingerprint": "sha256:16:57b9a3e7602e7fda",
+      "plot_tags": ["anaphoric-catalog", "rhetorical-question-pivot"],
+      "context_tags": [],
+      "mood_tags": ["wonder"],
+      "motif_tags": ["inventory-and-catalogue"],
+      "notes": "A named list of seven \"frontiers,\" each posed as a speculative rhetorical question (\"What happens when time isn't linear?\")."
+    },
+    {
+      "chunk_index": 7,
+      "heading": "Implementation: Bringing the Codex to Life",
+      "start_line": 103,
+      "end_line": 113,
+      "content_fingerprint": "sha256:16:4dc46e32d997808f",
+      "plot_tags": ["practice-action-item"],
+      "context_tags": [],
+      "mood_tags": ["clarity"],
+      "motif_tags": ["inventory-and-catalogue"],
+      "notes": "A direct list of tools/practices (\"Creative assessments... Workshops and labs... Archive systems...\") matching the essay-mode's practice/action-item beat."
+    },
+    {
+      "chunk_index": 8,
+      "heading": "Conclusion: A Creative Physics Engine for Infinite Worlds",
+      "start_line": 117,
+      "end_line": 126,
+      "content_fingerprint": "sha256:16:9e524c4ddcab049e",
+      "plot_tags": ["closing-callback", "aphoristic-landing", "anaphoric-catalog"],
+      "context_tags": [],
+      "mood_tags": ["wonder", "hope"],
+      "motif_tags": [],
+      "notes": "Closes by re-summarizing the codex's scope in repeated \"It...\" clauses and lands on an explicit aphoristic final line (\"ever-adaptive, ever-becoming\")."
+    }
+  ]
+}

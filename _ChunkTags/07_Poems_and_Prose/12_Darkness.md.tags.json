@@ -1,0 +1,13 @@
+{
+  "file": "07_Poems_and_Prose/12_Darkness.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:9261e51b4576db69",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Darkness", "start_line": 4, "end_line": 38, "content_fingerprint": "sha256:16:c578e8fe32de0292",
+      "plot_tags": ["anaphoric-catalog", "aphoristic-landing"], "context_tags": ["cyclical-violence", "courage"],
+      "mood_tags": ["defiance", "hope"], "motif_tags": ["doppelganger-and-shadow", "hunger"],
+      "notes": "The chunk builds its argument through triadic repetition, names darkness as a devouring, self-feeding cycle (\"a serpent devouring its own tail\"), and closes on explicit aphoristic lines about choosing light over retaliation."}
+  ]
+}

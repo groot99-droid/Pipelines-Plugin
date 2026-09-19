@@ -1,0 +1,13 @@
+{
+  "file": "11_Essays/06_Building_Dreams_From_the_Top_Down.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:b08db18150e558a8",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Building Dreams From the Top Down", "start_line": 4, "end_line": 15, "content_fingerprint": "sha256:16:bfe3c70157b64aca",
+      "plot_tags": ["claim-statement"], "context_tags": ["ambition", "identity"],
+      "mood_tags": ["longing", "hope"], "motif_tags": ["inventory-and-catalogue"],
+      "notes": "The chunk is a verbatim list of first-person \"I want\" ambition statements, each asserting a desired identity/achievement without any parable, practice-step, or closing callback yet present."}
+  ]
+}

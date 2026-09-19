@@ -1,3 +1,19 @@
+---
+title: "The Darwishan Exile"
+type: character-profile
+mode: essay-self-help
+genre: [philosophical-fiction, aphorism, archetype-study]
+status: complete
+pov: third-omniscient
+tense: mixed
+themes: [exile, homeland, memory, longing]
+archetypes: [wandering-mystic-darwishan]
+source_volume: The_Darwishan_Exile_Overview
+source_lines: "complete file"
+attachments: []
+tags: [type/character-profile, mode/essay-self-help, archetype/wandering-mystic-darwishan, theme/exile]
+---
+
 # The Darwishan Exile
 
 **Type:** Character / archetype profile  

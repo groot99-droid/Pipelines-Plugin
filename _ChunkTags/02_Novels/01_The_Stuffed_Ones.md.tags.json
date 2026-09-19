@@ -1,0 +1,21 @@
+{
+  "file": "02_Novels/01_The_Stuffed_Ones.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:f3564cc42600a170",
+  "chunks": [
+    {
+      "chunk_index": 1,
+      "heading": "The Stuffed Ones",
+      "start_line": 4,
+      "end_line": 496,
+      "content_fingerprint": "sha256:16:e57364392b0b8d00",
+      "plot_tags": ["catalogued-incident", "escalation-stacking", "victim-to-complicit-turn", "threat-handoff", "cyclical-loop-back", "gut-punch-close"],
+      "context_tags": ["transformation", "complicity", "cyclical-violence", "body-horror"],
+      "mood_tags": ["dread", "complicity", "resignation", "despair"],
+      "motif_tags": ["hunger", "cursed-object", "monster-from-victim", "threshold"],
+      "notes": "This single chunk spans the whole three-movement novel -- a catalogue of escalating cabin wrongnesses (smell, warmth, dead animals, moving toys) that stacks toward the basement ritual, then pivots as the narrator and friends are turned into stuffed animals who resist and finally give in to a hunger-driven ritual, ending with the exact \"They like company\" line recurring and new guests arriving as the next filling."
+    }
+  ]
+}

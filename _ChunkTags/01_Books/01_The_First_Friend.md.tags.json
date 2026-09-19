@@ -1,0 +1,1763 @@
+{
+  "file": "01_Books/01_The_First_Friend.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:bd4e13f50c55307f",
+  "chunks": [
+    {
+      "chunk_index": 1,
+      "heading": "The First Friend",
+      "start_line": 4,
+      "end_line": 10,
+      "content_fingerprint": "sha256:16:6ba0eafd30791809",
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "This chunk is the file's bibliographic/provenance note (type, source, verbatim note) plus the bare title line, not narrative or argumentative content."
+    },
+    {
+      "chunk_index": 2,
+      "heading": "The Core Truths I Want Readers to Carry",
+      "start_line": 14,
+      "end_line": 19,
+      "content_fingerprint": "sha256:16:149ceaa5df6a1b6b",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "identity",
+        "self-knowledge",
+        "trust-and-distrust",
+        "love"
+      ],
+      "mood_tags": [
+        "clarity"
+      ],
+      "motif_tags": [
+        "architecture",
+        "inventory-and-catalogue"
+      ],
+      "notes": "A bulleted list of flat assertions that literally invokes the architecture motif and catalogues the book's core claims."
+    },
+    {
+      "chunk_index": 3,
+      "heading": "CHAPTER ONE — THE FIRST FRIEND",
+      "start_line": 23,
+      "end_line": 34,
+      "content_fingerprint": "sha256:16:17a8001a25aaf503",
+      "plot_tags": [
+        "opening-hook"
+      ],
+      "context_tags": [
+        "isolation",
+        "loneliness",
+        "self-knowledge"
+      ],
+      "mood_tags": [
+        "melancholy",
+        "unease"
+      ],
+      "motif_tags": [],
+      "notes": "Opens the chapter with the direct-address hook about waking up beside yourself, then pivots to rhetorical questions about thin relationships."
+    },
+    {
+      "chunk_index": 4,
+      "heading": "CHAPTER ONE — THE FIRST FRIEND",
+      "start_line": 36,
+      "end_line": 52,
+      "content_fingerprint": "sha256:16:8a40e37bd54e77ed",
+      "plot_tags": [
+        "claim-statement",
+        "over-explain-turn"
+      ],
+      "context_tags": [
+        "identity",
+        "self-knowledge"
+      ],
+      "mood_tags": [
+        "clarity"
+      ],
+      "motif_tags": [
+        "architecture"
+      ],
+      "notes": "Asserts \"you cannot escape this architecture,\" restating the literal blueprint claim then re-narrating it abstractly."
+    },
+    {
+      "chunk_index": 5,
+      "heading": "CHAPTER ONE — THE FIRST FRIEND",
+      "start_line": 54,
+      "end_line": 75,
+      "content_fingerprint": "sha256:16:6492146784077b85",
+      "plot_tags": [
+        "claim-statement",
+        "exposition"
+      ],
+      "context_tags": [
+        "identity",
+        "self-knowledge",
+        "trust-and-distrust",
+        "love"
+      ],
+      "mood_tags": [
+        "clarity"
+      ],
+      "motif_tags": [],
+      "notes": "Introduces the book's four-pillar framework as an invitation rather than an indictment."
+    },
+    {
+      "chunk_index": 6,
+      "heading": "CHAPTER ONE — THE FIRST FRIEND",
+      "start_line": 77,
+      "end_line": 95,
+      "content_fingerprint": "sha256:16:f13329830adb2f71",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "self-knowledge",
+        "courage"
+      ],
+      "mood_tags": [
+        "clarity"
+      ],
+      "motif_tags": [],
+      "notes": "Distinguishes decorative self-love from self-respect/self-honesty."
+    },
+    {
+      "chunk_index": 7,
+      "heading": "CHAPTER ONE — THE FIRST FRIEND",
+      "start_line": 97,
+      "end_line": 117,
+      "content_fingerprint": "sha256:16:63678cdc0d3ee652",
+      "plot_tags": [
+        "claim-statement",
+        "over-explain-turn"
+      ],
+      "context_tags": [
+        "identity",
+        "self-knowledge"
+      ],
+      "mood_tags": [
+        "clarity"
+      ],
+      "motif_tags": [
+        "architecture"
+      ],
+      "notes": "States directly \"you are a system — a living architecture\" and unpacks the persona/voices metaphor discursively."
+    },
+    {
+      "chunk_index": 8,
+      "heading": "CHAPTER ONE — THE FIRST FRIEND",
+      "start_line": 119,
+      "end_line": 130,
+      "content_fingerprint": "sha256:16:8f64a4ed01a2a164",
+      "plot_tags": [
+        "claim-statement",
+        "exposition"
+      ],
+      "context_tags": [
+        "identity",
+        "trust-and-distrust"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Introduces the first two named pillars (persona, covenant of trust)."
+    },
+    {
+      "chunk_index": 9,
+      "heading": "CHAPTER ONE — THE FIRST FRIEND",
+      "start_line": 132,
+      "end_line": 140,
+      "content_fingerprint": "sha256:16:d313dd769e09baf6",
+      "plot_tags": [
+        "claim-statement",
+        "exposition"
+      ],
+      "context_tags": [
+        "identity",
+        "love"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "architecture"
+      ],
+      "notes": "Completes the four-pillar exposition and calls them \"the architecture of your life.\""
+    },
+    {
+      "chunk_index": 10,
+      "heading": "CHAPTER ONE — THE FIRST FRIEND",
+      "start_line": 142,
+      "end_line": 162,
+      "content_fingerprint": "sha256:16:d5de2523a15fa936",
+      "plot_tags": [
+        "closing-callback",
+        "aphoristic-landing"
+      ],
+      "context_tags": [
+        "identity",
+        "self-knowledge",
+        "trust-and-distrust"
+      ],
+      "mood_tags": [
+        "hope"
+      ],
+      "motif_tags": [],
+      "notes": "Chapter closes on the aphoristic line \"Everything begins with the first friend.\""
+    },
+    {
+      "chunk_index": 11,
+      "heading": "CHAPTER ONE — THE FIRST FRIEND",
+      "start_line": 164,
+      "end_line": 165,
+      "content_fingerprint": "sha256:16:156b1dad65de2248",
+      "plot_tags": [
+        "closing-callback",
+        "aphoristic-landing"
+      ],
+      "context_tags": [],
+      "mood_tags": [
+        "hope"
+      ],
+      "motif_tags": [],
+      "notes": "Two-line chapter-ending callback."
+    },
+    {
+      "chunk_index": 12,
+      "heading": "CHAPTER TWO — THE PERSONA FOR PUBLIC ENGAGEMENT",
+      "start_line": 169,
+      "end_line": 175,
+      "content_fingerprint": "sha256:16:508fc93c3757459f",
+      "plot_tags": [
+        "opening-hook",
+        "claim-statement"
+      ],
+      "context_tags": [
+        "identity"
+      ],
+      "mood_tags": [
+        "clarity"
+      ],
+      "motif_tags": [],
+      "notes": "Opens Chapter Two defining the persona as tool, not lie."
+    },
+    {
+      "chunk_index": 13,
+      "heading": "What the Persona Does",
+      "start_line": 179,
+      "end_line": 184,
+      "content_fingerprint": "sha256:16:ff95d715f00cec02",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "identity"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "inventory-and-catalogue"
+      ],
+      "notes": "A four-item bulleted catalogue of persona functions."
+    },
+    {
+      "chunk_index": 14,
+      "heading": "How the Persona Forms",
+      "start_line": 188,
+      "end_line": 192,
+      "content_fingerprint": "sha256:16:b40b359703a6ab10",
+      "plot_tags": [
+        "claim-statement",
+        "exposition"
+      ],
+      "context_tags": [
+        "identity",
+        "inheritance-and-legacy",
+        "family"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Traces persona formation to inherited family expectations and cultural scripts."
+    },
+    {
+      "chunk_index": 15,
+      "heading": "The Quiet Cost of a Dominant Persona",
+      "start_line": 196,
+      "end_line": 203,
+      "content_fingerprint": "sha256:16:88ce051ff8f11645",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "self-worth",
+        "isolation",
+        "trust-and-distrust"
+      ],
+      "mood_tags": [
+        "melancholy",
+        "unease"
+      ],
+      "motif_tags": [
+        "inventory-and-catalogue"
+      ],
+      "notes": "Catalogues costs of a dominant persona."
+    },
+    {
+      "chunk_index": 16,
+      "heading": "Recognizing Your Persona",
+      "start_line": 207,
+      "end_line": 214,
+      "content_fingerprint": "sha256:16:40090f0003fe9c1a",
+      "plot_tags": [
+        "practice-action-item"
+      ],
+      "context_tags": [
+        "self-knowledge"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "inventory-and-catalogue"
+      ],
+      "notes": "A literal inventory-the-roles-you-play exercise list."
+    },
+    {
+      "chunk_index": 17,
+      "heading": "Exercises to Meet the Persona",
+      "start_line": 218,
+      "end_line": 225,
+      "content_fingerprint": "sha256:16:8f88f119ab909106",
+      "plot_tags": [
+        "practice-action-item"
+      ],
+      "context_tags": [
+        "self-knowledge",
+        "courage"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Three named exercises as concrete daily practices."
+    },
+    {
+      "chunk_index": 18,
+      "heading": "Using the Persona Intentionally",
+      "start_line": 229,
+      "end_line": 238,
+      "content_fingerprint": "sha256:16:470abe991cb06cd2",
+      "plot_tags": [
+        "claim-statement",
+        "practice-action-item"
+      ],
+      "context_tags": [
+        "self-knowledge"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Distinguishes intentional persona use from fear-driven use."
+    },
+    {
+      "chunk_index": 19,
+      "heading": "A Short Story",
+      "start_line": 242,
+      "end_line": 244,
+      "content_fingerprint": "sha256:16:85b558be790769b3",
+      "plot_tags": [
+        "parable-illustration"
+      ],
+      "context_tags": [
+        "self-worth",
+        "isolation",
+        "love"
+      ],
+      "mood_tags": [
+        "melancholy",
+        "hope"
+      ],
+      "motif_tags": [],
+      "notes": "The unflappable-career-woman parable."
+    },
+    {
+      "chunk_index": 20,
+      "heading": "The Mask and the Mirror",
+      "start_line": 248,
+      "end_line": 254,
+      "content_fingerprint": "sha256:16:c8da609171bd0fa5",
+      "plot_tags": [
+        "parable-illustration"
+      ],
+      "context_tags": [
+        "self-worth",
+        "ambition",
+        "self-deception",
+        "isolation"
+      ],
+      "mood_tags": [
+        "despair",
+        "resignation"
+      ],
+      "motif_tags": [
+        "doppelganger-and-shadow"
+      ],
+      "notes": "Vignette One ends with her failing to recognize her own voice."
+    },
+    {
+      "chunk_index": 21,
+      "heading": "The Mask and the Mirror",
+      "start_line": 256,
+      "end_line": 262,
+      "content_fingerprint": "sha256:16:924cb42746b1bf7c",
+      "plot_tags": [
+        "parable-illustration"
+      ],
+      "context_tags": [
+        "self-worth",
+        "isolation",
+        "loneliness",
+        "self-deception"
+      ],
+      "mood_tags": [
+        "despair",
+        "resignation"
+      ],
+      "motif_tags": [
+        "doppelganger-and-shadow"
+      ],
+      "notes": "Vignette Two ends with the person edited out of their own life-script."
+    },
+    {
+      "chunk_index": 22,
+      "heading": "The Mask and the Mirror",
+      "start_line": 264,
+      "end_line": 264,
+      "content_fingerprint": "sha256:16:a75fc399696b87c7",
+      "plot_tags": [],
+      "context_tags": [
+        "grief",
+        "self-worth",
+        "isolation"
+      ],
+      "mood_tags": [
+        "grief",
+        "despair"
+      ],
+      "motif_tags": [
+        "doppelganger-and-shadow"
+      ],
+      "notes": "Single-sentence gut-summary."
+    },
+    {
+      "chunk_index": 23,
+      "heading": "The Psychology of Overriding the Self",
+      "start_line": 268,
+      "end_line": 276,
+      "content_fingerprint": "sha256:16:c5b07e3d774b8315",
+      "plot_tags": [
+        "claim-statement",
+        "exposition"
+      ],
+      "context_tags": [
+        "self-deception",
+        "self-preservation"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Lists clinical-flavored mechanisms behind self-overriding."
+    },
+    {
+      "chunk_index": 24,
+      "heading": "Why Intimacy Fails When the Mask Rules",
+      "start_line": 280,
+      "end_line": 286,
+      "content_fingerprint": "sha256:16:6ce67993fd32bb0d",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "trust-and-distrust",
+        "isolation",
+        "love"
+      ],
+      "mood_tags": [
+        "melancholy"
+      ],
+      "motif_tags": [],
+      "notes": "Argues reciprocity, risk, and covenant all collapse under a dominant persona."
+    },
+    {
+      "chunk_index": 25,
+      "heading": "The Felt Experience of Losing Yourself",
+      "start_line": 290,
+      "end_line": 292,
+      "content_fingerprint": "sha256:16:1cd5cb5fdac3d39c",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "grief",
+        "self-worth",
+        "isolation"
+      ],
+      "mood_tags": [
+        "grief",
+        "despair"
+      ],
+      "motif_tags": [],
+      "notes": "Describes the invisible grief of not recognizing one's own interior landscape."
+    },
+    {
+      "chunk_index": 26,
+      "heading": "A Quiet Way Back",
+      "start_line": 296,
+      "end_line": 307,
+      "content_fingerprint": "sha256:16:f13470770f09f169",
+      "plot_tags": [
+        "practice-action-item",
+        "closing-callback"
+      ],
+      "context_tags": [
+        "self-knowledge",
+        "resilience"
+      ],
+      "mood_tags": [
+        "hope",
+        "clarity"
+      ],
+      "motif_tags": [],
+      "notes": "Closes Chapter Two's main body with small daily practices."
+    },
+    {
+      "chunk_index": 27,
+      "heading": "A Quiet Way Back",
+      "start_line": 309,
+      "end_line": 309,
+      "content_fingerprint": "sha256:16:8f060f5ab38698c4",
+      "plot_tags": [
+        "closing-callback"
+      ],
+      "context_tags": [
+        "trust-and-distrust"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "threshold"
+      ],
+      "notes": "One-line bridge previewing \"the threshold of the second pillar.\""
+    },
+    {
+      "chunk_index": 28,
+      "heading": "CHAPTER THREE — THE COVENANT OF MUTUAL UNDERSTANDING",
+      "start_line": 313,
+      "end_line": 317,
+      "content_fingerprint": "sha256:16:bc2da609c5ce21b8",
+      "plot_tags": [
+        "opening-hook",
+        "claim-statement"
+      ],
+      "context_tags": [
+        "trust-and-distrust"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "architecture"
+      ],
+      "notes": "Opens Chapter Three defining trust as \"the quiet architecture.\""
+    },
+    {
+      "chunk_index": 29,
+      "heading": "What Trust Is",
+      "start_line": 321,
+      "end_line": 326,
+      "content_fingerprint": "sha256:16:031cedac4bbfb604",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "trust-and-distrust"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "inventory-and-catalogue"
+      ],
+      "notes": "Three-bullet definitional catalogue of what trust is."
+    },
+    {
+      "chunk_index": 30,
+      "heading": "Where Trust Forms",
+      "start_line": 330,
+      "end_line": 338,
+      "content_fingerprint": "sha256:16:9ce6667d434b4893",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "trust-and-distrust"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "inventory-and-catalogue"
+      ],
+      "notes": "Catalogues five ordinary sites where trust forms."
+    },
+    {
+      "chunk_index": 31,
+      "heading": "The Physiology of Trust",
+      "start_line": 342,
+      "end_line": 349,
+      "content_fingerprint": "sha256:16:5763aaf5f3f83f19",
+      "plot_tags": [
+        "claim-statement",
+        "exposition"
+      ],
+      "context_tags": [
+        "trust-and-distrust"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Explains trust as embodied via nervous-system safety."
+    },
+    {
+      "chunk_index": 32,
+      "heading": "How Trust Is Broken",
+      "start_line": 353,
+      "end_line": 361,
+      "content_fingerprint": "sha256:16:296d366e05796f84",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "betrayal",
+        "trust-and-distrust"
+      ],
+      "mood_tags": [
+        "unease"
+      ],
+      "motif_tags": [
+        "inventory-and-catalogue"
+      ],
+      "notes": "Catalogues predictable ways trust breaks."
+    },
+    {
+      "chunk_index": 33,
+      "heading": "Signs Your Covenant Is Healthy",
+      "start_line": 365,
+      "end_line": 371,
+      "content_fingerprint": "sha256:16:b13d84cf26cd8390",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "trust-and-distrust",
+        "love"
+      ],
+      "mood_tags": [
+        "hope",
+        "clarity"
+      ],
+      "motif_tags": [
+        "inventory-and-catalogue"
+      ],
+      "notes": "Lists signs of a healthy covenant, closing with \"room with windows\" image."
+    },
+    {
+      "chunk_index": 34,
+      "heading": "Exercises to Cultivate Trust",
+      "start_line": 375,
+      "end_line": 384,
+      "content_fingerprint": "sha256:16:1ac1aa2e1a4f84e7",
+      "plot_tags": [
+        "practice-action-item",
+        "parable-illustration"
+      ],
+      "context_tags": [
+        "trust-and-distrust",
+        "betrayal",
+        "self-worth"
+      ],
+      "mood_tags": [
+        "unease"
+      ],
+      "motif_tags": [],
+      "notes": "Four named trust exercises followed by \"The Move\" workplace-intimidation illustration."
+    },
+    {
+      "chunk_index": 35,
+      "heading": "Exercises to Cultivate Trust",
+      "start_line": 386,
+      "end_line": 393,
+      "content_fingerprint": "sha256:16:2db3347aae962fc4",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "self-worth",
+        "isolation",
+        "trust-and-distrust"
+      ],
+      "mood_tags": [
+        "unease",
+        "dread"
+      ],
+      "motif_tags": [],
+      "notes": "Analyzes the intimidation pattern's effects."
+    },
+    {
+      "chunk_index": 36,
+      "heading": "A Validation That Builds Trust and Deepens Connection",
+      "start_line": 397,
+      "end_line": 405,
+      "content_fingerprint": "sha256:16:2b04f9709139a8a9",
+      "plot_tags": [
+        "parable-illustration",
+        "claim-statement"
+      ],
+      "context_tags": [
+        "trust-and-distrust",
+        "love"
+      ],
+      "mood_tags": [
+        "tenderness",
+        "hope"
+      ],
+      "motif_tags": [],
+      "notes": "A partner-listening illustration paired with an analysis."
+    },
+    {
+      "chunk_index": 37,
+      "heading": "Practical Signs to Spot Each Pattern",
+      "start_line": 409,
+      "end_line": 412,
+      "content_fingerprint": "sha256:16:4d9ac60022ac9ca1",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "trust-and-distrust"
+      ],
+      "mood_tags": [
+        "clarity"
+      ],
+      "motif_tags": [
+        "inventory-and-catalogue"
+      ],
+      "notes": "Contrasts felt signs of violation versus validation."
+    },
+    {
+      "chunk_index": 38,
+      "heading": "How to Respond in the Moment",
+      "start_line": 416,
+      "end_line": 421,
+      "content_fingerprint": "sha256:16:c019403ffdb60126",
+      "plot_tags": [
+        "practice-action-item"
+      ],
+      "context_tags": [
+        "trust-and-distrust",
+        "courage"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Gives scripted in-the-moment responses."
+    },
+    {
+      "chunk_index": 39,
+      "heading": "Trust and the Other Pillars",
+      "start_line": 425,
+      "end_line": 427,
+      "content_fingerprint": "sha256:16:ded509ff70ba9491",
+      "plot_tags": [
+        "claim-statement",
+        "exposition"
+      ],
+      "context_tags": [
+        "trust-and-distrust"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "States trust is \"the hinge between persona and communion.\""
+    },
+    {
+      "chunk_index": 40,
+      "heading": "Trust and the First Friend (Chapter One)",
+      "start_line": 431,
+      "end_line": 437,
+      "content_fingerprint": "sha256:16:66881225a762c51a",
+      "plot_tags": [
+        "claim-statement",
+        "exposition"
+      ],
+      "context_tags": [
+        "trust-and-distrust",
+        "self-knowledge"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Cross-references Chapters One and Two."
+    },
+    {
+      "chunk_index": 41,
+      "heading": "Trust and the First Friend (Chapter One)",
+      "start_line": 439,
+      "end_line": 442,
+      "content_fingerprint": "sha256:16:a52aca10a0604151",
+      "plot_tags": [
+        "claim-statement",
+        "exposition"
+      ],
+      "context_tags": [
+        "trust-and-distrust",
+        "love"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "threshold"
+      ],
+      "notes": "Previews Chapter Four, naming \"the threshold of deep communion.\""
+    },
+    {
+      "chunk_index": 42,
+      "heading": "Trust and the Domain of Authentic Selfhood",
+      "start_line": 446,
+      "end_line": 447,
+      "content_fingerprint": "sha256:16:41a987112bcc1832",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "self-knowledge",
+        "trust-and-distrust"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Argues authenticity is \"the soil of trust.\""
+    },
+    {
+      "chunk_index": 43,
+      "heading": "Practical Bridgework",
+      "start_line": 451,
+      "end_line": 453,
+      "content_fingerprint": "sha256:16:237e4d04abd7c4a9",
+      "plot_tags": [
+        "practice-action-item"
+      ],
+      "context_tags": [
+        "trust-and-distrust",
+        "self-knowledge"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Bridges prior chapters' exercises into a combined daily practice."
+    },
+    {
+      "chunk_index": 44,
+      "heading": "A Short Story",
+      "start_line": 457,
+      "end_line": 457,
+      "content_fingerprint": "sha256:16:41f38d2e58317d58",
+      "plot_tags": [
+        "parable-illustration"
+      ],
+      "context_tags": [
+        "trust-and-distrust",
+        "love"
+      ],
+      "mood_tags": [
+        "melancholy",
+        "resignation"
+      ],
+      "motif_tags": [
+        "inventory-and-catalogue"
+      ],
+      "notes": "The reliability-checklist man's parable."
+    },
+    {
+      "chunk_index": 45,
+      "heading": "Repair and Rebuilding",
+      "start_line": 461,
+      "end_line": 473,
+      "content_fingerprint": "sha256:16:b06507b67ccf98af",
+      "plot_tags": [
+        "practice-action-item",
+        "closing-callback"
+      ],
+      "context_tags": [
+        "trust-and-distrust",
+        "resilience",
+        "forgiveness"
+      ],
+      "mood_tags": [
+        "hope"
+      ],
+      "motif_tags": [],
+      "notes": "Lists concrete repair steps, closes the chapter."
+    },
+    {
+      "chunk_index": 46,
+      "heading": "CHAPTER FOUR — THE THRESHOLD OF DEEP COMMUNION",
+      "start_line": 477,
+      "end_line": 479,
+      "content_fingerprint": "sha256:16:eaf6e863da2c8de2",
+      "plot_tags": [
+        "opening-hook",
+        "claim-statement"
+      ],
+      "context_tags": [
+        "love",
+        "trust-and-distrust"
+      ],
+      "mood_tags": [
+        "wonder"
+      ],
+      "motif_tags": [
+        "threshold"
+      ],
+      "notes": "Opens Chapter Four distinguishing closeness from communion."
+    },
+    {
+      "chunk_index": 47,
+      "heading": "What Deep Communion Is",
+      "start_line": 483,
+      "end_line": 493,
+      "content_fingerprint": "sha256:16:d837538c805582ea",
+      "plot_tags": [
+        "claim-statement",
+        "exposition"
+      ],
+      "context_tags": [
+        "love",
+        "identity"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "inventory-and-catalogue"
+      ],
+      "notes": "Formally defines deep communion and catalogues its key qualities."
+    },
+    {
+      "chunk_index": 48,
+      "heading": "How Communion Differs from Closeness",
+      "start_line": 497,
+      "end_line": 502,
+      "content_fingerprint": "sha256:16:8d73094a92283266",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "love",
+        "trust-and-distrust"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Contrasts habitual closeness against risk-bearing communion."
+    },
+    {
+      "chunk_index": 49,
+      "heading": "Preconditions: What Must Be Present",
+      "start_line": 506,
+      "end_line": 513,
+      "content_fingerprint": "sha256:16:484c131893fc0b3f",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "trust-and-distrust",
+        "self-knowledge",
+        "love"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "inventory-and-catalogue"
+      ],
+      "notes": "Lists four preconditions for communion's threshold to open."
+    },
+    {
+      "chunk_index": 50,
+      "heading": "The Mechanics of Communion",
+      "start_line": 517,
+      "end_line": 524,
+      "content_fingerprint": "sha256:16:b53d5b775eb6e8d1",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "love"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "inventory-and-catalogue",
+        "mirror-and-reflection"
+      ],
+      "notes": "Catalogues communion's recognizable patterns, including mirroring without takeover."
+    },
+    {
+      "chunk_index": 51,
+      "heading": "The Risks and the Ethics",
+      "start_line": 528,
+      "end_line": 534,
+      "content_fingerprint": "sha256:16:7fa79d90c9a8fcf9",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "love",
+        "betrayal",
+        "trust-and-distrust"
+      ],
+      "mood_tags": [
+        "unease"
+      ],
+      "motif_tags": [
+        "inventory-and-catalogue"
+      ],
+      "notes": "Lists enmeshment, dependency, and betrayal risks."
+    },
+    {
+      "chunk_index": 52,
+      "heading": "Practices That Invite Communion",
+      "start_line": 538,
+      "end_line": 543,
+      "content_fingerprint": "sha256:16:a9dbdfd9ca0d5cc3",
+      "plot_tags": [
+        "practice-action-item"
+      ],
+      "context_tags": [
+        "love"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Four concrete communion practices."
+    },
+    {
+      "chunk_index": 53,
+      "heading": "A Short Story",
+      "start_line": 547,
+      "end_line": 547,
+      "content_fingerprint": "sha256:16:885d0e0f17f58fb6",
+      "plot_tags": [
+        "parable-illustration"
+      ],
+      "context_tags": [
+        "love",
+        "grief",
+        "family",
+        "resilience"
+      ],
+      "mood_tags": [
+        "tenderness",
+        "grief"
+      ],
+      "motif_tags": [],
+      "notes": "Two colleagues' years-long friendship parable."
+    },
+    {
+      "chunk_index": 54,
+      "heading": "Communion and the System",
+      "start_line": 551,
+      "end_line": 557,
+      "content_fingerprint": "sha256:16:173854d911eb7028",
+      "plot_tags": [
+        "claim-statement",
+        "exposition"
+      ],
+      "context_tags": [
+        "love",
+        "identity"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "architecture"
+      ],
+      "notes": "Ties the pillars together as \"the architecture of identity.\""
+    },
+    {
+      "chunk_index": 55,
+      "heading": "Closing Movement",
+      "start_line": 561,
+      "end_line": 565,
+      "content_fingerprint": "sha256:16:77386746b5daa339",
+      "plot_tags": [
+        "closing-callback",
+        "aphoristic-landing"
+      ],
+      "context_tags": [
+        "love",
+        "courage"
+      ],
+      "mood_tags": [
+        "hope",
+        "wonder"
+      ],
+      "motif_tags": [],
+      "notes": "Closes the chapter on communion's rarity/courage."
+    },
+    {
+      "chunk_index": 56,
+      "heading": "CHAPTER FIVE — PART I: THE LARGER SELF",
+      "start_line": 569,
+      "end_line": 571,
+      "content_fingerprint": "sha256:16:e1f9f93f91fcb2bf",
+      "plot_tags": [
+        "opening-hook",
+        "claim-statement"
+      ],
+      "context_tags": [
+        "identity",
+        "memory-and-forgetting",
+        "inheritance-and-legacy"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "architecture"
+      ],
+      "notes": "Opens Part I with the room/house image and \"architects at work.\""
+    },
+    {
+      "chunk_index": 57,
+      "heading": "The Unseen Hands",
+      "start_line": 575,
+      "end_line": 581,
+      "content_fingerprint": "sha256:16:61428a2835bcb346",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "memory-and-forgetting",
+        "self-knowledge",
+        "inheritance-and-legacy"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "hands-and-grip",
+        "inventory-and-catalogue"
+      ],
+      "notes": "Names and catalogues the \"unseen hands.\""
+    },
+    {
+      "chunk_index": 58,
+      "heading": "The Larger Self as Witness",
+      "start_line": 585,
+      "end_line": 591,
+      "content_fingerprint": "sha256:16:85a14cab2678c7c6",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "self-knowledge"
+      ],
+      "mood_tags": [
+        "clarity"
+      ],
+      "motif_tags": [
+        "witness-and-observer"
+      ],
+      "notes": "Describes an inner \"quiet witness.\""
+    },
+    {
+      "chunk_index": 59,
+      "heading": "The Purpose of Awareness",
+      "start_line": 595,
+      "end_line": 601,
+      "content_fingerprint": "sha256:16:1735c4fefa21d3a3",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "self-knowledge",
+        "self-preservation"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "witness-and-observer",
+        "hands-and-grip"
+      ],
+      "notes": "Frames awareness as a tool for observing \"the unseen hands.\""
+    },
+    {
+      "chunk_index": 60,
+      "heading": "A Quiet Practice: The Third-Person Pause",
+      "start_line": 605,
+      "end_line": 610,
+      "content_fingerprint": "sha256:16:408031d7216e2470",
+      "plot_tags": [
+        "practice-action-item"
+      ],
+      "context_tags": [
+        "self-knowledge"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "naming-and-labeling"
+      ],
+      "notes": "The \"Elijah notices anxiety\" exercise."
+    },
+    {
+      "chunk_index": 61,
+      "heading": "The Sculpting View of Experience",
+      "start_line": 614,
+      "end_line": 620,
+      "content_fingerprint": "sha256:16:6c2fff0315425ad0",
+      "plot_tags": [
+        "claim-statement",
+        "over-explain-turn"
+      ],
+      "context_tags": [
+        "self-knowledge",
+        "resilience"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Extends the \"every action is a chisel stroke\" metaphor."
+    },
+    {
+      "chunk_index": 62,
+      "heading": "A Short Dialogue (Internal)",
+      "start_line": 624,
+      "end_line": 629,
+      "content_fingerprint": "sha256:16:4e4bfa70f2863c76",
+      "plot_tags": [
+        "parable-illustration"
+      ],
+      "context_tags": [
+        "self-knowledge",
+        "courage"
+      ],
+      "mood_tags": [
+        "unease",
+        "hope"
+      ],
+      "motif_tags": [],
+      "notes": "A scripted internal dialogue between \"You\" and \"Larger Self.\""
+    },
+    {
+      "chunk_index": 63,
+      "heading": "Closing Movement of Part I",
+      "start_line": 633,
+      "end_line": 639,
+      "content_fingerprint": "sha256:16:ec21bba28412fccf",
+      "plot_tags": [
+        "closing-callback",
+        "opening-hook"
+      ],
+      "context_tags": [
+        "self-knowledge"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Closes Part I and opens Part II."
+    },
+    {
+      "chunk_index": 64,
+      "heading": "The Origins: Lineage, Language, and Early Contracts",
+      "start_line": 643,
+      "end_line": 647,
+      "content_fingerprint": "sha256:16:dde5216a9abece20",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "inheritance-and-legacy",
+        "family",
+        "identity"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "naming-and-labeling",
+        "inventory-and-catalogue"
+      ],
+      "notes": "Discusses labels as doorways/locks shaping inner speech."
+    },
+    {
+      "chunk_index": 65,
+      "heading": "The Persona as Craft",
+      "start_line": 651,
+      "end_line": 657,
+      "content_fingerprint": "sha256:16:06837fd1a0905d04",
+      "plot_tags": [
+        "claim-statement",
+        "over-explain-turn"
+      ],
+      "context_tags": [
+        "identity",
+        "self-knowledge"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Reframes the persona as a tailored garment."
+    },
+    {
+      "chunk_index": 66,
+      "heading": "The Hidden Contracts We Renew Daily",
+      "start_line": 661,
+      "end_line": 667,
+      "content_fingerprint": "sha256:16:b4ae502844b050cc",
+      "plot_tags": [
+        "claim-statement",
+        "practice-action-item"
+      ],
+      "context_tags": [
+        "self-deception",
+        "self-knowledge"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Names small daily renewals of old childhood bargains."
+    },
+    {
+      "chunk_index": 67,
+      "heading": "Reclaiming Authorship",
+      "start_line": 671,
+      "end_line": 677,
+      "content_fingerprint": "sha256:16:9f68073965cc93ac",
+      "plot_tags": [
+        "practice-action-item"
+      ],
+      "context_tags": [
+        "self-knowledge",
+        "courage"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Gives naming/consent/rewrite exercises."
+    },
+    {
+      "chunk_index": 68,
+      "heading": "Practices for Re-Tailoring",
+      "start_line": 681,
+      "end_line": 685,
+      "content_fingerprint": "sha256:16:91bcfd5d6122c5b4",
+      "plot_tags": [
+        "practice-action-item"
+      ],
+      "context_tags": [
+        "self-knowledge"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Three named exercises continuing the tailoring metaphor."
+    },
+    {
+      "chunk_index": 69,
+      "heading": "The Larger Self as Co-Author",
+      "start_line": 689,
+      "end_line": 694,
+      "content_fingerprint": "sha256:16:8a77c52cd9dde2f6",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "self-knowledge",
+        "self-preservation"
+      ],
+      "mood_tags": [
+        "tenderness"
+      ],
+      "motif_tags": [],
+      "notes": "Frames the larger self as collaborator."
+    },
+    {
+      "chunk_index": 70,
+      "heading": "Closing Movement of Part II",
+      "start_line": 698,
+      "end_line": 703,
+      "content_fingerprint": "sha256:16:901fc8f302c0ff48",
+      "plot_tags": [
+        "closing-callback",
+        "opening-hook"
+      ],
+      "context_tags": [
+        "identity"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Closes Part II and opens Part III."
+    },
+    {
+      "chunk_index": 71,
+      "heading": "The Plane of Shared Being",
+      "start_line": 707,
+      "end_line": 713,
+      "content_fingerprint": "sha256:16:fd9a0d25c5a9ad07",
+      "plot_tags": [
+        "claim-statement",
+        "exposition"
+      ],
+      "context_tags": [
+        "identity",
+        "memory-and-forgetting",
+        "inheritance-and-legacy"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Argues inner lives are entangled."
+    },
+    {
+      "chunk_index": 72,
+      "heading": "The Mechanics of Connection",
+      "start_line": 717,
+      "end_line": 723,
+      "content_fingerprint": "sha256:16:f2b66b11db65089e",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "trust-and-distrust"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "mirror-and-reflection",
+        "inventory-and-catalogue"
+      ],
+      "notes": "Names resonance, mirroring, and shared repair."
+    },
+    {
+      "chunk_index": 73,
+      "heading": "The Ethics of Shared Selfhood",
+      "start_line": 727,
+      "end_line": 733,
+      "content_fingerprint": "sha256:16:ed9ea377efa6a281",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "self-preservation",
+        "trust-and-distrust"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Frames inner work as ethical/civic."
+    },
+    {
+      "chunk_index": 74,
+      "heading": "Practices for Entering the Common Room",
+      "start_line": 737,
+      "end_line": 746,
+      "content_fingerprint": "sha256:16:a1830a9b757480e7",
+      "plot_tags": [
+        "practice-action-item"
+      ],
+      "context_tags": [
+        "trust-and-distrust",
+        "courage"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "witness-and-observer"
+      ],
+      "notes": "Four group practices for communal vulnerability."
+    },
+    {
+      "chunk_index": 75,
+      "heading": "The Larger Self and the World",
+      "start_line": 750,
+      "end_line": 756,
+      "content_fingerprint": "sha256:16:438cd32f5bc885dd",
+      "plot_tags": [
+        "claim-statement",
+        "exposition"
+      ],
+      "context_tags": [
+        "identity",
+        "resilience"
+      ],
+      "mood_tags": [
+        "hope"
+      ],
+      "motif_tags": [],
+      "notes": "Scales the Domain of Authentic Selfhood up to institutions."
+    },
+    {
+      "chunk_index": 76,
+      "heading": "Closing Movement of Part III",
+      "start_line": 760,
+      "end_line": 764,
+      "content_fingerprint": "sha256:16:c6061a4d41be019d",
+      "plot_tags": [
+        "closing-callback",
+        "aphoristic-landing"
+      ],
+      "context_tags": [
+        "love",
+        "courage",
+        "self-knowledge"
+      ],
+      "mood_tags": [
+        "hope"
+      ],
+      "motif_tags": [
+        "architecture"
+      ],
+      "notes": "Closes the chapter recapping the whole book's arc."
+    },
+    {
+      "chunk_index": 77,
+      "heading": "Closing Movement of Part III",
+      "start_line": 766,
+      "end_line": 766,
+      "content_fingerprint": "sha256:16:a2b2cb583289fa6d",
+      "plot_tags": [
+        "practice-action-item",
+        "closing-callback"
+      ],
+      "context_tags": [
+        "courage"
+      ],
+      "mood_tags": [
+        "hope"
+      ],
+      "motif_tags": [],
+      "notes": "One-line closing vow."
+    },
+    {
+      "chunk_index": 78,
+      "heading": "A Personal Message",
+      "start_line": 770,
+      "end_line": 770,
+      "content_fingerprint": "sha256:16:ae8f9e8ceb31440c",
+      "plot_tags": [
+        "opening-hook",
+        "claim-statement"
+      ],
+      "context_tags": [
+        "self-knowledge",
+        "resilience"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Opens the closing personal-message section."
+    },
+    {
+      "chunk_index": 79,
+      "heading": "How the Pillars Shaped My Life",
+      "start_line": 774,
+      "end_line": 776,
+      "content_fingerprint": "sha256:16:c0d57687eec69edf",
+      "plot_tags": [
+        "parable-illustration",
+        "claim-statement"
+      ],
+      "context_tags": [
+        "self-worth",
+        "isolation",
+        "trust-and-distrust"
+      ],
+      "mood_tags": [
+        "melancholy",
+        "resignation"
+      ],
+      "motif_tags": [],
+      "notes": "First-person account of the persona giving access but costing hollowness."
+    },
+    {
+      "chunk_index": 80,
+      "heading": "How the Pillars Shaped My Life",
+      "start_line": 778,
+      "end_line": 780,
+      "content_fingerprint": "sha256:16:eb033506455e49a3",
+      "plot_tags": [
+        "parable-illustration"
+      ],
+      "context_tags": [
+        "love",
+        "self-worth",
+        "creative-anxiety"
+      ],
+      "mood_tags": [
+        "tenderness",
+        "hope"
+      ],
+      "motif_tags": [],
+      "notes": "First-person account of communion's quiet returns."
+    },
+    {
+      "chunk_index": 81,
+      "heading": "The Turning Point",
+      "start_line": 784,
+      "end_line": 792,
+      "content_fingerprint": "sha256:16:d63c2ec1af4fbbb2",
+      "plot_tags": [
+        "parable-illustration",
+        "practice-action-item",
+        "claim-statement"
+      ],
+      "context_tags": [
+        "self-knowledge",
+        "courage",
+        "transformation"
+      ],
+      "mood_tags": [
+        "clarity",
+        "hope"
+      ],
+      "motif_tags": [],
+      "notes": "Describes the moment the stage/performance metaphor stopped being metaphor."
+    },
+    {
+      "chunk_index": 82,
+      "heading": "What This Gave Me",
+      "start_line": 796,
+      "end_line": 799,
+      "content_fingerprint": "sha256:16:ec62977d7d0a8e12",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "self-worth",
+        "creative-anxiety",
+        "self-knowledge"
+      ],
+      "mood_tags": [
+        "hope"
+      ],
+      "motif_tags": [
+        "inventory-and-catalogue"
+      ],
+      "notes": "Catalogues the personal benefits gained."
+    },
+    {
+      "chunk_index": 83,
+      "heading": "The Truths I Want You to Carry",
+      "start_line": 803,
+      "end_line": 807,
+      "content_fingerprint": "sha256:16:c11d073506ce7593",
+      "plot_tags": [
+        "claim-statement",
+        "aphoristic-landing"
+      ],
+      "context_tags": [
+        "identity",
+        "self-knowledge"
+      ],
+      "mood_tags": [],
+      "motif_tags": [
+        "architecture",
+        "inventory-and-catalogue"
+      ],
+      "notes": "Restates \"You are an architecture, not a single face\" as a closing takeaway truth."
+    },
+    {
+      "chunk_index": 84,
+      "heading": "A Final Invitation",
+      "start_line": 811,
+      "end_line": 816,
+      "content_fingerprint": "sha256:16:e4e10f0cde88d691",
+      "plot_tags": [
+        "closing-callback",
+        "practice-action-item",
+        "aphoristic-landing"
+      ],
+      "context_tags": [
+        "love",
+        "self-worth"
+      ],
+      "mood_tags": [
+        "hope",
+        "tenderness"
+      ],
+      "motif_tags": [],
+      "notes": "Final call to action signed \"With care and company, Elijah.\""
+    },
+    {
+      "chunk_index": 85,
+      "heading": "Extra notes for my book the first friend",
+      "start_line": 820,
+      "end_line": 843,
+      "content_fingerprint": "sha256:16:f690f8e397537447",
+      "plot_tags": [
+        "claim-statement",
+        "exposition"
+      ],
+      "context_tags": [
+        "identity",
+        "self-knowledge"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Development-note analysis of the body/mind/consciousness triad."
+    },
+    {
+      "chunk_index": 86,
+      "heading": "Extra notes for my book the first friend",
+      "start_line": 845,
+      "end_line": 864,
+      "content_fingerprint": "sha256:16:26a13f445efbdc2e",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "identity",
+        "self-knowledge"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Continues the triad analysis and introduces the \"real friend\" line."
+    },
+    {
+      "chunk_index": 87,
+      "heading": "A. It defines friendship as a spiritual technology",
+      "start_line": 868,
+      "end_line": 903,
+      "content_fingerprint": "sha256:16:233844d0f6cd12f2",
+      "plot_tags": [
+        "claim-statement",
+        "exposition"
+      ],
+      "context_tags": [
+        "love",
+        "trust-and-distrust",
+        "identity"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Development-note analysis framing friendship connections as nodes."
+    },
+    {
+      "chunk_index": 88,
+      "heading": "A. It defines friendship as a spiritual technology",
+      "start_line": 905,
+      "end_line": 905,
+      "content_fingerprint": "sha256:16:31cbd57d247c1683",
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "A single transitional fragment with no independent content to tag."
+    },
+    {
+      "chunk_index": 89,
+      "heading": "A. It gives your message urgency",
+      "start_line": 909,
+      "end_line": 910,
+      "content_fingerprint": "sha256:16:39b0cecfeec650bc",
+      "plot_tags": [
+        "aphoristic-landing",
+        "claim-statement"
+      ],
+      "context_tags": [
+        "ambition"
+      ],
+      "mood_tags": [],
+      "motif_tags": [],
+      "notes": "Two-line development note reframing the book as \"a cultural intervention.\""
+    },
+    {
+      "chunk_index": 90,
+      "heading": "B. It ties personal transformation to social transformation",
+      "start_line": 914,
+      "end_line": 940,
+      "content_fingerprint": "sha256:16:3abbf96cb9ad8d3f",
+      "plot_tags": [
+        "claim-statement"
+      ],
+      "context_tags": [
+        "existential-dread",
+        "identity"
+      ],
+      "mood_tags": [
+        "dread"
+      ],
+      "motif_tags": [
+        "architecture",
+        "inventory-and-catalogue"
+      ],
+      "notes": "Development note listing societal breakdown and mapping the four pillars onto \"architecture,\" infrastructure, and culture as a civilizational blueprint."
+    }
+  ]
+}

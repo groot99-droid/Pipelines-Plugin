@@ -1,0 +1,17 @@
+{
+  "file": "07_Poems_and_Prose/16_A_Crown_Without_a_Kingdom.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:9625d64d7496f995",
+  "chunks": [
+    {"chunk_index": 1, "heading": "A Crown Without a Kingdom", "start_line": 4, "end_line": 27, "content_fingerprint": "sha256:16:9b53be3ba0f2d12a",
+      "plot_tags": ["claim-statement"], "context_tags": ["existential-dread", "mortality", "ambition", "poverty-and-inequality"],
+      "mood_tags": ["resignation", "melancholy"], "motif_tags": [],
+      "notes": "Opens with direct philosophical assertions about fate, the shared futility of pauper and noble, and contrast/value being defined by opposition -- a claim-driven meditation rather than narrated event."},
+    {"chunk_index": 2, "heading": "A Crown Without a Kingdom", "start_line": 29, "end_line": 49, "content_fingerprint": "sha256:16:fcf3be8729697db0",
+      "plot_tags": ["closing-callback", "aphoristic-landing"], "context_tags": ["mortality", "inheritance-and-legacy", "existential-dread"],
+      "mood_tags": ["resignation", "hope"], "motif_tags": ["inheritance-object"],
+      "notes": "Closes on legacy passing to those who \"loved you\" carrying forward \"final chapters,\" paired with aphoristic imperatives that land the poem's argument explicitly."}
+  ]
+}

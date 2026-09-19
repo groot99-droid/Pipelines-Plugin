@@ -1,3 +1,19 @@
+---
+title: "Inherited"
+type: poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: first-person
+tense: mixed
+themes: [parent-relationship, generational-cycle, forgiveness, becoming-your-parents]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "3724–3793"
+attachments: []
+tags: [type/poem, mode/confessional-poetry, theme/parent-relationship, theme/generational-cycle, theme/becoming-your-parents, status/complete]
+---
+
 # Inherited
 
 **Type:** Autobiographical poem  

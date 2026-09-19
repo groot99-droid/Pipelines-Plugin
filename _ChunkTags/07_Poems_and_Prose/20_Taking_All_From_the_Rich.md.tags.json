@@ -1,0 +1,13 @@
+{
+  "file": "07_Poems_and_Prose/20_Taking_All_From_the_Rich.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:5019a7ab44346292",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Taking All From the Rich", "start_line": 4, "end_line": 18, "content_fingerprint": "sha256:16:2513066c64beb1c2",
+      "plot_tags": ["claim-statement", "parable-illustration", "aphoristic-landing"], "context_tags": ["poverty-and-inequality"],
+      "mood_tags": ["resignation", "despair"], "motif_tags": [],
+      "notes": "The chunk opens with a paradox/thesis about redistributive justice, illustrates it via the Robin Hood/King John legend, and closes on an aphoristic \"cycle of heartache in an endless race\" line."}
+  ]
+}

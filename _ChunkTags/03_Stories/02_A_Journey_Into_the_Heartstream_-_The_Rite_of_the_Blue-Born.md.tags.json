@@ -1,0 +1,25 @@
+{
+  "file": "03_Stories/02_A_Journey_Into_the_Heartstream_-_The_Rite_of_the_Blue-Born.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:327e12b1c5ed7488",
+  "chunks": [
+    {"chunk_index": 1, "heading": null, "start_line": 2, "end_line": 21, "content_fingerprint": "sha256:16:11f02db22508adbc",
+      "plot_tags": ["codex-worldbuilding-aside", "opening-hook"], "context_tags": ["coming-of-age", "identity", "transformation"],
+      "mood_tags": ["wonder"], "motif_tags": ["threshold"],
+      "notes": "Establishes the Blue-Born people, their marrow-cavern society, and the coming Recognition (a pigment-change threshold marking the move from youth to adulthood) in codex-style exposition."},
+    {"chunk_index": 2, "heading": null, "start_line": 23, "end_line": 42, "content_fingerprint": "sha256:16:46026fd46cf27916",
+      "plot_tags": ["rising-action", "threat-handoff"], "context_tags": ["coming-of-age", "family"],
+      "mood_tags": ["wonder", "unease"], "motif_tags": ["threshold"],
+      "notes": "The young men ascend from the bone marrow into the bloodstream, a literal threshold-crossing rite witnessed by elders, with wonder at the river and unease at the strange predators lurking within it."},
+    {"chunk_index": 3, "heading": null, "start_line": 44, "end_line": 73, "content_fingerprint": "sha256:16:a484f43f7a0c4c2a",
+      "plot_tags": ["rising-action", "codex-worldbuilding-aside"], "context_tags": ["coming-of-age", "family"],
+      "mood_tags": ["wonder", "longing"], "motif_tags": ["threshold"],
+      "notes": "The brotherhood rafts together down the bloodstream toward the heart, a passage of shared laughter, argument, and dream rendered in codex-like landscape description, tinged with the knowledge of imminent parting."},
+    {"chunk_index": 4, "heading": null, "start_line": 75, "end_line": 87, "content_fingerprint": "sha256:16:179363ab55ffe183",
+      "plot_tags": ["climax-beat", "aphoristic-landing"], "context_tags": ["loss", "isolation", "family"],
+      "mood_tags": ["grief", "melancholy"], "motif_tags": [],
+      "notes": "The brotherhood is forcibly scattered by the bloodstream's currents into separate destinies with no goodbye, closing on an explicit aphoristic statement that life never lets you hold what you love for long."}
+  ]
+}

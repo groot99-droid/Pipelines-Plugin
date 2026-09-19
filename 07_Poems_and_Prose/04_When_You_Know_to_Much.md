@@ -1,3 +1,19 @@
+---
+title: "When You Know to Much"
+type: prose-poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: first-person
+tense: present
+themes: [creative-ambition, self-worth, defiance, mortality]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "3702–3724"
+attachments: []
+tags: [type/prose-poem, mode/confessional-poetry, theme/creative-ambition, theme/self-worth, theme/defiance, status/complete]
+---
+
 # When You Know to Much
 
 **Type:** Prose poem / manifesto  

@@ -2,163 +2,187 @@
 
 **63 works**, split out of 6 source files. Every file below is complete and verbatim.
 
+See also: [[Vault_Overview.canvas|Vault Overview canvas]] (visual map by style-mode) and [[CLAUDE.md]] (voice/craft guide for new writing).
+
 ## Books  (1)
 
-1. **[The First Friend](01_Books/01_The_First_Friend.md)** — Nonfiction book (complete) + Core Truths + development notes
+MOC: [[01_Books/_index|Books index]]
+
+1. **[[01_Books/01_The_First_Friend|The First Friend]]** — Nonfiction book (complete) + Core Truths + development notes
    <sub>`Master_Volume_1`, lines 1–932</sub>
 
 ## Novels & Long-Form Narrative  (5)
 
-2. **[The Stuffed Ones](02_Novels/01_The_Stuffed_Ones.md)** — Novel in three movements, 33 chapters — horror
+MOC: [[02_Novels/_index|Novels index]]
+
+2. **[[02_Novels/01_The_Stuffed_Ones|The Stuffed Ones]]** — Novel in three movements, 33 chapters — horror
    <sub>`Master_Volume_1`, lines 3076–3564</sub>
-3. **[WrymWretch](02_Novels/02_WrymWretch.md)** — Novel — Acts I & II plot, plus Chapters One & Two prose
+3. **[[02_Novels/02_WrymWretch|WrymWretch]]** — Novel — Acts I & II plot, plus Chapters One & Two prose
    <sub>`Master_Volume_1`, lines 4198–4529</sub>
-4. **[Through the Eyes of Wolf and Lamb](02_Novels/03_Through_the_Eyes_of_Wolf_and_Lamb.md)** — Quartet — foreword and full narrative arc
+4. **[[02_Novels/03_Through_the_Eyes_of_Wolf_and_Lamb|Through the Eyes of Wolf and Lamb]]** — Quartet — foreword and full narrative arc
    <sub>`Master_Volume_1`, lines 5109–5238</sub>
-5. **[The Cycle of Us](02_Novels/04_The_Cycle_of_Us.md)** — Novel concept — nine lives, one soul-line
+5. **[[02_Novels/04_The_Cycle_of_Us|The Cycle of Us]]** — Novel concept — nine lives, one soul-line
    <sub>`Master_Volume_1`, lines 5297–5397</sub>
-6. **[The Endless Temple - Elaris Sel Marden](02_Novels/05_The_Endless_Temple_-_Elaris_Sel_Marden.md)** — Novel — Introduction and Chapter One
+6. **[[02_Novels/05_The_Endless_Temple_-_Elaris_Sel_Marden|The Endless Temple - Elaris Sel Marden]]** — Novel — Introduction and Chapter One
    <sub>`Master_Volume_2`, lines 32–44</sub>
 
 ## Stories  (9)
 
-7. **[A Journey Into the Soul](03_Stories/01_A_Journey_Into_the_Soul.md)** — Speculative expedition narrative — the biomes of the eye
+MOC: [[03_Stories/_index|Stories index]]
+
+7. **[[03_Stories/01_A_Journey_Into_the_Soul|A Journey Into the Soul]]** — Speculative expedition narrative — the biomes of the eye
    <sub>`Master_Volume_1`, lines 1086–1168</sub>
-8. **[A Journey Into the Heartstream - The Rite of the Blue-Born](03_Stories/02_A_Journey_Into_the_Heartstream_-_The_Rite_of_the_Blue-Born.md)** — Speculative narrative — rite of passage in the body
+8. **[[03_Stories/02_A_Journey_Into_the_Heartstream_-_The_Rite_of_the_Blue-Born|A Journey Into the Heartstream - The Rite of the Blue-Born]]** — Speculative narrative — rite of passage in the body
    <sub>`Master_Volume_1`, lines 1169–1248</sub>
-9. **[The Yellow Drop and The Plain Before Sound](03_Stories/03_The_Yellow_Drop_and_The_Plain_Before_Sound.md)** — Prose poem / origin-by-sound narrative
+9. **[[03_Stories/03_The_Yellow_Drop_and_The_Plain_Before_Sound|The Yellow Drop and The Plain Before Sound]]** — Prose poem / origin-by-sound narrative
    <sub>`Master_Volume_1`, lines 1249–1301</sub>
-10. **[Internal Affairs - The Body Has Notes](03_Stories/04_Internal_Affairs_-_The_Body_Has_Notes.md)** — Comedic sketch cycle in twelve scenes
+10. **[[03_Stories/04_Internal_Affairs_-_The_Body_Has_Notes|Internal Affairs - The Body Has Notes]]** — Comedic sketch cycle in twelve scenes
    <sub>`Master_Volume_1`, lines 1302–1710</sub>
-11. **[Two Takes - Stage Left, Stage Right](03_Stories/05_Two_Takes_-_Stage_Left_Stage_Right.md)** — Paired monologues — five scenes, two viewpoints each
+11. **[[03_Stories/05_Two_Takes_-_Stage_Left_Stage_Right|Two Takes - Stage Left, Stage Right]]** — Paired monologues — five scenes, two viewpoints each
    <sub>`Master_Volume_1`, lines 5238–5286</sub>
-12. **[Melting Away](03_Stories/06_Melting_Away.md)** — Short story
+12. **[[03_Stories/06_Melting_Away|Melting Away]]** — Short story
    <sub>`Master_Volume_1`, lines 5484–5522</sub>
-13. **[Project - Man Eater](03_Stories/07_Project_-_Man_Eater.md)** — Short story — horror
+13. **[[03_Stories/07_Project_-_Man_Eater|Project - Man Eater]]** — Short story — horror
    <sub>`Master_Volume_2`, lines 1–12</sub>
-14. **[Following The Sheep](03_Stories/08_Following_The_Sheep.md)** — Short story — horror
+14. **[[03_Stories/08_Following_The_Sheep|Following The Sheep]]** — Short story — horror
    <sub>`Master_Volume_2`, lines 12–32</sub>
-15. **[Low In The Water](03_Stories/09_Low_In_The_Water.md)** — Short story opening
+15. **[[03_Stories/09_Low_In_The_Water|Low In The Water]]** — Short story opening
    <sub>`Master_Volume_2`, lines 64–68</sub>
 
 ## Book Concepts & Outlines  (8)
 
-16. **[Behind the Peephole](04_Book_Concepts/01_Behind_the_Peephole.md)** — Novel pitch / thriller
+MOC: [[04_Book_Concepts/_index|Book Concepts index]]
+
+16. **[[04_Book_Concepts/01_Behind_the_Peephole|Behind the Peephole]]** — Novel pitch / thriller
    <sub>`Master_Volume_1`, lines 933–977</sub>
-17. **[Missing Campsites](04_Book_Concepts/02_Missing_Campsites.md)** — Novel pitch / slow-burn horror
+17. **[[04_Book_Concepts/02_Missing_Campsites|Missing Campsites]]** — Novel pitch / slow-burn horror
    <sub>`Master_Volume_1`, lines 978–1019</sub>
-18. **[Beetles for Brains](04_Book_Concepts/03_Beetles_for_Brains.md)** — Novel pitch / psychological horror
+18. **[[04_Book_Concepts/03_Beetles_for_Brains|Beetles for Brains]]** — Novel pitch / psychological horror
    <sub>`Master_Volume_1`, lines 1020–1048</sub>
-19. **[The Bloody Alarm Clock](04_Book_Concepts/04_The_Bloody_Alarm_Clock.md)** — Novel pitch / horror
+19. **[[04_Book_Concepts/04_The_Bloody_Alarm_Clock|The Bloody Alarm Clock]]** — Novel pitch / horror
    <sub>`Master_Volume_1`, lines 1049–1085</sub>
-20. **[Chasing Cold Clues](04_Book_Concepts/05_Chasing_Cold_Clues.md)** — Series concept + character design — Dr. Sterling Vanguard
+20. **[[04_Book_Concepts/05_Chasing_Cold_Clues|Chasing Cold Clues]]** — Series concept + character design — Dr. Sterling Vanguard
    <sub>`Master_Volume_1`, lines 5522–5544</sub>
-21. **[A 9-5 Could Kill You](04_Book_Concepts/06_A_9-5_Could_Kill_You.md)** — Novel outline in five parts
+21. **[[04_Book_Concepts/06_A_9-5_Could_Kill_You|A 9-5 Could Kill You]]** — Novel outline in five parts
    <sub>`Master_Volume_1`, lines 5544–5566</sub>
-22. **[Narrative Voice](04_Book_Concepts/07_Narrative_Voice.md)** — Novel concept
+22. **[[04_Book_Concepts/07_Narrative_Voice|Narrative Voice]]** — Novel concept — early seed of [[02_Novels/04_The_Cycle_of_Us|The Cycle of Us]]
    <sub>`Master_Volume_2`, lines 68–71</sub>
-23. **[The Show Must Go On](04_Book_Concepts/08_The_Show_Must_Go_On.md)** — Novel concept
+23. **[[04_Book_Concepts/08_The_Show_Must_Go_On|The Show Must Go On]]** — Novel concept
    <sub>`Master_Volume_2`, lines 72–74</sub>
 
 ## Worldbuilding  (3)
 
-24. **[People of the Bark](05_Worldbuilding/01_People_of_the_Bark.md)** — World concept / screen treatment — the Endless Trunk
+MOC: [[05_Worldbuilding/_index|Worldbuilding index]]
+
+24. **[[05_Worldbuilding/01_People_of_the_Bark|People of the Bark]]** — World concept / screen treatment — the Endless Trunk
    <sub>`Master_Volume_1`, lines 1711–1811</sub>
-25. **[The Redacted Testament of Lira Calyx](05_Worldbuilding/02_The_Redacted_Testament_of_Lira_Calyx.md)** — Four-book world bible + final chapter — The Convergence Era
+25. **[[05_Worldbuilding/02_The_Redacted_Testament_of_Lira_Calyx|The Redacted Testament of Lira Calyx]]** — Four-book world bible + final chapter — The Convergence Era
    <sub>`Master_Volume_1`, lines 1812–2052</sub>
-26. **[World Codex of Wyrmreach](05_Worldbuilding/03_World_Codex_of_Wyrmreach.md)** — World bible — cosmology, races, dragons, magic, timeline
+26. **[[05_Worldbuilding/03_World_Codex_of_Wyrmreach|World Codex of Wyrmreach]]** — World bible — cosmology, races, dragons, magic, timeline — same world/project as [[02_Novels/02_WrymWretch|WrymWretch]]
    <sub>`Master_Volume_1`, lines 4142–4197</sub>
 
 ## Character Profiles  (5)
 
-27. **[Graknox the Ironbound Raider](10_Characters/01_Graknox_the_Ironbound_Raider.md)** — Character profile
+MOC: [[10_Characters/_index|Character Profiles index]]
+
+27. **[[10_Characters/01_Graknox_the_Ironbound_Raider|Graknox the Ironbound Raider]]** — Character profile
    <sub>`Master_Volume_1`, lines 4110–4141</sub>
-28. **[The Bottonian Philosopher](10_Characters/02_The_Bottonian_Philosopher.md)** — Character / archetype profile
+28. **[[10_Characters/02_The_Bottonian_Philosopher|The Bottonian Philosopher]]** — Character / archetype profile
    <sub>`The_Bottonian_Philosopher_Overview`, complete file</sub>
-29. **[The Kafkan Seer](10_Characters/03_The_Kafkan_Seer.md)** — Character / archetype profile
+29. **[[10_Characters/03_The_Kafkan_Seer|The Kafkan Seer]]** — Character / archetype profile
    <sub>`The_Kafkan_Seer_Overview`, complete file</sub>
-30. **[The Darwishan Exile](10_Characters/04_The_Darwishan_Exile.md)** — Character / archetype profile
+30. **[[10_Characters/04_The_Darwishan_Exile|The Darwishan Exile]]** — Character / archetype profile
    <sub>`The_Darwishan_Exile_Overview`, complete file</sub>
-31. **[The Rossettian Oracle](10_Characters/05_The_Rossettian_Oracle.md)** — Character / archetype profile
+31. **[[10_Characters/05_The_Rossettian_Oracle|The Rossettian Oracle]]** — Character / archetype profile
    <sub>`The_Rossettian_Oracle_Overview`, complete file</sub>
 
 ## Songs  (2)
 
-32. **[Cable Construction Circus](06_Songs/04_Cable_Construction_Circus.md)** — Song / work-site narrative rap
+MOC: [[06_Songs/_index|Songs index]]
+
+32. **[[06_Songs/04_Cable_Construction_Circus|Cable Construction Circus]]** — Song / work-site narrative rap
    <sub>`Master_Volume_1`, lines 2974–3075</sub>
-33. **[How i feel](06_Songs/05_How_i_feel.md)** — Song lyric
+33. **[[06_Songs/05_How_i_feel|How i feel]]** — Song lyric
    <sub>`Master_Volume_1`, lines 5647–5691</sub>
 
 ## Poems & Prose  (21)
 
-34. **[Trips Are Like Exes](07_Poems_and_Prose/01_Trips_Are_Like_Exes.md)** — Prose poem
+MOC: [[07_Poems_and_Prose/_index|Poems & Prose index]]
+
+34. **[[07_Poems_and_Prose/01_Trips_Are_Like_Exes|Trips Are Like Exes]]** — Prose poem
    <sub>`Master_Volume_1`, lines 2858–2863</sub>
-35. **[Growing Up](07_Poems_and_Prose/02_Growing_Up.md)** — Poem
+35. **[[07_Poems_and_Prose/02_Growing_Up|Growing Up]]** — Poem
    <sub>`Master_Volume_1`, lines 3565–3598</sub>
-36. **[Am I Me Enough](07_Poems_and_Prose/03_Am_I_Me_Enough.md)** — Poem
+36. **[[07_Poems_and_Prose/03_Am_I_Me_Enough|Am I Me Enough]]** — Poem
    <sub>`Master_Volume_1`, lines 3599–3702</sub>
-37. **[When You Know to Much](07_Poems_and_Prose/04_When_You_Know_to_Much.md)** — Prose poem / manifesto
+37. **[[07_Poems_and_Prose/04_When_You_Know_to_Much|When You Know to Much]]** — Prose poem / manifesto
    <sub>`Master_Volume_1`, lines 3702–3724</sub>
-38. **[Inherited](07_Poems_and_Prose/05_Inherited.md)** — Autobiographical poem
+38. **[[07_Poems_and_Prose/05_Inherited|Inherited]]** — Autobiographical poem
    <sub>`Master_Volume_1`, lines 3724–3793</sub>
-39. **[Was I Good Enough](07_Poems_and_Prose/06_Was_I_Good_Enough.md)** — Long poem
+39. **[[07_Poems_and_Prose/06_Was_I_Good_Enough|Was I Good Enough]]** — Long poem
    <sub>`Master_Volume_1`, lines 4529–4712</sub>
-40. **[In Search Of Truth](07_Poems_and_Prose/07_In_Search_Of_Truth.md)** — Prose poem
+40. **[[07_Poems_and_Prose/07_In_Search_Of_Truth|In Search Of Truth]]** — Prose poem
    <sub>`Master_Volume_1`, lines 5397–5424</sub>
-41. **[The Unfamiliar](07_Poems_and_Prose/08_The_Unfamiliar.md)** — Poem
+41. **[[07_Poems_and_Prose/08_The_Unfamiliar|The Unfamiliar]]** — Poem
    <sub>`Master_Volume_1`, lines 5425–5483</sub>
-42. **[The Knife I Chose](07_Poems_and_Prose/09_The_Knife_I_Chose.md)** — Narrative poem
+42. **[[07_Poems_and_Prose/09_The_Knife_I_Chose|The Knife I Chose]]** — Narrative poem
    <sub>`Master_Volume_1`, lines 5566–5647</sub>
-43. **[The Stripes Remain](07_Poems_and_Prose/10_The_Stripes_Remain.md)** — Poem
+43. **[[07_Poems_and_Prose/10_The_Stripes_Remain|The Stripes Remain]]** — Poem
    <sub>`Master_Volume_1`, lines 5692–5734</sub>
-44. **[For My Papa](07_Poems_and_Prose/11_For_My_Papa.md)** — Eulogy poem
+44. **[[07_Poems_and_Prose/11_For_My_Papa|For My Papa]]** — Eulogy poem
    <sub>`Master_Volume_1`, lines 5735–5779</sub>
-45. **[Darkness](07_Poems_and_Prose/12_Darkness.md)** — Poem
+45. **[[07_Poems_and_Prose/12_Darkness|Darkness]]** — Poem
    <sub>`Master_Volume_1`, lines 5779–5808</sub>
-46. **[Past, Present, and Future](07_Poems_and_Prose/13_Past_Present_and_Future.md)** — Poem
+46. **[[07_Poems_and_Prose/13_Past_Present_and_Future|Past, Present, and Future]]** — Poem
    <sub>`Master_Volume_1`, lines 5809–5859</sub>
-47. **[Love](07_Poems_and_Prose/14_Love.md)** — Poem
+47. **[[07_Poems_and_Prose/14_Love|Love]]** — Poem
    <sub>`Master_Volume_1`, lines 5859–5913</sub>
-48. **[From Ashes to Ascendancy](07_Poems_and_Prose/15_From_Ashes_to_Ascendancy.md)** — Poem in five movements
+48. **[[07_Poems_and_Prose/15_From_Ashes_to_Ascendancy|From Ashes to Ascendancy]]** — Poem in five movements
    <sub>`Master_Volume_1`, lines 5914–5977</sub>
-49. **[A Crown Without a Kingdom](07_Poems_and_Prose/16_A_Crown_Without_a_Kingdom.md)** — Philosophical prose poem
+49. **[[07_Poems_and_Prose/16_A_Crown_Without_a_Kingdom|A Crown Without a Kingdom]]** — Philosophical prose poem
    <sub>`Master_Volume_1`, lines 5977–6019</sub>
-50. **[How It Is](07_Poems_and_Prose/17_How_It_Is.md)** — Poem in three movements
+50. **[[07_Poems_and_Prose/17_How_It_Is|How It Is]]** — Poem in three movements
    <sub>`Master_Volume_1`, lines 6019–6112</sub>
-51. **[My Wish](07_Poems_and_Prose/18_My_Wish.md)** — Poem
+51. **[[07_Poems_and_Prose/18_My_Wish|My Wish]]** — Poem
    <sub>`Master_Volume_2`, lines 44–64</sub>
-52. **[The Sun's Bright Light](07_Poems_and_Prose/19_The_Suns_Bright_Light.md)** — Poem
+52. **[[07_Poems_and_Prose/19_The_Suns_Bright_Light|The Sun's Bright Light]]** — Poem
    <sub>`Master_Volume_2`, lines 74–83</sub>
-53. **[Taking All From the Rich](07_Poems_and_Prose/20_Taking_All_From_the_Rich.md)** — Poem
+53. **[[07_Poems_and_Prose/20_Taking_All_From_the_Rich|Taking All From the Rich]]** — Poem
    <sub>`Master_Volume_2`, lines 83–91</sub>
-54. **[Todays Wine](07_Poems_and_Prose/21_Todays_Wine.md)** — Poem
+54. **[[07_Poems_and_Prose/21_Todays_Wine|Todays Wine]]** — Poem
    <sub>`Master_Volume_2`, lines 91–108</sub>
 
 ## Letters  (1)
 
-55. **[Dear Katie](08_Letters/01_Dear_Katie.md)** — Letter / amends
+MOC: [[08_Letters/_index|Letters index]]
+
+55. **[[08_Letters/01_Dear_Katie|Dear Katie]]** — Letter / amends
    <sub>`Master_Volume_1`, lines 2962–2974</sub>
 
 ## Dream Journal & Visions  (2)
 
-56. **[Dream Journal](09_Dream_Journal/01_Dream_Journal.md)** — Dream journal — six entries
+MOC: [[09_Dream_Journal/_index|Dream Journal index]]
+
+56. **[[09_Dream_Journal/01_Dream_Journal|Dream Journal]]** — Dream journal — six entries
    <sub>`Master_Volume_1`, lines 3793–4074</sub>
-57. **[Trip Tracker - July Fourteenth 2023](09_Dream_Journal/02_Trip_Tracker_-_July_Fourteenth_2023.md)** — Vision record / seven phases + symbolic index
+57. **[[09_Dream_Journal/02_Trip_Tracker_-_July_Fourteenth_2023|Trip Tracker - July Fourteenth 2023]]** — Vision record / seven phases + symbolic index — filed under the same "Creative Codex" as [[11_Essays/04_The_Creative_Codex_of_the_Mythic_Architect|The Creative Codex of the Mythic Architect]]
    <sub>`Master_Volume_1`, lines 4074–4109</sub>
 
 ## Essays  (6)
 
-58. **[The Architecture of Being](11_Essays/02_The_Architecture_of_Being.md)** — Philosophical essay in four movements
+MOC: [[11_Essays/_index|Essays index]]
+
+58. **[[11_Essays/02_The_Architecture_of_Being|The Architecture of Being]]** — Philosophical essay in four movements
    <sub>`Master_Volume_1`, lines 4890–4935</sub>
-59. **[What is The Power of Art](11_Essays/03_What_is_The_Power_of_Art.md)** — Essay / manifesto on artistic lineage
+59. **[[11_Essays/03_What_is_The_Power_of_Art|What is The Power of Art]]** — Essay / manifesto on artistic lineage
    <sub>`Master_Volume_1`, lines 4935–4992</sub>
-60. **[The Creative Codex of the Mythic Architect](11_Essays/04_The_Creative_Codex_of_the_Mythic_Architect.md)** — Creative-system essay — signatures, structures, systems, domains
+60. **[[11_Essays/04_The_Creative_Codex_of_the_Mythic_Architect|The Creative Codex of the Mythic Architect]]** — Creative-system essay — signatures, structures, systems, domains
    <sub>`Master_Volume_1`, lines 4992–5109</sub>
-61. **[How to Help People](11_Essays/05_How_to_Help_People.md)** — Personal essay
+61. **[[11_Essays/05_How_to_Help_People|How to Help People]]** — Personal essay
    <sub>`Master_Volume_1`, lines 5287–5297</sub>
-62. **[Building Dreams From the Top Down](11_Essays/06_Building_Dreams_From_the_Top_Down.md)** — Ambition inventory
+62. **[[11_Essays/06_Building_Dreams_From_the_Top_Down|Building Dreams From the Top Down]]** — Ambition inventory
    <sub>`Master_Volume_2`, lines 108–115</sub>
-63. **[Shoot for the Moon](11_Essays/07_Shoot_for_the_Moon.md)** — Aphorisms and reflections
+63. **[[11_Essays/07_Shoot_for_the_Moon|Shoot for the Moon]]** — Aphorisms and reflections
    <sub>`Master_Volume_2`, lines 116–147</sub>
 
 ---
@@ -176,3 +200,5 @@ The six source files were cut at title boundaries into contiguous segments. Each
 **Untitled pieces.** Where a work carried no title, the title comes from its own first line, refrain, or central image, and the file header says so.
 
 Line ranges in each file header point back to the exact span of the original, so any file can be traced to source.
+
+**A note on this index vs. the works themselves.** This file, unlike the 63 works it lists, is a living navigation aid, not a verbatim artifact — its wikilinks, the per-folder MOC references, and the cross-references above (Wyrmreach, the Cycle of Us/Narrative Voice pair, the Creative Codex) were added after the fact to make the vault navigable in Obsidian. They do not change or annotate the works themselves.

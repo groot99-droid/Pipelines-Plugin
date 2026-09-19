@@ -1,3 +1,19 @@
+---
+title: "Project: Man Eater"
+type: story
+mode: horror-prose
+genre: [horror, cosmic-horror, folklore-horror]
+status: complete
+pov: third-limited
+tense: past
+themes: [body-horror, folklore-monster, institutional-control, transformation]
+archetypes: [the-monster-within, the-complicit-authority]
+source_volume: Master_Volume_2
+source_lines: "1-12"
+attachments: []
+tags: [type/story, mode/horror-prose, theme/body-horror, theme/transformation, status/complete]
+---
+
 # Project - Man Eater
 
 **Type:** Short story — horror  

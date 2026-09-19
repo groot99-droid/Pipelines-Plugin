@@ -1,3 +1,19 @@
+---
+title: "Cable Construction Circus"
+type: song
+mode: unclassified
+genre: [rap, narrative-rap, work-site-comedy]
+status: complete
+pov: first-person
+tense: present
+themes: [blue-collar-labor, workplace-chaos, camaraderie, dark-humor]
+archetypes: [the-slacker, the-unsung-workhorse]
+source_volume: Master_Volume_1
+source_lines: "2974–3075"
+attachments: []
+tags: [type/song, mode/unclassified, theme/blue-collar-labor, theme/workplace-chaos, theme/dark-humor, status/complete]
+---
+
 # Cable Construction Circus
 
 **Type:** Song / work-site narrative rap  

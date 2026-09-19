@@ -1,3 +1,19 @@
+---
+title: "The Redacted Testament of Lira Calyx"
+type: worldbuilding
+mode: epic-fantasy
+genre: [post-apocalyptic, world-bible, found-document]
+status: complete
+pov: mixed
+tense: mixed
+themes: [conspiracy-and-truth, ecological-collapse, memory-and-record, scientific-hubris, incomplete-victory]
+archetypes: [found-document-testament, martyr-scientist]
+source_volume: Master_Volume_1
+source_lines: "1812–2052"
+attachments: []
+tags: [type/worldbuilding, mode/epic-fantasy, archetype/found-document-testament, theme/ecological-collapse]
+---
+
 # The Redacted Testament of Lira Calyx
 
 **Type:** Four-book world bible + final chapter — The Convergence Era  

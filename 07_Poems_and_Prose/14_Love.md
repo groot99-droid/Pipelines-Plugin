@@ -1,3 +1,19 @@
+---
+title: "Love"
+type: poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: first-person
+tense: mixed
+themes: [childhood-trauma, family, distrust, self-protection]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "5859–5913"
+attachments: []
+tags: [type/poem, mode/confessional-poetry, theme/childhood-trauma, theme/distrust]
+---
+
 # Love
 
 **Type:** Poem  

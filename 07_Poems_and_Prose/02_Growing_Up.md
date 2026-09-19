@@ -1,3 +1,19 @@
+---
+title: "Growing Up"
+type: poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: first-person
+tense: mixed
+themes: [mortality, grandfather-relationship, memory, legacy]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "3565–3598"
+attachments: []
+tags: [type/poem, mode/confessional-poetry, theme/mortality, theme/grandfather-relationship, theme/legacy, status/complete]
+---
+
 # Growing Up
 
 **Type:** Poem  

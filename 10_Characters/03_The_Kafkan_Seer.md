@@ -1,3 +1,19 @@
+---
+title: "The Kafkan Seer"
+type: character-profile
+mode: essay-self-help
+genre: [philosophical-fiction, aphorism, archetype-study]
+status: complete
+pov: third-omniscient
+tense: mixed
+themes: [paradox, alienation, authenticity, absurdism]
+archetypes: [wandering-mystic-kafkan]
+source_volume: The_Kafkan_Seer_Overview
+source_lines: "complete file"
+attachments: []
+tags: [type/character-profile, mode/essay-self-help, archetype/wandering-mystic-kafkan, theme/alienation]
+---
+
 # The Kafkan Seer
 
 **Type:** Character / archetype profile  

@@ -1,3 +1,19 @@
+---
+title: "Through the Eyes of Wolf and Lamb"
+type: novel
+mode: unclassified
+genre: [satire, literary-fiction, crime]
+status: fragment
+pov: first-person
+tense: mixed
+themes: [complicity, unreliable-narration, institutional-language, satire-of-bureaucracy, grief-and-memory]
+archetypes: [unreliable-narrator, guilty-witness, chorus-of-townsfolk]
+source_volume: Master_Volume_1
+source_lines: "5109–5238"
+attachments: []
+tags: [type/novel, mode/unclassified, theme/complicity, theme/unreliable-narration, theme/institutional-language, status/fragment]
+---
+
 # Through the Eyes of Wolf and Lamb
 
 **Type:** Quartet — foreword and full narrative arc  

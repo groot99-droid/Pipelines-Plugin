@@ -1,3 +1,19 @@
+---
+title: "The Unfamiliar"
+type: poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: second-person
+tense: mixed
+themes: [growth, courage, transformation]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "5425–5483"
+attachments: []
+tags: [type/poem, mode/confessional-poetry, theme/growth, theme/courage, theme/transformation, status/complete]
+---
+
 # The Unfamiliar
 
 **Type:** Poem  

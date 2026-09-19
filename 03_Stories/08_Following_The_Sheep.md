@@ -1,3 +1,19 @@
+---
+title: "Following The Sheep"
+type: story
+mode: horror-prose
+genre: [horror, occult-horror, workplace-horror]
+status: complete
+pov: third-limited
+tense: past
+themes: [demonic-pact, loss-of-agency, corporate-satire, ritual-sacrifice]
+archetypes: [the-tempter, the-unwitting-victim]
+source_volume: Master_Volume_2
+source_lines: "12-32"
+attachments: []
+tags: [type/story, mode/horror-prose, theme/demonic-pact, theme/loss-of-agency, status/complete]
+---
+
 # Following The Sheep
 
 **Type:** Short story — horror  

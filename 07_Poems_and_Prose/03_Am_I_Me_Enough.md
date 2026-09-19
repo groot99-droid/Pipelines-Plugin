@@ -1,3 +1,19 @@
+---
+title: "Am I Me Enough"
+type: poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: first-person
+tense: mixed
+themes: [self-worth, love, self-acceptance, becoming]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "3599–3702"
+attachments: []
+tags: [type/poem, mode/confessional-poetry, theme/self-worth, theme/love, theme/self-acceptance, status/complete]
+---
+
 # Am I Me Enough
 
 **Type:** Poem  

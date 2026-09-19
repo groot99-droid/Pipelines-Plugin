@@ -1,3 +1,19 @@
+---
+title: "Taking All From the Rich"
+type: poem
+mode: unclassified
+genre: [satirical, aphoristic]
+status: complete
+pov: third-person
+tense: present
+themes: [wealth-inequality, moral-critique, futility, satire]
+archetypes: []
+source_volume: Master_Volume_2
+source_lines: "83–91"
+attachments: []
+tags: [type/poem, mode/unclassified, theme/wealth-inequality, theme/satire]
+---
+
 # Taking All From the Rich
 
 **Type:** Poem  

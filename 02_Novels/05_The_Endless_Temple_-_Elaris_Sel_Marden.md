@@ -1,3 +1,19 @@
+---
+title: "The Endless Temple - Elaris Sel Marden"
+type: novel
+mode: epic-fantasy
+genre: [high-fantasy, portal-fantasy, mythic-adventure]
+status: fragment
+pov: third-limited
+tense: past
+themes: [worlds-within-books, found-purpose, coming-of-age, forbidden-knowledge]
+archetypes: [reluctant-guardian, rebellious-son, chosen-explorer]
+source_volume: Master_Volume_2
+source_lines: "32–44"
+attachments: []
+tags: [type/novel, mode/epic-fantasy, theme/worlds-within-books, theme/coming-of-age, status/fragment]
+---
+
 # The Endless Temple - Elaris Sel Marden
 
 **Type:** Novel — Introduction and Chapter One  

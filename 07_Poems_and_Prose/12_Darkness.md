@@ -1,3 +1,19 @@
+---
+title: "Darkness"
+type: poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: second-person
+tense: present
+themes: [cycle-of-violence, retaliation, forgiveness, hope]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "5779–5808"
+attachments: []
+tags: [type/poem, mode/confessional-poetry, theme/cycle-of-violence, theme/hope]
+---
+
 # Darkness
 
 **Type:** Poem  

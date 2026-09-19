@@ -1,0 +1,17 @@
+{
+  "file": "07_Poems_and_Prose/01_Trips_Are_Like_Exes.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:d64e00d433222167",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Trips Are Like Exes", "start_line": 4, "end_line": 13, "content_fingerprint": "sha256:16:a78e5d137b19180f",
+      "plot_tags": ["opening-hook", "aphoristic-landing"], "context_tags": ["identity", "self-knowledge", "transformation"],
+      "mood_tags": ["longing", "clarity"], "motif_tags": ["doppelganger-and-shadow", "mirror-and-reflection"],
+      "notes": "The chunk opens the poem with its title-line hook and closes on aphoristic summary statements, while the body tracks ego dissolution and reassembly into a \"pool of identity,\" and explicitly invokes Jekyll-and-Hyde doubling."},
+    {"chunk_index": 2, "heading": "Trips Are Like Exes", "start_line": 15, "end_line": 15, "content_fingerprint": "sha256:16:16b4e9e3b6d2443f",
+      "plot_tags": ["aphoristic-landing"], "context_tags": ["self-knowledge"],
+      "mood_tags": ["clarity"], "motif_tags": [],
+      "notes": "A single standalone aphoristic line collapsing the beauty/ugly binary into paradox, functioning as a closing thesis statement."}
+  ]
+}

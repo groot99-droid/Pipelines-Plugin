@@ -1,3 +1,20 @@
+---
+title: "Trip Tracker - July Fourteenth 2023"
+type: dream-journal
+mode: unclassified
+genre: [psychedelic-record, symbolic-journal, memoir]
+status: complete
+pov: third-omniscient
+tense: mixed
+project: creative-codex
+themes: [altered-perception, ego-dissolution, archetypal-guide, self-reconstruction]
+archetypes: [the-guide, shadow-self]
+source_volume: Master_Volume_1
+source_lines: "4074–4109"
+attachments: []
+tags: [type/dream-journal, mode/unclassified, theme/altered-perception, theme/ego-dissolution, theme/archetypal-guide, status/complete]
+---
+
 # Trip Tracker - July Fourteenth 2023
 
 **Type:** Vision record / seven phases + symbolic index  

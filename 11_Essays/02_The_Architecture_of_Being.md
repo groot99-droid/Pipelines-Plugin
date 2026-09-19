@@ -1,3 +1,19 @@
+---
+title: "The Architecture of Being"
+type: essay
+mode: essay-self-help
+genre: [personal-philosophy, essay]
+status: complete
+pov: mixed
+tense: mixed
+themes: [duality-of-being, presence-over-time, choice-as-sovereignty, becoming-as-surrender, greatness-through-humility]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "4890–4935"
+attachments: []
+tags: [type/essay, mode/essay-self-help, theme/duality-of-being, theme/choice-as-sovereignty, theme/becoming-as-surrender, status/complete]
+---
+
 # The Architecture of Being
 
 **Type:** Philosophical essay in four movements  

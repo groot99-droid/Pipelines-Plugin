@@ -1,3 +1,19 @@
+---
+title: "Was I Good Enough"
+type: poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: first-person
+tense: mixed
+themes: [self-worth, loneliness, family, self-love]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "4529–4712"
+attachments: []
+tags: [type/poem, mode/confessional-poetry, theme/self-worth, theme/loneliness, theme/self-love, status/complete]
+---
+
 # Was I Good Enough
 
 **Type:** Long poem  

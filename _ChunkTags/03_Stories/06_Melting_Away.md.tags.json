@@ -1,0 +1,81 @@
+{
+  "file": "03_Stories/06_Melting_Away.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:be76162aa247ad2c",
+  "chunks": [
+    {
+      "chunk_index": 1,
+      "heading": "Melting Away",
+      "start_line": 4,
+      "end_line": 13,
+      "content_fingerprint": "sha256:16:c48ff104f64ccfc0",
+      "plot_tags": ["opening-hook"],
+      "context_tags": ["institutional-control", "identity", "self-preservation"],
+      "mood_tags": ["unease"],
+      "motif_tags": ["threshold"],
+      "notes": "Daniel receives the coercive text, faces his father's control and the boring/party ultimatum, and decides to go -- a classic opening dilemma poised at a threshold."
+    },
+    {
+      "chunk_index": 2,
+      "heading": "Melting Away",
+      "start_line": 15,
+      "end_line": 17,
+      "content_fingerprint": "sha256:16:e3cbef9a90a5e2ba",
+      "plot_tags": ["rising-action", "catalogued-incident"],
+      "context_tags": ["self-worth", "isolation"],
+      "mood_tags": ["unease", "dread"],
+      "motif_tags": ["mirror-and-reflection", "threshold"],
+      "notes": "Daniel's self-conscious mirror moment and removing his glasses (impairing his own vision) followed by his nervous approach and first \"warning sign\" (the vomiting student) at the frat house door."
+    },
+    {
+      "chunk_index": 3,
+      "heading": "Melting Away",
+      "start_line": 19,
+      "end_line": 26,
+      "content_fingerprint": "sha256:16:5706f3a302956fa6",
+      "plot_tags": ["catalogued-incident", "escalation-stacking", "incident-shelved-denial"],
+      "context_tags": ["institutional-control", "self-preservation", "bodily-autonomy"],
+      "mood_tags": ["unease", "dread"],
+      "motif_tags": ["hands-and-grip", "inventory-and-catalogue"],
+      "notes": "Matty and Ralph corner Daniel with a too-tight grip, then the catalogued party wrongnesses (drugs, chanting, pills) stack up as he's pressured to drink."
+    },
+    {
+      "chunk_index": 4,
+      "heading": "Melting Away",
+      "start_line": 28,
+      "end_line": 37,
+      "content_fingerprint": "sha256:16:8f3d9799be085bf7",
+      "plot_tags": ["escalation-stacking", "climax-beat", "victim-to-complicit-turn"],
+      "context_tags": ["body-horror", "bodily-autonomy", "betrayal", "unreliable-reality"],
+      "mood_tags": ["dread", "despair"],
+      "motif_tags": ["monster-from-victim", "doppelganger-and-shadow"],
+      "notes": "Hallucinatory melting/warping perception and forced pills lead to Matty's cruel reveal that she orchestrated his suffering for her own enjoyment."
+    },
+    {
+      "chunk_index": 5,
+      "heading": "Melting Away",
+      "start_line": 39,
+      "end_line": 44,
+      "content_fingerprint": "sha256:16:e29df42bd482f3ce",
+      "plot_tags": ["climax-beat", "threat-handoff"],
+      "context_tags": ["institutional-indifference", "complicity", "betrayal"],
+      "mood_tags": ["despair", "complicity"],
+      "motif_tags": ["complicit-authority-figure", "monster-from-victim"],
+      "notes": "Daniel's collapse is followed by the officer's fatalistic shrug and Matty's faked concern masking her satisfaction as she moves on to her next target."
+    },
+    {
+      "chunk_index": 6,
+      "heading": "Melting Away",
+      "start_line": 46,
+      "end_line": 47,
+      "content_fingerprint": "sha256:16:871d63abd0e8f816",
+      "plot_tags": ["cyclical-loop-back", "gut-punch-close"],
+      "context_tags": ["cyclical-violence", "complicity"],
+      "mood_tags": ["dread", "complicity"],
+      "motif_tags": ["monster-from-victim"],
+      "notes": "The verbatim repeat of the opening line, now sent by Matty to her next victim, closes the story on its own cycle."
+    }
+  ]
+}

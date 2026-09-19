@@ -1,0 +1,125 @@
+# Closed vocabulary for per-chunk tagging (creative-writing-chunk-tagger).
+#
+# The tagger picks tags ONLY from these four lists. If a chunk seems to
+# need a tag that isn't here, the tagger must log a suggestion to
+# _vocabulary_suggestions.jsonl instead of inventing one -- see
+# .claude/agents/creative-writing-chunk-tagger.md. Edit this file directly
+# to adopt a suggestion; re-running the backfill with --force will pick
+# up the new tag on the next pass.
+#
+# plot_tags: mode-specific structural beats, drawn from CLAUDE.md's own
+# per-mode "Structure" language, plus a few generic cross-mode beats.
+plot_tags:
+  # essay-self-help
+  - claim-statement
+  - parable-illustration
+  - practice-action-item
+  - closing-callback
+  - over-explain-turn
+  # horror-prose
+  - catalogued-incident
+  - incident-shelved-denial
+  - escalation-stacking
+  - cyclical-loop-back
+  - victim-to-complicit-turn
+  - threat-handoff
+  - gut-punch-close
+  # epic-fantasy
+  - parallel-awakening
+  - ensemble-convergence
+  - twin-bond-recognition
+  - elemental-imbalance-stake
+  - cosmic-resolution
+  - codex-worldbuilding-aside
+  # confessional-poetry
+  - anaphoric-catalog
+  - rhetorical-question-pivot
+  - aphoristic-landing
+  - grief-processing
+  - betrayal-reckoning
+  - companion-piece-echo
+  # generic / cross-mode
+  - opening-hook
+  - rising-action
+  - climax-beat
+  - denouement
+  - exposition
+  - flashback
+
+# context_tags: consolidated from the vault's actual `themes` frontmatter
+# (217 raw distinct values aggregated down to 36 recurring categories).
+context_tags:
+  - grief
+  - loss
+  - isolation
+  - loneliness
+  - betrayal
+  - complicity
+  - self-knowledge
+  - self-preservation
+  - identity
+  - transformation
+  - memory-and-forgetting
+  - inheritance-and-legacy
+  - mortality
+  - family
+  - love
+  - trust-and-distrust
+  - courage
+  - resilience
+  - self-worth
+  - bodily-autonomy
+  - body-horror
+  - institutional-indifference
+  - institutional-control
+  - cosmic-imbalance
+  - cyclical-violence
+  - forgiveness
+  - redemption
+  - ambition
+  - creative-anxiety
+  - existential-dread
+  - paranoia
+  - surveillance
+  - poverty-and-inequality
+  - coming-of-age
+  - self-deception
+  - unreliable-reality
+
+# mood_tags: tone/emotional register of the chunk.
+mood_tags:
+  - dread
+  - grief
+  - melancholy
+  - tenderness
+  - wonder
+  - complicity
+  - defiance
+  - resignation
+  - longing
+  - clarity
+  - unease
+  - hope
+  - despair
+
+# motif_tags: recurring named images/symbols/archetypal devices, partly
+# grounded in the vault's actual `archetypes` frontmatter values.
+motif_tags:
+  - architecture
+  - threshold
+  - tide-and-water
+  - naming-and-labeling
+  - inventory-and-catalogue
+  - mirror-and-reflection
+  - fire
+  - hunger
+  - inheritance-object
+  - ringing-bell
+  - hands-and-grip
+  - twin-souls-bond
+  - doppelganger-and-shadow
+  - cursed-object
+  - found-document-framing
+  - witness-and-observer
+  - complicit-authority-figure
+  - monster-from-victim

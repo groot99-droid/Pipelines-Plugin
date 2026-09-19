@@ -1,3 +1,19 @@
+---
+title: "Dream Journal"
+type: dream-journal
+mode: unclassified
+genre: [dream-journal, memoir, surrealist]
+status: complete
+pov: first-person
+tense: past
+themes: [artistic-identity, self-mythology, romantic-reckoning, anima-and-eros, death-and-transcendence]
+archetypes: [elder-artist, anima, inner-witness]
+source_volume: Master_Volume_1
+source_lines: "3793–4074"
+attachments: []
+tags: [type/dream-journal, mode/unclassified, theme/artistic-identity, theme/self-mythology, theme/anima-and-eros, status/complete]
+---
+
 # Dream Journal
 
 **Type:** Dream journal — six entries  

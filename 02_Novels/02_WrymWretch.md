@@ -1,3 +1,20 @@
+---
+title: "WrymWretch"
+type: novel
+mode: epic-fantasy
+genre: [epic-fantasy, high-fantasy, adventure]
+status: draft
+pov: mixed
+tense: past
+project: wyrmreach
+themes: [memory-erasure, soul-bonded-dragons, prophecy, environmental-corruption, chosen-ones]
+archetypes: [twin-souls, chosen-one, trickster-rogue, ancient-evil]
+source_volume: Master_Volume_1
+source_lines: "4198–4529"
+attachments: []
+tags: [type/novel, mode/epic-fantasy, project/wyrmreach, theme/memory-erasure, theme/soul-bonded-dragons, status/draft]
+---
+
 # WrymWretch
 
 **Type:** Novel — Acts I & II plot, plus Chapters One & Two prose  

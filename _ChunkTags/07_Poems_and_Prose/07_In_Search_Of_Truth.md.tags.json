@@ -1,0 +1,13 @@
+{
+  "file": "07_Poems_and_Prose/07_In_Search_Of_Truth.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:661f2265a74f73ea",
+  "chunks": [
+    {"chunk_index": 1, "heading": "In Search Of Truth", "start_line": 4, "end_line": 36, "content_fingerprint": "sha256:16:9db4ffa22083aeaa",
+      "plot_tags": ["anaphoric-catalog", "aphoristic-landing"], "context_tags": ["self-deception", "self-knowledge", "unreliable-reality", "existential-dread"],
+      "mood_tags": ["resignation", "defiance"], "motif_tags": ["fire"],
+      "notes": "The chunk builds an anaphoric catalog of self-protective illusions (\"We build... We craft... We seek what can be held without burning our hands\"), turns on the mind's defiant preference for a softened truth over cold factual reality, and lands on an aphoristic closing couplet (\"You no longer chase truth. You must live it.\")."}
+  ]
+}

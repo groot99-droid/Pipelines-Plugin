@@ -1,3 +1,19 @@
+---
+title: "Graknox the Ironbound Raider"
+type: character-profile
+mode: epic-fantasy
+genre: [sword-and-sorcery, warrior-fiction, adventure]
+status: complete
+pov: third-omniscient
+tense: mixed
+themes: [honor, endurance, warrior-code, loyalty]
+archetypes: [stoic-warrior, raider-chieftain]
+source_volume: Master_Volume_1
+source_lines: "4110–4141"
+attachments: []
+tags: [type/character-profile, mode/epic-fantasy, archetype/stoic-warrior, theme/warrior-code]
+---
+
 # Graknox the Ironbound Raider
 
 **Type:** Character profile  

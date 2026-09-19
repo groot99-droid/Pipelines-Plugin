@@ -1,3 +1,20 @@
+---
+title: "Chasing Cold Clues"
+type: book-concept
+mode: unclassified
+genre: [adventure, pulp, cryptozoology]
+status: outline
+pov: third-limited
+tense: present
+project: Dr. Sterling Vanguard Series
+themes: [adventure, discovery, pursuit, hidden-history]
+archetypes: [adventurer-scholar, pulp-hero]
+source_volume: Master_Volume_1
+source_lines: "5522–5544"
+attachments: []
+tags: [type/book-concept, mode/unclassified, theme/adventure, theme/discovery]
+---
+
 # Chasing Cold Clues
 
 **Type:** Series concept + character design — Dr. Sterling Vanguard  

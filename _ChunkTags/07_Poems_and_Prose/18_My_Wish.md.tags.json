@@ -1,0 +1,13 @@
+{
+  "file": "07_Poems_and_Prose/18_My_Wish.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:9df6df016c19a6af",
+  "chunks": [
+    {"chunk_index": 1, "heading": "My Wish", "start_line": 4, "end_line": 29, "content_fingerprint": "sha256:16:5cdd7d1dfd0c65be",
+      "plot_tags": ["anaphoric-catalog", "aphoristic-landing"], "context_tags": ["identity", "self-knowledge"],
+      "mood_tags": ["defiance", "clarity"], "motif_tags": ["inventory-and-catalogue"],
+      "notes": "The poem builds an anaphoric list of things the speaker does not wish for before landing on the aphoristic, defiant claim about self-definition."}
+  ]
+}

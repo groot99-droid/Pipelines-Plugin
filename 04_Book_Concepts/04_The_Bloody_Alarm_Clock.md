@@ -1,3 +1,19 @@
+---
+title: "The Bloody Alarm Clock"
+type: book-concept
+mode: horror-prose
+genre: [horror, psychological, cursed-object]
+status: outline
+pov: third-limited
+tense: present
+themes: [cursed-object, inevitability, dread, cyclical-doom]
+archetypes: [cursed-object-victim, everyman]
+source_volume: Master_Volume_1
+source_lines: "1049–1085"
+attachments: []
+tags: [type/book-concept, mode/horror-prose, theme/cursed-object, theme/inevitability]
+---
+
 # The Bloody Alarm Clock
 
 **Type:** Novel pitch / horror  

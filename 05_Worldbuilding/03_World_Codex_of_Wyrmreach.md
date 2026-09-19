@@ -1,3 +1,20 @@
+---
+title: "World Codex of Wyrmreach"
+type: worldbuilding
+mode: epic-fantasy
+genre: [high-fantasy, cosmology, dragon-mythology]
+status: complete
+pov: not-applicable
+tense: present
+project: wyrmreach
+themes: [memory-and-oblivion, twin-souls, cosmic-imprisonment, elemental-balance]
+archetypes: [cosmology-codex, twin-souls]
+source_volume: Master_Volume_1
+source_lines: "4142–4197"
+attachments: []
+tags: [type/worldbuilding, mode/epic-fantasy, project/wyrmreach, archetype/cosmology-codex, theme/twin-souls]
+---
+
 # World Codex of Wyrmreach
 
 **Type:** World bible — cosmology, races, dragons, magic, timeline  

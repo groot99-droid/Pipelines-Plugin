@@ -1,3 +1,19 @@
+---
+title: "The Stripes Remain"
+type: poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: first-person
+tense: mixed
+themes: [resilience, redemption, self-worth]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "5692–5734"
+attachments: []
+tags: [type/poem, mode/confessional-poetry, theme/resilience, theme/redemption, theme/self-worth, status/complete]
+---
+
 # The Stripes Remain
 
 **Type:** Poem  

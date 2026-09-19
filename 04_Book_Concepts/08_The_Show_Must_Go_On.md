@@ -1,3 +1,19 @@
+---
+title: "The Show Must Go On"
+type: book-concept
+mode: unclassified
+genre: [surreal, dramedy, magical-realism]
+status: outline
+pov: third-limited
+tense: present
+themes: [dissociation, altered-reality, identity, perception]
+archetypes: [unreliable-narrator, everyman]
+source_volume: Master_Volume_2
+source_lines: "72–74"
+attachments: []
+tags: [type/book-concept, mode/unclassified, theme/dissociation, theme/altered-reality]
+---
+
 # The Show Must Go On
 
 **Type:** Novel concept  

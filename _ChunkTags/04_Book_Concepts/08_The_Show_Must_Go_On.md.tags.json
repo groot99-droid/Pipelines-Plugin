@@ -1,0 +1,13 @@
+{
+  "file": "04_Book_Concepts/08_The_Show_Must_Go_On.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:f84b19a3be4e63dd",
+  "chunks": [
+    {"chunk_index": 1, "heading": "The Show Must Go On", "start_line": 4, "end_line": 11, "content_fingerprint": "sha256:16:251567c412313c18",
+      "plot_tags": ["opening-hook", "incident-shelved-denial"], "context_tags": ["identity", "unreliable-reality", "self-deception"],
+      "mood_tags": ["unease"], "motif_tags": ["naming-and-labeling"],
+      "notes": "The chunk opens on the head injury and the boy noticing \"weird stuff\" that he quietly normalizes rather than questioning, while he re-labels his friends and a talk-show host as sitcom characters by last name."}
+  ]
+}

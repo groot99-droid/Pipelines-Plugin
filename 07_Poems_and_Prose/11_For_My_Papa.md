@@ -1,3 +1,19 @@
+---
+title: "For My Papa"
+type: poem
+mode: confessional-poetry
+genre: [confessional, autobiographical]
+status: complete
+pov: first-person
+tense: present
+themes: [grief, grandfather-relationship, legacy]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "5735–5779"
+attachments: []
+tags: [type/poem, mode/confessional-poetry, theme/grief, theme/grandfather-relationship, theme/legacy, status/complete]
+---
+
 # For My Papa
 
 **Type:** Eulogy poem  

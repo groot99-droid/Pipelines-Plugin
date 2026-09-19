@@ -1,3 +1,19 @@
+---
+title: "The Bottonian Philosopher"
+type: character-profile
+mode: essay-self-help
+genre: [philosophical-fiction, aphorism, archetype-study]
+status: complete
+pov: third-omniscient
+tense: mixed
+themes: [emotional-fragility, melancholy, self-knowledge, love-and-suffering]
+archetypes: [wandering-mystic-bottonian]
+source_volume: The_Bottonian_Philosopher_Overview
+source_lines: "complete file"
+attachments: []
+tags: [type/character-profile, mode/essay-self-help, archetype/wandering-mystic-bottonian, theme/emotional-fragility]
+---
+
 # The Bottonian Philosopher
 
 **Type:** Character / archetype profile  

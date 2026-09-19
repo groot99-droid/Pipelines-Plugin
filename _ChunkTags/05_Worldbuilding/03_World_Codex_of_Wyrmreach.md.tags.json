@@ -1,0 +1,13 @@
+{
+  "file": "05_Worldbuilding/03_World_Codex_of_Wyrmreach.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:ce4d3c64e0427a9b",
+  "chunks": [
+    {"chunk_index": 1, "heading": "World Codex of Wyrmreach", "start_line": 4, "end_line": 64, "content_fingerprint": "sha256:16:06821fca9208a57f",
+      "plot_tags": ["codex-worldbuilding-aside", "exposition"], "context_tags": ["cosmic-imbalance", "memory-and-forgetting", "transformation"],
+      "mood_tags": ["wonder", "dread"], "motif_tags": ["twin-souls-bond", "inventory-and-catalogue"],
+      "notes": "This single chunk is the entire codex -- cosmology/origin myth, the Shallock Izladar memory-decay plot summary, race/dragon twin-bond catalogues, geography, bestiary, magic system, factions, and timeline, all delivered in expository world-bible register rather than dramatized scene."}
+  ]
+}

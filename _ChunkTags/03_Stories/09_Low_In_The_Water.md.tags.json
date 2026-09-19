@@ -1,0 +1,13 @@
+{
+  "file": "03_Stories/09_Low_In_The_Water.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:7880c95d98ba47f4",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Low In The Water", "start_line": 4, "end_line": 13, "content_fingerprint": "sha256:16:66b61566672beec8",
+      "plot_tags": ["opening-hook"], "context_tags": [],
+      "mood_tags": ["dread", "unease"], "motif_tags": ["ringing-bell", "threshold"],
+      "notes": "This is the story's opening scene -- a boat cutting through marsh water under stormy, demon-shadowed light, then a bell-chime (\"Ding ding, the door chimed\") marks a hooded figure crossing into the Waffle House and revealing himself as an odd old man."}
+  ]
+}

@@ -1,3 +1,20 @@
+---
+title: "The Creative Codex of the Mythic Architect"
+type: essay
+mode: essay-self-help
+genre: [personal-philosophy, essay]
+status: complete
+pov: second-person
+tense: present
+project: creative-codex
+themes: [creative-systems-theory, symbolic-taxonomy, transmedia-worldbuilding, myth-as-technology]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "4992–5109"
+attachments: []
+tags: [type/essay, mode/essay-self-help, project/creative-codex, theme/creative-systems-theory, theme/symbolic-taxonomy, status/complete]
+---
+
 # The Creative Codex of the Mythic Architect
 
 **Type:** Creative-system essay — signatures, structures, systems, domains  

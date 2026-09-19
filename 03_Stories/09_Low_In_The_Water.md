@@ -1,3 +1,19 @@
+---
+title: "Low In The Water"
+type: story
+mode: horror-prose
+genre: [horror, fragment, atmospheric]
+status: fragment
+pov: third-omniscient
+tense: past
+themes: [atmosphere-of-dread, tonal-juxtaposition, roadside-gothic]
+archetypes: []
+source_volume: Master_Volume_2
+source_lines: "64-68"
+attachments: []
+tags: [type/story, mode/horror-prose, theme/atmosphere-of-dread, theme/tonal-juxtaposition, status/fragment]
+---
+
 # Low In The Water
 
 **Type:** Short story opening  

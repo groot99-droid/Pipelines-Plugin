@@ -1,3 +1,19 @@
+---
+title: "How to Help People"
+type: essay
+mode: essay-self-help
+genre: [personal-philosophy, essay]
+status: complete
+pov: first-person
+tense: mixed
+themes: [self-preservation-before-service, boundaries-in-compassion, martyrdom-vs-wholeness]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "5287–5297"
+attachments: []
+tags: [type/essay, mode/essay-self-help, theme/self-preservation-before-service, theme/boundaries-in-compassion, status/complete]
+---
+
 # How to Help People
 
 **Type:** Personal essay  

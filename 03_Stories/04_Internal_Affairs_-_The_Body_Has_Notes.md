@@ -1,3 +1,19 @@
+---
+title: "Internal Affairs: The Body Has Notes"
+type: story
+mode: unclassified
+genre: [comedy, sketch, flash-fiction]
+status: complete
+pov: third-limited
+tense: present
+themes: [body-personification, comedic-anxiety, self-conflict, everyday-absurdity]
+archetypes: [the-inner-chorus]
+source_volume: Master_Volume_1
+source_lines: "1302-1710"
+attachments: []
+tags: [type/story, mode/unclassified, theme/body-personification, theme/comedic-anxiety, status/complete]
+---
+
 # Internal Affairs - The Body Has Notes
 
 **Type:** Comedic sketch cycle in twelve scenes  

@@ -1,3 +1,19 @@
+---
+title: "Dear Katie"
+type: letter
+mode: unclassified
+genre: [confessional, memoir, apology]
+status: complete
+pov: first-person
+tense: mixed
+themes: [amends, toxic-love, self-forgiveness, boundaries]
+archetypes: []
+source_volume: Master_Volume_1
+source_lines: "2962–2974"
+attachments: []
+tags: [type/letter, mode/unclassified, theme/amends, theme/toxic-love, theme/self-forgiveness, status/complete]
+---
+
 # Dear Katie
 
 **Type:** Letter / amends  
