@@ -4,6 +4,15 @@
 
 See also: [[Vault_Overview.canvas|Vault Overview canvas]] (visual map by style-mode) and [[CLAUDE.md]] (voice/craft guide for new writing).
 
+## Vault meta
+
+Not works — the notes that describe how this vault is set up and what feeds it.
+
+- [[OBSIDIAN.md|Obsidian setup]] — opening this folder as a vault, and the local-AI options.
+- [[README.md|README]] — what this repo is, in one line.
+- [[_Pipelines/_index|Pipelines index]] — the tooling that writes into this vault.
+- [[_Idea_Library/_index|Idea Library]] — drafted-but-not-yet-integrated pieces, with their full checkpoint trails.
+
 ## Books  (1)
 
 MOC: [[01_Books/_index|Books index]]

@@ -11,6 +11,10 @@ try to index the pipeline's Python too.
 Nothing needs converting. The files are the vault; if you stop using Obsidian
 tomorrow you still have 63 markdown files.
 
+Start from [[00_INDEX.md|the index]]. The tooling that writes into this vault is
+mapped at [[_Pipelines/_index|Pipelines index]]; its staging area is
+[[_Idea_Library/_index|the Idea Library]].
+
 ---
 
 ## Connecting it to Ollama
