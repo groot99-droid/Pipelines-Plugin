@@ -1,0 +1,33 @@
+{
+  "file": "07_Poems_and_Prose/06_Was_I_Good_Enough.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:27c897c5de724630",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Was I Good Enough", "start_line": 4, "end_line": 34, "content_fingerprint": "sha256:16:65a6ad116ddc8dc9",
+      "plot_tags": ["opening-hook", "rhetorical-question-pivot"], "context_tags": ["self-worth", "isolation", "loneliness", "coming-of-age"],
+      "mood_tags": ["longing", "melancholy", "unease"], "motif_tags": [],
+      "notes": "Opens with childhood memory of watching anime and dodging deadlines/self, then pivots on the repeated rhetorical question \"Was I good enough?\""},
+    {"chunk_index": 2, "heading": "Was I Good Enough", "start_line": 36, "end_line": 68, "content_fingerprint": "sha256:16:011210188cbb5660",
+      "plot_tags": ["anaphoric-catalog", "rhetorical-question-pivot"], "context_tags": ["self-worth", "self-deception", "identity", "isolation"],
+      "mood_tags": ["melancholy", "longing", "tenderness"], "motif_tags": ["doppelganger-and-shadow", "mirror-and-reflection"],
+      "notes": "Splits the self into \"me, myself, and I\" as three shadows/voices that argue in the mirror, alternating good and bad days, all circling the same worth question."},
+    {"chunk_index": 3, "heading": "Was I Good Enough", "start_line": 70, "end_line": 95, "content_fingerprint": "sha256:16:68fd5408f7c3c56c",
+      "plot_tags": ["flashback"], "context_tags": ["family", "grief", "memory-and-forgetting", "self-knowledge"],
+      "mood_tags": ["melancholy", "tenderness", "unease"], "motif_tags": ["hands-and-grip", "threshold"],
+      "notes": "Moves from an inner \"door only I can hear\" slamming into direct flashback memories of a yelling mother, an absent father, and an angry brother."},
+    {"chunk_index": 4, "heading": "Was I Good Enough", "start_line": 97, "end_line": 130, "content_fingerprint": "sha256:16:654f6ff7278c13dc",
+      "plot_tags": ["rising-action", "aphoristic-landing"], "context_tags": ["self-worth", "resilience", "forgiveness", "self-knowledge"],
+      "mood_tags": ["hope", "tenderness", "wonder"], "motif_tags": [],
+      "notes": "Describes carrying childhood weight quietly, then a felt shift toward small daily gratitudes that end each stanza on a landing line about proof of enoughness."},
+    {"chunk_index": 5, "heading": "Was I Good Enough", "start_line": 132, "end_line": 170, "content_fingerprint": "sha256:16:405d366b6d2b5431",
+      "plot_tags": ["aphoristic-landing", "climax-beat"], "context_tags": ["self-worth", "self-knowledge", "identity", "love"],
+      "mood_tags": ["clarity", "hope", "tenderness"], "motif_tags": [],
+      "notes": "The poem's turn/climax -- explicitly rejecting \"self-help ... guru garbage\" and declaring self-companionship and trust, landing on \"finally enough.\""},
+    {"chunk_index": 6, "heading": "Was I Good Enough", "start_line": 172, "end_line": 192, "content_fingerprint": "sha256:16:595af462fab3e975",
+      "plot_tags": ["rhetorical-question-pivot", "aphoristic-landing", "closing-callback"], "context_tags": ["self-worth", "self-knowledge", "love"],
+      "mood_tags": ["clarity", "hope", "defiance"], "motif_tags": [],
+      "notes": "Closes with a cluster of rhetorical questions about choosing oneself, then lands the poem's final aphorism redefining love as daily self-choosing, echoing the title's original question."}
+  ]
+}

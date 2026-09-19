@@ -1,0 +1,13 @@
+{
+  "file": "10_Characters/03_The_Kafkan_Seer.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:3bacc9711d8b8c4f",
+  "chunks": [
+    {"chunk_index": 1, "heading": "The Kafkan Seer", "start_line": 4, "end_line": 56, "content_fingerprint": "sha256:16:8a870634dd3c4ead",
+      "plot_tags": ["codex-worldbuilding-aside"], "context_tags": ["identity", "self-knowledge", "existential-dread", "isolation"],
+      "mood_tags": ["melancholy", "resignation", "defiance"], "motif_tags": ["naming-and-labeling", "inventory-and-catalogue", "threshold"],
+      "notes": "The single chunk is a complete profile-format entry (Origins, Appearance, Philosophy, Core Beliefs, catalogued Sayings, Role in the World, Story Potential, Legacy) built around paradox, solitude, and confrontation with the self."}
+  ]
+}

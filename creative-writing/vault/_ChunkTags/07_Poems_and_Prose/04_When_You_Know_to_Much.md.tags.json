@@ -1,0 +1,17 @@
+{
+  "file": "07_Poems_and_Prose/04_When_You_Know_to_Much.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:fb9455c90447af41",
+  "chunks": [
+    {"chunk_index": 1, "heading": "When You Know to Much", "start_line": 4, "end_line": 19, "content_fingerprint": "sha256:16:b2caa0912eb1070d",
+      "plot_tags": ["anaphoric-catalog", "rhetorical-question-pivot"], "context_tags": ["creative-anxiety", "ambition", "mortality"],
+      "mood_tags": ["melancholy", "despair"], "motif_tags": [],
+      "notes": "The repeated \"It pains me to know...\" openers are anaphora, the piece pivots through stacked rhetorical questions about myth/childhood, and the content is explicitly about squandered creative potential and time/aging."},
+    {"chunk_index": 2, "heading": "When You Know to Much", "start_line": 21, "end_line": 31, "content_fingerprint": "sha256:16:345949d041fd9444",
+      "plot_tags": ["anaphoric-catalog", "aphoristic-landing", "betrayal-reckoning"], "context_tags": ["betrayal", "self-worth", "resilience"],
+      "mood_tags": ["defiance", "clarity"], "motif_tags": ["witness-and-observer"],
+      "notes": "\"You called it destiny. You called it talent...\" and the \"Let me laugh... Let me spit...\" run are anaphoric, the speaker reckons with being mocked/\"defiled\" and reclaims worth through defiant self-assertion, closing on the aphoristic \"My words aren't great. They're mine.\""}
+  ]
+}

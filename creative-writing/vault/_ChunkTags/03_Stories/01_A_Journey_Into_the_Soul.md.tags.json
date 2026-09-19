@@ -1,0 +1,25 @@
+{
+  "file": "03_Stories/01_A_Journey_Into_the_Soul.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:19295f8509445bb0",
+  "chunks": [
+    {"chunk_index": 1, "heading": "A Journey Into the Soul", "start_line": 4, "end_line": 23, "content_fingerprint": "sha256:16:0ab1df4ce50223ee",
+      "plot_tags": ["opening-hook", "exposition"], "context_tags": ["identity", "unreliable-reality"],
+      "mood_tags": ["wonder", "unease"], "motif_tags": ["inventory-and-catalogue", "witness-and-observer", "threshold"],
+      "notes": "The chunk opens with the reframing question (\"What if the human eye wasn't an organ, but a planet?\") and establishes the clinical, cataloging register before describing the first biome (the skin desert) in worldbuilding-style detail."},
+    {"chunk_index": 2, "heading": "A Journey Into the Soul", "start_line": 25, "end_line": 51, "content_fingerprint": "sha256:16:1b948e8d2103bdea",
+      "plot_tags": ["rising-action", "exposition"], "context_tags": ["unreliable-reality"],
+      "mood_tags": ["wonder", "unease"], "motif_tags": ["inventory-and-catalogue", "witness-and-observer"],
+      "notes": "Continues the expedition's cataloging structure through two more biomes (the sclera sea, the iris forest), with creatures described as watching/reacting to the light-traveler, keeping the observer motif active."},
+    {"chunk_index": 3, "heading": "A Journey Into the Soul", "start_line": 53, "end_line": 84, "content_fingerprint": "sha256:16:8aafe580259c1998",
+      "plot_tags": ["rising-action", "climax-beat"], "context_tags": ["identity", "existential-dread"],
+      "mood_tags": ["unease", "wonder"], "motif_tags": ["threshold", "witness-and-observer"],
+      "notes": "The descent into the pupil is rendered as a disorienting, gravity-defying threshold-crossing that culminates in the reveal of the Soullight, the chunk's clear turning point."},
+    {"chunk_index": 4, "heading": "A Journey Into the Soul", "start_line": 86, "end_line": 90, "content_fingerprint": "sha256:16:606c8ab7094ee1c3",
+      "plot_tags": ["denouement", "aphoristic-landing"], "context_tags": ["identity"],
+      "mood_tags": ["wonder", "clarity"], "motif_tags": ["witness-and-observer"],
+      "notes": "The closing lines land the piece's point explicitly and aphoristically (\"Every eye contains a universe... light is the only witness\"), naming light itself as observer/witness rather than showing further action."}
+  ]
+}

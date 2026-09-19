@@ -1,0 +1,17 @@
+{
+  "file": "04_Book_Concepts/01_Behind_the_Peephole.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:42ca5d5dc1dd24e6",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Behind the Peephole", "start_line": 4, "end_line": 32, "content_fingerprint": "sha256:16:6b96c3c9e3746085",
+      "plot_tags": ["opening-hook", "exposition"], "context_tags": ["surveillance"],
+      "mood_tags": ["unease"], "motif_tags": ["inventory-and-catalogue", "threshold"],
+      "notes": "This chunk sets up the pitch's premise (a hotel, guests with secret double lives) and lists the catalogued sensory clues -- dirt on a collar, a trembling hand, a 2:14 AM knock -- that constitute the book's evidentiary/surveillance conceit."},
+    {"chunk_index": 2, "heading": "Behind the Peephole", "start_line": 35, "end_line": 51, "content_fingerprint": "sha256:16:cb7e0f6e4b805d5d",
+      "plot_tags": ["rising-action"], "context_tags": ["surveillance", "paranoia", "unreliable-reality"],
+      "mood_tags": ["dread", "unease"], "motif_tags": ["threshold", "witness-and-observer", "inventory-and-catalogue"],
+      "notes": "This chunk turns the peephole into an explicit metaphor (threshold, confession booth, trap), reveals that the guests' secrets \"rhyme\" and converge, and states outright that \"someone is watching them all.\""}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "file": "07_Poems_and_Prose/09_The_Knife_I_Chose.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:ab68db94f97197ab",
+  "chunks": [
+    {"chunk_index": 1, "heading": "The Knife I Chose", "start_line": 4, "end_line": 34, "content_fingerprint": "sha256:16:aba20feea5092eff",
+      "plot_tags": ["opening-hook", "rising-action", "betrayal-reckoning"], "context_tags": ["betrayal", "trust-and-distrust", "self-preservation"],
+      "mood_tags": ["dread", "unease"], "motif_tags": [],
+      "notes": "She flees an unnamed threat into the arms of a \"familiar, steady\" figure who then knifes her, landing the poem's explicit \"trust has teeth\" line."},
+    {"chunk_index": 2, "heading": "The Knife I Chose", "start_line": 36, "end_line": 68, "content_fingerprint": "sha256:16:75347008a37dded5",
+      "plot_tags": ["climax-beat", "betrayal-reckoning"], "context_tags": ["betrayal", "self-deception", "self-preservation", "isolation", "loneliness"],
+      "mood_tags": ["despair", "resignation"], "motif_tags": ["hands-and-grip"],
+      "notes": "She realizes \"the knife was always there\" yet clings to her betrayer rather than face the night alone, culminating in a surrendering kiss."},
+    {"chunk_index": 3, "heading": "The Knife I Chose", "start_line": 70, "end_line": 90, "content_fingerprint": "sha256:16:0a289485c633270f",
+      "plot_tags": ["denouement", "aphoristic-landing", "cyclical-loop-back"], "context_tags": ["inheritance-and-legacy", "cyclical-violence", "betrayal"],
+      "mood_tags": ["resignation", "melancholy"], "motif_tags": [],
+      "notes": "She survives but the poem explicitly reframes the event as \"not an ending, but an inheritance... repeated like a sacred curse,\" closing on a stated cyclical/generational pattern of love and ruin."}
+  ]
+}

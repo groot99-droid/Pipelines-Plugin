@@ -1,0 +1,17 @@
+{
+  "file": "07_Poems_and_Prose/13_Past_Present_and_Future.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:46d1083defc517b5",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Past, Present, and Future", "start_line": 4, "end_line": 41, "content_fingerprint": "sha256:16:433bb718b69af633",
+      "plot_tags": ["opening-hook", "anaphoric-catalog"], "context_tags": ["identity", "self-knowledge", "transformation"],
+      "mood_tags": ["clarity"], "motif_tags": [],
+      "notes": "The chunk opens the poem with a vessel-self metaphor and uses anaphoric repetition while urging self-knowledge and accepting change/metamorphosis."},
+    {"chunk_index": 2, "heading": "Past, Present, and Future", "start_line": 43, "end_line": 59, "content_fingerprint": "sha256:16:9a1465da83dc62c9",
+      "plot_tags": ["aphoristic-landing"], "context_tags": ["self-worth", "identity"],
+      "mood_tags": ["defiance"], "motif_tags": ["naming-and-labeling"],
+      "notes": "The chunk turns on \"what some call flaws, others name beauty\" (an explicit act of relabeling) and closes with an aphoristic reframe of unseen worth as the garden's failure, not the bloom's."}
+  ]
+}

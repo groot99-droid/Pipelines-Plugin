@@ -1,0 +1,21 @@
+{
+  "file": "04_Book_Concepts/05_Chasing_Cold_Clues.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:1f008e45290724aa",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Chasing Cold Clues", "start_line": 4, "end_line": 13, "content_fingerprint": "sha256:16:150cc0d4b30120ee",
+      "plot_tags": ["exposition"], "context_tags": [],
+      "mood_tags": [], "motif_tags": [],
+      "notes": "This chunk is purely provenance/administrative metadata (Type/Source/Text note) plus the bare section labels \"Character design: Main character:\", with no narrative or thematic content yet."},
+    {"chunk_index": 2, "heading": "Dr. Sterling Vanguard", "start_line": 17, "end_line": 27, "content_fingerprint": "sha256:16:f58338a102cf8945",
+      "plot_tags": ["exposition", "opening-hook", "rising-action"], "context_tags": ["ambition", "trust-and-distrust"],
+      "mood_tags": ["wonder"], "motif_tags": [],
+      "notes": "The bio establishes Vanguard's cryptozoology ambition, the opening marketplace chase, and the ensuing clue-driven investigation against powerful adversaries."},
+    {"chunk_index": 3, "heading": "Dr. Sterling Vanguard", "start_line": 29, "end_line": 31, "content_fingerprint": "sha256:16:3c7bda6b8a76b226",
+      "plot_tags": ["climax-beat"], "context_tags": ["courage", "self-preservation"],
+      "mood_tags": ["dread", "defiance"], "motif_tags": [],
+      "notes": "The jungle standoff with hunters and the ultimatum over the clue is the story's climax beat, with Vanguard's split-second leap-of-faith choice reading as courage/self-preservation under a dread-laced, defiant tone."}
+  ]
+}

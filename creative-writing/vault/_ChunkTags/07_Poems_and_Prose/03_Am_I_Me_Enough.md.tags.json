@@ -1,0 +1,25 @@
+{
+  "file": "07_Poems_and_Prose/03_Am_I_Me_Enough.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:3f783865f613bc36",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Am I Me Enough", "start_line": 4, "end_line": 38, "content_fingerprint": "sha256:16:20fa68032d076e32",
+      "plot_tags": ["rhetorical-question-pivot", "anaphoric-catalog"], "context_tags": ["self-worth", "love", "identity", "coming-of-age"],
+      "mood_tags": ["longing", "melancholy"], "motif_tags": [],
+      "notes": "The speaker recasts young love as a test of self-worth (\"wasn't that always the question... am I real enough for this love\") and catalogs triadic images of self-sanding to seem worthy."},
+    {"chunk_index": 2, "heading": "Am I Me Enough", "start_line": 40, "end_line": 69, "content_fingerprint": "sha256:16:6f23b0b5b20feafb",
+      "plot_tags": ["anaphoric-catalog", "rhetorical-question-pivot"], "context_tags": ["self-worth", "self-deception", "love", "trust-and-distrust"],
+      "mood_tags": ["longing", "despair"], "motif_tags": ["mirror-and-reflection"],
+      "notes": "Triadic \"mistook... mistook... mistook\" catalogs the chase for external permission, closing on the direct rhetorical question of self-worth."},
+    {"chunk_index": 3, "heading": "Am I Me Enough", "start_line": 71, "end_line": 108, "content_fingerprint": "sha256:16:0e34b2ef28de838a",
+      "plot_tags": ["rhetorical-question-pivot", "anaphoric-catalog"], "context_tags": ["self-worth", "self-knowledge", "identity", "transformation"],
+      "mood_tags": ["clarity", "hope"], "motif_tags": [],
+      "notes": "\"So was I good enough? Maybe that was the wrong question\" pivots into anaphoric affirmations marking a turn toward self-recognition."},
+    {"chunk_index": 4, "heading": "Am I Me Enough", "start_line": 110, "end_line": 112, "content_fingerprint": "sha256:16:c3cb5fc0caeef0ec",
+      "plot_tags": ["aphoristic-landing", "closing-callback"], "context_tags": ["self-worth", "identity"],
+      "mood_tags": ["clarity", "hope"], "motif_tags": [],
+      "notes": "The three-line close (\"I finally learned I was enough because I was mine\") delivers the poem's explicit aphoristic answer to its own title question."}
+  ]
+}

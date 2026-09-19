@@ -1,0 +1,21 @@
+{
+  "file": "03_Stories/03_The_Yellow_Drop_and_The_Plain_Before_Sound.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:50c7e313ee3ef7ed",
+  "chunks": [
+    {"chunk_index": 1, "heading": null, "start_line": 2, "end_line": 19, "content_fingerprint": "sha256:16:6a4d011880844a93",
+      "plot_tags": ["opening-hook", "exposition"], "context_tags": ["unreliable-reality"],
+      "mood_tags": ["wonder"], "motif_tags": ["threshold"],
+      "notes": "This is the origin/awakening moment where a \"blank\" perceptual surface is broken by the first falling sound and subsequent tones, establishing the sound-built world before any conflict."},
+    {"chunk_index": 2, "heading": null, "start_line": 21, "end_line": 40, "content_fingerprint": "sha256:16:2e29537328de9490",
+      "plot_tags": ["rising-action"], "context_tags": ["unreliable-reality"],
+      "mood_tags": ["wonder"], "motif_tags": ["architecture"],
+      "notes": "The chunk explicitly builds \"invisible architecture,\" \"arches of resonance, pillars of vibration, corridors\" out of accumulating sound-layers, escalating in intricacy."},
+    {"chunk_index": 3, "heading": null, "start_line": 42, "end_line": 60, "content_fingerprint": "sha256:16:253ce684157295b9",
+      "plot_tags": ["climax-beat", "denouement"], "context_tags": ["memory-and-forgetting", "unreliable-reality"],
+      "mood_tags": ["wonder", "melancholy"], "motif_tags": ["threshold", "architecture"],
+      "notes": "The final drop triggers the eyes opening and the sound-world's architecture collapsing back into silence as the POV slides from dream-ear to waking body and alarm, with the fading world explicitly framed as a fleeting memory."}
+  ]
+}

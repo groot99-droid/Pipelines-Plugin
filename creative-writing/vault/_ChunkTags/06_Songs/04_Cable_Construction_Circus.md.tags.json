@@ -1,0 +1,25 @@
+{
+  "file": "06_Songs/04_Cable_Construction_Circus.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:7d800ddea8b8dcaa",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Cable Construction Circus", "start_line": 4, "end_line": 39, "content_fingerprint": "sha256:16:67fcbfdda475f01f",
+      "plot_tags": ["catalogued-incident", "escalation-stacking"], "context_tags": ["institutional-indifference", "resilience"],
+      "mood_tags": ["unease", "resignation"], "motif_tags": ["inventory-and-catalogue"],
+      "notes": "The verse stacks discrete, escalating work-site failures under a boss who just keeps bitching, closing on \"should've known... we'd be cryin' pretty soon.\""},
+    {"chunk_index": 2, "heading": "Cable Construction Circus", "start_line": 41, "end_line": 79, "content_fingerprint": "sha256:16:1f0c4db5ec7ba154",
+      "plot_tags": ["catalogued-incident", "rising-action"], "context_tags": ["institutional-control", "complicity"],
+      "mood_tags": ["unease", "complicity"], "motif_tags": ["complicit-authority-figure"],
+      "notes": "Boss screams at Jacob in unattributed all-caps dialogue, an inspector flees and returns, and a coworker makes an unqualified, inappropriate remark while the crew freezes and \"just moved along\" rather than react."},
+    {"chunk_index": 3, "heading": "Cable Construction Circus", "start_line": 82, "end_line": 100, "content_fingerprint": "sha256:16:c77240ee5648e2b4",
+      "plot_tags": ["catalogued-incident"], "context_tags": ["institutional-indifference", "resilience"],
+      "mood_tags": ["melancholy", "tenderness"], "motif_tags": ["inventory-and-catalogue"],
+      "notes": "The verse catalogs a crew member quietly fixing everyone else's messes without recognition, then repeats the circus chorus."},
+    {"chunk_index": 4, "heading": "Cable Construction Circus", "start_line": 102, "end_line": 111, "content_fingerprint": "sha256:16:11e026d0ec2a9c6f",
+      "plot_tags": ["closing-callback", "denouement"], "context_tags": ["institutional-indifference", "resilience"],
+      "mood_tags": ["resignation", "melancholy"], "motif_tags": ["inventory-and-catalogue"],
+      "notes": "The fading outro recaps each crew member's arc as a closing list and callbacks to the opening \"step right up,\" ending on \"circus don't close till the fiber's lit.\""}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "file": "07_Poems_and_Prose/10_The_Stripes_Remain.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:aa8c8a7e5b334e4b",
+  "chunks": [
+    {"chunk_index": 1, "heading": "The Stripes Remain", "start_line": 4, "end_line": 31, "content_fingerprint": "sha256:16:06640d1badf33ec4",
+      "plot_tags": ["anaphoric-catalog", "rising-action"], "context_tags": ["betrayal", "self-worth", "resilience", "self-knowledge"],
+      "mood_tags": ["despair", "defiance"], "motif_tags": ["naming-and-labeling"],
+      "notes": "The chunk stacks repeated \"I fell / I endured\" constructions cataloguing the speaker's descent and endurance after internalizing another person's verdict (\"a tiger can't change its stripes\")."},
+    {"chunk_index": 2, "heading": "The Stripes Remain", "start_line": 33, "end_line": 51, "content_fingerprint": "sha256:16:9d37bc498336b984",
+      "plot_tags": ["aphoristic-landing", "climax-beat"], "context_tags": ["transformation", "self-worth", "betrayal", "identity"],
+      "mood_tags": ["defiance", "clarity"], "motif_tags": ["naming-and-labeling"],
+      "notes": "The chunk closes with the speaker reclaiming the \"stripes\" as self-forged regalia rather than the other woman's prophecy, landing on an explicit final-triumph aphorism."}
+  ]
+}

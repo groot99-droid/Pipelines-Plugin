@@ -1,0 +1,13 @@
+{
+  "file": "04_Book_Concepts/07_Narrative_Voice.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:d05f042877ed0f1e",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Narrative Voice", "start_line": 4, "end_line": 11, "content_fingerprint": "sha256:16:8477636de1f48a11",
+      "plot_tags": ["cyclical-loop-back"], "context_tags": ["self-knowledge", "existential-dread", "mortality"],
+      "mood_tags": ["melancholy", "despair"], "motif_tags": ["mirror-and-reflection", "witness-and-observer"],
+      "notes": "The chunk describes a god watching/altering his own past self with no lasting change, a protagonist's stationary \"conscious voice\" observing himself from outside, a recurring depression-then-recovery pattern, and an end-of-life repeat involving reincarnation."}
+  ]
+}

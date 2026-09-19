@@ -1,0 +1,17 @@
+{
+  "file": "06_Songs/05_How_i_feel.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:c781c1d985b1999f",
+  "chunks": [
+    {"chunk_index": 1, "heading": "How i feel", "start_line": 4, "end_line": 33, "content_fingerprint": "sha256:16:0dd5c5c660637d36",
+      "plot_tags": ["anaphoric-catalog", "opening-hook"], "context_tags": ["isolation", "loneliness", "creative-anxiety", "existential-dread"],
+      "mood_tags": ["dread", "resignation"], "motif_tags": ["hunger"],
+      "notes": "The verse stacks short, list-like images of abandonment and creative burnout/exploitation, closing on nightmare/lost-without-a-place imagery."},
+    {"chunk_index": 2, "heading": "How i feel", "start_line": 35, "end_line": 53, "content_fingerprint": "sha256:16:fb75eec0599df161",
+      "plot_tags": ["rhetorical-question-pivot", "aphoristic-landing"], "context_tags": ["identity", "self-knowledge", "mortality", "ambition"],
+      "mood_tags": ["longing", "resignation"], "motif_tags": [],
+      "notes": "Opens on stacked rhetorical self-questioning, moves through time/mortality anxiety about wasted days and deadlines, and lands on an aphoristic heaven/afterlife image as a closing turn."}
+  ]
+}

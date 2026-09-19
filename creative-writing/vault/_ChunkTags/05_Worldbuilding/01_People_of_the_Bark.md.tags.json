@@ -1,0 +1,21 @@
+{
+  "file": "05_Worldbuilding/01_People_of_the_Bark.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:498bb7d5ba00c1b8",
+  "chunks": [
+    {"chunk_index": 1, "heading": "People of the Bark", "start_line": 4, "end_line": 23, "content_fingerprint": "sha256:16:367103a460e0a550",
+      "plot_tags": ["exposition", "codex-worldbuilding-aside"], "context_tags": [], "mood_tags": ["wonder"], "motif_tags": [],
+      "notes": "Sets up the micro-civilization's scale and states the \"quiet moral\" framing device directly, with no incident or conflict yet -- pure worldbuilding setup."},
+    {"chunk_index": 2, "heading": "People of the Bark", "start_line": 27, "end_line": 61, "content_fingerprint": "sha256:16:a20a5325eb4949c5",
+      "plot_tags": ["opening-hook", "exposition", "codex-worldbuilding-aside"], "context_tags": [], "mood_tags": ["wonder", "unease"], "motif_tags": ["inventory-and-catalogue"],
+      "notes": "The \"Tremor\" scene opens the narrative on a mundane squirrel misread as cataclysm, then catalogs the bark people's belief system in a bulleted list."},
+    {"chunk_index": 3, "heading": "People of the Bark", "start_line": 64, "end_line": 103, "content_fingerprint": "sha256:16:5ed0f8f6bdf86856",
+      "plot_tags": ["rising-action", "climax-beat", "anaphoric-catalog"], "context_tags": [], "mood_tags": ["wonder", "unease", "tenderness"], "motif_tags": ["witness-and-observer"],
+      "notes": "The shadow/hand conflict plays the same their-view-vs-our-view device as the tremor, then the closing \"Moral\" paragraph shifts into triadic anaphoric repetition to pivot toward affirmation."},
+    {"chunk_index": 4, "heading": "People of the Bark", "start_line": 105, "end_line": 108, "content_fingerprint": "sha256:16:3a09ea5181461634",
+      "plot_tags": ["closing-callback", "aphoristic-landing"], "context_tags": ["self-worth"], "mood_tags": ["tenderness", "wonder"], "motif_tags": [],
+      "notes": "A one-line stated aphorism closing the piece, directly asserting that a small life's stakes still carry worth (\"Even the smallest world is a universe to the ones who live in it\")."}
+  ]
+}

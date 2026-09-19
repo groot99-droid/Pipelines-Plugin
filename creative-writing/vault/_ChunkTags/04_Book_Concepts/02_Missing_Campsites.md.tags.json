@@ -1,0 +1,33 @@
+{
+  "file": "04_Book_Concepts/02_Missing_Campsites.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:e002e18a6da4492a",
+  "chunks": [
+    {
+      "chunk_index": 1,
+      "heading": "Missing Campsites",
+      "start_line": 4,
+      "end_line": 35,
+      "content_fingerprint": "sha256:16:4a391eaa62ee30f4",
+      "plot_tags": ["catalogued-incident", "escalation-stacking"],
+      "context_tags": ["unreliable-reality", "isolation", "institutional-indifference"],
+      "mood_tags": ["dread", "unease"],
+      "motif_tags": ["witness-and-observer", "inventory-and-catalogue"],
+      "notes": "The chunk lists a mounting series of vanished campsites that only the protagonist campers notice while rangers, families, and hikers register nothing wrong, and it counts down toward the final five fixed sites."
+    },
+    {
+      "chunk_index": 2,
+      "heading": "Missing Campsites",
+      "start_line": 37,
+      "end_line": 49,
+      "content_fingerprint": "sha256:16:edf45b28ae751bab",
+      "plot_tags": ["climax-beat"],
+      "context_tags": ["unreliable-reality", "existential-dread", "isolation"],
+      "mood_tags": ["dread", "unease"],
+      "motif_tags": ["threshold"],
+      "notes": "The chunk depicts the campers waking to a transformed, signal-less forest and realizing they have crossed into another dimension that has been consuming them piece by piece."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "file": "04_Book_Concepts/06_A_9-5_Could_Kill_You.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:9a4be18efd18f103",
+  "chunks": [
+    {"chunk_index": 1, "heading": "A 9-5 Could Kill You", "start_line": 4, "end_line": 11, "content_fingerprint": "sha256:16:54cb9dd66508ad89",
+      "plot_tags": ["opening-hook", "exposition"], "context_tags": ["isolation", "loneliness", "self-worth", "self-deception"],
+      "mood_tags": ["despair", "resignation"], "motif_tags": [],
+      "notes": "Introduces an isolated, self-loathing protagonist whose toxic post-breakup worldview and medication non-compliance spiral into quitting his job and bed-rotting."},
+    {"chunk_index": 2, "heading": "A 9-5 Could Kill You", "start_line": 14, "end_line": 16, "content_fingerprint": "sha256:16:12a9842362babc16",
+      "plot_tags": ["rising-action"], "context_tags": ["identity", "self-deception", "unreliable-reality", "love"],
+      "mood_tags": ["unease", "longing"], "motif_tags": ["mirror-and-reflection", "doppelganger-and-shadow"],
+      "notes": "Reality destabilizes as the protagonist hallucinates a normal life and begins talking to, then dating, his own mirror reflection personified as a separate person."},
+    {"chunk_index": 3, "heading": "Part Three — Hate Rears Its Ugly Head", "start_line": 21, "end_line": 21, "content_fingerprint": "sha256:16:2e497db9f9138836",
+      "plot_tags": ["climax-beat"], "context_tags": ["self-deception", "unreliable-reality", "existential-dread", "complicity"],
+      "mood_tags": ["dread", "despair"], "motif_tags": ["fire", "mirror-and-reflection", "doppelganger-and-shadow"],
+      "notes": "The personified partner is \"killed,\" triggering rampaging grief episodes that end with the protagonist setting his own house on fire and being arrested."},
+    {"chunk_index": 4, "heading": "Part Four — Time with His Therapist", "start_line": 26, "end_line": 26, "content_fingerprint": "sha256:16:1e8ff9eb0ba1bfa5",
+      "plot_tags": ["grief-processing"], "context_tags": ["self-knowledge", "grief"],
+      "mood_tags": ["melancholy", "clarity"], "motif_tags": ["mirror-and-reflection", "doppelganger-and-shadow"],
+      "notes": "In therapy the protagonist mourns the personified \"partner\" and admits he loved that toxic version of himself, marking the first emotional break in his denial."},
+    {"chunk_index": 5, "heading": "Part Five — Living After It All", "start_line": 31, "end_line": 31, "content_fingerprint": "sha256:16:5cfdb690dc639d87",
+      "plot_tags": ["denouement", "closing-callback"], "context_tags": ["self-knowledge", "resilience", "identity"],
+      "mood_tags": ["clarity", "melancholy"], "motif_tags": ["mirror-and-reflection", "doppelganger-and-shadow"],
+      "notes": "A quiet, unglamorous recovery closes with a callback to the mirror motif -- he glimpses the \"partner\" in a reflection and simply nods and walks on."}
+  ]
+}

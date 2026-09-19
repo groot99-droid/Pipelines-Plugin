@@ -1,0 +1,45 @@
+{
+  "file": "11_Essays/05_How_to_Help_People.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:35ca0bc4972a4582",
+  "chunks": [
+    {
+      "chunk_index": 1,
+      "heading": "How to Help People",
+      "start_line": 4,
+      "end_line": 13,
+      "content_fingerprint": "sha256:16:e8de42784881d2e9",
+      "plot_tags": ["claim-statement", "opening-hook"],
+      "context_tags": ["self-worth", "self-deception", "ambition"],
+      "mood_tags": ["melancholy"],
+      "motif_tags": ["inventory-and-catalogue"],
+      "notes": "The chunk sets up the essay's founding conviction and the \"ledger of good deeds\" by which the narrator measured self-worth, ending on the hollowing-out cost of that mindset."
+    },
+    {
+      "chunk_index": 2,
+      "heading": "How to Help People",
+      "start_line": 15,
+      "end_line": 17,
+      "content_fingerprint": "sha256:16:137244ddf2807ef5",
+      "plot_tags": ["parable-illustration", "over-explain-turn"],
+      "context_tags": ["self-preservation", "self-worth", "identity"],
+      "mood_tags": ["clarity"],
+      "motif_tags": [],
+      "notes": "The airline-mask anecdote is the essay's concrete illustration, and the text immediately re-narrates its meaning (\"If I became a liability...\") rather than leaving it implicit, then states the resulting shift toward self-preserving boundaries."
+    },
+    {
+      "chunk_index": 3,
+      "heading": "How to Help People",
+      "start_line": 19,
+      "end_line": 19,
+      "content_fingerprint": "sha256:16:450acba7b0cdf590",
+      "plot_tags": ["closing-callback", "aphoristic-landing"],
+      "context_tags": ["self-worth", "self-preservation", "identity"],
+      "mood_tags": ["clarity", "hope"],
+      "motif_tags": [],
+      "notes": "The final lines land the essay's point explicitly and aphoristically (\"the world doesn't need a martyr...\") as a closing statement on wholeness over martyrdom."
+    }
+  ]
+}

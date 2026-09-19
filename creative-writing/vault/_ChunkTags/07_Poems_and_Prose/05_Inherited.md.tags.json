@@ -1,0 +1,57 @@
+{
+  "file": "07_Poems_and_Prose/05_Inherited.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:a56435afcd8e76da",
+  "chunks": [
+    {
+      "chunk_index": 1,
+      "heading": "Inherited",
+      "start_line": 4,
+      "end_line": 23,
+      "content_fingerprint": "sha256:16:b1e008a54a2a7080",
+      "plot_tags": ["anaphoric-catalog", "opening-hook"],
+      "context_tags": ["family", "memory-and-forgetting", "self-knowledge", "poverty-and-inequality"],
+      "mood_tags": ["longing", "melancholy"],
+      "motif_tags": [],
+      "notes": "The chunk catalogs remembered childhood moments (headlights, sleeping in, missed catch) against the retrospective adult realization that money/poverty drove the father's absence, opening the poem's central reversal."
+    },
+    {
+      "chunk_index": 2,
+      "heading": "Inherited",
+      "start_line": 25,
+      "end_line": 45,
+      "content_fingerprint": "sha256:16:68f57f2bfd9e9062",
+      "plot_tags": ["anaphoric-catalog", "rhetorical-question-pivot"],
+      "context_tags": ["family", "forgiveness", "self-knowledge", "grief"],
+      "mood_tags": ["tenderness", "grief", "clarity"],
+      "motif_tags": [],
+      "notes": "The speaker apologizes/reframes the parents' sacrifices (\"I thank you for the nights you weren't there\") and grieves suffering only now understood, marking the poem's turn from resentment to gratitude and grief."
+    },
+    {
+      "chunk_index": 3,
+      "heading": "Inherited",
+      "start_line": 47,
+      "end_line": 73,
+      "content_fingerprint": "sha256:16:eeb3e75c070b161a",
+      "plot_tags": ["anaphoric-catalog", "aphoristic-landing"],
+      "context_tags": ["inheritance-and-legacy", "cyclical-violence", "family", "self-knowledge"],
+      "mood_tags": ["resignation", "clarity", "despair"],
+      "motif_tags": ["threshold"],
+      "notes": "The speaker stands \"at the threshold of becoming\" the parent, foreseeing the same cycle repeating with his own children and naming it explicitly as an inherited, unbreakable cycle."
+    },
+    {
+      "chunk_index": 4,
+      "heading": "Inherited",
+      "start_line": 75,
+      "end_line": 78,
+      "content_fingerprint": "sha256:16:c3e1b1bfdfa8e82f",
+      "plot_tags": ["aphoristic-landing"],
+      "context_tags": ["inheritance-and-legacy", "self-knowledge", "coming-of-age"],
+      "mood_tags": ["clarity", "resignation"],
+      "motif_tags": [],
+      "notes": "The four closing lines land the poem's thesis explicitly -- clarity's cost is becoming your parents because of understanding their pain, not despite it."
+    }
+  ]
+}

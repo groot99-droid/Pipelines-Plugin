@@ -1,0 +1,83 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# The Living Archive — vault ignore rules
+#
+# This repo IS an Obsidian vault. Obsidian writes machine-local state and
+# plugin secrets into it as a side effect of normal use. Nothing below is
+# something you authored — it is state, cache, or credentials.
+#
+# The rule of thumb: vault *settings* are portable and worth versioning;
+# vault *state* and anything a plugin stores on your behalf are not.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Secrets ──────────────────────────────────────────────────────────────────
+# Plugin settings live in data.json, and that is where API keys land — Copilot,
+# Text Generator, Smart Connections, remotely-save (S3/WebDAV creds), any plugin
+# that talks to a paid service. Ignored by default; a plugin whose settings you
+# genuinely want versioned can be force-added: git add -f .obsidian/plugins/x/data.json
+.obsidian/plugins/*/data.json
+
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+credentials.json
+*_token
+*.token
+.netrc
+
+# ── Obsidian machine-local state ─────────────────────────────────────────────
+# Window layout and open-file history. Churns on every session and records
+# which notes you had open — noise in a diff, and a small leak besides.
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/graph.json
+.obsidian/hotkeys.json.bak
+
+# Obsidian's local trash: deleted notes still fully readable on disk.
+.trash/
+.obsidian/trash/
+
+# ── Local AI / embedding caches ──────────────────────────────────────────────
+# These hold a vectorized copy of every note in the vault — the whole corpus in
+# another form, often several hundred MB. Rebuildable from the notes themselves.
+.smart-env/
+.smart-connections/
+.obsidian/plugins/*/vectors/
+.rag/
+.rag_index/
+rag_index/
+__pycache__/
+*.pyc
+*.faiss
+*.ann
+embeddings/
+*.embeddings.json
+
+# ── Sync conflicts and third-party sync scratch ──────────────────────────────
+*.sync-conflict-*
+*conflicted copy*
+.obsidian/sync.json
+.stfolder/
+.stversions/
+
+# ── Private writing (convention, opt-in) ─────────────────────────────────────
+# Anything you want kept off the remote goes in one of these. Files already
+# committed are unaffected — this governs what you add from here on.
+_private/
+99_Private/
+*.private.md
+
+# ── OS / editor ──────────────────────────────────────────────────────────────
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+*~
+*.swp
+.idea/
+.vscode/

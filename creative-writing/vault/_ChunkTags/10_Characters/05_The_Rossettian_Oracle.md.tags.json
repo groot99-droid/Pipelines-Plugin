@@ -1,0 +1,13 @@
+{
+  "file": "10_Characters/05_The_Rossettian_Oracle.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:9dccf485d1c4cad6",
+  "chunks": [
+    {"chunk_index": 1, "heading": "The Rossettian Oracle", "start_line": 4, "end_line": 45, "content_fingerprint": "sha256:16:4546c1d85ee0b619",
+      "plot_tags": ["exposition", "codex-worldbuilding-aside"], "context_tags": ["love", "mortality", "transformation"],
+      "mood_tags": ["wonder", "clarity"], "motif_tags": ["threshold"],
+      "notes": "This is a single-chunk expository character/archetype profile (codex-register bio, philosophy, aphorisms, story-hook list) centered on love, beauty, and death-as-transformation, with the grave explicitly named \"the threshold of understanding.\""}
+  ]
+}

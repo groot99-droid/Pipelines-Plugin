@@ -1,0 +1,21 @@
+{
+  "file": "04_Book_Concepts/04_The_Bloody_Alarm_Clock.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:31e13723e2d9cd3d",
+  "chunks": [
+    {"chunk_index": 1, "heading": "The Bloody Alarm Clock", "start_line": 4, "end_line": 23, "content_fingerprint": "sha256:16:230cfe80f0c68866",
+      "plot_tags": ["opening-hook", "catalogued-incident", "escalation-stacking"], "context_tags": ["inheritance-and-legacy", "body-horror", "existential-dread"],
+      "mood_tags": ["dread", "unease"], "motif_tags": ["cursed-object", "inventory-and-catalogue"],
+      "notes": "Introduces the inherited clock and lists a catalogued set of escalating nightmare-to-waking-body symptoms (drowning, blood loss, phantom ticking)."},
+    {"chunk_index": 2, "heading": "The Bloody Alarm Clock", "start_line": 26, "end_line": 42, "content_fingerprint": "sha256:16:89136917ab2193ce",
+      "plot_tags": ["escalation-stacking", "victim-to-complicit-turn", "cyclical-loop-back", "threat-handoff"], "context_tags": ["body-horror", "bodily-autonomy", "unreliable-reality", "existential-dread"],
+      "mood_tags": ["dread", "resignation"], "motif_tags": ["cursed-object"],
+      "notes": "Depicts the clock resisting disposal, the dream/reality line dissolving, and the object moving on to its next owner in a self-perpetuating cycle."},
+    {"chunk_index": 3, "heading": "The Bloody Alarm Clock", "start_line": 44, "end_line": 44, "content_fingerprint": "sha256:16:3bdf37437e1e1d58",
+      "plot_tags": ["closing-callback"], "context_tags": ["existential-dread", "mortality"],
+      "mood_tags": ["dread"], "motif_tags": ["cursed-object"],
+      "notes": "A single closing-summary sentence naming the pitch's core dread (dread, inevitability, a clock counting down to death)."}
+  ]
+}

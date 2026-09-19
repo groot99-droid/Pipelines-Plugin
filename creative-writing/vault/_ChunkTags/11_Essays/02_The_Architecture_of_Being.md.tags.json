@@ -1,0 +1,57 @@
+{
+  "file": "11_Essays/02_The_Architecture_of_Being.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:6f1f3a36b14c977b",
+  "chunks": [
+    {
+      "chunk_index": 1,
+      "heading": "The Architecture of Being",
+      "start_line": 4,
+      "end_line": 21,
+      "content_fingerprint": "sha256:16:79e116fd693a348d",
+      "plot_tags": ["claim-statement", "over-explain-turn"],
+      "context_tags": ["existential-dread", "self-knowledge"],
+      "mood_tags": ["clarity", "longing"],
+      "motif_tags": ["threshold", "hunger"],
+      "notes": "Opens with the central claim about duality/presence and immediately re-narrates it through concrete images (cake, desert, cold tap water) rather than leaving it implicit, and names \"threshold\" and hunger/desire directly."
+    },
+    {
+      "chunk_index": 2,
+      "heading": "The Architecture of Being",
+      "start_line": 23,
+      "end_line": 35,
+      "content_fingerprint": "sha256:16:5260b3c6d728cd3a",
+      "plot_tags": ["claim-statement", "parable-illustration", "over-explain-turn"],
+      "context_tags": ["isolation", "loneliness", "self-worth", "family", "inheritance-and-legacy"],
+      "mood_tags": ["melancholy", "defiance"],
+      "motif_tags": ["fire", "hands-and-grip", "inheritance-object"],
+      "notes": "Redefines greatness via illustrative images (grandmother's hands kneading dough, halls of children/elders) then explains the point in abstract terms, and dwells on isolation/vanity and fading family lineage."
+    },
+    {
+      "chunk_index": 3,
+      "heading": "The Architecture of Being",
+      "start_line": 37,
+      "end_line": 47,
+      "content_fingerprint": "sha256:16:28319743273d2efa",
+      "plot_tags": ["claim-statement", "parable-illustration", "over-explain-turn", "closing-callback"],
+      "context_tags": ["grief", "mortality", "family", "self-knowledge", "resilience"],
+      "mood_tags": ["grief", "clarity", "resignation"],
+      "motif_tags": ["architecture", "threshold", "hands-and-grip"],
+      "notes": "Grounds the \"sovereignty over becoming\" claim in a specific illustrative memory (the grandfather's death) and explicitly names \"architect\"/architecture in its closing image, with an awareness-acceptance-action sequence re-explaining the point."
+    },
+    {
+      "chunk_index": 4,
+      "heading": "The Architecture of Being",
+      "start_line": 49,
+      "end_line": 55,
+      "content_fingerprint": "sha256:16:0fb849b1a6c7a072",
+      "plot_tags": ["claim-statement", "parable-illustration", "closing-callback"],
+      "context_tags": ["identity", "self-knowledge", "self-deception", "mortality"],
+      "mood_tags": ["melancholy", "clarity"],
+      "motif_tags": ["mirror-and-reflection", "doppelganger-and-shadow"],
+      "notes": "Closes the essay's arc on identity/becoming, using \"replica\"/\"echo\"/\"original\" imagery (mirror/doppelganger territory) and dwelling on people who die never feeling at home in their own skin."
+    }
+  ]
+}

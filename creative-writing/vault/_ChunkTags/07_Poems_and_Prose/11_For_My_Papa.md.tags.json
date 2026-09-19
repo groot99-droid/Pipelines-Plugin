@@ -1,0 +1,33 @@
+{
+  "file": "07_Poems_and_Prose/11_For_My_Papa.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:2bb5748afceb1e59",
+  "chunks": [
+    {
+      "chunk_index": 1,
+      "heading": "For My Papa",
+      "start_line": 4,
+      "end_line": 36,
+      "content_fingerprint": "sha256:16:676c96c642466c9b",
+      "plot_tags": ["anaphoric-catalog", "aphoristic-landing"],
+      "context_tags": ["grief", "family", "love", "inheritance-and-legacy", "mortality"],
+      "mood_tags": ["grief", "tenderness", "melancholy"],
+      "motif_tags": ["inheritance-object"],
+      "notes": "The chunk opens with the speaker naming the burden of grief and love directly, uses repeated \"to\" clauses (\"to care, / to stand beside\") and closes on the explicit stated claim that his memory \"will live forever in all of us,\" and centers on a grandfather's death and the family/roots he left behind."
+    },
+    {
+      "chunk_index": 2,
+      "heading": "For My Papa",
+      "start_line": 38,
+      "end_line": 53,
+      "content_fingerprint": "sha256:16:0854320a04288846",
+      "plot_tags": ["aphoristic-landing"],
+      "context_tags": ["grief", "memory-and-forgetting", "inheritance-and-legacy", "mortality", "family"],
+      "mood_tags": ["grief", "tenderness", "hope"],
+      "motif_tags": ["inheritance-object"],
+      "notes": "The chunk describes closing the grandfather's casket while insisting \"we have not lost him,\" framing his life/story as continuing through memory and legacy, landing on the explicit closing claim that \"his story will never close.\""
+    }
+  ]
+}

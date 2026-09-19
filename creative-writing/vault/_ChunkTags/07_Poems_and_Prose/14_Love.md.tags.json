@@ -1,0 +1,17 @@
+{
+  "file": "07_Poems_and_Prose/14_Love.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:e92bf84ba7e3c622",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Love", "start_line": 4, "end_line": 37, "content_fingerprint": "sha256:16:6367a06b58902039",
+      "plot_tags": ["rhetorical-question-pivot", "anaphoric-catalog"], "context_tags": ["family", "betrayal", "trust-and-distrust", "bodily-autonomy"],
+      "mood_tags": ["dread", "resignation"], "motif_tags": ["hands-and-grip"],
+      "notes": "Opens with a rhetorical question (\"Why would I?\") and builds an anaphoric catalog of conditioned love, grounded in a mother whose hugs are described as snares."},
+    {"chunk_index": 2, "heading": "Love", "start_line": 39, "end_line": 63, "content_fingerprint": "sha256:16:980772d11ff13fe9",
+      "plot_tags": ["anaphoric-catalog", "aphoristic-landing"], "context_tags": ["family", "self-preservation", "trust-and-distrust", "isolation"],
+      "mood_tags": ["melancholy", "resignation", "longing"], "motif_tags": [],
+      "notes": "Continues the anaphoric \"I was conditioned to love my father\" catalog through the moat/self-wounding image and closes with an explicit aphoristic statement about love as an unapproachable shadow."}
+  ]
+}

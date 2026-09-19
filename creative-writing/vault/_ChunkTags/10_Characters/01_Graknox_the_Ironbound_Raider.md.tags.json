@@ -1,0 +1,13 @@
+{
+  "file": "10_Characters/01_Graknox_the_Ironbound_Raider.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:023fb16fa9ef9f6b",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Graknox the Ironbound Raider", "start_line": 4, "end_line": 40, "content_fingerprint": "sha256:16:84f8799c1dba0c97",
+      "plot_tags": ["codex-worldbuilding-aside", "exposition"], "context_tags": ["inheritance-and-legacy", "courage", "resilience"],
+      "mood_tags": [], "motif_tags": ["inventory-and-catalogue", "naming-and-labeling"],
+      "notes": "The entire chunk is a codex-style character-bible entry built from catalogued bullet lists (raider sayings, combat training points, story hooks) and organized around his clan-inherited lineage and epithet."}
+  ]
+}

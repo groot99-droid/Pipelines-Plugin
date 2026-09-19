@@ -1,0 +1,21 @@
+{
+  "file": "03_Stories/07_Project_-_Man_Eater.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:d861a0ba77808384",
+  "chunks": [
+    {
+      "chunk_index": 1,
+      "heading": "Project - Man Eater",
+      "start_line": 4,
+      "end_line": 20,
+      "content_fingerprint": "sha256:16:b0a657b783fd70d6",
+      "plot_tags": ["catalogued-incident", "escalation-stacking", "victim-to-complicit-turn", "gut-punch-close"],
+      "context_tags": ["transformation", "body-horror", "institutional-control"],
+      "mood_tags": ["dread", "despair"],
+      "motif_tags": ["hunger", "monster-from-victim", "complicit-authority-figure"],
+      "notes": "The single chunk covers the whole story -- Fisk mentally catalogues a stack of escalating wrongnesses (inward-facing armor, sick/anorexic crew, claw marks, unnatural cold, arbitrary rules) before the Windigo reveal, then is himself starved-then-fed into transformation by the complicit Sam, ending on the flat gut-punch line \"He was like an animal in a zoo... The end.\""
+    }
+  ]
+}

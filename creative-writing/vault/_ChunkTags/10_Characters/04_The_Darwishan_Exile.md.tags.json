@@ -1,0 +1,13 @@
+{
+  "file": "10_Characters/04_The_Darwishan_Exile.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:1910ad9d1ce0bacb",
+  "chunks": [
+    {"chunk_index": 1, "heading": "The Darwishan Exile", "start_line": 4, "end_line": 63, "content_fingerprint": "sha256:16:7007c7e010829a98",
+      "plot_tags": ["exposition", "codex-worldbuilding-aside"], "context_tags": ["identity", "memory-and-forgetting", "love", "isolation", "loneliness"],
+      "mood_tags": ["longing", "melancholy", "hope"], "motif_tags": ["inventory-and-catalogue"],
+      "notes": "This chunk is a full character/archetype profile (origins, appearance, philosophy, a long catalogued list of sayings, role, story-hook bullets) built around themes of homeland, memory, love, and displaced identity."}
+  ]
+}

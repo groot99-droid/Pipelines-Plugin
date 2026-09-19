@@ -1,0 +1,25 @@
+{
+  "file": "11_Essays/07_Shoot_for_the_Moon.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:821890761a15272f",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Shoot for the Moon", "start_line": 4, "end_line": 12, "content_fingerprint": "sha256:16:f6a6a053dc81e651",
+      "plot_tags": ["claim-statement", "parable-illustration", "aphoristic-landing"], "context_tags": ["family", "ambition", "self-knowledge", "courage"],
+      "mood_tags": ["tenderness", "wonder", "hope"], "motif_tags": [],
+      "notes": "Opens with a general claim about mothers, then illustrates it with the personal parable of the mother's \"shoot for the moon\" saying, closing on an aphoristic line."},
+    {"chunk_index": 2, "heading": "Shoot for the Moon", "start_line": 14, "end_line": 23, "content_fingerprint": "sha256:16:6da7901bd16d6736",
+      "plot_tags": ["claim-statement", "rising-action"], "context_tags": ["existential-dread", "self-preservation", "institutional-control", "resilience"],
+      "mood_tags": ["dread", "unease", "resignation"], "motif_tags": [],
+      "notes": "Confessional fear-of-change material pivots into a generalized claim about modern systems crushing the individual soul, imaged as a field of wildflowers under a tiller."},
+    {"chunk_index": 3, "heading": "Shoot for the Moon", "start_line": 25, "end_line": 38, "content_fingerprint": "sha256:16:ab3d0a85daba3a72",
+      "plot_tags": ["claim-statement", "practice-action-item", "closing-callback"], "context_tags": ["institutional-control", "institutional-indifference", "self-knowledge", "courage"],
+      "mood_tags": ["defiance", "unease", "clarity"], "motif_tags": [],
+      "notes": "Argues society's goal (not its brokenness) is the problem, calls the reader to accountability and reclaiming their own narrative."},
+    {"chunk_index": 4, "heading": "Shoot for the Moon", "start_line": 40, "end_line": 41, "content_fingerprint": "sha256:16:6122dfb1bac03a4d",
+      "plot_tags": ["closing-callback", "aphoristic-landing"], "context_tags": ["self-worth", "resilience", "love"],
+      "mood_tags": ["tenderness", "hope"], "motif_tags": [],
+      "notes": "Two-line closing couplet reframing self-improvement's pain against the strengthening effect of warm gestures given or received."}
+  ]
+}

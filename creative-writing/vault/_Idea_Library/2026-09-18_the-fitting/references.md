@@ -1,0 +1,19 @@
+### references.md — The Fitting
+
+**vault_search.py hits** (query: "prosthetic body horror measurements becoming someone else medical"):
+- [02_Novels/01_The_Stuffed_Ones.md](#) (score 0.256, frontmatter) — horror-prose, body-horror/folk-horror, loss-of-identity
+- [03_Stories/07_Project_-_Man_Eater.md](#) (score 0.229, frontmatter) — horror-prose, body-horror/folklore-horror, transformation
+- [11_Essays/02_The_Architecture_of_Being.md](#) (score 0.186, lines 49-55) — not used (different mode; tangential "paradox of becoming" theme, not body-horror)
+- [04_Book_Concepts/03_Beetles_for_Brains.md](#) (score 0.183, frontmatter) — horror-prose, psychological/body-horror, bodily-invasion/control
+- [03_Stories/08_Following_The_Sheep.md](#) (score 0.171, frontmatter) — horror-prose, occult/workplace-horror — not used further (demonic-pact/corporate-satire territory, not body-horror-by-alteration)
+
+**Librarian digest (creative-writing-librarian-native, focus: escalation-by-catalogued-incident, restraint in depicting bodily invasion/loss-of-agency per the ethical-restraint rule, cyclical/non-resolving endings):**
+
+- *Project: Man Eater* — bodily change handled through sensation/inference, not clinical detail (leaner, prominent ribs, whitened knuckles noticed rather than described mechanically); transformation itself happens off-page between drugging and waking; ends with the protagonist made a permanent institutional specimen, explicitly "would only spread" — no rescue, but his hatred/awareness is preserved to the end (dignity retained even as thought "became those of an animal").
+- *The Stuffed Ones* — **closest structural model for this idea.** Transformation is ellipsed entirely ("I don't remember the moment it happened. Just darkness. Warmth. Pressure. Then light.") — no procedural depiction of the stuffing/binding itself. Agency erosion is staged and *named* as stages ("The First Slip," "The Breaking Point," "Giving In"), culminating in the narrator's own admission: "We knew exactly what we were doing. And that's what makes it worse." Ending is explicit complicity, not resistance: "I don't fight it anymore. I don't want to. This is what I am now." — cyclical, with new guests arriving as the loop restarts.
+- *Melting Away* — coercion/drugging story rather than transformation; sensory distortion rendered impressionistically ("walls dripped like wax") rather than clinically; ends by handing the threat to the next victim with no consequence for the perpetrator.
+- *Beetles for Brains* (pitch/outline only) — bodily invasion handled entirely through suggestion/rumor, never depicted mechanically ("phantom sensations under their skin," something "moving in the quiet spaces of their minds"); frames the vulnerable state (sleep) as the exposure point — directly useful for a fitting-appointment premise where the body is measured/altered in a state the subject can't fully observe or resist. No ending exists in this document (premise-only).
+
+**Ethical-restraint note (confirmed against the source texts):** every one of these pieces keeps its affected protagonist's interior awareness intact through the transformation/loss-of-agency arc rather than reducing them to spectacle — this matches CLAUDE.md's Wolf-and-Lamb precedent directly. The strongest model for this new piece is *The Stuffed Ones*' technique: ellipse the mechanism, narrate the psychological staging of giving in, and let the character's own admission of complicity carry the horror rather than procedural body-horror detail.
+
+**Existing pieces this idea is close enough to flag:** *The Stuffed Ones* is the closest structural and thematic kin (bodily alteration + eventual willing complicity + cyclical ending) — no project tie exists or should be inferred; this is a new, unconnected piece in the same mode, not a sequel.

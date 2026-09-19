@@ -1,0 +1,13 @@
+{
+  "file": "07_Poems_and_Prose/21_Todays_Wine.md",
+  "generated": "2026-09-18T00:00:00Z",
+  "generator": "creative-writing-chunk-tagger v1",
+  "chunker_version": "v1",
+  "body_fingerprint": "sha256:16:d18030af672d02b4",
+  "chunks": [
+    {"chunk_index": 1, "heading": "Todays Wine", "start_line": 4, "end_line": 26, "content_fingerprint": "sha256:16:efc2fe615983ad6d",
+      "plot_tags": ["anaphoric-catalog", "aphoristic-landing"], "context_tags": ["memory-and-forgetting"],
+      "mood_tags": ["melancholy", "hope"], "motif_tags": [],
+      "notes": "The poem structures itself as a triad (yesterday's/tomorrow's/today's wine) with repeated syntax, closing on an explicit aphorism (\"today is a gift; in this moment, we grow\")."}
+  ]
+}
