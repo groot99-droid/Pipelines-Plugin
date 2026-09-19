@@ -1,0 +1,343 @@
+# Creative-writing pipeline spec — single source of truth for both the
+# standalone script (run_pipeline.py) and the Claude Code skill
+# (Creative-Writing/.claude/skills/creative-writing-pipeline/SKILL.md).
+#
+# Neither consumer should hardcode stage text or mode rules of its own --
+# both read this file. Mode rules here summarize and point back to
+# Creative-Writing/CLAUDE.md; they don't replace it. If CLAUDE.md changes,
+# update the matching block here.
+
+version: 1
+
+# Path to the vault, resolved relative to this file's directory.
+vault_root: "../../Creative-Writing"
+
+# Populated modes. Add a new entry here (and its stage-3/4 rules will
+# apply automatically) to extend the pipeline to another mode -- no
+# stage-structure changes needed. Only essay-self-help is filled in v1;
+# the others are stubs so the shape is visible.
+modes:
+  essay-self-help:
+    status: implemented
+    style_section: "Essay / Self-Help Mode"          # section name in CLAUDE.md
+    target_folder: "11_Essays"
+    file_type: essay
+    worked_examples:
+      - "01_Books/01_The_First_Friend"
+      - "11_Essays/02_The_Architecture_of_Being"
+      - "11_Essays/04_The_Creative_Codex_of_the_Mythic_Architect"
+    structure_rhythm: "claim -> parable/illustrative example -> practice/action-item -> closing callback/aphorism"
+    voice_notes: |
+      Direct address (second-person or first-person-plural; this may shift
+      within a piece -- don't force one POV throughout). Elevated,
+      abstract-noun-heavy lexicon: "architecture" is the connective-tissue
+      word across this vault's essay voice (used literally across multiple
+      essays), alongside covenant, threshold, ledger, communion,
+      sovereignty, doctrine, lineage, codex, grammar, genealogies.
+      Known habit, not a rule to silently fix: this voice tends to
+      over-explain -- it delivers a concrete image, then immediately
+      re-narrates its meaning in abstract terms rather than trusting
+      subtext. Preserve that instinct; don't sand it down into ambiguity
+      the author's own voice doesn't use here.
+    template_note: |
+      "11_Essays/04_The_Creative_Codex_of_the_Mythic_Architect" is the one
+      essay with an explicit action-item "Implementation" section -- use
+      it as the template when the practice/action-item beat is wanted in
+      its most literal form.
+  horror-prose:
+    status: implemented
+    style_section: "Horror-Prose Mode"
+    target_folder: "03_Stories"
+    file_type: story
+    worked_examples:
+      - "03_Stories/07_Project_-_Man_Eater"
+      - "02_Novels/01_The_Stuffed_Ones"
+      - "03_Stories/06_Melting_Away"
+    structure_rhythm: "escalation-by-catalogued-incident (a numbered/listable sequence of discrete, escalating wrongnesses noticed and shelved before the next stacks on) -> cyclical or non-resolving ending"
+    voice_notes: |
+      Plain, punchy, concrete sensory vocabulary over abstraction. Short,
+      often fragment-stacked paragraphs for emphasis ("No wind. No
+      insects. No owls. Nothing."). Minimal dialogue tags -- bare "said,"
+      frequent unattributed exchange bursts. High interiority even
+      mid-action, but delivered clipped, not discursive. Very short
+      chapters/scenes, each closing on a one-line gut-punch or ominous
+      fragment.
+    template_note: |
+      Endings are overwhelmingly cyclical or non-resolving: the
+      protagonist is transformed, consumed, or made complicit rather than
+      rescued; the text often loops back to its own opening line or hands
+      the threat to a new victim. Do NOT default to a tidy, rescued, or
+      cathartic ending in this mode -- that is this vault's most explicit
+      anti-style rule for horror-prose specifically.
+  epic-fantasy:
+    status: implemented
+    style_section: "Epic-Fantasy Mode"
+    target_folder: "03_Stories"
+    file_type: story
+    worked_examples:
+      - "02_Novels/02_WrymWretch"
+      - "05_Worldbuilding/03_World_Codex_of_Wyrmreach"
+      - "05_Worldbuilding/02_The_Redacted_Testament_of_Lira_Calyx"
+    structure_rhythm: "ensemble-convergence (multiple bonded pairs summoned separately, converging on one location/threat) and/or twin-bond soul-pairing structure, with memory/prophecy/elemental-cosmic imbalance as the stakes"
+    voice_notes: |
+      Third-person, past tense by default (occasional deliberate
+      first/third-person blur as a soul-bond device -- see WrymWretch --
+      but that is one intentional experiment, not a general license for
+      mid-scene POV switching, which the vault-wide anti-style list
+      otherwise forbids). Elaborate cosmology delivered in codex/
+      world-bible register when world-building; simile-dense, nature/
+      light/water-drawn figurative language in narrative prose.
+    template_note: |
+      "05_Worldbuilding/03_World_Codex_of_Wyrmreach" and
+      "02_Novels/02_WrymWretch" are the same project (`wyrmreach`) -- read
+      both together if grounding a piece in that world specifically. Do
+      NOT assume a new epic-fantasy piece ties to wyrmreach unless the
+      author explicitly says so -- see vault_wide_rules and the Graknox
+      false-positive precedent in CLAUDE.md's anti-style list, which is
+      this exact mode's own cautionary example.
+  confessional-poetry:
+    status: implemented
+    style_section: "Confessional-Poetry Mode"
+    target_folder: "07_Poems_and_Prose"
+    file_type: poem
+    worked_examples:
+      - "07_Poems_and_Prose/05_Inherited"
+      - "07_Poems_and_Prose/09_The_Knife_I_Chose"
+      - "07_Poems_and_Prose/10_The_Stripes_Remain"
+    structure_rhythm: "first-person confessional processing (grief/family/addiction/self-worth/betrayal) via anaphoric/triadic repetition and rhetorical-question transitions -> aphoristic closing line that lands the point explicitly"
+    voice_notes: |
+      First-person, autobiographical, processing grief/family/addiction/
+      self-worth/betrayal. Anaphoric/triadic repetition, rhetorical
+      questions as transitional beats, aphoristic closing lines that land
+      the poem's point explicitly rather than trailing into ambiguity.
+    template_note: |
+      Poems often pair or cluster thematically (companion/rebuttal
+      pieces, e.g. a betrayal poem answered by a resilience poem) rather
+      than standing fully alone -- "09_The_Knife_I_Chose" is paired with
+      "10_The_Stripes_Remain" this way. Check the folder's `_index.md`
+      and nearby annotations for a piece the new one might be in
+      conversation with, and flag a potential pairing to the author
+      rather than inventing one silently.
+  unclassified:
+    status: not_yet_implemented
+    note: "Per CLAUDE.md: ask the user which register they want rather than defaulting to one of the four modes."
+
+# The librarian's job -- reading exact vault files on request and
+# condensing them to a Markdown digest, never drafting prose -- has two
+# equivalent implementations producing the SAME digest format
+# (### <path> heading + bullets + a "Verbatim quotes" list, with an
+# [UNVERIFIED] marker on any quote that doesn't check out):
+#   - Pipelines/creative_writing/librarian.py -- Ollama-backed by default,
+#     or Gemini via LIBRARIAN_BACKEND=gemini_mcp / --backend gemini_mcp
+#     (independent of PIPELINE_LLM_BACKEND), used by run_pipeline.py (the
+#     standalone script has no live subagent to call) and available to
+#     the skill as a fallback.
+#   - the creative-writing-librarian-native subagent
+#     (Creative-Writing/.claude/agents/) -- Claude-only, no Ollama
+#     server or CPU-bound local-inference latency, used by the skill by
+#     default when running inside a live Claude Code session.
+# Both consumers read these defaults rather than each hardcoding their
+# own; the native subagent mirrors max_chars_per_file's spirit by simply
+# reading the whole file (Claude's context is large enough not to need
+# the same truncation librarian.py applies for an Ollama prompt).
+librarian:
+  model_env_var: "OLLAMA_MODEL"       # librarian.py shares the drafting Ollama model by default
+  max_chars_per_file: 12000           # librarian.py only -- the native subagent has no fixed cap
+  note: >
+    Every claimed verbatim quote either implementation returns is
+    checked against the source file text (tolerant of curly/straight
+    quote-punctuation normalization for librarian.py's programmatic
+    check; by direct instruction for the native subagent, which has no
+    separate verification pass behind it) before being handed to the
+    drafter -- an unverified quote is flagged inline, never silently
+    trusted or silently dropped.
+
+# Vault-wide rules that apply regardless of mode (from CLAUDE.md
+# "Anti-Style / do-not list" and "Reading a file's frontmatter").
+vault_wide_rules:
+  - "Don't silently invent mode, project, or archetype ties -- verify a claimed connection with vault_search.py before asserting it, or ask."
+  - "If a new piece's intended mode is ambiguous, ask -- don't silently invent a mode or project value."
+  - "Ethical restraint precedent: victims/subjects get interior lives and dignity, not just plot/illustrative function."
+
+frontmatter_schema:
+  # Field -> meaning, copied from CLAUDE.md's frontmatter table. Stage 6
+  # fills these in for the new work.
+  title: "Display title of the piece."
+  type: "book | novel | story | book-concept | worldbuilding | song | poem | prose-poem | letter | dream-journal | character-profile | essay"
+  mode: "Which style section applies (see modes: above)."
+  genre: "List of genre tags."
+  themes: "List of theme tags."
+  archetypes: "List of archetype tags (may be empty)."
+  status: "draft | complete | fragment | outline"
+  pov: "As actually written -- don't assume from mode."
+  tense: "As actually written -- don't assume from mode."
+  project: "Set only when explicitly part of a named series/world -- never inferred."
+  source_volume: "Provenance field. For pipeline-generated new works, leave empty (not split from a master document)."
+  source_lines: "Provenance field. Leave empty for pipeline-generated new works."
+  tags: "Nested type/..., mode/..., theme/..., project/..., status/..., archetype/... tags for the Tag pane/Graph/Bases."
+  attachments: "Reserved for future non-markdown assets; empty today."
+
+# --------------------------------------------------------------------
+# Stages. Mode-agnostic in shape -- prompt text below references
+# {mode.*} placeholders filled in from the modes: block above for
+# whichever mode the run targets.
+# --------------------------------------------------------------------
+stages:
+  - id: intake
+    title: "1. Intake"
+    checkpoint: true
+    output_file: idea.md
+    description: >
+      Capture the seed idea in the author's own words before generating
+      anything.
+    prompt: |
+      Record the seed idea for a new {mode.file_type} in {mode} mode.
+      Capture, in the author's own words wherever possible:
+        - working title
+        - the core idea/premise in 2-4 sentences
+        - candidate themes (list)
+        - candidate archetypes, if any (list; leave empty if none)
+        - project tie, ONLY if the author explicitly names one -- never
+          infer a project tie (see vault_wide_rules)
+      If the mode is ambiguous or unset, ask the author which of the
+      vault's modes (or "unclassified") this belongs to -- do not guess.
+      Write the result as idea.md with a short YAML-ish header followed
+      by the premise in prose.
+
+  - id: reference_pull
+    title: "2. Reference pull"
+    checkpoint: true
+    output_file: references.md
+    description: >
+      Ground the piece in the vault's existing voice before outlining,
+      exactly as CLAUDE.md recommends doing manually.
+    prompt: |
+      Using tools/vault_search.py (from the vault root), run:
+        python tools/vault_search.py search "<idea themes/keywords>" --top 5 --json
+      to pull real passages related to this idea's themes, and check
+      whether a close motif has already been used elsewhere in the vault.
+      This is a cheap index lookup, not "reading a file" -- run it directly,
+      no librarian involved.
+      Compile the exact list of files worth reading in full: the mode's
+      worked examples ({mode.worked_examples}) plus any strong
+      vault_search.py hits. Do NOT read these files' full text yourself --
+      hand the exact file list to the librarian (librarian.py; see
+      librarian: config above) and have it read + condense them into a
+      digest instead. This keeps large source files out of your own
+      context/prompt.
+      Also run one or more tag searches derived from this idea's candidate
+      themes/archetypes against the vault's per-chunk tags:
+        python tools/vault_search.py search --tag context=<theme> --top 5 --json
+      (short field names: plot/context/mood/motif -- see _ChunkTags/vocabulary.yaml
+      for the closed list of allowed values per field). This is what actually
+      widens the pool beyond the fixed worked_examples list above -- a mode's
+      3 worked examples are curatorial, not the full set of matching works, and
+      per-chunk tags let a hit surface from *any* tagged chunk in the vault, not
+      just the fixed anchors. Until a mode's works are backfilled with chunk
+      tags, --tag returns no results; treat that as the expected, graceful
+      fallback (today's lexical-only behavior), not an error.
+      Summarize into references.md, built from the librarian's digest:
+        - relevant passages/motifs (cite file + heading/line range from
+          vault_search.py's own output for search hits; for worked
+          examples, cite the file path the librarian was given)
+        - notable vocabulary/phrasing worth echoing (e.g. the mode's
+          connective-tissue words) -- treat lines under the librarian's
+          "Verbatim quotes" heading as exact ONLY if not marked
+          [UNVERIFIED]; treat everything else in the digest as paraphrase,
+          not a citable quote
+        - any existing piece this idea is close enough to that it's worth
+          flagging to the author (per vault_wide_rules: flag, don't
+          silently assume a tie)
+
+  - id: outline
+    title: "3. Outline"
+    checkpoint: true
+    output_file: outline.md
+    description: >
+      Structure the piece per the mode's recurring rhythm before
+      drafting prose.
+    prompt: |
+      Using idea.md and references.md, produce an outline for this
+      {mode.file_type} following the mode's structure:
+        {mode.structure_rhythm}
+      For essay-self-help specifically: name the claim, the
+      parable/illustrative example that will carry it, the
+      practice/action-item (see mode.template_note for the one essay
+      that does this most literally), and the closing callback/aphorism
+      that lands the point. If the piece will have multiple movements
+      (see worked examples), outline each movement's claim/parable/
+      practice/callback beat separately.
+      Write the result as outline.md.
+
+  - id: draft
+    title: "4. Draft"
+    checkpoint: true
+    output_file: draft.md
+    description: >
+      Write the full draft in-voice from the approved outline.
+    prompt: |
+      Using the approved outline.md, references.md, and the mode's voice
+      notes below, write a full draft:
+        {mode.voice_notes}
+      Follow the vault-wide anti-style list (CLAUDE.md "Anti-Style /
+      do-not list") as well as the mode-specific rules above. Do not
+      resolve ambiguities in the outline by inventing new plot/thematic
+      material outside its scope -- flag them instead.
+      Write the result as draft.md.
+
+  - id: self_revision
+    title: "5. Self-revision"
+    checkpoint: true
+    output_files: [draft_revised.md, revision_notes.md]
+    description: >
+      Check the draft against the mode's rules and the vault-wide
+      anti-style list before presenting it as ready.
+    prompt: |
+      Review draft.md against:
+        - the mode's voice/structure rules above
+        - the vault-wide anti-style list, especially: "don't silently
+          invent mode/project/archetype ties" -- re-verify any claimed
+          connection to an existing work via vault_search.py before
+          letting it stand, and cut or flag it if unverified. When
+          vault_search.py returns a hit for a claimed connection, don't
+          just trust its similarity score -- hand that hit's file path to
+          the librarian (librarian.py) focused on the claim, and judge
+          the tie against its condensed digest (and its verified quotes,
+          if any), not the score alone.
+        - the ethical-restraint precedent (interior lives/dignity for
+          any subject used illustratively)
+      Produce draft_revised.md (the corrected draft) and
+      revision_notes.md (a short changelog: what changed and why, and
+      anything flagged for the author to decide rather than silently
+      resolved -- include the librarian-backed verification detail for
+      any claimed connection, not just a pass/fail).
+
+  - id: vault_integration
+    title: "6. Vault integration"
+    checkpoint: true
+    requires_explicit_confirm: true
+    description: >
+      Automates CLAUDE.md's existing 5-step Maintenance procedure
+      exactly as written -- this stage does not invent a new process.
+    prompt: |
+      Only after the author approves draft_revised.md as final:
+        1. Create the file under {mode.target_folder}/ with a filename
+           matching the vault's existing numbering/naming convention in
+           that folder.
+        2. Add YAML frontmatter above the "# Title" line using
+           frontmatter_schema above, with type={mode.file_type},
+           mode={mode}, and status as the author specifies (draft or
+           complete) -- source_volume/source_lines left empty since this
+           is a new, not transcribed, work.
+        3. Add an entry to {mode.target_folder}/_index.md, matching the
+           existing entries' one-line-summary + annotation-link format.
+        4. Write a companion annotation under
+           _Annotations/{mode.target_folder}/<file>.md with genuine,
+           specific craft analysis (not templated) referencing
+           revision_notes.md, matching the format of existing annotation
+           files (frontmatter with title/type/annotates/mode/patterns/tags,
+           then a wikilink-back line, then the analysis prose).
+        5. Re-run `python tools/vault_search.py index` from the vault
+           root, and `python tools/build_canvas.py` if mode/project
+           affects the map.
+      This stage must never run without the author's explicit go-ahead.

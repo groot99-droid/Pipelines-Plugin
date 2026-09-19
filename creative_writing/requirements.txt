@@ -1,0 +1,11 @@
+# Always required (spec.yaml parsing).
+pyyaml
+
+# Only required if PIPELINE_LLM_BACKEND=anthropic (default backend is
+# "ollama", which needs no pip package -- see llm.py). The librarian
+# (librarian.py) always uses Ollama regardless of this setting.
+anthropic
+
+# Only required if PIPELINE_LLM_BACKEND=gemini_mcp or LIBRARIAN_BACKEND=gemini_mcp
+# (also needs GEMINI_API_KEY; optional GEMINI_MODEL, default gemini-3.6-flash).
+google-genai

@@ -1,0 +1,73 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Pipelines — repo-root ignore rules
+#
+# This repo holds multiple tools, each in its own folder under a tool root
+# (today: creative-writing/{vault,pipeline}). Rules here apply repo-wide.
+# The vault carries its own creative-writing/vault/.gitignore for
+# Obsidian-specific state; that file still applies inside the vault.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Secrets ──────────────────────────────────────────────────────────────────
+# creative-writing/pipeline/.env holds a live GEMINI_API_KEY. Never commit it;
+# .env.example documents the shape instead.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+credentials.json
+*_token
+*.token
+.netrc
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ── Pipeline run state ───────────────────────────────────────────────────────
+# Per-run checkpoint dirs (idea/outline/draft/state.json). Scratch by design —
+# a finished piece lands in the vault's _Idea_Library/, not here.
+runs/
+
+# ── Build artifacts ──────────────────────────────────────────────────────────
+# build_package.py regenerates the distributable zip from source at any time.
+*.zip
+dist/
+build/
+
+# ── Local AI / embedding caches ──────────────────────────────────────────────
+# rag_index/index.json is a TF-IDF index of the whole vault, rebuilt with
+# `python creative-writing/vault/tools/vault_search.py index`. It also records
+# an absolute vault path, so it is machine-local by nature.
+rag_index/
+.rag/
+.rag_index/
+.smart-env/
+.smart-connections/
+embeddings/
+*.embeddings.json
+*.faiss
+*.ann
+
+# ── Obsidian machine-local state ─────────────────────────────────────────────
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/graph.json
+.obsidian/plugins/*/data.json
+.trash/
+.obsidian/trash/
+
+# ── OS noise ─────────────────────────────────────────────────────────────────
+Thumbs.db
+desktop.ini
+.DS_Store
