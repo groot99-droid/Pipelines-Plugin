@@ -1,14 +1,14 @@
 ---
 name: chunk-tag-backfill
-description: Runs (or re-runs) the creative-writing-chunk-tagger subagent over the vault's work files, writing/updating each one's _ChunkTags/ sidecar. Use when backfilling per-chunk tags across the vault, or re-tagging specific files after an edit. Resumable and idempotent -- skips files whose sidecar is already valid unless --force is given.
+description: Runs (or re-runs) the creative-writing-chunk-tagger subagent over the vault's work files, writing/updating each one's creative-writing/vault/_ChunkTags/ sidecar. Use when backfilling per-chunk tags across the vault, or re-tagging specific files after an edit. Resumable and idempotent -- skips files whose sidecar is already valid unless --force is given.
 ---
 
 # Chunk-tag backfill
 
-Populates `_ChunkTags/<path>.tags.json` sidecars so
-`tools/vault_search.py` can filter/rank by per-chunk `plot_tags`/
+Populates `creative-writing/vault/_ChunkTags/<path>.tags.json` sidecars so
+`creative-writing/vault/tools/vault_search.py` can filter/rank by per-chunk `plot_tags`/
 `context_tags`/`mood_tags`/`motif_tags` (see
-`_ChunkTags/vocabulary.yaml` for the closed vocabulary and
+`creative-writing/vault/_ChunkTags/vocabulary.yaml` for the closed vocabulary and
 `.claude/agents/creative-writing-chunk-tagger.md` for how tagging
 actually happens — this skill is the loop that drives it across many
 files, not the tagging logic itself).
@@ -16,6 +16,14 @@ files, not the tagging logic itself).
 This must run as a skill, not a standalone script: tagging needs the
 Agent tool to invoke the subagent, which only exists in a live Claude
 Code session.
+
+## Paths
+
+Your working directory is the Pipelines repo root; the vault is at `creative-writing/vault/`.
+`<path>` throughout this file means a **vault-relative** work path as
+`vault_search.py` reports it (`03_Stories/06_Melting_Away.md`). Prefix it with
+`creative-writing/vault/` whenever you Read or Write that path — the sidecar you write is at
+`creative-writing/vault/_ChunkTags/<path>.tags.json`.
 
 ## Arguments
 
@@ -34,16 +42,16 @@ valid sidecar (the normal "continue the backfill" invocation).
 
 1. **Enumerate work files:**
    ```
-   python tools/vault_search.py files --type work --json
+   python creative-writing/vault/tools/vault_search.py files --type work --json
    ```
-   from the vault root. If `--only` was given, filter to paths containing
+   If `--only` was given, filter to paths containing
    that substring (case-insensitive).
 
 2. **For each file, decide whether it needs (re)tagging:**
-   - Run `python tools/vault_search.py chunks "<path>" --json` to get its
+   - Run `python creative-writing/vault/tools/vault_search.py chunks "<path>" --json` to get its
      current `body_fingerprint`, `chunker_version`, and chunk list.
    - If `--force` was passed: needs tagging.
-   - Else if no sidecar exists at `_ChunkTags/<path>.tags.json`: needs
+   - Else if no sidecar exists at `creative-writing/vault/_ChunkTags/<path>.tags.json`: needs
      tagging.
    - Else read the existing sidecar: if its `body_fingerprint` and
      `chunker_version` both match the fresh values from `chunks`, it's
@@ -67,26 +75,26 @@ valid sidecar (the normal "continue the backfill" invocation).
      `.claude/agents/creative-writing-chunk-tagger.md` (file, generated
      timestamp, `generator: "creative-writing-chunk-tagger v1"`,
      `chunker_version`, `body_fingerprint`, and the per-chunk records).
-   - Write it to `_ChunkTags/<path>.tags.json` (create parent dirs as
+   - Write it to `creative-writing/vault/_ChunkTags/<path>.tags.json` (create parent dirs as
      needed — mirror the work's own folder structure the way
      `_Annotations/` does).
 
 4. **Log the outcome** — append one line per file to
-   `_ChunkTags/_backfill_log.jsonl`: `{"file": ..., "timestamp": ...,
+   `creative-writing/vault/_ChunkTags/_backfill_log.jsonl`: `{"file": ..., "timestamp": ...,
    "action": "tagged"|"retagged"|"skipped_valid", "chunk_count": ...}`.
    This is a cheap audit trail, not the source of resumability — the
    fingerprint check in step 2 is what actually makes reruns safe.
 
 5. **Collect suggestions** — if any subagent output included a non-
    "(none)" `suggestions` line, append it to
-   `_ChunkTags/_vocabulary_suggestions.jsonl` (`file`, `chunk_index`,
+   `creative-writing/vault/_ChunkTags/_vocabulary_suggestions.jsonl` (`file`, `chunk_index`,
    the raw suggestion text). Don't act on a suggestion yourself — that's
    the author's call, made by editing `vocabulary.yaml` directly.
 
 6. **Report a summary** to the author at the end: files tagged,
    retagged, skipped (already valid), and how many suggestions were
    logged — plus a reminder that a fresh
-   `python tools/vault_search.py index` run is needed to pick up any new
+   `python creative-writing/vault/tools/vault_search.py index` run is needed to pick up any new
    sidecars written this run (this skill does NOT rebuild the index
    itself, since that's a separate, cheap, explicit step the author may
    want to time deliberately, e.g. after reviewing a batch's tag quality

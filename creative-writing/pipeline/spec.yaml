@@ -1,16 +1,16 @@
 # Creative-writing pipeline spec — single source of truth for both the
 # standalone script (run_pipeline.py) and the Claude Code skill
-# (Creative-Writing/.claude/skills/creative-writing-pipeline/SKILL.md).
+# (.claude/skills/creative-writing-pipeline/SKILL.md at the Pipelines root).
 #
 # Neither consumer should hardcode stage text or mode rules of its own --
 # both read this file. Mode rules here summarize and point back to
-# Creative-Writing/CLAUDE.md; they don't replace it. If CLAUDE.md changes,
+# creative-writing/vault/CLAUDE.md; they don't replace it. If CLAUDE.md changes,
 # update the matching block here.
 
 version: 1
 
 # Path to the vault, resolved relative to this file's directory.
-vault_root: "../../Creative-Writing"
+vault_root: "../vault"
 
 # Populated modes. Add a new entry here (and its stage-3/4 rules will
 # apply automatically) to extend the pipeline to another mode -- no
@@ -127,13 +127,13 @@ modes:
 # equivalent implementations producing the SAME digest format
 # (### <path> heading + bullets + a "Verbatim quotes" list, with an
 # [UNVERIFIED] marker on any quote that doesn't check out):
-#   - Pipelines/creative_writing/librarian.py -- Ollama-backed by default,
+#   - creative-writing/pipeline/librarian.py -- Ollama-backed by default,
 #     or Gemini via LIBRARIAN_BACKEND=gemini_mcp / --backend gemini_mcp
 #     (independent of PIPELINE_LLM_BACKEND), used by run_pipeline.py (the
 #     standalone script has no live subagent to call) and available to
 #     the skill as a fallback.
 #   - the creative-writing-librarian-native subagent
-#     (Creative-Writing/.claude/agents/) -- Claude-only, no Ollama
+#     (.claude/agents/ at the Pipelines root) -- Claude-only, no Ollama
 #     server or CPU-bound local-inference latency, used by the skill by
 #     default when running inside a live Claude Code session.
 # Both consumers read these defaults rather than each hardcoding their

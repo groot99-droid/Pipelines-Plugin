@@ -3,7 +3,10 @@
 63 works in plain markdown. Open the folder directly and everything —
 `00_INDEX.md`'s links, the wikilinks, the folder structure — works as written.
 
-**Obsidian → Open folder as vault → this directory.**
+**Obsidian → Open folder as vault → this directory**
+(`Pipelines/creative-writing/vault`). The vault lives inside the `Pipelines`
+repo as one tool's data; open *this* folder, not the repo root, or Obsidian will
+try to index the pipeline's Python too.
 
 Nothing needs converting. The files are the vault; if you stop using Obsidian
 tomorrow you still have 63 markdown files.
@@ -19,21 +22,27 @@ keeping separate:
 Text Generator) talking to `http://localhost:11434`. Chat about the open note,
 continue a paragraph, surface related passages.
 
-**Across the whole archive** — `tools/vault_rag.py` in the `Creative-Headquarters`
-repo indexes every note into embeddings and answers questions over all of them:
+**Across the whole archive, no Ollama needed** — `tools/vault_search.py`, right
+here in the vault. Stdlib-only TF-IDF, no network, no embeddings:
 
 ```bash
-cd ../Creative-Headquarters
-python3 tools/vault_rag.py index --vault ../Creative-Writing
+python tools/vault_search.py index                    # rebuild after any change
+python tools/vault_search.py search "drowning motif"
+```
+It cites file + heading/line range for every hit, so each claim traces back to a
+file. Re-run `index` after editing content or frontmatter.
+
+**Embeddings-based, in the separate `Creative-Headquarters` repo** —
+`tools/vault_rag.py` there indexes every note into embeddings and answers over
+all of them. Point it at this vault's new location:
+
+```bash
+cd ~/Creative-Headquarters
+python3 tools/vault_rag.py index --vault ~/Pipelines/creative-writing/vault
 python3 tools/vault_rag.py ask "which stories share the drowning motif"
 ```
-
-It answers only from what it retrieves, and cites the chunk ids so every claim
-traces back to a file. Asked something the archive does not cover, it says so
-rather than inventing it.
-
-**Full setup, both halves, and the failure modes:
-[`Creative-Headquarters/OBSIDIAN.md`](../Creative-Headquarters/OBSIDIAN.md).**
+That repo's own `OBSIDIAN.md` has the full setup and failure modes. Note it still
+documents the vault at its old top-level path.
 
 The one step everybody skips: Ollama rejects browser origins it does not know, and
 Obsidian is a browser. Without `OLLAMA_ORIGINS="app://obsidian.md"` set and Ollama

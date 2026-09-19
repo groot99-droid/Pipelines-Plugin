@@ -5,16 +5,27 @@ description: Walk a new idea for this vault through the checkpointed multi-stage
 
 # Creative-writing pipeline
 
+All paths in this file are relative to the **Pipelines repo root**, which is
+your working directory. The layout:
+
+- `creative-writing/vault/` — the Obsidian vault: the 63 works, `_Annotations/`,
+  `_ChunkTags/`, `_Idea_Library/`, `tools/`, and the vault's own `CLAUDE.md`.
+- `creative-writing/pipeline/` — this pipeline's scripts and `spec.yaml`.
+
+Where a path below is given vault-relative (e.g. `03_Stories/06_Melting_Away.md`)
+— as `vault_search.py` and `librarian.py` both report and accept them — it means
+relative to `creative-writing/vault/`.
+
 This skill is the interactive counterpart to
-`../../../Pipelines/creative_writing/run_pipeline.py` (the standalone
+`creative-writing/pipeline/run_pipeline.py` (the standalone
 script). Both read the same spec file —
-`../../../Pipelines/creative_writing/spec.yaml` — so read that file now,
+`creative-writing/pipeline/spec.yaml` — so read that file now,
 in full, before doing anything else. It is the source of truth for stage
 order, stage prompts, per-mode rules, and the frontmatter schema. Do not
 re-derive or improvise stage logic that contradicts it; if it and this
 file ever disagree, spec.yaml wins.
 
-Also load `../../CLAUDE.md` for full context — spec.yaml summarizes and
+Also load `creative-writing/vault/CLAUDE.md` for full context — spec.yaml summarizes and
 references it, it doesn't replace it.
 
 ## How to run this
@@ -34,7 +45,8 @@ references it, it doesn't replace it.
      under `modes:` (the `{mode.field}` placeholders map directly to keys
      there — e.g. `{mode.voice_notes}`, `{mode.structure_rhythm}`).
    - **intake, reference_pull, vault_integration**: do the actual work
-     yourself (write the idea capture, run `tools/vault_search.py`,
+     yourself (write the idea capture, run
+     `creative-writing/vault/tools/vault_search.py`,
      read/write vault files) using your own judgment — these are
      data-gathering or file-writing steps, not heavy generation, and
      vault_integration in particular must stay under your direct control
@@ -60,8 +72,9 @@ references it, it doesn't replace it.
      want changes, redo the current stage, don't silently patch forward.
 
 3. **Reference pull stage specifically:** actually run
-   `python tools/vault_search.py search "<query>" --top 5 --json` from
-   the vault root — that's a cheap index lookup, do it directly. Cite its
+   `python creative-writing/vault/tools/vault_search.py search "<query>" --top 5 --json`
+   — that's a cheap index lookup, do it directly. It resolves the vault and its
+   index from its own location, so it works from any working directory. Cite its
    results exactly as it reports them (file + heading/line range) — never
    fabricate a citation, per CLAUDE.md. Also run the `--tag` search
    spec.yaml's `reference_pull` prompt describes (derived from this idea's
@@ -83,9 +96,10 @@ references it, it doesn't replace it.
      `librarian.py` produces.
    - **Script path (`librarian.py`, Ollama-backed):**
      ```
-     python ../../Pipelines/creative_writing/librarian.py digest <path1> [<path2> ...] --query "<idea summary>"
+     python creative-writing/pipeline/librarian.py digest <path1> [<path2> ...] --query "<idea summary>"
      ```
-     (run via Bash from the vault root). Only fall back to this if the
+     (run via Bash from the repo root; `<path1>` etc. are vault-relative).
+     Only fall back to this if the
      author explicitly asks for the Ollama-backed path, or the native
      subagent is unavailable — it needs `ollama serve` running first, and
      CPU-only condensation is slow (minutes per file).
@@ -142,9 +156,10 @@ references it, it doesn't replace it.
      `_Annotations/` files.
    - Only after that preview is approved: create the file, add the
      frontmatter, append the `_index.md` entry, write the annotation
-     file, then run `python tools/vault_search.py index` (and
-     `python tools/build_canvas.py` if this piece's `mode`/`project`
-     changes the style/project map).
+     file, then run
+     `python creative-writing/vault/tools/vault_search.py index` (and
+     `python creative-writing/vault/tools/build_canvas.py` if this piece's
+     `mode`/`project` changes the style/project map).
 
 ## What this skill does not do
 

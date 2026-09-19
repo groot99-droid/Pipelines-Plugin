@@ -4,6 +4,17 @@
 
 This file governs how Claude helps write **new** material in this vault — matching the author's voice at the sentence level and the plot/structure level, and knowing what to avoid. It does **not** license editing the 63 original works in `00_INDEX.md`: those are certified verbatim transcriptions from two master source documents. Frontmatter was added above each file's `# Title` line, but the body below it is untouched. All craft commentary lives in the separate `_Annotations/` tree, never inline in the originals.
 
+## Where this vault sits, and how to read the paths below
+
+This vault lives at `creative-writing/vault/` inside the `Pipelines` repo, as the
+data half of the creative-writing tool (the pipeline that writes into it is at
+`creative-writing/pipeline/`). See the repo root's `CLAUDE.md` for the layout.
+
+**Every path in this file is vault-relative** — `03_Stories/06_Melting_Away.md`,
+`tools/vault_search.py`, `_Annotations/…`. That is the form `vault_search.py`
+reports and accepts. When your working directory is the repo root rather than
+this vault, prefix it: `creative-writing/vault/tools/vault_search.py`.
+
 ## Vault navigation
 
 - [[00_INDEX.md]] — bibliographic ledger of all 63 works, now wikilinked.

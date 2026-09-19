@@ -5,7 +5,8 @@ Validates that the Claude Code skill is actually correctly registered
 (valid SKILL.md frontmatter, every file it and spec.yaml depend on
 actually exists) and, only if that passes, zips the whole pipeline --
 spec, scripts, docs, and a copy of the skill -- into one portable archive
-under Pipelines/. Refuses to produce a zip if validation fails: a broken
+at the Pipelines repo root. Refuses to produce a zip if validation
+fails: a broken
 pipeline shouldn't ship as if it were a working one.
 
 Usage:
@@ -17,12 +18,16 @@ import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 
-HERE = Path(__file__).resolve().parent               # Pipelines/
-CW_DIR = HERE / "creative_writing"                    # Pipelines/creative_writing/
-VAULT_ROOT = HERE.parent / "Creative-Writing"          # Users/utopi/Creative-Writing
-SKILL_DIR = VAULT_ROOT / ".claude" / "skills" / "creative-writing-pipeline"
+HERE = Path(__file__).resolve().parent               # creative-writing/pipeline/
+CW_DIR = HERE                                        # the pipeline's own scripts
+VAULT_ROOT = HERE.parent / "vault"                   # creative-writing/vault/
+REPO_ROOT = HERE.parent.parent                       # Pipelines/
+# The skill and its agents live at the REPO root, not in the vault: one home,
+# discovered whenever Pipelines is the working directory, and already in the
+# shape a plugin wants.
+SKILL_DIR = REPO_ROOT / ".claude" / "skills" / "creative-writing-pipeline"
 SKILL_MD = SKILL_DIR / "SKILL.md"
-AGENTS_DIR = VAULT_ROOT / ".claude" / "agents"
+AGENTS_DIR = REPO_ROOT / ".claude" / "agents"
 
 # Subagents the skill delegates to (native drafting + native reference
 # condensation) -- these live under .claude/agents/, a sibling of
@@ -44,7 +49,7 @@ VAULT_DEPENDENCY_FILES = [
     VAULT_ROOT / "CLAUDE.md",
 ]
 
-DEFAULT_OUT = HERE / "creative-writing-pipeline.zip"
+DEFAULT_OUT = REPO_ROOT / "creative-writing-pipeline.zip"
 
 
 class ValidationError(RuntimeError):
@@ -90,7 +95,7 @@ def validate() -> dict:
         if not path.exists():
             errors.append(f"Missing pipeline file: {path}")
 
-    readme = HERE / "README.md"
+    readme = REPO_ROOT / "README.md"
     if not readme.exists():
         errors.append(f"Missing: {readme}")
 
@@ -162,13 +167,17 @@ def build(out_path: Path, frontmatter: dict) -> int:
         "  agents/creative-writing-librarian-native.md",
         "",
         "Install:",
-        "  1. Drop skill/creative-writing-pipeline/ under <your-vault>/.claude/skills/",
-        "     so Claude Code auto-discovers it there.",
-        "  2. Drop both files under agents/ into <your-vault>/.claude/agents/ --",
+        "  1. Drop skill/creative-writing-pipeline/ under <repo-root>/.claude/skills/",
+        "     -- the working directory Claude Code opens on, so it is discovered",
+        "     there. Note the skill's paths assume the vault sits at",
+        "     creative-writing/vault/ relative to that root; adjust them if your",
+        "     layout differs.",
+        "  2. Drop both files under agents/ into <repo-root>/.claude/agents/ --",
         "     the skill delegates its heavy generation and reference-condensation",
         "     work to these subagents and won't work correctly without them.",
         "  3. Put the rest of these files wherever the pipeline scripts should live,",
-        "     and update spec.yaml's vault_root to point at <your-vault>.",
+        "     and update spec.yaml's vault_root to point at your vault (it is",
+        "     resolved relative to spec.yaml's own directory).",
         "  4. pip install -r requirements.txt (pyyaml always; anthropic only if you",
         "     plan to use PIPELINE_LLM_BACKEND=anthropic). Ollama is only needed for",
         "     the standalone script's default drafting backend and librarian.py --",
@@ -179,7 +188,7 @@ def build(out_path: Path, frontmatter: dict) -> int:
         for filename in PIPELINE_SCRIPT_FILES:
             zf.write(CW_DIR / filename, filename)
             count += 1
-        zf.write(HERE / "README.md", "README.md")
+        zf.write(REPO_ROOT / "README.md", "README.md")
         count += 1
         zf.write(SKILL_MD, "skill/creative-writing-pipeline/SKILL.md")
         count += 1

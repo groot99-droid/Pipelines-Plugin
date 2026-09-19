@@ -34,15 +34,17 @@ a tie or a quote were asserted:
   unverified and say so plainly in your output.
 - Any claimed connection to an existing mode, project, or archetype must
   be checked, not asserted. If your context includes a hit from
-  `tools/vault_search.py` or a librarian digest that actually supports
+  `creative-writing/vault/tools/vault_search.py` or a librarian digest that actually supports
   the tie, you may state it and note what supports it. If it doesn't, cut
   the claim or flag it explicitly as unverified -- do not silently invent
   a tie because it would make the piece feel more connected to the vault.
 - For the self-revision stage specifically: if you need to check a claim
   yourself rather than relying on what the caller already gave you, you
-  may run `python tools/vault_search.py search "<query>" --top 5 --json`
-  and `python ../../Pipelines/creative_writing/librarian.py digest <path>
-  --query "<claim>"` via Bash (from the vault root) -- the same tools the
+  may run
+  `python creative-writing/vault/tools/vault_search.py search "<query>" --top 5 --json`
+  and `python creative-writing/pipeline/librarian.py digest <path>
+  --query "<claim>"` via Bash (from the Pipelines repo root, which is the
+  working directory; `<path>` stays vault-relative) -- the same tools the
   top-level Claude uses for this. Do not Read a full worked-example file
   end-to-end when a librarian digest would do; you have Read/Grep/Glob
   for targeted lookups, not to re-read what's already been condensed for

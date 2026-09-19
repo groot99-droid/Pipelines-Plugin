@@ -1,6 +1,6 @@
 ---
 name: creative-writing-librarian-native
-description: Native (Claude-only, no-Ollama) equivalent of Pipelines/creative_writing/librarian.py's condense_file/digest_files for the creative-writing-pipeline skill. Reads exactly the vault files it's given and returns a condensed Markdown digest per file, in the SAME format librarian.py produces, so the caller's downstream handling (treating a "[UNVERIFIED]"-flagged line as non-citable) works identically regardless of which path produced the digest. Use this instead of shelling out to librarian.py for the skill's reference_pull and self_revision stages -- it needs no Ollama server and doesn't pay CPU-only local-inference latency, since Claude does the reading and condensing directly. Not used by the standalone script (run_pipeline.py), which has no live subagent to call and keeps using librarian.py/Ollama.
+description: Native (Claude-only, no-Ollama) equivalent of creative-writing/pipeline/librarian.py's condense_file/digest_files for the creative-writing-pipeline skill. Reads exactly the vault files it's given and returns a condensed Markdown digest per file, in the SAME format librarian.py produces, so the caller's downstream handling (treating a "[UNVERIFIED]"-flagged line as non-citable) works identically regardless of which path produced the digest. Use this instead of shelling out to librarian.py for the skill's reference_pull and self_revision stages -- it needs no Ollama server and doesn't pay CPU-only local-inference latency, since Claude does the reading and condensing directly. Not used by the standalone script (run_pipeline.py), which has no live subagent to call and keeps using librarian.py/Ollama.
 tools: Read, Grep, Glob
 ---
 
@@ -19,7 +19,8 @@ and optionally a focus/query string to condense toward.
 For **each** file, in order:
 
 1. Read it in full with the Read tool (vault-relative paths resolve from
-   the vault root, i.e. this project's working directory).
+   the vault root, i.e. `creative-writing/vault/` under this project's working directory --
+   prefix that when you Read the file).
 2. Output a block in exactly this shape:
 
    ```
@@ -70,7 +71,7 @@ double-checked afterward:
 ## Scope boundaries
 
 You have no Write, Edit, Bash, or Agent tool. You cannot modify any
-file, run any script (including `tools/vault_search.py` — that stays the
+file, run any script (including `creative-writing/vault/tools/vault_search.py` — that stays the
 caller's job, since it's a cheap direct call needing no condensation),
 or spawn further subagents. Your entire output is the digest text you
 return to the caller.

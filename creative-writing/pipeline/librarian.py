@@ -12,8 +12,8 @@ LIBRARIAN_BACKEND env var, independent of PIPELINE_LLM_BACKEND -- the
 librarian's model is independent of whichever backend is doing the actual
 drafting. Quote verification runs the same way for both.
 
-This intentionally lives in Pipelines/creative_writing/, NOT in
-Creative-Writing/tools/ alongside vault_search.py: that tool's own
+This intentionally lives in creative-writing/pipeline/, NOT in
+creative-writing/vault/tools/ alongside vault_search.py: that tool's own
 docstring states it is deliberately "stdlib only -- no network calls, no
 embeddings, no Ollama dependency." Keeping the vault's own tooling
 dependency-free was a deliberate choice; this is a separate,
@@ -44,7 +44,7 @@ def _default_vault_root() -> Path:
     try:
         import yaml
     except ImportError:
-        return (HERE / ".." / ".." / "Creative-Writing").resolve()
+        return (HERE / ".." / "vault").resolve()
     with (HERE / "spec.yaml").open("r", encoding="utf-8") as f:
         spec = yaml.safe_load(f)
     return (HERE / spec["vault_root"]).resolve()
@@ -218,7 +218,7 @@ def build_arg_parser():
     p_digest.add_argument("paths", nargs="+", help="Vault-relative file paths, e.g. 11_Essays/02_The_Architecture_of_Being.md")
     p_digest.add_argument("--query", default=None, help="Optional focus to guide the condensation.")
     p_digest.add_argument("--out", default=None, help="Write the digest to this file instead of stdout.")
-    p_digest.add_argument("--vault", default=None, help="Vault root (default: ../../Creative-Writing relative to this file).")
+    p_digest.add_argument("--vault", default=None, help="Vault root (default: ../vault relative to this file).")
     p_digest.add_argument("--backend", default=None, choices=sorted(LIBRARIAN_BACKENDS),
                           help="Condensation backend (default: LIBRARIAN_BACKEND env var, else ollama). "
                                "gemini_mcp needs GEMINI_API_KEY and `pip install google-genai`.")

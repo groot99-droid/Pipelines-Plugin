@@ -1,13 +1,30 @@
 # Pipelines
 
-Multi-stage pipelines that turn a raw creative task into a finished,
-checkpointed piece of work, instead of one freeform generation.
+One repo, multiple tools. Each tool gets a self-contained top-level folder;
+skills and agents live once at the repo root under `.claude/`, so they load
+whenever this repo is the working directory.
+
+```
+.claude/skills/        creative-writing-pipeline, chunk-tag-backfill
+.claude/agents/        creative-writing-{chunk-tagger,drafter,librarian-native}
+CLAUDE.md              repo conventions; points at the vault's own CLAUDE.md
+creative-writing/
+  vault/               the Obsidian vault: 63 works, _Annotations/,
+                       _ChunkTags/, _Idea_Library/, tools/, CLAUDE.md
+  pipeline/            the checkpointed pipeline that writes into that vault
+```
+
+Paths throughout this file and in every skill/agent are relative to this repo
+root. Vault-relative paths (as `vault_search.py` reports them, e.g.
+`03_Stories/06_Melting_Away.md`) take a `creative-writing/vault/` prefix.
 
 ## Creative-writing pipeline
 
-Turns an idea into a vault-integrated piece in the `Creative-Writing`
-Obsidian vault (`../Creative-Writing`), following that vault's own rules
-in `CLAUDE.md` instead of re-deriving them each time.
+Turns an idea into a vault-integrated piece in the Obsidian vault at
+[`creative-writing/vault`](creative-writing/vault), following that vault's own
+rules in [`creative-writing/vault/CLAUDE.md`](creative-writing/vault/CLAUDE.md)
+instead of re-deriving them each time. Open that folder directly in Obsidian —
+its `.obsidian/` config travels with it.
 
 Stages: **intake → reference pull → outline → draft → self-revision →
 vault integration**. Every stage is a checkpoint — nothing moves to the
@@ -33,10 +50,10 @@ The pipeline's generation work runs through one of three named backends:
   the skill, not `llm.py`.** The skill delegates its three heavy
   generation stages (outline, draft, self-revision) to a dedicated
   `creative-writing-drafter` subagent
-  (`../Creative-Writing/.claude/agents/creative-writing-drafter.md`), and
+  (`.claude/agents/creative-writing-drafter.md`), and
   its reference-condensation work (reference_pull, self_revision's
   connection checks) to `creative-writing-librarian-native`
-  (`../Creative-Writing/.claude/agents/creative-writing-librarian-native.md`)
+  (`.claude/agents/creative-writing-librarian-native.md`)
   instead of Ollama — see "The librarian" below. Neither subagent has
   Write/Edit/Agent access; both return text only, and the top-level
   Claude still owns every checkpoint and all vault writes. There's no
@@ -48,7 +65,7 @@ The pipeline's generation work runs through one of three named backends:
   directly (same key and default model as the Gemini MCP plugin's
   `ask_gemini`), since a headless script can't speak MCP stdio. Needs
   `pip install google-genai` and a key: put `GEMINI_API_KEY=...` in
-  `creative_writing/.env` (gitignored, loaded by `llm.py`, overrides any shell
+  `creative-writing/pipeline/.env` (gitignored, loaded by `llm.py`, overrides any shell
   value; see `.env.example`) or set `$env:GEMINI_API_KEY`; optional
   `$env:GEMINI_MODEL` (default `gemini-3.6-flash`). Select it for drafting
   with `$env:PIPELINE_LLM_BACKEND = "gemini_mcp"`, and/or for the librarian
@@ -58,25 +75,26 @@ The pipeline's generation work runs through one of three named backends:
 
 ### Two entry points, one spec
 
-[`creative_writing/spec.yaml`](creative_writing/spec.yaml) is the single
+[`creative-writing/pipeline/spec.yaml`](creative-writing/pipeline/spec.yaml) is the single
 source of truth for the pipeline's stages, prompts, per-mode rules, and
 the librarian's defaults. Neither of the two ways to run the pipeline
 hardcodes its own copy of that logic:
 
-1. **Claude Code skill** — inside a Claude Code session opened on the
-   `Creative-Writing` vault, invoke the
-   [`creative-writing-pipeline`](../Creative-Writing/.claude/skills/creative-writing-pipeline/SKILL.md)
+1. **Claude Code skill** — inside a Claude Code session opened on this repo,
+   invoke the
+   [`creative-writing-pipeline`](.claude/skills/creative-writing-pipeline/SKILL.md)
    skill. Claude reads `spec.yaml` directly and walks the stages
    conversationally, using its own generation for outline/draft/revision.
 
-2. **Standalone script** — `creative_writing/run_pipeline.py`, a CLI that
-   drafts each stage via `creative_writing/llm.py`'s pluggable backend and
-   persists state + artifacts under `creative_writing/runs/<run-id>/`
+2. **Standalone script** — `creative-writing/pipeline/run_pipeline.py`, a CLI
+   that drafts each stage via `creative-writing/pipeline/llm.py`'s pluggable
+   backend and persists state + artifacts under
+   `creative-writing/pipeline/runs/<run-id>/`
    between invocations, so each `continue` call picks up where the last
    one stopped.
 
 Both entry points draft with **Claude or Ollama, never a raw file dump**:
-reference material (worked examples, `vault_search.py` hits, and
+reference material (worked examples, `vault/tools/vault_search.py` hits, and
 self-revision's connection checks) is read and condensed by
 **`librarian.py`** first — see "Ollama as librarian" below — rather than
 being read in full by whichever model is doing the actual writing.
@@ -126,7 +144,7 @@ terminal afterward so the change takes effect).
 
 `librarian.py` can also be run standalone, e.g. to sanity-check it:
 ```powershell
-cd Pipelines\creative_writing
+cd creative-writing\pipeline
 python librarian.py digest 11_Essays/02_The_Architecture_of_Being.md --query "duality and presence"
 ```
 
@@ -149,7 +167,7 @@ of the librarian:
   above.
 
   ```powershell
-  cd Pipelines\creative_writing
+  cd creative-writing\pipeline
   pip install -r requirements.txt
   # Ollama serving (see above) is enough to get started -- no key needed.
 
@@ -184,7 +202,7 @@ of the librarian:
   to the `anthropic` backend for that one run.
 
 The vault-integration stage automates the vault's existing 5-step
-Maintenance procedure (see `CLAUDE.md`) — it doesn't invent a new process,
+Maintenance procedure (see `creative-writing/vault/CLAUDE.md`) — it doesn't invent a new process,
 just runs the existing one without you having to remember every step.
 
 ### Extending to another mode

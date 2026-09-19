@@ -1,6 +1,6 @@
 # Idea Library
 
-Ideas developed through `Pipelines/creative_writing`'s checkpointed pipeline
+Ideas developed through `creative-writing/pipeline`'s checkpointed pipeline
 (intake → reference pull → outline → draft → self-revision) but **not yet
 integrated into the vault proper**. Each subfolder holds a complete
 artifact trail (`idea.md`, `references.md`, `outline.md`, `draft.md`,

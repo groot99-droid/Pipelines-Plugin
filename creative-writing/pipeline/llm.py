@@ -33,7 +33,7 @@ import urllib.request
 
 
 def _load_dotenv() -> None:
-    """Load KEY=VALUE lines from creative_writing/.env into os.environ.
+    """Load KEY=VALUE lines from creative-writing/pipeline/.env into os.environ.
 
     Values in the file override the shell's, so the pipeline's dedicated
     key wins over any GEMINI_API_KEY set elsewhere. Placeholder values
