@@ -11,11 +11,12 @@ Gates, in order:
     2. validate_data         registry, schema and provenance integrity
     3. validate-contract     spec.yaml, the skills and the agent agree with the code
     4. catalog summary       catalog-summary.json is current
-    5. engine tests          catalog/scripts/tests
-    6. maintainer tests      maintenance/tests
-    7. relevance gate        ranking quality and fingerprints
-    8. smoke domains         every search domain answers a probe
-    9. smoke stacks          every stack answers a probe
+    5. indexes               INDEX.md and ui-design/INDEX.md are current and list every skill and agent
+    6. engine tests          catalog/scripts/tests
+    7. maintainer tests      maintenance/tests
+    8. relevance gate        ranking quality and fingerprints
+    9. smoke domains         every search domain answers a probe
+    10. smoke stacks         every stack answers a probe
 
 Usage:
     python ui-design/maintenance/verify.py
@@ -39,6 +40,7 @@ GATES = [
     ("validate_data", ["python", "ui-design/catalog/scripts/validate_data.py"]),
     ("validate-contract", ["python", "ui-design/maintenance/validate-contract.py"]),
     ("catalog summary", ["python", "ui-design/maintenance/generate-catalog-summary.py", "--check"]),
+    ("indexes", ["python", "ui-design/maintenance/generate-index.py", "--check"]),
     ("engine tests", ["python", "-m", "unittest", "discover", "-s", "ui-design/catalog/scripts/tests",
                       "-p", "test_*.py"]),
     ("maintainer tests", ["python", "-m", "unittest", "discover", "-s", "ui-design/maintenance/tests",

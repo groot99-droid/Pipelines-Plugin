@@ -14,16 +14,20 @@ Code plugin wants when one is added later.
 ## Layout
 
 ```
+INDEX.md             generated index of the tools, skills and agents
 .claude/skills/      creative-writing-pipeline, chunk-tag-backfill,
-                     ui-design-catalog, ui-design-catalog-refresh
+                     ui-design-catalog, ui-design-catalog-refresh,
+                     ui-design-multipart
 .claude/agents/      creative-writing-{chunk-tagger,drafter,librarian-native},
-                     ui-design-catalog-reviewer
+                     ui-design-{catalog-reviewer,search-part,page-reviewer}
 creative-writing/    the creative-writing tool
   vault/             the Obsidian vault — 63 works, annotations, chunk tags,
                      idea library, and the vault's own search tooling
   pipeline/          the checkpointed pipeline that writes into that vault
 ui-design/           the UI design catalog tool
   spec.yaml          the declared contract; validate-contract.py enforces it
+  INDEX.md           generated: the catalog's own vocabulary, data files, references
+  ROUTER.md          which mode, domain and query; what to do when a match looks wrong
   catalog/           data/ and scripts/ — the search catalog, stdlib only
   maintenance/       validators, relevance gate, refresh scripts, verify.py
   references/        prose the ui-design-catalog skill reads on demand
@@ -86,8 +90,22 @@ any of them; this file does not repeat it.
 - Refresh the upstream Google Fonts and Phosphor data with the
   `ui-design-catalog-refresh` skill. Promoting a candidate is an editorial
   decision with a licensing dimension; it stops for the author's approval.
-- One agent, `ui-design-catalog-reviewer`, exists for that refresh review only.
-  It is read-only; search is a fast local lookup and is not delegated.
+- Three agents, all one-part-per-invocation. `ui-design-catalog-reviewer` exists for
+  the refresh review only. `ui-design-search-part` and `ui-design-page-reviewer`
+  are the parts of the `ui-design-multipart` skill. All are read-only, and none
+  persists anything.
+- Search is a fast local lookup and is not delegated by default. Multipart
+  fan-out happens only from a `route.py` manifest, and only when the router says
+  the brief is wide (4 or more parts); otherwise run the parts inline. Only
+  `ui-design-search-part` holds `Bash` (to run `search.py` once), declared in
+  `spec.yaml` `agent_tool_exceptions` and enforced by `validate-contract.py`.
+- Route a free-wording brief with `python ui-design/catalog/scripts/route.py "<brief>"`
+  before searching: a literal query can rank the wrong product row first with no
+  warning. `search.py --diagnostics` shows the confidence fields for one search.
+- `INDEX.md` and `ui-design/INDEX.md` are generated, never hand-edited. After
+  adding or renaming a skill, an agent, a data file or a product row, run
+  `python ui-design/maintenance/generate-index.py`; `verify.py` fails on a stale
+  index or a skill or agent missing from the root one.
 - `GOOGLE_FONTS_API_KEY` is needed only for a live font refresh, comes from the
   environment (see `ui-design/maintenance/.env.example`), and is never echoed.
 

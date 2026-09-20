@@ -5,8 +5,10 @@ ui-design/spec.yaml declares what catalog/scripts/core.py implements (domains,
 stacks, formats, defaults). This is the check that stops that declaration from
 being decorative. It also checks that:
 
-  - both skills and the agent are registered correctly (frontmatter keys, name
-    equals its folder or file name, the agent grants no write or delegation tool);
+  - every ui-design skill and agent is registered correctly (frontmatter keys,
+    name equals its folder or file name, no agent grants a write or delegation
+    tool; spec.yaml agent_tool_exceptions may grant Bash, and only Bash, to a
+    named agent whose body states that it never persists and never writes);
   - every file spec.yaml and the skills reference exists;
   - the live counts each carrier repeats (SKILL.md, README.md) are current;
   - every documented search.py command uses only real flags, domains and
@@ -50,8 +52,19 @@ GUIDE_SKILL = "ui-design-catalog"    # the one whose commands and counts are lin
 
 SKILL_KEYS = {"name", "description"}
 AGENT_KEYS = {"name", "description", "tools"}
-# The reviewer only reads and reports; the caller decides what gets promoted.
+# Agents only read and report; the caller decides what gets written or promoted.
 AGENT_FORBIDDEN_TOOLS = ("Write", "Edit", "Agent", "Bash", "NotebookEdit")
+# spec.yaml agent_tool_exceptions may lift the ban for these tools only, for a
+# named agent that exists. Write, Edit, Agent and NotebookEdit stay forbidden
+# for every agent, declared or not.
+EXCEPTABLE_TOOLS = ("Bash",)
+# A tool list cannot confine Bash, so an agent granted it must say, in its own
+# body, what it may run and that it never writes. Checked case-insensitively.
+BASH_AGENT_REQUIREMENTS = (
+    "never pass `--persist`",
+    "never write any file",
+    "ui-design/catalog/scripts/search.py",
+)
 
 # Gitignored scratch directories (see the repo .gitignore). A path under one is
 # a legitimate reference even though it does not exist in a fresh clone.
@@ -73,7 +86,7 @@ PATH_REFERENCE = re.compile(r"(?:ui-design|\.claude)/[A-Za-z0-9_./*<>-]*[A-Za-z0
 SPEC_KEYS = (
     "catalog_root", "entry_point", "stdlib_only", "domains", "stacks", "dials",
     "formats", "default_max_results", "dtcg_extension_key", "exit_codes",
-    "persistence", "counts_contract", "consumers",
+    "persistence", "counts_contract", "consumers", "agent_tool_exceptions",
 )
 
 
@@ -294,8 +307,53 @@ def check_skills(yaml, stack_total, errors):
     return skills
 
 
-def check_agents(yaml, errors):
+def agent_tool_errors(name, granted, body, exceptions):
+    """Problems with one agent's tool list; pure, so the rule can be tested.
+
+    exceptions is spec.yaml agent_tool_exceptions: {agent name: [tool, ...]}.
+    """
+    allowed = set((exceptions or {}).get(name) or []) & set(EXCEPTABLE_TOOLS)
+    errors = []
+    forbidden = [t for t in AGENT_FORBIDDEN_TOOLS if t in granted and t not in allowed]
+    if forbidden:
+        errors.append(f"tools list grants {forbidden} -- this agent must stay read-only and "
+                      f"non-delegating; the caller decides what is written or promoted.")
+    if "Bash" in allowed and "Bash" in granted:
+        lowered = body.lower()
+        missing = [phrase for phrase in BASH_AGENT_REQUIREMENTS if phrase not in lowered]
+        if missing:
+            errors.append(f"is granted Bash by spec.yaml agent_tool_exceptions, so its body must "
+                          f"state its boundary; missing {missing}.")
+    return errors
+
+
+def exception_declaration_errors(exceptions, agent_names):
+    """Problems with the agent_tool_exceptions block itself."""
+    errors = []
+    if exceptions is None:
+        return errors
+    if not isinstance(exceptions, dict):
+        return ["spec.yaml agent_tool_exceptions: must be a mapping of agent name -> tool list."]
+    for name, tools in exceptions.items():
+        if name not in agent_names:
+            errors.append(f"spec.yaml agent_tool_exceptions: {name!r} is not an existing "
+                          f"{OWNED_PREFIX}* agent.")
+        if not isinstance(tools, list) or not tools:
+            errors.append(f"spec.yaml agent_tool_exceptions: {name!r} must list the tools it may hold.")
+            continue
+        for tool in tools:
+            if tool not in EXCEPTABLE_TOOLS:
+                errors.append(f"spec.yaml agent_tool_exceptions: {name!r} may not be granted {tool!r}; "
+                              f"only {list(EXCEPTABLE_TOOLS)} can be excepted.")
+    return errors
+
+
+def check_agents(yaml, spec, errors):
     agents = sorted(AGENTS_DIR.glob(f"{OWNED_PREFIX}*.md"))
+    exceptions = spec.get("agent_tool_exceptions")
+    errors.extend(exception_declaration_errors(exceptions, {p.stem for p in agents}))
+    if not isinstance(exceptions, dict):
+        exceptions = {}
     for path in agents:
         frontmatter = parse_frontmatter(yaml, path, errors)
         if frontmatter is None:
@@ -306,10 +364,8 @@ def check_agents(yaml, errors):
                           f"does not match its file name {path.stem!r}.")
         tools = frontmatter.get("tools", "")
         granted = [str(t).strip() for t in (tools if isinstance(tools, list) else str(tools).split(","))]
-        forbidden = [t for t in AGENT_FORBIDDEN_TOOLS if t in granted]
-        if forbidden:
-            errors.append(f"{rel(path)}: tools list grants {forbidden} -- this agent must stay "
-                          f"read-only and non-delegating; the caller decides what is promoted.")
+        for message in agent_tool_errors(path.stem, granted, path.read_text(encoding="utf-8"), exceptions):
+            errors.append(f"{rel(path)}: {message}")
         check_path_references(path, errors)
     return agents
 
@@ -437,7 +493,7 @@ def validate():
     check_spec(spec, core, tokens, flags, formats, errors)
     check_files_exist(spec, errors)
     skills = check_skills(yaml, len(core.AVAILABLE_STACKS), errors)
-    agents = check_agents(yaml, errors)
+    agents = check_agents(yaml, spec, errors)
     claims = check_counts(spec, len(core.AVAILABLE_STACKS), errors)
 
     guide = SKILLS_DIR / GUIDE_SKILL / "SKILL.md"
@@ -457,7 +513,7 @@ def validate():
     check_locked_examples(spec, errors)
 
     summary = (f"{len(core.CSV_CONFIG)} domains, {len(core.AVAILABLE_STACKS)} stacks, "
-               f"{len(skills)} skills, {len(agents)} agent, {commands} documented commands, "
+               f"{len(skills)} skills, {len(agents)} agents, {commands} documented commands, "
                f"{claims} count claims per carrier, {modules} stdlib-only modules, "
                f"3 locked examples, 2 exit codes")
     return errors, summary

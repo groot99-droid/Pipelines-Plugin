@@ -3,6 +3,7 @@
 """
 UI/UX Pro Max Search - BM25 search engine for UI/UX style guides
 Usage: python search.py "<query>" [--domain <domain>] [--stack <stack>] [--max-results 3]
+       python search.py "<query>" --domain <domain> --diagnostics
        python search.py "<query>" --design-system [-p "Project Name"]
        python search.py "<query>" --design-system --persist [-p "Project Name"] --output-dir "<project-root>" [--page "dashboard"]
        python search.py "<query>" --design-system --variance 8 --motion 9 --density 7
@@ -44,6 +45,24 @@ if sys.stderr.encoding and sys.stderr.encoding.lower() != 'utf-8':
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 TRUNCATE_AT = 300
+DIAGNOSTIC_FIELDS = ("top_score", "margin", "token_coverage", "reason")
+
+
+def format_diagnostics(result):
+    """One line of the confidence fields core.search already computes.
+
+    Empty when the result carries none (a design-system run, or an error).
+    """
+    diagnostic = result.get("diagnostics")
+    if not diagnostic:
+        return ""
+    parts = []
+    for field in DIAGNOSTIC_FIELDS:
+        value = diagnostic.get(field)
+        if value is None:
+            continue
+        parts.append(f"{field}={value:.2f}" if isinstance(value, float) else f"{field}={value}")
+    return "**Diagnostics:** " + " | ".join(parts) if parts else ""
 
 
 def format_output(result, full=False):
@@ -64,7 +83,11 @@ def format_output(result, full=False):
                 domain_note += f", runner-up: {result['runner_up_domain']}"
             domain_note += ")"
         output.append(f"**Domain:** {domain_note} | **Query:** {result['query']}")
-    output.append(f"**Source:** {result['file']} | **Found:** {result['count']} results\n")
+    output.append(f"**Source:** {result['file']} | **Found:** {result['count']} results")
+    diagnostics_line = format_diagnostics(result)
+    if diagnostics_line:
+        output.append(diagnostics_line)
+    output.append("")
 
     if result['count'] == 0:
         redirect = result.get("redirect")
@@ -107,6 +130,7 @@ if __name__ == "__main__":
                         metavar="1-20", help="Max results (default: 3)")
     parser.add_argument("--json", action="store_true", help="Output as JSON")
     parser.add_argument("--full", action="store_true", help="Do not truncate long field values in text output")
+    parser.add_argument("--diagnostics", action="store_true", help="Show the match-confidence fields (top_score, margin, token_coverage, reason) for --domain and --stack searches; a low score or coverage means the top row may be the wrong one. Ignored with --design-system")
     # Design system generation
     parser.add_argument("--design-system", "-ds", action="store_true", help="Generate complete design system recommendation")
     parser.add_argument("--project-name", "-p", type=str, default=None, help="Project name for design system output")
@@ -200,14 +224,16 @@ if __name__ == "__main__":
                 print("=" * 60, file=stream)
     # Stack search
     elif args.stack:
-        result = search_stack(args.query, args.stack, args.max_results)
+        result = search_stack(args.query, args.stack, args.max_results,
+                              diagnostics=args.diagnostics)
         if args.json:
             print(json_module.dumps(result, indent=2, ensure_ascii=False))
         else:
             print(format_output(result, full=args.full))
     # Domain search
     else:
-        result = search(args.query, args.domain, args.max_results)
+        result = search(args.query, args.domain, args.max_results,
+                        diagnostics=args.diagnostics)
         if args.json:
             print(json_module.dumps(result, indent=2, ensure_ascii=False))
         else:

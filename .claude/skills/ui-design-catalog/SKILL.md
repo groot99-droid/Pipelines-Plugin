@@ -36,6 +36,10 @@ Skip it for pure backend logic, API/database design, non-visual performance work
 | Improve / optimize | "Reduce list rerenders", "Fix touch targets" | Step 3 (`--domain react` or `--domain web`) |
 | Stack best practices | "SwiftUI navigation", "Next.js streaming" | Step 4 (`--stack`) |
 | Final polish before delivery | shipping native/mobile app UI | `ui-design/references/pro-rules.md` checklist |
+| Brief in the user's own words | "freelancer invoicing SaaS, trustworthy" | `route.py` first (see `ui-design/ROUTER.md`), then Step 2 |
+| Wide brief or page review | four or more supplemental searches; "review this built page" | the `ui-design-multipart` skill |
+
+Choosing a mode, a domain and a query is `ui-design/ROUTER.md`, including what to do when a match looks wrong. Queries only work in the catalog's own words, which `ui-design/INDEX.md` lists. For a brief in free wording, run `python ui-design/catalog/scripts/route.py "<brief>"` before searching: it cross-checks the product rows and warns when the literal search would pick the wrong one.
 
 ## Rule Categories by Priority
 
@@ -74,6 +78,7 @@ python ui-design/catalog/scripts/search.py "<query>" --domain <domain>
 |------|--------|
 | `-n <1-20>` | Number of results (default 3). Raise it to compare options; keep it low when hunting one answer. |
 | `--full` | Do not truncate long fields. Text output clips prose columns (`Usage`, `Keywords`, `Notes`, `Description`, …) at 300 characters and appends `...`; code, snippet, and config columns are never clipped. Pass this when a value ends mid-sentence. |
+| `--diagnostics` | Prints `top_score`, `margin`, `token_coverage` and `reason` for a `--domain` or `--stack` search. Low coverage or a near-zero margin means the top row may be the wrong one; see `ui-design/ROUTER.md`. |
 | `--json` | Machine-readable output. Works for **every** search mode, not just `--design-system`; it overrides `-f`. |
 
 ## Query Contract
