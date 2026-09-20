@@ -1,0 +1,12 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Pipelines — repo-root attribute rules
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Line endings ─────────────────────────────────────────────────────────────
+# ui-design/maintenance/evaluate-relevance.py fingerprints the raw bytes of the
+# catalog's runtime and data files, and of its own oracle inputs, and refuses
+# to run when they drift. On a machine with core.autocrlf=true a plain checkout
+# rewrites every one of those files to CRLF and changes the hash, so the whole
+# tool is pinned to LF on every platform. After a deliberate change to a
+# fingerprinted file, regenerate the fingerprints with that script.
+ui-design/** text eol=lf

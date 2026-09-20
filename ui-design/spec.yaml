@@ -1,0 +1,146 @@
+# ui-design catalog spec — the declared contract for this tool.
+#
+# What this file is, and is not. The catalog's registries already live in code:
+# catalog/scripts/core.py holds CSV_CONFIG (the search domains),
+# STACK_CONFIG / AVAILABLE_STACKS (the stacks) and MAX_RESULTS, and
+# catalog/scripts/search.py derives its argparse choices from them, so the CLI
+# itself cannot drift from the registry. core.py cannot READ this file: YAML
+# needs the third-party pyyaml package, and catalog/ promises the standard
+# library only. So this file DECLARES what core.py IMPLEMENTS, and
+# maintenance/validate-contract.py is what stops that from being decorative:
+# it fails when the two disagree. A change to a domain, stack, format or
+# default is made in code first, then declared here, and the validator is the
+# check that you did both.
+#
+# Consumers (none of them keeps a list of its own):
+#   - ui-design/maintenance/validate-contract.py  enforces every key below
+#   - ui-design/maintenance/smoke.py              compares registry sizes with
+#                                                 domains / stacks
+#   - .claude/skills/ui-design-catalog/SKILL.md   points here; spec.yaml wins
+#   - .claude/skills/ui-design-catalog-refresh/SKILL.md
+#   - .claude/agents/ui-design-catalog-reviewer.md
+#
+# What this file does NOT own:
+#   - Live row counts. They are derived from catalog/data/ and recorded in
+#     catalog/data/catalog-summary.json (maintenance/generate-catalog-summary.py).
+#     counts_contract below only says which files must repeat them.
+#   - Provenance and licensing of the data. That is
+#     catalog/data/data-provenance.json and google-font-licenses.json.
+#
+# Every path below is relative to the Pipelines repo root, like the paths in
+# the skills and agents.
+
+version: 1
+
+catalog_root: "ui-design/catalog"
+entry_point: "ui-design/catalog/scripts/search.py"
+
+# The half of the tool the skill runs. Standard library only: no third-party
+# packages, no network access. Dependencies (pyyaml), the network (Google
+# Fonts, Phosphor) and the GOOGLE_FONTS_API_KEY secret live in maintenance/ and
+# nowhere else. The reasoning is the header of
+# ui-design/maintenance/harvest-site-tokens.py; the check is an import scan of
+# every .py under root.
+stdlib_only:
+  root: "ui-design/catalog"
+  exception: "ui-design/maintenance/"
+
+# Search domains, == core.CSV_CONFIG. Each is a CSV under catalog/data/.
+domains:
+  - style
+  - color
+  - chart
+  - landing
+  - product
+  - ux
+  - typography
+  - icons
+  - gsap
+  - react
+  - web
+  - google-fonts
+
+# Stack guidelines, == core.AVAILABLE_STACKS. Each is a CSV under
+# catalog/data/stacks/.
+stacks:
+  - react
+  - nextjs
+  - vue
+  - svelte
+  - astro
+  - swiftui
+  - react-native
+  - flutter
+  - nuxtjs
+  - nuxt-ui
+  - html-tailwind
+  - shadcn
+  - jetpack-compose
+  - threejs
+  - angular
+  - laravel
+  - javafx
+  - wpf
+  - winui
+  - avalonia
+  - uno
+  - uwp
+
+# Design dials, each a search.py flag taking 1-10 and applied only together
+# with --design-system.
+dials:
+  - variance
+  - motion
+  - density
+
+# search.py --format choices for a design system.
+formats:
+  - ascii
+  - markdown
+  - dtcg
+  - shadcn
+
+# Results per query when -n is not given, == core.MAX_RESULTS.
+default_max_results: 3
+
+# Vendor namespace emitted under $extensions in every DTCG tokens.json,
+# == tokens.EXTENSION_KEY. It is published inside files other tools consume
+# (Style Dictionary, Tokens Studio, Penpot), so it keeps the name it shipped
+# with. Do not rename it to match the folder.
+dtcg_extension_key: "cc.uupm"
+
+# search.py exit codes. ok and usage are asserted by validate-contract.py.
+exit_codes:
+  ok: 0               # also an empty result set: no match is an answer, not an error
+  contrast_gate: 1    # --strict-contrast and a text colour pair is under its WCAG 2.2 minimum
+  usage: 2            # unknown domain or stack, or any other bad argument (argparse)
+
+# Persisting a design system with --persist.
+persistence:
+  dir_name: "design-system"
+  output_dir_required: true
+  note: >
+    --persist writes design-system/<project-slug>/ under --output-dir, or under
+    the CURRENT DIRECTORY when --output-dir is omitted. Run from this repo, an
+    omitted --output-dir would write generated files into the repo itself, so
+    every documented --persist command must pass --output-dir, pointing at the
+    target project and never at this repo. The repo-wide .gitignore lists
+    design-system/ as a second line of defence; validate-contract.py checks
+    both.
+
+# The live counts that must appear, worded identically, in each of these files.
+# validate-contract.py derives the numbers from catalog/data/ (styles,
+# font pairings, UX guidelines, curated icons, GSAP presets, chart types,
+# stacks). README.md also carries the font/icon counts that
+# maintenance/generate-catalog-summary.py --check enforces.
+counts_contract:
+  carriers:
+    - ".claude/skills/ui-design-catalog/SKILL.md"
+    - "README.md"
+
+consumers:
+  - ".claude/skills/ui-design-catalog/SKILL.md"
+  - ".claude/skills/ui-design-catalog-refresh/SKILL.md"
+  - ".claude/agents/ui-design-catalog-reviewer.md"
+  - "ui-design/maintenance/validate-contract.py"
+  - "ui-design/maintenance/smoke.py"

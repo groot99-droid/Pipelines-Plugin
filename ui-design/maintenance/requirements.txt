@@ -1,0 +1,3 @@
+# Required by the maintenance tooling only (spec.yaml and skill-frontmatter
+# parsing in validate-contract.py and smoke.py). catalog/ needs no packages.
+pyyaml

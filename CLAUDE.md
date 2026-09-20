@@ -14,12 +14,19 @@ Code plugin wants when one is added later.
 ## Layout
 
 ```
-.claude/skills/      creative-writing-pipeline, chunk-tag-backfill
-.claude/agents/      creative-writing-{chunk-tagger,drafter,librarian-native}
+.claude/skills/      creative-writing-pipeline, chunk-tag-backfill,
+                     ui-design-catalog, ui-design-catalog-refresh
+.claude/agents/      creative-writing-{chunk-tagger,drafter,librarian-native},
+                     ui-design-catalog-reviewer
 creative-writing/    the creative-writing tool
   vault/             the Obsidian vault — 63 works, annotations, chunk tags,
                      idea library, and the vault's own search tooling
   pipeline/          the checkpointed pipeline that writes into that vault
+ui-design/           the UI design catalog tool
+  spec.yaml          the declared contract; validate-contract.py enforces it
+  catalog/           data/ and scripts/ — the search catalog, stdlib only
+  maintenance/       validators, relevance gate, refresh scripts, verify.py
+  references/        prose the ui-design-catalog skill reads on demand
 ```
 
 **Paths in skills and agents are relative to this repo root**, which is the
@@ -52,6 +59,37 @@ Do not duplicate its rules here. If the writing rules change, they change there.
   explicit `--confirm`; without it, it prints a dry-run preview. Keep it that way.
 - `creative-writing/pipeline/.env` holds a live `GEMINI_API_KEY` and is
   gitignored. Never commit it, never echo its value.
+
+## Working on the ui-design tool
+
+`ui-design/spec.yaml` is the declared contract — search domains, stacks, output
+formats, design dials, exit codes, the persistence rule. Read it before changing
+any of them; this file does not repeat it.
+
+- Search the catalog:
+  `python ui-design/catalog/scripts/search.py "<query>" --domain <domain>`, or
+  `--design-system` for a whole-product recommendation. The `ui-design-catalog`
+  skill drives it.
+- **Two halves, one rule.** `ui-design/catalog/` is stdlib-only and never touches
+  the network; anything needing a dependency, the network or a secret belongs in
+  `ui-design/maintenance/`. `catalog/data` and `catalog/scripts` must stay
+  siblings: `core.py` finds its data at `Path(__file__).parent.parent / "data"`.
+- Verify with one command: `python ui-design/maintenance/verify.py`. It runs every
+  gate and prints the exact command to re-run whichever one fails. There is no CI;
+  this is the gate.
+- `--persist` writes `design-system/<project-slug>/` under `--output-dir`, or
+  under the current directory if it is omitted — and from this repo that is this
+  repo. Always pass `--output-dir` pointing **outside** it.
+- Files under `ui-design/` are pinned to LF (`.gitattributes`): the relevance
+  gate fingerprints their raw bytes. After a deliberate change to a runtime or
+  data file, regenerate the fingerprints rather than working around the gate.
+- Refresh the upstream Google Fonts and Phosphor data with the
+  `ui-design-catalog-refresh` skill. Promoting a candidate is an editorial
+  decision with a licensing dimension; it stops for the author's approval.
+- One agent, `ui-design-catalog-reviewer`, exists for that refresh review only.
+  It is read-only; search is a fast local lookup and is not delegated.
+- `GOOGLE_FONTS_API_KEY` is needed only for a live font refresh, comes from the
+  environment (see `ui-design/maintenance/.env.example`), and is never echoed.
 
 ## Adding a tool
 

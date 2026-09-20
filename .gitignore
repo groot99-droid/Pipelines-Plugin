@@ -2,7 +2,8 @@
 # Pipelines — repo-root ignore rules
 #
 # This repo holds multiple tools, each in its own folder under a tool root
-# (today: creative-writing/{vault,pipeline}). Rules here apply repo-wide.
+# (today: creative-writing/{vault,pipeline} and ui-design/{catalog,maintenance}).
+# Rules here apply repo-wide.
 # The vault carries its own creative-writing/vault/.gitignore for
 # Obsidian-specific state; that file still applies inside the vault.
 # ─────────────────────────────────────────────────────────────────────────────
@@ -37,6 +38,32 @@ venv/
 # Per-run checkpoint dirs (idea/outline/draft/state.json). Scratch by design —
 # a finished piece lands in the vault's _Idea_Library/, not here.
 runs/
+
+# ── Generated design systems ─────────────────────────────────────────────────
+# search.py --persist writes design-system/<project-slug>/ (MASTER.md,
+# tokens.json, theme.css) under --output-dir, or under the CURRENT DIRECTORY
+# when --output-dir is omitted. Run from this repo, a stray run would drop
+# generated files into the repo, so they are ignored. Always pass --output-dir
+# pointing outside it. Regenerate with:
+#   python ui-design/catalog/scripts/search.py "<query>" --design-system --persist -p "<name>" --output-dir "<dir>"
+design-system/
+
+# ── Catalog refresh staging ──────────────────────────────────────────────────
+# Candidates, fetched upstream inputs and diffs written by the
+# ui-design-catalog-refresh skill under ui-design/maintenance/candidates/.
+# Scratch by design: a candidate is reviewed, and only an approved one is copied
+# into ui-design/catalog/data/. The skill regenerates it from upstream.
+# Deliberately NOT ignored: ui-design/catalog/data/.google-font-refresh.incomplete.json.
+# validate_data.py treats its presence as a failure signal for a partial
+# refresh, so it is a tripwire, not a cache.
+candidates/
+
+# ── Harvested site captures ──────────────────────────────────────────────────
+# Browser captures fed to `python ui-design/maintenance/harvest-site-tokens.py
+# report captures/*.json`. Each describes one page of one site at one moment;
+# it is input to a review, not catalog data (see ui-design/SOURCE-RESEARCH.md).
+# Re-capture by running the extractor: `harvest-site-tokens.py show-extractor`.
+captures/
 
 # ── Build artifacts ──────────────────────────────────────────────────────────
 # build_package.py regenerates the distributable zip from source at any time.
