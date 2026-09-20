@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "status": "provisional-baseline-regression-gate",
   "baselineRevision": "97eb2a2",
-  "runtimeFingerprint": "8f20090248cdb4304eda90cb58ab647f62c1327b0d7beda012824d546916c604",
+  "runtimeFingerprint": "cf4cbe8899cc0b472f55811f0885f2f35ffdcafb29c85be8000e46d21796067e",
   "oracleFingerprint": "5ba7f6cc1b438bee6138669e1e560b1ae664f20c370bebb9f23a0f796afea89a",
   "approvingMaintainer": "repository maintainer approved Phase 1 testing checkpoint; second judgment review remains required before final-target promotion",
   "units": "All metrics are ratios in [0,1]. Precision treats missing ranks as non-relevant. Negative abstention is measured across the hard-negative by domain/stack cross-product.",

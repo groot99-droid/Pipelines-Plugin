@@ -55,8 +55,11 @@ rule from memory. If the command failed or printed nothing usable, report that.
 - `match`: at least one row, `diagnostics.reason` is `matched`, and
   `diagnostics.token_coverage` is 0.5 or more.
 - `low-confidence`: rows came back but coverage is under 0.5 or `reason` is not
-  `matched`. Report the rows anyway; the caller decides.
-- `empty`: no rows, or the command failed.
+  `matched`, and you did not retry. Report the rows anyway; the caller decides.
+- `empty`: no rows, or the command failed. It is also the verdict for a part you
+  retried whose last run still has coverage under 0.5 or a `reason` that is not
+  `matched`: a row that hit one stem of the query is a wrong row, not a weak
+  one, so report `(none)` under `ROWS:` rather than passing it on.
 
 ## Output format
 

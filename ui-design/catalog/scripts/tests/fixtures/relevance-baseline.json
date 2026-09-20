@@ -964,25 +964,25 @@
           "Guideline": "Use standalone components"
         },
         {
-          "Category": "Performance",
-          "Guideline": "Minimize bundle with standalone APIs"
-        },
-        {
           "Category": "Testing",
           "Guideline": "Use TestBed for component tests"
+        },
+        {
+          "Category": "Performance",
+          "Guideline": "Minimize bundle with standalone APIs"
         }
       ],
       "diagnostics": {
         "abstained": false,
         "calibration_version": "2026-08-12-v1",
-        "margin": 6.566552335592893,
+        "margin": 6.9852918047050965,
         "normalized_query": "standalone Angular components for a new project",
         "query_rewrites": [],
         "reason": "matched",
-        "runner_up_score": 5.449976492762441,
+        "runner_up_score": 5.937739673407154,
         "search_query": "standalone Angular components for a new project",
         "token_coverage": 0.8,
-        "top_score": 12.016528828355334
+        "top_score": 12.92303147811225
       },
       "expectedRoute": null,
       "grades": [
@@ -1017,14 +1017,14 @@
       "diagnostics": {
         "abstained": false,
         "calibration_version": "2026-08-12-v1",
-        "margin": 6.6483199763736955,
+        "margin": 6.874374456770969,
         "normalized_query": "reactive local state with Angular signal primitives",
         "query_rewrites": [],
         "reason": "matched",
-        "runner_up_score": 8.487784788196057,
+        "runner_up_score": 9.094056439621925,
         "search_query": "reactive local state with Angular signal primitives",
         "token_coverage": 0.8571428571428571,
-        "top_score": 15.136104764569753
+        "top_score": 15.968430896392894
       },
       "expectedRoute": null,
       "grades": [
@@ -1059,14 +1059,14 @@
       "diagnostics": {
         "abstained": false,
         "calibration_version": "2026-08-12-v1",
-        "margin": 7.6348295879388655,
+        "margin": 7.960445656062266,
         "normalized_query": "Astro islands architecture interactive components",
         "query_rewrites": [],
         "reason": "matched",
-        "runner_up_score": 5.447744961773134,
+        "runner_up_score": 5.694933842925003,
         "search_query": "Astro islands architecture interactive components",
         "token_coverage": 1.0,
-        "top_score": 13.082574549712
+        "top_score": 13.65537949898727
       },
       "expectedRoute": null,
       "grades": [
@@ -1084,21 +1084,38 @@
       }
     },
     {
-      "actual": [],
+      "actual": [
+        {
+          "Category": "TypeScript",
+          "Guideline": "Enable TypeScript"
+        },
+        {
+          "Category": "Accessibility",
+          "Guideline": "Leave ClientRouter's reduced-motion handling in place"
+        },
+        {
+          "Category": "Accessibility",
+          "Guideline": "Use the dev toolbar Audit app as a first pass only"
+        }
+      ],
       "diagnostics": {
-        "abstained": true,
+        "abstained": false,
         "calibration_version": "2026-08-12-v1",
-        "margin": 4.052169367659749,
+        "margin": 1.74336647781801,
         "normalized_query": "ship no browser JavaScript unless interaction requires it",
         "query_rewrites": [],
-        "reason": "low-confidence",
-        "runner_up_score": 0.0,
+        "reason": "matched",
+        "runner_up_score": 2.4555376138246183,
         "search_query": "ship no browser JavaScript unless interaction requires it",
-        "token_coverage": 0.16666666666666666,
-        "top_score": 4.052169367659749
+        "token_coverage": 0.5,
+        "top_score": 4.198904091642628
       },
       "expectedRoute": null,
-      "grades": [],
+      "grades": [
+        0,
+        0,
+        0
+      ],
       "id": "stack-astro-zero-js-paraphrase",
       "route": "stack",
       "scores": {
@@ -1623,21 +1640,21 @@
           "Guideline": "Use file-based routing"
         },
         {
-          "Category": "Deployment",
-          "Guideline": "Use Vercel for easiest deploy"
+          "Category": "API",
+          "Guideline": "Use Route Handlers for APIs"
         }
       ],
       "diagnostics": {
         "abstained": false,
         "calibration_version": "2026-08-12-v1",
-        "margin": 8.675077924446402,
+        "margin": 8.889085036120296,
         "normalized_query": "Next.js App Router for a new project",
         "query_rewrites": [],
         "reason": "matched",
-        "runner_up_score": 5.757326980617933,
+        "runner_up_score": 5.994760725852294,
         "search_query": "Next.js App Router for a new project",
         "token_coverage": 0.8333333333333334,
-        "top_score": 14.432404905064335
+        "top_score": 14.88384576197259
       },
       "expectedRoute": null,
       "grades": [
@@ -1672,14 +1689,14 @@
       "diagnostics": {
         "abstained": false,
         "calibration_version": "2026-08-12-v1",
-        "margin": 1.3338457057594848,
+        "margin": 1.0201149652511816,
         "normalized_query": "render on the server by default and opt into client boundaries",
         "query_rewrites": [],
         "reason": "matched",
-        "runner_up_score": 9.1240740008518,
+        "runner_up_score": 9.403817358713912,
         "search_query": "render on the server by default and opt into client boundaries",
         "token_coverage": 0.7142857142857143,
-        "top_score": 10.457919706611285
+        "top_score": 10.423932323965094
       },
       "expectedRoute": null,
       "grades": [
@@ -3277,7 +3294,7 @@
     "typoRecoveryAt3": 1.0
   },
   "oracleFingerprint": "5ba7f6cc1b438bee6138669e1e560b1ae664f20c370bebb9f23a0f796afea89a",
-  "runtimeFingerprint": "8f20090248cdb4304eda90cb58ab647f62c1327b0d7beda012824d546916c604",
+  "runtimeFingerprint": "cf4cbe8899cc0b472f55811f0885f2f35ffdcafb29c85be8000e46d21796067e",
   "samples": {
     "cases": 90,
     "designSystem": 8,

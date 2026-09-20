@@ -17,7 +17,9 @@ cross-checks the product domain three ways and warns when they disagree:
 It then prints the candidate rows, ready-to-run commands, and a manifest of the
 supplemental searches (UX, charts, motion, stack) a wide brief needs. The
 manifest is what the ui-design-multipart skill fans out to
-ui-design-search-part agents; the router says whether that is worth doing.
+ui-design-search-part agents; the router says whether that is worth doing. A
+stack part is probed first and dropped into `not_covered` when that stack's data
+has no usable rows for it, so no agent is sent to a search that cannot answer.
 
 Usage:
     python route.py "<brief>" [--stack <stack>] [--top N] [--json]
@@ -194,6 +196,37 @@ def build_manifest(brief_tokens, stack):
     return parts
 
 
+def probe_stack_parts(manifest):
+    """Split the manifest into parts the catalog can answer and parts it cannot.
+
+    A stack part costs an agent, so it is dispatched only if its own query finds
+    rows in that stack's CSV at usable coverage. The stack queries are one set
+    for every stack; most stacks lack rows for some concern (nextjs has none for
+    accessibility), and an agent sent there can only come back empty, or with a
+    row that matched a single stem. Domain parts are not probed: the domain
+    files are the catalog's core and every concern has rows there.
+    """
+    kept, not_covered = [], []
+    for part in manifest:
+        if part["kind"] != "stack":
+            kept.append(part)
+            continue
+        probe = core.search_stack(part["query"], part["target"], part["n"], diagnostics=True)
+        coverage = probe.get("diagnostics", {}).get("token_coverage")
+        if probe.get("error"):
+            reason = probe["error"]
+        elif not probe.get("results"):
+            reason = f"no rows (token_coverage={coverage})"
+        elif coverage is not None and coverage < LOW_COVERAGE:
+            reason = f"token_coverage {coverage:.2f} is under {LOW_COVERAGE}"
+        else:
+            kept.append(part)
+            continue
+        not_covered.append({"part_id": part["part_id"], "target": part["target"],
+                            "query": part["query"], "reason": reason})
+    return kept, not_covered
+
+
 def part_command(part):
     flag = "--domain" if part["kind"] == "domain" else "--stack"
     return (f'python ui-design/catalog/scripts/search.py "{part["query"]}" '
@@ -240,7 +273,7 @@ def route(brief, stack=None, top=5):
         query = " ".join([chosen, *extra])
         commands.append(f'python ui-design/catalog/scripts/search.py "{query}" --design-system '
                         f'-p "{chosen}"')
-    manifest = build_manifest(brief_tokens, stack)
+    manifest, not_covered = probe_stack_parts(build_manifest(brief_tokens, stack))
     return {
         "brief": brief,
         "stack": stack,
@@ -249,6 +282,7 @@ def route(brief, stack=None, top=5):
         "warnings": warnings,
         "commands": commands,
         "manifest": manifest,
+        "not_covered": not_covered,
         "fan_out": {"recommended": len(manifest) >= FAN_OUT_MIN_PARTS,
                     "parts": len(manifest), "threshold": FAN_OUT_MIN_PARTS},
     }
@@ -278,6 +312,13 @@ def format_report(result):
     out.append(f"### Supplemental parts: {fan['parts']} (threshold {fan['threshold']}) -> {verdict}")
     for part in result["manifest"]:
         out.append(f"- `{part['part_id']}`: {part_command(part)}")
+    if result["not_covered"]:
+        out.append("")
+        out.append("### Not covered (no agent dispatched)")
+        for part in result["not_covered"]:
+            out.append(f"- `{part['part_id']}`: stack {part['target']} cannot answer "
+                       f"\"{part['query']}\" ({part['reason']}); the domain part for the same "
+                       "concern still runs")
     return "\n".join(out)
 
 

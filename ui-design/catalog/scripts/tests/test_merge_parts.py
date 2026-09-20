@@ -68,6 +68,22 @@ class TestSearchMerge(unittest.TestCase):
         self.assertEqual(merged["errors"], [])
         self.assertEqual(len(merged["warnings"]), 2)
 
+    def test_low_confidence_after_a_retry_warns_not_to_cite_the_row(self):
+        text = search_block("ux-a11y", "keyboard focus") + "\n\n" + \
+            search_block("ux-forms", "accessible", verdict="low-confidence", retried="yes")
+        merged = merge_parts.merge_search(MANIFEST, text)
+        self.assertEqual(merged["errors"], [])
+        self.assertEqual(len(merged["warnings"]), 1)
+        self.assertIn("after a retry", merged["warnings"][0])
+        self.assertIn("do not cite", merged["warnings"][0])
+
+    def test_low_confidence_without_a_retry_keeps_the_verify_warning(self):
+        text = search_block("ux-a11y", "keyboard focus") + "\n\n" + \
+            search_block("ux-forms", "form validation", verdict="low-confidence")
+        warnings = merge_parts.merge_search(MANIFEST, text)["warnings"]
+        self.assertEqual(len(warnings), 1)
+        self.assertIn("verify the top row", warnings[0])
+
     def test_code_fences_and_prose_are_ignored(self):
         merged = merge_parts.merge_search(MANIFEST, "Here you go:\n```\n" + GOOD + "\n```\n")
         self.assertEqual(merged["errors"], [])

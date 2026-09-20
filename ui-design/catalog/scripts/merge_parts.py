@@ -146,6 +146,9 @@ def merge_search(manifest, text):
         if verdict == "empty":
             warnings.append(f"part {part_id!r} is empty: say that no database match was found "
                             "for it; do not present general guidance as a match")
+        elif verdict == "low-confidence" and retried:
+            warnings.append(f"part {part_id!r} is low-confidence after a retry: the retry did not "
+                            "recover, so treat the part as not searched and do not cite its rows")
         elif verdict == "low-confidence":
             warnings.append(f"part {part_id!r} is low-confidence: verify the top row before using it")
         parts.append({"part_id": part_id, "verdict": verdict, "retried": retried,

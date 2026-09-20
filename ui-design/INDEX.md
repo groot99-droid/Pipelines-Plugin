@@ -26,7 +26,7 @@ The catalog's own vocabulary. A search matches the words the catalog uses, not t
 | `catalog/data/data-provenance.json` | - | - | Provenance and licensing of the data. |
 | `catalog/data/google-font-licenses.json` | - | - | Per-family Google Fonts licenses and exclusions. |
 | `catalog/data/phosphor-icons-upstream.json` | - | - | The upstream Phosphor icon manifest. |
-| `catalog/data/stacks/*.csv` (22 files) | 1260 | --stack | One guideline file per stack. |
+| `catalog/data/stacks/*.csv` (22 files) | 1275 | --stack | One guideline file per stack. |
 
 ## Products (192)
 

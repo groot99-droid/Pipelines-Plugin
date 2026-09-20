@@ -40,7 +40,15 @@ section.
    sections, leave it out and say so under `NOT-CHECKED`.
 5. Severity is the section's impact label (CRITICAL, HIGH, MEDIUM, LOW) in
    lower case. Lower it for a cosmetic instance; never raise it.
-6. Evidence is the page line number and a quote of at most 80 characters, with
+6. Another reviewer covers the areas you were not given, and may cite a
+   different rule against the same line. So when a fix sets a value, choose one
+   that also satisfies the neighbouring rules, not only the one you cite. For a
+   font size that means a step on the type scale (`font-scale`, section 6) that
+   also meets the readable minimum for body text (`readable-font-size`,
+   section 5), which is the smallest scale step at or above that minimum. Read
+   the neighbouring rule if you need its number; you may quote it in the fix
+   but never cite it as a finding.
+7. Evidence is the page line number and a quote of at most 80 characters, with
    no `|` character in the quote. If the line cannot be found, do not report
    the finding.
 

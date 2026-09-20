@@ -8,6 +8,7 @@ import subprocess
 import sys
 import unittest
 from pathlib import Path
+from unittest import mock
 
 SCRIPTS_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(SCRIPTS_DIR))
@@ -91,6 +92,82 @@ class TestManifest(unittest.TestCase):
         self.assertFalse(narrow["recommended"])
         self.assertTrue(wide["recommended"])
         self.assertGreaterEqual(wide["parts"], route.FAN_OUT_MIN_PARTS)
+
+
+def stub_stack_search(empty):
+    """A search_stack stand-in: parts whose (stack, query) is in `empty` find nothing."""
+    def search_stack(query, stack, max_results, diagnostics=False):
+        if (stack, query) in empty:
+            return {"count": 0, "results": [], "diagnostics": {"token_coverage": 0.0}}
+        return {"count": 1, "results": [{"Guideline": "g"}], "diagnostics": {"token_coverage": 1.0}}
+    return search_stack
+
+
+class TestStackProbe(unittest.TestCase):
+    """Stack parts are dispatched only if the stack's own data can answer them."""
+
+    A11Y_QUERY = route.BASELINE[3]
+
+    def probed(self, search_stack, stack="nextjs", brief=LEDGERLY):
+        with mock.patch.object(route.core, "search_stack", search_stack):
+            return route.route(brief, stack=stack)
+
+    def test_an_unanswerable_stack_part_moves_to_not_covered(self):
+        result = self.probed(stub_stack_search({("nextjs", self.A11Y_QUERY)}))
+        self.assertNotIn("stack-nextjs-a11y", [p["part_id"] for p in result["manifest"]])
+        self.assertEqual([p["part_id"] for p in result["not_covered"]], ["stack-nextjs-a11y"])
+        entry = result["not_covered"][0]
+        self.assertEqual(set(entry), {"part_id", "target", "query", "reason"})
+        self.assertEqual((entry["target"], entry["query"]), ("nextjs", self.A11Y_QUERY))
+        self.assertIn("no rows", entry["reason"])
+
+    def test_the_domain_part_for_the_same_concern_is_kept(self):
+        result = self.probed(stub_stack_search({("nextjs", self.A11Y_QUERY)}))
+        self.assertIn("ux-a11y", [p["part_id"] for p in result["manifest"]])
+
+    def test_low_coverage_rows_count_as_not_covered(self):
+        def search_stack(query, stack, max_results, diagnostics=False):
+            return {"count": 1, "results": [{"Guideline": "g"}],
+                    "diagnostics": {"token_coverage": route.LOW_COVERAGE - 0.01}}
+        result = self.probed(search_stack)
+        self.assertFalse([p for p in result["manifest"] if p["kind"] == "stack"])
+        self.assertTrue(result["not_covered"])
+        self.assertIn("token_coverage", result["not_covered"][0]["reason"])
+
+    def test_dropping_parts_lowers_the_fan_out_count(self):
+        kept = self.probed(stub_stack_search(set()))["fan_out"]
+        dropped = self.probed(stub_stack_search({("nextjs", self.A11Y_QUERY)}))["fan_out"]
+        self.assertEqual((kept["parts"], kept["recommended"]), (4, True))
+        self.assertEqual((dropped["parts"], dropped["recommended"]), (3, False))
+
+    def test_a_stack_the_catalog_covers_keeps_its_part(self):
+        result = route.route(LEDGERLY, stack="react")
+        self.assertIn("stack-react-a11y", [p["part_id"] for p in result["manifest"]])
+        self.assertNotIn("stack-react-a11y", [p["part_id"] for p in result["not_covered"]])
+
+    def test_angular_a11y_part_is_dispatched_now_that_angular_has_rows(self):
+        result = route.route(LEDGERLY, stack="angular")
+        self.assertIn("stack-angular-a11y", [p["part_id"] for p in result["manifest"]])
+        self.assertNotIn("stack-angular-a11y", [p["part_id"] for p in result["not_covered"]])
+
+    def test_domain_parts_are_never_probed(self):
+        calls = []
+        def search_stack(query, stack, max_results, diagnostics=False):
+            calls.append(stack)
+            return {"count": 1, "results": [{"Guideline": "g"}], "diagnostics": {"token_coverage": 1.0}}
+        self.probed(search_stack)
+        self.assertEqual(set(calls), {"nextjs"})
+
+    def test_without_a_stack_nothing_is_probed_or_dropped(self):
+        result = route.route(LEDGERLY)
+        self.assertEqual(result["not_covered"], [])
+
+    def test_the_text_report_names_what_was_not_dispatched(self):
+        result = self.probed(stub_stack_search({("nextjs", self.A11Y_QUERY)}))
+        report = route.format_report(result)
+        self.assertIn("Not covered", report)
+        self.assertIn("stack-nextjs-a11y", report.split("Not covered")[1])
+        self.assertNotIn("Not covered", route.format_report(route.route(LEDGERLY)))
 
 
 class TestCli(unittest.TestCase):
