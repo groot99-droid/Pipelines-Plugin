@@ -3,10 +3,14 @@
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ── Line endings ─────────────────────────────────────────────────────────────
-# ui-design/maintenance/evaluate-relevance.py fingerprints the raw bytes of the
-# catalog's runtime and data files, and of its own oracle inputs, and refuses
-# to run when they drift. On a machine with core.autocrlf=true a plain checkout
-# rewrites every one of those files to CRLF and changes the hash, so the whole
-# tool is pinned to LF on every platform. After a deliberate change to a
+# plugins/ui-design/maintenance/evaluate-relevance.py fingerprints the raw bytes
+# of the catalog's runtime and data files, and of its own oracle inputs, and
+# refuses to run when they drift. On a machine with core.autocrlf=true a plain
+# checkout rewrites every one of those files to CRLF and changes the hash, so the
+# whole plugin is pinned to LF on every platform. After a deliberate change to a
 # fingerprinted file, regenerate the fingerprints with that script.
-ui-design/** text eol=lf
+#
+# The plugin also carries its own plugins/ui-design/.gitattributes, because it is
+# published on its own and this root rule does not travel with it. Both say the
+# same thing; validate-contract.py checks the plugin's.
+plugins/ui-design/** text eol=lf

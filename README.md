@@ -1,32 +1,37 @@
 # Pipelines
 
-One repo, multiple tools. Each tool gets a self-contained top-level folder;
-skills and agents live once at the repo root under `.claude/`, so they load
-whenever this repo is the working directory.
+One repo, multiple tools. Each tool gets a self-contained folder. The
+creative-writing tool is used from this repo, so its skills and agents live once
+at the repo root under `.claude/` and load whenever this repo is the working
+directory. The ui-design tool is a Claude Code plugin published on its own, so
+its skills and agents live inside it, under `plugins/ui-design/`.
 
 ```
 INDEX.md               generated index of the tools, skills and agents
-.claude/skills/        creative-writing-pipeline, chunk-tag-backfill,
-                       ui-design-catalog, ui-design-catalog-refresh,
-                       ui-design-multipart
-.claude/agents/        creative-writing-{chunk-tagger,drafter,librarian-native},
-                       ui-design-{catalog-reviewer,search-part,page-reviewer}
+.claude/skills/        creative-writing-pipeline, chunk-tag-backfill
+.claude/agents/        creative-writing-{chunk-tagger,drafter,librarian-native}
 CLAUDE.md              repo conventions; points at the vault's own CLAUDE.md
 creative-writing/
   vault/               the Obsidian vault: 63 works, _Annotations/,
                        _ChunkTags/, _Idea_Library/, tools/, CLAUDE.md
   pipeline/            the checkpointed pipeline that writes into that vault
-ui-design/
+plugins/ui-design/     the ui-design plugin: everything that is published
+  .claude-plugin/      plugin.json and marketplace.json
+  skills/, agents/     ui-design-{catalog,catalog-refresh,multipart},
+                       ui-design-{catalog-reviewer,search-part,page-reviewer}
   spec.yaml            the declared contract; validate-contract.py enforces it
   INDEX.md, ROUTER.md  the catalog's vocabulary (generated) and how to route a brief
   catalog/             data/ and scripts/: the search catalog, stdlib only
   maintenance/         validators, relevance gate, refresh scripts, verify.py
   references/          prose the ui-design-catalog skill reads on demand
+  README.md, LICENSE, NOTICE, CHANGELOG.md
 ```
 
-Paths throughout this file and in every skill/agent are relative to this repo
+Paths in the creative-writing skills and agents are relative to this repo
 root. Vault-relative paths (as `vault_search.py` reports them, e.g.
-`03_Stories/06_Melting_Away.md`) take a `creative-writing/vault/` prefix.
+`03_Stories/06_Melting_Away.md`) take a `creative-writing/vault/` prefix. Paths in
+the ui-design skills and agents start from `${CLAUDE_PLUGIN_ROOT}`, the plugin's
+install directory.
 
 ## Creative-writing pipeline
 
@@ -222,117 +227,24 @@ rhythm, voice notes, target folder) with `status: implemented`. The six
 stages and both entry points work unchanged — they read the mode's rules
 out of the spec rather than having them hardcoded per mode.
 
-## UI design catalog
+## UI design plugin
 
-A local search catalog of UI design decisions, plus a generator that
-turns a query into a contrast-checked design system, in
-[`ui-design`](ui-design). It exists so visual choices come from curated
-data instead of being invented from memory. The catalog is a BM25 index
-over curated files:
+A local search catalog of UI design decisions, plus a generator that turns a
+query into a contrast-checked design system, packaged as a Claude Code plugin in
+[`plugins/ui-design`](plugins/ui-design). Its own
+[README](plugins/ui-design/README.md) covers what it contains, how to install it,
+what it will and will not write, how the catalog is verified and refreshed, and
+where its data comes from; [`NOTICE`](plugins/ui-design/NOTICE) lists the upstream
+sources, and the MIT licence is [`plugins/ui-design/LICENSE`](plugins/ui-design/LICENSE).
 
-- 79 searchable styles (50 active)
-- 192 product palettes, each with an exact reasoning profile
-- 74 font pairings, and **1,934 approved Google Fonts** with
-  **8 review exclusions** held out for licence review
-- 119 UX guidelines
-- 105 curated icons, as **105 curated rows** checked against the
-  **1,512-icon upstream Phosphor manifest**
-- 17 GSAP presets and 25 chart types
-- 22 technology stacks
-
-### Two halves, one rule
-
-[`ui-design/catalog`](ui-design/catalog) is what the skill runs: the data
-and the search scripts. It uses only the Python standard library and never
-touches the network. [`ui-design/maintenance`](ui-design/maintenance) is
-upkeep: the validators, the relevance gate, the refresh scripts and
-`verify.py`. It alone holds the one dependency (`pyyaml`), the network
-calls, and the one secret (`GOOGLE_FONTS_API_KEY`, see `.env.example`
-there). The split is enforced: `validate-contract.py` fails if anything
-under `catalog/` imports a third-party package.
-
-### Searching
-
-The [`ui-design-catalog`](.claude/skills/ui-design-catalog/SKILL.md) skill
-drives it; the script is also usable directly, from the repo root:
+From this repo:
 
 ```powershell
-python ui-design/catalog/scripts/search.py "beauty spa wellness service" --design-system
-python ui-design/catalog/scripts/search.py "keyboard focus modal" --domain ux
-python ui-design/catalog/scripts/search.py "suspense streaming" --stack nextjs
+python plugins/ui-design/maintenance/verify.py          # every gate, from any directory
+python plugins/ui-design/catalog/scripts/search.py "keyboard focus modal" --domain ux
+claude --plugin-dir ./plugins/ui-design                  # load its skills for a session
 ```
 
-`--design-system` also emits W3C design tokens (`-f dtcg`) or a shadcn/ui
-`:root` block (`-f shadcn`). Add `--persist` only together with an
-`--output-dir` that points **outside this repo**, at the project you are
-designing for: without it the generated `design-system/` folder is written
-into the current directory, which from here is this repo.
-
-### Routing, indexes and multipart agents
-
-Search only matches the catalog's own words, so a brief in free wording can
-rank the wrong row first: `freelancer invoicing SaaS fintech trustworthy`
-matches *Freelancer Platform* ahead of *Invoice & Billing Tool*, with no
-warning. Three pieces address that.
-
-- [`ui-design/INDEX.md`](ui-design/INDEX.md) lists the catalog's vocabulary
-  (product types and keywords, style ids, font pairings, landing patterns,
-  stacks), and [`INDEX.md`](INDEX.md) lists the tools, skills and agents. Both
-  are generated by `ui-design/maintenance/generate-index.py`, and `verify.py`
-  fails when either is stale or a skill or agent is missing from the root one.
-- [`ui-design/ROUTER.md`](ui-design/ROUTER.md) says which mode, domain and query
-  fits a request and what to do when a match looks wrong.
-  `search.py --diagnostics` prints the confidence fields, and
-  `route.py "<brief>"` cross-checks the product rows and warns when they
-  disagree.
-- The [`ui-design-multipart`](.claude/skills/ui-design-multipart/SKILL.md) skill
-  fans a wide brief out to one `ui-design-search-part` agent per search, or a
-  built page out to four `ui-design-page-reviewer` agents (one per area), then
-  checks the answers with `merge_parts.py`: every part returned exactly once,
-  and no review finding citing a rule that is not in the quick reference. One
-  search takes milliseconds, so the router only recommends fan-out at four or
-  more parts.
-
-### The contract
-
-[`ui-design/spec.yaml`](ui-design/spec.yaml) declares the search domains,
-the stacks, the output formats, the design dials, the exit codes and the
-persistence rule. The code implements them; the spec cannot be read by the
-standard-library-only catalog, so
-[`validate-contract.py`](ui-design/maintenance/validate-contract.py) is
-what keeps the two from drifting apart. It also checks the skills, the
-agents, the documented commands and the counts above against the data.
-
-### Verifying
-
-One command runs all ten gates and stops at the first failure, printing
-the exact command to re-run it:
-
-```powershell
-pip install -r ui-design/maintenance/requirements.txt
-python ui-design/maintenance/verify.py
-```
-
-There is no CI in this repo; `verify.py` is the gate.
-
-### Refreshing the upstream catalogs
-
-The Google Fonts and Phosphor catalogs are derived from upstream. The
-[`ui-design-catalog-refresh`](.claude/skills/ui-design-catalog-refresh/SKILL.md)
-skill fetches them, stages candidates under
-`ui-design/maintenance/candidates/` (gitignored), diffs them against the
-live rows and has the read-only `ui-design-catalog-reviewer` agent check
-each one. It then stops. Promoting a candidate is an editorial decision
-with a licensing dimension (see
-[`ui-design/SOURCE-RESEARCH.md`](ui-design/SOURCE-RESEARCH.md)), so it
-needs the author's explicit approval.
-
-### Provenance and licence
-
-The catalog is derived from
-[ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
-by Next Level Builder, released under the MIT licence, which is carried at
-[`ui-design/LICENSE`](ui-design/LICENSE). It was imported as a plain copy
-with no history. The installer, the marketplace manifest, the gallery and
-the demo project were left behind. The origin of individual data rows is
-recorded in `ui-design/catalog/data/data-provenance.json`.
+The plugin is published from its own repository, never from this one, because this
+repo also holds the private vault. The steps are in [`CLAUDE.md`](CLAUDE.md), under
+"Publishing the plugin".

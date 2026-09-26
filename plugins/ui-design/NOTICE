@@ -1,0 +1,52 @@
+ui-design
+=========
+
+This plugin is released under the MIT License (see LICENSE). It contains data and
+code derived from the works below. This file names each one, says what was taken from
+it, and points at the licence that governs it. The origin of individual catalog rows is
+recorded in catalog/data/data-provenance.json.
+
+ui-ux-pro-max-skill
+  https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
+  Copyright (c) 2024 Next Level Builder. MIT License.
+  The catalog data, the search engine and the design-system generator began as a
+  plain copy of this project; the copyright and permission notice is carried in LICENSE.
+  The installer, the marketplace manifest, the gallery and the demo project were left
+  behind, and this plugin's skills, agents, router, checks and packaging are additions.
+
+Phosphor Icons
+  https://github.com/phosphor-icons/core (@phosphor-icons/core 2.1.1)
+  https://github.com/phosphor-icons/react (@phosphor-icons/react 2.1.10)
+  MIT License.
+  catalog/data/phosphor-icons-upstream.json is a manifest of icon names, categories,
+  tags and import names taken from these packages, and catalog/data/icons.csv curates
+  rows that refer to those names. No icon artwork is bundled.
+
+Google Fonts metadata
+  https://github.com/google/fonts (revision recorded in
+  catalog/data/google-font-licenses.json under source.revision)
+  catalog/data/google-fonts.csv and google-font-licenses.json hold family names,
+  categories, styles, axes, subsets and designers read from each family's METADATA.pb,
+  with curated keywords added. Font files are not bundled. Each family's licence is recorded per family in
+  google-font-licenses.json (OFL, Apache-2.0 or the Ubuntu Font Licence), and it is the
+  licence of the font, not of this plugin. Eight families are excluded pending licence
+  review; they are listed under excludedFamilies in the same file.
+
+Public design and accessibility documentation
+  Guidance rows, palettes and rules were written or checked against public
+  documentation. The sources are recorded row by row in data-provenance.json, and
+  include the W3C Web Content Accessibility Guidelines 2.2 and its Understanding and
+  Techniques documents, the WAI-ARIA Authoring Practices Guide, Apple's Human Interface
+  Guidelines, Android accessibility documentation, Material 3, Microsoft Fluent 2,
+  Shopify Polaris, Adobe Spectrum and IBM Carbon. Their names and marks belong to their
+  owners, and citing them here implies no endorsement.
+
+W3C Design Tokens Community Group format
+  https://tr.designtokens.org/format/
+  The dtcg output format follows this specification. No text or code is copied.
+
+GSAP
+  https://gsap.com/
+  The motion presets in catalog/data/motion.csv are short snippets that call the GSAP
+  API. GSAP itself is not bundled or redistributed; it has its own licence at
+  https://gsap.com/standards-license.

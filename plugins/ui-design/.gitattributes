@@ -1,0 +1,11 @@
+# The relevance gate (maintenance/evaluate-relevance.py) fingerprints the raw
+# bytes of the catalog's runtime and data files, and of its own oracle inputs,
+# and refuses to run when they drift. On a machine with core.autocrlf=true a
+# plain checkout rewrites every one of those files to CRLF and changes the hash,
+# so every text file in the plugin is pinned to LF on every platform.
+#
+# This file lives in the plugin, not only at the Pipelines repo root, because the
+# plugin is published on its own and the root rule does not travel with it.
+# After a deliberate change to a fingerprinted file, regenerate the fingerprints
+# with maintenance/evaluate-relevance.py.
+* text=auto eol=lf

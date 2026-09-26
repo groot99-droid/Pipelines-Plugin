@@ -1,0 +1,14 @@
+{
+  "name": "ui-design-plugin",
+  "description": "The ui-design plugin: a local UI design catalog and design-system generator for Claude Code.",
+  "owner": {
+    "name": "groot99-droid"
+  },
+  "plugins": [
+    {
+      "name": "ui-design",
+      "source": "./",
+      "description": "Searchable UI styles, palettes, fonts, UX rules, icons, motion and stacks; a contrast-checked design-system generator; a brief router; multipart search and page-review agents."
+    }
+  ]
+}

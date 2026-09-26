@@ -1,0 +1,23 @@
+{
+  "name": "ui-design",
+  "version": "0.1.0",
+  "description": "A local BM25 search catalog of UI styles, product palettes, font pairings, UX rules, icons, motion presets and stacks, with a contrast-checked design-system generator, a brief router, and multipart search and page-review agents.",
+  "author": {
+    "name": "groot99-droid"
+  },
+  "homepage": "https://github.com/groot99-droid/ui-design-plugin",
+  "repository": "https://github.com/groot99-droid/ui-design-plugin",
+  "license": "MIT",
+  "keywords": [
+    "ui",
+    "ux",
+    "design-system",
+    "design-tokens",
+    "accessibility",
+    "wcag",
+    "typography",
+    "color",
+    "tailwind",
+    "shadcn"
+  ]
+}

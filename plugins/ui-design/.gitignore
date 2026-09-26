@@ -1,0 +1,33 @@
+# ui-design plugin -- ignore rules that travel with the plugin.
+# The Pipelines repo has its own root .gitignore; this one exists because the
+# plugin is published on its own and must still guard these paths.
+
+# Secrets. maintenance/.env.example documents the shape of the one key.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated design systems. search.py --persist writes design-system/<slug>/
+# under --output-dir, or under the CURRENT DIRECTORY when it is omitted. Every
+# documented --persist command passes --output-dir; this is the second line of
+# defence for a run that forgot.
+design-system/
+
+# Catalog refresh staging written by the ui-design-catalog-refresh skill under
+# maintenance/candidates/. Scratch by design: a candidate is reviewed, and only an
+# approved one is copied into catalog/data/.
+# Deliberately NOT ignored: catalog/data/.google-font-refresh.incomplete.json.
+# validate_data.py treats its presence as a failure signal for a partial
+# refresh, so it is a tripwire, not a cache.
+candidates/
+
+# Browser captures fed to `harvest-site-tokens.py report captures/*.json`.
+captures/
