@@ -73,6 +73,17 @@ Do not duplicate its rules here. If the writing rules change, they change there.
   `creative-writing/pipeline/spec.yaml` as their single source of truth.
 - The pipeline's `vault_integration` stage only writes to the vault with an
   explicit `--confirm`; without it, it prints a dry-run preview. Keep it that way.
+- **Plot logic.** Story outlines carry a causal ledger (but / therefore, never
+  and-then) that `creative-writing/pipeline/plot_logic.py` checks; a **register**
+  (`liminal`, `psychedelic`, `cosmic`) overlays a mode. The rules live in
+  `creative-writing/vault/CLAUDE.md` ("Plot logic"), their machine-readable form in
+  `spec.yaml` (`plot_logic:`, `registers:`), and the reasoning and worked examples in
+  `creative-writing/vault/_Craft/`. Run the tests after touching any of them:
+  `python -m unittest discover -s creative-writing/pipeline/tests`. They check every
+  ledger in `_Craft/` against its declared verdict and every quotation in it against
+  the vault, so editing a craft note can fail them; that is the point.
+- `_Craft/` notes are analysis written with Claude, not the author's prose. Do not
+  present them as the author's voice, and do not edit the 63 originals to fit them.
 - `creative-writing/pipeline/.env` holds a live `GEMINI_API_KEY` and is
   gitignored. Never commit it, never echo its value.
 

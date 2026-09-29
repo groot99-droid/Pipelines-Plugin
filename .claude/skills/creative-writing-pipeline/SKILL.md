@@ -38,6 +38,14 @@ references it, it doesn't replace it.
    one, ask the author which register they actually want rather than
    defaulting to one of the four modes).
 
+   **Then determine the register(s), if any:** `liminal`, `psychedelic`
+   and/or `cosmic` (spec.yaml `registers:`). A register is what kind of
+   world the piece runs in; the mode is how it sounds, and they cut across
+   each other. **Never infer a register** — if the idea seems to want one,
+   say so and ask. A register switches plot logic on even for a mode that
+   would not ask for it (an essay or a poem). Keep the chosen registers for
+   every stage below.
+
 2. **Walk the stages in spec.yaml's `stages:` list, in order, one at a
    time:** intake → reference_pull → outline → draft → self_revision →
    vault_integration. For each stage:
@@ -62,6 +70,27 @@ references it, it doesn't replace it.
      Agent access — it only returns text. You still own the checkpoint:
      take its returned artifact, save it to the stage's output file
      yourself, and show it to the author for approval before continuing.
+   - **outline, specifically — plot logic.** The outline stage prompt
+     contains a `{plot_logic}` placeholder. Fill it by running
+     `python creative-writing/pipeline/plot_logic.py rules --mode <mode> [--register <r> ...]`
+     and pasting its output into the drafter's prompt (empty output means the
+     mode and registers have no plot logic; then there is nothing to add).
+     The drafter must return an outline that ends with a `## Causal ledger`.
+     After you save it to `outline.md`, **check it**:
+     `python creative-writing/pipeline/plot_logic.py check <outline.md> --mode <mode> [--register <r> ...]`.
+     If it reports errors, re-invoke the drafter **once** with the checker's
+     report and the outline, and ask for the corrected outline. Show the author
+     the outline **and the report** either way; never hide a failing ledger.
+     Warnings (`no-but`, `smooth-run`, `pile-on`, `no-investigates`) are for the
+     author to weigh, not to silently fix. The checker cannot judge whether a
+     link is true, so you review that too: read each `Because` phrase against
+     the beat it cites, and say plainly where a link looks cosmetic.
+   - **reference_pull with a register:** add the register's `worked_examples`
+     (spec.yaml) to the file list you hand the librarian, and give the drafter
+     the register's craft note (`creative-writing/vault/_Craft/<note>.md`,
+     named in spec.yaml as `note`) as guidance. The notes are analysis written
+     with Claude, not the author's prose: never present a line from them as
+     the author's voice.
    - Save the stage's output to a scratch file for the session (a
      reasonable temp/session location is fine — the point is the author
      can review it, not where exactly it lives) using the filename in
@@ -119,6 +148,13 @@ references it, it doesn't replace it.
    not a citable quote. Never Read the raw worked-example files yourself
    as a substitute for either path.
 
+3b. **Draft stage with a ledger:** tell the drafter to write to the ledger.
+   Each beat's `Because` phrase must be visible on the page, and no beat may
+   be added that is not in the ledger (if the draft needs one, it is added with
+   its Link and Because and flagged). For a `psychedelic` register, the draft
+   contains no substances, doses, sourcing or how-to; see CLAUDE.md's
+   anti-style list.
+
 4. **Self-revision stage specifically:** this is where CLAUDE.md's
    anti-style rule "don't silently invent mode/project/archetype ties"
    gets enforced. Delegate this stage to `creative-writing-drafter` per
@@ -140,6 +176,12 @@ references it, it doesn't replace it.
    the author — if a claimed tie looks asserted rather than verified,
    push back and re-run the stage rather than passing it through.
 
+4b. **Self-revision also walks the ledger.** Have the drafter re-walk
+   `outline.md`'s ledger against the draft beat by beat: a beat whose
+   `Because` phrase is not visible on the page has become an and-then in
+   execution, so it is fixed or flagged, and the draft's ending must be the
+   ledger's declared `Ending:`. Put the result in `revision_notes.md`.
+
 5. **Vault-integration stage specifically — the highest-stakes step.**
    This automates CLAUDE.md's existing 5-step Maintenance procedure
    (create file → frontmatter → folder `_index.md` entry → companion
@@ -149,6 +191,10 @@ references it, it doesn't replace it.
    Before writing anything:
    - Confirm the target filename (matching the folder's `NN_Title.md`
      numbering convention).
+   - If registers were used, the frontmatter gets `register: [<names>]` and a
+     `register/<name>` tag each (never for a piece that used none), and the
+     annotation should say where the piece's buts and therefores fall and how
+     the protagonist's agency moves, drawing on the checker's report.
    - Show the author the exact frontmatter you're about to write (see
      `frontmatter_schema` in spec.yaml), the `_index.md` line, and a
      draft of the companion annotation — genuine craft analysis of this

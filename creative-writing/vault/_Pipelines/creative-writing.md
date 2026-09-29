@@ -19,6 +19,17 @@ Every stage is a checkpoint: nothing advances until the previous stage's output
 has been reviewed. A failed stage leaves the run's state untouched, so retrying
 the same command re-runs only that stage.
 
+## Plot logic
+
+The outline stage requires a **causal ledger**: a row per beat, each naming the
+earlier beat it depends on and a phrase copied from that beat's `Changes`, so a
+story is a chain of *but* and *therefore*, never *and then*. A checker verifies
+the ledger and a failing one gets one repair pass; the report is kept beside the
+outline as `plot_logic_report.md`. A **register** (`liminal`, `psychedelic`,
+`cosmic`) can be chosen at intake to overlay a mode with a state track and shape
+rules. Rules: [[CLAUDE.md]] ("Plot logic"). Reasoning and worked ledgers:
+[[_Craft/_index|Craft notes]].
+
 ## What it reads
 
 - `spec.yaml` — the single source of truth for stage order, stage prompts,

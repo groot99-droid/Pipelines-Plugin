@@ -7,6 +7,20 @@
 # to adopt a suggestion; re-running the backfill with --force will pick
 # up the new tag on the next pass.
 #
+# Added 2026-09-26, with the pipeline's plot-logic registers (see
+# creative-writing/vault/_Craft/ and spec.yaml `registers:`): the liminal,
+# psychedelic and cosmic beats the closed list had no word for. Two sources:
+#   (a) new tags, defined in the comment beside each one, and
+#   (b) ten suggestions from _vocabulary_suggestions.jsonl that bear on those
+#       registers, adopted under the tagger's own names: archetypal-guide-encounter,
+#       fourth-wall-awareness, register-shift-to-comedic, soul-line-transition,
+#       altered-perception, sound-as-substance, textual-tampering,
+#       marginal-annotation, document-takeover, performance-and-spectacle.
+# The other suggestions in that log are not adopted here; they are not about
+# these registers and are the author's call.
+# Existing sidecars stay valid; a work only gains the new tags when it is
+# re-tagged (chunk-tag-backfill, --force, --only <path>).
+
 # plot_tags: mode-specific structural beats, drawn from CLAUDE.md's own
 # per-mode "Structure" language, plus a few generic cross-mode beats.
 plot_tags:
@@ -45,6 +59,20 @@ plot_tags:
   - denouement
   - exposition
   - flashback
+  # registers -- liminal / psychedelic / cosmic (see _Craft/). Tag the EVENT, never the word.
+  - threshold-crossing         # a character or the perspective actually passes between states, places or worlds. A figure of speech ("the threshold of a new chapter") is NOT this; that is motif `threshold`.
+  - liminal-hold               # the in-between beat: neither arrived nor departed; the surface is ordinary and the rules are wrong
+  - frame-slip                 # the frame changes without being marked: point of view, world or level slides (a tea makes the reader the narrator; a POV zooms out to the waking body; a cut mid-sentence)
+  - perceptual-escalation      # perception intensifies or fractures stepwise (colours brighten, forms replicate, the sky becomes an eye)
+  - surrender-turn             # resisting stops and the character yields, or chooses to reassemble; the turn out of a fracture
+  - return-with-residue        # a return to the ordinary world carrying partial memory or a mark; most of it is lost
+  - anomaly-verification       # the protagonist TESTS an anomaly (checks, counts, asks, photographs), not merely notices it; rare in this vault
+  - scale-reveal               # the wrongness is shown to be larger than the personal frame: an institution, a conspiracy, the world
+  - self-implication-reveal    # the protagonist (or reader) is shown to be part of it: the entry, the hand, the thing
+  - archetypal-guide-encounter # adopted from the tagger's suggestion (Trip Tracker): an explicit meeting with a guide-figure at the deepest layer
+  - fourth-wall-awareness      # adopted (The Show Must Go On): the character perceives the frame of their own story, laughing at what only they hear
+  - register-shift-to-comedic  # adopted (WrymWretch, Low In The Water): a hard swerve from dread or cosmic register into a comic voice
+  - soul-line-transition       # adopted (The Cycle of Us): a crossing between lives or selves that the text does not announce
 
 # context_tags: consolidated from the vault's actual `themes` frontmatter
 # (217 raw distinct values aggregated down to 36 recurring categories).
@@ -85,6 +113,12 @@ context_tags:
   - coming-of-age
   - self-deception
   - unreliable-reality
+  # registers -- see _Craft/
+  - liminality                 # the condition of being between states as the piece's subject (not the word "threshold" used figuratively)
+  - ego-dissolution            # the self comes apart or is emptied out (Trip Tracker, Trips Are Like Exes)
+  - cosmic-dread               # dread from scale and indifference rather than from a threat; the vault's own frontmatter word (Missing Campsites)
+  - erasure                    # things, places or people removed from the world and from memory; the vault's own frontmatter word (Missing Campsites)
+  - altered-perception         # adopted (Trip Tracker): perceptual distortion or expansion is the chunk's subject
 
 # mood_tags: tone/emotional register of the chunk.
 mood_tags:
@@ -123,3 +157,13 @@ motif_tags:
   - witness-and-observer
   - complicit-authority-figure
   - monster-from-victim
+  # registers -- see _Craft/
+  - clock-and-hour             # a clock, an hour or a count keeps the door: 10:00 precisely, 2:22, an alarm, "no time, no date"
+  - descent-and-depth          # going down as the shape of the journey: the pupil pit, the abyss, the marrow tunnels
+  - eye-and-gaze               # the eye, the watcher, being seen: the eye in the sky, the eye as a planet, the peephole
+  - nested-world               # a world inside a thing that looks small: a book, an eye, a tree, a body
+  - sound-as-substance         # adopted (The Yellow Drop): sound as the matter a world is built from
+  - textual-tampering          # adopted (Redacted Testament): overwritten, corrupted or redacted text as an evidentiary device
+  - marginal-annotation        # adopted (Redacted Testament): a second hand in the margins
+  - document-takeover          # adopted (Through the Eyes of Wolf and Lamb): a narrator's manuscript overwritten by an institutional voice
+  - performance-and-spectacle  # adopted (The Show Must Go On): a life framed as a broadcast, a sitcom, a show

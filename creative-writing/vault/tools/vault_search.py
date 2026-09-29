@@ -35,6 +35,9 @@ TOKEN_RE = re.compile(r"[A-Za-z']+")
 HEADING_LINE_RE = re.compile(r"^#{1,6}\s+.+$")
 
 NUMBERED_DIR_RE = re.compile(r"^\d{2}_")
+# Craft notes (_Craft/): cross-cutting analysis of the works, not the author's own
+# prose. Indexed as their own source type so a search result says what it is.
+CRAFT_DIR_NAME = "_Craft"
 EXCLUDE_FILENAMES = {"README.md", "OBSIDIAN.md", "CLAUDE.md", "CONVENTIONS.md"}
 EXCLUDE_DIR_NAMES = {".git", ".obsidian", "tools"}
 
@@ -244,6 +247,11 @@ def iter_source_files(vault_root, include_annotations=True):
         if ann_dir.exists():
             for path in sorted(ann_dir.rglob("*.md")):
                 yield path, "annotation"
+
+    craft_dir = vault_root / CRAFT_DIR_NAME
+    if craft_dir.exists():
+        for path in sorted(craft_dir.rglob("*.md")):
+            yield path, "craft"
 
 
 # --------------------------------------------------------------------------
@@ -553,7 +561,7 @@ def build_arg_parser():
 
     p_files = sub.add_parser("files", help="List vault source files (for the chunk-tagger subagent).")
     p_files.add_argument("--vault", default=None, help="Vault root (default: parent of tools/).")
-    p_files.add_argument("--type", default=None, choices=["index", "moc", "work", "annotation"])
+    p_files.add_argument("--type", default=None, choices=["index", "moc", "work", "annotation", "craft"])
     p_files.add_argument("--no-annotations", action="store_true")
     p_files.add_argument("--json", action="store_true")
     p_files.set_defaults(func=cmd_files)

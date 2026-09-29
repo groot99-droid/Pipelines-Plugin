@@ -44,6 +44,12 @@ modes:
       essay with an explicit action-item "Implementation" section -- use
       it as the template when the practice/action-item beat is wanted in
       its most literal form.
+    plot_logic:
+      enabled: false
+      note: >
+        Stories only, for now. An essay's spine is argument (claim, objection,
+        practice, callback), not a sequence of events. Argument logic is a later
+        part of this design.
   horror-prose:
     status: implemented
     style_section: "Horror-Prose Mode"
@@ -69,6 +75,19 @@ modes:
       the threat to a new victim. Do NOT default to a tidy, rescued, or
       cathartic ending in this mode -- that is this vault's most explicit
       anti-style rule for horror-prose specifically.
+    plot_logic:
+      enabled: true
+      ending:
+        allowed: [cyclical, handoff, consumed, complicit, no-return, irreversible-knowledge]
+        severity: error     # CLAUDE.md's most explicit anti-style rule: no tidy, rescued endings
+      note: |
+        Keeps the vault's catalogued-incident engine and makes it causal. Each
+        incident is a `B` (it breaks the protagonist's current explanation); each
+        shelving is the `T` that the NEXT incident must specifically break -- name
+        the shelf in the Because handle. A run of incidents that each merely add
+        another wrongness is the "and then" failure. Let the shelving get thinner
+        as the list grows: the protagonist's agency decays, and the ledger's
+        Response column should show it.
   epic-fantasy:
     status: implemented
     style_section: "Epic-Fantasy Mode"
@@ -95,6 +114,17 @@ modes:
       author explicitly says so -- see vault_wide_rules and the Graknox
       false-positive precedent in CLAUDE.md's anti-style list, which is
       this exact mode's own cautionary example.
+    plot_logic:
+      enabled: true
+      ending:
+        allowed: [cost-paid, return-with-residue, no-return, cyclical, handoff, recognition, irreversible-knowledge, self-reclaimed]
+        severity: warn
+      note: |
+        Ensemble-convergence is several `open` rows that a later row joins with a
+        multi-parent Because (`4+5 "the strait"`). A journey may be one row, but the
+        climax's solution must be answered by an earlier attempt that failed (a `B`);
+        otherwise it arrives from nowhere. Codex asides are not plot beats; leave them
+        out of the ledger.
   confessional-poetry:
     status: implemented
     style_section: "Confessional-Poetry Mode"
@@ -118,6 +148,10 @@ modes:
       and nearby annotations for a piece the new one might be in
       conversation with, and flag a potential pairing to the author
       rather than inventing one silently.
+    plot_logic:
+      enabled: false
+      note: >
+        Stories only, for now. A poem's spine is the turn, not a sequence of events.
   unclassified:
     status: not_yet_implemented
     note: "Per CLAUDE.md: ask the user which register they want rather than defaulting to one of the four modes."
@@ -159,6 +193,183 @@ vault_wide_rules:
   - "If a new piece's intended mode is ambiguous, ask -- don't silently invent a mode or project value."
   - "Ethical restraint precedent: victims/subjects get interior lives and dignity, not just plot/illustrative function."
 
+# --------------------------------------------------------------------
+# Plot logic -- the causal spine of the outline stage.
+#
+# The rule (vault CLAUDE.md, "Plot logic" section, is authoritative; this
+# block is its machine-readable form, enforced by plot_logic.py and injected
+# into the outline prompt by run_pipeline.py and the skill):
+#
+#   Between any two plot beats there is either a BUT or a THEREFORE.
+#   "And then" is the failure -- it means the second beat did not need the first.
+#
+# The outline must carry a "Causal ledger": one Markdown table, one row per beat,
+# each row naming the earlier beat it depends on and the phrase from that beat's
+# Changes that it pushes on. plot_logic.py checks the ledger is well formed, that
+# every named phrase really is in the beat it cites, and that the chain has the
+# right shape. It cannot judge whether a link is TRUE -- that stays with the
+# author at the checkpoint -- but it makes an unearned link impossible to hide.
+# --------------------------------------------------------------------
+plot_logic:
+  ledger_heading: "Causal ledger"
+  columns:
+    required: ["#", "Link", "Because", "Beat", "Changes"]
+    optional: ["Response"]          # a register may add one track column of its own
+  defaults:
+    max_and_then: 0                 # every plot beat is a T or a B; a mode may raise this
+    max_pile_on: 3                  # this many B in a row, with no T between, warns
+    max_smooth_run: 4               # this many T in a row, with no B between, warns
+  links:
+    open:
+      word: "(origin)"
+      meaning: "A thread starts here and needs nothing before it. First beat of each thread only."
+    T:
+      word: "therefore"
+      meaning: "This beat happens BECAUSE of what the cited beat left behind."
+      test: "Delete the cited beat. If this beat can still happen the same way, it is not a therefore."
+    B:
+      word: "but"
+      meaning: "This beat DEFEATS or complicates what the cited beat left behind: the plan, the explanation, the expectation."
+      test: "Without this beat, the cited beat's outcome would have held. If it would not have, it is not a but."
+    A:
+      word: "and then"
+      meaning: "Declared: no dependency. Honest labelling beats a false T; every A is a to-do."
+      test: "Swap it with the cited beat. If nothing is lost, it is an and-then."
+  responses:
+    denies: "explains it away, shelves it, files it"
+    complies: "does what the situation or an authority asks"
+    investigates: "tests, checks, asks, counts, looks for the edge of it"
+    resists: "opposes it directly"
+    flees: "tries to leave"
+    chooses: "acts on a decision of their own"
+    surrenders: "stops opposing and yields to it"
+    complicit: "takes an active part in the thing continuing (conceals, authors, feeds it)"
+    none: "no response; the beat happens to them or without them"
+  endings:
+    cyclical: "loops back to the opening situation or line"
+    handoff: "the threat passes to a new victim"
+    consumed: "the protagonist is absorbed, transformed or lost"
+    complicit: "the protagonist ends as an agent of the thing"
+    no-return: "crossed over and does not come back"
+    return-with-residue: "comes back changed, with partial memory or a mark; most of it is lost"
+    cost-paid: "the goal is reached at a specific, irreversible price"
+    irreversible-knowledge: "nothing outside changes; the protagonist cannot un-know"
+    recognition: "ends on recognition, not revelation"
+    self-reclaimed: "the self is reassembled by an act of choice; whole, changed, nothing lost"
+
+# Registers -- overlays on a mode. A MODE says how the piece sounds (voice); a
+# REGISTER says what kind of world it runs in (physics). They cut across modes:
+# in the vault, Trips Are Like Exes is confessional-poetry AND psychedelic, The
+# Endless Temple is epic-fantasy AND liminal, Missing Campsites is horror-prose
+# AND liminal AND cosmic. A register adds a "track" column to the ledger (one
+# state variable that must move as the story moves), a few shape rules, and the
+# endings it normally earns. Modes are hard rules; registers are guidance, so a
+# register only ever warns unless its config says otherwise.
+#
+# A register's `worked_examples` are vault-relative paths; reference_pull reads
+# them alongside the mode's. `note` is the vault craft note that explains it.
+registers:
+  liminal:
+    summary: >
+      Between-states: a threshold crossed, held and (maybe) recrossed. The surface
+      stays ordinary; the rules do not.
+    track:
+      column: "Place"
+      levels: [outside, crossing, between, inside, back]
+      monotone: false
+      start: [outside, between]
+      must_include: [between]
+    endings: [return-with-residue, no-return, cyclical, handoff]
+    worked_examples:
+      - "04_Book_Concepts/02_Missing_Campsites"
+      - "02_Novels/05_The_Endless_Temple_-_Elaris_Sel_Marden"
+      - "03_Stories/03_The_Yellow_Drop_and_The_Plain_Before_Sound"
+      - "04_Book_Concepts/08_The_Show_Must_Go_On"
+    note: "_Craft/liminality"
+    guidance: |
+      Name what opens the door in the Changes of the `crossing` row: sleep, reading,
+      a rule broken at a set hour, a cut. This vault keys thresholds to clocks
+      (10:00 in Project: Man Eater, 2:22 in Trip Tracker, the alarm in The Yellow
+      Drop) -- use a clock or a count unless you have a better door.
+      The `between` rows carry the register: the surface stays ordinary and the
+      rules are wrong ("Not dangerous. Not dramatic. Just wrong."). Dread comes from
+      subtraction and inconsistency, not spectacle.
+      Decide the exit before the entry. `back` earns return-with-residue (something
+      carried out, most of it lost); `inside` earns no-return or handoff. A crossing
+      with no `between` is a teleport, not a threshold.
+  psychedelic:
+    summary: >
+      Perception dissolves and reconstitutes. The self is the variable; the world is
+      what the self is made of.
+    track:
+      column: "Self"
+      levels: [intact, permeable, fractured, dissolved, reconstituted]
+      monotone: false
+      start: [intact]
+      must_include: [fractured]
+    turn:
+      after_level: fractured
+      response_in: [surrenders, chooses]
+      severity: warn
+      message: "After the self fractures, the way out is a surrender or a redirect, not a fix. The vault's model (Trip Tracker, phase V) turns on a deliberate act of yielding."
+    endings: [return-with-residue, recognition, self-reclaimed, no-return]
+    worked_examples:
+      - "09_Dream_Journal/02_Trip_Tracker_-_July_Fourteenth_2023"
+      - "03_Stories/03_The_Yellow_Drop_and_The_Plain_Before_Sound"
+      - "03_Stories/01_A_Journey_Into_the_Soul"
+      - "07_Poems_and_Prose/01_Trips_Are_Like_Exes"
+    note: "_Craft/psychedelia"
+    guidance: |
+      Write the experience's structure and symbols. Never write substances, doses,
+      sourcing or how-to; the vault's own record states this ("without glorifying or
+      encouraging the circumstances that produced it"). That is a restraint on the
+      piece, not on the theme.
+      The vault's model is seven phases: Awakening, Expansion, Fracturing, Descent,
+      Reorientation, Encounter, Dissolution of memory. As causality: intensification
+      (T), a valence flip in which the opening of barriers turns into exposure (B),
+      a surrender that answers it (T), and a return that loses most of what was
+      found (B).
+      Perception is the landscape. The Yellow Drop builds a world out of sound;
+      A Journey Into the Soul makes an eye a planet. Let a sense organ be the setting.
+      End on residue or recognition, never on an explanation of what it meant.
+  cosmic:
+    summary: >
+      Lovecraftian design: knowledge is the wound, and the thing is indifferent
+      rather than malicious. The ladder of what the protagonist knows is the engine.
+    track:
+      column: "Knows"
+      levels: [unaware, anomaly, pattern, scale, implicated]
+      monotone: true
+      start: [unaware, anomaly]
+      end_at_least: scale
+      max_jump: 1
+    expect_response:
+      investigates:
+        severity: warn
+        message: "No beat where the protagonist tests the anomaly. In the vault's short horror, knowledge mostly arrives by exposure; the one full inquiry engine is The Redacted Testament of Lira Calyx. A Lovecraftian ladder is earned by an act of inquiry that can fail. Add at least one."
+    endings: [irreversible-knowledge, consumed, handoff, cyclical, complicit, no-return]
+    worked_examples:
+      - "04_Book_Concepts/02_Missing_Campsites"
+      - "05_Worldbuilding/02_The_Redacted_Testament_of_Lira_Calyx"
+      - "03_Stories/07_Project_-_Man_Eater"
+      - "03_Stories/08_Following_The_Sheep"
+      - "04_Book_Concepts/04_The_Bloody_Alarm_Clock"
+      - "05_Worldbuilding/01_People_of_the_Bark"
+    note: "_Craft/cosmic-horror"
+    guidance: |
+      The ladder is anomaly, pattern, scale, implicated. Earn each rung with an act
+      (T: look, test, ask, count) that lands as a B (what is found breaks the current
+      shelf). Do not skip a rung; the skipped rung is where the dread lived.
+      Scale is indifference: the thing does not want anything from the protagonist.
+      The vault's own reveal is intimate rather than vast. The last rung is usually
+      that the protagonist is the entry, the hand, the thing (monster-from-victim;
+      the keeper who wrote the log). Scale first, then implication.
+      Vault voice, not baroque voice: dread by subtraction and a flat register.
+      CLAUDE.md's ban on multi-paragraph description stands; render the unnameable
+      by the failure of the catalogue, not by extended description.
+      A found document, a log or a testament is the natural frame; if the frame is
+      tampered with (marginal notes, overwritten entries), the tampering is a beat.
+
 frontmatter_schema:
   # Field -> meaning, copied from CLAUDE.md's frontmatter table. Stage 6
   # fills these in for the new work.
@@ -172,6 +383,7 @@ frontmatter_schema:
   pov: "As actually written -- don't assume from mode."
   tense: "As actually written -- don't assume from mode."
   project: "Set only when explicitly part of a named series/world -- never inferred."
+  register: "Optional list of registers the piece was written under (liminal | psychedelic | cosmic). Written only when a register was used; never inferred. It does not change `mode`."
   source_volume: "Provenance field. For pipeline-generated new works, leave empty (not split from a master document)."
   source_lines: "Provenance field. Leave empty for pipeline-generated new works."
   tags: "Nested type/..., mode/..., theme/..., project/..., status/..., archetype/... tags for the Tag pane/Graph/Bases."
@@ -199,6 +411,10 @@ stages:
         - candidate archetypes, if any (list; leave empty if none)
         - project tie, ONLY if the author explicitly names one -- never
           infer a project tie (see vault_wide_rules)
+        - register(s), if the author names any: liminal, psychedelic and/or
+          cosmic (see registers: above). A register is what kind of world the
+          piece runs in; the mode is how it sounds. Never infer one -- if the
+          idea seems to want one, say so and ask.
       If the mode is ambiguous or unset, ask the author which of the
       vault's modes (or "unclassified") this belongs to -- do not guess.
       Write the result as idea.md with a short YAML-ish header followed
@@ -267,6 +483,7 @@ stages:
       that lands the point. If the piece will have multiple movements
       (see worked examples), outline each movement's claim/parable/
       practice/callback beat separately.
+      {plot_logic}
       Write the result as outline.md.
 
   - id: draft
@@ -283,6 +500,11 @@ stages:
       do-not list") as well as the mode-specific rules above. Do not
       resolve ambiguities in the outline by inventing new plot/thematic
       material outside its scope -- flag them instead.
+      If outline.md has a "Causal ledger", write to it: make each beat's
+      Because phrase visible on the page, so the reader can see what the
+      earlier beat left behind and watch this beat push on it. Do not add a
+      beat that is not in the ledger; if the draft needs one, add it with
+      its Link and Because and flag it in the notes.
       Write the result as draft.md.
 
   - id: self_revision
@@ -306,6 +528,12 @@ stages:
           if any), not the score alone.
         - the ethical-restraint precedent (interior lives/dignity for
           any subject used illustratively)
+        - the causal ledger, if outline.md has one: walk it against the
+          draft beat by beat. A beat whose Because phrase is not visible on
+          the page has become an "and then" in execution -- fix it or flag
+          it. Confirm the draft's ending is the ledger's declared Ending.
+        - for a psychedelic register: no substances, doses, sourcing or
+          how-to anywhere in the draft (see the register's guidance)
       Produce draft_revised.md (the corrected draft) and
       revision_notes.md (a short changelog: what changed and why, and
       anything flagged for the author to decide rather than silently

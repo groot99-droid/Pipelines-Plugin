@@ -69,13 +69,42 @@ a tie or a quote were asserted:
 practice/action-item → closing callback/aphorism). Work from idea.md and
 references.md as given.
 
+If the caller's prompt contains a PLOT LOGIC block, the outline must also end
+with the `## Causal ledger` it describes: one Markdown table, the exact
+columns it names, one row per plot beat, and an `Ending:` line beneath. The
+discipline is the same as for quotes and vault ties, and it applies to you
+with no exception:
+
+- A `Because` phrase must be copied word for word from the `Changes` cell of
+  the beat it cites. Never write a phrase that only sounds right. A checker
+  verifies it, and a phrase that is not there is an error, not a style issue.
+- If a beat does not depend on an earlier one, label it `A` and say so. An
+  honest `A` is worth more than a false `T`; the caller will decide whether to
+  cut it or give it a dependency. Do not launder an and-then into a therefore
+  by quoting a phrase the beat does not actually push on.
+- `Changes` is what is irreversibly different after the beat. Never empty,
+  never repeated from another row.
+- You have Bash: before you return an outline, pipe it to the checker
+  (`python creative-writing/pipeline/plot_logic.py check - --mode <mode> [--register <r>]`,
+  outline on stdin) and fix every error it reports. The checker only reads.
+- Do not invent material to satisfy the checker. If an outline cannot be made
+  causal without inventing plot the idea did not contain, keep the outline and
+  flag the gap in a line under the ledger.
+- Where a register is active, its state column must move the way the block
+  says. Do not skip a rung of a ladder to hurry a story.
+
 **Draft**: full draft in the mode's voice per spec.yaml's voice notes
 (for essay-self-help: elevated abstract-noun lexicon, "architecture" as
 connective tissue where it fits naturally -- not forced into every
 paragraph, shifting 1st/2nd person as the voice actually does, preserve
 the "over-explain" instinct rather than sanding it into ambiguity). Work
 from outline.md (and references.md for grounding), following the
-mode-rule block the caller gives you.
+mode-rule block the caller gives you. If outline.md has a causal ledger,
+write to it: make each beat's `Because` phrase visible on the page so the
+reader sees what the earlier beat left behind and watches this beat push on
+it, and do not add a beat the ledger does not have (add it with its Link and
+Because and flag it instead). For a psychedelic register, write no
+substances, doses, sourcing or how-to.
 
 **Self-revision**: check the draft against the mode rules and the
 vault-wide anti-style list from spec.yaml/CLAUDE.md, most importantly
@@ -84,4 +113,7 @@ draft plus a short changelog of what changed and why, in the format the
 caller's stage prompt asks for (typically two labeled sections or two
 separate artifacts: draft_revised.md content and revision_notes.md
 content). Verify any claimed connection per the rule above before letting
-it stand.
+it stand. If outline.md has a causal ledger, also walk it against the draft
+beat by beat: a beat whose `Because` phrase is not visible on the page has
+become an and-then in execution, so fix it or flag it, and confirm the
+draft's ending is the ledger's declared `Ending:`.

@@ -54,6 +54,31 @@ is deliberately left a stub: per `CLAUDE.md`, a piece in that bucket
 means asking the author which register they want rather than defaulting
 to a fixed mode's rules.
 
+### Plot logic and registers
+
+A story is a chain of *but* and *therefore*, never *and then*. The outline stage
+now requires a **causal ledger**: one table, a row per beat, each row naming the
+earlier beat it depends on and a phrase copied from that beat's `Changes`. A
+checker (`creative-writing/pipeline/plot_logic.py`) verifies the phrase is really
+there, the chain's shape, and that the ending is legal for the mode; a failing
+ledger gets one automatic repair pass, and the report is written beside the
+outline (`plot_logic_report.md`). It cannot judge whether a link is true; that
+stays with the author at the checkpoint.
+
+A **register** (`liminal`, `psychedelic`, `cosmic`) is an overlay on a mode: the
+mode says how the piece sounds, the register says what kind of world it runs in.
+It adds one state column to the ledger and a few shape rules.
+
+```
+python creative-writing/pipeline/run_pipeline.py new --mode horror-prose --register cosmic --idea "..."
+python creative-writing/pipeline/plot_logic.py check outline.md --mode horror-prose --register cosmic
+python -m unittest discover -s creative-writing/pipeline/tests
+```
+
+The rules are in `creative-writing/vault/CLAUDE.md` ("Plot logic"); the reasoning
+and worked examples, including ledgers of the vault's own pieces, are in
+`creative-writing/vault/_Craft/`.
+
 ### Three execution backends: local / native / mcp
 
 The pipeline's generation work runs through one of three named backends:

@@ -12,7 +12,7 @@ Ollama-backed regardless of the drafting backend -- before it reaches the
 drafting prompt, to keep raw vault files out of that prompt's context.
 
 Usage:
-    python run_pipeline.py new --mode essay-self-help --idea "..." [--run-id slug]
+    python run_pipeline.py new --mode essay-self-help --idea "..." [--run-id slug] [--register R ...]
     python run_pipeline.py continue <run-id> [--confirm]
     python run_pipeline.py status <run-id>
 
@@ -30,6 +30,7 @@ from pathlib import Path
 
 import librarian
 import llm
+import plot_logic
 import vault_integration as vi
 
 HERE = Path(__file__).resolve().parent
@@ -152,10 +153,12 @@ def _mode_cfg(spec: dict, mode: str) -> dict:
     return cfg
 
 
-def handle_intake(run_id, spec, mode, idea_seed):
+def handle_intake(run_id, spec, mode, idea_seed, registers=()):
     mode_cfg = _mode_cfg(spec, mode)
     stage = stage_by_id(spec, "intake")
     prompt = fill_template(stage["prompt"], mode, mode_cfg)
+    if registers:
+        prompt += f"\n\nRegister(s) the author chose: {', '.join(registers)}\n"
     prompt += f"\n\nRaw idea from the author:\n{idea_seed}\n"
     result = draft(prompt)
     write_artifact(run_id, "idea.md", result)
@@ -212,7 +215,7 @@ def _extract_idea_themes(idea_text: str, vault_root: Path, limit: int = 3) -> li
     return matched
 
 
-def handle_reference_pull(run_id, spec, mode, vault_root):
+def handle_reference_pull(run_id, spec, mode, vault_root, registers=()):
     mode_cfg = _mode_cfg(spec, mode)
     stage = stage_by_id(spec, "reference_pull")
     idea_text = read_artifact(run_id, "idea.md")
@@ -254,13 +257,19 @@ def handle_reference_pull(run_id, spec, mode, vault_root):
     # hits -- capped so librarian.digest_files' cost stays bounded even
     # when both hit sources are full.
     files_to_read = [f"{p}.md" for p in mode_cfg.get("worked_examples", [])]
+    # A register's worked examples ride along with the mode's: a cosmic piece
+    # should be grounded in Missing Campsites, not only in the mode's three.
+    for name in registers:
+        for p in spec["registers"][name].get("worked_examples", []):
+            if f"{p}.md" not in files_to_read:
+                files_to_read.append(f"{p}.md")
     for hit in hits[:5]:
         if hit["file"] not in files_to_read:
             files_to_read.append(hit["file"])
     for hit in tag_hits[:5]:
         if hit["file"] not in files_to_read:
             files_to_read.append(hit["file"])
-    files_to_read = files_to_read[:10]
+    files_to_read = files_to_read[:12]
 
     digest = librarian.digest_files(
         vault_root, files_to_read, query=idea_text[:300],
@@ -283,15 +292,45 @@ def handle_reference_pull(run_id, spec, mode, vault_root):
     return "references.md written. Review it, then run `continue` to outline."
 
 
-def handle_outline(run_id, spec, mode):
+def handle_outline(run_id, spec, mode, registers=()):
     mode_cfg = _mode_cfg(spec, mode)
     stage = stage_by_id(spec, "outline")
-    prompt = fill_template(stage["prompt"], mode, mode_cfg)
+    registers = list(registers)
+    rules = plot_logic.render_rules(spec, mode, registers)
+    prompt = fill_template(stage["prompt"], mode, mode_cfg).replace("{plot_logic}", rules)
     prompt += "\n\n--- idea.md ---\n" + read_artifact(run_id, "idea.md")
     prompt += "\n\n--- references.md ---\n" + read_artifact(run_id, "references.md")
     result = draft(prompt)
+
+    if not rules:  # this mode has no plot logic and no register asked for it
+        write_artifact(run_id, "outline.md", result)
+        return "outline.md written. Review it, then run `continue` to draft."
+
+    results = plot_logic.check_text(result, spec, mode, registers)
+    if not all(r["ok"] for _, r in results):
+        # One automatic repair pass, in the checker's own words. The checker cannot
+        # judge whether a link is TRUE, only that it is declared and anchored, so a
+        # second failure is left for the author at the checkpoint.
+        report = plot_logic.render_report(results, mode, registers)
+        repair = (
+            "The outline below failed the plot-logic checker. Rewrite the FULL outline, "
+            "fixing every ERROR (and the warnings where you can) without dropping anything "
+            "else that was good. Where a beat is an 'and then', either give it a real "
+            "dependency on an earlier beat's Changes or cut it. Output only the corrected outline.\n\n"
+            f"{rules}\n\n--- checker report ---\n{report}\n--- outline.md ---\n{result}"
+        )
+        fixed = draft(repair)
+        fixed_results = plot_logic.check_text(fixed, spec, mode, registers)
+        if sum(len(r["findings"]) for _, r in fixed_results) <= sum(len(r["findings"]) for _, r in results):
+            result, results = fixed, fixed_results
+
+    report = plot_logic.render_report(results, mode, registers)
     write_artifact(run_id, "outline.md", result)
-    return "outline.md written. Review it, then run `continue` to draft."
+    write_artifact(run_id, "plot_logic_report.md", report)
+    passed = all(r["ok"] for _, r in results)
+    return (f"outline.md written; plot logic {'PASSED' if passed else 'FAILED'} (see plot_logic_report.md).\n{report}"
+            "Review both, then run `continue` to draft."
+            + ("" if passed else " Fix the ledger errors first: a draft is only as causal as its outline."))
 
 
 def handle_draft(run_id, spec, mode):
@@ -393,7 +432,7 @@ def handle_self_revision(run_id, spec, mode, vault_root):
 _INTEGRATION_JSON_RE = re.compile(r"```json\s*(.*?)\s*```", re.DOTALL)
 
 
-def handle_vault_integration(run_id, spec, mode, vault_root, confirm: bool):
+def handle_vault_integration(run_id, spec, mode, vault_root, confirm: bool, registers=()):
     mode_cfg = _mode_cfg(spec, mode)
     stage = stage_by_id(spec, "vault_integration")
     schema = spec["frontmatter_schema"]
@@ -405,10 +444,14 @@ def handle_vault_integration(run_id, spec, mode, vault_root, confirm: bool):
         "index_entry_summary (one sentence, matching the style of existing _index.md entries), "
         "annotation_patterns (list of short pattern tags), "
         "annotation_body (a paragraph of genuine craft analysis of THIS piece, not templated, "
-        "referencing revision_notes.md where relevant).\n\n"
+        "referencing revision_notes.md where relevant, and, if plot_logic_report.md is present, "
+        "the piece's causal shape: where its buts and therefores fall, and how the protagonist's "
+        "agency moves). Reuse a pattern name from an existing annotation when one truly fits, "
+        "rather than coining a new one for its own sake.\n\n"
         f"frontmatter field meanings: {json.dumps(schema)}\n\n"
         "--- idea.md ---\n" + read_artifact(run_id, "idea.md") +
         "\n\n--- outline.md ---\n" + read_artifact(run_id, "outline.md") +
+        "\n\n--- plot_logic_report.md ---\n" + read_artifact(run_id, "plot_logic_report.md") +
         "\n\n--- draft_revised.md ---\n" + read_artifact(run_id, "draft_revised.md") +
         "\n\n--- revision_notes.md ---\n" + read_artifact(run_id, "revision_notes.md")
     )
@@ -422,6 +465,7 @@ def handle_vault_integration(run_id, spec, mode, vault_root, confirm: bool):
     tags = [f"type/{mode_cfg['file_type']}", f"mode/{mode}"]
     tags += [f"theme/{t}" for t in meta.get("themes", [])]
     tags += [f"status/{meta.get('status', 'draft')}"]
+    tags += [f"register/{r}" for r in registers]
 
     frontmatter = {
         "title": title,
@@ -439,13 +483,16 @@ def handle_vault_integration(run_id, spec, mode, vault_root, confirm: bool):
         "attachments": [],
         "tags": tags,
     }
+    if registers:  # recorded only when used; ordinary pieces carry no register field
+        frontmatter = {**{k: v for k, v in frontmatter.items() if k != "tags"},
+                       "register": list(registers), "tags": tags}
     annotation_frontmatter = {
         "title": f"Annotation — {title}",
         "type": "annotation",
         "annotates": f"[[{mode_cfg['target_folder']}/PLACEHOLDER]]",  # filled below once filename is known
         "mode": mode,
         "patterns": meta.get("annotation_patterns", []),
-        "tags": ["annotation", f"mode/{mode}"],
+        "tags": ["annotation", f"mode/{mode}"] + [f"register/{r}" for r in registers],
     }
 
     # Draft body: strip a leading H1 if the draft already includes one, since
@@ -502,18 +549,19 @@ def run_stage(stage_id: str, run_id: str, spec: dict, state: dict, vault_root: P
     """Dispatch a single stage. Raises on failure -- callers decide how that
     affects run state (see _run_and_advance)."""
     mode = state["mode"]
+    registers = state.get("registers", [])
     if stage_id == "intake":
-        return handle_intake(run_id, spec, mode, state["idea_seed"])
+        return handle_intake(run_id, spec, mode, state["idea_seed"], registers)
     if stage_id == "reference_pull":
-        return handle_reference_pull(run_id, spec, mode, vault_root)
+        return handle_reference_pull(run_id, spec, mode, vault_root, registers)
     if stage_id == "outline":
-        return handle_outline(run_id, spec, mode)
+        return handle_outline(run_id, spec, mode, registers)
     if stage_id == "draft":
         return handle_draft(run_id, spec, mode)
     if stage_id == "self_revision":
         return handle_self_revision(run_id, spec, mode, vault_root)
     if stage_id == "vault_integration":
-        return handle_vault_integration(run_id, spec, mode, vault_root, confirm=confirm)
+        return handle_vault_integration(run_id, spec, mode, vault_root, confirm=confirm, registers=registers)
     raise SystemExit(f"Unknown stage '{stage_id}'")
 
 
@@ -545,6 +593,10 @@ def _run_and_advance(run_id: str, spec: dict, state: dict, stage_id: str, confir
 def cmd_new(args):
     spec = load_spec()
     _mode_cfg(spec, args.mode)  # validates mode is implemented
+    try:
+        plot_logic.register_cfgs(spec, args.register)  # validates every register name
+    except plot_logic.ConfigError as exc:
+        raise SystemExit(str(exc))
 
     run_id = args.run_id or slugify(args.idea)
     d = run_dir(run_id)
@@ -554,6 +606,7 @@ def cmd_new(args):
 
     state = {
         "run_id": run_id, "mode": args.mode, "idea_seed": args.idea,
+        "registers": list(dict.fromkeys(args.register)),
         "created": datetime.now(timezone.utc).isoformat(),
         "completed_stages": [], "next_stage_index": 0,
     }
@@ -591,6 +644,9 @@ def build_arg_parser():
     p_new.add_argument("--mode", required=True)
     p_new.add_argument("--idea", required=True)
     p_new.add_argument("--run-id", default=None)
+    p_new.add_argument("--register", action="append", default=[],
+                       help="Overlay on the mode (liminal, psychedelic, cosmic); repeatable. "
+                            "See spec.yaml registers:.")
     p_new.set_defaults(func=cmd_new)
 
     p_continue = sub.add_parser("continue", help="Run the next stage of an existing run.")

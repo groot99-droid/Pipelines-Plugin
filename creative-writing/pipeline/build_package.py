@@ -41,7 +41,7 @@ AGENT_FILES = [
 
 PIPELINE_SCRIPT_FILES = [
     "spec.yaml", "run_pipeline.py", "llm.py", "librarian.py",
-    "vault_integration.py", "requirements.txt",
+    "vault_integration.py", "plot_logic.py", "requirements.txt",
 ]
 VAULT_DEPENDENCY_FILES = [
     VAULT_ROOT / "tools" / "vault_search.py",

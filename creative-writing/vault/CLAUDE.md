@@ -21,10 +21,11 @@ this vault, prefix it: `creative-writing/vault/tools/vault_search.py`.
 - `<folder>/_index.md` — one per numbered folder (e.g. [[02_Novels/_index]]), listing every file in that folder with a link to its companion annotation.
 - [[Vault_Overview.canvas]] — visual map: one group per style-mode, with cross-project edges (open in Obsidian).
 - `_Annotations/<folder>/<file>.md` — a companion craft-annotation note for every one of the 63 works, mirroring the folder structure.
+- [[_Craft/_index]] — cross-cutting craft notes: plot logic, and the liminal, psychedelic and cosmic registers. Analysis written with Claude, not the author's prose.
 
 ## Using `tools/vault_search.py`
 
-A self-contained, dependency-free TF-IDF search over the whole vault (works, the index, and annotations). No Ollama, no network, no external packages.
+A self-contained, dependency-free TF-IDF search over the whole vault (works, the index, annotations, and craft notes). No Ollama, no network, no external packages. A result labelled `[craft]` is analysis written with Claude, never the author's own prose: use it as guidance and evidence, do not quote it as the author's voice.
 
 ```
 python tools/vault_search.py index                      # rebuild after any content/frontmatter change
@@ -51,6 +52,7 @@ Every work now carries YAML frontmatter above its `# Title` line:
 | `status` | draft / complete / fragment / outline |
 | `pov`, `tense` | as actually written — don't assume from mode |
 | `project` | set only when a file is explicitly part of a named series/world (e.g. `wyrmreach`, `creative-codex`) |
+| `register` | optional list (`liminal`, `psychedelic`, `cosmic`): the kind of world a *new* piece was written under. Written only when a register was used, never inferred, and it never changes `mode`. The 63 originals carry none. |
 | `source_volume`, `source_lines` | provenance back to the master documents |
 | `tags` | nested `type/…`, `mode/…`, `theme/…`, `project/…`, `status/…`, `archetype/…` for the Tag pane/Graph/Bases |
 | `attachments` | reserved for future non-markdown assets; empty today |
@@ -89,6 +91,24 @@ If a new piece's intended mode is ambiguous, ask — don't silently invent a `mo
 **Structure:** Poems often pair or cluster thematically (companion/rebuttal pieces, e.g. a betrayal poem answered by a resilience poem) rather than standing fully alone — check the folder MOC and nearby annotations for a piece that might be in conversation with the one being written.
 **Worked examples:** [[_Annotations/07_Poems_and_Prose/05_Inherited]], [[_Annotations/07_Poems_and_Prose/09_The_Knife_I_Chose]] paired with [[_Annotations/07_Poems_and_Prose/10_The_Stripes_Remain]].
 
+## Plot logic
+
+Applies to stories: `horror-prose`, `epic-fantasy`, and any piece written under a **register** (below). It does not apply to essays or poems unless a register is chosen. This section is the authority. `pipeline/spec.yaml` (`plot_logic:`, `registers:`) is its machine-readable form, `pipeline/plot_logic.py` enforces it, and [[_Craft/plot-logic]] gives the reasoning and worked examples.
+
+**The rule.** Between any two plot beats there is either a *but* (this beat defeats what the last one left behind) or a *therefore* (it happens because of it), never an *and then*. Delete the earlier beat: if the later one still happens the same way, it is not a therefore. Swap the two: if nothing is lost, it is an and-then.
+
+**The causal ledger.** A story outline ends with a `## Causal ledger`: one table, one row per beat, with `Link` (`open`, `T`, `B` or `A`), `Because` (an earlier beat's number plus a phrase copied from that beat's `Changes`), `Beat`, `Response` (what the protagonist does about it), `Changes` (what is now irreversibly different), and a declared `Ending:` beneath. The checker verifies that the phrase is really there, that the chain has the right shape, and that the ending is legal for the mode. It cannot judge whether a link is *true*; the author reviews that at the outline checkpoint. The draft must make each `Because` visible on the page, so a beat that reads as an and-then in execution is a defect even if the outline was sound.
+
+**Horror-prose keeps its engine.** Escalation-by-catalogued-incident stays. What changes is that it is causal: each incident is a *but* that breaks the protagonist's current explanation, each shelving is the *therefore* that the next incident must specifically break, and a run of incidents that merely add wrongness is the failure. The ending must be one of `cyclical`, `handoff`, `consumed`, `complicit`, `no-return`, `irreversible-knowledge`; this is the "no tidy, rescued endings" rule below, enforced at outline time. Let the shelving get thinner as the list grows and let `Response` show the agency decaying.
+
+**Registers.** A *mode* says how a piece sounds; a *register* says what kind of world it runs in. They cut across modes: *Trips Are Like Exes* is confessional-poetry and psychedelic, *The Endless Temple* is epic-fantasy and liminal, *Missing Campsites* is horror-prose and liminal and cosmic. A register adds one state column to the ledger and a few shape rules; it never removes a rule the mode has. A horror mode that forbids a tidy ending still forbids it under `psychedelic`. **Never infer a register; ask.** Each has a craft note.
+
+- **`liminal`** ([[_Craft/liminality]]): a threshold crossed, held and maybe recrossed; the surface stays ordinary and the rules do not. Track `Place`. Needs a `between`; decide the exit before the entry.
+- **`psychedelic`** ([[_Craft/psychedelia]]): perception dissolves and reconstitutes; after the fracture the way out is a surrender or a choice, never a fix. Track `Self`.
+- **`cosmic`** ([[_Craft/cosmic-horror]]): Lovecraftian design, a ladder of knowledge (`anomaly`, `pattern`, `scale`, `implicated`) that only rises, earned by acts of inquiry. Track `Knows`. The vault voice stays flat and compressed; the multi-page description ban below stands.
+
+**Not yet covered.** The voice shared by the visionary pieces (the negation ladder, clinical distance, endings on recognition) is not a mode. Those pieces are `unclassified`, and per the table above the pipeline asks which register the author wants; a register supplies their structure, not their voice.
+
 ## Anti-Style / do-not list
 
 - **No sustained multi-page dialogue-driven scenes.** Dialogue across this vault is sparse and functional — a burst of exchange, not a scene's engine. The one exception (script-format sketches like *Internal Affairs*) is a distinct comedic form, not license to default to dialogue-heavy scenes elsewhere.
@@ -96,6 +116,7 @@ If a new piece's intended mode is ambiguous, ask — don't silently invent a `mo
 - **No mid-scene POV head-hopping.** POV shifts happen between sections/chapters, not within one continuous scene — except the one deliberate WrymWretch experiment, which is a named exception, not a default technique.
 - **No tidy, rescued endings in Horror-Prose mode.** Default to complicity, transformation, or the cycle continuing.
 - **Ethical restraint precedent, from [[_Annotations/02_Novels/03_Through_the_Eyes_of_Wolf_and_Lamb|Through the Eyes of Wolf and Lamb]]:** *"I will not make victims into props for cleverness; they will have interior lives, small habits, and the dignity of being more than plot points."* Treat this as the default restraint for graphic material — victims get interior lives, no gratuitous how-to/technique detail — unless the user explicitly asks to write something as viscerally graphic as the vault's more exploitative horror pieces (e.g. *Project: Man Eater*, *Melting Away*).
+- **Psychedelic material records the experience's structure and symbols, never substances, doses, sourcing or how-to.** Precedent: [[09_Dream_Journal/02_Trip_Tracker_-_July_Fourteenth_2023|Trip Tracker]] preserves its vision "without glorifying or encouraging the circumstances that produced it". This is a restraint on the piece, not on the theme.
 - **Don't silently invent `mode`, `project`, or archetype ties.** Several plausible-looking connections in this vault turned out to be false on inspection (e.g. Graknox sits next to the Wyrmreach codex in the source document but has zero textual tie to that world) — verify before asserting a connection, or ask.
 
 ## Companion annotation notes as worked examples
