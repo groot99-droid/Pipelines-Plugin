@@ -11,13 +11,15 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 |---|---|---|
 | `creative-writing/` | The Obsidian vault of 63 works plus the checkpointed pipeline that writes into it. | - |
 | `plugins/` | Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, with a design-system generator. | [plugins/ui-design/INDEX.md](plugins/ui-design/INDEX.md) |
+| `studio/` | Checkpointed production pipelines and the notes they leave behind. | - |
 
-## Skills (5)
+## Skills (6)
 
 | Skill | What it does |
 |---|---|
 | [chunk-tag-backfill](.claude/skills/chunk-tag-backfill/SKILL.md) | Runs (or re-runs) the creative-writing-chunk-tagger subagent over the vault's work files, writing/updating each one's creative-writing/vault/_ChunkTags/ sidecar. |
 | [creative-writing-pipeline](.claude/skills/creative-writing-pipeline/SKILL.md) | Walk a new idea for this vault through the checkpointed multi-stage pipeline (intake, reference pull, outline, draft, self-revision, vault integration) instead of writing a finished piece in one shot. |
+| [studio-pipeline](.claude/skills/studio-pipeline/SKILL.md) | Walk one made thing through the studio's checkpointed pipeline (intake, context, recipe, execute, review, record), resolving and attesting its brand context before anything is run and leaving a Content MD in the studio vault. |
 | [ui-design-catalog](plugins/ui-design/skills/ui-design-catalog/SKILL.md) | Searches a local BM25 catalog of UI styles, product palettes, font pairings, UX guidelines, icons, motion presets, chart types, and 22 stacks, and generates a contrast-checked design system from it -- instead of inventing visual decisions from memory. |
 | [ui-design-catalog-refresh](plugins/ui-design/skills/ui-design-catalog-refresh/SKILL.md) | Refreshes the ui-design catalog's upstream-derived data -- the Google Fonts and Phosphor icon catalogs -- by fetching the upstream sources, generating review-only candidates under the plugin's maintenance/candidates/, diffing them against the live rows, and stopping for human... |
 | [ui-design-multipart](plugins/ui-design/skills/ui-design-multipart/SKILL.md) | Orchestrates the two multipart ui-design workflows -- a search fan-out for a wide product brief, and a four-area review of a built page -- by splitting the work with a script, giving each part to one subagent, and merging and cross-checking the answers with merge_parts.py. |

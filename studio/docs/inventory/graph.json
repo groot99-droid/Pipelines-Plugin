@@ -1,0 +1,5329 @@
+{
+ "nodes": [
+  {
+   "id": "protocol-core/studio-router-protocol-router-md-v1-1",
+   "name": "Studio Router protocol (Router.md v1.1)",
+   "kind": "protocol",
+   "status": "specified-not-implemented",
+   "subsystem": "protocol-core",
+   "paths": [
+    "Router.md"
+   ]
+  },
+  {
+   "id": "protocol-core/router-2-dual-trigger-intercept-and-8-step-sequence",
+   "name": "Router §2 dual-trigger intercept and 8-step sequence",
+   "kind": "protocol",
+   "status": "specified-not-implemented",
+   "subsystem": "protocol-core",
+   "paths": [
+    "Router.md"
+   ]
+  },
+  {
+   "id": "protocol-core/router-3-routing-table-skill-mandatory-context",
+   "name": "Router §3 routing table (skill → mandatory context)",
+   "kind": "data",
+   "status": "partial",
+   "subsystem": "protocol-core",
+   "paths": [
+    "Router.md",
+    "dashboard.json",
+    "router.js",
+    "skills/*.skill.md"
+   ]
+  },
+  {
+   "id": "protocol-core/router-4-5-execution-mode-context-resolution-ladder-l0-l3-and-mode-gat",
+   "name": "Router §4-5 execution mode, context resolution ladder (L0-L3) and mode gate",
+   "kind": "protocol",
+   "status": "specified-not-implemented",
+   "subsystem": "protocol-core",
+   "paths": [
+    "Router.md"
+   ]
+  },
+  {
+   "id": "protocol-core/router-6-context-attestation-block",
+   "name": "Router §6 Context Attestation Block",
+   "kind": "protocol",
+   "status": "specified-not-implemented",
+   "subsystem": "protocol-core",
+   "paths": [
+    "Router.md"
+   ]
+  },
+  {
+   "id": "protocol-core/router-7-8-content-md-emission-and-context-flush",
+   "name": "Router §7-8 Content MD emission and context flush",
+   "kind": "protocol",
+   "status": "specified-not-implemented",
+   "subsystem": "protocol-core",
+   "paths": [
+    "Router.md"
+   ]
+  },
+  {
+   "id": "protocol-core/router-9-writeback-rules",
+   "name": "Router §9 writeback rules",
+   "kind": "protocol",
+   "status": "specified-not-implemented",
+   "subsystem": "protocol-core",
+   "paths": [
+    "Router.md"
+   ]
+  },
+  {
+   "id": "protocol-core/router-10-hard-refusals",
+   "name": "Router §10 hard refusals",
+   "kind": "protocol",
+   "status": "specified-not-implemented",
+   "subsystem": "protocol-core",
+   "paths": [
+    "Router.md"
+   ]
+  },
+  {
+   "id": "protocol-core/dashboard-json-live-system-state-schema-2-0-0",
+   "name": "dashboard.json (live system state, schema 2.0.0)",
+   "kind": "data",
+   "status": "runs-today",
+   "subsystem": "protocol-core",
+   "paths": [
+    "dashboard.json"
+   ]
+  },
+  {
+   "id": "protocol-core/router-js-poll-and-render-layer-logic-bridge-core-file-4-4",
+   "name": "router.js poll and render layer (Logic Bridge, 'Core File 4/4')",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "protocol-core",
+   "paths": [
+    "router.js"
+   ]
+  },
+  {
+   "id": "protocol-core/router-js-routing-layer-routeskill-resolvegates-brandpath-isauthoredl0",
+   "name": "router.js routing layer (routeSkill / resolveGates / brandPath / isAuthoredL0 / dispatchAPICall / writeDashboard / logLocal)",
+   "kind": "library",
+   "status": "stub",
+   "subsystem": "protocol-core",
+   "paths": [
+    "router.js"
+   ]
+  },
+  {
+   "id": "protocol-core/control-room-html-control-room-ui",
+   "name": "control_room.html (Control Room UI)",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "protocol-core",
+   "paths": [
+    "control_room.html"
+   ]
+  },
+  {
+   "id": "protocol-core/tools-verify-system-py-protocol-integrity-checker",
+   "name": "tools/verify_system.py (protocol integrity checker)",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "protocol-core",
+   "paths": [
+    "tools/verify_system.py"
+   ]
+  },
+  {
+   "id": "protocol-core/github-workflows-verify-yml-ci-workflow-verify",
+   "name": ".github/workflows/verify.yml (CI workflow 'verify')",
+   "kind": "ci",
+   "status": "runs-today",
+   "subsystem": "protocol-core",
+   "paths": [
+    ".github/workflows/verify.yml"
+   ]
+  },
+  {
+   "id": "protocol-core/decisions-md-architecture-decisions-d1-d10",
+   "name": "DECISIONS.md (architecture decisions D1-D10)",
+   "kind": "doc",
+   "status": "runs-today",
+   "subsystem": "protocol-core",
+   "paths": [
+    "DECISIONS.md"
+   ]
+  },
+  {
+   "id": "protocol-core/readme-md-studio-headless-os-overview",
+   "name": "README.md (Studio Headless OS overview)",
+   "kind": "doc",
+   "status": "runs-today",
+   "subsystem": "protocol-core",
+   "paths": [
+    "README.md"
+   ]
+  },
+  {
+   "id": "protocol-core/gitignore",
+   "name": ".gitignore",
+   "kind": "context",
+   "status": "runs-today",
+   "subsystem": "protocol-core",
+   "paths": [
+    ".gitignore"
+   ]
+  },
+  {
+   "id": "protocol-core/gitattributes",
+   "name": ".gitattributes",
+   "kind": "context",
+   "status": "runs-today",
+   "subsystem": "protocol-core",
+   "paths": [
+    ".gitattributes"
+   ]
+  },
+  {
+   "id": "protocol-core/hub-static-server-launcher-claude-launch-json",
+   "name": "hub-static-server launcher (.claude/launch.json)",
+   "kind": "launcher",
+   "status": "runs-today",
+   "subsystem": "protocol-core",
+   "paths": [
+    ".claude/launch.json"
+   ]
+  },
+  {
+   "id": "skills-generative/higgsfield-api",
+   "name": "higgsfield_api",
+   "kind": "skill",
+   "status": "never-exercised",
+   "subsystem": "skills-generative",
+   "paths": [
+    "skills/higgsfield_api.skill.md",
+    "state/continuity_sm.json",
+    "state/frames/",
+    "dashboard.json"
+   ]
+  },
+  {
+   "id": "skills-generative/suno-audio",
+   "name": "suno_audio",
+   "kind": "skill",
+   "status": "never-exercised",
+   "subsystem": "skills-generative",
+   "paths": [
+    "skills/suno_audio.skill.md",
+    "state/suno_pending.lock",
+    "renders/audio/",
+    "dashboard.json"
+   ]
+  },
+  {
+   "id": "skills-generative/adobe-firefly",
+   "name": "adobe_firefly",
+   "kind": "skill",
+   "status": "never-exercised",
+   "subsystem": "skills-generative",
+   "paths": [
+    "skills/adobe_firefly.skill.md",
+    "state/style_ledger.json",
+    "renders/stills/",
+    ".task_scratch/ff_resp_{ts}.json",
+    "dashboard.json"
+   ]
+  },
+  {
+   "id": "skills-local-apps/adobe-suite-uxp-skill",
+   "name": "adobe_suite_uxp (skill)",
+   "kind": "skill",
+   "status": "never-exercised",
+   "subsystem": "skills-local-apps",
+   "paths": [
+    "skills/adobe_suite_uxp.skill.md"
+   ]
+  },
+  {
+   "id": "skills-local-apps/adobe-suite-uxp-artifact-a-photoshop-batch-layer-png-exporter",
+   "name": "adobe_suite_uxp ARTIFACT A — Photoshop batch layer → PNG exporter",
+   "kind": "library",
+   "status": "never-exercised",
+   "subsystem": "skills-local-apps",
+   "paths": [
+    "skills/adobe_suite_uxp.skill.md"
+   ]
+  },
+  {
+   "id": "skills-local-apps/adobe-suite-uxp-artifact-b-photoshop-batch-grade-export",
+   "name": "adobe_suite_uxp ARTIFACT B — Photoshop batch grade + export",
+   "kind": "library",
+   "status": "never-exercised",
+   "subsystem": "skills-local-apps",
+   "paths": [
+    "skills/adobe_suite_uxp.skill.md"
+   ]
+  },
+  {
+   "id": "skills-local-apps/adobe-suite-uxp-artifact-c-premiere-pro-shot-ledger-markers-offline-re",
+   "name": "adobe_suite_uxp ARTIFACT C — Premiere Pro shot-ledger markers + offline relink report",
+   "kind": "library",
+   "status": "never-exercised",
+   "subsystem": "skills-local-apps",
+   "paths": [
+    "skills/adobe_suite_uxp.skill.md"
+   ]
+  },
+  {
+   "id": "skills-local-apps/adobe-suite-uxp-artifact-d-run-jsx-sh-extraction-cleanup-wrapper-bash-",
+   "name": "adobe_suite_uxp ARTIFACT D — run_jsx.sh extraction/cleanup wrapper (bash + COM)",
+   "kind": "cli",
+   "status": "never-exercised",
+   "subsystem": "skills-local-apps",
+   "paths": [
+    "skills/adobe_suite_uxp.skill.md"
+   ]
+  },
+  {
+   "id": "skills-local-apps/blender-python-skill",
+   "name": "blender_python (skill)",
+   "kind": "skill",
+   "status": "never-exercised",
+   "subsystem": "skills-local-apps",
+   "paths": [
+    "skills/blender_python.skill.md"
+   ]
+  },
+  {
+   "id": "skills-local-apps/blender-python-artifact-a-camera-path-py-rigid-bezier-camera-pathing",
+   "name": "blender_python ARTIFACT A — camera_path.py (rigid bezier camera pathing)",
+   "kind": "cli",
+   "status": "never-exercised",
+   "subsystem": "skills-local-apps",
+   "paths": [
+    "skills/blender_python.skill.md",
+    "tools/bpy/camera_path.py (extraction target; not on disk)"
+   ]
+  },
+  {
+   "id": "skills-local-apps/blender-python-artifact-b-lowpoly-gen-py-low-poly-procedural-terrain-s",
+   "name": "blender_python ARTIFACT B — lowpoly_gen.py (low-poly procedural terrain + scatter)",
+   "kind": "cli",
+   "status": "never-exercised",
+   "subsystem": "skills-local-apps",
+   "paths": [
+    "skills/blender_python.skill.md",
+    "tools/bpy/lowpoly_gen.py (extraction target; not on disk)"
+   ]
+  },
+  {
+   "id": "skills-local-apps/blender-python-artifact-c-params-sidecar-schema-tools-bpy-params-json",
+   "name": "blender_python ARTIFACT C — params sidecar schema (tools/bpy/params.json)",
+   "kind": "data",
+   "status": "never-exercised",
+   "subsystem": "skills-local-apps",
+   "paths": [
+    "skills/blender_python.skill.md",
+    "tools/bpy/params.json (target; not on disk)"
+   ]
+  },
+  {
+   "id": "skills-local-apps/css-html-ui-skill",
+   "name": "css_html_ui (skill)",
+   "kind": "skill",
+   "status": "partial",
+   "subsystem": "skills-local-apps",
+   "paths": [
+    "skills/css_html_ui.skill.md"
+   ]
+  },
+  {
+   "id": "skills-local-apps/css-html-ui-artifact-a-design-token-dictionary",
+   "name": "css_html_ui ARTIFACT A — Design Token Dictionary",
+   "kind": "data",
+   "status": "partial",
+   "subsystem": "skills-local-apps",
+   "paths": [
+    "skills/css_html_ui.skill.md",
+    "tokens/design_tokens.json (extraction target; not on disk)"
+   ]
+  },
+  {
+   "id": "skills-local-apps/css-html-ui-artifact-b-css-projection-tokens-tokens-css",
+   "name": "css_html_ui ARTIFACT B — CSS projection (tokens/tokens.css)",
+   "kind": "data",
+   "status": "partial",
+   "subsystem": "skills-local-apps",
+   "paths": [
+    "skills/css_html_ui.skill.md",
+    "tokens/tokens.css (extraction target; not on disk)"
+   ]
+  },
+  {
+   "id": "skills-local-apps/css-html-ui-artifact-c-dom-mutation-contract",
+   "name": "css_html_ui ARTIFACT C — DOM Mutation Contract",
+   "kind": "protocol",
+   "status": "partial",
+   "subsystem": "skills-local-apps",
+   "paths": [
+    "skills/css_html_ui.skill.md"
+   ]
+  },
+  {
+   "id": "skills-infra/hardware-compute-skill",
+   "name": "hardware_compute (skill)",
+   "kind": "skill",
+   "status": "partial",
+   "subsystem": "skills-infra",
+   "paths": [
+    "skills/hardware_compute.skill.md"
+   ]
+  },
+  {
+   "id": "skills-infra/verify-compute-sh-hardware-compute-artifact-a-hardware-probe-v4",
+   "name": "verify_compute.sh (hardware_compute ARTIFACT A, 'hardware probe v4')",
+   "kind": "cli",
+   "status": "generated",
+   "subsystem": "skills-infra",
+   "paths": [
+    "skills/hardware_compute.skill.md",
+    "tools/hw/verify_compute.sh"
+   ]
+  },
+  {
+   "id": "skills-infra/artifact-b-threshold-matrix-laws-and-remedies",
+   "name": "ARTIFACT B — threshold matrix, laws and remedies",
+   "kind": "data",
+   "status": "runs-today",
+   "subsystem": "skills-infra",
+   "paths": [
+    "skills/hardware_compute.skill.md"
+   ]
+  },
+  {
+   "id": "skills-infra/compute-gate-token-artifact-c-state-compute-gate-json",
+   "name": "Compute gate token (ARTIFACT C, state/compute_gate.json)",
+   "kind": "protocol",
+   "status": "partial",
+   "subsystem": "skills-infra",
+   "paths": [
+    "skills/hardware_compute.skill.md",
+    "state/compute_gate.json"
+   ]
+  },
+  {
+   "id": "skills-infra/tools-hw-evaluate-gate-py",
+   "name": "tools/hw/evaluate_gate.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "skills-infra",
+   "paths": [
+    "tools/hw/evaluate_gate.py"
+   ]
+  },
+  {
+   "id": "skills-infra/tools-hw-test-gate-py",
+   "name": "tools/hw/test_gate.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "skills-infra",
+   "paths": [
+    "tools/hw/test_gate.py"
+   ]
+  },
+  {
+   "id": "skills-infra/tools-bootstrap-sh",
+   "name": "tools/bootstrap.sh",
+   "kind": "launcher",
+   "status": "never-exercised",
+   "subsystem": "skills-infra",
+   "paths": [
+    "tools/bootstrap.sh"
+   ]
+  },
+  {
+   "id": "skills-infra/local-rag-orchestration-skill",
+   "name": "local_rag_orchestration (skill)",
+   "kind": "skill",
+   "status": "partial",
+   "subsystem": "skills-infra",
+   "paths": [
+    "skills/local_rag_orchestration.skill.md"
+   ]
+  },
+  {
+   "id": "skills-infra/tools-vault-rag-py",
+   "name": "tools/vault_rag.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "skills-infra",
+   "paths": [
+    "tools/vault_rag.py"
+   ]
+  },
+  {
+   "id": "skills-infra/state-rag-index-index-json-rag-vector-index",
+   "name": "state/rag_index/index.json (RAG vector index)",
+   "kind": "data",
+   "status": "generated",
+   "subsystem": "skills-infra",
+   "paths": [
+    "state/rag_index/index.json"
+   ]
+  },
+  {
+   "id": "skills-infra/ollama-local-endpoint",
+   "name": "Ollama local endpoint",
+   "kind": "service",
+   "status": "runs-today",
+   "subsystem": "skills-infra",
+   "paths": [
+    "dashboard.json"
+   ]
+  },
+  {
+   "id": "skills-infra/local-rag-artifact-a-ollama-request-payloads",
+   "name": "local_rag ARTIFACT A — Ollama request payloads",
+   "kind": "protocol",
+   "status": "partial",
+   "subsystem": "skills-infra",
+   "paths": [
+    "skills/local_rag_orchestration.skill.md"
+   ]
+  },
+  {
+   "id": "skills-infra/local-rag-artifact-b-routing-sub-prompts",
+   "name": "local_rag ARTIFACT B — routing sub-prompts",
+   "kind": "data",
+   "status": "partial",
+   "subsystem": "skills-infra",
+   "paths": [
+    "skills/local_rag_orchestration.skill.md"
+   ]
+  },
+  {
+   "id": "skills-infra/local-rag-artifact-c-flush-checkpoint-ledger-state-rag-flush-ledger-js",
+   "name": "local_rag ARTIFACT C — flush checkpoint ledger (state/rag_flush_ledger.json)",
+   "kind": "data",
+   "status": "specified-not-implemented",
+   "subsystem": "skills-infra",
+   "paths": [
+    "skills/local_rag_orchestration.skill.md",
+    "state/rag_flush_ledger.json"
+   ]
+  },
+  {
+   "id": "skills-infra/ui-ux-intelligence-skill",
+   "name": "ui_ux_intelligence (skill)",
+   "kind": "skill",
+   "status": "runs-today",
+   "subsystem": "skills-infra",
+   "paths": [
+    "skills/ui_ux_intelligence.skill.md"
+   ]
+  },
+  {
+   "id": "skills-infra/tools-ui-ux-pro-max-scripts-search-py",
+   "name": "tools/ui-ux-pro-max/scripts/search.py",
+   "kind": "cli",
+   "status": "vendored",
+   "subsystem": "skills-infra",
+   "paths": [
+    "tools/ui-ux-pro-max/scripts/search.py",
+    "tools/ui-ux-pro-max/scripts/core.py",
+    "tools/ui-ux-pro-max/scripts/design_system.py",
+    "tools/ui-ux-pro-max/VENDOR.md"
+   ]
+  },
+  {
+   "id": "skills-infra/tools-ui-ux-pro-max-scripts-validate-data-py",
+   "name": "tools/ui-ux-pro-max/scripts/validate_data.py",
+   "kind": "cli",
+   "status": "vendored",
+   "subsystem": "skills-infra",
+   "paths": [
+    "tools/ui-ux-pro-max/scripts/validate_data.py"
+   ]
+  },
+  {
+   "id": "skills-infra/tools-ui-ux-pro-max-scripts-reasoning-contract-py",
+   "name": "tools/ui-ux-pro-max/scripts/reasoning_contract.py",
+   "kind": "library",
+   "status": "vendored",
+   "subsystem": "skills-infra",
+   "paths": [
+    "tools/ui-ux-pro-max/scripts/reasoning_contract.py"
+   ]
+  },
+  {
+   "id": "skills-infra/tools-ui-ux-pro-max-data-vendored-corpus",
+   "name": "tools/ui-ux-pro-max/data (vendored corpus)",
+   "kind": "data",
+   "status": "vendored",
+   "subsystem": "skills-infra",
+   "paths": [
+    "tools/ui-ux-pro-max/data/"
+   ]
+  },
+  {
+   "id": "skills-infra/ui-ux-artifact-a-b-c-domain-routing-table-output-contract-zero-result-",
+   "name": "ui_ux ARTIFACT A/B/C — domain routing table, output contract, zero-result contract",
+   "kind": "protocol",
+   "status": "runs-today",
+   "subsystem": "skills-infra",
+   "paths": [
+    "skills/ui_ux_intelligence.skill.md"
+   ]
+  },
+  {
+   "id": "skills-infra/ui-ux-artifact-d-gate-regeneration-protocol-studio-surfaces",
+   "name": "ui_ux ARTIFACT D — gate regeneration protocol (studio surfaces)",
+   "kind": "protocol",
+   "status": "runs-today",
+   "subsystem": "skills-infra",
+   "paths": [
+    "skills/ui_ux_intelligence.skill.md"
+   ]
+  },
+  {
+   "id": "skills-infra/tools-verify-system-py",
+   "name": "tools/verify_system.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "skills-infra",
+   "paths": [
+    "tools/verify_system.py"
+   ]
+  },
+  {
+   "id": "skills-infra/github-workflows-verify-yml-subsystem-relevant-steps",
+   "name": ".github/workflows/verify.yml (subsystem-relevant steps)",
+   "kind": "ci",
+   "status": "runs-today",
+   "subsystem": "skills-infra",
+   "paths": [
+    ".github/workflows/verify.yml"
+   ]
+  },
+  {
+   "id": "hw-gate/bootstrap-sh",
+   "name": "bootstrap.sh",
+   "kind": "launcher",
+   "status": "never-exercised",
+   "subsystem": "hw-gate",
+   "paths": [
+    "tools/bootstrap.sh"
+   ]
+  },
+  {
+   "id": "hw-gate/verify-compute-sh-artifact-a-hardware-probe",
+   "name": "verify_compute.sh (ARTIFACT A hardware probe)",
+   "kind": "cli",
+   "status": "generated",
+   "subsystem": "hw-gate",
+   "paths": [
+    "tools/hw/verify_compute.sh",
+    "skills/hardware_compute.skill.md"
+   ]
+  },
+  {
+   "id": "hw-gate/evaluate-gate-py",
+   "name": "evaluate_gate.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "hw-gate",
+   "paths": [
+    "tools/hw/evaluate_gate.py"
+   ]
+  },
+  {
+   "id": "hw-gate/test-gate-py",
+   "name": "test_gate.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "hw-gate",
+   "paths": [
+    "tools/hw/test_gate.py"
+   ]
+  },
+  {
+   "id": "hw-gate/reconcile-models-py",
+   "name": "reconcile_models.py",
+   "kind": "cli",
+   "status": "partial",
+   "subsystem": "hw-gate",
+   "paths": [
+    "tools/reconcile_models.py"
+   ]
+  },
+  {
+   "id": "hw-gate/hardware-compute-skill",
+   "name": "hardware_compute skill",
+   "kind": "skill",
+   "status": "partial",
+   "subsystem": "hw-gate",
+   "paths": [
+    "skills/hardware_compute.skill.md"
+   ]
+  },
+  {
+   "id": "hw-gate/artifact-b-threshold-matrix",
+   "name": "ARTIFACT B threshold matrix",
+   "kind": "data",
+   "status": "runs-today",
+   "subsystem": "hw-gate",
+   "paths": [
+    "skills/hardware_compute.skill.md"
+   ]
+  },
+  {
+   "id": "hw-gate/compute-gate-token-protocol-artifact-c",
+   "name": "compute gate token protocol (ARTIFACT C)",
+   "kind": "protocol",
+   "status": "never-exercised",
+   "subsystem": "hw-gate",
+   "paths": [
+    "state/compute_gate.json",
+    "skills/hardware_compute.skill.md"
+   ]
+  },
+  {
+   "id": "hw-gate/verify-yml-ci-gate-steps",
+   "name": "verify.yml CI (gate steps)",
+   "kind": "ci",
+   "status": "runs-today",
+   "subsystem": "hw-gate",
+   "paths": [
+    ".github/workflows/verify.yml"
+   ]
+  },
+  {
+   "id": "hw-gate/verify-system-py-probe-drift-and-portability-checks",
+   "name": "verify_system.py (probe drift and portability checks)",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "hw-gate",
+   "paths": [
+    "tools/verify_system.py"
+   ]
+  },
+  {
+   "id": "hw-gate/boot-md-runbook",
+   "name": "BOOT.md runbook",
+   "kind": "doc",
+   "status": "runs-today",
+   "subsystem": "hw-gate",
+   "paths": [
+    "BOOT.md"
+   ]
+  },
+  {
+   "id": "vault-rag/vault-rag-py",
+   "name": "vault_rag.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "vault-rag",
+   "paths": [
+    "tools/vault_rag.py"
+   ]
+  },
+  {
+   "id": "vault-rag/vault-manifest-py",
+   "name": "vault_manifest.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "vault-rag",
+   "paths": [
+    "tools/vault_manifest.py"
+   ]
+  },
+  {
+   "id": "vault-rag/state-rag-index-index-json-rag-vector-index",
+   "name": "state/rag_index/index.json (RAG vector index)",
+   "kind": "data",
+   "status": "generated",
+   "subsystem": "vault-rag",
+   "paths": [
+    "state/rag_index/index.json"
+   ]
+  },
+  {
+   "id": "vault-rag/state-vault-manifest-json-hub-note-manifest",
+   "name": "state/vault_manifest.json (hub note manifest)",
+   "kind": "data",
+   "status": "generated",
+   "subsystem": "vault-rag",
+   "paths": [
+    "state/vault_manifest.json"
+   ]
+  },
+  {
+   "id": "vault-rag/state-rag-traces-think-trace-archive",
+   "name": "state/rag_traces/ (think-trace archive)",
+   "kind": "data",
+   "status": "never-exercised",
+   "subsystem": "vault-rag",
+   "paths": [
+    "state/rag_traces/"
+   ]
+  },
+  {
+   "id": "vault-rag/obsidian-vault-vault",
+   "name": "Obsidian vault (vault/)",
+   "kind": "data",
+   "status": "partial",
+   "subsystem": "vault-rag",
+   "paths": [
+    "vault/",
+    "vault/README.md",
+    "vault/studio-os/ui/ui-ux-intelligence-integration.md"
+   ]
+  },
+  {
+   "id": "vault-rag/content-md-schema",
+   "name": "Content MD schema",
+   "kind": "protocol",
+   "status": "partial",
+   "subsystem": "vault-rag",
+   "paths": [
+    "vault/SCHEMA.md"
+   ]
+  },
+  {
+   "id": "vault-rag/content-md-obsidian-template",
+   "name": "Content MD Obsidian template",
+   "kind": "data",
+   "status": "runs-today",
+   "subsystem": "vault-rag",
+   "paths": [
+    "vault/_templates/content-md.md"
+   ]
+  },
+  {
+   "id": "vault-rag/worked-example-content-md-dry-stipple-brush",
+   "name": "Worked example Content MD (dry stipple brush)",
+   "kind": "doc",
+   "status": "runs-today",
+   "subsystem": "vault-rag",
+   "paths": [
+    "vault/_examples/example-stipple-brush.md"
+   ]
+  },
+  {
+   "id": "vault-rag/creative-writing-vault-migration-gap-analysis",
+   "name": "Creative-Writing -> Vault migration (GAP-ANALYSIS)",
+   "kind": "doc",
+   "status": "specified-not-implemented",
+   "subsystem": "vault-rag",
+   "paths": [
+    "vault/_migration/GAP-ANALYSIS.md"
+   ]
+  },
+  {
+   "id": "vault-rag/obsidian-ollama-plugin-connection-connection-a",
+   "name": "Obsidian -> Ollama plugin connection (connection A)",
+   "kind": "protocol",
+   "status": "specified-not-implemented",
+   "subsystem": "vault-rag",
+   "paths": [
+    "OBSIDIAN.md"
+   ]
+  },
+  {
+   "id": "vault-rag/repo-root-obsidian-vault-state-obsidian-and-stray-note",
+   "name": "Repo-root Obsidian vault state (.obsidian/ and stray note)",
+   "kind": "data",
+   "status": "generated",
+   "subsystem": "vault-rag",
+   "paths": [
+    ".obsidian/",
+    "wet-stipple-brush.md"
+   ]
+  },
+  {
+   "id": "vault-rag/ci-vault-rag-smoke-and-core-logic-test",
+   "name": "CI: vault_rag smoke and core-logic test",
+   "kind": "ci",
+   "status": "partial",
+   "subsystem": "vault-rag",
+   "paths": [
+    ".github/workflows/verify.yml"
+   ]
+  },
+  {
+   "id": "hub-launcher/the-hub-hub-web-app",
+   "name": "THE HUB (hub web app)",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "hub-launcher",
+   "paths": [
+    "hub/index.html",
+    "hub/app.js",
+    "hub/ollama.js",
+    "hub/designer-pro.js",
+    "hub/styles.css"
+   ]
+  },
+  {
+   "id": "hub-launcher/hubollama-hub-ollama-js",
+   "name": "HubOllama (hub/ollama.js)",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "hub-launcher",
+   "paths": [
+    "hub/ollama.js"
+   ]
+  },
+  {
+   "id": "hub-launcher/library-tab",
+   "name": "Library tab",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "hub-launcher",
+   "paths": [
+    "hub/index.html",
+    "hub/app.js"
+   ]
+  },
+  {
+   "id": "hub-launcher/ask-tab",
+   "name": "Ask tab",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "hub-launcher",
+   "paths": [
+    "hub/index.html",
+    "hub/app.js",
+    "hub/ollama.js"
+   ]
+  },
+  {
+   "id": "hub-launcher/designer-pro-tab",
+   "name": "Designer Pro tab",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "hub-launcher",
+   "paths": [
+    "hub/index.html",
+    "hub/designer-pro.js"
+   ]
+  },
+  {
+   "id": "hub-launcher/brushes-tab",
+   "name": "Brushes tab",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "hub-launcher",
+   "paths": [
+    "hub/index.html",
+    "tools/brush-designer/index.html"
+   ]
+  },
+  {
+   "id": "hub-launcher/pipeline-tab",
+   "name": "Pipeline tab",
+   "kind": "web-app",
+   "status": "stub",
+   "subsystem": "hub-launcher",
+   "paths": [
+    "hub/index.html",
+    "hub/app.js",
+    "hub/styles.css"
+   ]
+  },
+  {
+   "id": "hub-launcher/start-hub-ps1",
+   "name": "Start-Hub.ps1",
+   "kind": "launcher",
+   "status": "runs-today",
+   "subsystem": "hub-launcher",
+   "paths": [
+    "tools/launcher/Start-Hub.ps1"
+   ]
+  },
+  {
+   "id": "hub-launcher/install-shortcut-ps1",
+   "name": "Install-Shortcut.ps1",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "hub-launcher",
+   "paths": [
+    "tools/launcher/Install-Shortcut.ps1",
+    "tools/launcher/hub.ico",
+    "tools/launcher/.gitignore",
+    "tools/launcher/README.md"
+   ]
+  },
+  {
+   "id": "hub-launcher/studio-hub-lnk-shortcuts-generated",
+   "name": "Studio Hub.lnk shortcuts (generated)",
+   "kind": "launcher",
+   "status": "generated",
+   "subsystem": "hub-launcher",
+   "paths": [
+    "C:/Users/utopi/OneDrive/Desktop/Studio Hub.lnk (outside repo)",
+    "C:/Users/utopi/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Studio Hub.lnk (outside repo)"
+   ]
+  },
+  {
+   "id": "hub-launcher/hub-static-server-claude-launch-json",
+   "name": "hub-static-server (.claude/launch.json)",
+   "kind": "launcher",
+   "status": "runs-today",
+   "subsystem": "hub-launcher",
+   "paths": [
+    ".claude/launch.json"
+   ]
+  },
+  {
+   "id": "brush-designer/procreate-brush-designer-web-app-shell",
+   "name": "Procreate Brush Designer (web app shell)",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/index.html",
+    "tools/brush-designer/app.js",
+    "tools/brush-designer/styles.css"
+   ]
+  },
+  {
+   "id": "brush-designer/brushstate-parameter-model",
+   "name": "BrushState (parameter model)",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/editor/BrushState.js"
+   ]
+  },
+  {
+   "id": "brush-designer/historymanager-undo-redo",
+   "name": "HistoryManager (undo/redo)",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/editor/HistoryManager.js"
+   ]
+  },
+  {
+   "id": "brush-designer/presetlibrary-presets-sidebar",
+   "name": "PresetLibrary (+ Presets sidebar)",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/editor/PresetLibrary.js",
+    "tools/brush-designer/app.js"
+   ]
+  },
+  {
+   "id": "brush-designer/shapegenerator",
+   "name": "ShapeGenerator",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/generators/ShapeGenerator.js"
+   ]
+  },
+  {
+   "id": "brush-designer/graingenerator",
+   "name": "GrainGenerator",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/generators/GrainGenerator.js"
+   ]
+  },
+  {
+   "id": "brush-designer/plistencoder-bplist00",
+   "name": "PlistEncoder (bplist00)",
+   "kind": "library",
+   "status": "partial",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/export/PlistEncoder.js"
+   ]
+  },
+  {
+   "id": "brush-designer/brusharchive-brush-archive-encoder",
+   "name": "BrushArchive (Brush.archive encoder)",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/export/BrushArchive.js"
+   ]
+  },
+  {
+   "id": "brush-designer/export-brush-procreate",
+   "name": "Export .brush (Procreate)",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/export/BrushExporter.js",
+    "tools/brush-designer/app.js"
+   ]
+  },
+  {
+   "id": "brush-designer/export-brushset-procreate",
+   "name": "Export .brushset (Procreate)",
+   "kind": "library",
+   "status": "partial",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/export/BrushExporter.js",
+    "tools/brush-designer/app.js"
+   ]
+  },
+  {
+   "id": "brush-designer/export-gbr-gimp-krita",
+   "name": "Export .gbr (GIMP / Krita)",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/export/GbrEncoder.js",
+    "tools/brush-designer/app.js"
+   ]
+  },
+  {
+   "id": "brush-designer/export-universal-kit-zip",
+   "name": "Export Universal Kit (.zip)",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/export/UniversalKitExporter.js",
+    "tools/brush-designer/app.js"
+   ]
+  },
+  {
+   "id": "brush-designer/export-download-source",
+   "name": "Export: Download Source",
+   "kind": "web-app",
+   "status": "partial",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/app.js"
+   ]
+  },
+  {
+   "id": "brush-designer/import-brush-brushset",
+   "name": "Import .brush / .brushset",
+   "kind": "web-app",
+   "status": "stub",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/app.js",
+    "tools/brush-designer/editor/PresetLibrary.js",
+    "tools/brush-designer/index.html"
+   ]
+  },
+  {
+   "id": "brush-designer/ollamaassist-local-model-json-patch-client",
+   "name": "OllamaAssist (local-model JSON-patch client)",
+   "kind": "protocol",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/ai/OllamaAssist.js"
+   ]
+  },
+  {
+   "id": "brush-designer/ai-assist-tab",
+   "name": "AI Assist tab",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/panels/AIAssistPanel.js"
+   ]
+  },
+  {
+   "id": "brush-designer/stroke-path-tab",
+   "name": "Stroke Path tab",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/panels/PanelComponents.js"
+   ]
+  },
+  {
+   "id": "brush-designer/taper-tab",
+   "name": "Taper tab",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/panels/PanelComponents.js"
+   ]
+  },
+  {
+   "id": "brush-designer/shape-tab",
+   "name": "Shape tab",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/panels/PanelComponents.js"
+   ]
+  },
+  {
+   "id": "brush-designer/grain-tab",
+   "name": "Grain tab",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/panels/PanelComponents.js"
+   ]
+  },
+  {
+   "id": "brush-designer/dynamics-tab",
+   "name": "Dynamics tab",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/panels/PanelComponents.js"
+   ]
+  },
+  {
+   "id": "brush-designer/pencil-tab-apple-pencil-pressure-curves",
+   "name": "Pencil tab (Apple Pencil pressure curves)",
+   "kind": "web-app",
+   "status": "partial",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/panels/PanelComponents.js",
+    "tools/brush-designer/ui/CurveEditor.js"
+   ]
+  },
+  {
+   "id": "brush-designer/wet-mix-tab",
+   "name": "Wet Mix tab",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/panels/PanelComponents.js"
+   ]
+  },
+  {
+   "id": "brush-designer/color-dynamics-tab",
+   "name": "Color Dynamics tab",
+   "kind": "web-app",
+   "status": "stub",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/panels/PanelComponents.js"
+   ]
+  },
+  {
+   "id": "brush-designer/rendering-tab",
+   "name": "Rendering tab",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/panels/PanelComponents.js"
+   ]
+  },
+  {
+   "id": "brush-designer/about-this-brush-tab",
+   "name": "About This Brush tab",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/panels/PanelComponents.js"
+   ]
+  },
+  {
+   "id": "brush-designer/stroke-preview-test-sheet",
+   "name": "Stroke preview / test sheet",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/preview/StrokeRenderer.js",
+    "tools/brush-designer/preview/StrokeInput.js"
+   ]
+  },
+  {
+   "id": "brush-designer/ui-component-kit",
+   "name": "UI component kit",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/brush-designer/ui/Slider.js",
+    "tools/brush-designer/ui/CurveEditor.js",
+    "tools/brush-designer/ui/Section.js",
+    "tools/brush-designer/ui/Modal.js",
+    "tools/brush-designer/ui/Toast.js"
+   ]
+  },
+  {
+   "id": "brush-designer/hub-brushes-tab-embedding",
+   "name": "Hub Brushes tab (embedding)",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "hub/index.html",
+    "hub/styles.css",
+    "hub/app.js"
+   ]
+  },
+  {
+   "id": "brush-designer/start-hub-ps1-launcher",
+   "name": "Start-Hub.ps1 launcher",
+   "kind": "launcher",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    "tools/launcher/Start-Hub.ps1",
+    "tools/launcher/README.md",
+    "tools/launcher/Install-Shortcut.ps1"
+   ]
+  },
+  {
+   "id": "brush-designer/hub-static-server-launch-config",
+   "name": "hub-static-server launch config",
+   "kind": "launcher",
+   "status": "runs-today",
+   "subsystem": "brush-designer",
+   "paths": [
+    ".claude/launch.json"
+   ]
+  },
+  {
+   "id": "brush-designer/brush-designer-skill-headless-adapter",
+   "name": "brush_designer skill + headless adapter",
+   "kind": "skill",
+   "status": "specified-not-implemented",
+   "subsystem": "brush-designer",
+   "paths": [
+    "DECISIONS.md",
+    "Router.md",
+    "README.md"
+   ]
+  },
+  {
+   "id": "brush-designer/worked-example-content-md-dry-stipple-brush",
+   "name": "Worked-example Content MD: Dry Stipple brush",
+   "kind": "data",
+   "status": "never-exercised",
+   "subsystem": "brush-designer",
+   "paths": [
+    "vault/_examples/example-stipple-brush.md"
+   ]
+  },
+  {
+   "id": "brush-designer/wet-stipple-brush-md-root",
+   "name": "wet-stipple-brush.md (root)",
+   "kind": "data",
+   "status": "stub",
+   "subsystem": "brush-designer",
+   "paths": [
+    "wet-stipple-brush.md"
+   ]
+  },
+  {
+   "id": "agents-context/business-analyst",
+   "name": "business-analyst",
+   "kind": "agent",
+   "status": "vendored",
+   "subsystem": "agents-context",
+   "paths": [
+    "agents/business-analyst.md"
+   ]
+  },
+  {
+   "id": "agents-context/code-reviewer",
+   "name": "code-reviewer",
+   "kind": "agent",
+   "status": "vendored",
+   "subsystem": "agents-context",
+   "paths": [
+    "agents/code-reviewer.md"
+   ]
+  },
+  {
+   "id": "agents-context/content-strategist",
+   "name": "content-strategist",
+   "kind": "agent",
+   "status": "vendored",
+   "subsystem": "agents-context",
+   "paths": [
+    "agents/content-strategist.md"
+   ]
+  },
+  {
+   "id": "agents-context/debugger",
+   "name": "debugger",
+   "kind": "agent",
+   "status": "vendored",
+   "subsystem": "agents-context",
+   "paths": [
+    "agents/debugger.md"
+   ]
+  },
+  {
+   "id": "agents-context/documentation-writer",
+   "name": "documentation-writer",
+   "kind": "agent",
+   "status": "vendored",
+   "subsystem": "agents-context",
+   "paths": [
+    "agents/documentation-writer.md"
+   ]
+  },
+  {
+   "id": "agents-context/frontend-developer",
+   "name": "frontend-developer",
+   "kind": "agent",
+   "status": "vendored",
+   "subsystem": "agents-context",
+   "paths": [
+    "agents/frontend-developer.md"
+   ]
+  },
+  {
+   "id": "agents-context/project-manager",
+   "name": "project-manager",
+   "kind": "agent",
+   "status": "vendored",
+   "subsystem": "agents-context",
+   "paths": [
+    "agents/project-manager.md"
+   ]
+  },
+  {
+   "id": "agents-context/test-expert",
+   "name": "test-expert",
+   "kind": "agent",
+   "status": "vendored",
+   "subsystem": "agents-context",
+   "paths": [
+    "agents/test-expert.md"
+   ]
+  },
+  {
+   "id": "agents-context/ux-consultant",
+   "name": "ux-consultant",
+   "kind": "agent",
+   "status": "vendored",
+   "subsystem": "agents-context",
+   "paths": [
+    "agents/ux-consultant.md"
+   ]
+  },
+  {
+   "id": "agents-context/visual-identity-brand-gate",
+   "name": "visual_identity (brand gate)",
+   "kind": "context",
+   "status": "partial",
+   "subsystem": "agents-context",
+   "paths": [
+    "context/brand/visual_identity.context.md"
+   ]
+  },
+  {
+   "id": "agents-context/typography-system-brand-gate",
+   "name": "typography_system (brand gate)",
+   "kind": "context",
+   "status": "runs-today",
+   "subsystem": "agents-context",
+   "paths": [
+    "context/brand/typography_system.context.md"
+   ]
+  },
+  {
+   "id": "agents-context/color-science-brand-gate",
+   "name": "color_science (brand gate)",
+   "kind": "context",
+   "status": "partial",
+   "subsystem": "agents-context",
+   "paths": [
+    "context/brand/color_science.context.md"
+   ]
+  },
+  {
+   "id": "agents-context/unauthored-brand-gates-7",
+   "name": "unauthored brand gates (7)",
+   "kind": "context",
+   "status": "specified-not-implemented",
+   "subsystem": "agents-context",
+   "paths": [
+    "context/brand/motion_language.context.md",
+    "context/brand/sound_identity.context.md",
+    "context/brand/brand_voice.context.md",
+    "context/brand/narrative_continuity.context.md",
+    "context/brand/render_philosophy.context.md",
+    "context/brand/pipeline_ethics.context.md",
+    "context/brand/memory_discipline.context.md",
+    "context/brand/README.md"
+   ]
+  },
+  {
+   "id": "agents-context/brand-gate-contract-context-brand-readme-md",
+   "name": "brand-gate contract (context/brand/README.md)",
+   "kind": "doc",
+   "status": "partial",
+   "subsystem": "agents-context",
+   "paths": [
+    "context/brand/README.md"
+   ]
+  },
+  {
+   "id": "agents-context/ai-creative-strategies-context-domain-library",
+   "name": "ai_creative_strategies_context (domain library)",
+   "kind": "context",
+   "status": "partial",
+   "subsystem": "agents-context",
+   "paths": [
+    "context/domain/ai_creative_strategies_context.md"
+   ]
+  },
+  {
+   "id": "agents-context/cinematic-videography-context-domain-library",
+   "name": "cinematic_videography_context (domain library)",
+   "kind": "context",
+   "status": "partial",
+   "subsystem": "agents-context",
+   "paths": [
+    "context/domain/cinematic_videography_context.md"
+   ]
+  },
+  {
+   "id": "agents-context/classical-illustration-context-domain-library",
+   "name": "classical_illustration_context (domain library)",
+   "kind": "context",
+   "status": "partial",
+   "subsystem": "agents-context",
+   "paths": [
+    "context/domain/classical_illustration_context.md"
+   ]
+  },
+  {
+   "id": "agents-context/creative-analytical-writing-context-domain-library",
+   "name": "creative_analytical_writing_context (domain library)",
+   "kind": "context",
+   "status": "partial",
+   "subsystem": "agents-context",
+   "paths": [
+    "context/domain/creative_analytical_writing_context.md"
+   ]
+  },
+  {
+   "id": "agents-context/digital-3d-motion-context-domain-library",
+   "name": "digital_3d_motion_context (domain library)",
+   "kind": "context",
+   "status": "partial",
+   "subsystem": "agents-context",
+   "paths": [
+    "context/domain/digital_3d_motion_context.md"
+   ]
+  },
+  {
+   "id": "agents-context/multimedia-fusion-context-domain-library",
+   "name": "multimedia_fusion_context (domain library)",
+   "kind": "context",
+   "status": "partial",
+   "subsystem": "agents-context",
+   "paths": [
+    "context/domain/multimedia_fusion_context.md"
+   ]
+  },
+  {
+   "id": "agents-context/music-ambience-context-domain-library",
+   "name": "music_ambience_context (domain library)",
+   "kind": "context",
+   "status": "partial",
+   "subsystem": "agents-context",
+   "paths": [
+    "context/domain/music_ambience_context.md"
+   ]
+  },
+  {
+   "id": "agents-context/social-media-marketing-context-domain-library",
+   "name": "social_media_marketing_context (domain library)",
+   "kind": "context",
+   "status": "partial",
+   "subsystem": "agents-context",
+   "paths": [
+    "context/domain/social_media_marketing_context.md"
+   ]
+  },
+  {
+   "id": "agents-context/typography-ad-arts-context-domain-library",
+   "name": "typography_ad_arts_context (domain library)",
+   "kind": "context",
+   "status": "partial",
+   "subsystem": "agents-context",
+   "paths": [
+    "context/domain/typography_ad_arts_context.md"
+   ]
+  },
+  {
+   "id": "agents-context/world-building-context-domain-library",
+   "name": "world_building_context (domain library)",
+   "kind": "context",
+   "status": "partial",
+   "subsystem": "agents-context",
+   "paths": [
+    "context/domain/world_building_context.md"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/chq-search-py",
+   "name": "CHQ search.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "tools/ui-ux-pro-max/scripts/search.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/chq-core-py",
+   "name": "CHQ core.py",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "tools/ui-ux-pro-max/scripts/core.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/chq-design-system-py",
+   "name": "CHQ design_system.py",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "tools/ui-ux-pro-max/scripts/design_system.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/chq-reasoning-contract-py",
+   "name": "CHQ reasoning_contract.py",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "tools/ui-ux-pro-max/scripts/reasoning_contract.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/chq-validate-data-py",
+   "name": "CHQ validate_data.py",
+   "kind": "cli",
+   "status": "vendored",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "tools/ui-ux-pro-max/scripts/validate_data.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "name": "CHQ vendored data corpus",
+   "kind": "data",
+   "status": "vendored",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "tools/ui-ux-pro-max/data/",
+    "tools/ui-ux-pro-max/data/stacks/",
+    "tools/ui-ux-pro-max/data/catalog-summary.json",
+    "tools/ui-ux-pro-max/data/data-provenance.json"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/chq-vendor-md-vendoring-protocol",
+   "name": "CHQ VENDOR.md vendoring protocol",
+   "kind": "protocol",
+   "status": "partial",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "tools/ui-ux-pro-max/VENDOR.md",
+    ".gitattributes"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/chq-ui-ux-intelligence-skill",
+   "name": "CHQ ui_ux_intelligence skill",
+   "kind": "skill",
+   "status": "partial",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "skills/ui_ux_intelligence.skill.md"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/chq-router-intercept-router-md-router-js-dashboard-json",
+   "name": "CHQ Router intercept (Router.md / router.js / dashboard.json)",
+   "kind": "protocol",
+   "status": "partial",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "Router.md",
+    "router.js",
+    "dashboard.json"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/chq-brand-gates-artifact-d-regeneration-loop",
+   "name": "CHQ brand gates + ARTIFACT D regeneration loop",
+   "kind": "context",
+   "status": "partial",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "context/brand/visual_identity.context.md",
+    "context/brand/typography_system.context.md",
+    "context/brand/color_science.context.md",
+    "DECISIONS.md"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/chq-hub-designer-pro-tab",
+   "name": "CHQ hub Designer Pro tab",
+   "kind": "web-app",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "hub/designer-pro.js",
+    "hub/index.html",
+    "hub/ollama.js",
+    ".claude/launch.json"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-search-py",
+   "name": "Pipelines search.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/catalog/scripts/search.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-core-py",
+   "name": "Pipelines core.py",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/catalog/scripts/core.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-design-system-py",
+   "name": "Pipelines design_system.py",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/catalog/scripts/design_system.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-reasoning-contract-py",
+   "name": "Pipelines reasoning_contract.py",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/catalog/scripts/reasoning_contract.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-validate-data-py",
+   "name": "Pipelines validate_data.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/catalog/scripts/validate_data.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-contrast-py",
+   "name": "Pipelines contrast.py",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/catalog/scripts/contrast.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-oklch-py",
+   "name": "Pipelines oklch.py",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/catalog/scripts/oklch.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-tokens-py",
+   "name": "Pipelines tokens.py",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/catalog/scripts/tokens.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-shadcn-theme-py",
+   "name": "Pipelines shadcn_theme.py",
+   "kind": "library",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/catalog/scripts/shadcn_theme.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-route-py",
+   "name": "Pipelines route.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/catalog/scripts/route.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-merge-parts-py",
+   "name": "Pipelines merge_parts.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/catalog/scripts/merge_parts.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-catalog-data",
+   "name": "Pipelines catalog data",
+   "kind": "data",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/catalog/data/",
+    "plugins/ui-design/catalog/data/stacks/",
+    "plugins/ui-design/catalog/data/catalog-summary.json",
+    "plugins/ui-design/catalog/data/data-provenance.json"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-staged-stack-accessibility-candidates",
+   "name": "Pipelines staged stack-accessibility candidates",
+   "kind": "data",
+   "status": "partial",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/maintenance/candidates/stack-accessibility/REVIEW.md",
+    "plugins/ui-design/maintenance/candidates/stack-accessibility/angular.csv",
+    "plugins/ui-design/maintenance/candidates/stack-accessibility/nextjs.csv",
+    "plugins/ui-design/maintenance/candidates/stack-accessibility/astro.csv"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-spec-yaml-contract",
+   "name": "Pipelines spec.yaml contract",
+   "kind": "protocol",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/spec.yaml"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-validate-contract-py",
+   "name": "Pipelines validate-contract.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/maintenance/validate-contract.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-validate-csv-py",
+   "name": "Pipelines validate-csv.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/maintenance/validate-csv.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-generate-catalog-summary-py",
+   "name": "Pipelines generate-catalog-summary.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/maintenance/generate-catalog-summary.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-generate-index-py",
+   "name": "Pipelines generate-index.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/maintenance/generate-index.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-generated-index-md-files",
+   "name": "Pipelines generated INDEX.md files",
+   "kind": "data",
+   "status": "generated",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/INDEX.md",
+    "INDEX.md"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-evaluate-relevance-py",
+   "name": "Pipelines evaluate-relevance.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/maintenance/evaluate-relevance.py",
+    "plugins/ui-design/maintenance/relevance_metrics.py",
+    "plugins/ui-design/catalog/scripts/tests/fixtures/relevance-cases.json",
+    "plugins/ui-design/catalog/scripts/tests/fixtures/relevance-thresholds.json",
+    "plugins/ui-design/catalog/scripts/tests/fixtures/relevance-baseline.json"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-smoke-py",
+   "name": "Pipelines smoke.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/maintenance/smoke.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-verify-py",
+   "name": "Pipelines verify.py",
+   "kind": "ci",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/maintenance/verify.py",
+    "plugins/ui-design/maintenance/requirements.txt"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-test-suites",
+   "name": "Pipelines test suites",
+   "kind": "ci",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/catalog/scripts/tests/",
+    "plugins/ui-design/catalog/scripts/tests/fixtures/",
+    "plugins/ui-design/maintenance/tests/"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-refresh-google-fonts-py",
+   "name": "Pipelines refresh-google-fonts.py",
+   "kind": "cli",
+   "status": "partial",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/maintenance/refresh-google-fonts.py",
+    "plugins/ui-design/maintenance/.env.example"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-refresh-icon-catalog-py",
+   "name": "Pipelines refresh-icon-catalog.py",
+   "kind": "cli",
+   "status": "partial",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/maintenance/refresh-icon-catalog.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-harvest-site-tokens-py",
+   "name": "Pipelines harvest-site-tokens.py",
+   "kind": "cli",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/maintenance/harvest-site-tokens.py"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-skill",
+   "name": "Pipelines ui-design-catalog skill",
+   "kind": "skill",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/skills/ui-design-catalog/SKILL.md"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-multipart-skill",
+   "name": "Pipelines ui-design-multipart skill",
+   "kind": "skill",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/skills/ui-design-multipart/SKILL.md"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-refresh-skill",
+   "name": "Pipelines ui-design-catalog-refresh skill",
+   "kind": "skill",
+   "status": "partial",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/skills/ui-design-catalog-refresh/SKILL.md"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-search-part-agent",
+   "name": "Pipelines ui-design-search-part agent",
+   "kind": "agent",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/agents/ui-design-search-part.md"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-page-reviewer-agent",
+   "name": "Pipelines ui-design-page-reviewer agent",
+   "kind": "agent",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/agents/ui-design-page-reviewer.md"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-reviewer-agent",
+   "name": "Pipelines ui-design-catalog-reviewer agent",
+   "kind": "agent",
+   "status": "partial",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/agents/ui-design-catalog-reviewer.md"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-router-md",
+   "name": "Pipelines ROUTER.md",
+   "kind": "doc",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/ROUTER.md"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-references",
+   "name": "Pipelines references",
+   "kind": "doc",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/references/quick-reference.md",
+    "plugins/ui-design/references/pro-rules.md"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-plugin-packaging",
+   "name": "Pipelines plugin packaging",
+   "kind": "launcher",
+   "status": "partial",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/.claude-plugin/plugin.json",
+    "plugins/ui-design/.claude-plugin/marketplace.json",
+    "plugins/ui-design/.gitignore",
+    "plugins/ui-design/.gitattributes",
+    "CLAUDE.md"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-licence-and-attribution-files",
+   "name": "Pipelines licence and attribution files",
+   "kind": "doc",
+   "status": "runs-today",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/LICENSE",
+    "plugins/ui-design/NOTICE",
+    "plugins/ui-design/CHANGELOG.md",
+    "plugins/ui-design/SOURCE-RESEARCH.md",
+    "plugins/ui-design/README.md"
+   ]
+  },
+  {
+   "id": "ui-ux-pro-max-vs-plugin/pipelines-verify-yml-workflow",
+   "name": "Pipelines verify.yml workflow",
+   "kind": "ci",
+   "status": "never-exercised",
+   "subsystem": "ui-ux-pro-max-vs-plugin",
+   "paths": [
+    "plugins/ui-design/.github/workflows/verify.yml"
+   ]
+  },
+  {
+   "id": "archive/living-archive-backend-fastapi-app",
+   "name": "Living Archive backend (FastAPI app)",
+   "kind": "service",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/backend/app/main.py",
+    "archive/backend/app/config.py",
+    "archive/backend/app/database.py",
+    "archive/backend/app/__init__.py",
+    "archive/backend/app/api/__init__.py",
+    "archive/backend/app/services/__init__.py"
+   ]
+  },
+  {
+   "id": "archive/auth-api-api-auth",
+   "name": "Auth API (/api/auth)",
+   "kind": "service",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/backend/app/api/auth.py",
+    "archive/backend/app/schemas.py",
+    "archive/backend/app/models.py"
+   ]
+  },
+  {
+   "id": "archive/ingest-api-post-api-ingest",
+   "name": "Ingest API (POST /api/ingest)",
+   "kind": "service",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/backend/app/api/ingest.py",
+    "archive/backend/app/schemas.py"
+   ]
+  },
+  {
+   "id": "archive/nodes-api-get-api-nodes-get-api-nodes-node-id",
+   "name": "Nodes API (GET /api/nodes, GET /api/nodes/{node_id})",
+   "kind": "service",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/backend/app/api/nodes.py"
+   ]
+  },
+  {
+   "id": "archive/search-api-get-api-search",
+   "name": "Search API (GET /api/search)",
+   "kind": "service",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/backend/app/api/search.py"
+   ]
+  },
+  {
+   "id": "archive/ai-engine-groq-classification-embeddings",
+   "name": "AI engine (Groq classification + embeddings)",
+   "kind": "library",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/backend/app/services/ai_engine.py"
+   ]
+  },
+  {
+   "id": "archive/relational-store-postgresql-via-sqlalchemy-async",
+   "name": "Relational store (PostgreSQL via SQLAlchemy async)",
+   "kind": "data",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/backend/app/database.py",
+    "archive/backend/app/models.py"
+   ]
+  },
+  {
+   "id": "archive/graph-store-neo4j",
+   "name": "Graph store (Neo4j)",
+   "kind": "library",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/backend/app/services/graph_store.py"
+   ]
+  },
+  {
+   "id": "archive/vector-store-pinecone-optional",
+   "name": "Vector store (Pinecone, optional)",
+   "kind": "library",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/backend/app/services/vector_store.py"
+   ]
+  },
+  {
+   "id": "archive/reorganization-tasks-celery-worker-beat",
+   "name": "Reorganization tasks (Celery worker + beat)",
+   "kind": "service",
+   "status": "stub",
+   "subsystem": "archive",
+   "paths": [
+    "archive/backend/app/tasks/reorganization.py",
+    "archive/backend/app/tasks/__init__.py"
+   ]
+  },
+  {
+   "id": "archive/websocket-protocol-websocketmanager",
+   "name": "WebSocket protocol (WebSocketManager)",
+   "kind": "protocol",
+   "status": "specified-not-implemented",
+   "subsystem": "archive",
+   "paths": [
+    "archive/frontend/src/services/websocket.js",
+    "archive/frontend/src/App.jsx"
+   ]
+  },
+  {
+   "id": "archive/living-archive-frontend-spa-react-vite",
+   "name": "Living Archive frontend SPA (React + Vite)",
+   "kind": "web-app",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/frontend/src/App.jsx",
+    "archive/frontend/src/main.jsx",
+    "archive/frontend/src/index.css",
+    "archive/frontend/index.html",
+    "archive/frontend/package.json",
+    "archive/frontend/vite.config.js",
+    "archive/frontend/tailwind.config.js",
+    "archive/frontend/postcss.config.js"
+   ]
+  },
+  {
+   "id": "archive/frontend-api-client-api-js",
+   "name": "Frontend API client (api.js)",
+   "kind": "library",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/frontend/src/services/api.js"
+   ]
+  },
+  {
+   "id": "archive/authmodal-tab-sign-in-create-account",
+   "name": "AuthModal tab (Sign In / Create Account)",
+   "kind": "web-app",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/frontend/src/components/AuthModal.jsx"
+   ]
+  },
+  {
+   "id": "archive/ingest-knowledge-panel",
+   "name": "Ingest Knowledge panel",
+   "kind": "web-app",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/frontend/src/App.jsx"
+   ]
+  },
+  {
+   "id": "archive/tree-view-tab",
+   "name": "Tree view tab",
+   "kind": "web-app",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/frontend/src/components/TreeView.jsx"
+   ]
+  },
+  {
+   "id": "archive/graph-view-tab",
+   "name": "Graph view tab",
+   "kind": "web-app",
+   "status": "partial",
+   "subsystem": "archive",
+   "paths": [
+    "archive/frontend/src/components/GraphVisualization.jsx"
+   ]
+  },
+  {
+   "id": "archive/list-view-tab",
+   "name": "List view tab",
+   "kind": "web-app",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/frontend/src/App.jsx"
+   ]
+  },
+  {
+   "id": "archive/searchbar",
+   "name": "SearchBar",
+   "kind": "web-app",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/frontend/src/components/SearchBar.jsx",
+    "archive/frontend/src/App.jsx"
+   ]
+  },
+  {
+   "id": "archive/nodedetail-modal",
+   "name": "NodeDetail modal",
+   "kind": "web-app",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/frontend/src/components/NodeDetail.jsx"
+   ]
+  },
+  {
+   "id": "archive/setup-sh-stack-launcher",
+   "name": "setup.sh (stack launcher)",
+   "kind": "launcher",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/setup.sh"
+   ]
+  },
+  {
+   "id": "archive/docker-compose-stack",
+   "name": "docker-compose stack",
+   "kind": "launcher",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/docker-compose.yml"
+   ]
+  },
+  {
+   "id": "archive/render-yaml-render-blueprint",
+   "name": "render.yaml (Render Blueprint)",
+   "kind": "ci",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/render.yaml"
+   ]
+  },
+  {
+   "id": "archive/backend-container-image-dockerfile-requirements-txt",
+   "name": "Backend container image (Dockerfile + requirements.txt)",
+   "kind": "launcher",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/backend/Dockerfile",
+    "archive/backend/requirements.txt"
+   ]
+  },
+  {
+   "id": "archive/frontend-container-image-dockerfile-nginx-conf",
+   "name": "Frontend container image (Dockerfile + nginx.conf)",
+   "kind": "launcher",
+   "status": "never-exercised",
+   "subsystem": "archive",
+   "paths": [
+    "archive/frontend/Dockerfile",
+    "archive/frontend/nginx.conf"
+   ]
+  },
+  {
+   "id": "archive/engine-readme-md",
+   "name": "ENGINE-README.md",
+   "kind": "doc",
+   "status": "partial",
+   "subsystem": "archive",
+   "paths": [
+    "archive/ENGINE-README.md"
+   ]
+  },
+  {
+   "id": "archive/deploy-md",
+   "name": "DEPLOY.md",
+   "kind": "doc",
+   "status": "partial",
+   "subsystem": "archive",
+   "paths": [
+    "archive/DEPLOY.md"
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "protocol-core/router-js-poll-and-render-layer-logic-bridge-core-file-4-4",
+   "to": "protocol-core/dashboard-json-live-system-state-schema-2-0-0",
+   "relation": "GET every 5000 ms, cache-busted, read-only",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/control-room-html-control-room-ui",
+   "to": "protocol-core/router-js-poll-and-render-layer-logic-bridge-core-file-4-4",
+   "relation": "loads via <script src=router.js>; router.js writes into its element ids",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/router-js-poll-and-render-layer-logic-bridge-core-file-4-4",
+   "to": "protocol-core/router-js-routing-layer-routeskill-resolvegates-brandpath-isauthoredl0",
+   "relation": "skill chip click calls routeSkill (return value discarded)",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/router-js-routing-layer-routeskill-resolvegates-brandpath-isauthoredl0",
+   "to": "protocol-core/router-3-routing-table-skill-mandatory-context",
+   "relation": "resolveGates is a hard-coded mirror of the mandatory column only",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/router-js-routing-layer-routeskill-resolvegates-brandpath-isauthoredl0",
+   "to": "protocol-core/router-4-5-execution-mode-context-resolution-ladder-l0-l3-and-mode-gat",
+   "relation": "implements the L0 check only; ignores the mode; defers L1/L2 to the agent",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/router-js-routing-layer-routeskill-resolvegates-brandpath-isauthoredl0",
+   "to": "protocol-core/dashboard-json-live-system-state-schema-2-0-0",
+   "relation": "isAuthoredL0 reads registries.context_brand_gates[].authored from STATE",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/studio-router-protocol-router-md-v1-1",
+   "to": "protocol-core/dashboard-json-live-system-state-schema-2-0-0",
+   "relation": "reads mode and phases; writes phase status, event_log and heartbeat (spec)",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/router-2-dual-trigger-intercept-and-8-step-sequence",
+   "to": "protocol-core/dashboard-json-live-system-state-schema-2-0-0",
+   "relation": "Trigger B.2 reads pipeline.phases[].status",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/router-7-8-content-md-emission-and-context-flush",
+   "to": "vault/ (Content MDs, SCHEMA.md, _templates/content-md.md)",
+   "relation": "reads and writes exactly one Content MD per routed task (spec); cross-subsystem",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/router-4-5-execution-mode-context-resolution-ladder-l0-l3-and-mode-gat",
+   "to": "context/brand/*.context.md",
+   "relation": "L0 source; cross-subsystem",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/router-4-5-execution-mode-context-resolution-ladder-l0-l3-and-mode-gat",
+   "to": "vault/ (Content MDs, SCHEMA.md, _templates/content-md.md)",
+   "relation": "L1 recall and L2 derivation (at least 3 notes)",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/router-10-hard-refusals",
+   "to": "skills/hardware_compute.skill.md and tools/hw/* (evaluate_gate.py, test_gate.py, verify_compute.sh)",
+   "relation": "requires hardware verification and a fresh PASS token; cross-subsystem",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/studio-router-protocol-router-md-v1-1",
+   "to": "skills/*.skill.md",
+   "relation": "opened at intercept step 7 (Parts 2-4 of the Four-Part architecture)",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/router-3-routing-table-skill-mandatory-context",
+   "to": "skills/*.skill.md",
+   "relation": "copied in each skill's 'mandatory_context:' header; all 9 match",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/router-3-routing-table-skill-mandatory-context",
+   "to": "protocol-core/dashboard-json-live-system-state-schema-2-0-0",
+   "relation": "inverse copy in registries.context_brand_gates[].gates_skills; includes one flagged pairing (pipeline_ethics → local_rag_orchestration)",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/tools-verify-system-py-protocol-integrity-checker",
+   "to": "protocol-core/dashboard-json-live-system-state-schema-2-0-0",
+   "relation": "parses and cross-checks registries, pipeline, context_loaded, event_log and host_kind_enum",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/tools-verify-system-py-protocol-integrity-checker",
+   "to": "protocol-core/studio-router-protocol-router-md-v1-1",
+   "relation": "check_router_md: role mentions and path strings only",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/tools-verify-system-py-protocol-integrity-checker",
+   "to": "protocol-core/router-js-routing-layer-routeskill-resolvegates-brandpath-isauthoredl0",
+   "relation": "check_router_js: STATE gate read, context/brand/ present, context/domain/ absent, role names present",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/tools-verify-system-py-protocol-integrity-checker",
+   "to": "protocol-core/control-room-html-control-room-ui",
+   "relation": "check_router_js ids and c-* classes; check_palette_parity on 7 tokens vs css_html_ui ARTIFACT A",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/tools-verify-system-py-protocol-integrity-checker",
+   "to": "skills/*.skill.md",
+   "relation": "check_skill_headers, check_host_portability, check_palette_parity (css_html_ui), check_extracted_probe (hardware_compute)",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/tools-verify-system-py-protocol-integrity-checker",
+   "to": "vault/ (Content MDs, SCHEMA.md, _templates/content-md.md)",
+   "relation": "counts notes for the BLOCKED-state rule",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/tools-verify-system-py-protocol-integrity-checker",
+   "to": "skills/hardware_compute.skill.md and tools/hw/* (evaluate_gate.py, test_gate.py, verify_compute.sh)",
+   "relation": "check_extracted_probe compares tools/hw/verify_compute.sh with ARTIFACT A when present",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/github-workflows-verify-yml-ci-workflow-verify",
+   "to": "protocol-core/tools-verify-system-py-protocol-integrity-checker",
+   "relation": "runs twice: plain, then --quiet under -W error::EncodingWarning",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/github-workflows-verify-yml-ci-workflow-verify",
+   "to": "skills/hardware_compute.skill.md and tools/hw/* (evaluate_gate.py, test_gate.py, verify_compute.sh)",
+   "relation": "runs test_gate.py; extracts and runs verify_compute.sh generic; evaluate_gate.py --all --dry-run --probe /tmp/probe.json",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/github-workflows-verify-yml-ci-workflow-verify",
+   "to": "protocol-core/router-js-poll-and-render-layer-logic-bridge-core-file-4-4",
+   "relation": "node --check router.js",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/github-workflows-verify-yml-ci-workflow-verify",
+   "to": "protocol-core/dashboard-json-live-system-state-schema-2-0-0",
+   "relation": "'Dashboard parses' step",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/github-workflows-verify-yml-ci-workflow-verify",
+   "to": "tools/reconcile_models.py and tools/vault_rag.py",
+   "relation": "--help encoding smoke tests; vault_rag imported for core-logic asserts; cross-subsystem",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "tools/reconcile_models.py and tools/vault_rag.py",
+   "to": "protocol-core/dashboard-json-live-system-state-schema-2-0-0",
+   "relation": "reconcile_models --write rewrites hardware.local_llm.tiers[*].model and _tiers_note; vault_rag ask --write-dashboard rewrites context_used_pct and loaded_tier",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/decisions-md-architecture-decisions-d1-d10",
+   "to": "protocol-core/tools-verify-system-py-protocol-integrity-checker",
+   "relation": "D8 adds check_host_portability and the probe drift check; D9 proposes check_vendor_hash (absent)",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/decisions-md-architecture-decisions-d1-d10",
+   "to": "protocol-core/router-4-5-execution-mode-context-resolution-ladder-l0-l3-and-mode-gat",
+   "relation": "D7 introduced the mode read and the ladder",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/decisions-md-architecture-decisions-d1-d10",
+   "to": "tools/brush-designer/",
+   "relation": "D2: planned routed skill, not routed (no adapter, no skills/brush_designer.skill.md)",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/decisions-md-architecture-decisions-d1-d10",
+   "to": "protocol-core/gitattributes",
+   "relation": "D9's vendored ui-ux-pro-max byte-identity relies on '-text'",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/gitignore",
+   "to": "skills/hardware_compute.skill.md and tools/hw/* (evaluate_gate.py, test_gate.py, verify_compute.sh)",
+   "relation": "ignores the generated tools/hw/verify_compute.sh and state/ (compute_gate.json location per README)",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/hub-static-server-launcher-claude-launch-json",
+   "to": "protocol-core/control-room-html-control-room-ui",
+   "relation": "serves files over HTTP so router.js can fetch dashboard.json",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/dashboard-json-live-system-state-schema-2-0-0",
+   "to": "context/brand/*.context.md",
+   "relation": "registries.context_brand_gates[].authored must equal file existence (check_brand_gates)",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "protocol-core/studio-router-protocol-router-md-v1-1",
+   "to": "tools/brush-designer/",
+   "relation": "§1 topology: 'Not yet routed'",
+   "subsystem": "protocol-core"
+  },
+  {
+   "from": "Router.md",
+   "to": "skills-generative/higgsfield-api",
+   "relation": "invokes at intercept step 7 EXECUTE; Trigger A row 'generate video / motion / animate shot / camera move'; Trigger B .mp4/.mov and dashboard-state detection",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "Router.md",
+   "to": "skills-generative/suno-audio",
+   "relation": "invokes at intercept step 7 EXECUTE; Trigger A row 'music / track / score / stem / drop / verse'; Trigger B .wav/.mp3/.stem",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "Router.md",
+   "to": "skills-generative/adobe-firefly",
+   "relation": "invokes at intercept step 7 EXECUTE; Trigger A row 'generate image / concept art / style ref / firefly'; no Trigger B file-type mapping",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/higgsfield-api",
+   "to": "context/brand/motion_language.context.md",
+   "relation": "mandatory_context gate (unauthored; not on disk)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/higgsfield-api",
+   "to": "context/brand/narrative_continuity.context.md",
+   "relation": "mandatory_context gate (unauthored; not on disk)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/higgsfield-api",
+   "to": "context/brand/visual_identity.context.md",
+   "relation": "mandatory_context gate (authored L0 since 2026-08-31; §7 generated-imagery motifs/framing/texture declared unresolved)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/higgsfield-api",
+   "to": "context/brand/color_science.context.md",
+   "relation": "conditional context 'if flagged in dashboard' (Router.md §3; context/brand/README.md marks it with *)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/suno-audio",
+   "to": "context/brand/sound_identity.context.md",
+   "relation": "mandatory_context gate (unauthored; not on disk)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/suno-audio",
+   "to": "context/brand/brand_voice.context.md",
+   "relation": "mandatory_context gate (unauthored; not on disk)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/suno-audio",
+   "to": "context/brand/narrative_continuity.context.md",
+   "relation": "conditional context 'if flagged in dashboard' (Router.md §3)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/adobe-firefly",
+   "to": "context/brand/visual_identity.context.md",
+   "relation": "mandatory_context gate (authored L0; partial by its own §7)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/adobe-firefly",
+   "to": "context/brand/color_science.context.md",
+   "relation": "mandatory_context gate (authored L0; gives a 10-value sRGB UI palette, 'not a colour pipeline', per its §5)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/adobe-firefly",
+   "to": "context/brand/typography_system.context.md",
+   "relation": "conditional context 'if flagged in dashboard' (Router.md §3)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "router.js",
+   "to": "skills-generative/higgsfield-api",
+   "relation": "resolveGates table mirrors mandatory_context; routeSkill gate-checks only; the dispatchAPICall registry has higgsfield https://platform.higgsfield.ai ('via MCP in production'), but dispatchAPICall is never called",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "router.js",
+   "to": "skills-generative/suno-audio",
+   "relation": "resolveGates mirror; no 'suno' entry in the dispatchAPICall registry, although its comment lists it",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "router.js",
+   "to": "skills-generative/adobe-firefly",
+   "relation": "resolveGates mirror; no 'firefly' entry in the dispatchAPICall registry; renderVariables skips '_prev' keys",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "control_room.html",
+   "to": "router.js",
+   "relation": "loads router.js; the skill chips it renders call routeSkill(file)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-infra/tools-verify-system-py",
+   "to": "skills-generative/higgsfield-api",
+   "relation": "static checks: registry, mandatory_context, host_kinds, macOS binaries in fenced code, pipeline phase ph_03 (run in .github/workflows/verify.yml)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-infra/tools-verify-system-py",
+   "to": "skills-generative/suno-audio",
+   "relation": "static checks (same; pipeline phase ph_02)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-infra/tools-verify-system-py",
+   "to": "skills-generative/adobe-firefly",
+   "relation": "static checks (same; pipeline phase ph_01)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "dashboard.json",
+   "to": "skills-generative/adobe-firefly",
+   "relation": "pipeline phase ph_01 skill; registries.skills entry status ready; context_brand_gates gates_skills (visual_identity, color_science)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "dashboard.json",
+   "to": "skills-generative/suno-audio",
+   "relation": "pipeline phase ph_02 skill; registries.skills entry status ready; gates_skills (sound_identity, brand_voice)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "dashboard.json",
+   "to": "skills-generative/higgsfield-api",
+   "relation": "pipeline phase ph_03 skill (blocked); event_log PARKED 2026-08-23 and INTERCEPT / CONTEXT_LOADED / RENDER_SUBMITTED 2026-07-01",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/adobe-firefly",
+   "to": "skills-generative/suno-audio",
+   "relation": "precedes in dashboard.json pipeline order (ph_01 → ph_02); no data handoff defined",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/suno-audio",
+   "to": "skills-generative/higgsfield-api",
+   "relation": "precedes in dashboard.json pipeline order (ph_02 → ph_03); no data handoff defined",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/higgsfield-api",
+   "to": "adobe_suite_uxp",
+   "relation": "share Router.md Trigger B file types .mp4/.mov ('higgsfield or adobe_suite')",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "DECISIONS.md",
+   "to": "skills-generative/higgsfield-api",
+   "relation": "D6 addendum: stale gates (V1 character_uuid vs. the state machine, seed_lock, aspect_ratio); MIGRATION PENDING banner; rewrite deferred until brush_designer is written as the reference implementation",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "DECISIONS.md",
+   "to": "skills-generative/suno-audio",
+   "relation": "D6 addendum: stale V1 audio_bpm/audio_key locks",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "DECISIONS.md",
+   "to": "skills-generative/adobe-firefly",
+   "relation": "D6 addendum: stale V1 style_ref_id ledger check, V2 master_palette lock, §2.7 _prev supersede; D6 removed the '_prev' rule",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/higgsfield-api",
+   "to": "vault/SCHEMA.md",
+   "relation": "durable state destination per the banner (Content MD ## Decisions in Force / ## Method); read at intercept step 4, written at step 8",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/suno-audio",
+   "to": "vault/SCHEMA.md",
+   "relation": "durable state destination per the banner",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-generative/adobe-firefly",
+   "to": "vault/SCHEMA.md",
+   "relation": "durable state destination per the banner; SCHEMA.md example frontmatter lists skills: [adobe_firefly, brush_designer] and has a Timeline example '2026-08-23 · adobe_firefly'",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "vault/studio-os/ui/ui-ux-intelligence-integration.md",
+   "to": "skills-generative/adobe-firefly",
+   "relation": "the only vault Content MD; its Next Steps says adobe_firefly and higgsfield_api find the visual_identity imagery constraints absent until §7 is authored; its context_brand does not include any gate higgsfield/suno lack",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "vault/_migration/GAP-ANALYSIS.md",
+   "to": "skills-generative/suno-audio",
+   "relation": "§6 table: after a hypothetical complete corpus migration suno_audio is 'one authored file away' (sound_identity); the table predates the 2026-08-31 authoring of visual_identity/color_science",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "context/brand/README.md",
+   "to": "skills-generative/higgsfield-api",
+   "relation": "gate table lists which brand files gate firefly / higgsfield / suno_audio, with * for conditional; the file still opens 'Status: NOT YET AUTHORED'",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-infra/tools-bootstrap-sh",
+   "to": "skills-generative/higgsfield-api",
+   "relation": "mkdir -p state tools/hw .task_scratch (the directories P1/P4 read); checks python3 curl awk df grep as 'required by every skill's prerequisite block'; writes no attestation.txt",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-infra/tools-bootstrap-sh",
+   "to": "skills-generative/suno-audio",
+   "relation": "same directory creation and prerequisite-binary check",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "skills-infra/tools-bootstrap-sh",
+   "to": "skills-generative/adobe-firefly",
+   "relation": "same; creates state/ (which the P4 ledger init needs) and .task_scratch/ (which the step 3 raw-response save needs)",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "protocol-core/gitignore",
+   "to": "skills-generative/higgsfield-api",
+   "relation": "ignores state/ and .task_scratch/ (the runtime state these skills write); renders/ is NOT ignored",
+   "subsystem": "skills-generative"
+  },
+  {
+   "from": "Router.md",
+   "to": "skills-local-apps/adobe-suite-uxp-skill",
+   "relation": "routes to it at intercept step 7 through Trigger A/B (§2) and the §3 routing table; the skill's P1 requires the ROUTER INTERCEPT attestation; §1 host table says it does not route on native linux",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "Router.md",
+   "to": "skills-local-apps/blender-python-skill",
+   "relation": "routes to it at intercept step 7; P1 requires the attestation; §10 refuses heavy work without a fresh PASS token",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "Router.md",
+   "to": "skills-local-apps/css-html-ui-skill",
+   "relation": "routes to it at intercept step 7; P1 requires the attestation",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/adobe-suite-uxp-skill",
+   "to": "hardware_compute (skills/hardware_compute.skill.md)",
+   "relation": "depends_on_skill; workload_class batch_2d PASS token (declared, not checked in the skill; hardware_compute §0 lists batch adobe_suite_uxp as gated)",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/blender-python-skill",
+   "to": "hardware_compute (skills/hardware_compute.skill.md)",
+   "relation": "depends_on_skill; P4 reads state/compute_gate.json (render_3d_cpu); step 2 writes consumed_by; hardware_compute §2.7 says 'the requesting skill re-checks the token itself (see blender P4)'",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-infra/tools-hw-evaluate-gate-py",
+   "to": "skills-local-apps/blender-python-skill",
+   "relation": "mints the state/compute_gate.json token that P4 validates. --consume SKILL_ID stamps consumed_by at mint time (conflicts with P4); a re-mint without --consume writes consumed_by null. Exit 0 PASS, 1 DENY, 2 error.",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/adobe-suite-uxp-skill",
+   "to": "skills-local-apps/adobe-suite-uxp-artifact-d-run-jsx-sh-extraction-cleanup-wrapper-bash-",
+   "relation": "executes artifacts only through this runner",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/adobe-suite-uxp-artifact-d-run-jsx-sh-extraction-cleanup-wrapper-bash-",
+   "to": "skills-local-apps/adobe-suite-uxp-artifact-a-photoshop-batch-layer-png-exporter",
+   "relation": "runs it over COM (Photoshop.Application.DoJavaScriptFile)",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/adobe-suite-uxp-artifact-d-run-jsx-sh-extraction-cleanup-wrapper-bash-",
+   "to": "skills-local-apps/adobe-suite-uxp-artifact-b-photoshop-batch-grade-export",
+   "relation": "runs it over COM",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/adobe-suite-uxp-artifact-c-premiere-pro-shot-ledger-markers-offline-re",
+   "to": "higgsfield_api (skills/higgsfield_api.skill.md)",
+   "relation": "the example marker comment 'hf_a91x seed 448811' matches the higgsfield_api RENDER_SUBMITTED event in dashboard.json (shot ledger; inferred from the example)",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/adobe-suite-uxp-skill",
+   "to": "context/brand/color_science.context.md",
+   "relation": "mandatory_context (authored L0; §5 says it supplies no working space, LUT or grading)",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/adobe-suite-uxp-skill",
+   "to": "context/brand/render_philosophy.context.md",
+   "relation": "mandatory_context (file not on disk; dashboard authored:false, so L3 parks)",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/blender-python-skill",
+   "to": "context/brand/render_philosophy.context.md",
+   "relation": "mandatory_context (unauthored); step 7 spot-check and the ARTIFACT A light-rig defaults cite it",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/blender-python-skill",
+   "to": "context/brand/motion_language.context.md",
+   "relation": "mandatory_context (unauthored); V2 camera moves must map to its named presets",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/blender-python-skill",
+   "to": "skills-local-apps/blender-python-artifact-a-camera-path-py-rigid-bezier-camera-pathing",
+   "relation": "extracts it to tools/bpy/ and runs it headless",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/blender-python-artifact-a-camera-path-py-rigid-bezier-camera-pathing",
+   "to": "skills-local-apps/blender-python-artifact-c-params-sidecar-schema-tools-bpy-params-json",
+   "relation": "reads params",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/blender-python-artifact-b-lowpoly-gen-py-low-poly-procedural-terrain-s",
+   "to": "skills-local-apps/blender-python-artifact-c-params-sidecar-schema-tools-bpy-params-json",
+   "relation": "reads params (plus noise_scale, which the schema lacks)",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/blender-python-skill",
+   "to": "higgsfield_api (skills/higgsfield_api.skill.md)",
+   "relation": "V2: 'the bpy path template mirrors the Higgsfield motion library so 3D inserts and AI shots share one grammar'",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/css-html-ui-skill",
+   "to": "context/brand/brand_voice.context.md",
+   "relation": "mandatory_context (unauthored, so the route parks); V2 copy rules",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/css-html-ui-skill",
+   "to": "context/brand/typography_system.context.md, context/brand/visual_identity.context.md",
+   "relation": "mandatory_context (authored L0, transcribed from ARTIFACT A)",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/css-html-ui-artifact-a-design-token-dictionary",
+   "to": "skills-local-apps/css-html-ui-artifact-b-css-projection-tokens-tokens-css",
+   "relation": "B is the CSS projection of A, hand-maintained, and adds --grid-* and --bp-* with no source in A",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/css-html-ui-artifact-a-design-token-dictionary",
+   "to": "control_room.html",
+   "relation": "transcribed into the :root token block; enforced by check_palette_parity (7 colours)",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/css-html-ui-artifact-a-design-token-dictionary",
+   "to": "hub/styles.css",
+   "relation": "mirrors ARTIFACT A (HARD MONO); not machine-checked",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/css-html-ui-artifact-a-design-token-dictionary",
+   "to": "tools/brush-designer/styles.css",
+   "relation": "mirrors ARTIFACT A chrome colours under different var names, plus extra un-tokened values; not machine-checked",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/css-html-ui-artifact-a-design-token-dictionary",
+   "to": "context/brand/visual_identity.context.md, context/brand/typography_system.context.md, context/brand/color_science.context.md",
+   "relation": "the three brand gates were transcribed from it (each §0 PROVENANCE; DECISIONS.md D9/D10)",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-infra/tools-verify-system-py",
+   "to": "skills-local-apps/css-html-ui-artifact-a-design-token-dictionary",
+   "relation": "check_palette_parity regex-parses 7 colour tokens and compares them with control_room.html",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-infra/tools-verify-system-py",
+   "to": "skills-local-apps/adobe-suite-uxp-skill",
+   "relation": "check_host_portability: host_kinds must be within dashboard hardware.host_kind_enum; no macOS binary or /Applications/ inside code fences (the unclosed fence at line 30 means the artifact bodies are not scanned); check_skill_headers validates mandatory_context",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-infra/tools-verify-system-py",
+   "to": "skills-local-apps/blender-python-skill",
+   "relation": "check_host_portability: forbids scn.cycles.device = \"GPU\" while hardware.gpu.cuda is false",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": ".github/workflows/verify.yml",
+   "to": "skills-infra/tools-verify-system-py",
+   "relation": "runs it on push to main, on pull_request and on workflow_dispatch",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-local-apps/css-html-ui-artifact-c-dom-mutation-contract",
+   "to": "router.js",
+   "relation": "statusColor() is the projection of semantic.* (it adds c-queued); esc() is the required escape function; check_router_js verifies that emitted c-* classes exist in control_room.html",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "ui_ux_intelligence (skills/ui_ux_intelligence.skill.md)",
+   "to": "skills-local-apps/css-html-ui-skill",
+   "relation": "upstream: decides the look; its ARTIFACT B design_system JSON is the product-work handoff (untested); its ARTIFACT D is the operator-approved regeneration loop for ARTIFACT A",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "dashboard.json",
+   "to": "skills-local-apps/blender-python-skill",
+   "relation": "pipeline ph_04 '3D Insert Shots' (queued, 0%)",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "dashboard.json",
+   "to": "skills-local-apps/adobe-suite-uxp-skill",
+   "relation": "pipeline ph_05 'Compositing' (status compositing, 18%); Trigger B dashboard-state detection; event_log COMP_STARTED 2026-07-01",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "dashboard.json",
+   "to": "skills-local-apps/css-html-ui-skill",
+   "relation": "pipeline ph_06 'Delivery UI Page' (queued, 0%)",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-infra/tools-bootstrap-sh",
+   "to": "skills-local-apps/adobe-suite-uxp-skill",
+   "relation": "preflight checks COM registration of the Photoshop/Illustrator/AfterFX ProgIDs with Test-Path HKLM:\\SOFTWARE\\Classes\\<ProgID>; mkdir -p state tools/hw .task_scratch",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-infra/tools-bootstrap-sh",
+   "to": "skills-local-apps/blender-python-skill",
+   "relation": "preflight uses the same Blender detection (BLENDER_BIN, PATH, Program Files glob) and warns 'blender_python will park' if it is not found",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "router.js",
+   "to": "adobe_suite_uxp (skill), blender_python (skill), css_html_ui (skill)",
+   "relation": "routeSkill() UI chip resolves gates through its resolveGates table and logs PARKED for all three (unauthored gates). dispatchAPICall names adobe_uxp and blender services, but they have no registry entry, so the call returns 'unregistered service'.",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "DECISIONS.md",
+   "to": "blender_python (skill), css_html_ui (skill)",
+   "relation": "the D6 addendum adds the MIGRATION PENDING banners (stale active_variables gates)",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "DECISIONS.md",
+   "to": "adobe_suite_uxp (skill), blender_python (skill)",
+   "relation": "D8 Windows port: osascript replaced by COM, P2a and the ARTIFACT D timeout; EEVEE by default, Cycles on CPU, 1920×823; ARTIFACT C Premiere path unverified",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "DECISIONS.md",
+   "to": "skills-local-apps/css-html-ui-artifact-a-design-token-dictionary",
+   "relation": "D9 addendum (contrast_floor, WCAG fixes) and D10 HARD MONO rewrite; D10 says tokens/ has never existed on disk",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "vault/studio-os/ui/ui-ux-intelligence-integration.md",
+   "to": "skills-local-apps/css-html-ui-skill",
+   "relation": "the only Content MD naming css_html_ui (frontmatter skills); its timeline records the token and retheme edits; Next Steps name brand_voice as the blocker",
+   "subsystem": "skills-local-apps"
+  },
+  {
+   "from": "skills-infra/local-rag-orchestration-skill",
+   "to": "skills-infra/hardware-compute-skill",
+   "relation": "depends_on_skill: needs a fresh, unconsumed PASS token for llm_local_sm, or llm_local_md when RAG_TIER=md (P3)",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/hardware-compute-skill",
+   "to": "skills-infra/verify-compute-sh-hardware-compute-artifact-a-hardware-probe-v4",
+   "relation": "embeds it as ARTIFACT A; UNPACK writes it to tools/hw/verify_compute.sh",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/hardware-compute-skill",
+   "to": "skills-infra/artifact-b-threshold-matrix-laws-and-remedies",
+   "relation": "embeds",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/hardware-compute-skill",
+   "to": "skills-infra/compute-gate-token-artifact-c-state-compute-gate-json",
+   "relation": "embeds the schema; mints and denies per steps 4-5",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-hw-evaluate-gate-py",
+   "to": "skills-infra/artifact-b-threshold-matrix-laws-and-remedies",
+   "relation": "parses it at runtime from skills/hardware_compute.skill.md",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-hw-evaluate-gate-py",
+   "to": "skills-infra/compute-gate-token-artifact-c-state-compute-gate-json",
+   "relation": "writes PASS/DENY; enforces single_flight_law by workload only",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-hw-evaluate-gate-py",
+   "to": "skills-infra/verify-compute-sh-hardware-compute-artifact-a-hardware-probe-v4",
+   "relation": "consumes its JSON output (state/hw_probe_latest.json or --probe)",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-hw-test-gate-py",
+   "to": "skills-infra/tools-hw-evaluate-gate-py",
+   "relation": "regression-tests it through subprocess",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-bootstrap-sh",
+   "to": "skills-infra/verify-compute-sh-hardware-compute-artifact-a-hardware-probe-v4",
+   "relation": "extracts it from the skill file and runs it with 'generic'",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-bootstrap-sh",
+   "to": "skills-infra/tools-hw-evaluate-gate-py",
+   "relation": "runs --all --dry-run --probe state/hw_probe_latest.json",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-bootstrap-sh",
+   "to": "tools/reconcile_models.py",
+   "relation": "runs it in report mode with --endpoint <reached> (other subsystem)",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-bootstrap-sh",
+   "to": "skills-infra/ollama-local-endpoint",
+   "relation": "checks reachability through /api/tags, retrying the WSL gateway",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/local-rag-orchestration-skill",
+   "to": "skills-infra/compute-gate-token-artifact-c-state-compute-gate-json",
+   "relation": "reads it at P3 and stamps consumed_by at step 8. vault_rag.py implements neither",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/local-rag-orchestration-skill",
+   "to": "skills-infra/tools-vault-rag-py",
+   "relation": "its declared implementation of status/index/ask/evict; P5 calls 'python3 tools/vault_rag.py status'",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-vault-rag-py",
+   "to": "skills-infra/ollama-local-endpoint",
+   "relation": "calls /api/tags, /api/embeddings and /api/generate (including the keep_alive 0 eviction)",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-vault-rag-py",
+   "to": "skills-infra/state-rag-index-index-json-rag-vector-index",
+   "relation": "writes it (index) and reads it (ask, status)",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-vault-rag-py",
+   "to": "dashboard.json",
+   "relation": "reads hardware.local_llm endpoint, tiers and embed_model; with --write-dashboard, writes context_used_pct and loaded_tier",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-vault-rag-py",
+   "to": "tools/reconcile_models.py",
+   "relation": "suggests 'python3 tools/reconcile_models.py --write' when a model is not served (other subsystem)",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/local-rag-orchestration-skill",
+   "to": "skills-infra/local-rag-artifact-a-ollama-request-payloads",
+   "relation": "embeds",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/local-rag-orchestration-skill",
+   "to": "skills-infra/local-rag-artifact-b-routing-sub-prompts",
+   "relation": "embeds; only QUERY_SUBPROMPT is copied into vault_rag.py",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/local-rag-orchestration-skill",
+   "to": "skills-infra/local-rag-artifact-c-flush-checkpoint-ledger-state-rag-flush-ledger-js",
+   "relation": "specifies it; not implemented",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "hub/ollama.js",
+   "to": "skills-infra/tools-vault-rag-py",
+   "relation": "browser-side mirror of the chunk/retrieve/QUERY prompt, calling Ollama directly with no gate check (hub subsystem)",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "router.js",
+   "to": "dashboard.json",
+   "relation": "reads and renders hardware.* including local_llm.loaded_tier and context_used_pct; never writes the DENY-side state (other subsystem)",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/ui-ux-intelligence-skill",
+   "to": "skills-infra/tools-ui-ux-pro-max-scripts-search-py",
+   "relation": "issues every search, design-system, persist and audit command",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-ui-ux-pro-max-scripts-search-py",
+   "to": "skills-infra/tools-ui-ux-pro-max-data-vendored-corpus",
+   "relation": "BM25 search over the CSVs",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-ui-ux-pro-max-scripts-search-py",
+   "to": "skills-infra/tools-ui-ux-pro-max-scripts-reasoning-contract-py",
+   "relation": "design_system.py imports apply_decision_rules and parse_decision_rules",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-ui-ux-pro-max-scripts-validate-data-py",
+   "to": "skills-infra/tools-ui-ux-pro-max-data-vendored-corpus",
+   "relation": "validates the CSVs and JSON catalogs",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "hub/designer-pro.js",
+   "to": "skills-infra/tools-ui-ux-pro-max-data-vendored-corpus",
+   "relation": "reads the CSVs over HTTP (token overlap, not BM25) and shows search.py commands (hub subsystem)",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/ui-ux-intelligence-skill",
+   "to": "skills-infra/ui-ux-artifact-d-gate-regeneration-protocol-studio-surfaces",
+   "relation": "embeds it; it governs studio-surface changes",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/ui-ux-artifact-d-gate-regeneration-protocol-studio-surfaces",
+   "to": "skills-infra/tools-verify-system-py",
+   "relation": "step 3 IMPACT must confirm check_palette_parity would still pass",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/ui-ux-intelligence-skill",
+   "to": "skills-infra/ui-ux-artifact-a-b-c-domain-routing-table-output-contract-zero-result-",
+   "relation": "embeds",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/ui-ux-intelligence-skill",
+   "to": "css_html_ui skill (skills/css_html_ui.skill.md)",
+   "relation": "Upstream generator. It hands the ARTIFACT B design_system to css_html_ui for product work. css_html_ui ARTIFACT A (mutation_policy 'operator-approval only; agent proposes, never commits token changes') is the studio token authority (other subsystem)",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/ui-ux-intelligence-skill",
+   "to": "context/brand/visual_identity, typography_system, color_science",
+   "relation": "mandatory_context (authored:true); ARTIFACT D is their declared regeneration path; typography_system and color_science cite search.py commands",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/hardware-compute-skill",
+   "to": "blender_python skill (skills/blender_python.skill.md)",
+   "relation": "gates it (render_3d_cpu). blender P4 re-checks the token; step 2 CLAIM THE GATE writes consumed_by: blender_python (other subsystem)",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/hardware-compute-skill",
+   "to": "adobe_suite_uxp skill (skills/adobe_suite_uxp.skill.md)",
+   "relation": "declared dependency (depends_on_skill, workload_class batch_2d). adobe_suite_uxp has danger_class LOCAL_DESTRUCTIVE and no token-check code (other subsystem)",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/hardware-compute-skill",
+   "to": "Router (Router.md)",
+   "relation": "HANDBACK target. The Router's Trigger A table and §10 refusal 'skip hardware verification' route to it. P1 expects the Router's attestation file (other subsystem)",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-verify-system-py",
+   "to": "skills-infra/verify-compute-sh-hardware-compute-artifact-a-hardware-probe-v4",
+   "relation": "check_extracted_probe fails if the extracted copy drifts from ARTIFACT A",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-verify-system-py",
+   "to": "skills-infra/hardware-compute-skill",
+   "relation": "check_skill_headers and check_host_portability validate mandatory_context and host_kinds (all three in-scope skills)",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/github-workflows-verify-yml-subsystem-relevant-steps",
+   "to": "skills-infra/tools-hw-test-gate-py",
+   "relation": "runs it",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/github-workflows-verify-yml-subsystem-relevant-steps",
+   "to": "skills-infra/verify-compute-sh-hardware-compute-artifact-a-hardware-probe-v4",
+   "relation": "extracts it, runs bash -n, and runs it on ubuntu (Linux branch only)",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/github-workflows-verify-yml-subsystem-relevant-steps",
+   "to": "skills-infra/tools-vault-rag-py",
+   "relation": "smoke-tests --help and the core logic",
+   "subsystem": "skills-infra"
+  },
+  {
+   "from": "skills-infra/tools-bootstrap-sh",
+   "to": "skills/hardware_compute.skill.md",
+   "relation": "extracts ARTIFACT A by regex into tools/hw/verify_compute.sh",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "skills-infra/tools-bootstrap-sh",
+   "to": "tools/hw/verify_compute.sh",
+   "relation": "generates it, runs chmod +x and bash -n, and runs it with 'generic' into state/hw_probe_latest.json",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "skills-infra/tools-bootstrap-sh",
+   "to": "skills-infra/tools-hw-evaluate-gate-py",
+   "relation": "invokes --all --dry-run --probe state/hw_probe_latest.json (never mints; exit code ignored)",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "skills-infra/tools-bootstrap-sh",
+   "to": "tools/reconcile_models.py",
+   "relation": "invokes --endpoint <reached endpoint> without --write when Ollama is reachable (full mode only)",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "skills-infra/tools-bootstrap-sh",
+   "to": "dashboard.json",
+   "relation": "reads hardware.local_llm.endpoint",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "skills-infra/tools-bootstrap-sh",
+   "to": "Router.md",
+   "relation": "existence check used as the repo-root landmark",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "skills-infra/tools-hw-evaluate-gate-py",
+   "to": "skills/hardware_compute.skill.md",
+   "relation": "parses ARTIFACT B thresholds and remedies at run time",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "skills-infra/tools-hw-evaluate-gate-py",
+   "to": "state/hw_probe_latest.json",
+   "relation": "reads the probe (default --probe path)",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "skills-infra/tools-hw-evaluate-gate-py",
+   "to": "state/compute_gate.json",
+   "relation": "reads it for single-flight; writes a PASS token or DENY record whenever --dry-run is absent",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "skills-infra/tools-hw-test-gate-py",
+   "to": "skills-infra/tools-hw-evaluate-gate-py",
+   "relation": "runs it as a subprocess with synthetic probes; pins 10 verdicts",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "skills-infra/tools-hw-test-gate-py",
+   "to": "state/compute_gate.json",
+   "relation": "temporarily writes a synthetic live token, then restores or deletes it",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "tools/reconcile_models.py",
+   "to": "dashboard.json",
+   "relation": "reads hardware.local_llm; --write rewrites tiers.<tier>.model and _tiers_note",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "tools/reconcile_models.py",
+   "to": "Ollama /api/tags",
+   "relation": "HTTP GET to list served models",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "skills-infra/tools-verify-system-py",
+   "to": "tools/hw/verify_compute.sh",
+   "relation": "check_extracted_probe fails if it drifts from ARTIFACT A",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": ".github/workflows/verify.yml",
+   "to": "skills-infra/tools-hw-test-gate-py",
+   "relation": "runs on push to main, PRs and workflow_dispatch",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": ".github/workflows/verify.yml",
+   "to": "skills/hardware_compute.skill.md",
+   "relation": "extracts ARTIFACT A, runs bash -n, runs it on Linux",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": ".github/workflows/verify.yml",
+   "to": "skills-infra/tools-hw-evaluate-gate-py",
+   "relation": "asserts a verdict is produced against the live CI probe",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": ".github/workflows/verify.yml",
+   "to": "tools/reconcile_models.py",
+   "relation": "--help under -W error::EncodingWarning",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "skills/blender_python.skill.md",
+   "to": "state/compute_gate.json",
+   "relation": "P4 (spec) requires a fresh, unconsumed PASS token with workload render_3d_cpu; §2 step 2 stamps consumed_by: blender_python",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "skills/local_rag_orchestration.skill.md",
+   "to": "state/compute_gate.json",
+   "relation": "P3 (spec) requires a fresh, unconsumed PASS token for llm_local_sm (llm_local_md if RAG_TIER=md); §2 step 8 stamps consumed_by after eviction",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "skills/adobe_suite_uxp.skill.md",
+   "to": "skills/hardware_compute.skill.md",
+   "relation": "depends_on_skill with workload_class batch_2d (no compute_gate.json check in its text)",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "Router.md",
+   "to": "skills/hardware_compute.skill.md",
+   "relation": "routes compute-heavy triggers to it; refuses to skip hardware verification or run compute-heavy work without a fresh PASS token",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "router.js",
+   "to": "skills/hardware_compute.skill.md",
+   "relation": "mandatory_context map entry [pipeline_ethics, render_philosophy]",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "BOOT.md",
+   "to": "skills-infra/tools-bootstrap-sh",
+   "relation": "documents the first boot and the --probe re-run",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "skills-infra/tools-vault-rag-py",
+   "to": "tools/reconcile_models.py",
+   "relation": "error hint suggests reconcile_models.py --write (vault_rag.py has no compute_gate reference)",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "protocol-core/gitignore",
+   "to": "tools/hw/verify_compute.sh",
+   "relation": "ignores the generated probe; also ignores state/ and .task_scratch/",
+   "subsystem": "hw-gate"
+  },
+  {
+   "from": "vault-rag/vault-rag-py",
+   "to": "skills/local_rag_orchestration.skill.md",
+   "relation": "implements (executable form). It deviates on purpose: a JSON index instead of FAISS, and similarity-order 'rerank' instead of a cross-encoder. It does not implement SYNTHESIS mode, ROUTER_SUBPROMPT mode routing, CHECKPOINT-F2 event_log writes or chunk-title generation.",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "skills/local_rag_orchestration.skill.md",
+   "to": "vault-rag/vault-rag-py",
+   "relation": "P5 preflight runs `vault_rag.py status` and greps for 'index +N chunks' and 'changed since'",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/vault-rag-py",
+   "to": "DECISIONS.md D1",
+   "relation": "docstring: the local equivalent of the archive's graph_store.py/vector_store.py that D1 calls for",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/vault-rag-py",
+   "to": "dashboard.json",
+   "relation": "reads hardware.local_llm.endpoint, embed_model and tiers.*.model; writes context_used_pct and loaded_tier with ask --write-dashboard",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/vault-rag-py",
+   "to": "Ollama HTTP API (localhost:11434)",
+   "relation": "calls /api/tags, /api/embeddings and /api/generate (including keep_alive 0 eviction)",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/vault-rag-py",
+   "to": "state/rag_index/index.json",
+   "relation": "writes (index) / reads (ask, status)",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/vault-rag-py",
+   "to": "state/rag_traces/",
+   "relation": "writes archived <think> traces from ask",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/vault-rag-py",
+   "to": "tools/reconcile_models.py",
+   "relation": "suggested fix in the require_model error text ('--write')",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/vault-rag-py",
+   "to": "BOOT.md section 2",
+   "relation": "referenced in the endpoint-unreachable error text (OLLAMA_HOST=0.0.0.0 and the 11434 inbound rule for WSL2)",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/vault-rag-py",
+   "to": "vault-rag/obsidian-vault-vault",
+   "relation": "default --vault target for index; read-only",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/vault-rag-py",
+   "to": "Creative-Writing (C:\\Users\\utopi\\Creative-Writing, now absent)",
+   "relation": "the current index.json was built from this sibling vault via --vault; the directory no longer exists",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/vault-manifest-py",
+   "to": "state/vault_manifest.json",
+   "relation": "writes",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/vault-manifest-py",
+   "to": "vault-rag/vault-rag-py",
+   "relation": "shares the vault_files exclusion rule ('keep the two in sync'); the manifest also excludes 00_INDEX.md",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/vault-manifest-py",
+   "to": "vault-rag/content-md-schema",
+   "relation": "parses frontmatter fields id/title/kind/project/status/created/updated/tags and extracts the ## Overview and ## Next Steps sections",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/vault-manifest-py",
+   "to": "Creative-Writing (C:\\Users\\utopi\\Creative-Writing, now absent)",
+   "relation": "the current manifest (64 notes, 413,578 bytes) was built from this sibling vault via --vault; that is why the file is large while vault/ has one note",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "hub/app.js",
+   "to": "state/vault_manifest.json",
+   "relation": "fetch('../state/vault_manifest.json') for the Library tab; the Ask tab chunks and embeds manifest bodies into its own localStorage index 'hub:index:v1' and never reads state/rag_index/",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "hub/ollama.js",
+   "to": "vault-rag/vault-rag-py",
+   "relation": "mirrors the chunk constants (800/120), tier limits, nomic-embed-text, the QUERY prompt text and the retrieval logic; defaults differ (top-k 12 vs 8, max words 220 vs 250, chunk ids c_<path>_<i>)",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "tools/launcher/Start-Hub.ps1",
+   "to": "state/vault_manifest.json",
+   "relation": "serves the repo root over 127.0.0.1 http.server (default port 8765) so the hub's fetch() of the manifest works",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "skills-infra/tools-verify-system-py",
+   "to": "vault-rag/obsidian-vault-vault",
+   "relation": "counts vault notes (excluding '_' path parts and README.md/SCHEMA.md) for the L3-consistency gate check",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/ci-vault-rag-smoke-and-core-logic-test",
+   "to": "vault-rag/vault-rag-py",
+   "relation": "imports it and tests chunk, pack/unpack, normalize, dot and strip_frontmatter, plus --help under -W error::EncodingWarning",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/content-md-obsidian-template",
+   "to": "vault-rag/content-md-schema",
+   "relation": "implements the frontmatter and section order",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/worked-example-content-md-dry-stipple-brush",
+   "to": "vault-rag/content-md-schema",
+   "relation": "example instance",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/worked-example-content-md-dry-stipple-brush",
+   "to": "tools/brush-designer/",
+   "relation": "its Method reproduces from brush-designer defaults",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/creative-writing-vault-migration-gap-analysis",
+   "to": "vault-rag/content-md-schema",
+   "relation": "assesses the Creative-Writing corpus against the required fields and sections; proposes a kind-vocabulary amendment",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/creative-writing-vault-migration-gap-analysis",
+   "to": "Router.md / dashboard.json brand gates",
+   "relation": "finds that migration serves 2 of 10 gates and unblocks 0 of 8 skill routes (stale: dashboard now DEGRADED with 3 gates authored)",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/obsidian-ollama-plugin-connection-connection-a",
+   "to": "vault-rag/vault-rag-py",
+   "relation": "OBSIDIAN.md pairs them: A (plugin, sees the open note) for writing; B (vault_rag.py, the whole vault) for remembering",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/obsidian-ollama-plugin-connection-connection-a",
+   "to": "hub Ask tab",
+   "relation": "same OLLAMA_ORIGINS requirement; the hub needs its own origin allowed too (README.md), served by Start-Hub.ps1 at http://localhost:<port>",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault-rag/repo-root-obsidian-vault-state-obsidian-and-stray-note",
+   "to": "vault-rag/obsidian-vault-vault",
+   "relation": "the Obsidian vault root is Creative-Headquarters/, so vault/ is a subfolder inside it; this makes the Dataview FROM \"vault\" work but contradicts vault/README.md step 1",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "vault/studio-os/ui/ui-ux-intelligence-integration.md",
+   "to": "skills-infra/tools-verify-system-py",
+   "relation": "its existence satisfies the L3-consistency check that DEGRADED state needs at least one vault note while gates are unauthored (per its Timeline)",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "archive/",
+   "to": "vault-rag/obsidian-vault-vault",
+   "relation": "claimed by vault/README.md and README.md ('the archive indexes these files'), but no code under archive/ references vault/ or Content MDs; not implemented",
+   "subsystem": "vault-rag"
+  },
+  {
+   "from": "hub-launcher/install-shortcut-ps1",
+   "to": "hub-launcher/studio-hub-lnk-shortcuts-generated",
+   "relation": "writes <Desktop>\\<Name>.lnk and <Programs>\\<Name>.lnk; the Programs copy gets hotkey CTRL+ALT+H",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/studio-hub-lnk-shortcuts-generated",
+   "to": "hub-launcher/start-hub-ps1",
+   "relation": "runs powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File <repo>\\tools\\launcher\\Start-Hub.ps1",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/start-hub-ps1",
+   "to": "hub-launcher/the-hub-hub-web-app",
+   "relation": "serves the repo root via python http.server on 127.0.0.1:8765-8774 and opens http://localhost:<port>/hub/; recognises a running hub by 'Studio Headless OS' in /hub/index.html",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/hub-static-server-claude-launch-json",
+   "to": "hub-launcher/the-hub-hub-web-app",
+   "relation": "alternate static server on port 8347; disagrees with Start-Hub.ps1 (8765) and the index.html offline note (8000); each port is a separate localStorage origin",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/the-hub-hub-web-app",
+   "to": "dashboard.json",
+   "relation": "reads hardware.local_llm (endpoint, tiers.sm/md model and context_window_tokens, embed_model) once at boot",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/the-hub-hub-web-app",
+   "to": "hub-launcher/library-tab",
+   "relation": "contains",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/the-hub-hub-web-app",
+   "to": "hub-launcher/ask-tab",
+   "relation": "contains",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/the-hub-hub-web-app",
+   "to": "hub-launcher/designer-pro-tab",
+   "relation": "contains (mounted at page load)",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/the-hub-hub-web-app",
+   "to": "hub-launcher/brushes-tab",
+   "relation": "contains",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/the-hub-hub-web-app",
+   "to": "hub-launcher/pipeline-tab",
+   "relation": "contains",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/library-tab",
+   "to": "hub-launcher/hubollama-hub-ollama-js",
+   "relation": "calls getEndpoint, fetchTags, familyMatches, generate, stripThink for the AI overview",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/ask-tab",
+   "to": "hub-launcher/hubollama-hub-ollama-js",
+   "relation": "calls getEndpoint, fetchTags, familyMatches, chunkText, embed, normalize, retrieve, buildPrompt, generate, evict, stripThink",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/designer-pro-tab",
+   "to": "hub-launcher/hubollama-hub-ollama-js",
+   "relation": "calls getEndpoint, fetchTags, familyMatches, generate (with AbortSignal), stripThink; uses DEFAULT_TIERS",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/hubollama-hub-ollama-js",
+   "to": "Ollama REST server (default http://localhost:11434)",
+   "relation": "GET /api/tags; POST /api/embeddings; POST /api/generate; POST /api/generate keep_alive:0 (evict)",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/library-tab",
+   "to": "state/vault_manifest.json",
+   "relation": "fetches ../state/vault_manifest.json and reads notes[]",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "tools/vault_manifest.py",
+   "to": "state/vault_manifest.json",
+   "relation": "produces it (--vault default <repo>/vault, --out default <repo>/state/vault_manifest.json) with frontmatter already stripped from body; the hub only tells the user to run it",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/ask-tab",
+   "to": "hub-launcher/library-tab",
+   "relation": "shares in-memory manifestNotes; Build index calls loadManifest when it is empty",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/ask-tab",
+   "to": "skills-infra/tools-vault-rag-py",
+   "relation": "mirrors 'vault_rag.py ask' in the browser (same CHUNK/OVERLAP/tier limits and prompt); defaults differ (top-k 12 vs 8, max-words 220 vs 250; rerank-to 4 in both); does not share state/rag_index",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/designer-pro-tab",
+   "to": "tools/ui-ux-pro-max/data",
+   "relation": "fetches styles, colors, typography, ux-guidelines, charts, landing, products, icons and motion .csv",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/designer-pro-tab",
+   "to": "skills-infra/tools-ui-ux-pro-max-scripts-search-py",
+   "relation": "declares the CLI authoritative; suggests the command on zero hits ('--domain motion' is invalid, because the CLI key is 'gsap')",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/designer-pro-tab",
+   "to": "dashboard.json",
+   "relation": "re-reads hardware.local_llm.tiers.sm (model, context_window_tokens) in resolveTier()",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/brushes-tab",
+   "to": "tools/brush-designer/index.html",
+   "relation": "shows it in an iframe; a link opens it on its own",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "tools/brush-designer/ai/OllamaAssist.js",
+   "to": "hub-launcher/the-hub-hub-web-app",
+   "relation": "shares localStorage keys hub:endpoint and hub:tier on the same origin",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/pipeline-tab",
+   "to": "control_room.html",
+   "relation": "banner links to it as the live pipeline view (same origin under Start-Hub)",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/pipeline-tab",
+   "to": "dashboard.json",
+   "relation": "would need pipeline.phases[{id,label,skill,status,progress_pct}] and pipeline.project to become live; not read today",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "control_room.html",
+   "to": "dashboard.json",
+   "relation": "router.js polls dashboard.json?t=<now> every 5000 ms (cache no-store; pauses when hidden) and renders header, pipeline rail, variables, hardware, event_log, skills, context",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "skills-infra/tools-verify-system-py",
+   "to": "dashboard.json",
+   "relation": "check_pipeline() enforces pipeline id uniqueness, current_phase_id validity, registered skills, status_enum and progress coherence; run in CI by .github/workflows/verify.yml",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "tools/reconcile_models.py",
+   "to": "dashboard.json",
+   "relation": "--write updates hardware.local_llm.tiers[*].model (and _tiers_note), which the hub then reads as tier models",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "skills-infra/tools-vault-rag-py",
+   "to": "dashboard.json",
+   "relation": "ask --write-dashboard writes hardware.local_llm.context_used_pct and loaded_tier (not pipeline)",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "router.js",
+   "to": "http://localhost:8787",
+   "relation": "dispatchAPICall 'agent' registry entry; writeDashboard's TODO would POST /dashboard/patch (stub, not implemented)",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "hub-launcher/the-hub-hub-web-app",
+   "to": "OBSIDIAN.md",
+   "relation": "settings dialog links § A2 for the OLLAMA_ORIGINS fix",
+   "subsystem": "hub-launcher"
+  },
+  {
+   "from": "brush-designer/procreate-brush-designer-web-app-shell",
+   "to": "brush-designer/brushstate-parameter-model",
+   "relation": "owns the single BrushState instance and subscribes to its changes",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/procreate-brush-designer-web-app-shell",
+   "to": "brush-designer/historymanager-undo-redo",
+   "relation": "pushes snapshots (50 steps); Ctrl+Z/Y",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/procreate-brush-designer-web-app-shell",
+   "to": "brush-designer/presetlibrary-presets-sidebar",
+   "relation": "seeds built-ins, saves and loads presets",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/procreate-brush-designer-web-app-shell",
+   "to": "brush-designer/stroke-preview-test-sheet",
+   "relation": "renders the preview on state change; forwards pointer status to the readout and cursor",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/procreate-brush-designer-web-app-shell",
+   "to": "brush-designer/export-brush-procreate",
+   "relation": "Export menu item data-export=brush",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/procreate-brush-designer-web-app-shell",
+   "to": "brush-designer/export-brushset-procreate",
+   "relation": "Export menu item data-export=brushset (single brush)",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/procreate-brush-designer-web-app-shell",
+   "to": "brush-designer/export-gbr-gimp-krita",
+   "relation": "Export menu item data-export=gbr",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/procreate-brush-designer-web-app-shell",
+   "to": "brush-designer/export-universal-kit-zip",
+   "relation": "Export menu item data-export=kit",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/procreate-brush-designer-web-app-shell",
+   "to": "brush-designer/export-download-source",
+   "relation": "Export menu item data-export=source",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/procreate-brush-designer-web-app-shell",
+   "to": "brush-designer/import-brush-brushset",
+   "relation": "import button wired to a stub",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/procreate-brush-designer-web-app-shell",
+   "to": "brush-designer/ui-component-kit",
+   "relation": "uses Toast and Modal; panels use Slider, Section and CurveEditor",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/export-brush-procreate",
+   "to": "brush-designer/brusharchive-brush-archive-encoder",
+   "relation": "encodes Brush.archive",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/export-brushset-procreate",
+   "to": "brush-designer/brusharchive-brush-archive-encoder",
+   "relation": "encodes one Brush.archive per brush",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/export-brushset-procreate",
+   "to": "brush-designer/plistencoder-bplist00",
+   "relation": "encodes brushset.plist (array of identifiers)",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/brusharchive-brush-archive-encoder",
+   "to": "brush-designer/plistencoder-bplist00",
+   "relation": "binary plist serialisation (inherits the container-index bug)",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/export-universal-kit-zip",
+   "to": "brush-designer/export-gbr-gimp-krita",
+   "relation": "embeds gimp/shape.gbr via GbrEncoder.encode",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/export-universal-kit-zip",
+   "to": "brush-designer/export-brush-procreate",
+   "relation": "reuses BrushExporter.canvasToInkAlphaPNG and canvasToGrayscalePNG",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/export-universal-kit-zip",
+   "to": "brush-designer/stroke-preview-test-sheet",
+   "relation": "captures the preview canvas as stroke-preview.png",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/ai-assist-tab",
+   "to": "brush-designer/ollamaassist-local-model-json-patch-client",
+   "relation": "fetchTags, buildPrompt, generate, evict, extractJSON, validatePatch",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/ai-assist-tab",
+   "to": "brush-designer/historymanager-undo-redo",
+   "relation": "each applied patch is one history entry via app.applyAIPatch",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/ollamaassist-local-model-json-patch-client",
+   "to": "brush-designer/brushstate-parameter-model",
+   "relation": "validates against BRUSH_PROPERTY_RANGES and BLENDING_MODES; may change only the 43 brush* tunables",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/ollamaassist-local-model-json-patch-client",
+   "to": "brush-designer/hub-brushes-tab-embedding",
+   "relation": "shares localStorage hub:endpoint and hub:tier with hub/ollama.js and hub/app.js (same origin)",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/shape-tab",
+   "to": "brush-designer/shapegenerator",
+   "relation": "generator buttons call generateShape(name, 512)",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/grain-tab",
+   "to": "brush-designer/graingenerator",
+   "relation": "generator buttons call generateGrain(name, 1024)",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/presetlibrary-presets-sidebar",
+   "to": "brush-designer/shapegenerator",
+   "relation": "dynamic import to render built-in preset textures",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/presetlibrary-presets-sidebar",
+   "to": "brush-designer/graingenerator",
+   "relation": "dynamic import to render built-in preset textures",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/pencil-tab-apple-pencil-pressure-curves",
+   "to": "brush-designer/ui-component-kit",
+   "relation": "uses CurveEditor",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/about-this-brush-tab",
+   "to": "brush-designer/ui-component-kit",
+   "relation": "reset gated by Modal.confirm",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/hub-brushes-tab-embedding",
+   "to": "brush-designer/procreate-brush-designer-web-app-shell",
+   "relation": "same-origin iframe src ../tools/brush-designer/index.html; no programmatic channel",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/start-hub-ps1-launcher",
+   "to": "brush-designer/hub-brushes-tab-embedding",
+   "relation": "serves the repo root over loopback HTTP and opens /hub/",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/hub-static-server-launch-config",
+   "to": "brush-designer/procreate-brush-designer-web-app-shell",
+   "relation": "serves the repo root on port 8347, giving the app its HTTP origin",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/brush-designer-skill-headless-adapter",
+   "to": "brush-designer/brushstate-parameter-model",
+   "relation": "planned wrapper over the DOM-free core (DECISIONS.md D2); not built",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/brush-designer-skill-headless-adapter",
+   "to": "brush-designer/brusharchive-brush-archive-encoder",
+   "relation": "planned headless .brush encoding path; not built",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/worked-example-content-md-dry-stipple-brush",
+   "to": "brush-designer/brush-designer-skill-headless-adapter",
+   "relation": "records skills: [brush_designer] and 'Reproduce from tools/brush-designer/ defaults'",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "brush-designer/worked-example-content-md-dry-stipple-brush",
+   "to": "brush-designer/wet-stipple-brush-md-root",
+   "relation": "wikilink [[wet-stipple-brush]]; the root file is empty",
+   "subsystem": "brush-designer"
+  },
+  {
+   "from": "agents-context/visual-identity-brand-gate",
+   "to": "skills-generative/adobe-firefly",
+   "relation": "mandatory gate (Router.md §3, file header, dashboard gates_skills)",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/visual-identity-brand-gate",
+   "to": "skills-generative/higgsfield-api",
+   "relation": "mandatory gate",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/visual-identity-brand-gate",
+   "to": "css_html_ui",
+   "relation": "mandatory gate",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/visual-identity-brand-gate",
+   "to": "ui_ux_intelligence",
+   "relation": "mandatory gate",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/visual-identity-brand-gate",
+   "to": "adobe_suite_uxp",
+   "relation": "conditional gate, 'if flagged in dashboard' (Router.md §3); no flag mechanism exists",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/visual-identity-brand-gate",
+   "to": "blender_python",
+   "relation": "conditional gate (Router.md §3)",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/color-science-brand-gate",
+   "to": "skills-generative/adobe-firefly",
+   "relation": "mandatory gate",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/color-science-brand-gate",
+   "to": "adobe_suite_uxp",
+   "relation": "mandatory gate",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/color-science-brand-gate",
+   "to": "ui_ux_intelligence",
+   "relation": "mandatory gate",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/color-science-brand-gate",
+   "to": "skills-generative/higgsfield-api",
+   "relation": "conditional gate (Router.md §3)",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/typography-system-brand-gate",
+   "to": "css_html_ui",
+   "relation": "mandatory gate",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/typography-system-brand-gate",
+   "to": "ui_ux_intelligence",
+   "relation": "mandatory gate",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/typography-system-brand-gate",
+   "to": "skills-generative/adobe-firefly",
+   "relation": "conditional gate (Router.md §3)",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/unauthored-brand-gates-7",
+   "to": "skills-generative/higgsfield-api",
+   "relation": "motion_language and narrative_continuity are mandatory gates",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/unauthored-brand-gates-7",
+   "to": "blender_python",
+   "relation": "motion_language and render_philosophy are mandatory gates",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/unauthored-brand-gates-7",
+   "to": "skills-generative/suno-audio",
+   "relation": "sound_identity and brand_voice mandatory; narrative_continuity conditional",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/unauthored-brand-gates-7",
+   "to": "css_html_ui",
+   "relation": "brand_voice mandatory gate (D9: css_html_ui 'still parks on brand_voice')",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/unauthored-brand-gates-7",
+   "to": "adobe_suite_uxp",
+   "relation": "render_philosophy mandatory gate",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/unauthored-brand-gates-7",
+   "to": "hardware_compute",
+   "relation": "pipeline_ethics and render_philosophy mandatory gates",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/unauthored-brand-gates-7",
+   "to": "local_rag_orchestration",
+   "relation": "memory_discipline mandatory; pipeline_ethics conditional per Router §3 (listed plainly in README and dashboard gates_skills)",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/visual-identity-brand-gate",
+   "to": "skills/css_html_ui.skill.md ARTIFACT A",
+   "relation": "transcribed from; ARTIFACT A is the source of truth",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/typography-system-brand-gate",
+   "to": "skills/css_html_ui.skill.md ARTIFACT A",
+   "relation": "transcribed from (font, type_scale)",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/color-science-brand-gate",
+   "to": "skills/css_html_ui.skill.md ARTIFACT A",
+   "relation": "transcribed from; ARTIFACT A semantic.* is the tiebreak; contrast_floor recorded there",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "skills/ui_ux_intelligence.skill.md ARTIFACT D",
+   "to": "agents-context/visual-identity-brand-gate",
+   "relation": "declared regeneration path (D9); 4-step GENERATE/DIFF/IMPACT/PROPOSE loop; proposes only, operator commits (applies equally to typography_system and color_science)",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "ui_ux_intelligence",
+   "to": "agents-context/typography-system-brand-gate",
+   "relation": "selects product/client typography from typography.csv, outside this gate's scope (§6)",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/color-science-brand-gate",
+   "to": "agents-context/visual-identity-brand-gate",
+   "relation": "duplicates the §3 semantic accent table deliberately; they must not drift",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/typography-system-brand-gate",
+   "to": "agents-context/visual-identity-brand-gate",
+   "relation": "defers 'colour is state' to visual_identity §3; visual_identity §6 forbids a second typeface or third weight per typography_system §2",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/visual-identity-brand-gate",
+   "to": "control_room.html",
+   "relation": "reference implementation of the identity",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "hub/styles.css",
+   "to": "agents-context/visual-identity-brand-gate",
+   "relation": "comment cites visual_identity §3; hub/ is a studio surface governed by typography_system §6",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "tools/brush-designer/styles.css",
+   "to": "agents-context/visual-identity-brand-gate",
+   "relation": "comment cites visual_identity §4",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "skills/adobe_suite_uxp.skill.md",
+   "to": "agents-context/color-science-brand-gate",
+   "relation": "V2 colour pipeline says 'studio default: export sRGB IEC61966-2.1 for web', and its curve artifact takes 'values from color_science context ONLY'. color_science §5 declares no working space or delivery transform",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "skills/adobe_firefly.skill.md",
+   "to": "agents-context/visual-identity-brand-gate",
+   "relation": "PAYLOAD BUILD composes the prompt from visual_identity vocabulary; VALIDATE checks visual_identity constraints; V2 palette lock per color_science",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "skills/css_html_ui.skill.md",
+   "to": "agents-context/unauthored-brand-gates-7",
+   "relation": "V2 states brand_voice rules inline ('sentence case, plain verbs, controls named for what they do') while the brand_voice gate is unauthored",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "skills/local_rag_orchestration.skill.md",
+   "to": "agents-context/unauthored-brand-gates-7",
+   "relation": "V1: memory_discipline defines quotable vs summarizable; load it before writing any answer",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "skills-infra/tools-verify-system-py",
+   "to": "agents-context/color-science-brand-gate",
+   "relation": "check_palette_parity verifies 7 of its 10 hex values (via ARTIFACT A vs control_room.html, not by reading the gate file)",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "skills-infra/tools-verify-system-py",
+   "to": "agents-context/unauthored-brand-gates-7",
+   "relation": "check_brand_gates asserts authored flag == file on disk, path = context/brand/<role>.context.md, and gates_skills are registered skills (applies to all ten gates); check_skill_headers and check_context_loaded also validate gate roles",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "skills-infra/tools-verify-system-py",
+   "to": "agents-context/ai-creative-strategies-context-domain-library",
+   "relation": "check_domain_libraries: FAIL if a dashboard-declared library is missing or doubles as a gate path; WARN only if an on-disk library is undeclared (applies to all 10 libraries)",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": ".github/workflows/verify.yml",
+   "to": "skills-infra/tools-verify-system-py",
+   "relation": "runs it on push to main, on pull_request and on workflow_dispatch; also runs --quiet under -W error::EncodingWarning",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/typography-system-brand-gate",
+   "to": "skills-infra/tools-ui-ux-pro-max-scripts-search-py",
+   "relation": "licence verification: search.py \"JetBrains Mono\" --domain google-fonts",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/color-science-brand-gate",
+   "to": "skills-infra/tools-ui-ux-pro-max-scripts-search-py",
+   "relation": "contrast verification: search.py \"contrast ratio text legibility\" --domain ux",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "router.js",
+   "to": "agents-context/visual-identity-brand-gate",
+   "relation": "brandPath(role) resolves gates to context/brand/<role>.context.md; a hard-coded resolveGates table mirrors the Router §3 mandatory columns; the UI reports L0 only and logs PARKED locally for non-authored gates (applies to all ten gates)",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "Router.md",
+   "to": "agents-context/brand-gate-contract-context-brand-readme-md",
+   "relation": "§1/§3 point readers to it for gate authoring",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "BOOT.md",
+   "to": "agents-context/unauthored-brand-gates-7",
+   "relation": "'Why it still says BLOCKED' gives the authoring procedure (write the file, flip the authored flag); its gate-state text is stale",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "Router.md",
+   "to": "agents-context/typography-ad-arts-context-domain-library",
+   "relation": "§1/§3: domain libraries are retrieval material and never satisfy a mandatory slot (applies to all 10)",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "vault Content MD frontmatter context_brand",
+   "to": "agents-context/unauthored-brand-gates-7",
+   "relation": "L1 lookup key for recalling ## Decisions in Force; no current note names any of the seven",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "vault/studio-os/ui/ui-ux-intelligence-integration.md",
+   "to": "agents-context/typography-ad-arts-context-domain-library",
+   "relation": "context_domain reference (the only real Content MD)",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "vault/_examples/example-stipple-brush.md",
+   "to": "agents-context/classical-illustration-context-domain-library",
+   "relation": "context_domain reference in an example note (underscore directory, ignored by ingest)",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "vault/_migration/GAP-ANALYSIS.md",
+   "to": "agents-context/unauthored-brand-gates-7",
+   "relation": "assesses the unmigrated Creative-Writing corpus as able to back brand_voice and narrative_continuity; recommends authoring sound_identity and memory_discipline first",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/ai-creative-strategies-context-domain-library",
+   "to": "skills/*.skill.md",
+   "relation": "§3 hand-off payload 'passed to corresponding .skill.md scripts'; no skill file names any library or payload key (same for all 10 libraries)",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "README.md",
+   "to": "agents-context/business-analyst",
+   "relation": "documents install (copy to ~/.claude/agents/) and invocation (`claude --agent <name>`) for all 9 agents; source repo Claude-Code",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "agents-context/frontend-developer",
+   "to": "css_html_ui",
+   "relation": "no link: the agent does not reference ARTIFACT A or the brand gates even though it covers the same UI domain",
+   "subsystem": "agents-context"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-search-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-search-py",
+   "relation": "migrated-to",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-core-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-core-py",
+   "relation": "migrated-to",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-design-system-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-design-system-py",
+   "relation": "migrated-to",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-reasoning-contract-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-reasoning-contract-py",
+   "relation": "migrated-to",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-validate-data-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-validate-data-py",
+   "relation": "migrated-to",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-catalog-data",
+   "relation": "migrated-to",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-ui-ux-intelligence-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-skill",
+   "relation": "counterpart-in-target (not a file migration)",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendor-md-vendoring-protocol",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-licence-and-attribution-files",
+   "relation": "replaced-by",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendor-md-vendoring-protocol",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-evaluate-relevance-py",
+   "relation": "integrity-role-replaced-by (gate-enforced fingerprints)",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendor-md-vendoring-protocol",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-generate-catalog-summary-py",
+   "relation": "integrity-role-replaced-by (snapshot sha256 checked by a gate)",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendor-md-vendoring-protocol",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-catalog-data",
+   "relation": "absent-in-target (no whole-payload hash, local edits allowed)",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-router-intercept-router-md-router-js-dashboard-json",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-plugin-packaging",
+   "relation": "absent-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-brand-gates-artifact-d-regeneration-loop",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-skill",
+   "relation": "absent-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-hub-designer-pro-tab",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-plugin-packaging",
+   "relation": "absent-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-router-intercept-router-md-router-js-dashboard-json",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-router-md",
+   "relation": "name-collision-not-equivalent",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-contrast-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-oklch-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-tokens-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-shadcn-theme-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-route-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-merge-parts-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-staged-stack-accessibility-candidates",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-spec-yaml-contract",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-validate-contract-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-validate-csv-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-generate-catalog-summary-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-generate-index-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-generated-index-md-files",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-evaluate-relevance-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-smoke-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-verify-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-test-suites",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-refresh-google-fonts-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-refresh-icon-catalog-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-harvest-site-tokens-py",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-ui-ux-intelligence-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-multipart-skill",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-ui-ux-intelligence-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-refresh-skill",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-ui-ux-intelligence-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-search-part-agent",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-ui-ux-intelligence-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-page-reviewer-agent",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-ui-ux-intelligence-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-reviewer-agent",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-ui-ux-intelligence-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-router-md",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-ui-ux-intelligence-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-references",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendor-md-vendoring-protocol",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-plugin-packaging",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-vendor-md-vendoring-protocol",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-verify-yml-workflow",
+   "relation": "added-in-target",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-router-intercept-router-md-router-js-dashboard-json",
+   "to": "ui-ux-pro-max-vs-plugin/chq-ui-ux-intelligence-skill",
+   "relation": "routes-to",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-ui-ux-intelligence-skill",
+   "to": "ui-ux-pro-max-vs-plugin/chq-search-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-ui-ux-intelligence-skill",
+   "to": "ui-ux-pro-max-vs-plugin/chq-brand-gates-artifact-d-regeneration-loop",
+   "relation": "requires-context / proposes-regeneration",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-brand-gates-artifact-d-regeneration-loop",
+   "to": "ui-ux-pro-max-vs-plugin/chq-search-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-hub-designer-pro-tab",
+   "to": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "relation": "reads",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-hub-designer-pro-tab",
+   "to": "ui-ux-pro-max-vs-plugin/chq-search-py",
+   "relation": "defers-to",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-search-py",
+   "to": "ui-ux-pro-max-vs-plugin/chq-core-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-search-py",
+   "to": "ui-ux-pro-max-vs-plugin/chq-design-system-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-design-system-py",
+   "to": "ui-ux-pro-max-vs-plugin/chq-core-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-design-system-py",
+   "to": "ui-ux-pro-max-vs-plugin/chq-reasoning-contract-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-core-py",
+   "to": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "relation": "reads",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-validate-data-py",
+   "to": "ui-ux-pro-max-vs-plugin/chq-vendored-data-corpus",
+   "relation": "validates",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/chq-validate-data-py",
+   "to": "ui-ux-pro-max-vs-plugin/chq-core-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-search-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-contrast-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-search-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-design-system-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-search-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-core-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-design-system-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-core-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-design-system-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-contrast-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-design-system-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-tokens-py",
+   "relation": "lazy-imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-design-system-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-shadcn-theme-py",
+   "relation": "lazy-imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-design-system-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-reasoning-contract-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-tokens-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-contrast-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-tokens-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-design-system-py",
+   "relation": "imports (DIAL_TIERS, SEMANTIC_COLOR_ENTRIES)",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-shadcn-theme-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-oklch-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-shadcn-theme-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-contrast-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-core-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-catalog-data",
+   "relation": "reads",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-route-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-core-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-route-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-search-py",
+   "relation": "emits-commands-for",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-merge-parts-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-references",
+   "relation": "reads",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-merge-parts-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-route-py",
+   "relation": "consumes-manifest-of",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-search-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-route-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-spec-yaml-contract",
+   "relation": "reads",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-router-md",
+   "relation": "reads",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-generated-index-md-files",
+   "relation": "reads",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-references",
+   "relation": "reads",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-multipart-skill",
+   "relation": "hands-off-to",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-multipart-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-route-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-multipart-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-search-part-agent",
+   "relation": "dispatches",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-multipart-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-page-reviewer-agent",
+   "relation": "dispatches",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-multipart-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-merge-parts-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-search-part-agent",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-search-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-search-part-agent",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-generated-index-md-files",
+   "relation": "reads",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-page-reviewer-agent",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-references",
+   "relation": "reads",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-refresh-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-refresh-google-fonts-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-refresh-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-refresh-icon-catalog-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-refresh-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-reviewer-agent",
+   "relation": "dispatches",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-refresh-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-validate-data-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-refresh-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-generate-catalog-summary-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-refresh-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-evaluate-relevance-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-ui-design-catalog-refresh-skill",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-verify-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-verify-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-validate-csv-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-verify-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-validate-data-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-verify-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-validate-contract-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-verify-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-generate-catalog-summary-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-verify-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-generate-index-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-verify-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-test-suites",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-verify-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-evaluate-relevance-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-verify-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-smoke-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-verify-yml-workflow",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-verify-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-validate-contract-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-spec-yaml-contract",
+   "relation": "enforces",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-validate-contract-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-search-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-validate-contract-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-tokens-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-validate-contract-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-plugin-packaging",
+   "relation": "validates",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-validate-contract-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-licence-and-attribution-files",
+   "relation": "validates",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-smoke-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-search-py",
+   "relation": "invokes",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-smoke-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-spec-yaml-contract",
+   "relation": "reads",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-evaluate-relevance-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-catalog-data",
+   "relation": "fingerprints",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-evaluate-relevance-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-design-system-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-evaluate-relevance-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-core-py",
+   "relation": "imports",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-generate-index-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-catalog-data",
+   "relation": "reads",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-generate-index-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-generated-index-md-files",
+   "relation": "generates",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-generate-catalog-summary-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-catalog-data",
+   "relation": "writes catalog-summary.json",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-validate-data-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-catalog-data",
+   "relation": "validates",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-validate-csv-py",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-catalog-data",
+   "relation": "validates",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "ui-ux-pro-max-vs-plugin/pipelines-staged-stack-accessibility-candidates",
+   "to": "ui-ux-pro-max-vs-plugin/pipelines-catalog-data",
+   "relation": "promoted-into (15 rows live; REVIEW.md not updated)",
+   "subsystem": "ui-ux-pro-max-vs-plugin"
+  },
+  {
+   "from": "archive/living-archive-frontend-spa-react-vite",
+   "to": "archive/frontend-api-client-api-js",
+   "relation": "all backend calls go through api.js",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/authmodal-tab-sign-in-create-account",
+   "to": "archive/auth-api-api-auth",
+   "relation": "calls /api/auth/register and /api/auth/token; the backend routes as written are /api/auth/auth/* (path mismatch)",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/ingest-knowledge-panel",
+   "to": "archive/ingest-api-post-api-ingest",
+   "relation": "submits the knowledge_ingestion payload",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/searchbar",
+   "to": "archive/search-api-get-api-search",
+   "relation": "GET /api/search?q=",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/living-archive-frontend-spa-react-vite",
+   "to": "archive/nodes-api-get-api-nodes-get-api-nodes-node-id",
+   "relation": "loadNodes on auth, on refresh and on an empty search",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/ingest-api-post-api-ingest",
+   "to": "archive/auth-api-api-auth",
+   "relation": "requires a get_current_user Bearer JWT",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/nodes-api-get-api-nodes-get-api-nodes-node-id",
+   "to": "archive/auth-api-api-auth",
+   "relation": "the list route requires get_current_user; the single-node route does not",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/ingest-api-post-api-ingest",
+   "to": "archive/ai-engine-groq-classification-embeddings",
+   "relation": "classify + generate_embedding via asyncio.gather (effectively sequential)",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/ingest-api-post-api-ingest",
+   "to": "archive/vector-store-pinecone-optional",
+   "relation": "query top_k=5 before the insert; upsert as a BackgroundTask",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/ingest-api-post-api-ingest",
+   "to": "archive/graph-store-neo4j",
+   "relation": "create_node as a BackgroundTask (write-only)",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/ingest-api-post-api-ingest",
+   "to": "archive/relational-store-postgresql-via-sqlalchemy-async",
+   "relation": "inserts the nodes row; counts store_size",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/living-archive-backend-fastapi-app",
+   "to": "archive/relational-store-postgresql-via-sqlalchemy-async",
+   "relation": "create_all tables at startup",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/living-archive-backend-fastapi-app",
+   "to": "archive/graph-store-neo4j",
+   "relation": "closes the driver at shutdown",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/graph-view-tab",
+   "to": "archive/graph-store-neo4j",
+   "relation": "does NOT read it; links={[]} is passed and no edges are rendered",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/tree-view-tab",
+   "to": "archive/nodedetail-modal",
+   "relation": "onSelect passes the tree-leaf wrapper, not the node",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/websocket-protocol-websocketmanager",
+   "to": "archive/living-archive-backend-fastapi-app",
+   "relation": "intended ws://localhost:8000/ws; no such backend route; client instantiation commented out",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/reorganization-tasks-celery-worker-beat",
+   "to": "archive/docker-compose-stack",
+   "relation": "runs as the celery_worker and celery_beat services over Redis broker redis://redis:6379/0",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/setup-sh-stack-launcher",
+   "to": "archive/docker-compose-stack",
+   "relation": "docker-compose pull; docker-compose up --build -d; health probes",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/docker-compose-stack",
+   "to": "archive/backend-container-image-dockerfile-requirements-txt",
+   "relation": "build ./backend for backend, celery_worker, celery_beat",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/docker-compose-stack",
+   "to": "archive/frontend-container-image-dockerfile-nginx-conf",
+   "relation": "build ./frontend, ports 3000:80",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/render-yaml-render-blueprint",
+   "to": "archive/backend-container-image-dockerfile-requirements-txt",
+   "relation": "rootDir backend for the web service and the celery worker",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/render-yaml-render-blueprint",
+   "to": "archive/frontend-container-image-dockerfile-nginx-conf",
+   "relation": "rootDir frontend web service",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/frontend-container-image-dockerfile-nginx-conf",
+   "to": "archive/living-archive-backend-fastapi-app",
+   "relation": "nginx location /api proxy_pass http://backend:8000 (bypassed by the absolute default API base)",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/living-archive-frontend-spa-react-vite",
+   "to": "archive/living-archive-backend-fastapi-app",
+   "relation": "Vite dev proxy /api -> http://localhost:8000; default API_BASE_URL http://localhost:8000/api",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/deploy-md",
+   "to": "archive/setup-sh-stack-launcher",
+   "relation": "documents launch via chmod +x setup.sh && ./setup.sh",
+   "subsystem": "archive"
+  },
+  {
+   "from": "archive/deploy-md",
+   "to": "archive/ingest-api-post-api-ingest",
+   "relation": "its verification curl omits the Bearer token the route requires",
+   "subsystem": "archive"
+  },
+  {
+   "from": "DECISIONS.md (D1)",
+   "to": "archive/ai-engine-groq-classification-embeddings",
+   "relation": "rejects the cloud stack; the transport is to move to the local Ollama endpoint per skills/local_rag_orchestration.skill.md; the prompt/JSON contract is to survive",
+   "subsystem": "archive"
+  },
+  {
+   "from": "DECISIONS.md (D1)",
+   "to": "archive/graph-store-neo4j",
+   "relation": "needs a local equivalent",
+   "subsystem": "archive"
+  },
+  {
+   "from": "DECISIONS.md (D1)",
+   "to": "archive/vector-store-pinecone-optional",
+   "relation": "needs a local equivalent (on-disk vector index); pinecone left commented out in requirements.txt",
+   "subsystem": "archive"
+  },
+  {
+   "from": "DECISIONS.md (D1)",
+   "to": "archive/reorganization-tasks-celery-worker-beat",
+   "relation": "identifies them as stubs; local-first probably removes Redis/Celery",
+   "subsystem": "archive"
+  },
+  {
+   "from": "DECISIONS.md (D3/D4)",
+   "to": "archive/",
+   "relation": "provenance: consolidated from groot99-droid/crispy-engine; directory structure derived; Dockerfile and requirements.txt newly written and never run",
+   "subsystem": "archive"
+  },
+  {
+   "from": "DECISIONS.md (D5)",
+   "to": "archive/deploy-md",
+   "relation": "third-party gsk_ key scrubbed (it tripped GitHub push protection); secrets belong only in .env, which .gitignore covers",
+   "subsystem": "archive"
+  },
+  {
+   "from": "DECISIONS.md (D6)",
+   "to": "archive/graph-view-tab",
+   "relation": "planned 'cosmos view' = GraphVisualization.jsx over vault notes and their links (not implemented)",
+   "subsystem": "archive"
+  },
+  {
+   "from": "DECISIONS.md (D6)",
+   "to": "archive/nodedetail-modal",
+   "relation": "planned to show Overview + Next Steps for the selected vault note (not implemented)",
+   "subsystem": "archive"
+  },
+  {
+   "from": "DECISIONS.md (D8)",
+   "to": "archive/docker-compose-stack",
+   "relation": "Docker Desktop on a 16 GB laptop competes with Ollama and Adobe; the local-first rewrite is now a memory requirement",
+   "subsystem": "archive"
+  },
+  {
+   "from": "README.md",
+   "to": "archive/",
+   "relation": "'What does not run yet' (lines 107-111): not installed, built, or started; line 50 describes archive/ as indexing the vault for search and the cosmos view; line 213 maps archive/ to crispy-engine",
+   "subsystem": "archive"
+  },
+  {
+   "from": "Router.md",
+   "to": "archive/",
+   "relation": "line 64 describes /archive/ as 'Indexes the vault for search + the cosmos view'; line 309: the vault is truth and the archive indexes it; no vault-indexing or cosmos code exists in archive/",
+   "subsystem": "archive"
+  },
+  {
+   "from": "hub/index.html",
+   "to": "archive/living-archive-backend-fastapi-app",
+   "relation": "port collision: the hub instructs python3 -m http.server and http://localhost:8000/hub/, the same host port the backend binds",
+   "subsystem": "archive"
+  },
+  {
+   "from": "OBSIDIAN.md",
+   "to": "archive/",
+   "relation": "name collision: OBSIDIAN.md line 61 calls Creative-Writing/ (63 finished works) 'the Living Archive', which is not this engine",
+   "subsystem": "archive"
+  }
+ ]
+}

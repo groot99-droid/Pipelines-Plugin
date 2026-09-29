@@ -11,6 +11,8 @@ Where a tool's skills and agents live depends on how the tool is used:
 - **creative-writing** is used from this repo, so its skills and agents live once,
   at the repo root under `.claude/`. They load whenever this repo is your working
   directory.
+- **studio** is used from this repo too, for the same reason: it writes into a
+  vault that lives here. Its skill is under `.claude/`.
 - **ui-design** is a Claude Code plugin, published on its own. A plugin is copied
   into a cache when it is installed and cannot reach outside its own folder, so its
   skills and agents live inside it, in `plugins/ui-design/`, not under `.claude/`.
@@ -19,12 +21,17 @@ Where a tool's skills and agents live depends on how the tool is used:
 
 ```
 INDEX.md             generated index of the tools, skills and agents
-.claude/skills/      creative-writing-pipeline, chunk-tag-backfill
+.claude/skills/      creative-writing-pipeline, chunk-tag-backfill, studio-pipeline
 .claude/agents/      creative-writing-{chunk-tagger,drafter,librarian-native}
 creative-writing/    the creative-writing tool
   vault/             the Obsidian vault — 63 works, annotations, chunk tags,
                      idea library, and the vault's own search tooling
   pipeline/          the checkpointed pipeline that writes into that vault
+studio/              the studio tool
+  vault/             a second Obsidian vault — one note per made thing, the brand
+                     gates, and the vault's own CLAUDE.md and SCHEMA.md
+  pipeline/          spec.yaml, the bookkeeper, the note writer, and their tests
+  docs/              what was carried from Creative-Headquarters, and how
 plugins/ui-design/   the ui-design plugin: the plugin root, and the whole of what is published
   .claude-plugin/    plugin.json and marketplace.json
   skills/            ui-design-catalog, ui-design-catalog-refresh, ui-design-multipart
@@ -38,10 +45,11 @@ plugins/ui-design/   the ui-design plugin: the plugin root, and the whole of wha
   README.md, LICENSE, NOTICE, CHANGELOG.md, .gitignore, .gitattributes, .github/
 ```
 
-**Paths in the creative-writing skills and agents are relative to this repo
-root**, which is the working directory. Vault-relative paths (as `vault_search.py`
-reports and accepts them, e.g. `03_Stories/06_Melting_Away.md`) need a
-`creative-writing/vault/` prefix before you Read or Write them.
+**Paths in the creative-writing and studio skills and agents are relative to this
+repo root**, which is the working directory. Vault-relative paths (as
+`vault_search.py` reports and accepts them, e.g. `03_Stories/06_Melting_Away.md`)
+need a `creative-writing/vault/` prefix before you Read or Write them. A studio
+note's path (e.g. `aurora/ui/console.md`) is relative to `studio/vault/`.
 
 **Paths in the ui-design skills and agents start from `${CLAUDE_PLUGIN_ROOT}`**, the
 plugin's install directory, never from the working directory: once installed, the
@@ -86,6 +94,47 @@ Do not duplicate its rules here. If the writing rules change, they change there.
   present them as the author's voice, and do not edit the 63 originals to fit them.
 - `creative-writing/pipeline/.env` holds a live `GEMINI_API_KEY` and is
   gitignored. Never commit it, never echo its value.
+
+## The studio is governed by its vault's own CLAUDE.md
+
+**`studio/vault/CLAUDE.md` is authoritative** for anything that makes a thing
+through the studio or writes a note into that vault: the six stages, the ladder
+that resolves a constraint, the attestation, parking, the refusals, and the rule
+that a brand gate is the author's and is never generated. Read it in full before
+running or changing a pipeline. `studio/pipeline/spec.yaml` is its
+machine-readable form and points back to it.
+
+Do not duplicate its rules here. The two vaults are separate: nothing in the
+studio reads or writes `creative-writing/vault/`.
+
+## Working on the studio tool
+
+- Make something: use the `studio-pipeline` skill. There is no standalone script;
+  the tools a stage calls exist only inside a live session.
+- `studio/pipeline/spec.yaml` is the single source of truth for the pipelines, the
+  stages, the gates and the refusals. `studio_run.py` reads stage order, outputs,
+  checks and confirmation rules from it; nothing about a particular stage or
+  pipeline is written into the code. Read it before changing either.
+- `studio_run.py` is a bookkeeper. It never calls a model or a tool. When it
+  refuses, fix what it names. Never edit a run's `state.json` by hand.
+- **Every write into `studio/vault/` goes through `content_md.py`**: `plan`
+  previews and writes nothing to the vault, `apply` without `--confirm` is a dry
+  run, and `apply --confirm` still refuses unless the author's go-ahead was
+  recorded after the plan was made. Keep it that way. Never write a note there
+  with Write or Edit.
+- `studio/vault/_Context/brand/` holds the brand gates and `tokens.json`. They
+  are the author's. Propose a change as a diff; never write one.
+- `plugins/ui-design/` is read-only from the studio. The `ui-direction` pipeline
+  runs its scripts and changes nothing in it.
+- Run the tests after touching the spec, a gate, `tokens.json`, `SCHEMA.md`, the
+  vault's `CLAUDE.md`, the skill or either script:
+  `python -m unittest discover -s studio/pipeline/tests`. They run against
+  temporary folders, and they check that the spec, the gate folder, the documents
+  and the skill agree with one another, so editing a document can fail them; that
+  is the point.
+- A pipeline is entered by choice. Nothing here can stop a tool being called
+  outside one, and the documents say so. Do not describe the studio as enforcing
+  more than it does.
 
 ## Working on the ui-design plugin
 
@@ -182,3 +231,10 @@ holds the private creative-writing vault, and a live `.env`. Only the contents o
    keep them inside the plugin and start every path from `${CLAUDE_PLUGIN_ROOT}`.
 3. Extend the root `.gitignore` if the tool produces state or caches.
 4. Add a section to `README.md`.
+5. For a new top-level folder, add it to `TOOL_PURPOSE` in
+   `plugins/ui-design/maintenance/generate-index.py`; the index generator exits 2
+   on a folder it has no purpose for. That file ships in the published plugin, so
+   keep the wording neutral. Then regenerate the index and run the gate:
+   `python plugins/ui-design/maintenance/generate-index.py` and
+   `python plugins/ui-design/maintenance/verify.py`. The same two commands follow
+   any new skill or agent.

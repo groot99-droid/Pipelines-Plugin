@@ -1,0 +1,740 @@
+# Studio pipeline spec -- the single source of truth for the studio-pipeline
+# skill (.claude/skills/studio-pipeline/SKILL.md at the Pipelines root) and the
+# bookkeeper (studio_run.py, content_md.py).
+#
+# Neither consumer keeps stage text, gate names or pipeline rules of its own --
+# both read this file. Rules here summarise and point back to
+# studio/vault/CLAUDE.md; they do not replace it. If CLAUDE.md changes, update
+# the matching block here.
+#
+# Every path below is relative to THIS FILE's directory unless it says
+# "repo root".
+#
+# Where these ideas came from, and what changed on the way, is recorded in
+# studio/docs/IDEAS.md.
+
+version: 1
+
+vault_root: "../vault"
+context_root: "../vault/_Context/brand"
+runs_root: "runs"
+
+# One mode. Every stage is a checkpoint: the skill stops at each one, shows
+# the author that stage's output, and waits. There is no autonomous mode here.
+# The bookkeeper cannot tell whether the author reviewed a stage; it advances
+# when `advance` is run and the stage's checks pass.
+
+# --------------------------------------------------------------------
+# The Content MD -- machine-readable form of studio/vault/SCHEMA.md.
+# content_md.py lints against this block.
+# --------------------------------------------------------------------
+content_md:
+  type: "content-md"
+  id_pattern: "^cmd_[0-9]{8}_[a-z0-9]+(-[a-z0-9]+)*$"
+  required: [id, type, kind, title, status, created, updated]
+  optional: [project, pipelines, context_brand, context_domain, artifacts, tags]
+  immutable: [id, type, created]
+  kinds: [character, design, audio, video, 3d, brush, copy, ui, world, other]
+  statuses: [seed, in-progress, blocked, complete, archived]
+  sections:
+    - Overview
+    - Next Steps
+    - Timeline
+    - Method
+    - Decisions in Force
+    - Open Questions
+    - Contradictions
+    - Links
+  always: [Overview]
+  # A finished thing may have no next step. Writing a filler one is worse than
+  # writing none.
+  next_steps_optional_when: [complete, archived]
+  # Folders inside the vault that never hold a Content MD.
+  reserved_names: [SCHEMA.md, README.md, CLAUDE.md]
+
+# --------------------------------------------------------------------
+# The ten brand gates.
+#
+# `authored: true` means the file exists at context_root/<file>. The spec test
+# fails if this flag and the disk disagree.
+#
+# "Authored" is not "complete". A gate lists what it answers and what it
+# declares it does NOT answer. A constraint under `unresolved` is unresolved
+# even though the file exists.
+# --------------------------------------------------------------------
+gates:
+  visual_identity:
+    authored: true
+    file: "visual_identity.context.md"
+    must_answer: "What does work from this studio look like? Motifs, framing, texture, what is off-limits."
+    scope: "The studio's own surfaces. Product and client work is not bound by it."
+    answers:
+      - {topic: "interface identity: grounds, panels, rules", section: "2"}
+      - {topic: "what colour is allowed to mean", section: "3"}
+      - {topic: "grid, spacing, radii, breakpoints", section: "4"}
+      - {topic: "elevation, motion, focus", section: "5"}
+      - {topic: "off-limits list", section: "6"}
+    unresolved:
+      - {topic: "generated imagery: motifs, framing, texture", section: "7"}
+  typography_system:
+    authored: true
+    file: "typography_system.context.md"
+    must_answer: "Typefaces, scale, tracking, hierarchy, licensing."
+    scope: "The studio's own surfaces. Product and client work selects its own pairing."
+    answers:
+      - {topic: "the one family and its weights", section: "2"}
+      - {topic: "scale and tracking", section: "3"}
+      - {topic: "hierarchy", section: "4"}
+      - {topic: "licensing", section: "5"}
+      - {topic: "scope boundary", section: "6"}
+    unresolved: []
+  color_science:
+    authored: true
+    file: "color_science.context.md"
+    must_answer: "Working space, LUTs, palette with hex values, grading rules."
+    scope: "A UI token set in sRGB hex. Not a colour-managed pipeline."
+    answers:
+      - {topic: "palette, ten values", section: "2"}
+      - {topic: "semantic binding of the four accents", section: "3"}
+      - {topic: "three contrast floors", section: "4"}
+    unresolved:
+      - {topic: "working space, LUTs, grading, delivery transform", section: "5"}
+  motion_language:
+    authored: false
+    file: "motion_language.context.md"
+    must_answer: "Camera grammar, easing, shot lengths, transitions to avoid."
+  sound_identity:
+    authored: false
+    file: "sound_identity.context.md"
+    must_answer: "Instrumentation, tempo range, mix targets, sonic signature."
+  brand_voice:
+    authored: false
+    file: "brand_voice.context.md"
+    must_answer: "Diction, register, person, banned phrasings."
+  narrative_continuity:
+    authored: false
+    file: "narrative_continuity.context.md"
+    must_answer: "Canon rules, character and environment persistence, what may not be retconned."
+  render_philosophy:
+    authored: false
+    file: "render_philosophy.context.md"
+    must_answer: "Quality bar, when to re-render and when to accept, output specs."
+  pipeline_ethics:
+    authored: false
+    file: "pipeline_ethics.context.md"
+    must_answer: "Disclosure, provenance, sourcing rules, what is never generated."
+  memory_discipline:
+    authored: false
+    file: "memory_discipline.context.md"
+    must_answer: "Quotable against summarizable, retention, what leaves the machine."
+
+# The token dictionary the three authored gates were transcribed from. In
+# Creative-Headquarters it was embedded in a skill file as "ARTIFACT A"; here it
+# is a file beside the gates.
+tokens:
+  file: "tokens.json"
+  mutation_policy: "The author commits. An agent proposes a change as a diff and stops."
+
+# Places where carried files disagree with each other or with this repo. They
+# are carried unchanged: settling them is the author's decision.
+known_conflicts:
+  - id: font-weights
+    where:
+      - "tokens.json font.policy"
+      - "tokens.json type_scale weight.mid"
+      - "typography_system.context.md section 2"
+      - "visual_identity.context.md section 6"
+    what: >
+      The policy, typography_system section 2 and visual_identity section 6 all
+      say two weights and no third. Section 2 then allows 500 as one in-between
+      step for a status word, and says it is not a third role. tokens.json
+      declares weight.mid 500.
+    until_settled: >
+      500 is for a status word only, as typography_system section 2 says. No
+      other use of a third weight.
+  - id: carried-paths
+    where: ["all three gate files, section 0"]
+    what: >
+      The provenance sections cite Creative-Headquarters paths. "ARTIFACT A" is
+      tokens.json beside them. "control_room.html" and "check_palette_parity"
+      were left behind. "DECISIONS.md" is summarised in studio/docs/IDEAS.md.
+    until_settled: "Read the constraints. Do not follow the paths."
+
+# --------------------------------------------------------------------
+# The ladder -- how a needed constraint is resolved in the context stage.
+# studio/vault/CLAUDE.md is authoritative; this is its machine-readable form.
+# --------------------------------------------------------------------
+#
+# A row of the attestation has a LEVEL (how the constraint was resolved) and a
+# STATE (whether the run may go on). `source` is what the row's Source cell
+# must hold; studio_run.py checks it.
+ladder:
+  levels:
+    L0:
+      name: AUTHORED
+      rule: "The gate file exists and the constraint is not in that gate's unresolved list."
+      source: "the gate file and `section N`. N is a section the gate answers, not one it declares unresolved"
+      state: resolved
+    L1:
+      name: RECALLED
+      rule: "A note whose context_brand names the gate states the constraint in its Decisions in Force."
+      source: '[[note]] and the line in double quotes, copied exactly as the note has it'
+      state: resolved
+    L2:
+      name: DERIVED
+      rule: >
+        No note states it. It is inferred from at least three notes of the same
+        kind, weighting a complete note over one in progress and a recent note
+        over an old one.
+      source: "every note the inference drew on, as [[note]]"
+      state: PROVISIONAL
+      min_notes: 3
+    STATED:
+      name: STATED
+      rule: "The author states the constraint at the context checkpoint."
+      source: "the author, and the date as YYYY-MM-DD"
+      state: resolved
+    L3:
+      name: UNRESOLVED
+      rule: "None of the above. Ask the author. If the author does not answer, park."
+      source: "nothing"
+      state: UNRESOLVED
+  states: [resolved, PROVISIONAL, UNRESOLVED]
+  unresolved_marker: "UNRESOLVED"
+  provisional_marker: "PROVISIONAL"
+
+# --------------------------------------------------------------------
+# Refusals. `enforced_by` names what checks the rule, and `limit` says what
+# that check cannot see. "the skill" means no code can check it and the rule
+# rests on the instructions being followed.
+#
+# Every check below reads what the skill wrote. None can tell whether what
+# was written is true.
+# --------------------------------------------------------------------
+refusals:
+  - id: stub-pipeline
+    rule: "A pipeline whose status is not `implemented` does not start."
+    enforced_by: "studio_run.py new"
+  - id: execute-without-context
+    rule: "No tool is called for a made thing before its context is attested."
+    enforced_by: "the skill. studio_run.py advance will not mark context done without a whole attestation"
+    limit: "A tool call cannot be refused. The order of stages is kept; what is called outside them is not seen."
+  - id: unresolved-context
+    rule: "A run with an unresolved constraint does not advance. It is answered or parked."
+    enforced_by: "studio_run.py advance, at the context stage"
+    limit: >
+      It checks that every needed constraint has a row, that no row is at L3 or
+      in a state other than resolved or PROVISIONAL, and that an L0 row does
+      not cite a section the gate declares unresolved. It cannot tell whether
+      the section cited really states the constraint.
+  - id: derived-as-authored
+    rule: "A derived constraint is always marked provisional, with its sources."
+    enforced_by: "studio_run.py advance at the context stage, and content_md.py plan at record"
+    limit: "It holds for a row whose level says it was derived. A derivation written down as L0 is not seen."
+  - id: spend-without-confirm
+    rule: "Nothing that spends credits, runs heavy compute or writes outside the run folder happens before the author confirms."
+    enforced_by: "the skill. studio_run.py confirm records the go-ahead; advance checks one was recorded, and that execute_log.md is not older than it"
+    limit: "A tool call cannot be refused, and the go-ahead is recorded on the skill's word."
+  - id: untaken-step
+    rule: "A Timeline entry records only what was done. It is built from execute_log.md and review.md, never from recipe.md."
+    enforced_by: "the skill"
+  - id: timeline-rewrite
+    rule: "An existing Timeline entry is never edited. A wrong one is corrected by a new one."
+    enforced_by: "content_md.py plan"
+    limit: "Only for a note written through content_md.py. An edit made by hand in Obsidian is not seen."
+  - id: vault-write-without-confirm
+    rule: "Nothing is written into the vault without a preview and the author's yes."
+    enforced_by: "content_md.py apply"
+    limit: "The yes is recorded on the skill's word. A file written into the vault by any other tool is not seen."
+  - id: bearer-link-in-note
+    rule: "A note never holds a presigned or share link, or a credential."
+    enforced_by: "content_md.py lint"
+    limit: "It knows signed query parameters, the share links of a few hosts, and a few key prefixes. A shape it does not know passes."
+  - id: one-note-per-run
+    rule: "A run reads and writes one note. Once it has written, it cannot be pointed at another."
+    enforced_by: "studio_run.py note"
+  - id: note-placement
+    rule: "A run writes a note only at <project>/<kind>/<slug>.md. Nothing at the vault root, and nothing under a folder that starts with _ or ."
+    enforced_by: "studio_run.py note, content_md.py plan"
+  - id: writing-vault
+    rule: "Nothing under creative-writing/vault/ is read into a brief, a recipe or a prompt unless the author names the work at a checkpoint."
+    enforced_by: "the skill"
+  - id: invented-gate
+    rule: "A brand gate is never generated. It is transcribed from the author's answers."
+    enforced_by: "the skill"
+
+# Connector tools no pipeline may call, matched as a substring of the tool's
+# name. Advisory: the executor is a model following instructions. Permission
+# rules in .claude/settings.json are the enforcement, and they are the author's
+# to set.
+connectors:
+  never: [share, publish, invite, deploy, presigned, send_message, tiktok]
+
+# --------------------------------------------------------------------
+# Pipelines. One entry per kind of made thing.
+#
+# Add an entry with `status: implemented` to extend the studio to another
+# kind. The six stages below work unchanged: they read the entry's rules out of
+# this file.
+#
+# `requires_context` is stated at the level of the constraint, not the file:
+# which gate, and what is needed from it.
+#
+# `class`: none | spend | local-compute
+# --------------------------------------------------------------------
+pipelines:
+  ui-direction:
+    status: implemented
+    from: "skills/ui_ux_intelligence.skill.md"
+    kind: ui
+    makes: "A design direction for one surface or product: pattern, style, palette, type, effects, and what to avoid."
+    intent:
+      - design system
+      - palette
+      - colour scheme
+      - font pairing
+      - typography scale
+      - style direction
+      - UX review
+      - accessibility audit
+      - what should this look like
+      - spacing scale
+      - chart type
+      - icon set
+    requires_context:
+      - gate: visual_identity
+        needs: ["interface identity", "off-limits list", "that product work is not bound by it"]
+      - gate: typography_system
+        needs: ["the studio scale", "its tension with the catalog's 16px body minimum", "scope boundary"]
+      - gate: color_science
+        needs: ["palette", "semantic binding", "the three contrast floors"]
+    executes_through:
+      # repo-root paths. The plugin is read-only from here: it is published,
+      # and its catalog files are fingerprinted.
+      engine: "plugins/ui-design/catalog/scripts/search.py"
+      router: "plugins/ui-design/catalog/scripts/route.py"
+      contract: "plugins/ui-design/spec.yaml"
+      guide: "plugins/ui-design/skills/ui-design-catalog/SKILL.md"
+    connector:
+      tools: []
+    class: none
+    leaves_machine: "Nothing. The catalog is local and the engine makes no network call."
+    consumers:
+      studio-surface:
+        what: "One of the studio's own interfaces."
+        authority: "tokens.json and the three gates."
+        role: "Propose only. A change is a diff against tokens.json, with what it would break. The author commits or does not."
+        persist: "never"
+      product:
+        what: "Anything made for a project or a client."
+        authority: "That project's own design system."
+        role: "Sole author. The studio palette and typeface do not travel."
+        persist: "only with an output directory the author has named, outside this repo"
+    stage_notes:
+      intake: |
+        Establish the consumer first: studio surface, or product work. Never
+        guess it. Everything after branches on it.
+        Capture in the author's words: what is being designed, who uses it and
+        where, and any style words they used.
+        Detect the stack from the project (package.json, pubspec.yaml,
+        Package.swift, composer.json). If nothing is detectable and stack
+        guidance matters, ask. Never assume a stack.
+        For product work, ask whether a design system for this project already
+        exists, and where. If it does, read its MASTER.md before anything else.
+      recipe: |
+        Read executes_through.contract and executes_through.guide first. They
+        define the search modes, domains, flags and exit codes. Do not invent
+        one.
+        For a brief in the author's own wording, run executes_through.router on
+        it and record what it chose and any warning it printed.
+        List every search that will be run: the mode, the domain or stack, the
+        query (one intent, two to five terms, in the catalog's own words), any
+        dial, and why this search.
+        For product work, say whether the result is to be persisted, and name
+        the output directory that will be asked for at execute.
+        For a studio surface, say that nothing will be persisted.
+      execute: |
+        Run each search from the recipe with --json. Add no search that is not
+        in the recipe; if one is needed, go back to recipe.
+        After each: check the matched category and the top result against the
+        brief before using anything. If it is empty or off-topic, retry ONCE
+        with a narrower query or an explicit --domain. If the retry fails, say
+        that no match was found. Never present an unmatched result as a match.
+        Studio surface: never pass --persist.
+        Product work: pass --persist only with --output-dir set to the
+        directory the author named at this confirm. Never inside this repo.
+        Never pass --force unless the author said so in those words.
+        Log each command as run, its exit code, the matched category, and the
+        source_identities and source_derivations it returned.
+      review: |
+        Check the matched category is the one the brief describes.
+        Check the contrast report: text pairs at 4.5:1.
+        Studio surface: write the proposed change as a diff against
+        tokens.json. Name each value that would move. Check all three contrast
+        floors in color_science section 4, and the off-limits list in
+        visual_identity section 6. The catalog's 16px body minimum does NOT
+        override the studio scale (typography_system section 3).
+        Product work: check the anti-patterns the engine returned, and that
+        nothing from the studio palette or typeface was carried in.
+      record: |
+        kind: ui.
+        Method: every query as run, the resolved values, and both provenance
+        fields, so a later session can tell a matched value from a derived one.
+        Product work: the design decisions go to Decisions in Force.
+        Studio surface: a proposal is NOT a decision in force. It goes to Next
+        Steps as the item awaiting the author, with the diff. It moves to
+        Decisions in Force only when the author has changed tokens.json.
+
+  ui-build:
+    status: not_yet_implemented
+    from: "skills/css_html_ui.skill.md"
+    kind: ui
+    makes: "Markup and CSS for one surface, in which every value is a token."
+    requires_context:
+      - gate: typography_system
+        needs: ["family, scale, hierarchy"]
+      - gate: visual_identity
+        needs: ["interface identity", "structural discipline", "off-limits list"]
+      - gate: brand_voice
+        needs: ["how controls and labels are worded"]
+    executes_through:
+      capability: "render and measure in a browser"
+    class: none
+    carries:
+      - "Tokens are law: a value with no token is proposed to the author, not invented."
+      - "Never change a file that was not read in this run."
+      - "Render at each breakpoint before calling a surface done. Four bugs in the control room appeared only on rendering."
+      - "Script never sets a colour or a background as a literal. It toggles a class backed by a token."
+      - "A status maps to a class exactly as the token dictionary's semantic table says."
+      - "A new region is a grid area, not an absolutely positioned patch."
+      - "Anything written as HTML from data passes through an escape function first."
+    open:
+      - "brand_voice is not authored. Until it is, the context stage asks for it."
+      - "The source skill's copy rules (sentence case, plain verbs, a control named for what it does) are brand_voice's to state. They are not carried as rules here."
+      - "Where a build is written. The source skill named no directory."
+
+  brand-gate:
+    status: not_yet_implemented
+    from: "context/brand/README.md"
+    kind: other
+    makes: "One brand gate, transcribed from the author's answers."
+    requires_context: []
+    executes_through:
+      capability: "an interview with the author"
+    class: none
+    carries:
+      - "A gate encodes taste and prior decisions. It is never generated."
+      - "A question the author does not answer goes under an Unresolved heading. It is never filled from a library or the catalog."
+      - "The whole file is shown before it is written."
+      - "A provenance section states who answered, and when."
+
+  brush:
+    status: not_yet_implemented
+    from: "DECISIONS.md D2; tools/brush-designer/"
+    kind: brush
+    makes: "A brush: its parameters, its shape and grain, and an importable file."
+    requires_context:
+      - gate: visual_identity
+        needs: ["generated imagery: motifs, texture"]
+    executes_through:
+      capability: "the brush designer, driven in a browser; a packer for the archive"
+    class: none
+    open:
+      - "visual_identity section 7 is a declared gap, so a brush asks for its imagery constraint at the context stage."
+      - "The Procreate archive must be written again: the original encoder indexes a container before its children and has no UID type."
+
+  still-image:
+    status: not_yet_implemented
+    from: "skills/adobe_firefly.skill.md"
+    kind: design
+    makes: "One or more still images from a brief."
+    requires_context:
+      - gate: visual_identity
+        needs: ["generated imagery: motifs, framing, texture"]
+      - gate: color_science
+        needs: ["palette"]
+    executes_through:
+      capability: "image generation"
+    class: spend
+    carries:
+      - "A style reference is recorded in the note. A change supersedes it and keeps the old one."
+    open:
+      - "visual_identity section 7 is a declared gap."
+
+  video-shot:
+    status: not_yet_implemented
+    from: "skills/higgsfield_api.skill.md"
+    kind: video
+    makes: "One shot, or a chain of shots that hold continuity."
+    requires_context:
+      - gate: motion_language
+        needs: ["camera grammar", "shot lengths", "transitions to avoid"]
+      - gate: narrative_continuity
+        needs: ["what persists between shots"]
+      - gate: visual_identity
+        needs: ["generated imagery: motifs, framing, texture"]
+    executes_through:
+      capability: "video generation"
+    class: spend
+    carries:
+      - "Continuity lives in the note's Method and Decisions in Force, not in a live variable."
+      - "A drift check after a run of shots."
+
+  music-cue:
+    status: not_yet_implemented
+    from: "skills/suno_audio.skill.md"
+    kind: audio
+    makes: "One cue."
+    requires_context:
+      - gate: sound_identity
+        needs: ["instrumentation", "tempo range", "mix targets"]
+      - gate: brand_voice
+        needs: ["diction, if there are lyrics"]
+    executes_through:
+      capability: "audio generation"
+    class: spend
+    carries:
+      - "Tempo and key are decisions in force."
+    open:
+      - "The source skill was written for a service with no connector installed."
+
+  edit-2d:
+    status: not_yet_implemented
+    from: "skills/adobe_suite_uxp.skill.md"
+    kind: design
+    makes: "A batch edit or a composite."
+    requires_context:
+      - gate: render_philosophy
+        needs: ["quality bar", "output specs"]
+      - gate: color_science
+        needs: ["working space", "delivery transform"]
+    executes_through:
+      capability: "image editing"
+    class: spend
+    carries:
+      - "Work on a copy. Never change a file that was not read in this run."
+    open:
+      - "color_science section 5 is a declared gap."
+
+  scene-3d:
+    status: not_yet_implemented
+    from: "skills/blender_python.skill.md"
+    kind: 3d
+    makes: "A scene, a camera path, or a render."
+    requires_context:
+      - gate: render_philosophy
+        needs: ["quality bar", "when to re-render"]
+      - gate: motion_language
+        needs: ["camera grammar"]
+    executes_through:
+      capability: "3D scene control"
+    class: local-compute
+    carries:
+      - "A render needs a compute token: one token, one job."
+    open:
+      - "The compute gate has never run on this machine."
+
+# --------------------------------------------------------------------
+# Stages. The same six for every pipeline.
+#
+# `checks` names what studio_run.py verifies before it will mark the stage
+# done. The names are functions in studio_run.py; the spec test fails on an
+# unknown one.
+#
+# {pipeline.<key>} is filled from the run's entry under `pipelines:`.
+# --------------------------------------------------------------------
+stages:
+  - id: intake
+    title: "1. Intake"
+    checkpoint: true
+    output_file: brief.md
+    checks:
+      - outputs_exist
+      - note_path_set
+    description: >
+      Capture what is being made, in the author's words, before anything is
+      looked up or generated.
+    prompt: |
+      Record the brief for a new {pipeline.kind} made through {pipeline}.
+      Capture, in the author's own words wherever possible:
+        - a working title
+        - what is being made, in two to four sentences
+        - whether this continues an existing Content MD or starts a new one
+        - a project, ONLY if the author names one. Never infer a project.
+      If it continues an existing note: read its Overview, Next Steps,
+      Decisions in Force and Method in full before going on.
+      If it is new: propose the note's path, <project>/<kind>/<slug>.md, or
+      one-offs/<kind>/<slug>.md when there is no project.
+      Do not create the note. It is written at record.
+
+      {pipeline.stage_notes.intake}
+
+      Write the result as brief.md.
+
+  - id: context
+    title: "2. Context"
+    checkpoint: true
+    output_file: attestation.md
+    checks:
+      - outputs_exist
+      - covers_every_need
+      - no_unresolved
+      - levels_are_backed
+    description: >
+      Resolve every constraint this pipeline needs, say where each one came
+      from, and show it, before any tool is called.
+    prompt: |
+      Run `python studio/pipeline/studio_run.py facts <run-id>` first. It
+      reports, for each gate this pipeline requires, what is needed from it,
+      whether the file exists, what it answers and what it declares
+      unresolved, and which notes name it.
+
+      Read every gate file it lists, in full.
+
+      Write one row for EACH needed constraint `facts` lists, using its
+      wording in the Constraint cell. Resolve each on the ladder and stop at
+      the first level that holds:
+
+        Level         Source cell must hold                           State
+        L0 AUTHORED   the gate file and `section N`                   resolved
+        L1 RECALLED   [[note]] and the line "in double quotes",       resolved
+                      copied exactly from its Decisions in Force
+        L2 DERIVED    at least three [[notes]] of this kind           PROVISIONAL
+        STATED        the author, and the date as YYYY-MM-DD          resolved
+        L3            nothing                                         UNRESOLVED
+
+      A section that a gate lists under `unresolved` does NOT answer the
+      constraint, though the file exists. Such a row is L3.
+      Inside a table cell, write the pipe of a wikilink alias as `\|`.
+
+      If this continues an existing note, its Decisions in Force bind this run
+      exactly as a gate does. List them under their own heading.
+
+      A row left at L3 is UNRESOLVED. Do not fill it from general knowledge, a
+      domain library, or the catalog. Ask the author. If the author states it,
+      the row becomes STATED with today's date. If not, park the run:
+        python studio/pipeline/studio_run.py park <run-id> --constraint <name> --needs "<what would resolve it>"
+
+      Write attestation.md in this shape:
+
+        # Attestation: <run-id>
+
+        PIPELINE: {pipeline}
+        NOTE:     <vault-relative path> (new | continuing)
+
+        ## Context resolution
+
+        | Constraint | Gate | Level | Source | State |
+        |---|---|---|---|---|
+
+        ## Decisions in force, from the note
+
+        ## Key constraints extracted
+
+      The bookkeeper checks that each row is backed the way its level must
+      be. It cannot check that the section you cite says what you say it
+      does. The author checks that, here.
+
+  - id: recipe
+    title: "3. Recipe"
+    checkpoint: true
+    output_file: recipe.md
+    checks:
+      - outputs_exist
+    description: >
+      Write down exactly what will be run, and where every value in it came
+      from, before it is run.
+    prompt: |
+      Using brief.md and attestation.md, write the recipe: every tool call that
+      execute will make, in order, with every parameter.
+      Beside each parameter give its source: a row of the attestation, a
+      Decision in Force, the author's brief, or a library node. A library node
+      is never binding; say so where one is used.
+      A parameter with no source does not belong in the recipe. Ask.
+      State plainly:
+        - what leaves this machine, and to where: {pipeline.leaves_machine}
+        - the class of this pipeline: {pipeline.class}
+        - what will be written outside the run folder, if anything
+
+      {pipeline.stage_notes.recipe}
+
+      Write the result as recipe.md.
+
+  - id: execute
+    title: "4. Execute"
+    checkpoint: true
+    requires_explicit_confirm: true
+    output_file: execute_log.md
+    checks:
+      - confirmed
+      - outputs_exist
+      - confirmed_before_output
+    description: >
+      Run the recipe, and nothing that is not in it.
+    prompt: |
+      Only after the author has approved recipe.md and said to run it:
+        python studio/pipeline/studio_run.py confirm <run-id> execute --words "<what the author said>"
+      Then run the recipe as written.
+      Call no tool whose name contains a word under `connectors: never`.
+
+      {pipeline.stage_notes.execute}
+
+      Write execute_log.md as it happens: each call as made, what came back,
+      and anything that failed. Record what was done, not what was planned.
+      Save artifacts in the run folder.
+
+  - id: review
+    title: "5. Review"
+    checkpoint: true
+    output_file: review.md
+    checks:
+      - outputs_exist
+    description: >
+      Check each output against each constraint that was attested.
+    prompt: |
+      For each output in execute_log.md, and each row of the attestation, one
+      line: does the output hold to the constraint, and how was that checked.
+      A failed output is a finding, not something to retry silently. A retry
+      is a new execute, with its own confirm.
+      The author marks each output keep or discard.
+
+      {pipeline.stage_notes.review}
+
+      Write the result as review.md.
+
+  - id: record
+    title: "6. Record"
+    checkpoint: true
+    requires_explicit_confirm: true
+    output_files: [note_update.md, record_plan.md]
+    checks:
+      - confirmed
+      - outputs_exist
+      - note_written
+    description: >
+      Update the one Content MD for this made thing. This stage automates the
+      procedure in studio/vault/SCHEMA.md; it does not invent a new one.
+    prompt: |
+      Write note_update.md: the COMPLETE note as it should read afterwards,
+      per studio/vault/SCHEMA.md.
+        1. Append one Timeline entry for this session, headed
+           `### <YYYY-MM-DD> · {pipeline} · <run-id>`. Build it from
+           execute_log.md and review.md only. Never a step that was not taken.
+        2. Rewrite Next Steps in full to describe the present.
+        3. Add Decisions in Force. Mark a derived one PROVISIONAL, with its
+           sources. Add each constraint the author STATED, with the date.
+        4. Move answered Open Questions into Decisions in Force.
+        5. Record conflicts with other notes under Contradictions, naming each.
+        6. Update Method if a parameter changed.
+        7. Set `updated` and `status`. Add {pipeline} to `pipelines` and each
+           gate used to `context_brand`.
+      Leave every existing Timeline entry exactly as it is.
+
+      {pipeline.stage_notes.record}
+
+      Then preview it:
+        python studio/pipeline/content_md.py plan <run-id>
+      Show the author record_plan.md. Only after a clear yes:
+        python studio/pipeline/studio_run.py confirm <run-id> record --words "<what the author said>"
+        python studio/pipeline/content_md.py apply <run-id> --confirm
+      This stage must never run without the author's explicit go-ahead.

@@ -1,0 +1,3 @@
+# The bookkeeper and the note writer read spec.yaml and note frontmatter.
+# The standard library cannot parse YAML.
+pyyaml>=6.0

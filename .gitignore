@@ -87,7 +87,25 @@ embeddings/
 *.faiss
 *.ann
 
+# ── Studio outputs ───────────────────────────────────────────────────────────
+# What a studio run made and the author kept. The note in studio/vault/ is the
+# record of how; the files themselves are large and are not versioned here.
+# studio/pipeline/runs/ is already covered by `runs/` above.
+studio/assets/
+
 # ── Obsidian machine-local state ─────────────────────────────────────────────
+# The first block covers a vault opened at the repo root. The second covers
+# every vault below it: a pattern with a slash in it is anchored to this file's
+# folder, so the first block alone does not reach studio/vault/ or
+# creative-writing/vault/. Each vault also carries its own .gitignore.
+# data.json is where a plugin keeps its settings, API keys included.
+**/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
+**/.obsidian/cache
+**/.obsidian/graph.json
+**/.obsidian/plugins/*/data.json
+**/.obsidian/plugins/*/vectors/
+**/.obsidian/trash/
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/cache

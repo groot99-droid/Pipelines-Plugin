@@ -1,0 +1,69 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# The studio vault — ignore rules
+#
+# This folder IS an Obsidian vault. Obsidian writes machine-local state and
+# plugin secrets into it as a side effect of normal use. Nothing below is
+# something you authored — it is state, cache, or credentials.
+#
+# Vault *settings* are portable and worth versioning; vault *state* and anything
+# a plugin stores on your behalf are not.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Secrets ──────────────────────────────────────────────────────────────────
+# Plugin settings live in data.json, and that is where API keys land. Ignored by
+# default; a plugin whose settings you want versioned can be force-added:
+#   git add -f .obsidian/plugins/x/data.json
+.obsidian/plugins/*/data.json
+
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+credentials.json
+*_token
+*.token
+.netrc
+
+# ── Obsidian machine-local state ─────────────────────────────────────────────
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/graph.json
+.obsidian/hotkeys.json.bak
+.trash/
+.obsidian/trash/
+
+# ── Local AI / embedding caches ──────────────────────────────────────────────
+# A vectorized copy of every note: the whole vault in another form.
+.smart-env/
+.smart-connections/
+.obsidian/plugins/*/vectors/
+.rag/
+.rag_index/
+rag_index/
+__pycache__/
+*.pyc
+embeddings/
+*.embeddings.json
+
+# ── Sync conflicts ───────────────────────────────────────────────────────────
+# This repo sits in a OneDrive folder.
+*.sync-conflict-*
+*conflicted copy*
+.obsidian/sync.json
+
+# ── Private notes (convention, opt-in) ───────────────────────────────────────
+_private/
+*.private.md
+
+# ── OS / editor ──────────────────────────────────────────────────────────────
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+*~
+*.swp

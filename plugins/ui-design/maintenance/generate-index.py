@@ -87,6 +87,7 @@ TOOL_PURPOSE = {
     "plugins": "Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, "
                "a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, "
                "with a design-system generator.",
+    "studio": "Checkpointed production pipelines and the notes they leave behind.",
 }
 
 REFERENCE_PURPOSE = {

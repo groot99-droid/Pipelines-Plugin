@@ -3,18 +3,25 @@
 One repo, multiple tools. Each tool gets a self-contained folder. The
 creative-writing tool is used from this repo, so its skills and agents live once
 at the repo root under `.claude/` and load whenever this repo is the working
-directory. The ui-design tool is a Claude Code plugin published on its own, so
+directory. The studio tool is used from this repo too, and keeps its skill
+there. The ui-design tool is a Claude Code plugin published on its own, so
 its skills and agents live inside it, under `plugins/ui-design/`.
 
 ```
 INDEX.md               generated index of the tools, skills and agents
-.claude/skills/        creative-writing-pipeline, chunk-tag-backfill
+.claude/skills/        creative-writing-pipeline, chunk-tag-backfill,
+                       studio-pipeline
 .claude/agents/        creative-writing-{chunk-tagger,drafter,librarian-native}
-CLAUDE.md              repo conventions; points at the vault's own CLAUDE.md
+CLAUDE.md              repo conventions; points at each vault's own CLAUDE.md
 creative-writing/
   vault/               the Obsidian vault: 63 works, _Annotations/,
                        _ChunkTags/, _Idea_Library/, tools/, CLAUDE.md
   pipeline/            the checkpointed pipeline that writes into that vault
+studio/
+  vault/               a second Obsidian vault: one note per made thing, the
+                       brand gates, SCHEMA.md, CLAUDE.md
+  pipeline/            spec.yaml, the bookkeeper and the note writer
+  docs/                what was carried from Creative-Headquarters, and how
 plugins/ui-design/     the ui-design plugin: everything that is published
   .claude-plugin/      plugin.json and marketplace.json
   skills/, agents/     ui-design-{catalog,catalog-refresh,multipart},
@@ -27,9 +34,10 @@ plugins/ui-design/     the ui-design plugin: everything that is published
   README.md, LICENSE, NOTICE, CHANGELOG.md
 ```
 
-Paths in the creative-writing skills and agents are relative to this repo
-root. Vault-relative paths (as `vault_search.py` reports them, e.g.
-`03_Stories/06_Melting_Away.md`) take a `creative-writing/vault/` prefix. Paths in
+Paths in the creative-writing and studio skills and agents are relative to this
+repo root. Vault-relative paths (as `vault_search.py` reports them, e.g.
+`03_Stories/06_Melting_Away.md`) take a `creative-writing/vault/` prefix; a
+studio note's path takes `studio/vault/`. Paths in
 the ui-design skills and agents start from `${CLAUDE_PLUGIN_ROOT}`, the plugin's
 install directory.
 
@@ -251,6 +259,39 @@ Add a new entry under `modes:` in `spec.yaml` (worked examples, structure
 rhythm, voice notes, target folder) with `status: implemented`. The six
 stages and both entry points work unchanged — they read the mode's rules
 out of the spec rather than having them hardcoded per mode.
+
+## Studio pipelines
+
+Makes one thing at a time through six checkpointed stages, and leaves a note in
+the vault at [`studio/vault`](studio/vault) that says how it was made, what is
+decided about it, and what happens next. Its own [README](studio/README.md)
+covers what it contains, what it writes and when, and what it does not do. Its
+rules are in [`studio/vault/CLAUDE.md`](studio/vault/CLAUDE.md).
+
+Stages: **intake → context → recipe → execute → review → record**. Every stage is
+a checkpoint. Execute and record each need an explicit go-ahead as well. Nothing
+is made before every constraint it needs has been resolved and its source shown;
+a constraint that cannot be sourced is asked for, never guessed.
+
+Nine pipelines are declared in
+[`studio/pipeline/spec.yaml`](studio/pipeline/spec.yaml) and one is implemented:
+`ui-direction`, which runs the ui-design catalog under the studio's brand gates.
+The rest are entries that say what each needs and do not start.
+
+It carries the ideas of Creative-Headquarters into this repo.
+[`studio/docs/INVENTORY.md`](studio/docs/INVENTORY.md) is what that repo
+contained; [`studio/docs/IDEAS.md`](studio/docs/IDEAS.md) is what became of each
+idea.
+
+From this repo, in a Claude Code session, use the `studio-pipeline` skill. There
+is no standalone script: the tools a stage calls exist only inside a live
+session.
+
+```powershell
+python -m unittest discover -s studio/pipeline/tests     # the studio's own check
+python studio/pipeline/studio_run.py status              # every run
+python studio/pipeline/content_md.py lint --all          # every note in the vault
+```
 
 ## UI design plugin
 
