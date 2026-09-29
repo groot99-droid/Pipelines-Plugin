@@ -30,6 +30,8 @@ class TestPortability(unittest.TestCase):
 
     def test_naming_the_pipelines_repo_or_its_root_is_not(self):
         self.assertTrue(vc.portability_errors("skill", "relative to the Pipelines root"))
+        self.assertTrue(vc.portability_errors("skill", "the ROSW repo holds the vault"))
+        self.assertEqual(vc.portability_errors("skill", "CROSWALK is one word, not a name"), [])
         self.assertTrue(vc.portability_errors("skill", "run it from the repo root"))
         self.assertTrue(vc.portability_errors("skill", "run it from the repo-root"))
 

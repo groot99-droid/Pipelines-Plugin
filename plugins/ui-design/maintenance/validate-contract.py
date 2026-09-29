@@ -110,6 +110,7 @@ NON_PORTABLE = (
     (re.compile(r"(?<![\w-])ui-design/"), "a ui-design/ path (the plugin root is ${CLAUDE_PLUGIN_ROOT})"),
     (re.compile(r"\.claude/(?:skills|agents)/"), "a .claude/skills or .claude/agents path"),
     (re.compile(r"Pipelines"), "the Pipelines repo"),
+    (re.compile(r"\bROSW\b"), "the ROSW repo"),
     (re.compile(r"repo[- ]root|this repo\b", re.IGNORECASE), "the repo root"),
 )
 SPEC_KEYS = (

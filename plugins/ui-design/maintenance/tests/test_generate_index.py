@@ -14,10 +14,10 @@ spec = importlib.util.spec_from_file_location("generate_index", SCRIPT)
 gi = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(gi)
 
-# The Pipelines root index exists only when this plugin is checked out inside the
-# Pipelines monorepo. In the published plugin repository there is nothing to test.
+# The ROSW root index exists only when this plugin is checked out inside the
+# ROSW monorepo. In the published plugin repository there is nothing to test.
 IN_MONOREPO = gi.REPO_ROOT is not None
-needs_monorepo = unittest.skipUnless(IN_MONOREPO, "the Pipelines root index is not present outside the monorepo")
+needs_monorepo = unittest.skipUnless(IN_MONOREPO, "the ROSW root index is not present outside the monorepo")
 
 
 def run_check():

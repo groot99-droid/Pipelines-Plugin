@@ -1,8 +1,9 @@
 # ─────────────────────────────────────────────────────────────────────────────
-# Pipelines — repo-root ignore rules
+# ROSW — repo-root ignore rules
 #
 # This repo holds multiple tools, each in its own folder under a tool root
-# (today: creative-writing/{vault,pipeline} and plugins/ui-design/{catalog,maintenance}).
+# (today: creative-writing/{vault,pipeline}, studio/{vault,pipeline} and
+# plugins/ui-design/{catalog,maintenance}).
 # Rules here apply repo-wide.
 # The vault carries its own creative-writing/vault/.gitignore for
 # Obsidian-specific state; that file still applies inside the vault.

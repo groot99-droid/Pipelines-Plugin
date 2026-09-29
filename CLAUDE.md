@@ -1,4 +1,4 @@
-# CLAUDE.md — Pipelines
+# CLAUDE.md — ROSW
 
 ## What this repo is
 

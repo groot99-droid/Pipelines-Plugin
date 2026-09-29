@@ -1,4 +1,4 @@
-# Pipelines
+# ROSW
 
 One repo, multiple tools. Each tool gets a self-contained folder. The
 creative-writing tool is used from this repo, so its skills and agents live once

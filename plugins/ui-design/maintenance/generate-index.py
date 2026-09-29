@@ -6,7 +6,7 @@
                             ids, stacks -- plus the data files and references. A
                             search only matches the words the catalog uses, and
                             nothing else lists them.
-  INDEX.md (Pipelines root) only when the plugin sits inside the Pipelines
+  INDEX.md (ROSW root)      only when the plugin sits inside the ROSW
                             monorepo, as plugins/ui-design/: the tools, and every
                             skill and agent, read from each one's frontmatter.
                             Nothing under creative-writing/ is edited to produce
@@ -42,7 +42,7 @@ TOOL_INDEX = TOOL_ROOT / "INDEX.md"
 
 
 def find_monorepo_root():
-    """The Pipelines root when this plugin is checked out as plugins/<name>/, else None."""
+    """The ROSW root when this plugin is checked out as plugins/<name>/, else None."""
     if TOOL_ROOT.parent.name != "plugins":
         return None
     candidate = TOOL_ROOT.parents[1]
@@ -246,13 +246,14 @@ def collect_entries():
 
 def build_root_index():
     if not REPO_ROOT:
-        raise IndexError_("the Pipelines root index only exists when the plugin is checked out "
-                          "as plugins/<name>/ inside the Pipelines repo")
+        raise IndexError_("the ROSW root index only exists when the plugin is checked out "
+                          "as plugins/<name>/ inside the ROSW repo")
     skills, agents = collect_entries()
-    out = [ROOT_HEADER, "# Pipelines index", "",
+    out = [ROOT_HEADER, "# ROSW index", "",
            "One repo, several tools. Each tool is a self-contained folder: `creative-writing/`, "
-           "and each Claude Code plugin under `plugins/`. The creative-writing skills and agents "
-           "live once, here at the root, under `.claude/`; a plugin carries its own `skills/` and "
+           "`studio/`, and each Claude Code plugin under `plugins/`. The creative-writing and "
+           "studio skills and agents live once, here at the root, under `.claude/`; a plugin "
+           "carries its own `skills/` and "
            "`agents/`, so it can be published on its own. Conventions are in "
            "[CLAUDE.md](CLAUDE.md), the overview in [README.md](README.md).", "",
            "## Tools", ""]
@@ -313,14 +314,14 @@ def main():
                     problems.append("INDEX.md does not list: " + ", ".join(absent))
             if problems:
                 raise IndexError_("; ".join(problems) + f". Regenerate with: {REGENERATE}"
-                                  + (f" (from the Pipelines root: {ROOT_REGENERATE})" if ROOT_INDEX else ""))
+                                  + (f" (from the ROSW root: {ROOT_REGENERATE})" if ROOT_INDEX else ""))
         else:
             for path, content in generated.items():
                 path.write_text(content, encoding="utf-8", newline="\n")
     except (IndexError_, OSError, KeyError) as exc:
         print(f"generate-index: {exc}", file=sys.stderr)
         return 2
-    written = "INDEX.md" + (" and the Pipelines root INDEX.md" if ROOT_INDEX else "")
+    written = "INDEX.md" + (" and the ROSW root INDEX.md" if ROOT_INDEX else "")
     print("Indexes are current." if args.check else f"Generated {written}.")
     return 0
 
