@@ -7,8 +7,9 @@
 # studio/vault/CLAUDE.md; they do not replace it. If CLAUDE.md changes, update
 # the matching block here.
 #
-# Every path below is relative to THIS FILE's directory unless it says
-# "repo root".
+# Paths: vault_root, context_root and runs_root are relative to THIS FILE's
+# directory. A gate's `file:` and `tokens.file` are relative to
+# context_root. Paths under `executes_through:` are relative to the repo root.
 #
 # Where these ideas came from, and what changed on the way, is recorded in
 # studio/docs/IDEAS.md.
@@ -49,7 +50,8 @@ content_md:
   # A finished thing may have no next step. Writing a filler one is worse than
   # writing none.
   next_steps_optional_when: [complete, archived]
-  # Folders inside the vault that never hold a Content MD.
+  # File names that are never a Content MD, in any case. No folder of notes
+  # may carry one of these names either.
   reserved_names: [SCHEMA.md, README.md, CLAUDE.md]
 
 # --------------------------------------------------------------------
@@ -153,11 +155,17 @@ known_conflicts:
       500 is for a status word only, as typography_system section 2 says. No
       other use of a third weight.
   - id: carried-paths
-    where: ["all three gate files, section 0"]
+    where:
+      - "all three gate files, section 0"
+      - "color_science.context.md section 4"
+      - "typography_system.context.md section 5"
     what: >
       The provenance sections cite Creative-Headquarters paths. "ARTIFACT A" is
       tokens.json beside them. "control_room.html" and "check_palette_parity"
       were left behind. "DECISIONS.md" is summarised in studio/docs/IDEAS.md.
+      The `tools/ui-ux-pro-max/` commands and files in color_science section 4
+      and typography_system section 5 are under plugins/ui-design/catalog/
+      here: scripts/search.py, and data/ for the font licences.
     until_settled: "Read the constraints. Do not follow the paths."
 
 # --------------------------------------------------------------------
@@ -223,14 +231,26 @@ refusals:
     rule: "A run with an unresolved constraint does not advance. It is answered or parked."
     enforced_by: "studio_run.py advance, at the context stage"
     limit: >
-      It checks that every needed constraint has a row, that no row is at L3 or
-      in a state other than resolved or PROVISIONAL, and that an L0 row does
-      not cite a section the gate declares unresolved. It cannot tell whether
-      the section cited really states the constraint.
+      It checks that every needed constraint has exactly one row, that no row
+      is at L3 or in a state other than resolved or PROVISIONAL, and that an
+      L0 row names its own gate's file and no section the gate declares
+      unresolved. It cannot tell whether the section cited really states the
+      constraint, and it does not check that the level chosen is the first
+      one on the ladder that holds.
   - id: derived-as-authored
     rule: "A derived constraint is always marked provisional, with its sources."
-    enforced_by: "studio_run.py advance at the context stage, and content_md.py plan at record"
+    enforced_by: "studio_run.py advance at the context stage, and content_md.py plan at every write after it"
     limit: "It holds for a row whose level says it was derived. A derivation written down as L0 is not seen."
+  - id: provisional-kept
+    rule: >
+      A PROVISIONAL decision stays provisional. Recalled, it is still
+      PROVISIONAL, and a later write keeps it until the author states the
+      constraint.
+    enforced_by: "studio_run.py advance at the context stage, and content_md.py plan"
+    limit: "It compares the decision's text. A hand edit in Obsidian is not seen."
+  - id: record-by-record
+    rule: "The record stage ends with a record write, made after the record go-ahead. A flush or a park does not finish it."
+    enforced_by: "studio_run.py advance, at the record stage"
   - id: spend-without-confirm
     rule: "Nothing that spends credits, runs heavy compute or writes outside the run folder happens before the author confirms."
     enforced_by: "the skill. studio_run.py confirm records the go-ahead; advance checks one was recorded, and that execute_log.md is not older than it"
@@ -254,7 +274,10 @@ refusals:
     rule: "A run reads and writes one note. Once it has written, it cannot be pointed at another."
     enforced_by: "studio_run.py note"
   - id: note-placement
-    rule: "A run writes a note only at <project>/<kind>/<slug>.md. Nothing at the vault root, and nothing under a folder that starts with _ or ."
+    rule: >
+      A run writes a note only at <project>/<kind>/<slug>.md, where <kind> is
+      the kind its pipeline makes. Nothing at the vault root, and nothing under
+      a folder that starts with _ or .
     enforced_by: "studio_run.py note, content_md.py plan"
   - id: writing-vault
     rule: "Nothing under creative-writing/vault/ is read into a brief, a recipe or a prompt unless the author names the work at a checkpoint."
@@ -319,6 +342,13 @@ pipelines:
       tools: []
     class: none
     leaves_machine: "Nothing. The catalog is local and the engine makes no network call."
+    open:
+      - >
+        visual_identity states no scope for the whole gate. Section 2 says only
+        that product work is not bound by the no-light-mode rule. Until the
+        author adds a scope, the need `that product work is not bound by it`
+        resolves as STATED, or at L1 from a note that recorded it. The
+        `scope:` under `gates:` is this spec's summary, not a source.
     consumers:
       studio-surface:
         what: "One of the studio's own interfaces."
@@ -341,49 +371,66 @@ pipelines:
         guidance matters, ask. Never assume a stack.
         For product work, ask whether a design system for this project already
         exists, and where. If it does, read its MASTER.md before anything else.
+        The first line of brief.md is `consumer: studio-surface` or
+        `consumer: product`.
       recipe: |
-        Read executes_through.contract and executes_through.guide first. They
-        define the search modes, domains, flags and exit codes. Do not invent
-        one.
-        For a brief in the author's own wording, run executes_through.router on
-        it and record what it chose and any warning it printed.
+        Read {pipeline.executes_through.contract} and
+        {pipeline.executes_through.guide} first. They define the search modes,
+        domains, flags and exit codes. Do not invent one. The guide starts its
+        paths from ${CLAUDE_PLUGIN_ROOT}; here that is plugins/ui-design.
+        For a brief in the author's own wording, run
+        {pipeline.executes_through.router} on it and record what it chose and
+        any warning it printed.
         List every search that will be run: the mode, the domain or stack, the
         query (one intent, two to five terms, in the catalog's own words), any
-        dial, and why this search.
+        dial, and why this search. For each, name the one retry allowed if it
+        comes back empty or off-topic: a narrower query, or an explicit
+        --domain.
         For product work, say whether the result is to be persisted, and name
         the output directory that will be asked for at execute.
         For a studio surface, say that nothing will be persisted.
       execute: |
         Run each search from the recipe with --json. Add no search that is not
-        in the recipe; if one is needed, go back to recipe.
+        in the recipe. If one is needed, go back to recipe:
+          python studio/pipeline/studio_run.py back <run-id> --why "<what is missing>"
         After each: check the matched category and the top result against the
-        brief before using anything. If it is empty or off-topic, retry ONCE
-        with a narrower query or an explicit --domain. If the retry fails, say
-        that no match was found. Never present an unmatched result as a match.
+        brief before using anything. If it is empty or off-topic, run the one
+        retry the recipe names for that search, and no other. If the retry
+        fails, say that no match was found. Never present an unmatched result
+        as a match.
         Studio surface: never pass --persist.
         Product work: pass --persist only with --output-dir set to the
         directory the author named at this confirm. Never inside this repo.
         Never pass --force unless the author said so in those words.
-        Log each command as run, its exit code, the matched category, and the
-        source_identities and source_derivations it returned.
+        Log each command as run, its exit code, and what it returned:
+          --design-system: the matched category, and the source_identities and
+            source_derivations it returned.
+          --domain or --stack: the domain or stack, the file it searched, and
+            the top row's Category and Issue (Guideline, for a stack).
       review: |
         Check the matched category is the one the brief describes.
         Check the contrast report: text pairs at 4.5:1.
-        Studio surface: write the proposed change as a diff against
-        tokens.json. Name each value that would move. Check all three contrast
-        floors in color_science section 4, and the off-limits list in
+        Studio surface: write the proposed change by hand, as a diff against
+        the ten colours in tokens.json. Name each value that would move.
+        Compute the three contrast floors in color_science section 4 from
+        those values. Do not take them from the engine's report, which
+        measured its own palette. Check the off-limits list in
         visual_identity section 6. The catalog's 16px body minimum does NOT
         override the studio scale (typography_system section 3).
         Product work: check the anti-patterns the engine returned, and that
         nothing from the studio palette or typeface was carried in.
       record: |
         kind: ui.
-        Method: every query as run, the resolved values, and both provenance
-        fields, so a later session can tell a matched value from a derived one.
+        Method: every query as run, the resolved values, and where each came
+        from: for --design-system both provenance fields; for --domain and
+        --stack the domain, the file, and the top row's category and issue.
+        A later session must be able to tell a matched value from a derived one.
         Product work: the design decisions go to Decisions in Force.
         Studio surface: a proposal is NOT a decision in force. It goes to Next
-        Steps as the item awaiting the author, with the diff. It moves to
-        Decisions in Force only when the author has changed tokens.json.
+        Steps as the item awaiting the author, with the diff in a fenced block
+        under that item. It moves to Decisions in Force only when the author
+        has changed tokens.json. A run that proposes nothing says so in its
+        Timeline entry, and what is still open goes under Open Questions.
 
   ui-build:
     status: not_yet_implemented
@@ -564,8 +611,12 @@ stages:
       If it continues an existing note: read its Overview, Next Steps,
       Decisions in Force and Method in full before going on.
       If it is new: propose the note's path, <project>/<kind>/<slug>.md, or
-      one-offs/<kind>/<slug>.md when there is no project.
-      Do not create the note. It is written at record.
+      one-offs/<kind>/<slug>.md when there is no project. <kind> is
+      {pipeline.kind}.
+      Either way, tell the bookkeeper which note this run reads and writes:
+        python studio/pipeline/studio_run.py note <run-id> <path>
+      Do not create the note. It is first written at record, or earlier by a
+      flush or a park.
 
       {pipeline.stage_notes.intake}
 
@@ -695,7 +746,8 @@ stages:
       For each output in execute_log.md, and each row of the attestation, one
       line: does the output hold to the constraint, and how was that checked.
       A failed output is a finding, not something to retry silently. A retry
-      is a new execute, with its own confirm.
+      is a new execute, with its own go-ahead. Go back to it with:
+        python studio/pipeline/studio_run.py back <run-id> --why "<what failed>"
       The author marks each output keep or discard.
 
       {pipeline.stage_notes.review}
@@ -707,6 +759,9 @@ stages:
     checkpoint: true
     requires_explicit_confirm: true
     output_files: [note_update.md, record_plan.md]
+    then: >
+      advance straight after apply. The author's yes to record_plan.md was
+      this stage's checkpoint.
     checks:
       - confirmed
       - outputs_exist
@@ -726,8 +781,10 @@ stages:
         4. Move answered Open Questions into Decisions in Force.
         5. Record conflicts with other notes under Contradictions, naming each.
         6. Update Method if a parameter changed.
-        7. Set `updated` and `status`. Add {pipeline} to `pipelines` and each
-           gate used to `context_brand`.
+        7. Set `updated` and `status`. Add {pipeline} to `pipelines`. List under
+           `context_brand` the gates this note's decisions speak to, as
+           SCHEMA.md means it; a decision derived or stated in this run always
+           names its gate there.
       Leave every existing Timeline entry exactly as it is.
 
       {pipeline.stage_notes.record}

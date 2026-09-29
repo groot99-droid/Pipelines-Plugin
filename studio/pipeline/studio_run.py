@@ -11,6 +11,7 @@ session, and reports here.
     python studio/pipeline/studio_run.py note    <run-id> <project>/<kind>/<slug>.md
     python studio/pipeline/studio_run.py confirm <run-id> <stage|flush|park> --words "..."
     python studio/pipeline/studio_run.py advance <run-id>
+    python studio/pipeline/studio_run.py back    <run-id> --why "..."
     python studio/pipeline/studio_run.py park    <run-id> --constraint NAME --needs "..."
     python studio/pipeline/studio_run.py unpark  <run-id>
     python studio/pipeline/studio_run.py status  [<run-id>] [--json]
@@ -36,13 +37,14 @@ import json
 import re
 import secrets
 import sys
+from datetime import date, timedelta
 
 from studio_common import (
     EXIT_OK, EXIT_REFUSED, EXIT_USAGE, SPEC_PATH, Env, Refused, Usage,
-    all_states, attestation_rows, cited_notes, current_stage, latest_confirmation,
-    level_of, load_state, log_event, normalize, note_index, now, open_console,
-    read_text, resolve_note, save_state, sections, slugify, split_note, squeeze,
-    stage_outputs, stamp, write_text,
+    all_states, attestation_rows, attesting_stage, cited_notes, current_stage, decisions,
+    find_note, latest_confirmation, level_of, load_state, log_event, normalize, note_index,
+    now, open_console, parse_stamp, read_text, resolve_note, save_state, slugify, squeeze,
+    stage_outputs, stamp, unstruck, write_text,
 )
 
 # What `confirm` accepts besides a stage that requires confirmation. Both are
@@ -54,16 +56,30 @@ EXTRA_CONFIRMATIONS = ("flush", "park")
 # before it. Real work takes longer than this to run.
 CLOCK_SLACK_SECONDS = 2.0
 
+# A recalled line is copied from one bullet, and is long enough to mean
+# something on its own.
+QUOTE_MIN_WORDS = 3
+
 PLACEHOLDER_RE = re.compile(r"\{pipeline(?:\.([A-Za-z0-9_.\-]+))?\}")
-SECTION_RE = re.compile(r"(?:section|§)\s*(\d+)", re.I)
 QUOTED_RE = re.compile(r"\"([^\"]+)\"|“([^”]+)”")
 DATE_RE = re.compile(r"\b\d{4}-\d{2}-\d{2}\b")
+# `section 2`, `sections 2 and 3`, `§2-4`, `section 2, §5`.
+SECTION_NUMBER = r"\d+(?:\s*(?:-|–|to)\s*\d+)?"
+SECTIONS_RE = re.compile(
+    rf"(?:\bsections?\b|§)\s*({SECTION_NUMBER}(?:\s*(?:,|&|\band\b|\bor\b)\s*(?:§\s*)?{SECTION_NUMBER})*)",
+    re.I)
+# A range wider than this is a typo, not a citation.
+SECTION_RANGE_MAX = 20
 
 STATES = ("resolved", "provisional")
 
 
 def fill(template, env, state):
-    """Replace {pipeline} and {pipeline.a.b} from the run's pipeline entry."""
+    """Replace {pipeline} and {pipeline.a.b} from the run's pipeline entry.
+
+    A value may itself hold a placeholder, as the stage notes do; those are
+    filled too.
+    """
     name = state["pipeline"]
     cfg = env.pipeline(name)
 
@@ -80,7 +96,18 @@ def fill(template, env, state):
             return ", ".join(str(item) for item in value)
         return str(value).rstrip()
 
-    return PLACEHOLDER_RE.sub(lookup, template).replace("<run-id>", state["run_id"])
+    text = template
+    for _ in range(3):
+        filled = PLACEHOLDER_RE.sub(lookup, text)
+        if filled == text:
+            break
+        text = filled
+    return text.replace("<run-id>", state["run_id"])
+
+
+def place_note(env, state, relative):
+    """The run's note path, checked as a place this run's pipeline may write."""
+    return resolve_note(env, relative, placing=True, kind=env.pipeline(state["pipeline"]).get("kind"))
 
 
 # ── checks ───────────────────────────────────────────────────────────────────
@@ -105,13 +132,30 @@ def attested(stage, run_dir):
     return rows
 
 
-def find_note(by_name, name):
-    paths = {entry["path"]: entry for entry in by_name.get(name.casefold(), [])}
-    if not paths:
-        raise Refused(f"[[{name}]] is not a note in the vault")
-    if len(paths) > 1:
-        raise Refused(f"[[{name}]] could be any of: {', '.join(sorted(paths))}. Cite it by id.")
-    return next(iter(paths.values()))
+def quotes_in(source):
+    return [first or second for first, second in QUOTED_RE.findall(source)]
+
+
+def section_numbers(source):
+    """Every section a Source cell cites, ranges spread out. Quoted text is
+    left out: a line copied from a gate may name a section of its own."""
+    numbers = []
+    for listed in SECTIONS_RE.findall(QUOTED_RE.sub(" ", source)):
+        for piece in re.split(r"\s*(?:,|&|\band\b|\bor\b)\s*", listed, flags=re.I):
+            ends = [int(n) for n in re.findall(r"\d+", piece)]
+            if len(ends) == 2 and 0 <= ends[1] - ends[0] <= SECTION_RANGE_MAX:
+                numbers += [str(n) for n in range(ends[0], ends[1] + 1)]
+            else:
+                numbers += [str(n) for n in ends]
+    return numbers
+
+
+def matches_need(constraint, need):
+    """A Constraint cell is for a need when it is the need, or starts with it
+    and goes on after a colon, a bracket, a comma, a semicolon or a dash."""
+    said, wanted = squeeze(constraint), squeeze(need)
+    return said == wanted or re.match(re.escape(wanted) + r"(?:\s*[:(,;]|\s+[-–—]|\s*[–—])",
+                                      said) is not None
 
 
 @check("outputs_exist")
@@ -129,7 +173,7 @@ def note_path_set(env, state, stage, run_dir):
     if not state.get("note_path"):
         raise Refused("this run has no note yet. Set it with: "
                       f"studio_run.py note {state['run_id']} <project>/<kind>/<slug>.md")
-    resolve_note(env, state["note_path"], placing=True)
+    place_note(env, state, state["note_path"])
 
 
 @check("covers_every_need")
@@ -143,22 +187,37 @@ def covers_every_need(env, state, stage, run_dir):
         if not mine:
             raise Refused(f"the attestation has no row for `{need['gate']}`, "
                           f"which {state['pipeline']} requires")
-        for wanted in need.get("needs", []):
-            if not any(squeeze(wanted) in squeeze(row["constraint"]) for row in mine):
-                raise Refused(f"the attestation has no row for `{wanted}` from `{need['gate']}`. "
+        wanted = need.get("needs", [])
+        for name in wanted:
+            hits = [row for row in mine if matches_need(row["constraint"], name)]
+            if not hits:
+                raise Refused(f"the attestation has no row for `{name}` from `{need['gate']}`. "
                               "One row for each needed constraint, in the wording `facts` prints.")
+            if len(hits) > 1:
+                raise Refused(f"{len(hits)} rows are for `{name}` from `{need['gate']}`. "
+                              "One row for each needed constraint:\n    "
+                              + "\n    ".join(row["row"] for row in hits))
+        for row in mine:
+            covered = [name for name in wanted if matches_need(row["constraint"], name)]
+            if len(covered) > 1:
+                raise Refused(f"one row is for {len(covered)} needs ({', '.join(covered)}). "
+                              f"Each takes its own row:\n    {row['row']}")
 
 
 @check("no_unresolved")
 def no_unresolved(env, state, stage, run_dir):
     marker = env.spec["ladder"]["unresolved_marker"]
+    rows = attested(stage, run_dir)
+    unreadable = [row for row in rows if level_of(row) is None]
+    if unreadable:
+        raise Refused(f"{len(unreadable)} row(s) have a Level that cannot be read:\n    "
+                      + "\n    ".join(f"{row['row']}\n      `{row['level']}` is not a level."
+                                      for row in unreadable)
+                      + "\n  Write it as the ladder names it: L0 AUTHORED, L1 RECALLED, "
+                        "L2 DERIVED, STATED or L3.")
     still_open = []
-    for row in attested(stage, run_dir):
-        level = level_of(row)
-        if level is None:
-            still_open.append(f"{row['row']}\n      `{row['level']}` is not a level. "
-                              "It is L0, L1, L2 or STATED.")
-        elif level == "L3":
+    for row in rows:
+        if level_of(row) == "L3":
             still_open.append(f"{row['row']}\n      L3 is {marker}")
         elif row["state_word"] not in STATES:
             still_open.append(f"{row['row']}\n      its state is `{row['state']}`. "
@@ -175,7 +234,15 @@ def back_l0(env, row):
     if not (env.context / declared["file"]).is_file():
         raise Refused(f"`{row['gate']}` is not authored: there is no {declared['file']}. "
                       f"It cannot resolve at L0:\n    {row['row']}")
-    cited = SECTION_RE.findall(row["source"])
+    source = QUOTED_RE.sub(" ", row["source"]).casefold()
+    if declared["file"].casefold() not in source:
+        raise Refused(f"an L0 row names the gate's own file, {declared['file']}, and the section "
+                      f"in it:\n    {row['row']}")
+    for name, other in env.spec["gates"].items():
+        if name != row["gate"] and other["file"].casefold() in source:
+            raise Refused(f"an L0 row for `{row['gate']}` cites {other['file']}, another gate's "
+                          f"file. One row, one gate:\n    {row['row']}")
+    cited = section_numbers(row["source"])
     if not cited:
         raise Refused("an L0 row cites where in the gate the constraint is stated, "
                       f"as `section N`:\n    {row['row']}")
@@ -191,23 +258,41 @@ def back_l0(env, row):
 
 
 def back_l1(env, row, by_name):
+    """Every note cited exists and speaks to the gate, and each quoted line is
+    in one bullet of one of them. Returns True when a quoted line sits in a
+    decision marked PROVISIONAL: recalled, it is still provisional."""
+    marker = env.spec["ladder"]["provisional_marker"]
     names = cited_notes(row["source"])
     if not names:
         raise Refused(f"an L1 row cites the note it recalls from, as [[note]]:\n    {row['row']}")
-    quotes = [first or second for first, second in QUOTED_RE.findall(row["source"])]
+    quotes = quotes_in(row["source"])
     if not quotes:
         raise Refused("an L1 row copies the line it recalls, in double quotes, exactly as the "
                       f"note has it:\n    {row['row']}")
-    entry = find_note(by_name, names[0])
-    if row["gate"] not in entry["context_brand"]:
-        raise Refused(f"{entry['path']} does not list `{row['gate']}` under context_brand, "
-                      f"so it is not a note that speaks to that gate:\n    {row['row']}")
-    _, body = split_note(read_text(entry["file"]))
-    decisions = squeeze(dict(sections(body)).get("Decisions in Force", ""))
+    lines = []
+    for name in names:
+        entry = find_note(by_name, name)
+        if row["gate"] not in entry["context_brand"]:
+            raise Refused(f"{entry['path']} does not list `{row['gate']}` under context_brand, "
+                          f"so it is not a note that speaks to that gate:\n    {row['row']}")
+        items = decisions(read_text(entry["file"]))
+        if items is None:
+            raise Refused(f"{entry['path']} has no Decisions in Force. There is no decision in it "
+                          f"to recall:\n    {row['row']}")
+        lines += [(item, squeeze(item)) for item in items]
+    provisional = False
     for quote in quotes:
-        if squeeze(quote) not in decisions:
-            raise Refused(f"{entry['path']} does not say \"{quote}\" under Decisions in Force. "
-                          f"A recalled line is copied, not paraphrased:\n    {row['row']}")
+        said = squeeze(unstruck(quote))
+        if len(said.split()) < QUOTE_MIN_WORDS:
+            raise Refused(f"the quoted line \"{quote}\" is too short to be a decision. Copy at least "
+                          f"{QUOTE_MIN_WORDS} words of it:\n    {row['row']}")
+        holding = [raw for raw, flat in lines if said in flat]
+        if not holding:
+            raise Refused(f"no line under Decisions in Force says \"{quote}\". A recalled line is "
+                          "copied, not paraphrased, from one bullet, and not from struck-out text:"
+                          f"\n    {row['row']}")
+        provisional = provisional or any(marker in raw for raw in holding)
+    return provisional
 
 
 def back_l2(env, state, row, by_name):
@@ -227,24 +312,72 @@ def back_l2(env, state, row, by_name):
     if len(found) < least:
         raise Refused(f"a {marker} constraint cites {len(found)} note(s); it needs {least}. "
                       f"Fewer is a coincidence, not precedent:\n    {row['row']}")
+    return sorted(found)
+
+
+def stated_on(state, row):
+    """The dates a STATED row gives. Each is a real day, not after today, and
+    not more than a day before the run began."""
+    written = DATE_RE.findall(row["source"])
+    if not written:
+        raise Refused("a STATED row gives the date the author stated it, "
+                      f"as YYYY-MM-DD:\n    {row['row']}")
+    began = parse_stamp(state["created"]).date()
+    today = max(date.today(), now().date())
+    for text in written:
+        try:
+            day = date.fromisoformat(text)
+        except ValueError:
+            raise Refused(f"`{text}` is not a date:\n    {row['row']}") from None
+        if day > today:
+            raise Refused(f"{text} is after today. A STATED row gives the day the author said "
+                          f"it:\n    {row['row']}")
+        if day < began - timedelta(days=1):
+            raise Refused(f"{text} is before this run began ({began}). A constraint stated for an "
+                          "earlier run is recalled from its note, at L1:\n    " + row["row"])
+    return written
 
 
 @check("levels_are_backed")
 def levels_are_backed(env, state, stage, run_dir):
+    kept_rows(env, state, stage, run_dir)
+
+
+def kept_rows(env, state, stage, run_dir):
+    """Check each row against its level, and return what later writes owe.
+
+    The rows are kept in state.json when the stage is done, so a later write is
+    held to them even if attestation.md is changed or removed.
+    """
+    marker = env.spec["ladder"]["provisional_marker"]
     _, by_name = note_index(env)
+    kept = []
     for row in attested(stage, run_dir):
         level = level_of(row)
-        if row["state_word"] == "provisional" and level != "L2":
-            raise Refused("only a derived constraint (L2) is provisional:\n    " + row["row"])
+        provisional = row["state_word"] == "provisional"
+        if provisional and level not in ("L1", "L2"):
+            raise Refused("only a derived constraint (L2), or a line recalled from a "
+                          f"{marker} decision, is provisional:\n    {row['row']}")
+        entry = {"constraint": row["constraint"], "gate": row["gate"], "level": level,
+                 "state": row["state_word"], "row": row["row"]}
         if level == "L0":
             back_l0(env, row)
         elif level == "L1":
-            back_l1(env, row, by_name)
+            recalled_provisional = back_l1(env, row, by_name)
+            if recalled_provisional and not provisional:
+                raise Refused(f"the line recalled is marked {marker} in its note, so it was "
+                              f"derived, not decided. Recalled, it is still {marker}:\n    "
+                              + row["row"])
+            if provisional and not recalled_provisional:
+                raise Refused(f"the line recalled is not marked {marker} in its note. A recalled "
+                              f"decision is resolved:\n    {row['row']}")
+            entry["quotes"] = quotes_in(row["source"])
         elif level == "L2":
-            back_l2(env, state, row, by_name)
-        elif level == "STATED" and not DATE_RE.search(row["source"]):
-            raise Refused("a STATED row gives the date the author stated it, "
-                          f"as YYYY-MM-DD:\n    {row['row']}")
+            entry["notes"] = back_l2(env, state, row, by_name)
+        elif level == "STATED":
+            entry["dates"] = stated_on(state, row)
+        kept.append(entry)
+    return kept
 
 
 @check("confirmed")
@@ -269,18 +402,32 @@ def confirmed_before_output(env, state, stage, run_dir):
 
 @check("note_written")
 def note_written(env, state, stage, run_dir):
+    """The last write of this run's note is a record write, made after the
+    record go-ahead, and the vault holds exactly what it wrote. The record
+    checks are run again on it."""
     import content_md  # beside this file
 
-    note = resolve_note(env, state["note_path"], placing=True)
+    note = place_note(env, state, state["note_path"])
     if not note.is_file():
         raise Refused(f"{state['note_path']} is not in the vault. Apply the plan first.")
-    written = normalize(read_text(note))
-    proposed = normalize(read_text(run_dir / "note_update.md"))
-    if written != proposed:
+    written = state.get("written")
+    if not written or written.get("note_path") != state["note_path"]:
+        raise Refused(f"this run has not written {state['note_path']}. Plan it, confirm it and "
+                      "apply it, as record.")
+    if written["purpose"] != "record":
+        raise Refused(f"the note was last written as a {written['purpose']}. The record stage ends "
+                      "with a record write: plan, confirm and apply it with --as record.")
+    given = latest_confirmation(state, "record")
+    if given and written["at_epoch"] < given["at_epoch"]:
+        raise Refused("the note was written before the latest record go-ahead. "
+                      "Plan it and apply it again.")
+    text = normalize(read_text(note))
+    if content_md.digest(text) != written["sha"]:
         raise Refused("the note in the vault is not the note that was previewed")
-    errors, _ = content_md.lint(written, env, state["note_path"])
+    errors, _ = content_md.lint(text, env, state["note_path"])
+    errors += content_md.purpose_errors(env, state, "record", text)[0]
     if errors:
-        raise Refused("the note does not pass the lint:\n    " + "\n    ".join(errors))
+        raise Refused("the note does not pass the record checks:\n    " + "\n    ".join(errors))
 
 
 def run_checks(env, state, stage):
@@ -300,7 +447,9 @@ def describe_stage(env, state, stage):
         lines.append("  writes:   " + ", ".join(outputs) + f"   in {env.run_dir(state['run_id'])}")
     if stage.get("requires_explicit_confirm"):
         lines.append("  needs:    the author's explicit go-ahead, recorded with `confirm`")
-    if stage.get("checkpoint"):
+    if stage.get("then"):
+        lines.append("  then:     " + " ".join(stage["then"].split()))
+    elif stage.get("checkpoint"):
         lines.append("  then:     stop and show the author. Advance only when they say so.")
     return lines
 
@@ -310,12 +459,15 @@ def show_next(env, state, stage):
 
 
 def set_note(env, state, given):
-    path = resolve_note(env, given, placing=True)
+    path = place_note(env, state, given)
     relative = path.relative_to(env.vault).as_posix()
-    written = [event for event in state.get("events", []) if event["event"] == "apply"]
+    written = state.get("written") or any(event["event"] == "apply"
+                                          for event in state.get("events", []))
     if written and state.get("note_path") and relative != state["note_path"]:
         raise Refused(f"this run has already written {state['note_path']}. "
                       "A run reads and writes one note. Start a new run for another.")
+    if state.get("plan") and state["plan"].get("note_path") != relative:
+        state["plan"] = None
     state["note_path"] = relative
     state["note_is_new"] = not path.is_file()
     others = [other["run_id"] for other in all_states(env)
@@ -351,6 +503,9 @@ def cmd_new(env, args):
         "next_stage_index": 0,
         "confirmations": [],
         "parked": None,
+        "attested": None,
+        "plan": None,
+        "written": None,
         "events": [],
     }
     others = set_note(env, state, args.note) if args.note else []
@@ -425,6 +580,7 @@ def gate_facts(env, state):
         "pipeline": state["pipeline"],
         "kind": cfg.get("kind"),
         "gates": gates,
+        "open": cfg.get("open", []),
         "notes_in_vault": len(notes),
         "notes_of_this_kind": [n["path"] for n in notes if n["kind"] == cfg.get("kind")],
         "derivation_needs": env.spec["ladder"]["levels"]["L2"]["min_notes"],
@@ -469,6 +625,9 @@ def cmd_facts(env, args):
     print()
     print(f"  notes of kind `{facts['kind']}`: {len(facts['notes_of_this_kind'])}. "
           f"Deriving a constraint needs {facts['derivation_needs']}.")
+    for item in facts["open"]:
+        print()
+        print(f"  open: {' '.join(item.split())}")
     for conflict in facts["known_conflicts"]:
         print()
         print(f"  known conflict `{conflict['id']}`: {' '.join(conflict['what'].split())}")
@@ -518,6 +677,8 @@ def cmd_advance(env, args):
         raise Refused("the run is complete. There is nothing to advance.")
     try:
         run_checks(env, state, stage)
+        if attesting_stage(stage):
+            state["attested"] = kept_rows(env, state, stage, env.run_dir(state["run_id"]))
     except Refused as refusal:
         log_event(state, "refused", f"{stage['id']}: {str(refusal).splitlines()[0]}")
         save_state(env, state)
@@ -535,6 +696,35 @@ def cmd_advance(env, args):
         print("complete  the run is finished. The note is the record; this folder may be deleted.")
     else:
         show_next(env, state, following)
+    return EXIT_OK
+
+
+def cmd_back(env, args):
+    state = load_state(env, args.run_id)
+    why = " ".join((args.why or "").split())
+    if not why:
+        raise Usage("--why is empty. Say what is being redone, and why.")
+    if state["status"] == "complete":
+        raise Refused("the run is complete. To change what it made, start a new run on the same note.")
+    if state["status"] == "parked":
+        raise Refused(f"the run is parked on `{state['parked']['constraint']}`. Unpark it first.")
+    index = state["next_stage_index"]
+    if index <= 0:
+        raise Refused("the run is at its first stage. There is nothing before it.")
+    ids = [stage["id"] for stage in env.stages]
+    target = index - 1
+    redone = set(ids[target:])
+    state["confirmations"] = [given for given in state.get("confirmations", [])
+                              if given["what"] not in redone]
+    state["completed_stages"] = state["completed_stages"][:target]
+    state["next_stage_index"] = target
+    if any(attesting_stage(stage) for stage in env.stages[target:]):
+        state["attested"] = None
+    state["plan"] = None
+    log_event(state, "back", f"{ids[index] if index < len(ids) else 'end'} to {ids[target]}: {why}")
+    save_state(env, state)
+    print(f"back      to {env.stages[target]['title']}. Go-aheads from here on are cleared.")
+    show_next(env, state, env.stages[target])
     return EXIT_OK
 
 
@@ -619,15 +809,20 @@ def cmd_status(env, args):
         if stage:
             show_next(env, state, stage)
         return EXIT_OK
-    runs = [summary(env, state) for state in all_states(env)]
+    broken = []
+    runs = [summary(env, state) for state in all_states(env, broken)]
     if args.json:
-        print(json.dumps(runs, indent=2, ensure_ascii=False))
+        print(json.dumps(runs + [{"run_id": run_id, "status": "broken", "problem": problem}
+                                 for run_id, problem in broken], indent=2, ensure_ascii=False))
         return EXIT_OK
-    if not runs:
+    if not runs and not broken:
         print(f"no runs under {env.runs}")
         return EXIT_OK
     for run in runs:
         print(f"{run['status']:9s} {run['next_stage'] or '-':8s} {run['pipeline']:14s} {run['run_id']}")
+    for run_id, problem in broken:
+        print(f"{'broken':9s} {'-':8s} {'-':14s} {run_id}")
+        print(f"          {problem}")
     return EXIT_OK
 
 
@@ -675,6 +870,11 @@ def build_parser():
     advance.add_argument("run_id")
     advance.set_defaults(run=cmd_advance)
 
+    back = commands.add_parser("back", help="go back one stage, to redo it")
+    back.add_argument("run_id")
+    back.add_argument("--why", required=True, help="what is being redone, and why")
+    back.set_defaults(run=cmd_back)
+
     park = commands.add_parser("park", help="stop a run on a constraint that cannot be resolved")
     park.add_argument("run_id")
     park.add_argument("--constraint", required=True)
@@ -702,6 +902,9 @@ def main(argv=None):
         print(f"REFUSED   {refusal}", file=sys.stderr)
         return EXIT_REFUSED
     except Usage as problem:
+        print(f"error     {problem}", file=sys.stderr)
+        return EXIT_USAGE
+    except OSError as problem:
         print(f"error     {problem}", file=sys.stderr)
         return EXIT_USAGE
 

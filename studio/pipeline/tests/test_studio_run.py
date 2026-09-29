@@ -4,6 +4,7 @@ import json
 import os
 import time
 import unittest
+from datetime import date
 
 from helpers import GOOD_NOTE, HEADER, NOTE, StudioCase, precedent, studio_run
 
@@ -85,11 +86,15 @@ class NotePaths(StudioCase):
 
     def test_a_reserved_file_cannot_be_reached_in_any_case(self):
         self.place("CLAUDE.md", "# the rules\n")
-        run_id = self.new_run()
-        self.through(run_id, "intake")
-        for path in ("claude.md", "Claude.md", "one-offs/ui/claude.md"):
+        for path in ("claude.md", "Claude.md", "one-offs/ui/claude.md", "one-offs/ui/SCHEMA.md",
+                     "one-offs/ui/readme.md", "CLAUDE.md/ui/x.md", "aurora/ui/Readme.MD"):
             with self.subTest(path=path):
-                self.assertEqual(self.run_cmd("note", run_id, path)[0], 2)
+                run_id = self.new_run()
+                self.through(run_id, "intake")
+                code, _, err = self.run_cmd("note", run_id, path)
+                self.assertEqual(code, 2)
+                self.assertIn("reserved", err)
+                self.assertEqual(self.state(run_id)["note_path"], "one-offs/ui/ops-console.md")
         self.assertEqual((self.vault / "CLAUDE.md").read_text(encoding="utf-8"), "# the rules\n")
 
     def test_a_plain_path_inside_the_vault(self):
@@ -254,15 +259,17 @@ class Context(StudioCase):
                     self.refused(self.attestation([row]), "does NOT answer")
 
     def test_a_gap_cited_beside_a_real_section(self):
-        row = "| imagery | visual_identity | L0 | sections: section 2 and section 7 | resolved |"
-        self.refused(self.attestation([row]), "does NOT answer")
+        for cited in ("section 2 and section 7", "sections 2 and 7", "§2, §7", "sections 5-7"):
+            with self.subTest(cited=cited):
+                row = f"| imagery | visual_identity | L0 | visual_identity.context.md {cited} | resolved |"
+                self.refused(self.attestation([row]), "does NOT answer")
 
     def test_l0_with_no_section(self):
-        row = "| interface identity | visual_identity | L0 AUTHORED | the gate file | resolved |"
+        row = "| grounds | visual_identity | L0 AUTHORED | visual_identity.context.md | resolved |"
         self.refused(self.attestation([row]), "as `section N`")
 
     def test_l0_citing_a_section_the_gate_does_not_have(self):
-        row = "| interface identity | visual_identity | L0 AUTHORED | section 12 | resolved |"
+        row = "| grounds | visual_identity | L0 AUTHORED | visual_identity.context.md section 12 | resolved |"
         self.refused(self.attestation([row]), "no section 12")
 
     def test_l0_for_a_gate_nobody_has_written(self):
@@ -355,13 +362,14 @@ class Context(StudioCase):
                      "of the same kind")
 
     def test_only_a_derivation_is_provisional(self):
-        row = "| interface identity | visual_identity | L0 AUTHORED | section 2 | PROVISIONAL |"
+        row = ("| grounds | visual_identity | L0 AUTHORED | visual_identity.context.md section 2 "
+               "| PROVISIONAL |")
         self.refused(self.attestation([row]), "only a derived constraint")
 
     # ── stated ────────────────────────────────────────────────────────────
 
     def test_stated_by_the_author(self):
-        row = "| imagery motifs | visual_identity | STATED | the author, 2026-09-28 | resolved |"
+        row = f"| imagery motifs | visual_identity | STATED | the author, {date.today()} | resolved |"
         self.passes(self.attestation([row]))
 
     def test_stated_with_no_date(self):
@@ -386,6 +394,7 @@ class Execute(StudioCase):
         run_id = self.at_execute()
         code, _, err = self.run_cmd("confirm", run_id, "execute", "--words", "   ")
         self.assertEqual(code, 2)
+        self.assertIn("--words is empty", err)
         self.assertEqual(self.state(run_id)["confirmations"], [])
 
     def test_a_go_ahead_is_for_the_current_stage_only(self):
@@ -417,8 +426,10 @@ class Execute(StudioCase):
         log = self.put(run_id, "execute_log.md", "Ran it.\n")
         a_minute_ago = time.time() - 60
         os.utime(log, (a_minute_ago, a_minute_ago))
-        self.run_cmd("confirm", run_id, "execute", "--words", "run it")
-        self.assertEqual(self.run_cmd("advance", run_id)[0], 1)
+        self.assertEqual(self.run_cmd("confirm", run_id, "execute", "--words", "run it")[0], 0)
+        code, _, err = self.run_cmd("advance", run_id)
+        self.assertEqual(code, 1)
+        self.assertIn("before the confirmation", err)
 
     def test_go_ahead_then_work(self):
         run_id = self.at_execute()

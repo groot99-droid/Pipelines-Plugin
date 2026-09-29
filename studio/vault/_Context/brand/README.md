@@ -83,5 +83,6 @@ make.
 
 One disagreement travels with them: the token dictionary's font policy says two
 weights and no third, while the type scale and `typography_system` section 2 use
-400, 500 and 800. Until the author settles it, the scale and section 2 are read
-as in force.
+400, 500 and 800. Until the author settles it, 500 is for a status word only, as
+section 2 says, and no other use of a third weight is in force. `spec.yaml`
+records this under `known_conflicts`.

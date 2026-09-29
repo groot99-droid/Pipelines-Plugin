@@ -53,6 +53,8 @@ edit `state.json` by hand, and never work around a refusal.
 
    If the author is continuing something, read its note first. A note whose
    first Next Step names a run and a stage is a run to resume, not a new one.
+   If that run is no longer under `studio/pipeline/runs/`, start a new run on
+   the same note; do not recreate the old one.
 
 3. **Walk the stages in the spec's `stages:` list, in order, one at a time.**
    For each stage:
@@ -74,6 +76,13 @@ edit `state.json` by hand, and never work around a refusal.
      python studio/pipeline/studio_run.py advance <run-id>
      ```
 
+   - To redo an earlier stage, go back one stage at a time. It clears the
+     go-aheads from that stage on:
+
+     ```
+     python studio/pipeline/studio_run.py back <run-id> --why "<what is being redone>"
+     ```
+
 4. **Intake.** Capture the brief in the author's words. Settle which note this
    run reads and writes, and tell the bookkeeper:
 
@@ -81,10 +90,10 @@ edit `state.json` by hand, and never work around a refusal.
    python studio/pipeline/studio_run.py note <run-id> <project>/<kind>/<slug>.md
    ```
 
-   The path is always three parts: a project, a kind from the vocabulary in the
-   spec, and the file. Use `one-offs/<kind>/<slug>.md` when the author names no
-   project. Never infer a project. Do not create the note; it is written at
-   record.
+   The path is always three parts: a project, the kind this pipeline makes, and
+   the file. Use `one-offs/<kind>/<slug>.md` when the author names no project.
+   Never infer a project. Do not create the note; it is first written at record,
+   or earlier by a flush or a park.
 
 5. **Context.** Run `facts` first. It reports what is on disk; it does not read
    the gates for you.
@@ -104,6 +113,9 @@ edit `state.json` by hand, and never work around a refusal.
      and its State is `resolved`. If they do not, park the run (see below).
    - Never fill a constraint from general knowledge, a reference library, or the
      design catalog.
+   - An L0 row names its own gate's file and the section. An L1 row quotes at
+     least three words from one bullet of the note's Decisions in Force. A line
+     recalled from a `PROVISIONAL` decision is still `PROVISIONAL`.
    - The bookkeeper checks that what each row cites exists. It cannot check that
      the section you cite says what you say it does. Cite only what you read,
      and quote only what is there. The author reads the attestation to check.
@@ -139,8 +151,11 @@ edit `state.json` by hand, and never work around a refusal.
      from `recipe.md`. Leave every existing Timeline entry exactly as it is.
    - Under Decisions in Force, record each constraint the attestation derived as
      `PROVISIONAL, derived from [[a]], [[b]], [[c]]: ...`, citing the same notes,
-     and each one the author stated as `STATED <date>: ...`. The writer refuses
-     the note without them.
+     and each one the author stated as `STATED <date>: ...`, each on a bullet of
+     its own that names the constraint. List each one's gate under
+     `context_brand`. Leave a `PROVISIONAL` decision already in the note as it
+     is, unless the author has now stated it. The writer refuses the note
+     otherwise.
    - Preview it. This writes nothing to the vault:
 
      ```
@@ -154,6 +169,10 @@ edit `state.json` by hand, and never work around a refusal.
      python studio/pipeline/content_md.py apply <run-id> --confirm
      python studio/pipeline/studio_run.py advance <run-id>
      ```
+
+     Advance straight after apply: the yes to the plan was this stage's
+     checkpoint. The stage ends only with a record write; a flush or a park
+     does not finish it.
 
    - If you change `note_update.md` after planning, plan again and show it
      again. The writer refuses a note the author has not seen.
@@ -186,9 +205,12 @@ To resume once the constraint is resolved: `studio_run.py unpark <run-id>`.
 
 ## Stopping before the run is finished
 
-If the session is ending partway through a run, the note must say where. Write
+If the session is ending partway through a run, the note must say where. If the
+run has no note yet, set one first with `studio_run.py note`. Write
 `note_update.md` with the first Next Step naming the run id and the stage to
-resume, and a Timeline entry for what this session actually did. Then:
+resume, and a Timeline entry for what this session actually did. Once context
+is done, a flush owes the same `PROVISIONAL` and `STATED` decisions a record
+does. Then:
 
 ```
 python studio/pipeline/content_md.py plan <run-id> --as flush

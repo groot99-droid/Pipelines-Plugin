@@ -2,6 +2,7 @@
 
 import json
 import unittest
+from datetime import date
 
 from helpers import GOOD_NOTE, NOTE, PIPELINE, StudioCase, content_md, precedent
 
@@ -284,6 +285,7 @@ class PlanAndApply(StudioCase):
         self.propose(GOOD_NOTE.replace("kind: ui", "kind: poem"))
         code, _, err = self.note_cmd("apply", self.run_id, "--confirm")
         self.assertEqual(code, 1)
+        self.assertIn("the plan on file was refused", err)
         self.assertFalse(self.note.exists())
 
     def test_apply_without_a_plan(self):
@@ -292,17 +294,23 @@ class PlanAndApply(StudioCase):
         self.assertEqual(code, 1)
         self.assertIn("no plan", err)
 
-    def test_a_plan_file_that_cannot_be_read(self):
+    def test_a_plan_file_written_by_hand_is_not_a_plan(self):
+        """The plan lives in state.json. A file beside it proves nothing."""
+        self.propose(GOOD_NOTE)
+        self.confirm()
+        self.put(self.run_id, "record_plan.json", json.dumps({
+            "purpose": "record", "ok": True, "planned_at_epoch": 0,
+            "proposed_sha": content_md.digest(GOOD_NOTE), "existing_sha": None}))
+        code, _, err = self.note_cmd("apply", self.run_id, "--confirm")
+        self.assertEqual(code, 1)
+        self.assertIn("there is no plan", err)
+        self.assertFalse(self.note.exists())
+
+    def test_a_plan_leaves_no_file_that_could_be_trusted(self):
         self.propose(GOOD_NOTE)
         self.note_cmd("plan", self.run_id)
-        self.confirm()
-        for broken in ("{", "[]", "{}"):
-            with self.subTest(text=broken):
-                self.put(self.run_id, "record_plan.json", broken)
-                code, _, err = self.note_cmd("apply", self.run_id, "--confirm")
-                self.assertEqual(code, 1)
-                self.assertNotIn("Traceback", err)
-        self.assertFalse(self.note.exists())
+        self.assertFalse((self.runs / self.run_id / "record_plan.json").exists())
+        self.assertTrue(self.state(self.run_id)["plan"]["ok"])
 
     def test_apply_without_confirm_is_a_dry_run(self):
         self.propose(GOOD_NOTE)
@@ -476,20 +484,36 @@ class WhatTheAttestationOwes(StudioCase):
         self.assertEqual(code, 0, err)
 
     def test_what_the_author_stated_is_recorded_as_stated(self):
-        run_id = self.at_record("| imagery motifs | visual_identity | STATED | the author, 2026-09-27 | resolved |")
+        today = date.today()
+        run_id = self.at_record(f"| imagery motifs | visual_identity | STATED | the author, {today} | resolved |")
         self.put(run_id, "note_update.md", GOOD_NOTE)
         code, _, err = self.note_cmd("plan", run_id)
         self.assertEqual(code, 1)
         self.assertIn("was stated by the author", err)
         self.put(run_id, "note_update.md",
-                 GOOD_NOTE + "- STATED 2026-09-27: imagery is line work only, no photography.\n")
+                 GOOD_NOTE + f"- STATED {today}: imagery motifs are line work only.\n")
         code, _, err = self.note_cmd("plan", run_id)
         self.assertEqual(code, 0, err)
 
-    def test_a_flush_does_not_owe_them_yet(self):
-        run_id = self.at_record("| imagery motifs | visual_identity | STATED | the author, 2026-09-27 | resolved |")
+    def test_a_flush_owes_them_once_context_is_done(self):
+        today = date.today()
+        run_id = self.at_record(f"| imagery motifs | visual_identity | STATED | the author, {today} | resolved |")
+        flushed = GOOD_NOTE.replace(NEXT, f"- [ ] Resume run `{run_id}` at record\n{NEXT}")
+        self.put(run_id, "note_update.md", flushed)
+        code, _, err = self.note_cmd("plan", run_id, "--as", "flush")
+        self.assertEqual(code, 1)
+        self.assertIn("was stated by the author", err)
+        self.put(run_id, "note_update.md", flushed + f"- STATED {today}: imagery motifs are line work.\n")
+        code, _, err = self.note_cmd("plan", run_id, "--as", "flush")
+        self.assertEqual(code, 0, err)
+
+    def test_a_flush_before_context_is_done_owes_nothing(self):
+        run_id = self.new_run()
+        self.through(run_id, "intake")
+        self.put(run_id, "attestation.md", self.attestation(
+            [f"| imagery motifs | visual_identity | STATED | the author, {date.today()} | resolved |"]))
         self.put(run_id, "note_update.md",
-                 GOOD_NOTE.replace(NEXT, f"- [ ] Resume run `{run_id}` at record\n{NEXT}"))
+                 GOOD_NOTE.replace(NEXT, f"- [ ] Resume run `{run_id}` at context\n{NEXT}"))
         code, _, err = self.note_cmd("plan", run_id, "--as", "flush")
         self.assertEqual(code, 0, err)
 
@@ -597,7 +621,7 @@ class SecondSession(StudioCase):
 
     def test_nothing_to_change(self):
         self.assertEqual(self.plan(GOOD_NOTE)[0], 0)
-        plan = json.loads((self.runs / self.run_id / "record_plan.json").read_text(encoding="utf-8"))
+        plan = self.state(self.run_id)["plan"]
         self.assertEqual(plan["proposed_sha"], plan["existing_sha"])
 
 

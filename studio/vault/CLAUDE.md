@@ -52,6 +52,15 @@ the stage's checks pass; it cannot tell whether the author was shown anything.
 instructions, filled in for the run's pipeline. Follow those. Do not improvise a
 stage that contradicts them.
 
+To redo an earlier stage, go back one stage at a time:
+
+```
+python studio/pipeline/studio_run.py back <run-id> --why "<what is being redone>"
+```
+
+It clears the go-aheads from that stage on, and what the run kept from them. A
+retried execute therefore needs a new go-ahead and a new log.
+
 ## Resolving context: the ladder
 
 For each constraint a pipeline needs, stop at the first level that resolves it.
@@ -98,11 +107,22 @@ called. One row for every constraint the pipeline needs, in the words
 
 Inside a table cell, the pipe of a wikilink alias is written `\|`.
 
-A run does not leave the context stage unless every needed constraint has a row,
-no row is at L3, and each row is backed the way its level requires: the section
-an L0 row cites is one the gate answers; the note an L1 row cites is in the vault
-and has the quoted line under Decisions in Force; the notes an L2 row cites are
-three, in the vault, and of the kind being made.
+A run does not leave the context stage unless every needed constraint has
+exactly one row, no row is at L3, and each row is backed the way its level
+requires:
+
+- an L0 row names its own gate's file, and only sections the gate answers;
+- every note an L1 row cites is in the vault and lists the gate under
+  `context_brand`, and each quoted line, at least three words, is in one bullet
+  under Decisions in Force, not in struck-out text;
+- the notes an L2 row cites are three, in the vault, and of the kind being made;
+- a STATED row gives a real date, not after today and not before the run.
+
+A line recalled from a decision marked `PROVISIONAL` is still a derivation. Its
+row's State is `PROVISIONAL`, and the note keeps the marker.
+
+When the context stage is done, the bookkeeper keeps the rows. Every later write
+is held to them, whatever happens to `attestation.md` afterwards.
 
 **That is a check of the record, not of the truth.** Nothing but a reader can
 tell whether section 2 really states the constraint the row says it does. That
@@ -130,15 +150,23 @@ Parking is a correct result, not a failure.
 - **What was derived is recorded as derived**, under Decisions in Force, marked
   `PROVISIONAL` and citing the same notes. What the author stated is recorded as
   `STATED`, with the date. Otherwise the next run recalls a derivation as if it
-  were a decision.
+  were a decision. Each takes a bullet of its own, and its gate is listed under
+  `context_brand`. Once context is done, every write owes them: record, flush
+  and park.
+- **A `PROVISIONAL` decision stays as it is** until the author states the
+  constraint. A later run changes it only with a `STATED` row.
+- **The record stage ends with a record write.** A flush or a park writes the
+  note but does not finish the stage.
 - **The Timeline is append-only.** A wrong entry is corrected by a new one.
 - **Never record a step that was not taken.** A Timeline entry is built from
   `execute_log.md` and `review.md`. Never from `recipe.md`, which is what was
   planned.
 - **Next Steps is rewritten in full** each session.
-- **State lives in the note.** `studio/pipeline/runs/` is bookkeeping and can be
-  deleted. If stopping would lose something the note does not say, the note is
-  wrong; fix it first.
+- **State lives in the note.** `studio/pipeline/runs/` is bookkeeping. A run's
+  folder may be deleted once the run is complete or abandoned, not before: a
+  flushed or parked note names a run that must still be there. If the run a note
+  names is gone, start a new run on the same note. If stopping would lose
+  something the note does not say, the note is wrong; fix it first.
 
 ### Stopping partway
 
@@ -222,6 +250,9 @@ Said plainly, so nobody relies on a guarantee that does not exist.
   hear the author.
 - It checks what an attestation cites. It cannot check that the citation says
   what the row claims.
+- It does not check that the level chosen is the first one on the ladder that
+  holds. A constraint a gate answers could be written as `STATED`; the author
+  sees that at the checkpoint.
 - It checks that a go-ahead for execute was recorded, and that the log is not
   older than it. It sees nothing that was run and not logged.
 - A note edited by hand in Obsidian passes through none of this. The lint reads

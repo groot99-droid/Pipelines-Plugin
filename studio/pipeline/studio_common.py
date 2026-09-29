@@ -7,6 +7,7 @@ Not a command. Requires pyyaml.
 
 import copy
 import json
+import ntpath
 import os
 import re
 import sys
@@ -27,11 +28,21 @@ WIKILINK_RE = re.compile(r"\[\[([^\]|#\\]+)")
 # One part of a note's path. Letters, digits, space, dot, underscore, hyphen;
 # it starts with a letter or digit and does not end in a dot or a space, which
 # Windows would silently drop and so make two names one file.
-PATH_PART_RE = re.compile(r"^[A-Za-z0-9](?:[A-Za-z0-9 ._-]*[A-Za-z0-9_-])?$")
+PATH_PART_RE = re.compile(r"[A-Za-z0-9](?:[A-Za-z0-9 ._-]*[A-Za-z0-9_-])?")
+PATH_PART_MAX = 100
 WINDOWS_DEVICES = {"con", "prn", "aux", "nul"} | {f"{name}{n}" for name in ("com", "lpt")
                                                    for n in range(1, 10)}
 
 ATTESTATION_COLUMNS = ("constraint", "gate", "level", "source", "state")
+
+# A code fence: up to three spaces, then three or more backticks or tildes.
+FENCE_RE = re.compile(r"^( {0,3})(`{3,}|~{3,})(.*)$")
+# A table line, as a reader sees one. Four spaces in, it is code.
+TABLE_LINE_RE = re.compile(r"^ {0,3}\|")
+# A list item, with its marker.
+BULLET_RE = re.compile(r"^\s*[-*+] ")
+# Struck-out text, which a reader sees crossed through.
+STRUCK_RE = re.compile(r"~~.*?~~|<(s|del|strike)>.*?</\1>", re.S | re.I)
 
 
 class Refused(Exception):
@@ -45,7 +56,11 @@ class Usage(Exception):
 # ── files and time ───────────────────────────────────────────────────────────
 
 def read_text(path):
-    return Path(path).read_text(encoding="utf-8")
+    """A file as UTF-8 text. Anything else is a usage error that names it."""
+    try:
+        return Path(path).read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        raise Usage(f"{path} is not UTF-8 text. Save it as UTF-8 and try again.") from None
 
 
 def write_text(path, text):
@@ -61,6 +76,10 @@ def write_text(path, text):
             tmp.unlink()
 
 
+def warn(message):
+    print(f"warning   {message}", file=sys.stderr)
+
+
 def normalize(text):
     """A note as it is stored: LF line endings, one newline at the end."""
     return text.replace("\r\n", "\n").rstrip("\n") + "\n"
@@ -71,12 +90,21 @@ def squeeze(text):
     return " ".join(str(text).split()).casefold()
 
 
+def unstruck(text):
+    """The text with anything struck out removed."""
+    return STRUCK_RE.sub(" ", text)
+
+
 def now():
     return datetime.now(timezone.utc)
 
 
 def stamp(moment):
     return moment.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def parse_stamp(text):
+    return datetime.strptime(text, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
 
 
 def slugify(text):
@@ -93,7 +121,31 @@ def open_console():
 
 # ── the spec ─────────────────────────────────────────────────────────────────
 
-YAML_LOADER = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
+class UniqueKeyLoader(getattr(yaml, "CSafeLoader", yaml.SafeLoader)):
+    """The safe loader, refusing a key written twice in one mapping.
+
+    Plain YAML keeps the last value and says nothing, so a field written twice
+    in a note's frontmatter would change silently.
+    """
+
+    def construct_mapping(self, node, deep=False):
+        if isinstance(node, yaml.MappingNode):
+            seen = set()
+            for key_node, _ in node.value:
+                if key_node.tag == "tag:yaml.org,2002:merge":
+                    continue
+                key = self.construct_object(key_node, deep=True)
+                try:
+                    repeated = key in seen
+                    seen.add(key)
+                except TypeError:
+                    continue
+                if repeated:
+                    raise yaml.constructor.ConstructorError(
+                        None, None, f"`{key}` is written twice", key_node.start_mark)
+        return super().construct_mapping(node, deep=deep)
+
+
 _SPECS = {}
 
 
@@ -105,7 +157,7 @@ def load_yaml(text):
     a caller: the text does not parse.
     """
     try:
-        return yaml.load(text, Loader=YAML_LOADER)
+        return yaml.load(text, Loader=UniqueKeyLoader)
     except yaml.YAMLError as err:
         raise ValueError(" ".join(str(err).split())) from None
 
@@ -121,7 +173,7 @@ def load_spec(path=SPEC_PATH):
         spec = copy.deepcopy(_SPECS[key])
     except FileNotFoundError:
         raise Usage(f"no spec at {path}")
-    except (ValueError, UnicodeDecodeError) as err:
+    except ValueError as err:
         raise Usage(f"{path} does not parse: {' '.join(str(err).split())}")
     if not isinstance(spec, dict):
         raise Usage(f"{path} is not a mapping")
@@ -177,18 +229,31 @@ def stage_outputs(stage):
     return []
 
 
+def attesting_stage(stage):
+    """True for the stage whose output is the attestation."""
+    return "levels_are_backed" in stage.get("checks", [])
+
+
 # ── the vault ────────────────────────────────────────────────────────────────
 
 def reserved_names(env):
     return {name.casefold() for name in env.spec["content_md"].get("reserved_names", [])}
 
 
-def resolve_note(env, relative, placing=False):
+def windows_reserved(part):
+    """A name Windows treats as a device, or folds onto another name."""
+    if part.split(".")[0].rstrip(" ").casefold() in WINDOWS_DEVICES:
+        return True
+    return bool(getattr(ntpath, "isreserved", lambda name: False)(part))
+
+
+def resolve_note(env, relative, placing=False, kind=None):
     """A vault-relative note path, checked, as an absolute path.
 
     `placing` is for a path a run is about to write to. It must then sit where
-    SCHEMA.md puts a note: <project>/<kind>/<slug>.md. A note the author placed
-    by hand is only read, so it is held to the looser rule.
+    SCHEMA.md puts a note: <project>/<kind>/<slug>.md, and with `kind` given,
+    in that kind's folder. A note the author placed by hand is only read, so it
+    is held to the looser rule.
     """
     text = str(relative).replace("\\", "/").strip()
     if not text:
@@ -201,26 +266,39 @@ def resolve_note(env, relative, placing=False):
     for part in parts[:-1]:
         if part.startswith(("_", ".")):
             raise Usage(f"`{part}/` is not a folder for Content MDs")
+    reserved = reserved_names(env)
     for part in parts:
-        if not PATH_PART_RE.match(part):
+        if not PATH_PART_RE.fullmatch(part):
             raise Usage(f"`{part}` in `{relative}` is not a name a note path may use. "
                         "Letters, digits, spaces, dots, underscores and hyphens; "
                         "no dot or space at the end.")
-        if part.split(".")[0].casefold() in WINDOWS_DEVICES:
+        if len(part) > PATH_PART_MAX:
+            raise Usage(f"a part of `{relative}` is {len(part)} characters long. "
+                        f"Keep each under {PATH_PART_MAX + 1}.")
+        if windows_reserved(part):
             raise Usage(f"`{part}` is a device name on Windows")
+        if part.casefold() in reserved:
+            raise Usage(f"`{part}` is reserved. It is never a Content MD, nor a folder of them.")
     if not parts[-1].casefold().endswith(".md"):
         raise Usage(f"`{relative}` is not a .md file")
-    if parts[-1].casefold() in reserved_names(env):
-        raise Usage(f"`{parts[-1]}` is reserved. It is never a Content MD.")
     if placing:
         kinds = env.spec["content_md"]["kinds"]
         if len(parts) != 3 or parts[1] not in kinds:
             raise Usage(f"`{relative}` is not where a note goes. SCHEMA.md places it at "
                         "<project>/<kind>/<slug>.md, or one-offs/<kind>/<slug>.md, "
                         f"with <kind> one of: {', '.join(kinds)}")
+        if kind is not None and parts[1] != kind:
+            raise Usage(f"`{relative}` is in the `{parts[1]}` folder. This run makes `{kind}`, "
+                        f"so its note goes at <project>/{kind}/<slug>.md")
     path = (env.vault / Path(*parts)).resolve()
     if env.vault not in path.parents:
         raise Usage(f"`{relative}` leaves the vault")
+    folder = env.vault
+    for part in parts[:-1]:
+        folder = folder / part
+        if folder.exists() and not folder.is_dir():
+            raise Usage(f"`{folder.relative_to(env.vault).as_posix()}` is a file, "
+                        f"so `{relative}` cannot sit under it")
     if path.exists() and not path.is_file():
         raise Usage(f"`{relative}` is a folder")
     return path
@@ -230,7 +308,8 @@ def vault_notes(env):
     """Every file in the vault that may be a Content MD.
 
     The same rule the path check applies: nothing under a folder whose name
-    starts with `_` or `.`, and none of the reserved names in any case.
+    starts with `_` or `.`, none of the reserved names in any case, and files
+    only: a folder named `x.md` is not a note.
     """
     if not env.vault.is_dir():
         return []
@@ -240,7 +319,9 @@ def vault_notes(env):
         relative = path.relative_to(env.vault)
         if any(part.startswith(("_", ".")) for part in relative.parts[:-1]):
             continue
-        if relative.name.casefold() in reserved:
+        if any(part.casefold() in reserved for part in relative.parts):
+            continue
+        if not path.is_file():
             continue
         found.append(path)
     return found
@@ -271,27 +352,72 @@ def front_matter(text):
     return data if isinstance(data, dict) else {}
 
 
-def outside_fences(text):
-    """(line number, line) for each line that is not inside a code fence."""
-    fence = None
+# ── reading Markdown as a reader sees it ─────────────────────────────────────
+
+def scan(text):
+    """Each line as a reader sees it, and what is left open at the end.
+
+    Returns ([(line number, line, where)], fence left open, comment left open).
+    `where` is "fence" for a line inside a code fence, fence lines included,
+    and "text" otherwise. A "text" line has any HTML comment in it removed; a
+    line wholly inside a comment is blank. An unclosed comment hides the rest
+    of the file, as it does in a reader.
+
+    A backtick fence's info string cannot hold a backtick, so a line that
+    starts with inline code, such as ```x``` is the flag, opens no fence.
+    """
+    found, fence, comment = [], None, False
     for number, line in enumerate(text.split("\n"), 1):
-        stripped = line.lstrip()
-        opener = re.match(r"^(`{3,}|~{3,})", stripped)
         if fence:
-            if (opener and opener.group(1)[0] == fence[0] and len(opener.group(1)) >= len(fence)
-                    and not stripped[len(opener.group(1)):].strip()):
+            closer = FENCE_RE.match(line)
+            if (closer and closer.group(2)[0] == fence[0] and len(closer.group(2)) >= len(fence)
+                    and not closer.group(3).strip()):
                 fence = None
+            found.append((number, line, "fence"))
             continue
-        if opener:
-            fence = opener.group(1)
+        visible, rest = "", line
+        while rest:
+            if comment:
+                end = rest.find("-->")
+                if end == -1:
+                    rest = ""
+                    break
+                comment = False
+                rest = rest[end + 3:]
+            else:
+                start = rest.find("<!--")
+                if start == -1:
+                    visible += rest
+                    break
+                visible += rest[:start]
+                rest = rest[start + 4:]
+                comment = True
+        opener = FENCE_RE.match(visible)
+        if opener and not (opener.group(2)[0] == "`" and "`" in opener.group(3)):
+            fence = opener.group(2)
+            found.append((number, line, "fence"))
             continue
-        yield number, line
+        found.append((number, visible, "text"))
+    return found, fence is not None, comment
+
+
+def outside_fences(text):
+    """(line number, line) for each line a reader sees as text: not inside a
+    code fence, with HTML comments removed."""
+    for number, line, where in scan(text)[0]:
+        if where == "text":
+            yield number, line
+
+
+def heading_title(line):
+    """The title of a `## ` heading, without the closing hashes it may carry."""
+    return re.sub(r"(?:\s+#+)?\s*$", "", line[3:]).strip()
 
 
 def sections(body):
-    """[(title, text)] for each `## ` heading outside a code fence, in order."""
+    """[(title, text)] for each `## ` heading a reader sees, in order."""
     lines = body.split("\n")
-    starts = [(number, line[3:].strip()) for number, line in outside_fences(body)
+    starts = [(number, heading_title(line)) for number, line in outside_fences(body)
               if line.startswith("## ")]
     found = []
     for index, (number, title) in enumerate(starts):
@@ -300,29 +426,73 @@ def sections(body):
     return found
 
 
+def bullets(text):
+    """The list items of a section, each with its continuation lines joined.
+
+    Read as a reader sees them: nothing inside a code fence or a comment.
+    """
+    items = []
+    for _, line in outside_fences(text):
+        if BULLET_RE.match(line):
+            items.append(line.strip())
+        elif line.strip() and items and line.startswith((" ", "\t")):
+            items[-1] += " " + line.strip()
+        elif not line.strip():
+            continue
+        else:
+            items.append(line.strip())
+    return items
+
+
+def decisions(text):
+    """The bullets under Decisions in Force, struck-out text removed, or None
+    when the note has no such section."""
+    _, body = split_note(text)
+    found = dict(sections(body))
+    if "Decisions in Force" not in found:
+        return None
+    return [unstruck(item) for item in bullets(found["Decisions in Force"])]
+
+
+# ── notes and links ──────────────────────────────────────────────────────────
+
+def link_key(name):
+    """How a wikilink's target is looked up: case folded, without `.md`."""
+    key = name.strip().replace("\\", "/").strip("/").casefold()
+    return key[:-3] if key.endswith(".md") else key
+
+
 def note_index(env):
     """Every Content MD in the vault, and how a wikilink finds one.
 
-    Obsidian resolves [[name]] by file name, so that is the first key. A note's
-    id is the second, because the ladder cites a note by id.
+    Obsidian resolves [[name]] by file name, so that is the first key; the
+    path inside the vault is the second. A note's id is the third, because the
+    ladder cites a note by id. A file that is not UTF-8 is skipped, and said so.
     """
     notes, by_name = [], {}
     for path in vault_notes(env):
-        text = read_text(path)
+        try:
+            text = read_text(path)
+        except Usage as problem:
+            warn(f"skipped: {problem}")
+            continue
         front = front_matter(text)
         if front.get("type") != env.spec["content_md"]["type"]:
             continue
         brand = front.get("context_brand")
+        relative = path.relative_to(env.vault)
         entry = {
-            "path": path.relative_to(env.vault).as_posix(),
+            "path": relative.as_posix(),
             "file": path,
             "id": front.get("id"),
             "kind": front.get("kind"),
             "status": front.get("status"),
-            "context_brand": brand if isinstance(brand, list) else [],
+            "context_brand": [gate for gate in brand if isinstance(gate, str)]
+                             if isinstance(brand, list) else [],
         }
         notes.append(entry)
-        for key in {path.stem.casefold(), str(front.get("id") or "").casefold()} - {""}:
+        keys = {path.stem, str(front.get("id") or ""), relative.with_suffix("").as_posix()}
+        for key in {link_key(key) for key in keys} - {""}:
             by_name.setdefault(key, []).append(entry)
     return notes, by_name
 
@@ -331,11 +501,31 @@ def cited_notes(text):
     """The distinct note names a piece of text links to, in order."""
     seen, names = set(), []
     for name in WIKILINK_RE.findall(text):
-        key = name.strip().casefold()
+        key = link_key(name)
         if key and key not in seen:
             seen.add(key)
             names.append(name.strip())
     return names
+
+
+def find_note(by_name, name):
+    """The one note a wikilink names. Refused when there is none, or several."""
+    paths = {entry["path"]: entry for entry in by_name.get(link_key(name), [])}
+    if not paths:
+        raise Refused(f"[[{name}]] is not a note in the vault")
+    if len(paths) > 1:
+        raise Refused(f"[[{name}]] could be any of: {', '.join(sorted(paths))}. Cite it by id.")
+    return next(iter(paths.values()))
+
+
+def notes_cited(by_name, text):
+    """The paths of the notes a text links to, where a link names exactly one."""
+    found = set()
+    for name in cited_notes(text):
+        paths = {entry["path"] for entry in by_name.get(link_key(name), [])}
+        if len(paths) == 1:
+            found |= paths
+    return found
 
 
 # ── the attestation ──────────────────────────────────────────────────────────
@@ -353,41 +543,51 @@ def table_cells(line):
 def attestation_rows(text):
     """The rows of the context-resolution table, each a dict keyed by column.
 
-    The table is the first one, outside a code fence, whose header names
-    Constraint, Gate, Level, Source and State.
+    The table is the one a reader sees, outside a code fence and a comment,
+    whose header names Constraint, Gate, Level, Source and State. There must be
+    exactly one: rows in a second table would never be checked.
     """
     lines = [line for _, line in outside_fences(text.replace("\r\n", "\n"))]
     wanted = ", ".join(name.capitalize() for name in ATTESTATION_COLUMNS)
+    tables = []
     for index, line in enumerate(lines):
-        if not line.lstrip().startswith("|"):
+        if not TABLE_LINE_RE.match(line):
             continue
         header = [cell.casefold() for cell in table_cells(line)]
-        if sorted(header) != sorted(ATTESTATION_COLUMNS):
+        if sorted(header) == sorted(ATTESTATION_COLUMNS):
+            tables.append((index, header))
+    if not tables:
+        raise Refused("the attestation has no context-resolution table. "
+                      f"It needs one with the columns: {wanted}")
+    if len(tables) > 1:
+        raise Refused(f"the attestation has {len(tables)} context-resolution tables. Write one. "
+                      "Rows in a second table would not be read, so they would never be checked.")
+    index, header = tables[0]
+    rows = []
+    for number, row in enumerate(lines[index + 1:]):
+        if not TABLE_LINE_RE.match(row):
+            break
+        cells = table_cells(row)
+        if number == 0 and all(re.fullmatch(r":?-{1,}:?", cell) for cell in cells):
             continue
-        rows = []
-        for number, row in enumerate(lines[index + 1:]):
-            if not row.lstrip().startswith("|"):
-                break
-            cells = table_cells(row)
-            if number == 0 and all(re.fullmatch(r":?-{1,}:?", cell) for cell in cells):
-                continue
-            if len(cells) != len(header):
-                raise Refused(f"a row of the attestation has {len(cells)} cells and the table has "
-                              f"{len(header)} columns. Write a pipe inside a cell as `\\|`:\n"
-                              f"    {row.strip()}")
-            entry = dict(zip(header, cells))
-            entry["row"] = row.strip()
-            rows.append(entry)
-        if not rows:
-            raise Refused("the context-resolution table in the attestation has no rows")
-        return rows
-    raise Refused("the attestation has no context-resolution table. "
-                  f"It needs one with the columns: {wanted}")
+        if len(cells) != len(header):
+            raise Refused(f"a row of the attestation has {len(cells)} cells and the table has "
+                          f"{len(header)} columns. Write a pipe inside a cell as `\\|`:\n"
+                          f"    {row.strip()}")
+        entry = dict(zip(header, cells))
+        entry["row"] = row.strip()
+        rows.append(entry)
+    if not rows:
+        raise Refused("the context-resolution table in the attestation has no rows")
+    return rows
 
 
 def level_of(row):
-    """L0, L1, L2, L3 or STATED, from a cell such as `L0 AUTHORED`; else None."""
-    words = row["level"].casefold().replace("-", " ").split()
+    """L0, L1, L2, L3 or STATED, from a cell such as `L0 AUTHORED`; else None.
+
+    Emphasis and code marks around the level are not part of it.
+    """
+    words = re.sub(r"[*_`~]", " ", row["level"]).casefold().replace("-", " ").split()
     for word in words:
         if word in ("l0", "l1", "l2", "l3"):
             return word.upper()
@@ -411,7 +611,7 @@ def load_state(env, run_id):
         raise Usage(f"no run `{run_id}` under {env.runs}")
     try:
         state = json.loads(read_text(path))
-    except (json.JSONDecodeError, UnicodeDecodeError) as err:
+    except json.JSONDecodeError as err:
         raise Usage(f"{path} does not parse: {err}. It is written only by studio_run.py; "
                     "if it was edited by hand, start a new run.")
     missing = [key for key in STATE_KEYS if not isinstance(state, dict) or key not in state]
@@ -421,15 +621,17 @@ def load_state(env, run_id):
     return state
 
 
-def all_states(env):
-    """The state of every run that can be read. A broken one is skipped."""
+def all_states(env, broken=None):
+    """The state of every run that can be read. A broken one is left out, and
+    added to `broken` as (run id, what is wrong) when a list is given."""
     states = []
     if env.runs.is_dir():
         for path in sorted(env.runs.glob("*/state.json")):
             try:
                 states.append(load_state(env, path.parent.name))
-            except Usage:
-                continue
+            except Usage as problem:
+                if broken is not None:
+                    broken.append((path.parent.name, str(problem)))
     return states
 
 

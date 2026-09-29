@@ -5,9 +5,22 @@ correctness, consistency, dry run, tests. A second agent reproduced each
 finding. 59 findings, 1 judged not a problem. They collapse to the problems
 below.
 
-**Status: none of these is fixed yet.** The code is as it was when the review
-ran: 182 tests pass, and every hole below is open. The first `ui-direction` run
-waits on the four marked high.
+**Status: fixed on 2026-09-29**, in one change to `studio_common.py`,
+`studio_run.py`, `content_md.py`, the spec and the documents. Each problem is
+pinned by `studio/pipeline/tests/test_second_review.py`. Run against the code
+the review read, 68 of its 78 tests fail or crash. The other ten are the "tests
+to add" below that pin behaviour that already held, and guards that the new
+rules do not refuse what they should allow.
+
+Where the fix differs from what was decided:
+
+- 2. A table inside `<details>` is still read, because a reader can open it. A
+  second table anywhere is refused, so one cannot hide beside another.
+- 4. "Stays" means the decision's text is unchanged, compared word for word.
+- 15. `back` refuses a complete run (start a new run on the same note) and a
+  parked one (unpark it first).
+- 17. The credential list also gained Stripe, Hugging Face, GitLab, SendGrid and
+  fine-grained GitHub token shapes.
 
 The full reports were temp files. This is what they said, and the fix decided
 for each.

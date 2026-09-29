@@ -100,7 +100,7 @@ Needs Python 3 and `pyyaml` (`pip install -r studio/pipeline/requirements.txt`).
 
 | Where | When |
 |---|---|
-| `studio/pipeline/runs/<run-id>/` | freely. Bookkeeping; safe to delete once the note is written |
+| `studio/pipeline/runs/<run-id>/` | freely. Bookkeeping; safe to delete once the run is complete or abandoned |
 | `studio/vault/` | only through `content_md.py apply --confirm`, after a plan and a go-ahead recorded after that plan, and only at `<project>/<kind>/<slug>.md` |
 | anywhere else | only in `execute`, only what the recipe named, only after a go-ahead |
 

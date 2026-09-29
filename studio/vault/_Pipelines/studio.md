@@ -19,8 +19,8 @@ Every stage is a checkpoint: the skill stops, shows the stage's output, and
 waits. Two stages need more than a review. **Execute** and **record** each need
 an explicit go-ahead, which the skill records before it does the work.
 
-A failed stage leaves the run's state untouched, so advancing again re-checks
-only that stage.
+A failed stage leaves the run at the same stage, with the refusal logged, so
+advancing again re-checks only that stage.
 
 ## What it reads
 
@@ -39,7 +39,7 @@ session, Next Steps rewritten, the decisions now in force, and the method as it
 was run.
 
 Everything else a run produces sits in `studio/pipeline/runs/<run-id>/`, which is
-bookkeeping and can be deleted once the note is written.
+bookkeeping and can be deleted once the run is complete or abandoned.
 
 ## What it will not do
 
