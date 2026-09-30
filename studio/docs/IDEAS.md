@@ -132,7 +132,7 @@ implemented. The rest say what they need and what they carry, and do not start.
 | `higgsfield_api` | `video-shot` | continuity is carried in the note; a drift check after a run of shots | the API payloads | planned |
 | `suno_audio` | `music-cue` | tempo and key are decisions in force | the endpoints, which were never called | planned |
 | `adobe_suite_uxp` | `edit-2d` | never change a file that was not read in this task; work on a copy | the COM bridge and the ExtendScript wrappers | planned |
-| `blender_python` | `scene-3d` | fixed templates with a parameter file; a render needs a compute token | the headless templates; the installed Blender skills and connector replace them | planned |
+| `blender_python` | `scene-3d` | fixed templates with a parameter file: the scene spec is the parameter file, the Writing Museum builder and viewer (`writing-museum/`) the template; one go-ahead, one build, one walk test | the headless Blender templates; the compute token, until the compute gate exists (the execute go-ahead stands in) | rebuilt |
 | `local_rag_orchestration` | an index of the vault | answer only from what was retrieved, and cite it; evict a model after use | local generation as the executor. Claude is the executor here | planned |
 | `hardware_compute` | a compute gate | one token authorizes one job; an unreadable reading closes the gate; one heavy job at a time; AC power and thermal headroom | thresholds embedded in markdown and extracted by a regular expression | planned |
 

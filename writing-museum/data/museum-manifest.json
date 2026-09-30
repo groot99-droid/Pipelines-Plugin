@@ -1,0 +1,44 @@
+{
+ "built": "2026-09-30T19:01:19Z",
+ "source": "creative-writing/vault",
+ "rooms": [
+  {
+   "id": "hub",
+   "name": "The Hall",
+   "kind": "hub",
+   "wing": null,
+   "scene": "hub",
+   "connects_to": [],
+   "position": [
+    20.0,
+    0.0,
+    0.05
+   ],
+   "spawn": [
+    -6.0,
+    0.0,
+    0.05
+   ],
+   "doors": {},
+   "intro": {
+    "title": "The Hall",
+    "years": "",
+    "summary": "A door to every work, south side and north side, in the order the scenes were made."
+   }
+  }
+ ],
+ "artists": [],
+ "wings": [
+  {
+   "id": "writing",
+   "name": "Creative Writing",
+   "image_base": "",
+   "nouns": [
+    "works",
+    "passages"
+   ],
+   "years": "",
+   "rooms": []
+  }
+ ]
+}

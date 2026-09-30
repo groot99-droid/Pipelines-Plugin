@@ -599,22 +599,124 @@ pipelines:
       - "color_science section 5 is a declared gap."
 
   scene-3d:
-    status: not_yet_implemented
-    from: "skills/blender_python.skill.md"
+    status: implemented
+    from: "skills/blender_python.skill.md; the Chronicle Museum viewer and layout builder (Earth_Worldbuild/_Museum), carried into writing-museum/"
     kind: 3d
-    makes: "A scene, a camera path, or a render."
+    makes: "One walkable scene of the Writing Museum: a room for one named work of the creative-writing vault, its passages hung as verbatim text panels, built into the museum's data files and walked in a headless browser."
+    intent:
+      - 3d scene
+      - walkable room
+      - museum room for a work
+      - writing museum
+      - hang a work
     requires_context:
       - gate: render_philosophy
         needs: ["quality bar", "when to re-render"]
       - gate: motion_language
         needs: ["camera grammar"]
     executes_through:
-      capability: "3D scene control"
+      # repo-root paths. The scene spec is the parameter file; the builder and
+      # the viewer are the fixed template. Nothing about a scene is in code.
+      builder: "writing-museum/build/build_museum.py"
+      adapter: "writing-museum/build/works.py"
+      mapping: "writing-museum/build/mapping.json"
+      walk_test: "writing-museum/tools/walk_test.mjs"
+      guide: "writing-museum/README.md"
+    connector:
+      tools: []
     class: local-compute
+    leaves_machine: "Nothing. The build is stdlib Python over local files; the walk test drives a local headless Chromium against a loopback server."
     carries:
-      - "A render needs a compute token: one token, one job."
+      - "Fixed templates with a parameter file: the scene spec is the parameter file, the builder and the viewer are the template."
+      - "A work is read only after the author names it at intake, and then only that work, its _ChunkTags sidecar and its chunks through the vault's own reader. Its text is copied verbatim and cited by path and lines; nothing under creative-writing/vault/ is written."
+      - "One go-ahead, one build, one walk test. A failed lint or walk test is a finding for review, never a silent retry."
     open:
-      - "The compute gate has never run on this machine."
+      - >
+        render_philosophy and motion_language are not authored. A run states
+        its three constraints or recalls them from a 3d note; once three 3d
+        notes exist a run may derive at L2. When the same wording keeps being
+        stated, author the gates.
+      - >
+        The compute gate has never run on this machine. Until it exists, the
+        execute go-ahead is the one token for the one build and walk test.
+      - >
+        Every build composes every scene spec on disk, so a run's build carries
+        the scenes made before it; the museum grows a door per run. The note
+        records its own scene; the data files are shared exports.
+    stage_notes:
+      intake: |
+        Name the work: its vault-relative path under creative-writing/vault/,
+        as the author gives it. Nothing under that vault is read before the
+        author has named it here, and then only that work, its _ChunkTags
+        sidecar and its chunks; never _Craft/ or _Annotations/.
+        Record, in the author's words: which passages hang (all chunks, or a
+        list of chunk numbers) and the scene's number in the hall (its door's
+        order). The scene id is the note's slug.
+        The first line of brief.md is `work: <vault-relative path>`, the
+        second `scene: <id>`, the third `order: <n>`.
+      recipe: |
+        Read {pipeline.executes_through.guide} first: what the builder reads,
+        what it writes, and the scene spec's fields.
+        Run
+          python {pipeline.executes_through.builder} propose <vault-relative path> --id <scene id> --order <n>
+        and paste what it printed. It tallies the work's own tags and reads
+        {pipeline.executes_through.mapping}, a reference table that is never
+        binding: say so beside every value taken from it, with the row it
+        came from. A value the author changes is the author's, and the recipe
+        names them as its source.
+        List the scene spec that execute will write, every field with its
+        source: the brief for work, panels and order; the mapping rows, or
+        the author, for the style; the builder's own panel sizing for the
+        passages. Then the commands, in order:
+          python {pipeline.executes_through.builder} check writing-museum/data/scenes/<id>.json
+          python {pipeline.executes_through.builder} build --lint
+          python {pipeline.executes_through.builder} build
+          node {pipeline.executes_through.walk_test} --grep <id>,lint,load,no_console --out <run folder>/walk
+        What is written outside the run folder: writing-museum/data/scenes/<id>.json,
+        writing-museum/data/museum-manifest.json and museum-layout.json. Nothing
+        else, and nothing leaves the machine.
+      execute: |
+        After the go-ahead, in this order: write the scene spec exactly as the
+        recipe lists it; run check, then build --lint, then build, then the
+        walk test with --out inside the run folder, logging each command, its
+        exit code and what it printed (the lint report, the counts, the
+        per-test lines). The screenshots and report.json land in the run
+        folder. Add no command the recipe does not list. Do not edit the spec
+        and run again: a retry is a new execute,
+          python studio/pipeline/studio_run.py back <run-id> --why "<what failed>"
+        Never edit the work, its sidecar, or anything under creative-writing/vault/.
+        Without node, Playwright or Chromium, log that the walk test could not
+        run; the review then says which quality-bar checks are unverified.
+      review: |
+        One line per attestation row:
+          quality bar: the lint report and the walk test's lines for this scene
+            (door_<id>, room_budget, no_console_errors, the panel checks), against
+            the bar as stated.
+          when to re-render: what changed since this scene was last built, and
+            whether the rule as stated called for this build.
+          camera grammar: the door, corner and west views of the scene exist in
+            the run folder, and the walk and tour lines passed at the stated
+            speeds and heights.
+        Then the vault's rules, each as a line: two panels read against the work
+        are verbatim; the title card holds frontmatter fields only; nothing on a
+        panel, placard or title card says more than the work's own words (for a
+        psychedelic work: no substance, dose or method beyond them); nothing
+        from _Craft/ appears anywhere.
+        The author marks the scene keep or discard.
+      record: |
+        kind: 3d. context_brand lists render_philosophy and motion_language.
+        context_domain lists {pipeline.executes_through.mapping}.
+        artifacts: the scene spec (role final); the two built data files
+        (role export); the contact sheet in the run folder (role reference).
+        Method: the scene spec as a fenced json block, exactly as written,
+        then the commands as run. A later run must be able to rebuild the
+        scene from the note alone.
+        Decisions in Force: each STATED constraint on its own bullet naming
+        the constraint; the passages hung and the scene's order in the hall,
+        as decided here. A value taken from the mapping is not a decision: it
+        is in Method with its source.
+        Timeline: the lint report, the build counts, the walk test result and
+        the author's keep or discard, from execute_log.md and review.md only.
 
 # --------------------------------------------------------------------
 # Stages. The same six for every pipeline.

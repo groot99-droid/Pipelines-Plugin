@@ -13,6 +13,7 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | `docs/` | Browsable HTML pages describing each tool, and a local helper for setting API keys. | - |
 | `plugins/` | Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, with a design-system generator. | [plugins/ui-design/INDEX.md](plugins/ui-design/INDEX.md) |
 | `studio/` | Checkpointed production pipelines and the notes they leave behind. | - |
+| `writing-museum/` | A walkable 3D museum of the creative-writing vault, one room per work, built through the studio's scene-3d pipeline. | - |
 
 ## Skills (6)
 

@@ -1,0 +1,779 @@
+{
+"units": "blender",
+"version": 2,
+"wall_t": 0.4,
+"door": {
+"w": 3.2,
+"h": 4.0
+},
+"order": [],
+"scenes": {
+"hub": {
+"kind": "hub",
+"id": "hub",
+"name": "The Hall",
+"wing": null,
+"intro": {
+"title": "The Hall",
+"years": "",
+"summary": "A door to every work, south side and north side, in the order the scenes were made."
+},
+"style": {
+"theme": "hall",
+"wall": "#d9cbb2",
+"trim": "painted_trim"
+},
+"floor": {
+"x": [
+-14.0,
+44.0
+],
+"y": [
+-7.0,
+7.0
+]
+},
+"size": [
+40.0,
+8.0
+],
+"height": 9.0,
+"rotunda": {
+"center": [
+-7.0,
+0.0
+],
+"r": 7.0
+},
+"apse": {
+"center": [
+40.0,
+0.0
+],
+"r": 4.0
+},
+"spawn": [
+-6.0,
+0.0,
+0.0,
+0.0
+],
+"boxes": [
+{
+"name": "GEO-hub_floor",
+"x": [
+-1.755,
+40.0
+],
+"y": [
+-4.2,
+4.2
+],
+"z": [
+-0.2,
+0.0
+],
+"material": "marble_white"
+},
+{
+"name": "GEO-hub_ceiling",
+"x": [
+-1.755,
+40.0
+],
+"y": [
+-4.2,
+4.2
+],
+"z": [
+9.0,
+9.2
+],
+"material": "plaster_ceiling"
+},
+{
+"name": "GEO-hub_wallS_0",
+"x": [
+-1.555,
+40.0
+],
+"y": [
+-4.2,
+-3.8
+],
+"z": [
+0.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_wallN_0",
+"x": [
+-1.555,
+40.0
+],
+"y": [
+3.8,
+4.2
+],
+"z": [
+0.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_wallW_0",
+"x": [
+-1.855,
+-1.355
+],
+"y": [
+3.8,
+4.2
+],
+"z": [
+0.0,
+10.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_wallW_1",
+"x": [
+-1.855,
+-1.355
+],
+"y": [
+-4.2,
+-3.8
+],
+"z": [
+0.0,
+10.0
+],
+"material": "plaster_wall"
+}
+],
+"shapes": [
+{
+"name": "GEO-hub_wall_drum",
+"kind": "lathe",
+"center": [
+-7.0,
+0.0,
+0.0
+],
+"segments": 48,
+"phi": [
+34.84990457904648,
+325.1500954209535
+],
+"profile_rz": [
+[
+7.2,
+0.0
+],
+[
+7.2,
+10.0
+],
+[
+6.8,
+10.0
+],
+[
+6.8,
+0.0
+]
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_dome",
+"kind": "lathe",
+"center": [
+-7.0,
+0.0,
+10.0
+],
+"segments": 48,
+"phi": [
+0.0,
+360.0
+],
+"profile_rz": [
+[
+6.8,
+0.0
+],
+[
+6.696692720483014,
+1.0036864669148573
+],
+[
+6.389909821344177,
+1.976876428422365
+],
+[
+5.888972745734183,
+2.8899999999999992
+],
+[
+5.20910221320905,
+3.7153123839881963
+],
+[
+4.370955745868468,
+4.427736881227692
+],
+[
+3.400000000000001,
+5.005626833874055
+],
+[
+2.3257369746145478,
+5.431423348142549
+],
+[
+1.1808076081351269,
+5.692188812410562
+],
+[
+1.2,
+5.692188812410562
+],
+[
+1.2,
+6.092188812410562
+]
+],
+"material": "plaster_ceiling"
+},
+{
+"name": "GEO-hub_floor_rotunda",
+"kind": "disc",
+"center": [
+-7.0,
+0.0,
+0.0
+],
+"radius": 7.2,
+"segments": 48,
+"phi": [
+0.0,
+360.0
+],
+"z": [
+-0.2,
+0.0
+],
+"material": "marble_white"
+},
+{
+"name": "GEO-hub_wall_apse",
+"kind": "lathe",
+"center": [
+40.0,
+0.0,
+0.0
+],
+"segments": 32,
+"phi": [
+-90.0,
+90.0
+],
+"profile_rz": [
+[
+4.2,
+0.0
+],
+[
+4.2,
+9.0
+],
+[
+3.8,
+9.0
+],
+[
+3.8,
+0.0
+]
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_apse_dome",
+"kind": "lathe",
+"center": [
+40.0,
+0.0,
+8.99
+],
+"segments": 32,
+"phi": [
+-90.0,
+90.0
+],
+"profile_rz": [
+[
+3.8,
+0.0
+],
+[
+3.6705181398984594,
+0.9835123713895788
+],
+[
+3.290896534380867,
+1.8999999999999997
+],
+[
+2.6870057685088806,
+2.68700576850888
+],
+[
+1.9000000000000004,
+3.2908965343808667
+],
+[
+0.9835123713895788,
+3.6705181398984594
+],
+[
+2.326828918379971e-16,
+3.8
+]
+],
+"material": "plaster_ceiling"
+},
+{
+"name": "GEO-hub_floor_apse",
+"kind": "disc",
+"center": [
+40.0,
+0.0,
+0.0
+],
+"radius": 4.2,
+"segments": 32,
+"phi": [
+-90.0,
+90.0
+],
+"z": [
+-0.2,
+0.0
+],
+"material": "marble_white"
+}
+],
+"mouldings": [
+{
+"name": "GEO-hub_skirting",
+"profile": "skirting",
+"material": "marble_dark",
+"runs": [
+[
+[
+-1.355,
+-4.0,
+0.0
+],
+[
+40.0,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+-1.355,
+4.0,
+0.0
+],
+[
+40.0,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+]
+]
+},
+{
+"name": "GEO-hub_dado",
+"profile": "dado",
+"material": "painted_trim",
+"runs": [
+[
+[
+-1.355,
+-4.0,
+0.0
+],
+[
+40.0,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+-1.355,
+4.0,
+0.0
+],
+[
+40.0,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+]
+]
+},
+{
+"name": "GEO-hub_cornice_hub",
+"profile": "cornice_hub",
+"material": "painted_trim",
+"runs": [
+[
+[
+-1.355,
+-4.0,
+0.0
+],
+[
+40.0,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+-1.355,
+4.0,
+0.0
+],
+[
+40.0,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+]
+]
+}
+],
+"pilasters": [
+[
+20.0,
+-4.0,
+0.0
+],
+[
+20.0,
+4.0,
+0.0
+]
+],
+"doors": [],
+"hangs": {},
+"fx": [
+{
+"name": "FX-hub_chandelier_0",
+"type": "chandelier",
+"pos": [
+8.0,
+0.0,
+6.6
+],
+"color": "#ffd9a8",
+"intensity": 200,
+"distance": 22,
+"shadow": 0
+},
+{
+"name": "FX-hub_laylight_0",
+"type": "laylight",
+"pos": [
+8.0,
+0.0,
+8.8
+],
+"color": "#fff3e0",
+"intensity": 0.6,
+"distance": 0,
+"shadow": 1,
+"size": [
+6.0,
+5.0
+]
+},
+{
+"name": "FX-hub_chandelier_1",
+"type": "chandelier",
+"pos": [
+16.0,
+0.0,
+6.6
+],
+"color": "#ffd9a8",
+"intensity": 200,
+"distance": 22,
+"shadow": 1
+},
+{
+"name": "FX-hub_laylight_1",
+"type": "laylight",
+"pos": [
+16.0,
+0.0,
+8.8
+],
+"color": "#fff3e0",
+"intensity": 0.6,
+"distance": 0,
+"shadow": 1,
+"size": [
+6.0,
+5.0
+]
+},
+{
+"name": "FX-hub_chandelier_2",
+"type": "chandelier",
+"pos": [
+24.0,
+0.0,
+6.6
+],
+"color": "#ffd9a8",
+"intensity": 200,
+"distance": 22,
+"shadow": 0
+},
+{
+"name": "FX-hub_laylight_2",
+"type": "laylight",
+"pos": [
+24.0,
+0.0,
+8.8
+],
+"color": "#fff3e0",
+"intensity": 0.6,
+"distance": 0,
+"shadow": 1,
+"size": [
+6.0,
+5.0
+]
+},
+{
+"name": "FX-hub_chandelier_3",
+"type": "chandelier",
+"pos": [
+32.0,
+0.0,
+6.6
+],
+"color": "#ffd9a8",
+"intensity": 200,
+"distance": 22,
+"shadow": 0
+},
+{
+"name": "FX-hub_laylight_3",
+"type": "laylight",
+"pos": [
+32.0,
+0.0,
+8.8
+],
+"color": "#fff3e0",
+"intensity": 0.6,
+"distance": 0,
+"shadow": 1,
+"size": [
+6.0,
+5.0
+]
+},
+{
+"name": "FX-hub_chandelier_4",
+"type": "chandelier",
+"pos": [
+40.0,
+0.0,
+6.6
+],
+"color": "#ffd9a8",
+"intensity": 200,
+"distance": 22,
+"shadow": 1
+},
+{
+"name": "FX-hub_laylight_4",
+"type": "laylight",
+"pos": [
+40.0,
+0.0,
+8.8
+],
+"color": "#fff3e0",
+"intensity": 0.6,
+"distance": 0,
+"shadow": 1,
+"size": [
+6.0,
+5.0
+]
+},
+{
+"name": "FX-hub_oculus_0",
+"type": "oculus",
+"pos": [
+-7.0,
+0.0,
+15.0
+],
+"color": "#fff1dc",
+"intensity": 1.2,
+"distance": 0,
+"shadow": 1,
+"dir": [
+0.15,
+0.05,
+-1.0
+]
+},
+{
+"name": "FX-hub_chandelier_rotunda",
+"type": "chandelier",
+"pos": [
+-7.0,
+0.0,
+7.5
+],
+"color": "#ffd9a8",
+"intensity": 240,
+"distance": 24,
+"shadow": 1
+},
+{
+"name": "FX-hub_chandelier_apse",
+"type": "chandelier",
+"pos": [
+41.5,
+0.0,
+6.6
+],
+"color": "#ffd9a8",
+"intensity": 160,
+"distance": 18,
+"shadow": 0
+}
+],
+"props": [],
+"views": {
+"hub_west": {
+"pos": [
+-4.0,
+-1.5,
+1.7
+],
+"target": [
+24.0,
+0.0,
+3.0
+],
+"fov_deg": 70
+},
+"hub_rotunda": {
+"pos": [
+1.0,
+2.0,
+1.7
+],
+"target": [
+-7.0,
+0.0,
+6.0
+],
+"fov_deg": 70
+},
+"hub_east": {
+"pos": [
+18.0,
+1.5,
+1.7
+],
+"target": [
+41.4,
+0.0,
+2.6
+],
+"fov_deg": 70
+},
+"hub_bays": {
+"pos": [
+16.0,
+-2.5,
+1.7
+],
+"target": [
+28.0,
+4.0,
+2.4
+],
+"fov_deg": 70
+}
+},
+"bays": {
+"N": [
+[
+20.0,
+3.1
+]
+],
+"S": [
+[
+20.0,
+-3.1
+]
+]
+}
+}
+}
+}

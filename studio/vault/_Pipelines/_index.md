@@ -42,7 +42,7 @@ same six stages: **intake → context → recipe → execute → review → reco
 | video-shot | [[_Pipelines/studio\|studio]] | a shot, or a chain that holds continuity | not yet implemented |
 | music-cue | [[_Pipelines/studio\|studio]] | one cue | not yet implemented |
 | edit-2d | [[_Pipelines/studio\|studio]] | a batch edit or a composite | not yet implemented |
-| scene-3d | [[_Pipelines/studio\|studio]] | a scene, a camera path or a render | not yet implemented |
+| scene-3d | [[_Pipelines/studio\|studio]] | one walkable room of the Writing Museum for a named work | in use |
 
 ## Adding a pipeline
 

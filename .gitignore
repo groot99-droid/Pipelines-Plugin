@@ -96,6 +96,11 @@ embeddings/
 # studio/pipeline/runs/ is already covered by `runs/` above.
 studio/assets/
 
+# ── Writing Museum test output ───────────────────────────────────────────────
+# Screenshots, the contact sheet and report.json of the browser walk-through
+# (node writing-museum/tools/walk_test.mjs). Regenerated on every run.
+writing-museum/tools/out/
+
 # ── Obsidian machine-local state ─────────────────────────────────────────────
 # The first block covers a vault opened at the repo root. The second covers
 # every vault below it: a pattern with a slash in it is anchored to this file's
