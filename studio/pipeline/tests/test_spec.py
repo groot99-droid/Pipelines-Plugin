@@ -1,10 +1,10 @@
 """The contract is stated in several places. They must agree.
 
-These tests read the real spec, the real gate folder and the real documents.
-They write nothing.
+These tests read the real spec and the real documents, for the machinery:
+stages, checks, refusals, the ladder, the note rules and the commands. The
+brand context itself is checked in test_context.py. They write nothing.
 """
 
-import json
 import re
 import unittest
 
@@ -156,7 +156,6 @@ class Spec(unittest.TestCase):
             with self.subTest(level=level):
                 self.assertEqual(studio_common.squeeze(row["state"]),
                                  self.spec["ladder"]["levels"][level]["state"].casefold())
-                self.assertIn(row["gate"], self.spec["gates"])
 
     def test_the_stage_instructions_show_the_same_columns(self):
         context = next(s for s in self.spec["stages"] if "no_unresolved" in s["checks"])
@@ -164,71 +163,7 @@ class Spec(unittest.TestCase):
         cells = [cell.casefold() for cell in studio_common.table_cells(header)]
         self.assertEqual(cells, list(studio_common.ATTESTATION_COLUMNS))
 
-    # ── gates ─────────────────────────────────────────────────────────────
 
-    def test_authored_means_the_file_is_there(self):
-        for name, gate in self.spec["gates"].items():
-            with self.subTest(gate=name):
-                self.assertEqual(bool(gate["authored"]), (GATES / gate["file"]).is_file())
-                self.assertEqual(gate["file"], f"{name}.context.md")
-                self.assertTrue(gate["must_answer"])
-
-    def test_no_gate_file_is_undeclared(self):
-        on_disk = {path.name for path in GATES.glob("*.context.md")}
-        declared = {gate["file"] for gate in self.spec["gates"].values()}
-        self.assertLessEqual(on_disk, declared)
-
-    def test_every_section_the_spec_cites_is_in_the_gate(self):
-        for name, gate in self.spec["gates"].items():
-            if not gate["authored"]:
-                continue
-            headings = re.findall(r"^## (\d+)\. (.+)$", read(GATES / gate["file"]), re.M)
-            numbers = {number for number, _ in headings}
-            for item in gate["answers"] + gate["unresolved"]:
-                with self.subTest(gate=name, section=item["section"]):
-                    self.assertIn(item["section"], numbers)
-            unresolved = {number for number, title in headings if title.strip() == "Unresolved"}
-            self.assertEqual(unresolved, {item["section"] for item in gate["unresolved"]},
-                             "a gate's own Unresolved section and the spec's list must match")
-
-    def test_the_gate_readme_agrees_with_the_spec(self):
-        rows = re.findall(r"^\| `(\w+)` \| (.+?) \| .+? \| (.+?) \|$", read(GATES / "README.md"), re.M)
-        listed = {name: (state, needed) for name, state, needed in rows}
-        self.assertEqual(set(listed), set(self.spec["gates"]))
-        for name, (state, needed) in listed.items():
-            with self.subTest(gate=name):
-                gate = self.spec["gates"][name]
-                self.assertEqual(state.startswith("**authored**"), bool(gate["authored"]))
-                self.assertEqual("declared gap" in state, bool(gate.get("unresolved")))
-                users = {p for p, cfg in self.spec["pipelines"].items()
-                         if any(need["gate"] == name for need in cfg.get("requires_context", []))}
-                stated = set() if needed.strip() == "none yet" else {
-                    item.strip() for item in needed.split(",")}
-                self.assertEqual(stated, users)
-
-    # ── tokens ────────────────────────────────────────────────────────────
-
-    def test_the_tokens_and_the_colour_gate_state_the_same_palette(self):
-        tokens = json.loads(read(GATES / self.spec["tokens"]["file"]))
-        flat = {}
-        for group, values in tokens["color"].items():
-            for name, value in values.items():
-                flat[f"{group}.{name}"] = value.upper()
-        stated = {name: value.upper() for name, value in re.findall(
-            r"^\| `([a-z-]+)` \| `(#[0-9A-Fa-f]{6})` \|", read(GATES / "color_science.context.md"), re.M)}
-        names = {"bg.base": "bg", "bg.raise": "bg-raise", "bg.panel": "bg-panel",
-                 "line.base": "line", "ink.base": "ink", "ink.dim": "ink-dim",
-                 "accent.cyan": "cyan", "accent.amber": "amber", "accent.alert": "alert",
-                 "accent.queued": "queued"}
-        self.assertEqual(set(flat), set(names))
-        self.assertEqual(len(stated), 10)
-        for token, gate_name in names.items():
-            with self.subTest(token=token):
-                self.assertEqual(flat[token], stated[gate_name])
-
-    def test_the_tokens_say_who_may_change_them(self):
-        tokens = json.loads(read(GATES / self.spec["tokens"]["file"]))
-        self.assertIn("agent proposes", tokens["mutation_policy"])
 
     # ── documents ─────────────────────────────────────────────────────────
 
@@ -329,14 +264,6 @@ class Spec(unittest.TestCase):
                     else:
                         self.assertEqual(cells[-1], "planned")
 
-    # ── the vault as it stands ────────────────────────────────────────────
-
-    def test_every_note_in_the_vault_passes_the_lint(self):
-        for path in studio_common.vault_notes(self.env):
-            relative = path.relative_to(self.env.vault).as_posix()
-            with self.subTest(note=relative):
-                errors, _ = content_md.lint(read(path), self.env, relative)
-                self.assertEqual(errors, [])
 
     def test_the_scripts_say_how_they_read_a_file(self):
         """This machine's default encoding is cp1252. A read that does not

@@ -11,9 +11,11 @@ from helpers import GOOD_NOTE, HEADER, NOTE, StudioCase, precedent, studio_run
 
 class Starting(StudioCase):
     def test_a_stub_pipeline_does_not_start(self):
-        code, _, err = self.run_cmd("new", "--pipeline", "video-shot", "--title", "Shot 7")
+        stub = next(name for name, cfg in self.env.spec["pipelines"].items()
+                    if cfg["status"] != "implemented")
+        code, _, err = self.run_cmd("new", "--pipeline", stub, "--title", "Shot 7")
         self.assertEqual(code, 1)
-        self.assertIn("not_yet_implemented", err)
+        self.assertIn(self.env.pipeline(stub)["status"], err)
         self.assertEqual(list(self.runs.iterdir()), [])
 
     def test_every_stub_is_refused(self):
@@ -68,7 +70,7 @@ class Starting(StudioCase):
 class NotePaths(StudioCase):
     def test_paths_that_are_not_a_note(self):
         run_id = self.new_run()
-        for path in ("_Context/brand/visual_identity.context.md", "../outside.md",
+        for path in ("_Context/brand/fixture_look.context.md", "../outside.md",
                      "C:/somewhere/note.md", "/etc/note.md", "aurora/ui/README.md",
                      "aurora/ui/SCHEMA.md", "aurora/ui/note.txt", ".obsidian/x.md",
                      "aurora//x.md", "_Pipelines/studio.md",
@@ -194,33 +196,33 @@ class Context(StudioCase):
         self.refused("```\n" + self.attestation() + "\n```\n", "no context-resolution table")
 
     def test_a_table_with_other_columns(self):
-        self.refused("| Gate | Note |\n|---|---|\n| visual_identity color_science "
-                     "typography_system | fine |\n", "no context-resolution table")
+        self.refused("| Gate | Note |\n|---|---|\n| fixture_look fixture_colour "
+                     "fixture_type | fine |\n", "no context-resolution table")
 
     def test_an_empty_table(self):
         self.refused("## Context resolution\n\n" + HEADER + "\nNothing to resolve.\n", "has no rows")
 
     def test_a_pipe_inside_a_cell(self):
-        row = "| key light | visual_identity | L1 RECALLED | [[aurora-lead|Aurora]] \"x\" | resolved |"
+        row = "| key light | fixture_look | L1 RECALLED | [[aurora-lead|Aurora]] \"x\" | resolved |"
         self.refused(self.attestation([row]), "Write a pipe inside a cell")
 
     # ── every needed constraint has a row ─────────────────────────────────
 
     def test_a_required_gate_with_no_row(self):
-        self.refused(self.attestation(without=["color_science"]), "no row for `color_science`")
+        self.refused(self.attestation(without=["fixture_colour"]), "no row for `fixture_colour`")
 
     def test_a_needed_constraint_with_no_row(self):
         need = self.env.pipeline("ui-direction")["requires_context"][0]["needs"][1]
         self.refused(self.attestation(without=[need]), f"no row for `{need}`")
 
     def test_gates_crammed_into_one_row(self):
-        row = "| everything | visual_identity typography_system color_science | L0 | section 2 | resolved |"
+        row = "| everything | fixture_look fixture_type fixture_colour | L0 | section 2 | resolved |"
         self.refused("## Context resolution\n\n" + HEADER + row + "\n", "is not a gate in the spec")
 
     def test_a_gate_named_only_in_prose(self):
-        self.refused(self.attestation(without=["color_science"],
-                                      prose="\ncolor_science was considered.\n"),
-                     "no row for `color_science`")
+        self.refused(self.attestation(without=["fixture_colour"],
+                                      prose="\nfixture_colour was considered.\n"),
+                     "no row for `fixture_colour`")
 
     def test_a_gate_the_spec_does_not_have(self):
         row = "| tone | house_style | L0 AUTHORED | house_style.context.md section 1 | resolved |"
@@ -241,7 +243,7 @@ class Context(StudioCase):
                                   ("probably fine", "resolved", "is not a level"),
                                   ("", "resolved", "is not a level")):
             with self.subTest(level=level, state=state):
-                row = f"| imagery motifs | visual_identity | {level} | section 2 | {state} |"
+                row = f"| imagery motifs | fixture_look | {level} | section 2 | {state} |"
                 self.refused(self.attestation([row]), why)
 
     def test_the_word_in_prose_does_not_block(self):
@@ -250,7 +252,7 @@ class Context(StudioCase):
     # ── L0 ────────────────────────────────────────────────────────────────
 
     def test_a_declared_gap_cited_as_authored(self):
-        for gate in ("visual_identity", "color_science"):
+        for gate in ("fixture_look", "fixture_colour"):
             gap = self.env.spec["gates"][gate]["unresolved"][0]
             for written in (f"section {gap['section']}", f"§{gap['section']}",
                             f"Section  {gap['section']}"):
@@ -261,20 +263,20 @@ class Context(StudioCase):
     def test_a_gap_cited_beside_a_real_section(self):
         for cited in ("section 2 and section 7", "sections 2 and 7", "§2, §7", "sections 5-7"):
             with self.subTest(cited=cited):
-                row = f"| imagery | visual_identity | L0 | visual_identity.context.md {cited} | resolved |"
+                row = f"| imagery | fixture_look | L0 | fixture_look.context.md {cited} | resolved |"
                 self.refused(self.attestation([row]), "does NOT answer")
 
     def test_l0_with_no_section(self):
-        row = "| grounds | visual_identity | L0 AUTHORED | visual_identity.context.md | resolved |"
+        row = "| grounds | fixture_look | L0 AUTHORED | fixture_look.context.md | resolved |"
         self.refused(self.attestation([row]), "as `section N`")
 
     def test_l0_citing_a_section_the_gate_does_not_have(self):
-        row = "| grounds | visual_identity | L0 AUTHORED | visual_identity.context.md section 12 | resolved |"
+        row = "| grounds | fixture_look | L0 AUTHORED | fixture_look.context.md section 12 | resolved |"
         self.refused(self.attestation([row]), "no section 12")
 
     def test_l0_for_a_gate_nobody_has_written(self):
-        row = "| wording | brand_voice | L0 AUTHORED | brand_voice.context.md section 2 | resolved |"
-        self.refused(self.attestation([row]), "`brand_voice` is not authored")
+        row = "| wording | fixture_voice | L0 AUTHORED | fixture_voice.context.md section 2 | resolved |"
+        self.refused(self.attestation([row]), "`fixture_voice` is not authored")
 
     # ── L1 ────────────────────────────────────────────────────────────────
 
@@ -283,47 +285,47 @@ class Context(StudioCase):
         for cited in ("[[aurora-lead]]", "[[cmd_20260901_aurora-lead]]",
                       "[[aurora-lead\\|Aurora]]", "[[Aurora-Lead]]"):
             with self.subTest(cited=cited):
-                row = (f"| key light | visual_identity | L1 RECALLED | {cited} "
+                row = (f"| key light | fixture_look | L1 RECALLED | {cited} "
                        '"Key light sits  camera left." | resolved |')
                 self.passes(self.attestation([row]))
 
     def test_recalling_from_a_note_that_does_not_exist(self):
-        row = '| key light | visual_identity | L1 RECALLED | [[no-such-note]] "invented" | resolved |'
+        row = '| key light | fixture_look | L1 RECALLED | [[no-such-note]] "invented" | resolved |'
         self.refused(self.attestation([row]), "[[no-such-note]] is not a note in the vault")
 
     def test_recalling_a_line_the_note_does_not_have(self):
         self.place("aurora/ui/aurora-lead.md", precedent("aurora-lead"))
-        row = ('| key light | visual_identity | L1 RECALLED | [[aurora-lead]] '
+        row = ('| key light | fixture_look | L1 RECALLED | [[aurora-lead]] '
                '"Key light sits camera right." | resolved |')
         self.refused(self.attestation([row]), "copied, not paraphrased")
 
     def test_a_line_outside_decisions_in_force_is_not_a_decision(self):
         self.place("aurora/ui/aurora-lead.md", precedent("aurora-lead"))
-        row = ('| key light | visual_identity | L1 RECALLED | [[aurora-lead]] '
+        row = ('| key light | fixture_look | L1 RECALLED | [[aurora-lead]] '
                '"A finished piece, kept as precedent." | resolved |')
         self.refused(self.attestation([row]), "under Decisions in Force")
 
     def test_recalling_without_quoting(self):
         self.place("aurora/ui/aurora-lead.md", precedent("aurora-lead"))
-        row = "| key light | visual_identity | L1 RECALLED | [[aurora-lead]] says so | resolved |"
+        row = "| key light | fixture_look | L1 RECALLED | [[aurora-lead]] says so | resolved |"
         self.refused(self.attestation([row]), "in double quotes")
 
     def test_recalling_from_a_note_that_does_not_speak_to_the_gate(self):
-        self.place("aurora/ui/aurora-lead.md", precedent("aurora-lead", gates=("color_science",)))
-        row = ('| key light | visual_identity | L1 RECALLED | [[aurora-lead]] '
+        self.place("aurora/ui/aurora-lead.md", precedent("aurora-lead", gates=("fixture_colour",)))
+        row = ('| key light | fixture_look | L1 RECALLED | [[aurora-lead]] '
                '"Key light sits camera left." | resolved |')
-        self.refused(self.attestation([row]), "does not list `visual_identity`")
+        self.refused(self.attestation([row]), "does not list `fixture_look`")
 
     def test_a_template_in_the_vault_is_not_a_note(self):
         self.place("_templates/aurora-lead.md", precedent("aurora-lead"))
-        row = ('| key light | visual_identity | L1 RECALLED | [[aurora-lead]] '
+        row = ('| key light | fixture_look | L1 RECALLED | [[aurora-lead]] '
                '"Key light sits camera left." | resolved |')
         self.refused(self.attestation([row]), "is not a note in the vault")
 
     # ── L2 ────────────────────────────────────────────────────────────────
 
     def derived(self, cites, state="PROVISIONAL", level="L2 DERIVED"):
-        return f"| key light | visual_identity | {level} | {cites} | {state} |"
+        return f"| key light | fixture_look | {level} | {cites} | {state} |"
 
     def test_derived_from_three_notes_of_this_kind(self):
         self.three_notes()
@@ -362,18 +364,18 @@ class Context(StudioCase):
                      "of the same kind")
 
     def test_only_a_derivation_is_provisional(self):
-        row = ("| grounds | visual_identity | L0 AUTHORED | visual_identity.context.md section 2 "
+        row = ("| grounds | fixture_look | L0 AUTHORED | fixture_look.context.md section 2 "
                "| PROVISIONAL |")
         self.refused(self.attestation([row]), "only a derived constraint")
 
     # ── stated ────────────────────────────────────────────────────────────
 
     def test_stated_by_the_author(self):
-        row = f"| imagery motifs | visual_identity | STATED | the author, {date.today()} | resolved |"
+        row = f"| imagery motifs | fixture_look | STATED | the author, {date.today()} | resolved |"
         self.passes(self.attestation([row]))
 
     def test_stated_with_no_date(self):
-        row = "| imagery motifs | visual_identity | STATED | the author | resolved |"
+        row = "| imagery motifs | fixture_look | STATED | the author | resolved |"
         self.refused(self.attestation([row]), "gives the date")
 
 
@@ -458,10 +460,10 @@ class Parking(StudioCase):
     def test_a_parked_run_does_not_advance(self):
         run_id = self.new_run()
         self.through(run_id, "intake")
-        code, out, _ = self.run_cmd("park", run_id, "--constraint", "brand_voice",
+        code, out, _ = self.run_cmd("park", run_id, "--constraint", "fixture_voice",
                                     "--needs", "How controls are worded.")
         self.assertEqual(code, 0)
-        self.assertIn("BLOCKED on `brand_voice`", out)
+        self.assertIn("BLOCKED on `fixture_voice`", out)
         state = self.state(run_id)
         self.assertEqual(state["status"], "parked")
         self.assertEqual(state["parked"]["stage"], "context")
@@ -475,7 +477,7 @@ class Parking(StudioCase):
     def test_unparking_resumes_where_it_stopped(self):
         run_id = self.new_run()
         self.through(run_id, "intake")
-        self.run_cmd("park", run_id, "--constraint", "brand_voice", "--needs", "x")
+        self.run_cmd("park", run_id, "--constraint", "fixture_voice", "--needs", "x")
         self.assertEqual(self.run_cmd("unpark", run_id)[0], 0)
         state = self.state(run_id)
         self.assertEqual(state["status"], "active")
@@ -485,7 +487,7 @@ class Parking(StudioCase):
 
     def test_parking_says_what_and_what_would_resolve_it(self):
         run_id = self.new_run()
-        for constraint, needs in (("brand_voice", " "), (" ", "How controls are worded.")):
+        for constraint, needs in (("fixture_voice", " "), (" ", "How controls are worded.")):
             with self.subTest(constraint=constraint, needs=needs):
                 code, _, _ = self.run_cmd("park", run_id, "--constraint", constraint, "--needs", needs)
                 self.assertEqual(code, 2)
@@ -500,12 +502,12 @@ class Parking(StudioCase):
         code, _, err = self.run_cmd("confirm", run_id, "park", "--words", "yes")
         self.assertEqual(code, 1)
         self.assertIn("not parked", err)
-        self.run_cmd("park", run_id, "--constraint", "brand_voice", "--needs", "x")
+        self.run_cmd("park", run_id, "--constraint", "fixture_voice", "--needs", "x")
         self.assertEqual(self.run_cmd("confirm", run_id, "park", "--words", "yes")[0], 0)
 
     def test_parking_before_a_note_is_chosen_says_so(self):
         run_id = self.new_run()
-        code, out, _ = self.run_cmd("park", run_id, "--constraint", "brand_voice", "--needs", "x")
+        code, out, _ = self.run_cmd("park", run_id, "--constraint", "fixture_voice", "--needs", "x")
         self.assertEqual(code, 0)
         self.assertIn("this run has no note yet", out)
 
@@ -594,12 +596,12 @@ class Facts(StudioCase):
         self.assertEqual(code, 0)
         facts = json.loads(out)
         gates = {gate["gate"]: gate for gate in facts["gates"]}
-        self.assertEqual(set(gates), {"visual_identity", "typography_system", "color_science"})
+        self.assertEqual(set(gates), {"fixture_look", "fixture_type", "fixture_colour"})
         self.assertTrue(all(gate["on_disk"] and gate["agrees"] for gate in gates.values()))
-        self.assertEqual(gates["color_science"]["notes_naming_it"], [NOTE])
-        self.assertEqual(gates["typography_system"]["notes_naming_it"], [])
+        self.assertEqual(gates["fixture_colour"]["notes_naming_it"], [NOTE])
+        self.assertEqual(gates["fixture_type"]["notes_naming_it"], [])
         self.assertEqual(facts["notes_in_vault"], 1)
-        self.assertTrue(gates["visual_identity"]["unresolved"])
+        self.assertTrue(gates["fixture_look"]["unresolved"])
 
     def test_it_prints_each_need_in_the_words_the_attestation_must_use(self):
         run_id = self.new_run()
@@ -609,7 +611,7 @@ class Facts(StudioCase):
                 self.assertIn(f"- {wanted}", out)
 
     def test_a_flag_that_disagrees_with_the_disk(self):
-        gate = self.env.spec["gates"]["color_science"]["file"]
+        gate = self.env.spec["gates"]["fixture_colour"]["file"]
         (self.context / gate).unlink()
         run_id = self.new_run()
         code, out, _ = self.run_cmd("facts", run_id)

@@ -74,7 +74,7 @@ class Lint(StudioCase):
                                                        'title: "Ops: the console"')), [])
 
     def test_a_gate_the_spec_does_not_have(self):
-        self.assertRefused(GOOD_NOTE.replace("[visual_identity, color_science]", "[house_style]"),
+        self.assertRefused(GOOD_NOTE.replace("[fixture_look, fixture_colour]", "[house_style]"),
                            "`context_brand` names `house_style`")
 
     def test_a_list_field_written_as_a_word(self):
@@ -419,14 +419,14 @@ class PlanAndApply(StudioCase):
             NEXT, f"{first}\n{NEXT}")
 
     def test_a_parked_note_needs_a_parked_run(self):
-        self.propose(self.blocked("- [ ] BLOCKED on `brand_voice`: how controls are worded."))
+        self.propose(self.blocked("- [ ] BLOCKED on `fixture_voice`: how controls are worded."))
         code, _, err = self.note_cmd("plan", self.run_id, "--as", "park")
         self.assertEqual(code, 1)
         self.assertIn("is not parked", err)
 
     def test_a_parked_note_is_blocked_and_names_the_constraint(self):
-        self.run_cmd("park", self.run_id, "--constraint", "brand_voice", "--needs", "Wording.")
-        self.propose(GOOD_NOTE.replace(NEXT, "- [ ] BLOCKED on `brand_voice`: wording."))
+        self.run_cmd("park", self.run_id, "--constraint", "fixture_voice", "--needs", "Wording.")
+        self.propose(GOOD_NOTE.replace(NEXT, "- [ ] BLOCKED on `fixture_voice`: wording."))
         code, _, err = self.note_cmd("plan", self.run_id, "--as", "park")
         self.assertEqual(code, 1)
         self.assertIn("must be `blocked`", err)
@@ -437,8 +437,8 @@ class PlanAndApply(StudioCase):
         self.assertIn("must name what the run is blocked on", err)
 
     def test_park_plan_confirm_apply(self):
-        self.run_cmd("park", self.run_id, "--constraint", "brand_voice", "--needs", "Wording.")
-        self.propose(self.blocked("- [ ] BLOCKED on `brand_voice`: how controls are worded."))
+        self.run_cmd("park", self.run_id, "--constraint", "fixture_voice", "--needs", "Wording.")
+        self.propose(self.blocked("- [ ] BLOCKED on `fixture_voice`: how controls are worded."))
         self.assertEqual(self.note_cmd("plan", self.run_id, "--as", "park")[0], 0)
         self.confirm("park")
         self.assertEqual(self.note_cmd("apply", self.run_id, "--as", "park", "--confirm")[0], 0)
@@ -469,7 +469,7 @@ class WhatTheAttestationOwes(StudioCase):
     def test_a_derivation_must_not_come_back_as_a_decision(self):
         names = ("aurora-lead", "harbor-dusk", "north-gate")
         cites = ", ".join(f"[[{name}]]" for name in names)
-        run_id = self.at_record(f"| key light | visual_identity | L2 DERIVED | {cites} | PROVISIONAL |",
+        run_id = self.at_record(f"| key light | fixture_look | L2 DERIVED | {cites} | PROVISIONAL |",
                                 names)
         for decision in ("- Key light sits camera left.",
                          "- PROVISIONAL, from [[aurora-lead]], [[harbor-dusk]], [[other]]: key light left."):
@@ -485,7 +485,7 @@ class WhatTheAttestationOwes(StudioCase):
 
     def test_what_the_author_stated_is_recorded_as_stated(self):
         today = date.today()
-        run_id = self.at_record(f"| imagery motifs | visual_identity | STATED | the author, {today} | resolved |")
+        run_id = self.at_record(f"| imagery motifs | fixture_look | STATED | the author, {today} | resolved |")
         self.put(run_id, "note_update.md", GOOD_NOTE)
         code, _, err = self.note_cmd("plan", run_id)
         self.assertEqual(code, 1)
@@ -497,7 +497,7 @@ class WhatTheAttestationOwes(StudioCase):
 
     def test_a_flush_owes_them_once_context_is_done(self):
         today = date.today()
-        run_id = self.at_record(f"| imagery motifs | visual_identity | STATED | the author, {today} | resolved |")
+        run_id = self.at_record(f"| imagery motifs | fixture_look | STATED | the author, {today} | resolved |")
         flushed = GOOD_NOTE.replace(NEXT, f"- [ ] Resume run `{run_id}` at record\n{NEXT}")
         self.put(run_id, "note_update.md", flushed)
         code, _, err = self.note_cmd("plan", run_id, "--as", "flush")
@@ -511,7 +511,7 @@ class WhatTheAttestationOwes(StudioCase):
         run_id = self.new_run()
         self.through(run_id, "intake")
         self.put(run_id, "attestation.md", self.attestation(
-            [f"| imagery motifs | visual_identity | STATED | the author, {date.today()} | resolved |"]))
+            [f"| imagery motifs | fixture_look | STATED | the author, {date.today()} | resolved |"]))
         self.put(run_id, "note_update.md",
                  GOOD_NOTE.replace(NEXT, f"- [ ] Resume run `{run_id}` at context\n{NEXT}"))
         code, _, err = self.note_cmd("plan", run_id, "--as", "flush")

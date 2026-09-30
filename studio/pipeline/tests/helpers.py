@@ -1,13 +1,23 @@
 """Shared by the studio tests. Every test runs against temporary folders: the
-real spec is read, the real vault and the real run folder are never touched."""
+real vault and the real run folder are never touched.
+
+The machinery is the real spec's: its stages, ladder, note rules and pipelines.
+The brand context is not. Each test writes a spec whose gates, and what each
+pipeline needs from them, are the fixture below, so these tests do not change
+when the studio's own gates are replaced. test_context.py is where the real
+context is checked.
+"""
 
 import contextlib
+import copy
 import io
 import shutil
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+
+import yaml
 
 PIPELINE = Path(__file__).resolve().parent.parent
 REPO = PIPELINE.parent.parent
@@ -16,6 +26,54 @@ sys.path.insert(0, str(PIPELINE))
 import content_md  # noqa: E402
 import studio_common  # noqa: E402
 import studio_run  # noqa: E402
+
+# A made-up context with the shapes the ladder must handle: a gate with a
+# declared gap, a gate with none, a gate with a gap in its middle numbers, and
+# a gate nobody has written.
+FIXTURE_GATES = {
+    "fixture_look": {
+        "authored": True, "file": "fixture_look.context.md",
+        "must_answer": "What the surfaces look like.",
+        "answers": [{"topic": f"look topic {n}", "section": str(n)} for n in range(2, 7)],
+        "unresolved": [{"topic": "generated imagery", "section": "7"}],
+    },
+    "fixture_type": {
+        "authored": True, "file": "fixture_type.context.md",
+        "must_answer": "Typefaces and scale.",
+        "answers": [{"topic": f"type topic {n}", "section": str(n)} for n in range(2, 7)],
+        "unresolved": [],
+    },
+    "fixture_colour": {
+        "authored": True, "file": "fixture_colour.context.md",
+        "must_answer": "The palette and what it means.",
+        "answers": [{"topic": f"colour topic {n}", "section": str(n)} for n in range(2, 5)],
+        "unresolved": [{"topic": "working space", "section": "5"}],
+    },
+    "fixture_voice": {
+        "authored": False, "file": "fixture_voice.context.md",
+        "must_answer": "How things are worded.",
+    },
+}
+FIXTURE_NEEDS = [
+    {"gate": "fixture_look", "needs": ["interface identity", "off-limits list", "scope"]},
+    {"gate": "fixture_type", "needs": ["the studio scale", "hierarchy", "scope boundary"]},
+    {"gate": "fixture_colour", "needs": ["palette", "semantic binding", "the three contrast floors"]},
+]
+
+
+def fixture_spec():
+    """The real spec, with the fixture in place of its brand context."""
+    spec = yaml.safe_load(studio_common.SPEC_PATH.read_text(encoding="utf-8"))
+    spec["gates"] = copy.deepcopy(FIXTURE_GATES)
+    spec["known_conflicts"] = []
+    for cfg in spec["pipelines"].values():
+        if cfg.get("status") == "implemented":
+            cfg["requires_context"] = copy.deepcopy(FIXTURE_NEEDS)
+            cfg["open"] = ["fixture_look states no scope for itself; `scope` resolves as STATED."]
+        elif cfg.get("requires_context"):
+            cfg["requires_context"] = [{"gate": "fixture_voice", "needs": ["wording"]}]
+    return spec
+
 
 NOTE = "one-offs/ui/ops-console.md"
 
@@ -28,7 +86,7 @@ status: in-progress
 created: 2026-09-28
 updated: 2026-09-28
 pipelines: [ui-direction]
-context_brand: [visual_identity, color_science]
+context_brand: [fixture_look, fixture_colour]
 tags: [ui]
 ---
 
@@ -60,7 +118,7 @@ search.py "internal analytics dashboard" --design-system --json
 HEADER = "| Constraint | Gate | Level | Source | State |\n|---|---|---|---|---|\n"
 
 
-def precedent(name, kind="ui", gates=("visual_identity",), decisions=("Key light sits camera left.",),
+def precedent(name, kind="ui", gates=("fixture_look",), decisions=("Key light sits camera left.",),
               status="complete"):
     """A small, valid note to recall from or derive from."""
     lines = "\n".join(f"- {line}" for line in decisions)
@@ -97,15 +155,18 @@ class StudioCase(unittest.TestCase):
         self.context = self.vault / "_Context" / "brand"
         self.context.mkdir(parents=True)
         self.runs.mkdir()
-        self.env = studio_common.Env(runs_dir=self.runs, vault_dir=self.vault,
+        self.spec_path = self.root / "spec.yaml"
+        self.spec_path.write_text(yaml.safe_dump(fixture_spec(), sort_keys=False, allow_unicode=True),
+                                  encoding="utf-8")
+        self.env = studio_common.Env(self.spec_path, runs_dir=self.runs, vault_dir=self.vault,
                                      context_dir=self.context)
         for name, gate in self.env.spec["gates"].items():
             if gate.get("authored"):
                 (self.context / gate["file"]).write_text(f"# {name}\n", encoding="utf-8")
 
     def folders(self):
-        return ["--runs-dir", str(self.runs), "--vault-dir", str(self.vault),
-                "--context-dir", str(self.context)]
+        return ["--spec", str(self.spec_path), "--runs-dir", str(self.runs),
+                "--vault-dir", str(self.vault), "--context-dir", str(self.context)]
 
     def call(self, module, *arguments):
         """(exit code, stdout, stderr) of one command, run in this process."""

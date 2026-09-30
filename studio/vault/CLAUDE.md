@@ -73,11 +73,11 @@ For each constraint a pipeline needs, stop at the first level that resolves it.
 | **STATED** | the author states it at the context checkpoint | the author, and the date | resolved |
 | **L3 unresolved** | none of the above | nothing | `UNRESOLVED` |
 
-**Authored is not complete.** `visual_identity` section 7 says it does not
-answer what generated imagery looks like. `color_science` section 5 says it does
-not answer working space, LUTs or grading. A run needing one of those treats it
-as unresolved, though the file exists and loads. Reading "the file exists" as
-"the question is answered" is the failure this rule exists to prevent.
+**Authored is not complete.** A gate says, in its Unresolved section, what it
+does not answer; `studio_run.py facts` prints each such section as a DECLARED
+GAP. A run needing one of those treats it as unresolved, though the file exists
+and loads. Reading "the file exists" as "the question is answered" is the
+failure this rule exists to prevent.
 
 **Fewer than three notes is a coincidence, not precedent.**
 

@@ -281,7 +281,7 @@ def lint(text, env, relative=None):
         for item in lists[field]:
             if not isinstance(item, str):
                 errors.append(f"`{field}` holds `{item}`, which is not a name. Write each as a "
-                              f"plain word, as in [visual_identity], not [[visual_identity]].")
+                              f"plain word, as in [some_gate], not [[some_gate]].")
     for gate in lists["context_brand"]:
         if isinstance(gate, str) and gate not in env.spec["gates"]:
             errors.append(f"`context_brand` names `{gate}`, which is not a gate in the spec. "

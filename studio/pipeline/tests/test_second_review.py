@@ -69,7 +69,7 @@ class Base(StudioCase):
         return self.note_cmd("plan", run_id, "--as", purpose)
 
 
-def stated(constraint="imagery motifs", gate="visual_identity", day=None):
+def stated(constraint="imagery motifs", gate="fixture_look", day=None):
     return f"| {constraint} | {gate} | STATED | the author, {day or TODAY} | resolved |"
 
 
@@ -90,9 +90,9 @@ class RecordEndsWithARecordWrite(Base):
 
     def test_a_park_does_not_finish_it(self):
         run_id = self.at_record()
-        self.run_cmd("park", run_id, "--constraint", "brand_voice", "--needs", "Wording.")
+        self.run_cmd("park", run_id, "--constraint", "fixture_voice", "--needs", "Wording.")
         blocked = GOOD_NOTE.replace("status: in-progress", "status: blocked").replace(
-            NEXT, f"- [ ] BLOCKED on `brand_voice`: wording.\n{NEXT}")
+            NEXT, f"- [ ] BLOCKED on `fixture_voice`: wording.\n{NEXT}")
         self.assertEqual(self.write(run_id, blocked, "park")[0], 0)
         self.assertEqual(self.run_cmd("unpark", run_id)[0], 0)
         self.assertEqual(self.run_cmd("confirm", run_id, "record", "--words", "yes")[0], 0)
@@ -120,12 +120,12 @@ class OneTableAsAReaderSeesIt(Base):
     """2. The attestation is the one table a reader sees."""
 
     def test_two_tables(self):
-        second = HEADER + "| palette | color_science | L3 | nothing | UNRESOLVED |\n"
+        second = HEADER + "| palette | fixture_colour | L3 | nothing | UNRESOLVED |\n"
         self.refused(self.attestation() + "\n## More\n\n" + second, "2 context-resolution tables")
 
     def test_a_table_in_a_comment_is_not_the_table(self):
         hidden = "<!--\n" + HEADER + "\n".join(self.rows()) + "\n-->\n\n"
-        shown = self.attestation(["| imagery motifs | visual_identity | L3 | nothing | UNRESOLVED |"])
+        shown = self.attestation(["| imagery motifs | fixture_look | L3 | nothing | UNRESOLVED |"])
         self.refused(hidden + shown, "L3 is UNRESOLVED")
 
     def test_only_a_table_in_a_comment(self):
@@ -147,7 +147,7 @@ class RecallingALine(Base):
     """3. An L1 quote is a real line, from one visible bullet."""
 
     def row(self, quote, cited="[[aurora-lead]]", state="resolved"):
-        return f'| key light | visual_identity | L1 RECALLED | {cited} "{quote}" | {state} |'
+        return f'| key light | fixture_look | L1 RECALLED | {cited} "{quote}" | {state} |'
 
     def test_a_blank_or_short_quote(self):
         self.place("aurora/ui/aurora-lead.md", precedent("aurora-lead"))
@@ -178,12 +178,12 @@ class RecallingALine(Base):
 
     def test_every_note_cited_is_checked(self):
         self.place("aurora/ui/aurora-lead.md", precedent("aurora-lead"))
-        self.place("aurora/ui/palette-note.md", precedent("palette-note", gates=("color_science",)))
+        self.place("aurora/ui/palette-note.md", precedent("palette-note", gates=("fixture_colour",)))
         line = "Key light sits camera left."
         self.refused(self.attestation([self.row(line, "[[aurora-lead]], [[ghost]]")]),
                      "[[ghost]] is not a note")
         self.refused(self.attestation([self.row(line, "[[aurora-lead]], [[palette-note]]")]),
-                     "does not list `visual_identity`")
+                     "does not list `fixture_look`")
 
     def test_a_note_cited_by_path_or_with_its_extension(self):
         self.place("aurora/ui/aurora-lead.md", precedent("aurora-lead"))
@@ -214,7 +214,7 @@ class ProvisionalStaysProvisional(Base):
         self.place("aurora/ui/ops-lead.md", precedent("ops-lead", decisions=(self.LINE,)))
 
     def row(self, state):
-        return (f'| key light | visual_identity | L1 RECALLED | [[ops-lead]] '
+        return (f'| key light | fixture_look | L1 RECALLED | [[ops-lead]] '
                 f'"key light sits camera left." | {state} |')
 
     def test_recalled_as_settled(self):
@@ -225,7 +225,7 @@ class ProvisionalStaysProvisional(Base):
 
     def test_a_settled_line_is_not_recalled_as_provisional(self):
         self.place("aurora/ui/aurora-lead.md", precedent("aurora-lead"))
-        row = ('| key light | visual_identity | L1 RECALLED | [[aurora-lead]] '
+        row = ('| key light | fixture_look | L1 RECALLED | [[aurora-lead]] '
                '"Key light sits camera left." | PROVISIONAL |')
         self.refused(self.attestation([row]), "is not marked PROVISIONAL")
 
@@ -318,9 +318,9 @@ class TheAttestationIsKept(Base):
 
     def test_a_park_after_context_owes_them_too(self):
         run_id = self.at_record([stated()])
-        self.run_cmd("park", run_id, "--constraint", "brand_voice", "--needs", "Wording.")
+        self.run_cmd("park", run_id, "--constraint", "fixture_voice", "--needs", "Wording.")
         blocked = GOOD_NOTE.replace("status: in-progress", "status: blocked").replace(
-            NEXT, f"- [ ] BLOCKED on `brand_voice`: wording.\n{NEXT}")
+            NEXT, f"- [ ] BLOCKED on `fixture_voice`: wording.\n{NEXT}")
         code, _, err = self.plan(run_id, blocked, "park")
         self.assertEqual(code, 1)
         self.assertIn("was stated by the author", err)
@@ -340,7 +340,7 @@ class EachRowItsOwnLine(Base):
 
     def test_two_derived_rows_and_one_line(self):
         self.precedents()
-        rows = [f"| {name} | visual_identity | L2 DERIVED | {CITES} | PROVISIONAL |"
+        rows = [f"| {name} | fixture_look | L2 DERIVED | {CITES} | PROVISIONAL |"
                 for name in ("key light", "rim light")]
         run_id = self.at_record(rows)
         one = GOOD_NOTE + f"- PROVISIONAL, derived from {CITES}: key light and rim light sit left.\n"
@@ -355,13 +355,13 @@ class EachRowItsOwnLine(Base):
         self.assertIn("does not name it", out)
 
     def test_the_gate_is_in_context_brand(self):
-        run_id = self.at_record([stated("scale note", "typography_system")])
+        run_id = self.at_record([stated("scale note", "fixture_type")])
         line = f"- STATED {TODAY}: scale note: the body is 13px.\n"
         code, _, err = self.plan(run_id, GOOD_NOTE + line)
         self.assertEqual(code, 1)
         self.assertIn("context_brand does not list it", err)
-        listed = GOOD_NOTE.replace("[visual_identity, color_science]",
-                                   "[visual_identity, color_science, typography_system]")
+        listed = GOOD_NOTE.replace("[fixture_look, fixture_colour]",
+                                   "[fixture_look, fixture_colour, fixture_type]")
         code, _, err = self.plan(run_id, listed + line)
         self.assertEqual(code, 0, err)
 
@@ -370,24 +370,24 @@ class OneRowPerNeed(Base):
     """11. A row is for a need when it is the need, not when it mentions it."""
 
     def test_a_row_that_only_mentions_the_need(self):
-        row = "| NOT the palette | color_science | L0 | color_science.context.md section 2 | resolved |"
+        row = "| NOT the palette | fixture_colour | L0 | fixture_colour.context.md section 2 | resolved |"
         self.refused(self.attestation([row], without=["palette"]), "no row for `palette`")
 
     def test_one_row_for_two_needs(self):
-        row = ("| palette, semantic binding | color_science | L0 | color_science.context.md "
+        row = ("| palette, semantic binding | fixture_colour | L0 | fixture_colour.context.md "
                "section 2 | resolved |")
         self.refused(self.attestation([row], without=["palette", "semantic binding"]),
                      "no row for `semantic binding`")
 
     def test_the_same_need_twice(self):
-        row = "| palette | color_science | L0 | color_science.context.md section 2 | resolved |"
+        row = "| palette | fixture_colour | L0 | fixture_colour.context.md section 2 | resolved |"
         self.refused(self.attestation([row]), "2 rows are for `palette`")
 
     def test_a_need_with_more_said_after_it(self):
         for written in ("palette: ten values", "palette (ten values)", "Palette — ten values",
                         "palette - ten values"):
             with self.subTest(written=written):
-                row = f"| {written} | color_science | L0 | color_science.context.md section 2 | resolved |"
+                row = f"| {written} | fixture_colour | L0 | fixture_colour.context.md section 2 | resolved |"
                 self.passes(self.attestation([row], without=["palette"]))
 
 
@@ -395,14 +395,14 @@ class AnL0RowCitesItsOwnGate(Base):
     """12. An L0 row names its own gate's file, and no other gate's."""
 
     def test_no_file(self):
-        row = "| grounds | visual_identity | L0 AUTHORED | section 2 | resolved |"
+        row = "| grounds | fixture_look | L0 AUTHORED | section 2 | resolved |"
         self.refused(self.attestation([row]), "names the gate's own file")
 
     def test_another_gates_file(self):
-        row = "| grounds | visual_identity | L0 AUTHORED | color_science.context.md section 2 | resolved |"
+        row = "| grounds | fixture_look | L0 AUTHORED | fixture_colour.context.md section 2 | resolved |"
         self.refused(self.attestation([row]), "names the gate's own file")
-        row = ("| grounds | visual_identity | L0 AUTHORED | visual_identity.context.md section 2, "
-               "color_science.context.md section 2 | resolved |")
+        row = ("| grounds | fixture_look | L0 AUTHORED | fixture_look.context.md section 2, "
+               "fixture_colour.context.md section 2 | resolved |")
         self.refused(self.attestation([row]), "another gate's file")
 
 
@@ -545,7 +545,7 @@ class GoingBack(Base):
         self.assertEqual(code, 1)
         self.assertIn("complete", err)
         parked = self.at_context()
-        self.run_cmd("park", parked, "--constraint", "brand_voice", "--needs", "x")
+        self.run_cmd("park", parked, "--constraint", "fixture_voice", "--needs", "x")
         code, _, err = self.run_cmd("back", parked, "--why", "x")
         self.assertEqual(code, 1)
         self.assertIn("parked", err)
@@ -571,15 +571,15 @@ class LinksAndKeys(StudioCase):
 
 class SectionsCited(Base):
     def test_every_section_in_a_range(self):
-        row = "| palette extra | color_science | L0 | color_science.context.md section 2-5 | resolved |"
+        row = "| palette extra | fixture_colour | L0 | fixture_colour.context.md section 2-5 | resolved |"
         self.refused(self.attestation([row]), "does NOT answer")
 
     def test_the_plural(self):
-        row = "| grounds | visual_identity | L0 | visual_identity.context.md sections 2 and 3 | resolved |"
+        row = "| grounds | fixture_look | L0 | fixture_look.context.md sections 2 and 3 | resolved |"
         self.passes(self.attestation([row]))
 
     def test_a_section_named_inside_a_quote_is_not_cited(self):
-        row = ('| grounds | visual_identity | L0 | visual_identity.context.md section 2: "Product '
+        row = ('| grounds | fixture_look | L0 | fixture_look.context.md section 2: "Product '
                'work built for a client is not bound by this — see §7" | resolved |')
         self.passes(self.attestation([row]))
 
@@ -588,7 +588,7 @@ class SectionsCited(Base):
         self.passes("## Context resolution\n\n" + HEADER + "\n".join(rows) + "\n")
 
     def test_a_level_that_cannot_be_read_is_not_told_to_park(self):
-        row = "| grounds | visual_identity | probably fine | visual_identity.context.md section 2 | resolved |"
+        row = "| grounds | fixture_look | probably fine | fixture_look.context.md section 2 | resolved |"
         run_id = self.at_context()
         self.put(run_id, "attestation.md", self.attestation([row]))
         code, _, err = self.run_cmd("advance", run_id)
@@ -610,7 +610,7 @@ class Derived(Base):
     def test_cited_by_id_and_recorded_by_name(self):
         self.precedents()
         ids = ", ".join(f"[[cmd_20260901_{name}]]" for name in THREE)
-        run_id = self.at_record([f"| key light | visual_identity | L2 DERIVED | {ids} | PROVISIONAL |"])
+        run_id = self.at_record([f"| key light | fixture_look | L2 DERIVED | {ids} | PROVISIONAL |"])
         code, _, err = self.plan(
             run_id, GOOD_NOTE + f"- PROVISIONAL, derived from {CITES}: key light sits camera left.\n")
         self.assertEqual(code, 0, err)
@@ -643,8 +643,8 @@ class VaultScans(Base):
         self.assertEqual(self.run_cmd("facts", self.new_run())[0], 0)
 
     def test_a_gate_written_as_a_link(self):
-        text = GOOD_NOTE.replace("context_brand: [visual_identity, color_science]",
-                                 "context_brand: [[visual_identity]]")
+        text = GOOD_NOTE.replace("context_brand: [fixture_look, fixture_colour]",
+                                 "context_brand: [[fixture_look]]")
         errors = content_md.lint(text, self.env, NOTE)[0]
         self.assertTrue(any("not a name" in error for error in errors), errors)
 
@@ -694,7 +694,7 @@ class Runs(Base):
     def test_parking_a_complete_run(self):
         run_id = self.new_run()
         self.through(run_id, "record")
-        code, _, err = self.run_cmd("park", run_id, "--constraint", "brand_voice", "--needs", "x")
+        code, _, err = self.run_cmd("park", run_id, "--constraint", "fixture_voice", "--needs", "x")
         self.assertEqual(code, 1)
         self.assertIn("complete", err)
 

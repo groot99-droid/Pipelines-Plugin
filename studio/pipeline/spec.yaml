@@ -352,7 +352,7 @@ pipelines:
     consumers:
       studio-surface:
         what: "One of the studio's own interfaces."
-        authority: "tokens.json and the three gates."
+        authority: "tokens.json and the brand gates this pipeline requires."
         role: "Propose only. A change is a diff against tokens.json, with what it would break. The author commits or does not."
         persist: "never"
       product:
@@ -411,12 +411,12 @@ pipelines:
         Check the matched category is the one the brief describes.
         Check the contrast report: text pairs at 4.5:1.
         Studio surface: write the proposed change by hand, as a diff against
-        the ten colours in tokens.json. Name each value that would move.
-        Compute the three contrast floors in color_science section 4 from
-        those values. Do not take them from the engine's report, which
-        measured its own palette. Check the off-limits list in
-        visual_identity section 6. The catalog's 16px body minimum does NOT
-        override the studio scale (typography_system section 3).
+        the colours in tokens.json. Name each value that would move. Compute
+        the contrast floors the attestation resolved from those values. Do
+        not take them from the engine's report, which measured its own
+        palette. Check the off-limits list the attestation resolved. Where
+        the catalog's guidance and the attested scale disagree, the attested
+        scale holds.
         Product work: check the anti-patterns the engine returned, and that
         nothing from the studio palette or typeface was carried in.
       record: |
