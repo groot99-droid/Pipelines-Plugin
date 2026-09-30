@@ -150,7 +150,7 @@ class Token(GateCase):
         self.assertIn("overrides a live token", err)
 
     def test_the_token_lives_under_the_run_folder_and_nowhere_else(self):
-        self.assertEqual(compute_gate.token_path(self.env, self.machine).parent, self.runs)
+        self.assertEqual(compute_gate.token_path(self.env, self.machine).parent, self.runs.resolve())
         self.assertNotEqual(self.runs, compute_gate.HERE / "runs")
 
 
