@@ -1,5 +1,8 @@
 # ROSW
 
+**New here?** Open [`docs/index.html`](docs/index.html) for a page per tool, and run
+`python docs/setup_keys.py` to add any API keys (most of ROSW needs none).
+
 One repo, multiple tools. Each tool gets a self-contained folder. The
 creative-writing tool is used from this repo, so its skills and agents live once
 at the repo root under `.claude/` and load whenever this repo is the working
@@ -22,7 +25,9 @@ studio/
                        brand gates, SCHEMA.md, CLAUDE.md
   pipeline/            spec.yaml, the bookkeeper and the note writer
   docs/                what was carried from Creative-Headquarters, and how
-plugins/ui-design/     the ui-design plugin: everything that is published
+docs/                  HTML pages for new users, and setup_keys.py for API keys
+.claude-plugin/        marketplace.json: installs plugins/ui-design from this repo
+plugins/ui-design/     the ui-design plugin: self-contained
   .claude-plugin/      plugin.json and marketplace.json
   skills/, agents/     ui-design-{catalog,catalog-refresh,multipart},
                        ui-design-{catalog-reviewer,search-part,page-reviewer}
@@ -112,9 +117,9 @@ The pipeline's generation work runs through one of three named backends:
   `llm.py`'s `backend="gemini_mcp"`. **Done.** It calls the Gemini API
   directly (same key and default model as the Gemini MCP plugin's
   `ask_gemini`), since a headless script can't speak MCP stdio. Needs
-  `pip install google-genai` and a key: put `GEMINI_API_KEY=...` in
-  `creative-writing/pipeline/.env` (gitignored, loaded by `llm.py`, overrides any shell
-  value; see `.env.example`) or set `$env:GEMINI_API_KEY`; optional
+  `pip install google-genai` and a key: run `python docs/setup_keys.py` and paste it
+  into the page that opens. It is saved to `~/.rosw/keys.env`, outside the repo, which
+  `llm.py` loads and which overrides any shell value. Or set `$env:GEMINI_API_KEY`; optional
   `$env:GEMINI_MODEL` (default `gemini-3.6-flash`). Select it for drafting
   with `$env:PIPELINE_LLM_BACKEND = "gemini_mcp"`, and/or for the librarian
   with `$env:LIBRARIAN_BACKEND = "gemini_mcp"` (or `librarian.py digest
@@ -311,6 +316,7 @@ python plugins/ui-design/catalog/scripts/search.py "keyboard focus modal" --doma
 claude --plugin-dir ./plugins/ui-design                  # load its skills for a session
 ```
 
-The plugin is published from its own repository, never from this one, because this
-repo also holds the private vault. The steps are in [`CLAUDE.md`](CLAUDE.md), under
-"Publishing the plugin".
+Install it from this repo in Claude Code with
+`/plugin marketplace add groot99-droid/Pipelines-Plugin`, then
+`/plugin install ui-design@rosw`. Release steps are in [`CLAUDE.md`](CLAUDE.md), under
+"Publishing".

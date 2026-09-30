@@ -32,14 +32,19 @@ import urllib.request
 
 
 
-def _load_dotenv() -> None:
-    """Load KEY=VALUE lines from creative-writing/pipeline/.env into os.environ.
+LEGACY_ENV = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
 
-    Values in the file override the shell's, so the pipeline's dedicated
-    key wins over any GEMINI_API_KEY set elsewhere. Placeholder values
-    ("your-key-here") are ignored.
+
+def user_keys_file() -> str:
+    """The per-user key file, outside the repo: ~/.rosw/keys.env.
+
+    docs/setup_keys.py writes it. ROSW_KEYS_FILE overrides the location.
     """
-    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+    return os.environ.get("ROSW_KEYS_FILE") or os.path.join(
+        os.path.expanduser("~"), ".rosw", "keys.env")
+
+
+def _load_env_file(path: str) -> None:
     try:
         with open(path, encoding="utf-8") as f:
             lines = f.read().splitlines()
@@ -53,6 +58,19 @@ def _load_dotenv() -> None:
         value = value.strip().strip('"').strip("'")
         if value and value != "your-key-here":
             os.environ[key.strip()] = value
+
+
+def _load_dotenv() -> None:
+    """Load KEY=VALUE lines into os.environ from the key files.
+
+    First creative-writing/pipeline/.env (a legacy location, still read if
+    present), then the user key file (see user_keys_file), which wins.
+    Values in either file override the shell's, so the pipeline's dedicated
+    key wins over any GEMINI_API_KEY set elsewhere. Placeholder values
+    ("your-key-here") are ignored.
+    """
+    _load_env_file(LEGACY_ENV)
+    _load_env_file(user_keys_file())
 
 
 _load_dotenv()

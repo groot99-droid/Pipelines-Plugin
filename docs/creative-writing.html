@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creative Writing · ROSW</title>
+<meta name="description" content="The creative-writing vault and the checkpointed pipeline that writes new pieces into it.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="top-inner">
+  <a class="brand" href="index.html">RO<span>SW</span></a>
+  <nav aria-label="Pages"><ul class="nav">
+    <li><a href="index.html">Overview</a></li>
+    <li><a href="creative-writing.html" aria-current="page">Creative writing</a></li>
+    <li><a href="studio.html">Studio</a></li>
+    <li><a href="ui-design.html">UI design</a></li>
+    <li><a href="keys.html">Keys</a></li>
+  </ul></nav>
+</div></header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">creative-writing/</p>
+    <h1>Creative writing</h1>
+    <p class="lede">An Obsidian vault of 63 works, and a pipeline that develops a new idea into a
+    finished piece in the same voice. It goes one checkpoint at a time, and it only writes into
+    the vault after you confirm.</p>
+  </section>
+
+  <p class="toc">On this page: <a href="#vault">The vault</a> · <a href="#pipeline">The pipeline</a> ·
+  <a href="#modes">Modes</a> · <a href="#plot">Plot logic and registers</a> ·
+  <a href="#run">Running it</a> · <a href="#backends">Backends and keys</a> ·
+  <a href="#search">Searching the vault</a> · <a href="#parts">Skills and agents</a></p>
+
+  <h2 id="vault">The vault</h2>
+  <p><code>creative-writing/vault/</code> is an Obsidian vault. Open that folder in Obsidian, and its
+  settings come with it. It holds:</p>
+  <ul>
+    <li><strong>63 works</strong> across books, novels, stories, book concepts, worldbuilding, songs,
+      poems and prose, letters, a dream journal, characters and essays. They are verbatim
+      transcriptions. The tools never edit them.</li>
+    <li><strong><code>00_INDEX.md</code></strong>, a ledger of all 63 works, and an
+      <code>_index.md</code> per folder.</li>
+    <li><strong><code>_Annotations/</code></strong>, a craft-annotation note for every work.</li>
+    <li><strong><code>_ChunkTags/</code></strong>, per-passage plot, context, mood and motif tags from a
+      closed vocabulary, so search can find a passage, not just a file.</li>
+    <li><strong><code>_Craft/</code></strong>, notes on plot logic and the three registers. These are
+      analysis written with Claude, never the author's own voice.</li>
+    <li><strong><code>_Idea_Library/</code></strong>, where finished pipeline pieces land.</li>
+    <li><strong><code>CLAUDE.md</code></strong>, the vault's rules: the four style modes, the do-not
+      list, the frontmatter schema. It is the authority for anything written here.</li>
+  </ul>
+
+  <h2 id="pipeline">The pipeline</h2>
+  <ol class="stages">
+    <li>intake</li><li>reference pull</li><li>outline</li><li>draft</li><li>self-revision</li><li>vault integration</li>
+  </ol>
+  <p>Every stage is a checkpoint. Nothing moves on until you have reviewed the previous stage's
+  output. The last stage additionally needs an explicit <code>--confirm</code>. Without it, it
+  only prints a dry-run preview of what it would write.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Stage</th><th>What happens</th></tr></thead>
+    <tbody>
+      <tr><td>intake</td><td>Your idea, the mode, and a register if you choose one</td></tr>
+      <tr><td>reference pull</td><td>Real passages from the vault in that mode. A librarian condenses them and checks every quote against its source; one it cannot verify is marked <code>[UNVERIFIED]</code></td></tr>
+      <tr><td>outline</td><td>The shape of the piece. A story outline ends in a causal ledger, which is checked automatically</td></tr>
+      <tr><td>draft</td><td>The piece, following the mode's sentence and structure rules</td></tr>
+      <tr><td>self-revision</td><td>A pass against the mode's rules and the do-not list, with notes on what changed</td></tr>
+      <tr><td>vault integration</td><td>The vault's own maintenance procedure: frontmatter, index entries, links. It writes only with <code>--confirm</code></td></tr>
+    </tbody>
+  </table></div>
+  <p><code>creative-writing/pipeline/spec.yaml</code> is the single source of truth for the stages,
+  prompts and per-mode rules. Both ways of running the pipeline read it, and neither keeps its
+  own copy.</p>
+
+  <h2 id="modes">Modes</h2>
+  <p>A mode is how a piece sounds. Four are implemented. Their full rules are in the vault's
+  <code>CLAUDE.md</code>.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Mode</th><th>In short</th><th>Lands in</th></tr></thead>
+    <tbody>
+      <tr><td><code>essay-self-help</code></td><td>Direct address, an elevated abstract lexicon; claim, parable, practice, closing aphorism</td><td><code>11_Essays/</code></td></tr>
+      <tr><td><code>horror-prose</code></td><td>Plain, punchy, clipped; escalation by catalogued incident; cyclical or non-resolving endings</td><td><code>03_Stories/</code></td></tr>
+      <tr><td><code>epic-fantasy</code></td><td>Third person, past tense; cosmology in a codex register; converging ensembles and soul-bonds</td><td><code>03_Stories/</code></td></tr>
+      <tr><td><code>confessional-poetry</code></td><td>First person, autobiographical; anaphora, rhetorical questions, an aphoristic last line</td><td><code>07_Poems_and_Prose/</code></td></tr>
+    </tbody>
+  </table></div>
+  <p><code>unclassified</code> is deliberately a stub. A piece there means the pipeline asks you
+  which register you want, rather than guessing.</p>
+
+  <h2 id="plot">Plot logic and registers</h2>
+  <p>A story is a chain of <em>but</em> and <em>therefore</em>, never <em>and then</em>. A story
+  outline ends with a <strong>causal ledger</strong>: one row per beat, each naming the earlier beat
+  it depends on and quoting a phrase from what that beat changed. <code>plot_logic.py</code> checks
+  that the phrase is really there, that the chain has the right shape, and that the ending is
+  legal for the mode. A failing ledger gets one automatic repair pass. The checker cannot judge
+  whether a link is <em>true</em>; that is for you at the outline checkpoint.</p>
+  <p>A <strong>register</strong> is what kind of world the piece runs in, laid over any mode. It adds
+  one tracked column to the ledger and a few shape rules. It is never inferred; you choose it.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Register</th><th>The world</th><th>Tracks</th></tr></thead>
+    <tbody>
+      <tr><td><code>liminal</code></td><td>A threshold crossed and held; the surface stays ordinary and the rules do not</td><td>Place</td></tr>
+      <tr><td><code>psychedelic</code></td><td>Perception dissolves and reforms; the way out is a surrender or a choice, never a fix</td><td>Self</td></tr>
+      <tr><td><code>cosmic</code></td><td>A ladder of knowledge (anomaly, pattern, scale, implicated) that only rises</td><td>Knows</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="run">Running it</h2>
+  <h3>Inside Claude Code (recommended)</h3>
+  <p>Open Claude Code in the repo and ask to develop an idea. The
+  <code>creative-writing-pipeline</code> skill walks the stages with you. The heavy writing goes
+  to a drafter subagent, and the reading to a librarian subagent. Neither can write files; only the
+  main session writes, and only after your checkpoints. This path needs no API key.</p>
+  <h3>The standalone script</h3>
+<pre><span class="c"># start a run: note the run-id it prints</span>
+python creative-writing/pipeline/run_pipeline.py new --mode horror-prose --register cosmic --idea "..."
+
+<span class="c"># review each stage's file in runs/&lt;run-id&gt;/, then move on</span>
+python creative-writing/pipeline/run_pipeline.py continue &lt;run-id&gt;
+
+<span class="c"># the last stage: preview, then write into the vault</span>
+python creative-writing/pipeline/run_pipeline.py continue &lt;run-id&gt;
+python creative-writing/pipeline/run_pipeline.py continue &lt;run-id&gt; --confirm
+
+python creative-writing/pipeline/run_pipeline.py status &lt;run-id&gt;</pre>
+  <p>If a stage fails, for example because Ollama is not running or a key is missing, the run's state
+  is left untouched. Fix it, and run the same <code>continue</code> again.</p>
+
+  <h2 id="backends">Backends and keys</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Backend</th><th>Where it runs</th><th>Key</th></tr></thead>
+    <tbody>
+      <tr><td><strong>native</strong></td><td>Claude itself, inside a Claude Code session, through the skill</td><td>None</td></tr>
+      <tr><td><strong>local</strong> (<code>ollama</code>)</td><td>The script's default. Fully offline with Ollama (<code>ollama pull llama3.1:8b</code>)</td><td>None</td></tr>
+      <tr><td><strong>anthropic</strong></td><td>The Anthropic API. Set <code>PIPELINE_LLM_BACKEND=anthropic</code> and <code>pip install anthropic</code></td><td><code>ANTHROPIC_API_KEY</code></td></tr>
+      <tr><td><strong>mcp</strong> (<code>gemini_mcp</code>)</td><td>Google Gemini. Set <code>PIPELINE_LLM_BACKEND=gemini_mcp</code> and/or <code>LIBRARIAN_BACKEND=gemini_mcp</code>, and <code>pip install google-genai</code></td><td><code>GEMINI_API_KEY</code></td></tr>
+    </tbody>
+  </table></div>
+  <p>Put keys in with <code>python docs/setup_keys.py</code> (see <a href="keys.html">Keys</a>).
+  <code>llm.py</code> reads them from <code>~/.rosw/keys.env</code>. The Anthropic and Gemini
+  backends send vault text to that provider's API.</p>
+  <div class="note warn"><p>CPU-only local inference is slow. Expect one to several minutes per
+  librarian call with <code>llama3.1:8b</code> on modest hardware.</p></div>
+
+  <h2 id="search">Searching the vault</h2>
+  <p>A dependency-free TF-IDF search over the works, the index, annotations and craft notes. It
+  needs no network and no packages.</p>
+<pre>python creative-writing/vault/tools/vault_search.py search "drowning" --top 5
+python creative-writing/vault/tools/vault_search.py index      <span class="c"># rebuild after any content change</span></pre>
+  <p>Use it before writing in a mode, before reusing a motif, or to answer "have I written about X?".
+  Results cite a file and line range. A <code>[craft]</code> result is analysis, not the author's prose.</p>
+
+  <h2 id="parts">Skills and agents</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Name</th><th>Kind</th><th>What it does</th></tr></thead>
+    <tbody>
+      <tr><td><code>creative-writing-pipeline</code></td><td>skill</td><td>Walks a new idea through the six stages, one checkpoint at a time</td></tr>
+      <tr><td><code>chunk-tag-backfill</code></td><td>skill</td><td>Tags every work's passages so search can match per passage</td></tr>
+      <tr><td><code>creative-writing-drafter</code></td><td>agent</td><td>Writes the outline, draft or revision for one stage; touches no files</td></tr>
+      <tr><td><code>creative-writing-librarian-native</code></td><td>agent</td><td>Reads exactly the vault files it is given and returns a condensed digest with checked quotes</td></tr>
+      <tr><td><code>creative-writing-chunk-tagger</code></td><td>agent</td><td>Tags one work's passages from the closed vocabulary</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Checking it</h3>
+<pre>python -m unittest discover -s creative-writing/pipeline/tests</pre>
+  <p>The tests check every ledger in <code>_Craft/</code> against its declared verdict, and every
+  quotation there against the vault.</p>
+</main>
+
+<footer>ROSW · <a href="https://github.com/groot99-droid/Pipelines-Plugin/tree/main/creative-writing">creative-writing/ on GitHub</a></footer>
+</body>
+</html>

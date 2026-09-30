@@ -32,6 +32,9 @@ studio/              the studio tool
                      gates, and the vault's own CLAUDE.md and SCHEMA.md
   pipeline/          spec.yaml, the bookkeeper, the note writer, and their tests
   docs/              what was carried from Creative-Headquarters, and how
+docs/                HTML pages describing each tool, and setup_keys.py (a localhost-only
+                     helper that saves API keys to ~/.rosw/keys.env)
+.claude-plugin/      marketplace.json: installs plugins/ui-design from this repo
 plugins/ui-design/   the ui-design plugin: the plugin root, and the whole of what is published
   .claude-plugin/    plugin.json and marketplace.json
   skills/            ui-design-catalog, ui-design-catalog-refresh, ui-design-multipart
@@ -92,8 +95,12 @@ Do not duplicate its rules here. If the writing rules change, they change there.
   the vault, so editing a craft note can fail them; that is the point.
 - `_Craft/` notes are analysis written with Claude, not the author's prose. Do not
   present them as the author's voice, and do not edit the 63 originals to fit them.
-- `creative-writing/pipeline/.env` holds a live `GEMINI_API_KEY` and is
-  gitignored. Never commit it, never echo its value.
+- **Keys live outside the repo**, in `~/.rosw/keys.env` (or `ROSW_KEYS_FILE`).
+  `python docs/setup_keys.py` writes it from a local page; `llm.py` reads it, and still
+  reads a legacy `creative-writing/pipeline/.env` if one exists (`--migrate` moves it).
+  Never commit a key, never echo its value, and never let a test print os.environ: the
+  tests in `creative-writing/pipeline/tests/test_llm_keys.py` and `docs/tests/` point both
+  locations at temp files and compare names, not values.
 
 ## The studio is governed by its vault's own CLAUDE.md
 
@@ -203,22 +210,23 @@ the plugin root.
 - `GOOGLE_FONTS_API_KEY` is needed only for a live font refresh, comes from the
   environment (see `plugins/ui-design/maintenance/.env.example`), and is never echoed.
 
-### Publishing the plugin
+### Publishing
 
-The plugin is published from its own repository, never from this one: this repo also
-holds the private creative-writing vault, and a live `.env`. Only the contents of
-`plugins/ui-design/` leave it.
+The whole repo, both vaults included, is public at
+`https://github.com/groot99-droid/Pipelines-Plugin` (the author's decision, 2026-09-30).
+The plugin installs from it through the root `.claude-plugin/marketplace.json`
+(`/plugin marketplace add groot99-droid/Pipelines-Plugin`, then
+`/plugin install ui-design@rosw`).
 
 1. `python plugins/ui-design/maintenance/verify.py` passes, and
-   `claude plugin validate ./plugins/ui-design` passes.
-2. Bump `version` in `.claude-plugin/plugin.json` and add the matching entry at the top
-   of `CHANGELOG.md`; `validate-contract.py` checks that they agree.
-3. Commit, then `git subtree split --prefix=plugins/ui-design -b release/ui-design-plugin`
-   produces a branch whose root is the plugin root. Check
-   `git ls-tree -r --name-only release/ui-design-plugin` contains no `creative-writing/`,
-   no `.env` and no `.obsidian/`.
-4. Pushing that branch to the plugin's repository, and tagging it, is the author's call.
-   Do not push, tag or publish without being asked.
+   `claude plugin validate ./plugins/ui-design` and `claude plugin validate .` pass.
+2. For a plugin release, bump `version` in `plugins/ui-design/.claude-plugin/plugin.json`
+   and add the matching entry at the top of its `CHANGELOG.md`; `validate-contract.py`
+   checks that they agree.
+3. Before any push, check that `git ls-files` holds no `.env` and no key file, and that
+   no key value appears in any commit.
+4. Pushing and tagging are the author's call. Do not push, tag or publish without being
+   asked.
 
 ## Adding a tool
 

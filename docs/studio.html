@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio · ROSW</title>
+<meta name="description" content="The studio: checkpointed production pipelines that source every constraint before anything is made.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="top-inner">
+  <a class="brand" href="index.html">RO<span>SW</span></a>
+  <nav aria-label="Pages"><ul class="nav">
+    <li><a href="index.html">Overview</a></li>
+    <li><a href="creative-writing.html">Creative writing</a></li>
+    <li><a href="studio.html" aria-current="page">Studio</a></li>
+    <li><a href="ui-design.html">UI design</a></li>
+    <li><a href="keys.html">Keys</a></li>
+  </ul></nav>
+</div></header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">studio/</p>
+    <h1>Studio</h1>
+    <p class="lede">Makes one thing at a time through six checkpointed stages. It leaves a note in
+    its own vault that says how the thing was made, what is decided about it, and what happens
+    next.</p>
+  </section>
+
+  <p class="toc">On this page: <a href="#rule">The rule</a> · <a href="#stages">Stages</a> ·
+  <a href="#ladder">The ladder</a> · <a href="#parking">Parking</a> · <a href="#pipelines">Pipelines</a> ·
+  <a href="#run">Running it</a> · <a href="#writes">What it writes</a> · <a href="#limits">What it does not do</a></p>
+
+  <h2 id="rule">The rule underneath</h2>
+  <div class="note"><p><strong>Nothing is made before its context is resolved, attested and sourced.</strong></p></div>
+  <p>Every constraint comes from somewhere you can point to: a brand gate the author wrote, a
+  decision recorded in a past note, or a pattern across at least three past notes. If it comes
+  from none of those, the studio asks you. If there is no answer, it parks the run. It does not
+  guess, and it never fills a gap from general knowledge or from the design catalog.</p>
+
+  <h2 id="stages">The six stages</h2>
+  <ol class="stages">
+    <li>intake</li><li>context</li><li>recipe</li><li>execute <small>go-ahead</small></li><li>review</li><li>record <small>go-ahead</small></li>
+  </ol>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Stage</th><th>Leaves</th><th>The point</th></tr></thead>
+    <tbody>
+      <tr><td>intake</td><td><code>brief.md</code></td><td>What is being made, in your words</td></tr>
+      <tr><td>context</td><td><code>attestation.md</code></td><td>Every constraint it needs, and where each came from</td></tr>
+      <tr><td>recipe</td><td><code>recipe.md</code></td><td>Exactly what will be run, and the source of every value</td></tr>
+      <tr><td>execute</td><td><code>execute_log.md</code>, artifacts</td><td>Runs the recipe and nothing else. Needs your explicit go-ahead</td></tr>
+      <tr><td>review</td><td><code>review.md</code></td><td>Each output checked against each constraint</td></tr>
+      <tr><td>record</td><td>the note</td><td>What was done, what is decided, what is next. Needs your explicit go-ahead</td></tr>
+    </tbody>
+  </table></div>
+  <p>Every stage is a checkpoint: the skill stops, shows you the output, and waits. To redo a stage,
+  the run goes back one stage at a time. Going back clears the go-aheads from there on.</p>
+
+  <h2 id="ladder">Resolving context: the ladder</h2>
+  <p>For each constraint, the context stage stops at the first level that answers it.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Level</th><th>Resolves when</th><th>State</th></tr></thead>
+    <tbody>
+      <tr><td><strong>L0 authored</strong></td><td>A brand gate in <code>_Context/brand/</code> answers it, and does not list it as unresolved</td><td>resolved</td></tr>
+      <tr><td><strong>L1 recalled</strong></td><td>A past note states it under Decisions in Force, quoted exactly</td><td>resolved</td></tr>
+      <tr><td><strong>L2 derived</strong></td><td>At least three notes of the same kind imply it. Fewer is a coincidence, not precedent</td><td>provisional</td></tr>
+      <tr><td><strong>STATED</strong></td><td>You state it at the checkpoint, with the date</td><td>resolved</td></tr>
+      <tr><td><strong>L3</strong></td><td>None of the above</td><td>unresolved: ask, or park</td></tr>
+    </tbody>
+  </table></div>
+  <p>The attestation is one row per constraint, with its level and source. A run cannot leave the
+  context stage with an unresolved row. The bookkeeper checks the record: that each cited file,
+  section and quote exists. Whether a gate really says what a row claims is for you to read.</p>
+
+  <h2 id="parking">Parking</h2>
+  <p>A run that cannot be grounded is parked. The note records which constraint is missing and what
+  would resolve it, and its status becomes <code>blocked</code>. Anyone returning later can read why.
+  Parking is a correct result, not a failure.</p>
+
+  <h2 id="pipelines">Pipelines</h2>
+  <p>Nine are declared in <code>studio/pipeline/spec.yaml</code>, and one is implemented. A pipeline
+  that is not implemented is a real entry, saying what it needs and what is open, but it does not start.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Pipeline</th><th>Makes</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td><code>ui-direction</code></td><td>A design direction for a surface or product, using the <a href="ui-design.html">UI design plugin</a> under the studio's brand gates</td><td><strong>implemented</strong></td></tr>
+      <tr><td><code>ui-build</code></td><td>Markup and CSS in which every value is a token</td><td>not yet</td></tr>
+      <tr><td><code>brand-gate</code></td><td>One brand gate, transcribed from the author</td><td>not yet</td></tr>
+      <tr><td><code>brush</code></td><td>A brush and an importable file</td><td>not yet</td></tr>
+      <tr><td><code>still-image</code>, <code>video-shot</code>, <code>music-cue</code>, <code>edit-2d</code>, <code>scene-3d</code></td><td>Through connectors</td><td>not yet</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Brand gates are the author's</h3>
+  <p>The files in <code>studio/vault/_Context/brand/</code>, and <code>tokens.json</code>, encode taste
+  and past decisions, which cannot be generated. The studio never writes or edits them; it proposes
+  a change as a diff. The studio's own palette and typeface apply to the studio's own interfaces,
+  not to client work: a client project's design system is its own authority.</p>
+
+  <h2 id="run">Running it</h2>
+  <p>Open Claude Code in the repo and ask for something, for example "a UI direction for our ops
+  console". The <code>studio-pipeline</code> skill runs the stages. There is no standalone script,
+  because the tools a stage calls exist only inside a live session. The skill runs these for you:</p>
+<pre>python studio/pipeline/studio_run.py new --pipeline ui-direction --title "Ops console"
+python studio/pipeline/studio_run.py stage   &lt;run-id&gt;   <span class="c"># this stage's instructions</span>
+python studio/pipeline/studio_run.py facts   &lt;run-id&gt;   <span class="c"># what is on disk for each gate</span>
+python studio/pipeline/studio_run.py advance &lt;run-id&gt;   <span class="c"># mark done, if its checks pass</span>
+python studio/pipeline/studio_run.py status             <span class="c"># every run</span>
+
+python studio/pipeline/content_md.py plan  &lt;run-id&gt;     <span class="c"># preview; writes nothing</span>
+python studio/pipeline/content_md.py apply &lt;run-id&gt; --confirm</pre>
+  <p><code>studio_run.py</code> is a bookkeeper. It never calls a model or a tool; it keeps a run's
+  state and refuses what the spec refuses. Exit codes: 0 done, 1 refused, 2 usage error. It needs
+  <code>pyyaml</code> (<code>pip install -r studio/pipeline/requirements.txt</code>). The studio needs
+  no API keys.</p>
+
+  <h2 id="writes">What it writes, and when</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Where</th><th>When</th></tr></thead>
+    <tbody>
+      <tr><td><code>studio/pipeline/runs/&lt;run-id&gt;/</code></td><td>Freely. Bookkeeping, not tracked by git, safe to delete when a run is done</td></tr>
+      <tr><td><code>studio/vault/</code></td><td>Only through <code>content_md.py apply --confirm</code>, after a plan and a go-ahead recorded after that plan</td></tr>
+      <tr><td>anywhere else</td><td>Only in execute, only what the recipe named, only after a go-ahead</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="limits">What it does not do</h2>
+  <ul>
+    <li>It does not read or write the creative-writing vault, unless you name a work at a checkpoint.</li>
+    <li>It does not write a brand gate or change <code>tokens.json</code>.</li>
+    <li>It does not edit the UI design plugin; it runs that plugin's scripts.</li>
+    <li>It calls no connector tool that shares, publishes, invites or deploys.</li>
+    <li><strong>It cannot stop a tool being called outside a pipeline.</strong> A pipeline is entered by
+      choice. The bookkeeper can refuse to record a stage as done; it cannot refuse a tool call.</li>
+    <li><strong>It does not know whether you reviewed a stage.</strong> It records a go-ahead on the
+      skill's word.</li>
+  </ul>
+
+  <h3>Checking it</h3>
+<pre>python -m unittest discover -s studio/pipeline/tests
+python studio/pipeline/content_md.py lint --all</pre>
+  <p>The rules in full are in <code>studio/vault/CLAUDE.md</code>, which is authoritative.</p>
+</main>
+
+<footer>ROSW · <a href="https://github.com/groot99-droid/Pipelines-Plugin/tree/main/studio">studio/ on GitHub</a></footer>
+</body>
+</html>

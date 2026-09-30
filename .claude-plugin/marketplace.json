@@ -1,0 +1,14 @@
+{
+  "name": "rosw",
+  "description": "Claude Code plugins from the ROSW repo.",
+  "owner": {
+    "name": "groot99-droid"
+  },
+  "plugins": [
+    {
+      "name": "ui-design",
+      "source": "./plugins/ui-design",
+      "description": "Searchable UI styles, palettes, fonts, UX rules, icons, motion and stacks; a contrast-checked design-system generator; a brief router; multipart search and page-review agents."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UI Design Plugin · ROSW</title>
+<meta name="description" content="The ui-design Claude Code plugin: a local catalog of UI design decisions and a contrast-checked design-system generator.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="top-inner">
+  <a class="brand" href="index.html">RO<span>SW</span></a>
+  <nav aria-label="Pages"><ul class="nav">
+    <li><a href="index.html">Overview</a></li>
+    <li><a href="creative-writing.html">Creative writing</a></li>
+    <li><a href="studio.html">Studio</a></li>
+    <li><a href="ui-design.html" aria-current="page">UI design</a></li>
+    <li><a href="keys.html">Keys</a></li>
+  </ul></nav>
+</div></header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">plugins/ui-design/ · Claude Code plugin · MIT</p>
+    <h1>UI design plugin</h1>
+    <p class="lede">Gives Claude a local, searchable catalog of UI design decisions, and a
+    generator that turns a query into a contrast-checked design system. Visual choices then come
+    from curated data instead of being invented from memory.</p>
+  </section>
+
+  <p class="toc">On this page: <a href="#install">Install</a> · <a href="#catalog">The catalog</a> ·
+  <a href="#use">Using it</a> · <a href="#design-system">Design systems</a> · <a href="#parts">Skills and agents</a> ·
+  <a href="#writes">What it writes</a> · <a href="#maintain">Maintaining it</a></p>
+
+  <h2 id="install">Install</h2>
+  <p>In Claude Code:</p>
+<pre>/plugin marketplace add groot99-droid/Pipelines-Plugin
+/plugin install ui-design@rosw</pre>
+  <p>Or, to try it from a clone for one session without installing:</p>
+<pre>claude --plugin-dir ./plugins/ui-design</pre>
+  <p>Once installed, names carry the plugin prefix: <code>/ui-design:ui-design-catalog</code>. You rarely
+  type them. Describe the UI work, and the skill is picked from its description.</p>
+  <p><strong>Requirements:</strong> Python 3 on your <code>PATH</code>. The catalog scripts use only
+  the standard library and never touch the network. If Python is missing, the plugin says so and
+  falls back to the written rules in <code>references/</code>. No API key is needed.</p>
+
+  <h2 id="catalog">The catalog</h2>
+  <p>A BM25 index over curated data files:</p>
+  <div class="cards">
+    <div class="card"><h3>79 styles</h3><p>50 of them active in search</p></div>
+    <div class="card"><h3>192 product palettes</h3><p>Each with its reasoning profile</p></div>
+    <div class="card"><h3>Type</h3><p>74 font pairings and 1,934 approved Google Fonts, with licences recorded</p></div>
+    <div class="card"><h3>119 UX guidelines</h3><p>Rules for how things behave and are interacted with</p></div>
+    <div class="card"><h3>Icons and motion</h3><p>105 curated Phosphor icons, 17 GSAP presets, 25 chart types</p></div>
+    <div class="card"><h3>22 stacks</h3><p>React to SwiftUI to WinUI: per-stack do and don't rules</p></div>
+  </div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Search</th><th>Values</th></tr></thead>
+    <tbody>
+      <tr><td><code>--domain</code></td><td><code>style</code> <code>color</code> <code>chart</code> <code>landing</code> <code>product</code> <code>ux</code> <code>typography</code> <code>icons</code> <code>gsap</code> <code>react</code> <code>web</code> <code>google-fonts</code></td></tr>
+      <tr><td><code>--stack</code></td><td><code>react</code> <code>nextjs</code> <code>vue</code> <code>svelte</code> <code>astro</code> <code>swiftui</code> <code>react-native</code> <code>flutter</code> <code>nuxtjs</code> <code>nuxt-ui</code> <code>html-tailwind</code> <code>shadcn</code> <code>jetpack-compose</code> <code>threejs</code> <code>angular</code> <code>laravel</code> <code>javafx</code> <code>wpf</code> <code>winui</code> <code>avalonia</code> <code>uno</code> <code>uwp</code></td></tr>
+      <tr><td>formats</td><td><code>ascii</code> <code>markdown</code> <code>dtcg</code> (W3C design tokens) <code>shadcn</code> (a <code>:root</code> block)</td></tr>
+      <tr><td>dials</td><td><code>variance</code> <code>motion</code> <code>density</code></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="use">Using it</h2>
+  <p>Inside Claude Code, just ask: "choose a palette and fonts for a spa booking site", "what are the
+  focus rules for a modal", "review this page's accessibility". The scripts also work on their own,
+  from any folder:</p>
+<pre>python plugins/ui-design/catalog/scripts/search.py "keyboard focus modal" --domain ux
+python plugins/ui-design/catalog/scripts/search.py "suspense streaming" --stack nextjs
+python plugins/ui-design/catalog/scripts/route.py "an invoicing app for freelancers"</pre>
+  <p><strong>Route a free-worded brief first.</strong> A search only matches the catalog's own words
+  (<code>invoice</code> finds the right row where <code>invoicing</code> does not). <code>route.py</code>
+  translates the brief into the right domains and queries, and warns when a literal search would have
+  ranked the wrong product first. <code>ROUTER.md</code> explains the choices, and <code>INDEX.md</code>
+  lists the catalog's vocabulary.</p>
+
+  <h2 id="design-system">Design systems</h2>
+<pre>python plugins/ui-design/catalog/scripts/search.py "beauty spa wellness service" --design-system
+python plugins/ui-design/catalog/scripts/search.py "beauty spa wellness service" --design-system -f dtcg</pre>
+  <p>This produces a whole-product recommendation: style, palette with contrast checked, type pairing,
+  effects and anti-patterns. It can come out as W3C tokens or a shadcn/ui block.</p>
+
+  <h2 id="parts">Skills and agents</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Name</th><th>Kind</th><th>What it does</th></tr></thead>
+    <tbody>
+      <tr><td><code>ui-design-catalog</code></td><td>skill</td><td>Searches the catalog and generates design systems. Claude reaches for it whenever a task changes how something looks, moves or is interacted with</td></tr>
+      <tr><td><code>ui-design-multipart</code></td><td>skill</td><td>For a wide brief (four or more parts), splits the searches across agents; for a built page, reviews four areas in parallel. Cross-checks the answers</td></tr>
+      <tr><td><code>ui-design-search-part</code></td><td>agent</td><td>Runs exactly one search from a router manifest</td></tr>
+      <tr><td><code>ui-design-page-reviewer</code></td><td>agent</td><td>Reviews one area of one page (a11y and touch, layout, type-colour-style, or motion) and cites a real rule for every finding</td></tr>
+      <tr><td><code>ui-design-catalog-refresh</code></td><td>skill</td><td>Maintainers only: refreshes the Google Fonts and Phosphor data and stops for approval</td></tr>
+      <tr><td><code>ui-design-catalog-reviewer</code></td><td>agent</td><td>Maintainers only: checks one refresh diff for licences, columns and counts</td></tr>
+    </tbody>
+  </table></div>
+  <p>Every agent is read-only and none persists anything. Whatever an agent returns is treated as
+  data, never as instructions.</p>
+
+  <h2 id="writes">What it writes, and what it does not</h2>
+  <ul>
+    <li><strong>Nothing, by default.</strong> Searching, routing, reviewing and generating only print.</li>
+    <li><strong><code>--persist</code> is the one way it writes to your project</strong>, and only with an
+      explicit <code>--output-dir</code>, which Claude confirms with you first. It creates
+      <code>design-system/&lt;project&gt;/</code> (<code>MASTER.md</code>, <code>tokens.json</code>,
+      <code>theme.css</code>, <code>pages/</code>) and skips existing files unless you allow
+      <code>--force</code>.</li>
+    <li><strong>No network.</strong> The catalog ships inside the plugin.</li>
+    <li><strong>Permission prompts:</strong> a plugin cannot grant itself permission to run commands, so
+      Claude Code asks before it runs the plugin's <code>python</code> scripts unless you have allowed them.</li>
+  </ul>
+
+  <h2 id="maintain">Maintaining it</h2>
+  <p>Everything that needs a dependency, the network or a secret lives in <code>maintenance/</code>. One
+  command runs all ten gates and prints the exact command to re-run whichever fails:</p>
+<pre>pip install -r plugins/ui-design/maintenance/requirements.txt
+python plugins/ui-design/maintenance/verify.py</pre>
+  <p>Refreshing the Google Fonts data live needs <code>GOOGLE_FONTS_API_KEY</code>
+  (see <a href="keys.html">Keys</a>). Promoting a refreshed candidate is an editorial decision with a
+  licensing dimension, so the refresh skill always stops for a maintainer's approval. Run it from a
+  clone, not an installed copy: an installed plugin's folder is discarded on update.</p>
+  <p>The catalog derives from
+  <a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill">ui-ux-pro-max-skill</a> by Next Level
+  Builder (MIT). <code>NOTICE</code> lists the upstream sources.</p>
+</main>
+
+<footer>ROSW · <a href="https://github.com/groot99-droid/Pipelines-Plugin/tree/main/plugins/ui-design">plugins/ui-design/ on GitHub</a></footer>
+</body>
+</html>

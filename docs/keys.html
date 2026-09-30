@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>API Keys · ROSW</title>
+<meta name="description" content="Put your API keys in one place, outside the repo.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="top-inner">
+  <a class="brand" href="index.html">RO<span>SW</span></a>
+  <nav aria-label="Pages"><ul class="nav">
+    <li><a href="index.html">Overview</a></li>
+    <li><a href="creative-writing.html">Creative writing</a></li>
+    <li><a href="studio.html">Studio</a></li>
+    <li><a href="ui-design.html">UI design</a></li>
+    <li><a href="keys.html" aria-current="page">Keys</a></li>
+  </ul></nav>
+</div></header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">Setup</p>
+    <h1>Your API keys</h1>
+    <p class="lede">Most of ROSW needs no key at all. You need one only to draft with Gemini or the
+    Anthropic API, or to refresh the font catalog. Keys are saved in your user folder, never in the
+    repo, so they cannot be committed by accident.</p>
+  </section>
+
+  <!-- Shown when the page was not opened by setup_keys.py -->
+  <section id="offline">
+    <div class="note">
+      <p><strong>To save keys, open this page from the helper.</strong> In the repo folder, run:</p>
+<pre>python docs/setup_keys.py</pre>
+      <p>It opens this page again, connected to a small server that runs only on your own computer
+      (<code>127.0.0.1</code>) and stops when you press Done. The page cannot save anything without it.</p>
+    </div>
+  </section>
+
+  <!-- Shown when connected to setup_keys.py -->
+  <form id="form" hidden autocomplete="off">
+    <p>Saving to <code id="file">~/.rosw/keys.env</code>. Leave a field empty to keep what is saved.
+    After saving, the page shows only whether a key is set; the value is never shown or sent back.</p>
+    <div id="groups"></div>
+    <div class="actions">
+      <button type="submit" class="primary" id="save">Save keys</button>
+      <button type="button" id="done">Done, stop the helper</button>
+      <span id="msg" role="status" aria-live="polite"></span>
+    </div>
+  </form>
+
+  <h2 id="which">Which key do I need?</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Key</th><th>Tool</th><th>Needed when</th><th>Get one</th></tr></thead>
+    <tbody>
+      <tr><td><code>GEMINI_API_KEY</code></td><td>Creative writing</td><td>Drafting or the librarian runs on Gemini (<code>PIPELINE_LLM_BACKEND=gemini_mcp</code> or <code>LIBRARIAN_BACKEND=gemini_mcp</code>)</td><td><a href="https://aistudio.google.com/apikey">Google AI Studio</a></td></tr>
+      <tr><td><code>ANTHROPIC_API_KEY</code></td><td>Creative writing</td><td>The standalone script drafts with the Anthropic API (<code>PIPELINE_LLM_BACKEND=anthropic</code>)</td><td><a href="https://console.anthropic.com/settings/keys">Anthropic Console</a></td></tr>
+      <tr><td><code>GOOGLE_FONTS_API_KEY</code></td><td>UI design</td><td>A maintainer refreshes the Google Fonts catalog live</td><td><a href="https://developers.google.com/fonts/docs/developer_api">Google Fonts Developer API</a></td></tr>
+    </tbody>
+  </table></div>
+  <p><strong>Not needed:</strong> the Claude Code skills (they use Claude itself), the script's default
+  Ollama backend, the studio, and everything else in the UI design plugin.</p>
+
+  <h2 id="how">How the keys are used</h2>
+  <ul>
+    <li><strong>Creative writing:</strong> <code>creative-writing/pipeline/llm.py</code> reads
+      <code>~/.rosw/keys.env</code> on start. A value there wins over one set in your shell.</li>
+    <li><strong>UI design:</strong> the plugin stays self-contained, so its refresh reads the key from
+      your shell. Load it from the file first:
+<pre><span class="c"># PowerShell</span>
+$env:GOOGLE_FONTS_API_KEY = ((Get-Content "$HOME\.rosw\keys.env" | Select-String '^GOOGLE_FONTS_API_KEY=').Line -split '=', 2)[1]
+
+<span class="c"># bash / zsh</span>
+export "$(grep '^GOOGLE_FONTS_API_KEY=' ~/.rosw/keys.env)"</pre></li>
+    <li><strong>Somewhere else?</strong> Set <code>ROSW_KEYS_FILE</code> to another path before running the
+      helper or the pipeline.</li>
+    <li><strong>Had a key in <code>creative-writing/pipeline/.env</code>?</strong> That older location still
+      works, but <code>python docs/setup_keys.py --migrate</code> moves the key into your user folder and
+      deletes the file from the repo.</li>
+  </ul>
+  <div class="note warn"><p>Never paste a key into a chat, a command line, an issue, or any file in the
+  repo. If one ever leaks, revoke it at the provider and make a new one.</p></div>
+</main>
+
+<footer>ROSW · keys stay on your computer</footer>
+
+<template id="key-tpl">
+  <div class="key">
+    <div class="key-head"><code class="name"></code><span class="badge"></span></div>
+    <p class="about"></p>
+    <div class="row">
+      <input type="password" spellcheck="false" autocapitalize="off" autocomplete="off">
+      <button type="button" class="show">Show</button>
+      <button type="button" class="link remove" hidden>Remove saved key</button>
+    </div>
+  </div>
+</template>
+
+<script>
+(() => {
+  const token = new URLSearchParams(location.hash.slice(1)).get("t");
+  const form = document.getElementById("form");
+  const groups = document.getElementById("groups");
+  const msg = document.getElementById("msg");
+  const tpl = document.getElementById("key-tpl");
+  const pending = new Set();
+  let rows = {};
+
+  function say(text, kind) { msg.textContent = text; msg.className = kind || ""; }
+
+  async function call(path, body) {
+    const opts = { headers: { "X-ROSW-Token": token }, cache: "no-store" };
+    if (body !== undefined) {
+      opts.method = "POST";
+      opts.headers["Content-Type"] = "application/json";
+      opts.body = JSON.stringify(body);
+    }
+    const res = await fetch(path, opts);
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || ("HTTP " + res.status));
+    return data;
+  }
+
+  function render(keys) {
+    for (const [name, isSet] of Object.entries(keys)) {
+      const r = rows[name];
+      r.badge.textContent = pending.has(name) ? "will be removed" : (isSet ? "set" : "not set");
+      r.badge.className = "badge " + (isSet && !pending.has(name) ? "set" : "unset");
+      r.remove.hidden = !isSet || pending.has(name);
+      r.input.placeholder = isSet ? "saved. Paste a new key to replace it" : "paste your key";
+    }
+  }
+
+  function build(status) {
+    document.getElementById("file").textContent = status.file;
+    for (const [name, about] of Object.entries(status.about)) {
+      const node = tpl.content.firstElementChild.cloneNode(true);
+      const id = "k-" + name;
+      const r = {
+        badge: node.querySelector(".badge"), input: node.querySelector("input"),
+        show: node.querySelector(".show"), remove: node.querySelector(".remove"),
+      };
+      node.querySelector(".name").textContent = name;
+      node.querySelector(".about").textContent = "For " + about + ".";
+      r.input.id = id;
+      r.input.setAttribute("aria-label", name);
+      r.show.addEventListener("click", () => {
+        const hidden = r.input.type === "password";
+        r.input.type = hidden ? "text" : "password";
+        r.show.textContent = hidden ? "Hide" : "Show";
+      });
+      r.remove.addEventListener("click", () => {
+        pending.add(name); r.input.value = "";
+        render(status.keys);
+        say("Press Save to remove " + name + ".");
+      });
+      rows[name] = r;
+      groups.appendChild(node);
+    }
+    render(status.keys);
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const set = {};
+    for (const [name, r] of Object.entries(rows)) {
+      if (r.input.value.trim()) { set[name] = r.input.value.trim(); pending.delete(name); }
+    }
+    if (!Object.keys(set).length && !pending.size) { say("Nothing to save.", "err"); return; }
+    try {
+      const out = await call("/save", { set, remove: [...pending] });
+      for (const r of Object.values(rows)) { r.input.value = ""; r.input.type = "password"; r.show.textContent = "Show"; }
+      pending.clear();
+      render(out.keys);
+      say("Saved.", "ok");
+    } catch (err) { say("Not saved: " + err.message, "err"); }
+  });
+
+  document.getElementById("done").addEventListener("click", async () => {
+    try { await call("/quit", {}); } catch (_) {}
+    form.querySelectorAll("input, button").forEach(el => el.disabled = true);
+    say("The helper has stopped. You can close this tab.", "ok");
+  });
+
+  if (token && location.protocol === "http:") {
+    call("/status").then(status => {
+      build(status);
+      form.hidden = false;
+      document.getElementById("offline").hidden = true;
+    }).catch(() => {});
+  }
+})();
+</script>
+</body>
+</html>

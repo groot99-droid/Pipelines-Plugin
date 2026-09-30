@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ROSW Docs</title>
+<meta name="description" content="What ROSW is, the three tools in it, and how to get started.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="top-inner">
+  <a class="brand" href="index.html">RO<span>SW</span></a>
+  <nav aria-label="Pages"><ul class="nav">
+    <li><a href="index.html" aria-current="page">Overview</a></li>
+    <li><a href="creative-writing.html">Creative writing</a></li>
+    <li><a href="studio.html">Studio</a></li>
+    <li><a href="ui-design.html">UI design</a></li>
+    <li><a href="keys.html">Keys</a></li>
+  </ul></nav>
+</div></header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">Start here</p>
+    <h1>One repo, three tools for making things with Claude Code</h1>
+    <p class="lede">ROSW keeps each tool in its own folder: its code, its data and its docs
+    together. Every tool works in checkpoints. It stops, shows you what it did, and waits for
+    you before going on. Nothing lands in a vault without a preview and an explicit yes.</p>
+  </section>
+
+  <div class="cards">
+    <article class="card">
+      <span class="tag">creative-writing/</span>
+      <h3>Creative writing</h3>
+      <p>An Obsidian vault of 63 works, and a six-stage pipeline that turns an idea into a new
+      piece in the author's own modes: essay, horror prose, epic fantasy or confessional poetry.
+      A causal-ledger checker keeps stories to <em>but</em> and <em>therefore</em>.</p>
+      <a class="go" href="creative-writing.html">What it does →</a>
+    </article>
+    <article class="card">
+      <span class="tag">studio/</span>
+      <h3>Studio</h3>
+      <p>Makes one thing at a time through six checkpointed stages. It leaves a note that says
+      how the thing was made and what is decided about it. Nothing is made before every
+      constraint it needs is sourced.</p>
+      <a class="go" href="studio.html">What it does →</a>
+    </article>
+    <article class="card">
+      <span class="tag">plugins/ui-design/</span>
+      <h3>UI design plugin</h3>
+      <p>A Claude Code plugin with a local catalog of UI styles, palettes, fonts, UX rules,
+      icons, motion and stacks, and a generator that turns a query into a contrast-checked
+      design system.</p>
+      <a class="go" href="ui-design.html">What it does →</a>
+    </article>
+  </div>
+
+  <h2 id="quick-start">Quick start</h2>
+  <ol>
+    <li><strong>Get the repo.</strong>
+<pre>git clone https://github.com/groot99-droid/Pipelines-Plugin.git
+cd Pipelines-Plugin</pre></li>
+    <li><strong>Install the few Python packages.</strong> The search tools need none; the pipelines
+      read YAML.
+<pre>pip install -r creative-writing/pipeline/requirements.txt
+pip install -r studio/pipeline/requirements.txt</pre></li>
+    <li><strong>Add your keys, if you need any.</strong> Most people need none to start: the
+      creative-writing script's default backend is a local Ollama model, and the Claude Code
+      skills use Claude itself. If you want Gemini or the Anthropic API, run
+<pre>python docs/setup_keys.py</pre>
+      A page opens in your browser. Paste a key, press Save, done. Keys go to
+      <code>~/.rosw/keys.env</code> in your user folder, never into the repo.
+      <a href="keys.html">More about keys</a>.</li>
+    <li><strong>Open Claude Code in the repo folder.</strong> The creative-writing and studio
+      skills load automatically. For the UI design plugin, start with
+<pre>claude --plugin-dir ./plugins/ui-design</pre>
+      or install it (see <a href="ui-design.html#install">UI design → Install</a>).</li>
+    <li><strong>Ask for what you want.</strong> "Develop a horror story from this idea…",
+      "Make a UI direction for our ops console…", "Pick a palette and fonts for a spa booking
+      site…". The matching skill is picked from its description.</li>
+  </ol>
+
+  <h2 id="requirements">Requirements</h2>
+  <ul>
+    <li><strong>Python 3.10 or newer</strong> on your <code>PATH</code> as <code>python</code>.</li>
+    <li><strong><a href="https://claude.com/claude-code">Claude Code</a></strong>, for the skills
+      and agents. The creative-writing pipeline also has a standalone script that needs no Claude
+      Code at all.</li>
+    <li><strong>Optional:</strong> <a href="https://ollama.com">Ollama</a> for fully offline
+      drafting, and <a href="https://obsidian.md">Obsidian</a> to browse the two vaults.</li>
+  </ul>
+
+  <h2 id="layout">What is where</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Folder</th><th>What it holds</th></tr></thead>
+    <tbody>
+      <tr><td><code>creative-writing/vault/</code></td><td>The Obsidian vault: 63 works, annotations, chunk tags, craft notes, the idea library and its search tool</td></tr>
+      <tr><td><code>creative-writing/pipeline/</code></td><td>The checkpointed pipeline that writes into that vault</td></tr>
+      <tr><td><code>studio/vault/</code></td><td>A second vault: one note per made thing, and the brand gates</td></tr>
+      <tr><td><code>studio/pipeline/</code></td><td>The studio's spec, bookkeeper and note writer</td></tr>
+      <tr><td><code>plugins/ui-design/</code></td><td>The UI design plugin, complete and self-contained</td></tr>
+      <tr><td><code>.claude/skills/</code>, <code>.claude/agents/</code></td><td>The creative-writing and studio skills and agents. They load when this repo is your working folder</td></tr>
+      <tr><td><code>docs/</code></td><td>These pages, and the key setup helper</td></tr>
+      <tr><td><code>CLAUDE.md</code>, <code>INDEX.md</code></td><td>The repo's conventions, and a generated index of every tool, skill and agent</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="note">
+    <p><strong>The rules live with the tools.</strong> Each vault has its own
+    <code>CLAUDE.md</code>, and that file is authoritative for anything written into it.
+    These pages describe the tools; they do not replace those rules.</p>
+  </div>
+</main>
+
+<footer>ROSW · <a href="https://github.com/groot99-droid/Pipelines-Plugin">Source on GitHub</a></footer>
+</body>
+</html>

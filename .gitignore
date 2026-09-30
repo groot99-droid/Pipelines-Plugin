@@ -10,8 +10,10 @@
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ── Secrets ──────────────────────────────────────────────────────────────────
-# creative-writing/pipeline/.env holds a live GEMINI_API_KEY. Never commit it;
-# .env.example documents the shape instead.
+# Keys belong in ~/.rosw/keys.env, outside the repo (python docs/setup_keys.py).
+# A legacy creative-writing/pipeline/.env may still exist on a clone. Never commit
+# either; .env.example documents the shape instead.
+keys.env
 .env
 .env.*
 !.env.example
