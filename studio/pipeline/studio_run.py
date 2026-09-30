@@ -407,6 +407,31 @@ def confirmed_before_output(env, state, stage, run_dir):
                           "The work ran ahead of the go-ahead.")
 
 
+@check("token_held")
+def token_held(env, state, stage, run_dir):
+    """A local-compute pipeline runs nothing until this run holds a live PASS
+    token for its workload class. Any other class of pipeline passes."""
+    import compute_gate  # beside this file
+
+    cfg = env.pipeline(state["pipeline"])
+    if cfg.get("class") != "local-compute":
+        return
+    workload = cfg.get("workload")
+    if not workload:
+        raise Usage(f"`{state['pipeline']}` is local-compute and names no `workload:` class")
+    machine = compute_gate.load_machine()
+    token = compute_gate.load_token(env, machine)
+    if not compute_gate.token_live(token):
+        raise Refused(f"no live compute token. A local-compute run holds one first: "
+                      f"compute_gate.py mint {workload}, then compute_gate.py consume {state['run_id']}")
+    if token["workload"] != workload:
+        raise Refused(f"the live token is for `{token['workload']}`, and this run needs `{workload}`")
+    if token.get("consumed_by") != state["run_id"]:
+        raise Refused("the token is not consumed by this run"
+                      + (f" (held by `{token['consumed_by']}`)" if token.get("consumed_by") else "")
+                      + f". Consume it: compute_gate.py consume {state['run_id']}")
+
+
 @check("note_written")
 def note_written(env, state, stage, run_dir):
     """The last write of this run's note is a record write, made after the

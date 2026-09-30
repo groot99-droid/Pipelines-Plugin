@@ -298,7 +298,9 @@ connectors:
 # `requires_context` is stated at the level of the constraint, not the file:
 # which gate, and what is needed from it.
 #
-# `class`: none | spend | local-compute
+# `class`: none | spend | local-compute. A local-compute pipeline also names
+# its `workload:` class from studio/pipeline/machine.yaml; execute is not
+# marked done without a live compute token for it, consumed by the run.
 # --------------------------------------------------------------------
 pipelines:
   ui-direction:
@@ -1097,6 +1099,7 @@ stages:
       - confirmed
       - outputs_exist
       - confirmed_before_output
+      - token_held
     description: >
       Run the recipe, and nothing that is not in it.
     prompt: |
@@ -1104,6 +1107,11 @@ stages:
         python studio/pipeline/studio_run.py confirm <run-id> execute --words "<what the author said>"
       Then run the recipe as written.
       Call no tool whose name contains a word under `connectors: never`.
+      A pipeline of class local-compute holds a compute token first, and
+      the bookkeeper will not mark execute done without one consumed by this
+      run:
+        python studio/pipeline/compute_gate.py mint <workload>
+        python studio/pipeline/compute_gate.py consume <run-id>
 
       {pipeline.stage_notes.execute}
 

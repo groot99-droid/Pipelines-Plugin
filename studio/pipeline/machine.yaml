@@ -1,0 +1,87 @@
+# The machine the studio runs on, and what it may be asked to do locally.
+#
+# compute_gate.py reads this file. A workload class lists thresholds a probe
+# must clear before a token is minted for it. Every value here is the author's
+# to edit; the thresholds were carried from Creative-Headquarters' ARTIFACT B,
+# which was written for a 16 GB laptop with integrated graphics and no CUDA.
+#
+# Threshold keys are `<metric>_min`, `<metric>_max` or `<metric>_in`, where
+# <metric> is a dotted path into the probe's JSON (see probe.py). A metric the
+# probe could not read is null, and a null named by a threshold fails: an
+# unverifiable gate is closed. The two thermal readings are the one exception,
+# stated under `laws:`.
+
+machine:
+  name: "the author's laptop"
+  memory_gb: 16
+  graphics: "integrated, no CUDA"
+
+token:
+  file: "compute_gate.json"      # under runs_root: bookkeeping, like a run
+  ttl_seconds: 1800
+
+# Held to by every class, whatever it asks.
+every_class:
+  host.kind_in: [windows, wsl, linux]
+  gpu.status_in: [integrated, none]     # a discrete GPU means this is not the machine described above
+
+classes:
+  llm_local_sm:
+    describes: "a local language model up to 8B at Q4, context up to 8192"
+    memory.available_gb_min: 6
+    memory.free_pct_min: 30
+    memory.swap_used_mb_max: 6144
+    power.source_in: [ac, battery]
+    thermal.cpu_temp_c_max: 90
+    thermal.cpu_perf_pct_min: 65
+    disk.free_gb_min: 12
+  llm_local_md:
+    describes: "a local language model of 12 to 14B at Q4, context up to 4096"
+    memory.available_gb_min: 10
+    memory.free_pct_min: 45
+    memory.swap_used_mb_max: 3072
+    power.source_in: [ac]
+    thermal.cpu_temp_c_max: 85
+    thermal.cpu_perf_pct_min: 80
+    disk.free_gb_min: 20
+  render_3d_cpu:
+    describes: "a headless Blender render, EEVEE or CPU Cycles"
+    memory.available_gb_min: 8
+    memory.free_pct_min: 40
+    memory.swap_used_mb_max: 3072
+    power.source_in: [ac]
+    thermal.cpu_temp_c_max: 80
+    thermal.cpu_perf_pct_min: 85
+    disk.free_gb_min: 20
+  batch_2d:
+    describes: "a batch of image edits run locally"
+    memory.available_gb_min: 5
+    memory.free_pct_min: 25
+    memory.swap_used_mb_max: 6144
+    power.source_in: [ac]
+    thermal.cpu_temp_c_max: 90
+    thermal.cpu_perf_pct_min: 65
+    disk.free_gb_min: 10
+
+laws:
+  # A null metric named by a threshold fails.
+  null_closes: true
+  # One readable thermal reading is enough; when both are null the gate fails.
+  thermal_either: [thermal.cpu_temp_c_max, thermal.cpu_perf_pct_min]
+  # One live token at a time. A second class is denied while a PASS token for
+  # another is unexpired. A denial never touches the token on disk.
+  single_flight: true
+
+# What to do about a failed check, by the metric it names.
+remedies:
+  host.kind: "This is not a host the studio runs on. Nothing to do here."
+  gpu.status: "A discrete GPU was found. machine.yaml describes another machine; update it before trusting a verdict."
+  memory.available_gb: "Close what is holding memory, or run a smaller class. The claim limit is 60% of what is available."
+  memory.free_pct: "Close what is holding memory, or run a smaller class."
+  memory.swap_used_mb: "The page file is in use; the machine is already over-committed. Wait, or close things."
+  power.source: "Plug in. Sustained work runs on AC only."
+  thermal.cpu_temp_c: "Let it cool. A hot CPU throttles and a render takes longer than it saves."
+  thermal.cpu_perf_pct: "The CPU is throttled. Let it cool, or move off the lap."
+  disk.free_gb: "Free disk before rendering; a render that fills the disk is lost."
+  single_flight: "Another class holds a live token. Wait for it to expire, or release it if its job is gone: compute_gate.py release."
+  thermal: "Both thermal readings are unreadable, so the gate is closed. On Windows, the PowerShell bridge is what reads them."
