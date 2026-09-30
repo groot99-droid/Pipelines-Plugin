@@ -1,0 +1,24 @@
+{
+  "name": "rosw",
+  "version": "0.1.0",
+  "description": "The ROSW pipelines: a checkpointed creative-writing pipeline with its vault, chunk tagging and plot-logic checks, and the studio pipeline that walks one made thing through six stages and records it in the studio vault.",
+  "author": {
+    "name": "groot99-droid"
+  },
+  "homepage": "https://github.com/groot99-droid/Pipelines-Plugin",
+  "repository": "https://github.com/groot99-droid/Pipelines-Plugin",
+  "keywords": [
+    "creative-writing",
+    "obsidian",
+    "pipeline",
+    "checkpoints",
+    "studio",
+    "brand"
+  ],
+  "skills": "./.claude/skills/",
+  "agents": [
+    "./.claude/agents/creative-writing-chunk-tagger.md",
+    "./.claude/agents/creative-writing-drafter.md",
+    "./.claude/agents/creative-writing-librarian-native.md"
+  ]
+}
