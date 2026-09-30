@@ -511,19 +511,69 @@ pipelines:
         nothing the gate itself does not say.
 
   brush:
+    # The packer is built. The pipeline starts once the designer app is in
+    # place at studio/hub/brush/ (copied from the author's machine, its
+    # Procreate export removed) and `app:` below points at a real file.
     status: not_yet_implemented
     from: "DECISIONS.md D2; tools/brush-designer/"
     kind: brush
-    makes: "A brush: its parameters, its shape and grain, and an importable file."
+    makes: "A brush: its parameters, its shape and grain, and a file Procreate imports."
+    intent:
+      - brush
+      - brush set
+      - procreate brush
+      - stipple
+      - grain
+      - tip shape
     requires_context:
       - gate: visual_identity
         needs: ["generated imagery: motifs, texture"]
     executes_through:
-      capability: "the brush designer, driven in a browser; a packer for the archive"
+      app: "studio/hub/brush/index.html"
+      packer: "studio/pipeline/brush_pack.py"
+    connector:
+      tools: []
     class: none
+    leaves_machine: "Nothing. The designer runs in the browser on loopback and the packer is local."
+    carries:
+      - "The brush is a capability the studio calls, not a panel it links to (D2)."
+      - "A brush's parameters are its Method: the note must be enough to rebuild it."
     open:
-      - "visual_identity section 7 is a declared gap, so a brush asks for its imagery constraint at the context stage."
-      - "The Procreate archive must be written again: the original encoder indexes a container before its children and has no UID type."
+      - "The designer app is not yet under studio/hub/brush/. It is copied from the author's machine; its bplist export and its Ollama tab are left behind."
+      - "Whether Procreate imports the packed file is settled by importing one. A Procreate-written .brush under studio/pipeline/tests/fixtures/procreate/ turns the packer's fixture test on."
+    stage_notes:
+      intake: |
+        Capture what the brush is for (inking, texture, wash), which app it
+        targets (Procreate, or another through the Universal Kit), and any
+        brush the author names as a starting point. Propose the note's path,
+        <project>/brush/<slug>.md, or one-offs/brush/<slug>.md.
+      recipe: |
+        Name the parameters the author has decided (spacing, taper, grain
+        depth, blend mode, and so on), each with its source: the brief, a
+        Decision in Force, or the attestation. A parameter the author has not
+        decided is left to the designer session and said so. Name the files:
+        the bundle the designer exports into the run folder, and the .brush or
+        .brushset the packer writes there. Nothing is written outside the run
+        folder until record, when kept files go under
+        studio/assets/<project>/brush/<slug>/.
+      execute: |
+        Open the hub's Brushes tab ({pipeline.executes_through.app}, served by
+        studio/hub/serve.py). The author designs the brush and exports the
+        bundle; move it into the run folder. Then pack it:
+          python {pipeline.executes_through.packer} pack <bundle> --out <run folder>
+        or, for several brushes, `set ... --name "<set name>"`. Log the packer's
+        output and run `inspect` on the result; put its output in the log.
+      review: |
+        Beside each decided parameter, the value the bundle holds, and whether
+        it matches. Beside the imagery constraint from the attestation, how the
+        tip and grain hold to it. Whether Procreate imported the file is the
+        author's finding; record it as they say it, or as untested.
+      record: |
+        kind: brush. Method is the parameter table from `inspect`, whole, and
+        the generator names, so the brush can be rebuilt in the designer.
+        Artifacts: the .brush or .brushset as `export`, the bundle as
+        `reference`. A parameter the author decided in the session is a
+        Decision in Force.
 
   still-image:
     status: not_yet_implemented
