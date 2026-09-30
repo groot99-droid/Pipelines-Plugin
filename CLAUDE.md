@@ -30,7 +30,11 @@ creative-writing/    the creative-writing tool
 studio/              the studio tool
   vault/             a second Obsidian vault — one note per made thing, the brand
                      gates, and the vault's own CLAUDE.md and SCHEMA.md
-  pipeline/          spec.yaml, the bookkeeper, the note writer, and their tests
+  pipeline/          spec.yaml, the bookkeeper, the note and gate writers, the brush
+                     packer, the compute gate, and their tests
+  hub/               the desk: a loopback server and page over the vault and the runs,
+                     the Windows launcher, and (once copied in) the brush designer
+  assets/            what runs keep, by project, kind and slug. Not versioned
   docs/              what was carried from Creative-Headquarters, and how
 docs/                HTML pages describing each tool, and setup_keys.py (a localhost-only
                      helper that saves API keys to ~/.rosw/keys.env)
@@ -136,6 +140,25 @@ studio reads or writes `creative-writing/vault/`.
   Anything else there is proposed as a diff, never written.
 - `plugins/ui-design/` is read-only from the studio. The `ui-direction` pipeline
   runs its scripts and changes nothing in it.
+- **A run keeps a file only through `studio_run.py keep`**, after the execute
+  go-ahead, into `studio/assets/<project>/<kind>/<slug>/` (not versioned). A note
+  lists what was kept under `artifacts`, by that path, and never a link. A
+  connector's result is downloaded into the run folder during execute.
+- A pipeline that runs through a connector lists every tool it may call under
+  `connector: tools` in the spec, and calls no other; `connectors: never` still
+  holds. A `local-compute` pipeline names a `workload:` class from
+  `studio/pipeline/machine.yaml`, and execute is not marked done without a live
+  token from `compute_gate.py` consumed by the run. `mint` writes nothing on a
+  DENY; the token lives under `runs/`.
+- **The hub** (`studio/hub/serve.py`) binds 127.0.0.1, serves only its own folder
+  and a few JSON routes over the vault and the runs, and writes nothing but a new
+  run through the bookkeeper. Its stylesheet holds no literal value: every colour,
+  size and font is a custom property set from `tokens.json` at load, and
+  `tests/test_hub.py` refuses a literal. `studio/vault/tools/vault_index.py` is
+  the index it searches; it carries no note bodies and is not versioned.
+- `studio/pipeline/brush_pack.py` packs a designer bundle into a Procreate file
+  with `plistlib`. A Procreate-written `.brush` under
+  `studio/pipeline/tests/fixtures/procreate/` turns its format test on.
 - Run the tests after touching the spec, a gate, `tokens.json`, `SCHEMA.md`, the
   vault's `CLAUDE.md`, the skill or either script:
   `python -m unittest discover -s studio/pipeline/tests`. They run against
