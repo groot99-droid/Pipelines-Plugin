@@ -14,6 +14,8 @@ import unittest
 
 from helpers import PIPELINE, content_md, studio_common
 
+import gate_md
+
 STUDIO = PIPELINE.parent
 VAULT = STUDIO / "vault"
 GATES = VAULT / "_Context" / "brand"
@@ -31,10 +33,9 @@ class Context(unittest.TestCase):
 
     # ── the gates on disk ─────────────────────────────────────────────────
 
-    def test_authored_means_the_file_is_there(self):
+    def test_every_gate_is_named_for_its_file(self):
         for name, gate in self.spec["gates"].items():
             with self.subTest(gate=name):
-                self.assertEqual(bool(gate["authored"]), (GATES / gate["file"]).is_file())
                 self.assertEqual(gate["file"], f"{name}.context.md")
                 self.assertTrue(gate["must_answer"])
 
@@ -43,18 +44,14 @@ class Context(unittest.TestCase):
         declared = {gate["file"] for gate in self.spec["gates"].values()}
         self.assertLessEqual(on_disk, declared)
 
-    def test_every_section_the_spec_cites_is_in_the_gate(self):
+    def test_every_authored_gate_has_the_shape_the_bookkeeper_reads(self):
         for name, gate in self.spec["gates"].items():
-            if not gate["authored"]:
+            path = GATES / gate["file"]
+            if not path.is_file():
                 continue
-            headings = re.findall(r"^## (\d+)\. (.+)$", read(GATES / gate["file"]), re.M)
-            numbers = {number for number, _ in headings}
-            for item in gate["answers"] + gate["unresolved"]:
-                with self.subTest(gate=name, section=item["section"]):
-                    self.assertIn(item["section"], numbers)
-            unresolved = {number for number, title in headings if title.strip() == "Unresolved"}
-            self.assertEqual(unresolved, {item["section"] for item in gate["unresolved"]},
-                             "a gate's own Unresolved section and the spec's list must match")
+            with self.subTest(gate=name):
+                self.assertEqual(gate_md.lint_gate(read(path)), [])
+                self.assertTrue(studio_common.gate_sections(self.env, name)["answers"])
 
     def test_the_gate_readme_agrees_with_the_spec(self):
         rows = re.findall(r"^\| `(\w+)` \| (.+?) \| .+? \| (.+?) \|$", read(GATES / "README.md"), re.M)
@@ -62,9 +59,9 @@ class Context(unittest.TestCase):
         self.assertEqual(set(listed), set(self.spec["gates"]))
         for name, (state, needed) in listed.items():
             with self.subTest(gate=name):
-                gate = self.spec["gates"][name]
-                self.assertEqual(state.startswith("**authored**"), bool(gate["authored"]))
-                self.assertEqual("declared gap" in state, bool(gate.get("unresolved")))
+                sections = studio_common.gate_sections(self.env, name)
+                self.assertEqual(state.startswith("**authored**"), sections is not None)
+                self.assertEqual("declared gap" in state, bool(sections and sections["unresolved"]))
                 users = {p for p, cfg in self.spec["pipelines"].items()
                          if any(need["gate"] == name for need in cfg.get("requires_context", []))}
                 stated = set() if needed.strip() == "none yet" else {

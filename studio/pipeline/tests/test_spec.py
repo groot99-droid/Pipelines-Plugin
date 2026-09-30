@@ -10,6 +10,8 @@ import unittest
 
 from helpers import PIPELINE, REPO, content_md, studio_common, studio_run
 
+import gate_md
+
 STUDIO = PIPELINE.parent
 VAULT = STUDIO / "vault"
 GATES = VAULT / "_Context" / "brand"
@@ -33,15 +35,29 @@ class Spec(unittest.TestCase):
 
     # ── stages ────────────────────────────────────────────────────────────
 
+    def named_checks(self):
+        """(where, check) for every check a stage or a pipeline names."""
+        found = [(stage["id"], name) for stage in self.spec["stages"] for name in stage.get("checks", [])]
+        stages = {stage["id"] for stage in self.spec["stages"]}
+        for pipeline, cfg in self.spec["pipelines"].items():
+            for stage, names in (cfg.get("checks") or {}).items():
+                self.assertIn(stage, stages, f"{pipeline} adds checks to a stage that does not exist")
+                found += [(f"{pipeline}.{stage}", name) for name in names]
+        return found
+
     def test_every_check_a_stage_names_exists(self):
-        for stage in self.spec["stages"]:
-            for name in stage.get("checks", []):
-                with self.subTest(stage=stage["id"], check=name):
-                    self.assertIn(name, studio_run.CHECKS)
+        for where, name in self.named_checks():
+            with self.subTest(where=where, check=name):
+                self.assertIn(name, studio_run.CHECKS)
 
     def test_every_check_is_used(self):
-        used = {name for stage in self.spec["stages"] for name in stage.get("checks", [])}
-        self.assertEqual(used, set(studio_run.CHECKS))
+        self.assertEqual({name for _, name in self.named_checks()}, set(studio_run.CHECKS))
+
+    def test_only_a_gate_writing_pipeline_adds_the_gate_checks(self):
+        for pipeline, cfg in self.spec["pipelines"].items():
+            added = {name for names in (cfg.get("checks") or {}).values() for name in names}
+            with self.subTest(pipeline=pipeline):
+                self.assertEqual(bool(added & {"gate_set", "gate_written"}), cfg.get("writes") == "gate")
 
     def test_stage_entries_are_whole(self):
         ids = [stage["id"] for stage in self.spec["stages"]]
@@ -115,12 +131,12 @@ class Spec(unittest.TestCase):
     def test_every_refusal_says_what_enforces_it(self):
         ids = [refusal["id"] for refusal in self.spec["refusals"]]
         self.assertEqual(len(ids), len(set(ids)))
-        scripts = {"studio_run.py": studio_run, "content_md.py": content_md}
+        scripts = {"studio_run.py": studio_run, "content_md.py": content_md, "gate_md.py": gate_md}
         for refusal in self.spec["refusals"]:
             with self.subTest(refusal=refusal["id"]):
                 self.assertTrue(refusal["rule"])
                 self.assertTrue(refusal["enforced_by"])
-                named = re.findall(r"(studio_run\.py|content_md\.py) ([a-z]+)", refusal["enforced_by"])
+                named = re.findall(r"(studio_run\.py|content_md\.py|gate_md\.py) ([a-z]+)", refusal["enforced_by"])
                 for script, command in named:
                     choices = scripts[script].build_parser()._subparsers._group_actions[0].choices
                     self.assertIn(command, choices, f"{script} has no `{command}`")
@@ -219,6 +235,7 @@ class Spec(unittest.TestCase):
         commands = {
             "studio_run.py": set(studio_run.build_parser()._subparsers._group_actions[0].choices),
             "content_md.py": set(content_md.build_parser()._subparsers._group_actions[0].choices),
+            "gate_md.py": set(gate_md.build_parser()._subparsers._group_actions[0].choices),
         }
         texts = [read(SKILL), read(VAULT / "CLAUDE.md"), read(PIPELINE / "spec.yaml")]
         for script, known in commands.items():
@@ -268,7 +285,7 @@ class Spec(unittest.TestCase):
     def test_the_scripts_say_how_they_read_a_file(self):
         """This machine's default encoding is cp1252. A read that does not
         name utf-8 breaks on the first non-ASCII character."""
-        for script in ("studio_common.py", "studio_run.py", "content_md.py"):
+        for script in ("studio_common.py", "studio_run.py", "content_md.py", "gate_md.py"):
             source = read(PIPELINE / script)
             with self.subTest(script=script):
                 bare = re.findall(r"\.(?:read_text|write_text)\(\s*\)", source)

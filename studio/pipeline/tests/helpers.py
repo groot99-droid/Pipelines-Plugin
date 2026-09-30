@@ -28,31 +28,35 @@ import studio_common  # noqa: E402
 import studio_run  # noqa: E402
 
 # A made-up context with the shapes the ladder must handle: a gate with a
-# declared gap, a gate with none, a gate with a gap in its middle numbers, and
-# a gate nobody has written.
+# declared gap, a gate with none, a gate whose gap is its last section, and a
+# gate nobody has written.
 FIXTURE_GATES = {
-    "fixture_look": {
-        "authored": True, "file": "fixture_look.context.md",
-        "must_answer": "What the surfaces look like.",
-        "answers": [{"topic": f"look topic {n}", "section": str(n)} for n in range(2, 7)],
-        "unresolved": [{"topic": "generated imagery", "section": "7"}],
-    },
-    "fixture_type": {
-        "authored": True, "file": "fixture_type.context.md",
-        "must_answer": "Typefaces and scale.",
-        "answers": [{"topic": f"type topic {n}", "section": str(n)} for n in range(2, 7)],
-        "unresolved": [],
-    },
-    "fixture_colour": {
-        "authored": True, "file": "fixture_colour.context.md",
-        "must_answer": "The palette and what it means.",
-        "answers": [{"topic": f"colour topic {n}", "section": str(n)} for n in range(2, 5)],
-        "unresolved": [{"topic": "working space", "section": "5"}],
-    },
-    "fixture_voice": {
-        "authored": False, "file": "fixture_voice.context.md",
-        "must_answer": "How things are worded.",
-    },
+    name: {"file": f"{name}.context.md", "must_answer": answer}
+    for name, answer in (("fixture_look", "What the surfaces look like."),
+                         ("fixture_type", "Typefaces and scale."),
+                         ("fixture_colour", "The palette and what it means."),
+                         ("fixture_voice", "How things are worded."))
+}
+
+
+def fixture_gate(name, answers, gap=None):
+    """A gate file in the shape gate_md.py writes: provenance, a glossary that
+    answers nothing, numbered answers, and an Unresolved section last."""
+    lines = [f"# {name}", "", "## 0. Provenance", "",
+             "Answered by the author on 2026-09-01, in run fixture-000000.", "",
+             "## 1. Routing glossary", "", "Where to look.", ""]
+    for number in answers:
+        lines += [f"## {number}. {name} topic {number}", "", f"What {name} says in section {number}.", ""]
+    if gap:
+        lines += [f"## {gap[0]}. Unresolved", "", f"- {gap[1]}", ""]
+    return "\n".join(lines)
+
+
+# The files written for the authored fixture gates. fixture_voice has none.
+FIXTURE_FILES = {
+    "fixture_look": fixture_gate("fixture_look", range(2, 7), ("7", "generated imagery")),
+    "fixture_type": fixture_gate("fixture_type", range(2, 7)),
+    "fixture_colour": fixture_gate("fixture_colour", range(2, 5), ("5", "working space")),
 }
 FIXTURE_NEEDS = [
     {"gate": "fixture_look", "needs": ["interface identity", "off-limits list", "scope"]},
@@ -67,7 +71,7 @@ def fixture_spec():
     spec["gates"] = copy.deepcopy(FIXTURE_GATES)
     spec["known_conflicts"] = []
     for cfg in spec["pipelines"].values():
-        if cfg.get("status") == "implemented":
+        if cfg.get("status") == "implemented" and cfg.get("requires_context"):
             cfg["requires_context"] = copy.deepcopy(FIXTURE_NEEDS)
             cfg["open"] = ["fixture_look states no scope for itself; `scope` resolves as STATED."]
         elif cfg.get("requires_context"):
@@ -160,9 +164,8 @@ class StudioCase(unittest.TestCase):
                                   encoding="utf-8")
         self.env = studio_common.Env(self.spec_path, runs_dir=self.runs, vault_dir=self.vault,
                                      context_dir=self.context)
-        for name, gate in self.env.spec["gates"].items():
-            if gate.get("authored"):
-                (self.context / gate["file"]).write_text(f"# {name}\n", encoding="utf-8")
+        for name, text in FIXTURE_FILES.items():
+            (self.context / FIXTURE_GATES[name]["file"]).write_text(text, encoding="utf-8")
 
     def folders(self):
         return ["--spec", str(self.spec_path), "--runs-dir", str(self.runs),
@@ -209,7 +212,7 @@ class StudioCase(unittest.TestCase):
         lines = []
         for need in self.env.pipeline(pipeline)["requires_context"]:
             gate = self.env.spec["gates"][need["gate"]]
-            section = gate["answers"][0]["section"]
+            section = studio_common.gate_sections(self.env, need["gate"])["answers"][0]["section"]
             for wanted in need["needs"]:
                 if wanted in without or need["gate"] in without:
                     continue

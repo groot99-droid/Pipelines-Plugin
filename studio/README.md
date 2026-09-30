@@ -56,13 +56,13 @@ writes the reason into the note. It does not guess.
 
 ## Pipelines
 
-Nine are declared in `spec.yaml`. One is implemented.
+Nine are declared in `spec.yaml`. Two are implemented.
 
 | Pipeline | Makes | Status |
 |---|---|---|
 | `ui-direction` | a design direction for a surface or a product, through `plugins/ui-design` | implemented |
 | `ui-build` | markup and CSS in which every value is a token | not yet |
-| `brand-gate` | one brand gate, transcribed from the author | not yet |
+| `brand-gate` | one brand gate, transcribed from an interview with the author, through `gate_md.py` | implemented |
 | `brush` | a brush and an importable file | not yet |
 | `still-image`, `video-shot`, `music-cue`, `edit-2d`, `scene-3d` | through connectors | not yet |
 

@@ -196,7 +196,12 @@ The files in `_Context/brand/` are the author's. They encode taste and prior
 decisions, which cannot be generated.
 
 - Never write, edit or create a gate file from a search result, a library or an
-  inference. A gate is transcribed from what the author says.
+  inference. A gate is transcribed from what the author says, through the
+  `brand-gate` pipeline, and written by `studio/pipeline/gate_md.py` only after
+  the author has seen the whole file and said yes.
+- A gate declares itself. Each `## N. Title` section is an answer; a
+  `## N. Unresolved` section, last, is what it does not answer. The spec names
+  the gates and what each must answer, and nothing more.
 - `tokens.json` follows the same rule: **the author commits; an agent proposes.**
   A proposed change is a diff and a statement of what it would break.
 - The three authored gates were carried unchanged from Creative-Headquarters, so

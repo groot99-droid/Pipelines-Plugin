@@ -130,7 +130,9 @@ studio reads or writes `creative-writing/vault/`.
   recorded after the plan was made. Keep it that way. Never write a note there
   with Write or Edit.
 - `studio/vault/_Context/brand/` holds the brand gates and `tokens.json`. They
-  are the author's. Propose a change as a diff; never write one.
+  are the author's. A gate is written only by a `brand-gate` run, through
+  `studio/pipeline/gate_md.py`, after the author has seen the whole file.
+  Anything else there is proposed as a diff, never written.
 - `plugins/ui-design/` is read-only from the studio. The `ui-direction` pipeline
   runs its scripts and changes nothing in it.
 - Run the tests after touching the spec, a gate, `tokens.json`, `SCHEMA.md`, the

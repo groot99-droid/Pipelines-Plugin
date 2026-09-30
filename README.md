@@ -279,8 +279,9 @@ is made before every constraint it needs has been resolved and its source shown;
 a constraint that cannot be sourced is asked for, never guessed.
 
 Nine pipelines are declared in
-[`studio/pipeline/spec.yaml`](studio/pipeline/spec.yaml) and one is implemented:
-`ui-direction`, which runs the ui-design catalog under the studio's brand gates.
+[`studio/pipeline/spec.yaml`](studio/pipeline/spec.yaml) and two are implemented:
+`ui-direction`, which runs the ui-design catalog under the studio's brand gates,
+and `brand-gate`, which writes a brand gate from an interview with the author.
 The rest are entries that say what each needs and do not start.
 
 It carries the ideas of Creative-Headquarters into this repo.

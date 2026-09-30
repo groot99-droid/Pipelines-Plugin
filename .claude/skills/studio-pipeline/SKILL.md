@@ -179,6 +179,29 @@ edit `state.json` by hand, and never work around a refusal.
 
    Never write a note into the vault with Write or Edit.
 
+## Writing a brand gate
+
+The `brand-gate` pipeline runs the same six stages and writes one gate as well
+as its note. At intake, name the gate:
+
+```
+python studio/pipeline/studio_run.py gate <run-id> <gate>
+```
+
+It needs no brand context, so its attestation says so, with no table. Execute
+is the interview: ask the recipe's questions and log the author's answers
+verbatim. Never offer answers to choose from; a gate records taste, and options
+would be generated. Review builds the gate from the transcript alone. At record,
+write the gate before the note:
+
+```
+python studio/pipeline/gate_md.py plan <run-id>
+python studio/pipeline/studio_run.py confirm <run-id> gate --words "<what the author said>"
+python studio/pipeline/gate_md.py apply <run-id> --confirm
+```
+
+Show the author `gate_plan.md`, which holds the whole gate, before the confirm.
+
 ## Parking a run
 
 When a constraint cannot be resolved and the author has not stated it:
@@ -226,9 +249,9 @@ the run folder behind, and the note says nothing of it.
 - It does not read, search or write anything under `creative-writing/vault/`.
   If the author wants a made thing to draw on one of those works, they name the
   work at a checkpoint and you read that work only.
-- It does not write or edit a file under `studio/vault/_Context/brand/`. A
-  change to a gate or to `tokens.json` is proposed as a diff and left for the
-  author.
+- It does not write or edit a file under `studio/vault/_Context/brand/`, except
+  a gate a `brand-gate` run writes through `gate_md.py` after the author's yes.
+  A change to `tokens.json` is proposed as a diff and left for the author.
 - It does not edit anything under `plugins/ui-design/`. That plugin is published
   and its catalog files are fingerprinted; run its scripts, do not change them.
 - It does not start a pipeline whose status is not `implemented`.

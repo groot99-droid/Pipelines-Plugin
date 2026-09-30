@@ -36,7 +36,7 @@ same six stages: **intake → context → recipe → execute → review → reco
 |---|---|---|---|
 | ui-direction | [[_Pipelines/studio\|studio]] | a design direction for a surface or a product | in use |
 | ui-build | [[_Pipelines/studio\|studio]] | markup and CSS in which every value is a token | not yet implemented |
-| brand-gate | [[_Pipelines/studio\|studio]] | one brand gate, transcribed from the author | not yet implemented |
+| brand-gate | [[_Pipelines/studio\|studio]] | one brand gate, transcribed from the author | in use |
 | brush | [[_Pipelines/studio\|studio]] | a brush and an importable file | not yet implemented |
 | still-image | [[_Pipelines/studio\|studio]] | still images from a brief | not yet implemented |
 | video-shot | [[_Pipelines/studio\|studio]] | a shot, or a chain that holds continuity | not yet implemented |

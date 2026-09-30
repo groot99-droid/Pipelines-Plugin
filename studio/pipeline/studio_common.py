@@ -234,6 +234,59 @@ def attesting_stage(stage):
     return "levels_are_backed" in stage.get("checks", [])
 
 
+def stage_checks(env, state, stage):
+    """The checks a stage runs for this run: the stage's own, then any its
+    pipeline adds for that stage under `checks:`."""
+    extra = (env.pipeline(state["pipeline"]).get("checks") or {}).get(stage["id"], [])
+    return list(stage.get("checks", [])) + list(extra)
+
+
+# ── the brand gates ──────────────────────────────────────────────────────────
+
+# A gate's sections: `## N. Title`. Section 0 is its provenance, a section
+# titled Unresolved is what it declares it does not answer, and every other
+# numbered section is an answer. The carried gates also hold a routing glossary,
+# which answers nothing.
+GATE_HEADING_RE = re.compile(r"^## (\d+)\. (.+?)\s*$")
+NOT_ANSWERS = ("provenance", "unresolved", "routing glossary")
+
+
+def gate_path(env, name):
+    return env.context / env.spec["gates"][name]["file"]
+
+
+def gate_sections(env, name, text=None):
+    """What a gate answers and what it declares it does not, read from its own
+    headings: {"answers": [...], "unresolved": [...]}, each item a section
+    number and a topic. None when the gate has no file: it is not authored."""
+    if text is None:
+        path = gate_path(env, name)
+        if not path.is_file():
+            return None
+        text = read_text(path)
+    lines = [line for _, line in outside_fences(text.replace("\r\n", "\n"))]
+    headings = [(index, GATE_HEADING_RE.match(line)) for index, line in enumerate(lines)]
+    headings = [(index, match.group(1), match.group(2)) for index, match in headings if match]
+    found = {"answers": [], "unresolved": []}
+    for position, (index, number, title) in enumerate(headings):
+        folded = title.strip("*_ ").casefold()
+        if folded == "unresolved":
+            end = headings[position + 1][0] if position + 1 < len(headings) else len(lines)
+            found["unresolved"].append({"section": number, "topic": gap_topic(lines[index + 1:end])})
+        elif number != "0" and folded not in NOT_ANSWERS:
+            found["answers"].append({"section": number, "topic": title.strip()})
+    return found
+
+
+def gap_topic(lines):
+    """What an Unresolved section leaves open: its bullets, or its first sentence."""
+    items = [line.strip()[2:].strip() for line in lines if re.match(r"^\s*[-*+] ", line)]
+    text = "; ".join(items) if items else " ".join(" ".join(lines).split())
+    if not items:
+        text = re.split(r"(?<=[.!?])\s", text, maxsplit=1)[0]
+    return re.sub(r"[*_`]", "", text)[:160]
+
+
 # ── the vault ────────────────────────────────────────────────────────────────
 
 def reserved_names(env):
@@ -540,15 +593,10 @@ def table_cells(line):
     return [cell.strip().replace("\\|", "|") for cell in re.split(r"(?<!\\)\|", inner)]
 
 
-def attestation_rows(text):
-    """The rows of the context-resolution table, each a dict keyed by column.
-
-    The table is the one a reader sees, outside a code fence and a comment,
-    whose header names Constraint, Gate, Level, Source and State. There must be
-    exactly one: rows in a second table would never be checked.
-    """
+def attestation_tables(text):
+    """(visible lines, [(line index, header)]) for each context-resolution
+    table a reader sees."""
     lines = [line for _, line in outside_fences(text.replace("\r\n", "\n"))]
-    wanted = ", ".join(name.capitalize() for name in ATTESTATION_COLUMNS)
     tables = []
     for index, line in enumerate(lines):
         if not TABLE_LINE_RE.match(line):
@@ -556,6 +604,22 @@ def attestation_rows(text):
         header = [cell.casefold() for cell in table_cells(line)]
         if sorted(header) == sorted(ATTESTATION_COLUMNS):
             tables.append((index, header))
+    return lines, tables
+
+
+def attestation_rows(text, allow_none=False):
+    """The rows of the context-resolution table, each a dict keyed by column.
+
+    The table is the one a reader sees, outside a code fence and a comment,
+    whose header names Constraint, Gate, Level, Source and State. There must be
+    exactly one: rows in a second table would never be checked. With
+    `allow_none`, for a pipeline that needs no context, no table and an empty
+    table are both no rows.
+    """
+    lines, tables = attestation_tables(text)
+    wanted = ", ".join(name.capitalize() for name in ATTESTATION_COLUMNS)
+    if not tables and allow_none:
+        return []
     if not tables:
         raise Refused("the attestation has no context-resolution table. "
                       f"It needs one with the columns: {wanted}")
@@ -577,7 +641,7 @@ def attestation_rows(text):
         entry = dict(zip(header, cells))
         entry["row"] = row.strip()
         rows.append(entry)
-    if not rows:
+    if not rows and not allow_none:
         raise Refused("the context-resolution table in the attestation has no rows")
     return rows
 

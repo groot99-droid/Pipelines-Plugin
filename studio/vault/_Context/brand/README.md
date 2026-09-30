@@ -12,9 +12,15 @@ This folder sits inside the vault so the gates open in Obsidian and a note's
 wikilink to one resolves. Its name starts with `_`, so nothing here is counted as
 a Content MD.
 
-`studio/pipeline/spec.yaml` lists the ten under `gates:`, with what each answers
-and what each declares it does not. A test fails if that list and this folder
-disagree.
+`studio/pipeline/spec.yaml` lists the ten under `gates:`, and what each must
+answer. What a gate does answer is read from the file itself: each `## N. Title`
+section is an answer, and a `## N. Unresolved` section, last, is what it declares
+it does not answer. Replacing a gate is replacing its file.
+
+A gate is written through the `brand-gate` pipeline: the author is interviewed,
+the gate is built from the transcript alone, the whole file is shown, and
+`studio/pipeline/gate_md.py` writes it only after a yes. Its section 0,
+Provenance, names the author, the date and the run.
 
 ## The ten
 

@@ -55,78 +55,52 @@ content_md:
   reserved_names: [SCHEMA.md, README.md, CLAUDE.md]
 
 # --------------------------------------------------------------------
-# The ten brand gates.
+# The ten brand gates: which exist, and what each must answer.
 #
-# `authored: true` means the file exists at context_root/<file>. The spec test
-# fails if this flag and the disk disagree.
+# A gate is authored when its file is at context_root/<file>. What it answers
+# and what it declares it does NOT answer are read from the file's own
+# headings (`## N. Title`, and `## N. Unresolved`), by studio_common.py
+# gate_sections. They are not repeated here, so replacing a gate file is the
+# whole of replacing a gate.
 #
-# "Authored" is not "complete". A gate lists what it answers and what it
-# declares it does NOT answer. A constraint under `unresolved` is unresolved
-# even though the file exists.
+# "Authored" is not "complete". A constraint the gate's Unresolved section
+# names is unresolved even though the file exists.
+#
+# `scope` is this spec's one-line summary of a gate, printed by `facts`. It is
+# not a source: an attestation cites the gate file.
 # --------------------------------------------------------------------
 gates:
   visual_identity:
-    authored: true
     file: "visual_identity.context.md"
     must_answer: "What does work from this studio look like? Motifs, framing, texture, what is off-limits."
     scope: "The studio's own surfaces. Product and client work is not bound by it."
-    answers:
-      - {topic: "interface identity: grounds, panels, rules", section: "2"}
-      - {topic: "what colour is allowed to mean", section: "3"}
-      - {topic: "grid, spacing, radii, breakpoints", section: "4"}
-      - {topic: "elevation, motion, focus", section: "5"}
-      - {topic: "off-limits list", section: "6"}
-    unresolved:
-      - {topic: "generated imagery: motifs, framing, texture", section: "7"}
   typography_system:
-    authored: true
     file: "typography_system.context.md"
     must_answer: "Typefaces, scale, tracking, hierarchy, licensing."
     scope: "The studio's own surfaces. Product and client work selects its own pairing."
-    answers:
-      - {topic: "the one family and its weights", section: "2"}
-      - {topic: "scale and tracking", section: "3"}
-      - {topic: "hierarchy", section: "4"}
-      - {topic: "licensing", section: "5"}
-      - {topic: "scope boundary", section: "6"}
-    unresolved: []
   color_science:
-    authored: true
     file: "color_science.context.md"
     must_answer: "Working space, LUTs, palette with hex values, grading rules."
     scope: "A UI token set in sRGB hex. Not a colour-managed pipeline."
-    answers:
-      - {topic: "palette, ten values", section: "2"}
-      - {topic: "semantic binding of the four accents", section: "3"}
-      - {topic: "three contrast floors", section: "4"}
-    unresolved:
-      - {topic: "working space, LUTs, grading, delivery transform", section: "5"}
   motion_language:
-    authored: false
     file: "motion_language.context.md"
     must_answer: "Camera grammar, easing, shot lengths, transitions to avoid."
   sound_identity:
-    authored: false
     file: "sound_identity.context.md"
     must_answer: "Instrumentation, tempo range, mix targets, sonic signature."
   brand_voice:
-    authored: false
     file: "brand_voice.context.md"
     must_answer: "Diction, register, person, banned phrasings."
   narrative_continuity:
-    authored: false
     file: "narrative_continuity.context.md"
     must_answer: "Canon rules, character and environment persistence, what may not be retconned."
   render_philosophy:
-    authored: false
     file: "render_philosophy.context.md"
     must_answer: "Quality bar, when to re-render and when to accept, output specs."
   pipeline_ethics:
-    authored: false
     file: "pipeline_ethics.context.md"
     must_answer: "Disclosure, provenance, sourcing rules, what is never generated."
   memory_discipline:
-    authored: false
     file: "memory_discipline.context.md"
     must_answer: "Quotable against summarizable, retention, what leaves the machine."
 
@@ -284,7 +258,12 @@ refusals:
     enforced_by: "the skill"
   - id: invented-gate
     rule: "A brand gate is never generated. It is transcribed from the author's answers."
-    enforced_by: "the skill"
+    enforced_by: "the skill, and gate_md.py plan, which refuses a gate whose Provenance does not name the author, a date in the run and the run"
+    limit: "It cannot tell whether the words came from the author. The whole file is shown at the checkpoint for the author to judge."
+  - id: gate-write-without-confirm
+    rule: "Nothing is written into the gate folder without showing the author the whole gate and hearing yes."
+    enforced_by: "gate_md.py apply"
+    limit: "The yes is recorded on the skill's word. A gate edited by hand is not seen; gate_md.py lint reads it afterwards."
 
 # Connector tools no pipeline may call, matched as a substring of the tool's
 # name. Advisory: the executor is a model following instructions. Permission
@@ -461,19 +440,75 @@ pipelines:
       - "Where a build is written. The source skill named no directory."
 
   brand-gate:
-    status: not_yet_implemented
+    status: implemented
     from: "context/brand/README.md"
     kind: other
     makes: "One brand gate, transcribed from the author's answers."
+    # It writes a gate as well as its note: `gate` names which, at intake,
+    # and gate_md.py writes it at record.
+    writes: gate
     requires_context: []
+    checks:
+      intake: [gate_set]
+      record: [gate_written]
     executes_through:
-      capability: "an interview with the author"
+      writer: "studio/pipeline/gate_md.py"
+    connector:
+      tools: []
     class: none
+    leaves_machine: "The author's answers pass through this Claude Code session. Nothing else leaves."
     carries:
       - "A gate encodes taste and prior decisions. It is never generated."
       - "A question the author does not answer goes under an Unresolved heading. It is never filled from a library or the catalog."
       - "The whole file is shown before it is written."
       - "A provenance section states who answered, and when."
+    stage_notes:
+      intake: |
+        Settle which gate this run writes, from `gates:` in the spec, and set it:
+          python studio/pipeline/studio_run.py gate <run-id> <gate>
+        Say whether it is new or rewrites the gate on disk. If it rewrites one,
+        read that file in full now.
+        The note records how the gate was made. Propose its path,
+        <project>/other/<gate>.md, or one-offs/other/<gate>.md when the author
+        names no project.
+      recipe: |
+        List the questions the interview will ask, in order. Take them from
+        the gate's `must_answer` in the spec, one question for each thing it
+        names. For a rewrite, add one question for each section on disk: keep
+        it, change it, or drop it.
+        Ask nothing else. A question the recipe does not hold is added by going
+        back to recipe, not asked in passing.
+      execute: |
+        This is the interview. Ask each question in the recipe, in order, and
+        write execute_log.md as a transcript as it happens: the question, then
+        the author's answer in quotes, verbatim. A question the author does not
+        answer is logged as "no answer".
+        Do not offer answers for the author to pick from. If the author asks
+        for options, say that a gate records the author's taste and options
+        would be generated; offer to put the question another way instead.
+      review: |
+        Build the gate from the transcript and nothing else, as gate_update.md
+        in the run folder:
+          # <gate>
+          ## 0. Provenance   the author answered, the date, this run's id, and
+                             that it was transcribed from execute_log.md
+          ## 1. <Title>      one numbered section for each thing answered, in
+                             the author's words
+          ## N. Unresolved   last: each unanswered question, as a bullet
+        In review.md, beside each section, the transcript answer it came from.
+        Show the author the whole gate.
+      record: |
+        Write the gate first:
+          python studio/pipeline/gate_md.py plan <run-id>
+        Show the author gate_plan.md, which holds the whole gate. Only after a
+        clear yes:
+          python studio/pipeline/studio_run.py confirm <run-id> gate --words "<what the author said>"
+          python studio/pipeline/gate_md.py apply <run-id> --confirm
+        Then the note. kind: other. context_brand names the gate written. The
+        Timeline entry says the gate was written or rewritten, and how many
+        questions were answered and left unresolved. Method lists the
+        questions. A gate is its own decision, so Decisions in Force names
+        nothing the gate itself does not say.
 
   brush:
     status: not_yet_implemented
@@ -641,6 +676,9 @@ stages:
       unresolved, and which notes name it.
 
       Read every gate file it lists, in full.
+
+      If `facts` lists no gate, this pipeline needs no brand context. Write
+      attestation.md saying so, with no table.
 
       Write one row for EACH needed constraint `facts` lists, using its
       wording in the Constraint cell. Resolve each on the ladder and stop at

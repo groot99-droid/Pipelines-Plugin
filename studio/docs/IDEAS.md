@@ -60,7 +60,8 @@ Source: `Router.md`.
 | Routing table: context loaded only when flagged in the dashboard | §3 | there is no dashboard. A pipeline lists what it always needs; anything else is asked for at the context stage | dropped |
 | A multi-skill task takes the union of its context sets | §3 | UI work is two pipelines, not one: `ui-direction` needs three gates, `ui-build` needs those and `brand_voice` | carried |
 | A domain library never satisfies a mandatory slot | §1, §3 | a row's gate must be one of the ten in the spec | carried |
-| L0 means authored, not complete | §3 | each gate's declared gaps are listed in the spec by section. An L0 row that cites one is refused | carried |
+| L0 means authored, not complete | §3 | a gate's declared gaps are its own `## N. Unresolved` section, read from the file. An L0 row that cites one is refused | carried |
+| A brand gate encodes taste and is never generated | `context/brand/README.md` | the `brand-gate` pipeline: an interview whose transcript is the only source, the whole gate shown before `studio/pipeline/gate_md.py` writes it, and a Provenance section naming the author, the date and the run | rebuilt |
 | Three execution modes | §4 | one mode. The skill stops at every stage and waits (decision 5) | changed |
 | Resolution ladder: L0 authored, L1 recalled, L2 derived, L3 unresolved | §5 | the `context` stage, with a fifth level, `STATED`, for what the author says at the checkpoint | changed |
 | L1 cites the note and states the constraint directly | §5 | the row names the note and quotes the line. The note must exist, must list the gate under `context_brand`, and must have that line under Decisions in Force | carried |
@@ -179,7 +180,7 @@ stage list, and real files.
 | Which tool issues the compute token | `Router.md` §10: `verify_compute.sh` | `BOOT.md`, D8: `evaluate_gate.py` | The evaluator issues it. The probe only measures |
 | Whether a token is consumed at issue | `BOOT.md`: `--consume` at issue | two skills: `consumed_by` must be null on arrival | The consumer stamps it. Issue leaves it null |
 | How many font weights | the policy, `typography_system` §2 and `visual_identity` §6: two, and no third | the same §2 allows 500 for a status word; the token dictionary declares `weight.mid` 500 | 500 is for a status word only, as §2 says. The files are carried unchanged and the spec lists the conflict |
-| What enforces the gate files | two gate files: "machine-enforced" | the check read seven colour values and never opened a gate file | Nothing enforced them. Here `test_spec.py` checks that the ten colours in `tokens.json` are the ten in `color_science` §2. There is no surface to check yet |
+| What enforces the gate files | two gate files: "machine-enforced" | the check read seven colour values and never opened a gate file | Nothing enforced them. Here `test_context.py` checks that the ten colours in `tokens.json` are the ten in `color_science` §2. There is no surface to check yet |
 
 ## What is not enforced, stated plainly
 

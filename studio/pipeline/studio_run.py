@@ -9,7 +9,8 @@ session, and reports here.
     python studio/pipeline/studio_run.py stage   <run-id>
     python studio/pipeline/studio_run.py facts   <run-id>
     python studio/pipeline/studio_run.py note    <run-id> <project>/<kind>/<slug>.md
-    python studio/pipeline/studio_run.py confirm <run-id> <stage|flush|park> --words "..."
+    python studio/pipeline/studio_run.py gate    <run-id> <gate>
+    python studio/pipeline/studio_run.py confirm <run-id> <stage|flush|park|gate> --words "..."
     python studio/pipeline/studio_run.py advance <run-id>
     python studio/pipeline/studio_run.py back    <run-id> --why "..."
     python studio/pipeline/studio_run.py park    <run-id> --constraint NAME --needs "..."
@@ -42,14 +43,15 @@ from datetime import date, timedelta
 from studio_common import (
     EXIT_OK, EXIT_REFUSED, EXIT_USAGE, SPEC_PATH, Env, Refused, Usage,
     all_states, attestation_rows, attesting_stage, cited_notes, current_stage, decisions,
-    find_note, latest_confirmation, level_of, load_state, log_event, normalize, note_index,
-    now, open_console, parse_stamp, read_text, resolve_note, save_state, slugify, squeeze,
-    stage_outputs, stamp, unstruck, write_text,
+    find_note, gate_path, gate_sections, latest_confirmation, level_of, load_state, log_event,
+    normalize, note_index, now, open_console, parse_stamp, read_text, resolve_note, save_state,
+    slugify, squeeze, stage_checks, stage_outputs, stamp, unstruck, write_text,
 )
 
-# What `confirm` accepts besides a stage that requires confirmation. Both are
-# writes to the vault that happen outside the record stage.
-EXTRA_CONFIRMATIONS = ("flush", "park")
+# What `confirm` accepts besides a stage that requires confirmation. Each is a
+# write that is planned, shown and confirmed on its own: a note written outside
+# the record stage, or a brand gate.
+EXTRA_CONFIRMATIONS = ("flush", "park", "gate")
 
 # File times and datetime.now() come from clocks of different precision on
 # Windows, so a file written just after a confirmation can carry a time just
@@ -124,8 +126,11 @@ def check(name):
     return register
 
 
-def attested(stage, run_dir):
-    rows = attestation_rows(read_text(run_dir / stage_outputs(stage)[0]))
+def attested(env, state, stage, run_dir):
+    """The attestation's rows. A pipeline that needs no brand context may
+    write an attestation with no table."""
+    needs = env.pipeline(state["pipeline"]).get("requires_context") or []
+    rows = attestation_rows(read_text(run_dir / stage_outputs(stage)[0]), allow_none=not needs)
     for row in rows:
         row["gate"] = row["gate"].strip("`* ")
         row["state_word"] = squeeze(row["state"]).strip("`* ")
@@ -178,7 +183,7 @@ def note_path_set(env, state, stage, run_dir):
 
 @check("covers_every_need")
 def covers_every_need(env, state, stage, run_dir):
-    rows = attested(stage, run_dir)
+    rows = attested(env, state, stage, run_dir)
     for row in rows:
         if row["gate"] not in env.spec["gates"]:
             raise Refused(f"`{row['gate']}` is not a gate in the spec:\n    {row['row']}")
@@ -207,7 +212,7 @@ def covers_every_need(env, state, stage, run_dir):
 @check("no_unresolved")
 def no_unresolved(env, state, stage, run_dir):
     marker = env.spec["ladder"]["unresolved_marker"]
-    rows = attested(stage, run_dir)
+    rows = attested(env, state, stage, run_dir)
     unreadable = [row for row in rows if level_of(row) is None]
     if unreadable:
         raise Refused(f"{len(unreadable)} row(s) have a Level that cannot be read:\n    "
@@ -231,7 +236,8 @@ def no_unresolved(env, state, stage, run_dir):
 
 def back_l0(env, row):
     declared = env.spec["gates"][row["gate"]]
-    if not (env.context / declared["file"]).is_file():
+    sections = gate_sections(env, row["gate"])
+    if sections is None:
         raise Refused(f"`{row['gate']}` is not authored: there is no {declared['file']}. "
                       f"It cannot resolve at L0:\n    {row['row']}")
     source = QUOTED_RE.sub(" ", row["source"]).casefold()
@@ -246,15 +252,15 @@ def back_l0(env, row):
     if not cited:
         raise Refused("an L0 row cites where in the gate the constraint is stated, "
                       f"as `section N`:\n    {row['row']}")
-    answers = {str(item["section"]) for item in declared.get("answers", [])}
-    gaps = {str(item["section"]): item["topic"] for item in declared.get("unresolved", [])}
+    answers = {item["section"] for item in sections["answers"]}
+    gaps = {item["section"]: item["topic"] for item in sections["unresolved"]}
     for number in cited:
         if number in gaps:
             raise Refused(f"section {number} of `{row['gate']}` is where the gate says what it does "
                           f"NOT answer ({gaps[number]}). The file exists; the constraint is "
                           f"unresolved:\n    {row['row']}")
         if number not in answers:
-            raise Refused(f"the spec lists no section {number} for `{row['gate']}`:\n    {row['row']}")
+            raise Refused(f"{declared['file']} answers nothing in a section {number}:\n    {row['row']}")
 
 
 def back_l1(env, row, by_name):
@@ -352,7 +358,7 @@ def kept_rows(env, state, stage, run_dir):
     marker = env.spec["ladder"]["provisional_marker"]
     _, by_name = note_index(env)
     kept = []
-    for row in attested(stage, run_dir):
+    for row in attested(env, state, stage, run_dir):
         level = level_of(row)
         provisional = row["state_word"] == "provisional"
         if provisional and level not in ("L1", "L2"):
@@ -430,9 +436,44 @@ def note_written(env, state, stage, run_dir):
         raise Refused("the note does not pass the record checks:\n    " + "\n    ".join(errors))
 
 
+@check("gate_set")
+def gate_set(env, state, stage, run_dir):
+    if not state.get("gate"):
+        raise Refused("this run names no gate. Set it with: "
+                      f"studio_run.py gate {state['run_id']} <gate>")
+    if state["gate"] not in env.spec["gates"]:
+        raise Refused(f"`{state['gate']}` is not a gate in the spec")
+
+
+@check("gate_written")
+def gate_written(env, state, stage, run_dir):
+    """The run wrote its gate after the gate go-ahead, and the file on disk
+    is the one that was shown. The gate checks are run again on it."""
+    import content_md  # beside this file
+    import gate_md
+
+    gate = state.get("gate")
+    written = state.get("gate_written")
+    if not gate or not written or written.get("gate") != gate:
+        raise Refused(f"this run has not written the gate `{gate}`. Plan it with gate_md.py plan, "
+                      "show the author the whole file, confirm gate, and apply.")
+    given = latest_confirmation(state, "gate")
+    if given and written["at_epoch"] < given["at_epoch"]:
+        raise Refused("the gate was written before the latest gate go-ahead. Plan it and apply it again.")
+    path = gate_path(env, gate)
+    if not path.is_file():
+        raise Refused(f"{path.name} is not in the gate folder")
+    text = normalize(read_text(path))
+    if content_md.digest(text) != written["sha"]:
+        raise Refused(f"{path.name} is not the gate that was shown to the author")
+    errors = gate_md.lint_gate(text) + gate_md.provenance_errors(state, text)
+    if errors:
+        raise Refused("the gate does not pass its checks:\n    " + "\n    ".join(errors))
+
+
 def run_checks(env, state, stage):
     run_dir = env.run_dir(state["run_id"])
-    for name in stage.get("checks", []):
+    for name in stage_checks(env, state, stage):
         if name not in CHECKS:
             raise Usage(f"the spec names a check this file does not have: `{name}`")
         CHECKS[name](env, state, stage, run_dir)
@@ -506,6 +547,9 @@ def cmd_new(env, args):
         "attested": None,
         "plan": None,
         "written": None,
+        "gate": None,
+        "gate_plan": None,
+        "gate_written": None,
         "events": [],
     }
     others = set_note(env, state, args.note) if args.note else []
@@ -530,6 +574,28 @@ def cmd_note(env, args):
     for other in others:
         print(f"warning   run `{other}` is also working on this note. "
               "The second to write will be refused until it plans again.")
+    return EXIT_OK
+
+
+def cmd_gate(env, args):
+    state = load_state(env, args.run_id)
+    if env.pipeline(state["pipeline"]).get("writes") != "gate":
+        raise Refused(f"`{state['pipeline']}` does not write a brand gate")
+    if args.name not in env.spec["gates"]:
+        raise Usage(f"no gate `{args.name}` in the spec. Declared: "
+                    + ", ".join(sorted(env.spec["gates"])))
+    written = state.get("gate_written")
+    if written and written["gate"] != args.name:
+        raise Refused(f"this run has already written the gate `{written['gate']}`. "
+                      "A run writes one gate. Start a new run for another.")
+    if state.get("gate_plan") and state["gate_plan"]["gate"] != args.name:
+        state["gate_plan"] = None
+    state["gate"] = args.name
+    log_event(state, "gate", args.name)
+    save_state(env, state)
+    sections = gate_sections(env, args.name)
+    now_is = "rewriting " + gate_path(env, args.name).name if sections is not None else "new"
+    print(f"gate      {args.name}  ({now_is})")
     return EXIT_OK
 
 
@@ -561,25 +627,33 @@ def gate_facts(env, state):
         declared = env.spec["gates"].get(name)
         if declared is None:
             raise Usage(f"{state['pipeline']} requires `{name}`, which is not under `gates:`")
-        on_disk = (env.context / declared["file"]).is_file()
+        sections = gate_sections(env, name)
         gates.append({
             "gate": name,
             "needs": need.get("needs", []),
-            "file": (env.context / declared["file"]).as_posix(),
-            "declared_authored": bool(declared.get("authored")),
-            "on_disk": on_disk,
-            "agrees": bool(declared.get("authored")) == on_disk,
+            "file": gate_path(env, name).as_posix(),
+            "on_disk": sections is not None,
             "scope": declared.get("scope"),
             "must_answer": declared.get("must_answer"),
-            "answers": declared.get("answers", []),
-            "unresolved": declared.get("unresolved", []),
+            "answers": (sections or {}).get("answers", []),
+            "unresolved": (sections or {}).get("unresolved", []),
             "notes_naming_it": [n["path"] for n in notes if name in n["context_brand"]],
         })
+    writing = None
+    if state.get("gate") in env.spec["gates"]:
+        name = state["gate"]
+        sections = gate_sections(env, name)
+        writing = {"gate": name, "file": gate_path(env, name).as_posix(),
+                   "on_disk": sections is not None,
+                   "must_answer": env.spec["gates"][name].get("must_answer"),
+                   "answers": (sections or {}).get("answers", []),
+                   "unresolved": (sections or {}).get("unresolved", [])}
     return {
         "run_id": state["run_id"],
         "pipeline": state["pipeline"],
         "kind": cfg.get("kind"),
         "gates": gates,
+        "writes_gate": writing,
         "open": cfg.get("open", []),
         "notes_in_vault": len(notes),
         "notes_of_this_kind": [n["path"] for n in notes if n["kind"] == cfg.get("kind")],
@@ -602,9 +676,6 @@ def cmd_facts(env, args):
         print("    needed, one attestation row each, in these words:")
         for need in gate["needs"]:
             print(f"      - {need}")
-        if not gate["agrees"]:
-            print(f"    MISMATCH:   the spec says authored={gate['declared_authored']}, "
-                  f"the disk says {gate['on_disk']}")
         if gate["on_disk"]:
             print(f"    L0 file:    {gate['file']}")
             if gate["scope"]:
@@ -622,6 +693,22 @@ def cmd_facts(env, args):
                 print(f"      {path}")
         else:
             print("    L1 candidates: none")
+    if not facts["gates"]:
+        print()
+        print("  This pipeline needs no brand context. Its attestation says so, with no table.")
+    if facts["writes_gate"]:
+        writing = facts["writes_gate"]
+        print()
+        print(f"  writes the gate {writing['gate']}")
+        print(f"    must answer: {writing['must_answer']}")
+        if writing["on_disk"]:
+            print(f"    now:         {writing['file']}")
+            for item in writing["answers"]:
+                print(f"      answers       section {item['section']}: {item['topic']}")
+            for item in writing["unresolved"]:
+                print(f"      DECLARED GAP  section {item['section']}: {item['topic']}")
+        else:
+            print("    now:         not authored")
     print()
     print(f"  notes of kind `{facts['kind']}`: {len(facts['notes_of_this_kind'])}. "
           f"Deriving a constraint needs {facts['derivation_needs']}.")
@@ -643,6 +730,9 @@ def cmd_confirm(env, args):
     if args.what == "park":
         if state["status"] != "parked":
             raise Refused("the run is not parked. Park it first, then confirm the note that says so.")
+    elif args.what == "gate":
+        if env.pipeline(state["pipeline"]).get("writes") != "gate":
+            raise Refused(f"`{state['pipeline']}` does not write a brand gate")
     elif args.what not in EXTRA_CONFIRMATIONS:
         stage = current_stage(env, state)
         if stage is None:
@@ -721,6 +811,7 @@ def cmd_back(env, args):
     if any(attesting_stage(stage) for stage in env.stages[target:]):
         state["attested"] = None
     state["plan"] = None
+    state["gate_plan"] = None
     log_event(state, "back", f"{ids[index] if index < len(ids) else 'end'} to {ids[target]}: {why}")
     save_state(env, state)
     print(f"back      to {env.stages[target]['title']}. Go-aheads from here on are cleared.")
@@ -849,6 +940,11 @@ def build_parser():
     note.add_argument("run_id")
     note.add_argument("path")
     note.set_defaults(run=cmd_note)
+
+    gate = commands.add_parser("gate", help="set the brand gate a gate-writing run writes")
+    gate.add_argument("run_id")
+    gate.add_argument("name")
+    gate.set_defaults(run=cmd_gate)
 
     stage = commands.add_parser("stage", help="print the current stage and its instructions")
     stage.add_argument("run_id")

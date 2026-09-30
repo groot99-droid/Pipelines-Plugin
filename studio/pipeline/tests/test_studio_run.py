@@ -6,7 +6,7 @@ import time
 import unittest
 from datetime import date
 
-from helpers import GOOD_NOTE, HEADER, NOTE, StudioCase, precedent, studio_run
+from helpers import GOOD_NOTE, HEADER, NOTE, StudioCase, precedent, studio_common, studio_run
 
 
 class Starting(StudioCase):
@@ -253,7 +253,7 @@ class Context(StudioCase):
 
     def test_a_declared_gap_cited_as_authored(self):
         for gate in ("fixture_look", "fixture_colour"):
-            gap = self.env.spec["gates"][gate]["unresolved"][0]
+            gap = studio_common.gate_sections(self.env, gate)["unresolved"][0]
             for written in (f"section {gap['section']}", f"§{gap['section']}",
                             f"Section  {gap['section']}"):
                 with self.subTest(gate=gate, written=written):
@@ -272,7 +272,7 @@ class Context(StudioCase):
 
     def test_l0_citing_a_section_the_gate_does_not_have(self):
         row = "| grounds | fixture_look | L0 AUTHORED | fixture_look.context.md section 12 | resolved |"
-        self.refused(self.attestation([row]), "no section 12")
+        self.refused(self.attestation([row]), "answers nothing in a section 12")
 
     def test_l0_for_a_gate_nobody_has_written(self):
         row = "| wording | fixture_voice | L0 AUTHORED | fixture_voice.context.md section 2 | resolved |"
@@ -597,7 +597,7 @@ class Facts(StudioCase):
         facts = json.loads(out)
         gates = {gate["gate"]: gate for gate in facts["gates"]}
         self.assertEqual(set(gates), {"fixture_look", "fixture_type", "fixture_colour"})
-        self.assertTrue(all(gate["on_disk"] and gate["agrees"] for gate in gates.values()))
+        self.assertTrue(all(gate["on_disk"] for gate in gates.values()))
         self.assertEqual(gates["fixture_colour"]["notes_naming_it"], [NOTE])
         self.assertEqual(gates["fixture_type"]["notes_naming_it"], [])
         self.assertEqual(facts["notes_in_vault"], 1)
@@ -610,13 +610,13 @@ class Facts(StudioCase):
             for wanted in need["needs"]:
                 self.assertIn(f"- {wanted}", out)
 
-    def test_a_flag_that_disagrees_with_the_disk(self):
+    def test_a_gate_whose_file_is_gone_is_not_authored(self):
         gate = self.env.spec["gates"]["fixture_colour"]["file"]
         (self.context / gate).unlink()
         run_id = self.new_run()
         code, out, _ = self.run_cmd("facts", run_id)
         self.assertEqual(code, 0)
-        self.assertIn("MISMATCH", out)
+        self.assertIn("This gate is not authored", out)
 
 
 if __name__ == "__main__":
