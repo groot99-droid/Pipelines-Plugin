@@ -79,14 +79,14 @@
   Parking is a correct result, not a failure.</p>
 
   <h2 id="pipelines">Pipelines</h2>
-  <p>Nine are declared in <code>studio/pipeline/spec.yaml</code>, and one is implemented. A pipeline
+  <p>Nine are declared in <code>studio/pipeline/spec.yaml</code>, and two are implemented. A pipeline
   that is not implemented is a real entry, saying what it needs and what is open, but it does not start.</p>
   <div class="table-wrap"><table>
     <thead><tr><th>Pipeline</th><th>Makes</th><th>Status</th></tr></thead>
     <tbody>
       <tr><td><code>ui-direction</code></td><td>A design direction for a surface or product, using the <a href="ui-design.html">UI design plugin</a> under the studio's brand gates</td><td><strong>implemented</strong></td></tr>
       <tr><td><code>ui-build</code></td><td>Markup and CSS in which every value is a token</td><td>not yet</td></tr>
-      <tr><td><code>brand-gate</code></td><td>One brand gate, transcribed from the author</td><td>not yet</td></tr>
+      <tr><td><code>brand-gate</code></td><td>One brand gate, transcribed from an interview with the author</td><td><strong>implemented</strong></td></tr>
       <tr><td><code>brush</code></td><td>A brush and an importable file</td><td>not yet</td></tr>
       <tr><td><code>still-image</code>, <code>video-shot</code>, <code>music-cue</code>, <code>edit-2d</code>, <code>scene-3d</code></td><td>Through connectors</td><td>not yet</td></tr>
     </tbody>
@@ -94,8 +94,9 @@
 
   <h3>Brand gates are the author's</h3>
   <p>The files in <code>studio/vault/_Context/brand/</code>, and <code>tokens.json</code>, encode taste
-  and past decisions, which cannot be generated. The studio never writes or edits them; it proposes
-  a change as a diff. The studio's own palette and typeface apply to the studio's own interfaces,
+  and past decisions, which cannot be generated. A gate is written only by a <code>brand-gate</code>
+  run: it is transcribed from what you say, and <code>gate_md.py</code> writes it only after you have
+  seen the whole file and said yes. Anything else there is proposed as a diff, never written. The studio's own palette and typeface apply to the studio's own interfaces,
   not to client work: a client project's design system is its own authority.</p>
 
   <h2 id="run">Running it</h2>
@@ -128,7 +129,7 @@ python studio/pipeline/content_md.py apply &lt;run-id&gt; --confirm</pre>
   <h2 id="limits">What it does not do</h2>
   <ul>
     <li>It does not read or write the creative-writing vault, unless you name a work at a checkpoint.</li>
-    <li>It does not write a brand gate or change <code>tokens.json</code>.</li>
+    <li>It does not generate a brand gate or change <code>tokens.json</code>.</li>
     <li>It does not edit the UI design plugin; it runs that plugin's scripts.</li>
     <li>It calls no connector tool that shares, publishes, invites or deploys.</li>
     <li><strong>It cannot stop a tool being called outside a pipeline.</strong> A pipeline is entered by
