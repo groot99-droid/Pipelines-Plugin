@@ -37,7 +37,7 @@ _HTML = "text/html; charset=utf-8"
 STATIC = {"/keys.html": _HTML, "/index.html": _HTML, "/creative-writing.html": _HTML,
           "/studio.html": _HTML, "/ui-design.html": _HTML, "/style.css": "text/css; charset=utf-8"}
 MAX_VALUE = 512
-PLACEHOLDER = "your-key-here"
+PLACEHOLDERS = {"your-key-here", "Add_Key"}  # "no key yet"
 
 
 def keys_file() -> Path:
@@ -60,7 +60,7 @@ def parse(lines: list[str]) -> dict[str, str]:
             continue
         key, _, value = line.partition("=")
         value = value.strip().strip('"').strip("'")
-        if value and value != PLACEHOLDER:
+        if value and value not in PLACEHOLDERS:
             out[key.strip()] = value
     return out
 
@@ -117,7 +117,7 @@ def validate(body: object) -> dict[str, str | None]:
         value = value.strip()
         if not value:
             continue  # an empty field leaves the saved value alone
-        if len(value) > MAX_VALUE or any(c in value for c in "\r\n\0\"'") or value == PLACEHOLDER:
+        if len(value) > MAX_VALUE or any(c in value for c in "\r\n\0\"'") or value in PLACEHOLDERS:
             raise ValueError(f"{name}: that does not look like a key")
         changes[name] = value
     for name in body.get("remove") or []:

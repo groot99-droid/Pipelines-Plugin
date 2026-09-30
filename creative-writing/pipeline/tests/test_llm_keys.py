@@ -62,8 +62,9 @@ class UserKeyFileTests(unittest.TestCase):
         self.assertTrue(env["GEMINI_API_KEY"] == "from-file", "file value did not win")
 
     def test_placeholder_and_missing_file_are_ignored(self):
-        self.keys.write_text("GEMINI_API_KEY=your-key-here\n", encoding="utf-8")
-        self.assertNotIn("GEMINI_API_KEY", list(self.load()))
+        for placeholder in ("your-key-here", "Add_Key"):
+            self.keys.write_text(f"GEMINI_API_KEY={placeholder}\n", encoding="utf-8")
+            self.assertNotIn("GEMINI_API_KEY", list(self.load()))
         self.keys.unlink()
         self.assertNotIn("GEMINI_API_KEY", list(self.load()))
 

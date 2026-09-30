@@ -32,6 +32,9 @@ import urllib.request
 
 
 
+# Values that mean "no key yet". Never loaded into the environment.
+PLACEHOLDERS = {"your-key-here", "Add_Key"}
+
 LEGACY_ENV = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
 
 
@@ -56,7 +59,7 @@ def _load_env_file(path: str) -> None:
             continue
         key, _, value = line.partition("=")
         value = value.strip().strip('"').strip("'")
-        if value and value != "your-key-here":
+        if value and value not in PLACEHOLDERS:
             os.environ[key.strip()] = value
 
 
@@ -67,7 +70,7 @@ def _load_dotenv() -> None:
     present), then the user key file (see user_keys_file), which wins.
     Values in either file override the shell's, so the pipeline's dedicated
     key wins over any GEMINI_API_KEY set elsewhere. Placeholder values
-    ("your-key-here") are ignored.
+    ("your-key-here", "Add_Key") are ignored.
     """
     _load_env_file(LEGACY_ENV)
     _load_env_file(user_keys_file())

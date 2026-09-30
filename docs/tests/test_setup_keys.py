@@ -98,6 +98,14 @@ class ServerTests(unittest.TestCase):
         _, raw = self.request("GET", "/status")
         self.assertNotIn(SECRET.encode(), raw)
 
+    def test_placeholder_reads_as_not_set_and_cannot_be_saved(self):
+        self.path.parent.mkdir(parents=True)
+        self.path.write_text("GEMINI_API_KEY=Add_Key\n", encoding="utf-8")
+        _, raw = self.request("GET", "/status")
+        self.assertFalse(json.loads(raw)["keys"]["GEMINI_API_KEY"])
+        code, _ = self.request("POST", "/save", {"set": {"GEMINI_API_KEY": "Add_Key"}})
+        self.assertEqual(code, 400)
+
     def test_remove(self):
         self.request("POST", "/save", {"set": {"GEMINI_API_KEY": SECRET}})
         code, raw = self.request("POST", "/save", {"remove": ["GEMINI_API_KEY"]})
