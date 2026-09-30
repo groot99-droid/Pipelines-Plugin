@@ -75,6 +75,9 @@ captures/
 *.zip
 dist/
 build/
+# Not artifacts: the Writing Museum's builder and the vendored three.js build.
+!writing-museum/build/
+!writing-museum/web/vendor/three/build/
 
 # ── Local AI / embedding caches ──────────────────────────────────────────────
 # rag_index/index.json is a TF-IDF index of the whole vault, rebuilt with
