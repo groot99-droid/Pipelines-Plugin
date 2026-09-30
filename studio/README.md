@@ -56,15 +56,17 @@ writes the reason into the note. It does not guess.
 
 ## Pipelines
 
-Nine are declared in `spec.yaml`. Two are implemented.
+Nine are declared in `spec.yaml`. Seven are implemented.
 
 | Pipeline | Makes | Status |
 |---|---|---|
 | `ui-direction` | a design direction for a surface or a product, through `plugins/ui-design` | implemented |
 | `ui-build` | markup and CSS in which every value is a token | not yet |
 | `brand-gate` | one brand gate, transcribed from an interview with the author, through `gate_md.py` | implemented |
-| `brush` | a brush and an importable file | not yet |
-| `still-image`, `video-shot`, `music-cue`, `edit-2d`, `scene-3d` | through connectors | not yet |
+| `brush` | a brush and a Procreate file, through the designer and `brush_pack.py` | packer built; the app is still to be copied in |
+| `still-image`, `video-shot`, `music-cue` | through the Higgsfield connector; each spends credits after the execute go-ahead | implemented |
+| `edit-2d` | copies of existing images, through the Adobe connector | implemented |
+| `scene-3d` | through the Blender scene connector; a local Blender when the compute gate allows it | implemented (cloud branch) |
 
 A pipeline that is not implemented is a real entry: what it needs, what it
 carries from the skill it replaces, and what is still open. It does not start.
@@ -102,6 +104,7 @@ Needs Python 3 and `pyyaml` (`pip install -r studio/pipeline/requirements.txt`).
 |---|---|
 | `studio/pipeline/runs/<run-id>/` | freely. Bookkeeping; safe to delete once the run is complete or abandoned |
 | `studio/vault/` | only through `content_md.py apply --confirm`, after a plan and a go-ahead recorded after that plan, and only at `<project>/<kind>/<slug>.md` |
+| `studio/assets/` | only through `studio_run.py keep`, after the execute go-ahead: a copy of a file the run made, at `<project>/<kind>/<slug>/`. Not versioned |
 | anywhere else | only in `execute`, only what the recipe named, only after a go-ahead |
 
 `content_md.py apply` without `--confirm` is a dry run.

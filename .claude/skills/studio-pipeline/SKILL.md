@@ -137,7 +137,18 @@ edit `state.json` by hand, and never work around a refusal.
    what came back, not what was planned.
 
    Call no tool whose name contains a word listed under `connectors: never` in
-   the spec.
+   the spec, and, for a pipeline that runs through a connector, no tool its
+   entry does not list under `connector: tools`. A connector hands back a
+   short-lived link: download the file into the run folder now and log the
+   file name, never the link. What the author keeps is copied out of the run
+   folder, after the execute go-ahead:
+
+   ```
+   python studio/pipeline/studio_run.py keep <run-id> <file> --role final|variant|reference|export|concept-frame
+   ```
+
+   It lands under `studio/assets/<project>/<kind>/<slug>/`, and the record
+   stage must list it.
 
 8. **Review.** One line for each output against each attested constraint, and
    how it was checked. A failed output is a finding. A retry is a new execute
@@ -156,6 +167,9 @@ edit `state.json` by hand, and never work around a refusal.
      `context_brand`. Leave a `PROVISIONAL` decision already in the note as it
      is, unless the author has now stated it. The writer refuses the note
      otherwise.
+   - List under `artifacts` every file the run kept, by the path and role
+     `keep` printed, and nothing else. The writer refuses a record that leaves
+     a kept file out, or lists a file that is not there.
    - Preview it. This writes nothing to the vault:
 
      ```

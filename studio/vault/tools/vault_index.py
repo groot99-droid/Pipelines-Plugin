@@ -273,6 +273,7 @@ def build_parser():
     parser.add_argument("--runs-dir", help="where runs are kept (default: from the spec)")
     parser.add_argument("--vault-dir", help="the vault (default: from the spec)")
     parser.add_argument("--context-dir", help="the brand gates (default: from the spec)")
+    parser.add_argument("--assets-dir", help="where kept artifacts go (default: from the spec)")
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("rows", help="every note as a row, as JSON")
     p_index = sub.add_parser("index", help="build the search index")
@@ -290,7 +291,7 @@ def build_parser():
 def main(argv=None):
     args = build_parser().parse_args(argv)
     try:
-        env = Env(args.spec, args.runs_dir, args.vault_dir, args.context_dir)
+        env = Env(args.spec, args.runs_dir, args.vault_dir, args.context_dir, args.assets_dir)
         return {"rows": cmd_rows, "index": cmd_index, "search": cmd_search}[args.command](env, args)
     except Usage as problem:
         print(f"error     {problem}", file=sys.stderr)

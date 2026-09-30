@@ -19,6 +19,9 @@ version: 1
 vault_root: "../vault"
 context_root: "../vault/_Context/brand"
 runs_root: "runs"
+# What a run makes and the author keeps: files, not versioned (see .gitignore).
+# A note names an artifact by its path relative to this folder.
+assets_root: "../assets"
 
 # One mode. Every stage is a checkpoint: the skill stops at each one, shows
 # the author that stage's output, and waits. There is no autonomous mode here.
@@ -50,6 +53,8 @@ content_md:
   # A finished thing may have no next step. Writing a filler one is worse than
   # writing none.
   next_steps_optional_when: [complete, archived]
+  # What an artifact listed in a note may be. `studio_run.py keep` takes one.
+  artifact_roles: [concept-frame, final, variant, reference, export]
   # File names that are never a Content MD, in any case. No folder of notes
   # may carry one of these names either.
   reserved_names: [SCHEMA.md, README.md, CLAUDE.md]
@@ -260,6 +265,17 @@ refusals:
     rule: "A brand gate is never generated. It is transcribed from the author's answers."
     enforced_by: "the skill, and gate_md.py plan, which refuses a gate whose Provenance does not name the author, a date in the run and the run"
     limit: "It cannot tell whether the words came from the author. The whole file is shown at the checkpoint for the author to judge."
+  - id: artifact-is-a-kept-file
+    rule: >
+      An artifact a note lists is a file under the assets folder that the run
+      kept through `studio_run.py keep`, after the execute go-ahead. Never a
+      link, and never a file the run did not make.
+    enforced_by: "studio_run.py keep, and content_md.py plan at a record write"
+    limit: >
+      keep copies only from the run folder. What the executor put in the run
+      folder, and where it came from, is not seen. A file placed under the
+      assets folder by hand is listed like any other; lint warns when a
+      listed file is missing.
   - id: gate-write-without-confirm
     rule: "Nothing is written into the gate folder without showing the author the whole gate and hearing yes."
     enforced_by: "gate_md.py apply"
@@ -576,28 +592,88 @@ pipelines:
         Decision in Force.
 
   still-image:
-    status: not_yet_implemented
+    status: implemented
     from: "skills/adobe_firefly.skill.md"
     kind: design
-    makes: "One or more still images from a brief."
+    makes: "One or more still images from a brief, through an installed image-generation connector."
+    intent:
+      - generate image
+      - still
+      - concept art
+      - style frame
+      - key art
+      - reference image
     requires_context:
       - gate: visual_identity
         needs: ["generated imagery: motifs, framing, texture"]
       - gate: color_science
         needs: ["palette"]
     executes_through:
-      capability: "image generation"
+      connector: "Higgsfield"
+    connector:
+      tools:
+        - mcp__Higgsfield__models_explore
+        - mcp__Higgsfield__generate_image
+        - mcp__Higgsfield__generate_image_batch
+        - mcp__Higgsfield__jobs_wait
+        - mcp__Higgsfield__show_generation_by_ids
+        - mcp__Higgsfield__media_upload
+        - mcp__Higgsfield__media_upload_widget
+        - mcp__Higgsfield__media_confirm
+        - mcp__Higgsfield__upscale_image
+        - mcp__Higgsfield__remove_background
     class: spend
+    leaves_machine: "The prompt, and any reference image the recipe names, to the connector's service. Every generation spends credits."
     carries:
       - "A style reference is recorded in the note. A change supersedes it and keeps the old one."
-    open:
-      - "visual_identity section 7 is a declared gap."
+      - "The prompt is built from the attested imagery constraints. A word the brand does not use does not go in."
+      - "No speculative submission: every generation is in the recipe, and the recipe was confirmed."
+    stage_notes:
+      intake: |
+        Capture what the image is of, what it is for, how many are wanted, and
+        the aspect ratio if the author names one. If the author names a
+        reference image, record its path; it is read at recipe, not now. If
+        this continues a note, its Method holds the style reference in force.
+      recipe: |
+        Ask the connector which model fits (models_explore, recommend) and
+        record the answer; the author picks. Then, for each generation: the
+        model, the prompt word for word, the negative prompt, the aspect
+        ratio, the seed if one is to be held, the reference image if any, and
+        the count. Beside every value its source: a row of the attestation, a
+        Decision in Force, the brief, or the model's own default. Name the
+        style reference this run will carry forward: the one in force, or a
+        new one the author has chosen, with the old one noted as superseded.
+        Say what leaves the machine and how many credits the count spends.
+      execute: |
+        A reference image goes up through media_upload or the upload widget
+        first; log the media id. Run each generation from the recipe, and no
+        other. Wait for the job; log the job id, the model, the seed the
+        service reports, and the file name each result is downloaded to in
+        the run folder. A result that fails or is blocked is logged as such,
+        not retried on a changed prompt: a changed prompt is a new recipe.
+      review: |
+        Each image against each attested constraint: motifs, framing, texture,
+        palette, one line each, and how it was checked. Then the author marks
+        each keep or discard; keep the kept ones with `keep`, role
+        `concept-frame` or `final`, and the reference image as `reference`.
+      record: |
+        kind: design. Method: every prompt as sent, the model, the seed the
+        service returned, the media ids, the reference image, and the style
+        reference now in force with the one it supersedes. A seed held across
+        images is a Decision in Force.
 
   video-shot:
-    status: not_yet_implemented
+    status: implemented
     from: "skills/higgsfield_api.skill.md"
     kind: video
-    makes: "One shot, or a chain of shots that hold continuity."
+    makes: "One shot, or a chain of shots that hold continuity, through an installed video-generation connector."
+    intent:
+      - generate video
+      - shot
+      - animate
+      - camera move
+      - image to video
+      - motion
     requires_context:
       - gate: motion_language
         needs: ["camera grammar", "shot lengths", "transitions to avoid"]
@@ -606,65 +682,278 @@ pipelines:
       - gate: visual_identity
         needs: ["generated imagery: motifs, framing, texture"]
     executes_through:
-      capability: "video generation"
+      connector: "Higgsfield"
+    connector:
+      tools:
+        - mcp__Higgsfield__models_explore
+        - mcp__Higgsfield__get_workflow_instructions
+        - mcp__Higgsfield__generate_video
+        - mcp__Higgsfield__generate_video_batch
+        - mcp__Higgsfield__jobs_wait
+        - mcp__Higgsfield__show_generation_by_ids
+        - mcp__Higgsfield__media_upload
+        - mcp__Higgsfield__media_upload_widget
+        - mcp__Higgsfield__media_confirm
+        - mcp__Higgsfield__video_metadata
+        - mcp__Higgsfield__video_render_frame
+        - mcp__Higgsfield__upscale_video
     class: spend
+    leaves_machine: "The prompt and the anchor still to the connector's service. Every shot spends credits."
     carries:
-      - "Continuity lives in the note's Method and Decisions in Force, not in a live variable."
-      - "A drift check after a run of shots."
+      - "Continuity lives in the note's Method and Decisions in Force, not in a live variable: the anchor still, the seed, the shot index, the character and environment anchors."
+      - "A continuation shot starts from the last frame of the one before it."
+      - "A drift check after a run of shots: every third shot is set beside the anchor, and the author judges. Drift is flagged, never regenerated over silently."
+      - "The seed is never randomised on a continuation shot."
+    stage_notes:
+      intake: |
+        Capture the shot: what happens, how long, and whether it starts a
+        chain or continues one. A chain continues a note; read its Method for
+        the anchor still, the seed, the shot index and the anchors. A still
+        kept by a still-image run is named by its path under studio/assets.
+      recipe: |
+        Ask the connector which model fits and record the answer. For each
+        shot: the model, the start image (the anchor still, or the previous
+        shot's last frame), the prompt built from the character anchor, the
+        environment anchor and the shot action in the motion vocabulary the
+        attestation resolved, the duration, the seed, and the aspect ratio.
+        Every value with its source. Say which shot, if any, is the third in
+        its chain and so gets the drift check at review. Say what leaves the
+        machine and what the chain spends.
+      execute: |
+        Upload the start image; log the media id. Run each shot in order,
+        wait for it, and download it into the run folder; log the job id, the
+        seed reported, the duration and fps the service reports, and the file
+        name. Pull the last frame (video_render_frame) into the run folder for
+        the next shot. A failed or blocked shot ends the chain here; the rest
+        waits for a new recipe.
+      review: |
+        Each shot against camera grammar, shot length, transitions to avoid,
+        and what persists, one line each. For a third shot, the drift check:
+        the shot's first frame beside the anchor still, and the author's
+        verdict, written down. Keep the shots the author keeps as `final` or
+        `variant`, and the last frame the next session starts from as
+        `reference`.
+      record: |
+        kind: video. Method: the anchors, the seed, the shot index after this
+        session, every prompt as sent, the model, the media ids and the file
+        of the last frame. The seed and the anchors are Decisions in Force. A
+        drift verdict goes in the Timeline entry.
 
   music-cue:
-    status: not_yet_implemented
+    status: implemented
     from: "skills/suno_audio.skill.md"
     kind: audio
-    makes: "One cue."
+    makes: "One cue, through an installed audio-generation connector."
+    intent:
+      - music
+      - cue
+      - track
+      - score
+      - theme
+      - soundtrack
     requires_context:
       - gate: sound_identity
         needs: ["instrumentation", "tempo range", "mix targets"]
       - gate: brand_voice
         needs: ["diction, if there are lyrics"]
     executes_through:
-      capability: "audio generation"
+      connector: "Higgsfield"
+    connector:
+      tools:
+        - mcp__Higgsfield__models_explore
+        - mcp__Higgsfield__generate_audio
+        - mcp__Higgsfield__generate_audio_batch
+        - mcp__Higgsfield__jobs_wait
+        - mcp__Higgsfield__show_generation_by_ids
     class: spend
+    leaves_machine: "The prompt, and any lyric, to the connector's service. Every cue spends credits."
     carries:
-      - "Tempo and key are decisions in force."
+      - "Tempo and key are Decisions in Force: a new cue for the same project matches them, or the author states a modulation."
+      - "One direction per generation; two styles are not blended in one prompt."
+      - "The instrumental flag matches the cue spec. A lyric is the author's words or none."
     open:
-      - "The source skill was written for a service with no connector installed."
+      - "brand_voice is needed only when the cue has a lyric. An instrumental cue resolves that need as STATED: no lyric."
+    stage_notes:
+      intake: |
+        Capture what the cue is for, how long, instrumental or with a lyric,
+        and the mood in the author's words. If this continues a project's
+        note, read its Decisions in Force for the tempo and key in force.
+      recipe: |
+        Ask the connector which model fits and record the answer. Then: the
+        prompt built from the attested instrumentation and the brief, the
+        tempo and key (from a Decision in Force, or stated by the author
+        here), the duration, the instrumental flag, and the lyric word for
+        word if there is one. Every value with its source. Say how many
+        variations, and what that spends.
+      execute: |
+        Run each generation from the recipe, wait for it, and download each
+        result into the run folder; log the job id, the model, the reported
+        duration and the file name. Nothing is regenerated on a changed prompt
+        without going back to recipe.
+      review: |
+        Each cue against instrumentation, tempo, key and the mix targets, one
+        line each, and how it was checked (the author listens; say so). The
+        author picks the master; keep it as `final` and the others as
+        `variant`.
+      record: |
+        kind: audio. Method: the prompt as sent, the model, the tempo, the
+        key, the duration and the file names. Tempo and key are Decisions in
+        Force when this is the project's first cue.
 
   edit-2d:
-    status: not_yet_implemented
+    status: implemented
     from: "skills/adobe_suite_uxp.skill.md"
     kind: design
-    makes: "A batch edit or a composite."
+    makes: "A batch edit or a composite of existing images, through the installed image-editing connector."
+    intent:
+      - edit image
+      - batch
+      - crop
+      - resize
+      - grade
+      - remove background
+      - composite
     requires_context:
       - gate: render_philosophy
         needs: ["quality bar", "output specs"]
       - gate: color_science
         needs: ["working space", "delivery transform"]
     executes_through:
-      capability: "image editing"
+      connector: "Adobe"
+    connector:
+      tools:
+        - mcp__Adobe_for_creativity__adobe_mandatory_init
+        - mcp__Adobe_for_creativity__asset_add_file
+        - mcp__Adobe_for_creativity__asset_add_file_check_status
+        - mcp__Adobe_for_creativity__asset_preview_file
+        - mcp__Adobe_for_creativity__image_crop_and_resize
+        - mcp__Adobe_for_creativity__image_crop_to_bounds
+        - mcp__Adobe_for_creativity__image_auto_straighten
+        - mcp__Adobe_for_creativity__image_adjust_brightness_and_contrast
+        - mcp__Adobe_for_creativity__image_adjust_exposure
+        - mcp__Adobe_for_creativity__image_adjust_highlights
+        - mcp__Adobe_for_creativity__image_adjust_dark_portions
+        - mcp__Adobe_for_creativity__image_adjust_light_portions
+        - mcp__Adobe_for_creativity__image_adjust_hsl
+        - mcp__Adobe_for_creativity__image_adjust_color_temperature
+        - mcp__Adobe_for_creativity__image_adjust_vibrance_and_saturation
+        - mcp__Adobe_for_creativity__image_adjust_single_color_saturation
+        - mcp__Adobe_for_creativity__image_apply_adjustments
+        - mcp__Adobe_for_creativity__image_apply_auto_tone
+        - mcp__Adobe_for_creativity__image_apply_preset
+        - mcp__Adobe_for_creativity__image_list_presets
+        - mcp__Adobe_for_creativity__image_remove_background
+        - mcp__Adobe_for_creativity__image_select_subject
+        - mcp__Adobe_for_creativity__image_select_by_prompt
+        - mcp__Adobe_for_creativity__image_invert_selection
+        - mcp__Adobe_for_creativity__image_fill_area
+        - mcp__Adobe_for_creativity__image_add_grain
+        - mcp__Adobe_for_creativity__image_apply_gaussian_blur
+        - mcp__Adobe_for_creativity__image_apply_lens_blur
+        - mcp__Adobe_for_creativity__image_vectorize
     class: spend
+    leaves_machine: "The source images, as copies, to the connector's storage. Some operations spend credits."
     carries:
       - "Work on a copy. Never change a file that was not read in this run."
-    open:
-      - "color_science section 5 is a declared gap."
+      - "A batch is one recipe applied to every file, with the same values; a file that needs different values is its own recipe."
+      - "The output spec (size, format, colour) comes from the attestation, not from the tool's default."
+    stage_notes:
+      intake: |
+        Capture which files (by path), what is to be done to them, and what
+        the result is for. Read every source file's name and size now; the
+        list is the batch. Nothing outside it is touched.
+      recipe: |
+        Copy the sources into the run folder at execute, never edit them in
+        place: say so. For each operation, the tool, every parameter, and the
+        order; beside each value its source (the attestation's output specs
+        and delivery transform, a Decision in Force, or the brief). Say what
+        leaves the machine: every source goes up as a copy.
+      execute: |
+        Copy each source into the run folder first, and log its sha256.
+        Initialise the connector, upload each copy, and run the operations
+        in the recipe's order; log each tool call, its inputs, and the file
+        each result is downloaded to. A result is never written over a
+        source.
+      review: |
+        Each output against the quality bar and the output specs, one line
+        each: size, format, what changed and what did not. The author marks
+        keep or discard; keep as `final` or `variant`.
+      record: |
+        kind: design. Method: the operations with every parameter, in order,
+        and the sha256 of each source, so the batch can be run again on the
+        same files. Artifacts: the kept outputs.
 
   scene-3d:
-    status: not_yet_implemented
+    status: implemented
     from: "skills/blender_python.skill.md"
     kind: 3d
-    makes: "A scene, a camera path, or a render."
+    makes: "A scene, a camera path, or a render, through the installed Blender scene connector (cloud), or a local Blender when the compute gate allows it."
+    intent:
+      - 3d scene
+      - blender
+      - camera path
+      - render
+      - previz
+      - low-poly
     requires_context:
       - gate: render_philosophy
         needs: ["quality bar", "when to re-render"]
       - gate: motion_language
         needs: ["camera grammar"]
     executes_through:
-      capability: "3D scene control"
-    class: local-compute
+      connector: "Higgsfield scene builder (Blender 5.2, remote)"
+    connector:
+      tools:
+        - mcp__Higgsfield__scene_builder_3d_list_projects
+        - mcp__Higgsfield__scene_builder_3d_create_project
+        - mcp__Higgsfield__scene_builder_3d_get_project
+        - mcp__Higgsfield__scene_builder_3d_query_python
+        - mcp__Higgsfield__scene_builder_3d_run_python
+        - mcp__Higgsfield__scene_builder_3d_get_operation
+        - mcp__Higgsfield__scene_builder_3d_import_asset
+        - mcp__Higgsfield__scene_builder_3d_search_assets
+        - mcp__Higgsfield__scene_builder_3d_get_glb
+        - mcp__Higgsfield__scene_builder_3d_get_blend
+        - mcp__Higgsfield__scene_builder_3d_get_artifact
+        - mcp__Higgsfield__scene_builder_3d_show_scene
+        - mcp__Higgsfield__generate_3d
+    class: spend
+    leaves_machine: "The scene code and any imported model, to the connector's service. A render there spends credits. A local render leaves nothing, and needs a compute token."
     carries:
-      - "A render needs a compute token: one token, one job."
+      - "Fixed scripts with a parameter file: the bpy code that ran is the Method, whole, with its parameters beside it."
+      - "A local render needs a compute token: one token, one job. The cloud branch needs none."
+      - "Silhouette, proportions, depth, contact, framing, then detail; lights move with the geometry."
     open:
-      - "The compute gate has never run on this machine."
+      - "The local branch (a headless Blender on the laptop, driven by studio/pipeline/bpy/) is built when Blender is installed there. Until then every scene-3d run is the cloud branch."
+    stage_notes:
+      intake: |
+        Capture what the scene is, what is wanted out of it (a GLB, a .blend,
+        a still, a turntable), and whether it continues a project's scene.
+        Read the connector's project list if continuing; the project id goes
+        in the brief.
+      recipe: |
+        Cloud branch. The project to create or continue; then each edit as
+        one coherent bpy script with its parameters set out beside it (units
+        in metres, names, camera, lights), and what it publishes (a preview
+        image, a GLB). Every parameter with its source: the camera grammar
+        from the attestation, the quality bar, the brief. Say what leaves the
+        machine and what a render spends.
+      execute: |
+        Create or open the project; log the id. Inspect the scene
+        (query_python) and log the revision and scene sequence the edit will
+        be guarded with. Run each edit from the recipe with those guards; log
+        the operation id and revisionAfter. Publish what the recipe says and
+        download it into the run folder; log the file names. Finish with
+        show_scene at the final revision.
+      review: |
+        Each published image against camera grammar and the quality bar, one
+        line each, and the author's verdict on the scene as shown. Keep what
+        the author keeps: the GLB or .blend as `final`, previews as
+        `concept-frame`.
+      record: |
+        kind: 3d. Method: the project id, the final revision, and every bpy
+        script as run with its parameters. The camera setup and the units are
+        Decisions in Force.
 
 # --------------------------------------------------------------------
 # Stages. The same six for every pipeline.
@@ -820,7 +1109,12 @@ stages:
 
       Write execute_log.md as it happens: each call as made, what came back,
       and anything that failed. Record what was done, not what was planned.
-      Save artifacts in the run folder.
+      Save artifacts in the run folder. A connector returns a short-lived
+      link: download the file into the run folder now, and log the file name,
+      never the link. What the author keeps is copied out of the run folder:
+        python studio/pipeline/studio_run.py keep <run-id> <file> --role final|variant|reference|export|concept-frame
+      It lands under studio/assets/<project>/<kind>/<slug>/, and the record
+      stage must list it.
 
   - id: review
     title: "5. Review"
@@ -873,6 +1167,9 @@ stages:
            `context_brand` the gates this note's decisions speak to, as
            SCHEMA.md means it; a decision derived or stated in this run always
            names its gate there.
+        8. List under `artifacts` every file this run kept, by the path and
+           role `studio_run.py keep` printed. Nothing else goes there: a file
+           that was not kept is not an artifact, and a link never is.
       Leave every existing Timeline entry exactly as it is.
 
       {pipeline.stage_notes.record}

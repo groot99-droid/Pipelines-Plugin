@@ -147,7 +147,7 @@ class NewRun(HubCase):
         self.assertEqual(self.state(run_id)["pipeline"], "ui-direction")
 
     def test_a_pipeline_that_is_not_implemented_is_refused(self):
-        status, reply = self.json("/api/runs", method="POST", body={"pipeline": "still-image", "title": "x"})
+        status, reply = self.json("/api/runs", method="POST", body={"pipeline": "ui-build", "title": "x"})
         self.assertEqual(status, 400)
         self.assertIn("not_yet_implemented", reply["error"])
         self.assertEqual(list(self.runs.iterdir()), [])
