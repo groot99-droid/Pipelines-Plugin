@@ -6,6 +6,11 @@
   },
   "plugins": [
     {
+      "name": "rosw",
+      "source": "./",
+      "description": "The ROSW pipelines: a checkpointed creative-writing pipeline with its vault, chunk tagging and plot-logic checks, and the studio pipeline that walks one made thing through six stages and records it in the studio vault."
+    },
+    {
       "name": "ui-design",
       "source": "./plugins/ui-design",
       "description": "Searchable UI styles, palettes, fonts, UX rules, icons, motion and stacks; a contrast-checked design-system generator; a brief router; multipart search and page-review agents."

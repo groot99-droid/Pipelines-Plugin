@@ -20,13 +20,14 @@ being invented from memory. The catalog is a BM25 index over curated files:
 In Claude Code:
 
 ```
-/plugin marketplace add groot99-droid/ui-design-plugin
-/plugin install ui-design@ui-design-plugin
+/plugin marketplace add groot99-droid/Pipelines-Plugin
+/plugin install ui-design@rosw
 ```
 
-Or from a shell: `claude plugin marketplace add groot99-droid/ui-design-plugin`, then
-`claude plugin install ui-design@ui-design-plugin`. To try a local clone for one
-session without installing, start Claude Code with `claude --plugin-dir <path to the clone>`.
+Or from a shell: `claude plugin marketplace add groot99-droid/Pipelines-Plugin`, then
+`claude plugin install ui-design@rosw`. The plugin lives in the `plugins/ui-design/`
+folder of that repository. To try a clone for one session without installing, start
+Claude Code with `claude --plugin-dir <clone>/plugins/ui-design`.
 
 **Requirements.** Python 3 on your `PATH` as `python` (the skills also try `python3`
 and `py -3`). The catalog scripts use only the standard library and never touch the
@@ -115,8 +116,8 @@ and needs the maintainer's explicit approval.
 
 **Run the refresh skill from a clone, not an installed copy.** Claude Code keeps each
 installed version in its own cache directory and discards what was written there on the
-next update, so the skill refuses to run from one. Clone this repository and start
-Claude Code with `--plugin-dir` pointing at it.
+next update, so the skill refuses to run from one. Clone the repository and start
+Claude Code with `--plugin-dir` pointing at its `plugins/ui-design/` folder.
 
 ## Data and licences
 

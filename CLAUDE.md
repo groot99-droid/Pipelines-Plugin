@@ -45,7 +45,8 @@ plugins/ui-design/   the ui-design plugin: the plugin root, and the whole of wha
   catalog/           data/ and scripts/ — the search catalog, stdlib only
   maintenance/       validators, relevance gate, refresh scripts, verify.py
   references/        prose the ui-design-catalog skill reads on demand
-  README.md, LICENSE, NOTICE, CHANGELOG.md, .gitignore, .gitattributes, .github/
+  README.md, LICENSE, NOTICE, CHANGELOG.md, .gitignore, .gitattributes
+.github/workflows/   verify.yml: CI for the whole repo (see "Working on the ui-design plugin")
 ```
 
 **Paths in the creative-writing and studio skills and agents are relative to this
@@ -169,9 +170,9 @@ the plugin root.
   at `Path(__file__).parent.parent / "data"`.
 - Verify with one command: `python plugins/ui-design/maintenance/verify.py`, from any
   directory. It runs every gate and prints the exact command to re-run whichever one
-  fails. In this repo there is no CI; this is the gate. The plugin carries its own
-  workflow, `plugins/ui-design/.github/workflows/verify.yml`, which runs it on Linux,
-  Windows and macOS once the plugin is published as its own repository.
+  fails. On GitHub, `.github/workflows/verify.yml` runs it, and the creative-writing,
+  studio and docs test suites, on Linux, Windows and macOS with Python 3.10 and 3.13,
+  on every push to `main` and every pull request.
 - `claude plugin validate ./plugins/ui-design` checks the manifest and marketplace
   file. It is not part of `verify.py`, because it needs the Claude Code CLI.
 - `--persist` writes `design-system/<project-slug>/` under `--output-dir`, or under

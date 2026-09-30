@@ -72,7 +72,11 @@ pip install -r studio/pipeline/requirements.txt</pre></li>
       <code>~/.rosw/keys.env</code> in your user folder, never into the repo.
       <a href="keys.html">More about keys</a>.</li>
     <li><strong>Open Claude Code in the repo folder.</strong> The creative-writing and studio
-      skills load automatically. For the UI design plugin, start with
+      skills load automatically. They are also a plugin, <code>rosw</code>, which works with
+      this repo as your working folder:
+<pre>/plugin marketplace add groot99-droid/Pipelines-Plugin
+/plugin install rosw@rosw</pre>
+      For the UI design plugin, start with
 <pre>claude --plugin-dir ./plugins/ui-design</pre>
       or install it (see <a href="ui-design.html#install">UI design → Install</a>).</li>
     <li><strong>Ask for what you want.</strong> "Develop a horror story from this idea…",

@@ -5,8 +5,8 @@
   "author": {
     "name": "groot99-droid"
   },
-  "homepage": "https://github.com/groot99-droid/ui-design-plugin",
-  "repository": "https://github.com/groot99-droid/ui-design-plugin",
+  "homepage": "https://github.com/groot99-droid/Pipelines-Plugin/tree/main/plugins/ui-design",
+  "repository": "https://github.com/groot99-droid/Pipelines-Plugin",
   "license": "MIT",
   "keywords": [
     "ui",

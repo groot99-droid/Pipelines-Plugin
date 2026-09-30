@@ -1,0 +1,45 @@
+# Runs every check in the repo on the platforms the tools are meant to work on:
+#   - the ui-design plugin's gate, plugins/ui-design/maintenance/verify.py (ten checks:
+#     data, contract, indexes, unit tests, the relevance gate, and a smoke test of
+#     every domain and stack), which stops at the first failure;
+#   - the creative-writing, studio and docs test suites.
+#
+# The Windows and macOS jobs also prove the LF pin: the relevance gate fingerprints
+# raw bytes, and a Windows runner checks files out with CRLF unless .gitattributes
+# says otherwise.
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: verify (${{ matrix.os }}, Python ${{ matrix.python }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install the dependencies
+        run: |
+          python -m pip install -r plugins/ui-design/maintenance/requirements.txt
+          python -m pip install -r studio/pipeline/requirements.txt
+      - name: ui-design gate
+        run: python plugins/ui-design/maintenance/verify.py
+      - name: creative-writing tests
+        run: python -m unittest discover -s creative-writing/pipeline/tests
+      - name: studio tests
+        run: python -m unittest discover -s studio/pipeline/tests
+      - name: docs tests
+        run: python -m unittest discover -s docs/tests
