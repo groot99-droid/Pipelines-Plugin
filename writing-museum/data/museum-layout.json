@@ -6,7 +6,18 @@
 "w": 3.2,
 "h": 4.0
 },
-"order": [],
+"order": [
+"endless-temple",
+"wrymwretch",
+"melting-away",
+"missing-campsites",
+"low-in-the-water",
+"following-the-sheep",
+"yellow-drop",
+"heartstream",
+"trip-tracker",
+"architecture-of-being"
+],
 "scenes": {
 "hub": {
 "kind": "hub",
@@ -26,7 +37,7 @@
 "floor": {
 "x": [
 -14.0,
-44.0
+48.0
 ],
 "y": [
 -7.0,
@@ -34,7 +45,7 @@
 ]
 },
 "size": [
-40.0,
+44.0,
 8.0
 ],
 "height": 9.0,
@@ -47,7 +58,7 @@
 },
 "apse": {
 "center": [
-40.0,
+44.0,
 0.0
 ],
 "r": 4.0
@@ -63,7 +74,7 @@
 "name": "GEO-hub_floor",
 "x": [
 -1.755,
-40.0
+44.0
 ],
 "y": [
 -4.2,
@@ -79,7 +90,7 @@
 "name": "GEO-hub_ceiling",
 "x": [
 -1.755,
-40.0
+44.0
 ],
 "y": [
 -4.2,
@@ -95,7 +106,167 @@
 "name": "GEO-hub_wallS_0",
 "x": [
 -1.555,
-40.0
+4.4
+],
+"y": [
+-4.2,
+-3.8
+],
+"z": [
+0.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_transomS_1",
+"x": [
+4.4,
+7.6
+],
+"y": [
+-4.2,
+-3.8
+],
+"z": [
+4.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_wallS_1",
+"x": [
+7.6,
+12.4
+],
+"y": [
+-4.2,
+-3.8
+],
+"z": [
+0.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_transomS_2",
+"x": [
+12.4,
+15.6
+],
+"y": [
+-4.2,
+-3.8
+],
+"z": [
+4.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_wallS_2",
+"x": [
+15.6,
+20.4
+],
+"y": [
+-4.2,
+-3.8
+],
+"z": [
+0.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_transomS_3",
+"x": [
+20.4,
+23.6
+],
+"y": [
+-4.2,
+-3.8
+],
+"z": [
+4.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_wallS_3",
+"x": [
+23.6,
+28.4
+],
+"y": [
+-4.2,
+-3.8
+],
+"z": [
+0.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_transomS_4",
+"x": [
+28.4,
+31.6
+],
+"y": [
+-4.2,
+-3.8
+],
+"z": [
+4.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_wallS_4",
+"x": [
+31.6,
+36.4
+],
+"y": [
+-4.2,
+-3.8
+],
+"z": [
+0.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_transomS_5",
+"x": [
+36.4,
+39.6
+],
+"y": [
+-4.2,
+-3.8
+],
+"z": [
+4.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_wallS_5",
+"x": [
+39.6,
+44.0
 ],
 "y": [
 -4.2,
@@ -111,7 +282,167 @@
 "name": "GEO-hub_wallN_0",
 "x": [
 -1.555,
-40.0
+4.4
+],
+"y": [
+3.8,
+4.2
+],
+"z": [
+0.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_transomN_1",
+"x": [
+4.4,
+7.6
+],
+"y": [
+3.8,
+4.2
+],
+"z": [
+4.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_wallN_1",
+"x": [
+7.6,
+12.4
+],
+"y": [
+3.8,
+4.2
+],
+"z": [
+0.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_transomN_2",
+"x": [
+12.4,
+15.6
+],
+"y": [
+3.8,
+4.2
+],
+"z": [
+4.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_wallN_2",
+"x": [
+15.6,
+20.4
+],
+"y": [
+3.8,
+4.2
+],
+"z": [
+0.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_transomN_3",
+"x": [
+20.4,
+23.6
+],
+"y": [
+3.8,
+4.2
+],
+"z": [
+4.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_wallN_3",
+"x": [
+23.6,
+28.4
+],
+"y": [
+3.8,
+4.2
+],
+"z": [
+0.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_transomN_4",
+"x": [
+28.4,
+31.6
+],
+"y": [
+3.8,
+4.2
+],
+"z": [
+4.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_wallN_4",
+"x": [
+31.6,
+36.4
+],
+"y": [
+3.8,
+4.2
+],
+"z": [
+0.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_transomN_5",
+"x": [
+36.4,
+39.6
+],
+"y": [
+3.8,
+4.2
+],
+"z": [
+4.0,
+9.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-hub_wallN_5",
+"x": [
+39.6,
+44.0
 ],
 "y": [
 3.8,
@@ -275,7 +606,7 @@
 "name": "GEO-hub_wall_apse",
 "kind": "lathe",
 "center": [
-40.0,
+44.0,
 0.0,
 0.0
 ],
@@ -308,7 +639,7 @@
 "name": "GEO-hub_apse_dome",
 "kind": "lathe",
 "center": [
-40.0,
+44.0,
 0.0,
 8.99
 ],
@@ -353,7 +684,7 @@
 "name": "GEO-hub_floor_apse",
 "kind": "disc",
 "center": [
-40.0,
+44.0,
 0.0,
 0.0
 ],
@@ -383,7 +714,92 @@
 0.0
 ],
 [
-40.0,
+4.4,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+7.6,
+-4.0,
+0.0
+],
+[
+12.4,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+15.6,
+-4.0,
+0.0
+],
+[
+20.4,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+23.6,
+-4.0,
+0.0
+],
+[
+28.4,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+31.6,
+-4.0,
+0.0
+],
+[
+36.4,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+39.6,
+-4.0,
+0.0
+],
+[
+44.0,
 -4.0,
 0.0
 ],
@@ -400,7 +816,92 @@
 0.0
 ],
 [
-40.0,
+4.4,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+],
+[
+[
+7.6,
+4.0,
+0.0
+],
+[
+12.4,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+],
+[
+[
+15.6,
+4.0,
+0.0
+],
+[
+20.4,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+],
+[
+[
+23.6,
+4.0,
+0.0
+],
+[
+28.4,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+],
+[
+[
+31.6,
+4.0,
+0.0
+],
+[
+36.4,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+],
+[
+[
+39.6,
+4.0,
+0.0
+],
+[
+44.0,
 4.0,
 0.0
 ],
@@ -424,7 +925,92 @@
 0.0
 ],
 [
-40.0,
+4.4,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+7.6,
+-4.0,
+0.0
+],
+[
+12.4,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+15.6,
+-4.0,
+0.0
+],
+[
+20.4,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+23.6,
+-4.0,
+0.0
+],
+[
+28.4,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+31.6,
+-4.0,
+0.0
+],
+[
+36.4,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+39.6,
+-4.0,
+0.0
+],
+[
+44.0,
 -4.0,
 0.0
 ],
@@ -441,7 +1027,92 @@
 0.0
 ],
 [
-40.0,
+4.4,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+],
+[
+[
+7.6,
+4.0,
+0.0
+],
+[
+12.4,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+],
+[
+[
+15.6,
+4.0,
+0.0
+],
+[
+20.4,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+],
+[
+[
+23.6,
+4.0,
+0.0
+],
+[
+28.4,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+],
+[
+[
+31.6,
+4.0,
+0.0
+],
+[
+36.4,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+],
+[
+[
+39.6,
+4.0,
+0.0
+],
+[
+44.0,
 4.0,
 0.0
 ],
@@ -465,7 +1136,92 @@
 0.0
 ],
 [
-40.0,
+4.4,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+7.6,
+-4.0,
+0.0
+],
+[
+12.4,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+15.6,
+-4.0,
+0.0
+],
+[
+20.4,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+23.6,
+-4.0,
+0.0
+],
+[
+28.4,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+31.6,
+-4.0,
+0.0
+],
+[
+36.4,
+-4.0,
+0.0
+],
+[
+0,
+1,
+0
+]
+],
+[
+[
+39.6,
+-4.0,
+0.0
+],
+[
+44.0,
 -4.0,
 0.0
 ],
@@ -482,7 +1238,92 @@
 0.0
 ],
 [
-40.0,
+4.4,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+],
+[
+[
+7.6,
+4.0,
+0.0
+],
+[
+12.4,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+],
+[
+[
+15.6,
+4.0,
+0.0
+],
+[
+20.4,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+],
+[
+[
+23.6,
+4.0,
+0.0
+],
+[
+28.4,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+],
+[
+[
+31.6,
+4.0,
+0.0
+],
+[
+36.4,
+4.0,
+0.0
+],
+[
+0,
+-1,
+0
+]
+],
+[
+[
+39.6,
+4.0,
+0.0
+],
+[
+44.0,
 4.0,
 0.0
 ],
@@ -493,21 +1334,392 @@
 ]
 ]
 ]
+},
+{
+"name": "GEO-hub_architrave_endless-temple",
+"profile": "architrave",
+"material": "painted_trim",
+"door": "endless-temple"
+},
+{
+"name": "GEO-hub_architrave_melting-away",
+"profile": "architrave",
+"material": "painted_trim",
+"door": "melting-away"
+},
+{
+"name": "GEO-hub_architrave_low-in-the-water",
+"profile": "architrave",
+"material": "painted_trim",
+"door": "low-in-the-water"
+},
+{
+"name": "GEO-hub_architrave_yellow-drop",
+"profile": "architrave",
+"material": "painted_trim",
+"door": "yellow-drop"
+},
+{
+"name": "GEO-hub_architrave_trip-tracker",
+"profile": "architrave",
+"material": "painted_trim",
+"door": "trip-tracker"
+},
+{
+"name": "GEO-hub_architrave_wrymwretch",
+"profile": "architrave",
+"material": "painted_trim",
+"door": "wrymwretch"
+},
+{
+"name": "GEO-hub_architrave_missing-campsites",
+"profile": "architrave",
+"material": "painted_trim",
+"door": "missing-campsites"
+},
+{
+"name": "GEO-hub_architrave_following-the-sheep",
+"profile": "architrave",
+"material": "painted_trim",
+"door": "following-the-sheep"
+},
+{
+"name": "GEO-hub_architrave_heartstream",
+"profile": "architrave",
+"material": "painted_trim",
+"door": "heartstream"
+},
+{
+"name": "GEO-hub_architrave_architecture-of-being",
+"profile": "architrave",
+"material": "painted_trim",
+"door": "architecture-of-being"
 }
 ],
 "pilasters": [
 [
-20.0,
+2.6,
 -4.0,
 0.0
 ],
 [
-20.0,
+10.0,
+-4.0,
+0.0
+],
+[
+18.0,
+-4.0,
+0.0
+],
+[
+26.0,
+-4.0,
+0.0
+],
+[
+34.0,
+-4.0,
+0.0
+],
+[
+41.4,
+-4.0,
+0.0
+],
+[
+2.6,
+4.0,
+0.0
+],
+[
+10.0,
+4.0,
+0.0
+],
+[
+18.0,
+4.0,
+0.0
+],
+[
+26.0,
+4.0,
+0.0
+],
+[
+34.0,
+4.0,
+0.0
+],
+[
+41.4,
 4.0,
 0.0
 ]
 ],
-"doors": [],
+"doors": [
+{
+"id": "endless-temple",
+"target": "endless-temple",
+"name": "The Endless Temple - Elaris Sel Marden",
+"years": "epic-fantasy",
+"theme": "pointed-arch",
+"pos": [
+6.0,
+-4.0,
+0.0
+],
+"normal": [
+0.0,
+1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+6.0,
+-1.4,
+0.0,
+90.0
+],
+"hub_side": "S"
+},
+{
+"id": "melting-away",
+"target": "melting-away",
+"name": "Melting Away",
+"years": "horror-prose",
+"theme": "cast-iron-glass",
+"pos": [
+14.0,
+-4.0,
+0.0
+],
+"normal": [
+0.0,
+1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+14.0,
+-1.4,
+0.0,
+90.0
+],
+"hub_side": "S"
+},
+{
+"id": "low-in-the-water",
+"target": "low-in-the-water",
+"name": "Low In The Water",
+"years": "horror-prose",
+"theme": "cast-iron-glass",
+"pos": [
+22.0,
+-4.0,
+0.0
+],
+"normal": [
+0.0,
+1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+22.0,
+-1.4,
+0.0,
+90.0
+],
+"hub_side": "S"
+},
+{
+"id": "yellow-drop",
+"target": "yellow-drop",
+"name": "The Yellow Drop and The Plain Before Sound",
+"years": "unclassified",
+"theme": "post-lintel-timber",
+"pos": [
+30.0,
+-4.0,
+0.0
+],
+"normal": [
+0.0,
+1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+30.0,
+-1.4,
+0.0,
+90.0
+],
+"hub_side": "S"
+},
+{
+"id": "trip-tracker",
+"target": "trip-tracker",
+"name": "Trip Tracker - July Fourteenth 2023",
+"years": "unclassified",
+"theme": "post-lintel-timber",
+"pos": [
+38.0,
+-4.0,
+0.0
+],
+"normal": [
+0.0,
+1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+38.0,
+-1.4,
+0.0,
+90.0
+],
+"hub_side": "S"
+},
+{
+"id": "wrymwretch",
+"target": "wrymwretch",
+"name": "WrymWretch",
+"years": "epic-fantasy",
+"theme": "pointed-arch",
+"pos": [
+6.0,
+4.0,
+0.0
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+6.0,
+1.4,
+0.0,
+-90.0
+],
+"hub_side": "N"
+},
+{
+"id": "missing-campsites",
+"target": "missing-campsites",
+"name": "Missing Campsites",
+"years": "horror-prose",
+"theme": "cast-iron-glass",
+"pos": [
+14.0,
+4.0,
+0.0
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+14.0,
+1.4,
+0.0,
+-90.0
+],
+"hub_side": "N"
+},
+{
+"id": "following-the-sheep",
+"target": "following-the-sheep",
+"name": "Following The Sheep",
+"years": "horror-prose",
+"theme": "cast-iron-glass",
+"pos": [
+22.0,
+4.0,
+0.0
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+22.0,
+1.4,
+0.0,
+-90.0
+],
+"hub_side": "N"
+},
+{
+"id": "heartstream",
+"target": "heartstream",
+"name": "A Journey Into the Heartstream: The Rite of the Blue-Born",
+"years": "epic-fantasy",
+"theme": "pointed-arch",
+"pos": [
+30.0,
+4.0,
+0.0
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+30.0,
+1.4,
+0.0,
+-90.0
+],
+"hub_side": "N"
+},
+{
+"id": "architecture-of-being",
+"target": "architecture-of-being",
+"name": "The Architecture of Being",
+"years": "essay-self-help",
+"theme": "doric-pediment",
+"pos": [
+38.0,
+4.0,
+0.0
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+38.0,
+1.4,
+0.0,
+-90.0
+],
+"hub_side": "N"
+}
+],
 "hangs": {},
 "fx": [
 {
@@ -695,7 +1907,7 @@
 "name": "FX-hub_chandelier_apse",
 "type": "chandelier",
 "pos": [
-41.5,
+45.5,
 0.0,
 6.6
 ],
@@ -703,6 +1915,366 @@
 "intensity": 160,
 "distance": 18,
 "shadow": 0
+},
+{
+"name": "FX-hub_sconceS_0_0",
+"type": "sconce",
+"pos": [
+3.6,
+-3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-hub_sconceS_0_1",
+"type": "sconce",
+"pos": [
+8.4,
+-3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-hub_sconceS_1_0",
+"type": "sconce",
+"pos": [
+11.6,
+-3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-hub_sconceS_1_1",
+"type": "sconce",
+"pos": [
+16.4,
+-3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-hub_sconceS_2_0",
+"type": "sconce",
+"pos": [
+19.6,
+-3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-hub_sconceS_2_1",
+"type": "sconce",
+"pos": [
+24.4,
+-3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-hub_sconceS_3_0",
+"type": "sconce",
+"pos": [
+27.6,
+-3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-hub_sconceS_3_1",
+"type": "sconce",
+"pos": [
+32.4,
+-3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-hub_sconceS_4_0",
+"type": "sconce",
+"pos": [
+35.6,
+-3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-hub_sconceS_4_1",
+"type": "sconce",
+"pos": [
+40.4,
+-3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-hub_sconceN_0_0",
+"type": "sconce",
+"pos": [
+3.6,
+3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+-1,
+0
+]
+},
+{
+"name": "FX-hub_sconceN_0_1",
+"type": "sconce",
+"pos": [
+8.4,
+3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+-1,
+0
+]
+},
+{
+"name": "FX-hub_sconceN_1_0",
+"type": "sconce",
+"pos": [
+11.6,
+3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+-1,
+0
+]
+},
+{
+"name": "FX-hub_sconceN_1_1",
+"type": "sconce",
+"pos": [
+16.4,
+3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+-1,
+0
+]
+},
+{
+"name": "FX-hub_sconceN_2_0",
+"type": "sconce",
+"pos": [
+19.6,
+3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+-1,
+0
+]
+},
+{
+"name": "FX-hub_sconceN_2_1",
+"type": "sconce",
+"pos": [
+24.4,
+3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+-1,
+0
+]
+},
+{
+"name": "FX-hub_sconceN_3_0",
+"type": "sconce",
+"pos": [
+27.6,
+3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+-1,
+0
+]
+},
+{
+"name": "FX-hub_sconceN_3_1",
+"type": "sconce",
+"pos": [
+32.4,
+3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+-1,
+0
+]
+},
+{
+"name": "FX-hub_sconceN_4_0",
+"type": "sconce",
+"pos": [
+35.6,
+3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+-1,
+0
+]
+},
+{
+"name": "FX-hub_sconceN_4_1",
+"type": "sconce",
+"pos": [
+40.4,
+3.7,
+3.2
+],
+"color": "#ffc98a",
+"intensity": 20,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+-1,
+0
+]
 }
 ],
 "props": [],
@@ -714,7 +2286,7 @@
 1.7
 ],
 "target": [
-24.0,
+26.4,
 0.0,
 3.0
 ],
@@ -735,12 +2307,12 @@
 },
 "hub_east": {
 "pos": [
-18.0,
+22.0,
 1.5,
 1.7
 ],
 "target": [
-41.4,
+45.4,
 0.0,
 2.6
 ],
@@ -748,12 +2320,12 @@
 },
 "hub_bays": {
 "pos": [
-16.0,
+17.6,
 -2.5,
 1.7
 ],
 "target": [
-28.0,
+30.0,
 4.0,
 2.4
 ],
@@ -763,15 +2335,10551 @@
 "bays": {
 "N": [
 [
-20.0,
+2.6,
+3.1
+],
+[
+10.0,
+3.1
+],
+[
+18.0,
+3.1
+],
+[
+26.0,
+3.1
+],
+[
+34.0,
+3.1
+],
+[
+41.4,
 3.1
 ]
 ],
 "S": [
 [
-20.0,
+2.6,
+-3.1
+],
+[
+10.0,
+-3.1
+],
+[
+18.0,
+-3.1
+],
+[
+26.0,
+-3.1
+],
+[
+34.0,
+-3.1
+],
+[
+41.4,
 -3.1
 ]
+]
+}
+},
+"endless-temple": {
+"kind": "room",
+"id": "endless-temple",
+"name": "The Endless Temple - Elaris Sel Marden",
+"wing": "writing",
+"intro": {
+"title": "The Endless Temple - Elaris Sel Marden",
+"years": "epic-fantasy",
+"summary": "A novel, epic fantasy mode. Themes: worlds within books, found purpose, coming of age, forbidden knowledge. 9 passages, verbatim from 02_Novels/05_The_Endless_Temple_-_Elaris_Sel_Marden.md."
+},
+"style": {
+"theme": "pointed-arch",
+"wall": "#34486a",
+"trim": "stone",
+"floor": "stone",
+"frame": "gilt-ornate",
+"frame_small": "gilt-simple",
+"light": {
+"color": "#fff1dc",
+"intensity": 210
+}
+},
+"floor": {
+"x": [
+-5.0,
+5.0
+],
+"y": [
+0.0,
+8.0
+]
+},
+"size": [
+10.0,
+8.0
+],
+"height": 7.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"boxes": [
+{
+"name": "GEO-endless-temple_floor",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+-0.2,
+0.0
+],
+"material": "stone"
+},
+{
+"name": "GEO-endless-temple_ceiling",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+7.0,
+7.2
+],
+"material": "plaster_ceiling"
+},
+{
+"name": "GEO-endless-temple_wallN_0",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+7.8,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-endless-temple_wallS_0",
+"x": [
+-5.2,
+-1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-endless-temple_wallS_1",
+"x": [
+1.6,
+5.2
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-endless-temple_transomS_0",
+"x": [
+-1.6,
+1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-endless-temple_wallW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-endless-temple_wallE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-endless-temple_wallE_1",
+"x": [
+4.8,
+5.2
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-endless-temple_transomE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+}
+],
+"mouldings": [
+{
+"name": "GEO-endless-temple_skirting",
+"profile": "skirting",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-endless-temple_picture_rail",
+"profile": "picture_rail",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-endless-temple_cornice",
+"profile": "cornice",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-endless-temple_architrave_hub",
+"profile": "architrave",
+"material": "stone",
+"door": "hub"
+},
+{
+"name": "GEO-endless-temple_architrave_wrymwretch",
+"profile": "architrave",
+"material": "stone",
+"door": "wrymwretch"
+}
+],
+"walls": [
+{
+"side": "W",
+"axis": "y",
+"const": -5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+1.0,
+0.0
+],
+"reverse": false,
+"free": [
+0.8,
+7.2
+]
+},
+{
+"side": "N",
+"axis": "x",
+"const": 8.0,
+"lo": -5.0,
+"hi": 5.0,
+"normal": [
+0.0,
+-1.0
+],
+"reverse": false,
+"free": [
+-4.2,
+4.2
+]
+},
+{
+"side": "E",
+"axis": "y",
+"const": 5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+-1.0,
+0.0
+],
+"reverse": true,
+"free": [
+4.9,
+7.2
+]
+}
+],
+"doors": [
+{
+"id": "hub",
+"target": "hub",
+"name": "The Hall",
+"years": "",
+"theme": "hall",
+"pos": [
+0.0,
+0.0,
+0.0
+],
+"normal": [
+0.0,
+1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"hub_side": null
+},
+{
+"id": "wrymwretch",
+"target": "wrymwretch",
+"name": "WrymWretch",
+"years": "epic-fantasy",
+"theme": "pointed-arch",
+"pos": [
+5.0,
+2.8,
+0.0
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+2.4,
+2.8,
+0.0,
+180.0
+],
+"hub_side": null
+}
+],
+"hangs": {
+"endless-temple--1-1": {
+"id": "endless-temple--1-1",
+"room": "endless-temple",
+"wall": "W",
+"along": 2.035,
+"row": 0,
+"pos": [
+-4.75,
+2.035,
+1.55
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 1.267,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"endless-temple--1-2": {
+"id": "endless-temple--1-2",
+"room": "endless-temple",
+"wall": "W",
+"along": 4.0,
+"row": 0,
+"pos": [
+-4.75,
+4.0,
+1.55
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.747,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"endless-temple--2-1": {
+"id": "endless-temple--2-1",
+"room": "endless-temple",
+"wall": "W",
+"along": 5.965,
+"row": 0,
+"pos": [
+-4.75,
+5.965,
+1.55
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 1.067,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"endless-temple--2-2": {
+"id": "endless-temple--2-2",
+"room": "endless-temple",
+"wall": "N",
+"along": -3.42,
+"row": 0,
+"pos": [
+-3.42,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.587,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"endless-temple--2-3": {
+"id": "endless-temple--2-3",
+"room": "endless-temple",
+"wall": "N",
+"along": -1.71,
+"row": 0,
+"pos": [
+-1.71,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.867,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"endless-temple--2-4": {
+"id": "endless-temple--2-4",
+"room": "endless-temple",
+"wall": "N",
+"along": -0.0,
+"row": 0,
+"pos": [
+-0.0,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.827,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"endless-temple--2-5": {
+"id": "endless-temple--2-5",
+"room": "endless-temple",
+"wall": "N",
+"along": 1.71,
+"row": 0,
+"pos": [
+1.71,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.907,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"endless-temple--2-6": {
+"id": "endless-temple--2-6",
+"room": "endless-temple",
+"wall": "N",
+"along": 3.42,
+"row": 0,
+"pos": [
+3.42,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.507,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"endless-temple--2-7": {
+"id": "endless-temple--2-7",
+"room": "endless-temple",
+"wall": "E",
+"along": 6.05,
+"row": 0,
+"pos": [
+4.75,
+6.05,
+1.55
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.787,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+}
+},
+"fx": [
+{
+"name": "FX-endless-temple_chandelier_0",
+"type": "chandelier",
+"pos": [
+0.0,
+4.0,
+5.4
+],
+"color": "#fff1dc",
+"intensity": 210.0,
+"distance": 18,
+"shadow": 1
+},
+{
+"name": "FX-endless-temple_laylight_0",
+"type": "laylight",
+"pos": [
+0.0,
+4.0,
+6.8
+],
+"color": "#fff3e0",
+"intensity": 0.817,
+"distance": 0,
+"shadow": 1,
+"size": [
+5.0,
+4.0
+]
+},
+{
+"name": "FX-endless-temple_sconce_0",
+"type": "sconce",
+"pos": [
+-2.6,
+0.3,
+2.6
+],
+"color": "#fff1dc",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-endless-temple_sconce_1",
+"type": "sconce",
+"pos": [
+2.6,
+0.3,
+2.6
+],
+"color": "#fff1dc",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+}
+],
+"props": [],
+"views": {
+"endless-temple_door": {
+"pos": [
+0.0,
+2.2,
+1.7
+],
+"target": [
+0.0,
+4.8,
+2.2
+],
+"fov_deg": 70
+},
+"endless-temple_corner": {
+"pos": [
+-2.5,
+5.2,
+1.7
+],
+"target": [
+1.5,
+6.8,
+2.2
+],
+"fov_deg": 70
+},
+"endless-temple_west": {
+"pos": [
+2.0,
+4.4,
+1.7
+],
+"target": [
+-5.0,
+2.8,
+2.4
+],
+"fov_deg": 70
+}
+},
+"stats": {
+"works": 9,
+"scale": 1.0,
+"rows": [
+1,
+1,
+1
+],
+"fill": [
+0.684,
+0.869,
+0.635
+]
+}
+},
+"wrymwretch": {
+"kind": "room",
+"id": "wrymwretch",
+"name": "WrymWretch",
+"wing": "writing",
+"intro": {
+"title": "WrymWretch",
+"years": "epic-fantasy",
+"summary": "A novel, epic fantasy mode. Themes: memory erasure, soul bonded dragons, prophecy, environmental corruption, chosen ones. 26 passages, verbatim from 02_Novels/02_WrymWretch.md."
+},
+"style": {
+"theme": "pointed-arch",
+"wall": "#2f2224",
+"trim": "brass",
+"floor": "parquet",
+"frame": "gilt-ornate",
+"frame_small": "gilt-simple",
+"light": {
+"color": "#ffb070",
+"intensity": 110
+}
+},
+"floor": {
+"x": [
+-5.0,
+5.0
+],
+"y": [
+0.0,
+10
+]
+},
+"size": [
+10.0,
+10
+],
+"height": 7.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"boxes": [
+{
+"name": "GEO-wrymwretch_floor",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+10.2
+],
+"z": [
+-0.2,
+0.0
+],
+"material": "parquet"
+},
+{
+"name": "GEO-wrymwretch_ceiling",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+10.2
+],
+"z": [
+7.0,
+7.2
+],
+"material": "plaster_ceiling"
+},
+{
+"name": "GEO-wrymwretch_wallN_0",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+9.8,
+10.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-wrymwretch_wallS_0",
+"x": [
+-5.2,
+-1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-wrymwretch_wallS_1",
+"x": [
+1.6,
+5.2
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-wrymwretch_transomS_0",
+"x": [
+-1.6,
+1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-wrymwretch_wallW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-wrymwretch_wallW_1",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+4.4,
+10.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-wrymwretch_transomW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-wrymwretch_wallE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-wrymwretch_wallE_1",
+"x": [
+4.8,
+5.2
+],
+"y": [
+4.4,
+10.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-wrymwretch_transomE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+}
+],
+"mouldings": [
+{
+"name": "GEO-wrymwretch_skirting",
+"profile": "skirting",
+"material": "brass",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+10.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+10.0,
+0.0
+],
+[
+5.0,
+10.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+10.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-wrymwretch_picture_rail",
+"profile": "picture_rail",
+"material": "brass",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+10.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+10.0,
+0.0
+],
+[
+5.0,
+10.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+10.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-wrymwretch_cornice",
+"profile": "cornice",
+"material": "brass",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+10.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+10.0,
+0.0
+],
+[
+5.0,
+10.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+10.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-wrymwretch_architrave_hub",
+"profile": "architrave",
+"material": "brass",
+"door": "hub"
+},
+{
+"name": "GEO-wrymwretch_architrave_endless-temple",
+"profile": "architrave",
+"material": "brass",
+"door": "endless-temple"
+},
+{
+"name": "GEO-wrymwretch_architrave_melting-away",
+"profile": "architrave",
+"material": "brass",
+"door": "melting-away"
+}
+],
+"walls": [
+{
+"side": "W",
+"axis": "y",
+"const": -5.0,
+"lo": 0.0,
+"hi": 10,
+"normal": [
+1.0,
+0.0
+],
+"reverse": false,
+"free": [
+4.9,
+9.2
+]
+},
+{
+"side": "N",
+"axis": "x",
+"const": 10,
+"lo": -5.0,
+"hi": 5.0,
+"normal": [
+0.0,
+-1.0
+],
+"reverse": false,
+"free": [
+-4.2,
+4.2
+]
+},
+{
+"side": "E",
+"axis": "y",
+"const": 5.0,
+"lo": 0.0,
+"hi": 10,
+"normal": [
+-1.0,
+0.0
+],
+"reverse": true,
+"free": [
+4.9,
+9.2
+]
+}
+],
+"doors": [
+{
+"id": "hub",
+"target": "hub",
+"name": "The Hall",
+"years": "",
+"theme": "hall",
+"pos": [
+0.0,
+0.0,
+0.0
+],
+"normal": [
+0.0,
+1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"hub_side": null
+},
+{
+"id": "endless-temple",
+"target": "endless-temple",
+"name": "The Endless Temple - Elaris Sel Marden",
+"years": "epic-fantasy",
+"theme": "pointed-arch",
+"pos": [
+-5.0,
+2.8,
+0.0
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+-2.4,
+2.8,
+0.0,
+0.0
+],
+"hub_side": null
+},
+{
+"id": "melting-away",
+"target": "melting-away",
+"name": "Melting Away",
+"years": "horror-prose",
+"theme": "cast-iron-glass",
+"pos": [
+5.0,
+2.8,
+0.0
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+2.4,
+2.8,
+0.0,
+180.0
+],
+"hub_side": null
+}
+],
+"hangs": {
+"wrymwretch--2": {
+"id": "wrymwretch--2",
+"room": "wrymwretch",
+"wall": "W",
+"along": 6.09,
+"row": 0,
+"pos": [
+-4.75,
+6.09,
+1.55
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 1.107,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--5": {
+"id": "wrymwretch--5",
+"room": "wrymwretch",
+"wall": "W",
+"along": 8.01,
+"row": 0,
+"pos": [
+-4.75,
+8.01,
+1.55
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 1.027,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--3": {
+"id": "wrymwretch--3",
+"room": "wrymwretch",
+"wall": "W",
+"along": 6.09,
+"row": 1,
+"pos": [
+-4.75,
+6.09,
+3.117
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.907,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--4": {
+"id": "wrymwretch--4",
+"room": "wrymwretch",
+"wall": "W",
+"along": 8.01,
+"row": 1,
+"pos": [
+-4.75,
+8.01,
+3.157
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.987,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--1": {
+"id": "wrymwretch--1",
+"room": "wrymwretch",
+"wall": "W",
+"along": 6.09,
+"row": 2,
+"pos": [
+-4.75,
+6.09,
+4.644
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.867,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--6": {
+"id": "wrymwretch--6",
+"room": "wrymwretch",
+"wall": "W",
+"along": 8.01,
+"row": 2,
+"pos": [
+-4.75,
+8.01,
+4.544
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.667,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--11": {
+"id": "wrymwretch--11",
+"room": "wrymwretch",
+"wall": "N",
+"along": -3.42,
+"row": 0,
+"pos": [
+-3.42,
+9.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 1.147,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--12": {
+"id": "wrymwretch--12",
+"room": "wrymwretch",
+"wall": "N",
+"along": -1.71,
+"row": 0,
+"pos": [
+-1.71,
+9.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 1.107,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--13": {
+"id": "wrymwretch--13",
+"room": "wrymwretch",
+"wall": "N",
+"along": -0.0,
+"row": 0,
+"pos": [
+-0.0,
+9.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 1.147,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--14": {
+"id": "wrymwretch--14",
+"room": "wrymwretch",
+"wall": "N",
+"along": 1.71,
+"row": 0,
+"pos": [
+1.71,
+9.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 1.227,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--18": {
+"id": "wrymwretch--18",
+"room": "wrymwretch",
+"wall": "N",
+"along": 3.42,
+"row": 0,
+"pos": [
+3.42,
+9.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 1.107,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--8": {
+"id": "wrymwretch--8",
+"room": "wrymwretch",
+"wall": "N",
+"along": -3.42,
+"row": 1,
+"pos": [
+-3.42,
+9.75,
+3.217
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.987,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--16": {
+"id": "wrymwretch--16",
+"room": "wrymwretch",
+"wall": "N",
+"along": -1.71,
+"row": 1,
+"pos": [
+-1.71,
+9.75,
+3.197
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.947,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--17": {
+"id": "wrymwretch--17",
+"room": "wrymwretch",
+"wall": "N",
+"along": -0.0,
+"row": 1,
+"pos": [
+-0.0,
+9.75,
+3.157
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.867,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--19": {
+"id": "wrymwretch--19",
+"room": "wrymwretch",
+"wall": "N",
+"along": 1.71,
+"row": 1,
+"pos": [
+1.71,
+9.75,
+3.157
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.867,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--20": {
+"id": "wrymwretch--20",
+"room": "wrymwretch",
+"wall": "N",
+"along": 3.42,
+"row": 1,
+"pos": [
+3.42,
+9.75,
+3.217
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.987,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--7": {
+"id": "wrymwretch--7",
+"room": "wrymwretch",
+"wall": "N",
+"along": -2.908,
+"row": 2,
+"pos": [
+-2.908,
+9.75,
+4.534
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 0.8,
+"h": 0.627,
+"scale": 1.0,
+"frame": {
+"style": "gilt-simple",
+"width": 0.07,
+"depth": 0.05
+},
+"type": "panel-short"
+},
+"wrymwretch--9": {
+"id": "wrymwretch--9",
+"room": "wrymwretch",
+"wall": "N",
+"along": -1.136,
+"row": 2,
+"pos": [
+-1.136,
+9.75,
+4.474
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 0.8,
+"h": 0.507,
+"scale": 1.0,
+"frame": {
+"style": "gilt-simple",
+"width": 0.07,
+"depth": 0.05
+},
+"type": "panel-short"
+},
+"wrymwretch--10": {
+"id": "wrymwretch--10",
+"room": "wrymwretch",
+"wall": "N",
+"along": 0.636,
+"row": 2,
+"pos": [
+0.636,
+9.75,
+4.534
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 0.8,
+"h": 0.627,
+"scale": 1.0,
+"frame": {
+"style": "gilt-simple",
+"width": 0.07,
+"depth": 0.05
+},
+"type": "panel-short"
+},
+"wrymwretch--15": {
+"id": "wrymwretch--15",
+"room": "wrymwretch",
+"wall": "N",
+"along": 2.658,
+"row": 2,
+"pos": [
+2.658,
+9.75,
+4.664
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.787,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--25": {
+"id": "wrymwretch--25",
+"room": "wrymwretch",
+"wall": "E",
+"along": 6.09,
+"row": 0,
+"pos": [
+4.75,
+6.09,
+1.55
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 1.027,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--22": {
+"id": "wrymwretch--22",
+"room": "wrymwretch",
+"wall": "E",
+"along": 8.01,
+"row": 0,
+"pos": [
+4.75,
+8.01,
+1.55
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 1.027,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--24": {
+"id": "wrymwretch--24",
+"room": "wrymwretch",
+"wall": "E",
+"along": 6.09,
+"row": 1,
+"pos": [
+4.75,
+6.09,
+3.017
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.787,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--23": {
+"id": "wrymwretch--23",
+"room": "wrymwretch",
+"wall": "E",
+"along": 8.01,
+"row": 1,
+"pos": [
+4.75,
+8.01,
+3.077
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.907,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--26": {
+"id": "wrymwretch--26",
+"room": "wrymwretch",
+"wall": "E",
+"along": 6.257,
+"row": 2,
+"pos": [
+4.75,
+6.257,
+4.404
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.627,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"wrymwretch--21": {
+"id": "wrymwretch--21",
+"room": "wrymwretch",
+"wall": "E",
+"along": 8.093,
+"row": 2,
+"pos": [
+4.75,
+8.093,
+4.354
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 0.8,
+"h": 0.627,
+"scale": 1.0,
+"frame": {
+"style": "gilt-simple",
+"width": 0.07,
+"depth": 0.05
+},
+"type": "panel-short"
+}
+},
+"fx": [
+{
+"name": "FX-wrymwretch_chandelier_0",
+"type": "chandelier",
+"pos": [
+0.0,
+5.0,
+5.4
+],
+"color": "#ffb070",
+"intensity": 110.0,
+"distance": 18,
+"shadow": 1
+},
+{
+"name": "FX-wrymwretch_laylight_0",
+"type": "laylight",
+"pos": [
+0.0,
+5.0,
+6.8
+],
+"color": "#fff3e0",
+"intensity": 0.428,
+"distance": 0,
+"shadow": 1,
+"size": [
+5.0,
+5.0
+]
+},
+{
+"name": "FX-wrymwretch_sconce_0",
+"type": "sconce",
+"pos": [
+-2.6,
+0.3,
+2.6
+],
+"color": "#ffb070",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-wrymwretch_sconce_1",
+"type": "sconce",
+"pos": [
+2.6,
+0.3,
+2.6
+],
+"color": "#ffb070",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+}
+],
+"props": [],
+"views": {
+"wrymwretch_door": {
+"pos": [
+0.0,
+2.2,
+1.7
+],
+"target": [
+0.0,
+6.0,
+2.2
+],
+"fov_deg": 70
+},
+"wrymwretch_corner": {
+"pos": [
+-2.5,
+5.2,
+1.7
+],
+"target": [
+1.5,
+8.5,
+2.2
+],
+"fov_deg": 70
+},
+"wrymwretch_west": {
+"pos": [
+2.0,
+5.5,
+1.7
+],
+"target": [
+-5.0,
+3.5,
+2.4
+],
+"fov_deg": 70
+}
+},
+"stats": {
+"works": 26,
+"scale": 1.0,
+"rows": [
+3,
+3,
+3
+],
+"fill": [
+2.037,
+2.255,
+1.921
+]
+}
+},
+"melting-away": {
+"kind": "room",
+"id": "melting-away",
+"name": "Melting Away",
+"wing": "writing",
+"intro": {
+"title": "Melting Away",
+"years": "horror-prose",
+"summary": "A story, horror prose mode. Themes: predatory manipulation, hazing, social pressure, deception. 6 passages, verbatim from 03_Stories/06_Melting_Away.md."
+},
+"style": {
+"theme": "cast-iron-glass",
+"wall": "#2f2224",
+"trim": "stone",
+"floor": "stone",
+"frame": "black-lacquer",
+"frame_small": "thin-metal",
+"light": {
+"color": "#ffb070",
+"intensity": 110
+}
+},
+"floor": {
+"x": [
+-5.0,
+5.0
+],
+"y": [
+0.0,
+8.0
+]
+},
+"size": [
+10.0,
+8.0
+],
+"height": 7.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"boxes": [
+{
+"name": "GEO-melting-away_floor",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+-0.2,
+0.0
+],
+"material": "stone"
+},
+{
+"name": "GEO-melting-away_ceiling",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+7.0,
+7.2
+],
+"material": "plaster_ceiling"
+},
+{
+"name": "GEO-melting-away_wallN_0",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+7.8,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-melting-away_wallS_0",
+"x": [
+-5.2,
+-1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-melting-away_wallS_1",
+"x": [
+1.6,
+5.2
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-melting-away_transomS_0",
+"x": [
+-1.6,
+1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-melting-away_wallW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-melting-away_wallW_1",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-melting-away_transomW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-melting-away_wallE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-melting-away_wallE_1",
+"x": [
+4.8,
+5.2
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-melting-away_transomE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+}
+],
+"mouldings": [
+{
+"name": "GEO-melting-away_skirting",
+"profile": "skirting",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-melting-away_picture_rail",
+"profile": "picture_rail",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-melting-away_cornice",
+"profile": "cornice",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-melting-away_architrave_hub",
+"profile": "architrave",
+"material": "stone",
+"door": "hub"
+},
+{
+"name": "GEO-melting-away_architrave_wrymwretch",
+"profile": "architrave",
+"material": "stone",
+"door": "wrymwretch"
+},
+{
+"name": "GEO-melting-away_architrave_missing-campsites",
+"profile": "architrave",
+"material": "stone",
+"door": "missing-campsites"
+}
+],
+"walls": [
+{
+"side": "W",
+"axis": "y",
+"const": -5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+1.0,
+0.0
+],
+"reverse": false,
+"free": [
+4.9,
+7.2
+]
+},
+{
+"side": "N",
+"axis": "x",
+"const": 8.0,
+"lo": -5.0,
+"hi": 5.0,
+"normal": [
+0.0,
+-1.0
+],
+"reverse": false,
+"free": [
+-4.2,
+4.2
+]
+},
+{
+"side": "E",
+"axis": "y",
+"const": 5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+-1.0,
+0.0
+],
+"reverse": true,
+"free": [
+4.9,
+7.2
+]
+}
+],
+"doors": [
+{
+"id": "hub",
+"target": "hub",
+"name": "The Hall",
+"years": "",
+"theme": "hall",
+"pos": [
+0.0,
+0.0,
+0.0
+],
+"normal": [
+0.0,
+1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"hub_side": null
+},
+{
+"id": "wrymwretch",
+"target": "wrymwretch",
+"name": "WrymWretch",
+"years": "epic-fantasy",
+"theme": "pointed-arch",
+"pos": [
+-5.0,
+2.8,
+0.0
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+-2.4,
+2.8,
+0.0,
+0.0
+],
+"hub_side": null
+},
+{
+"id": "missing-campsites",
+"target": "missing-campsites",
+"name": "Missing Campsites",
+"years": "horror-prose",
+"theme": "cast-iron-glass",
+"pos": [
+5.0,
+2.8,
+0.0
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+2.4,
+2.8,
+0.0,
+180.0
+],
+"hub_side": null
+}
+],
+"hangs": {
+"melting-away--2": {
+"id": "melting-away--2",
+"room": "melting-away",
+"wall": "W",
+"along": 6.05,
+"row": 0,
+"pos": [
+-4.75,
+6.05,
+1.55
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.947,
+"scale": 1.0,
+"frame": {
+"style": "black-lacquer",
+"width": 0.05,
+"depth": 0.04
+},
+"type": "panel"
+},
+"melting-away--1": {
+"id": "melting-away--1",
+"room": "melting-away",
+"wall": "W",
+"along": 6.05,
+"row": 1,
+"pos": [
+-4.75,
+6.05,
+2.857
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.827,
+"scale": 1.0,
+"frame": {
+"style": "black-lacquer",
+"width": 0.05,
+"depth": 0.04
+},
+"type": "panel"
+},
+"melting-away--3": {
+"id": "melting-away--3",
+"room": "melting-away",
+"wall": "N",
+"along": -2.824,
+"row": 0,
+"pos": [
+-2.824,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.947,
+"scale": 1.0,
+"frame": {
+"style": "black-lacquer",
+"width": 0.05,
+"depth": 0.04
+},
+"type": "panel"
+},
+"melting-away--4": {
+"id": "melting-away--4",
+"room": "melting-away",
+"wall": "N",
+"along": -0.788,
+"row": 0,
+"pos": [
+-0.788,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 1.067,
+"scale": 1.0,
+"frame": {
+"style": "black-lacquer",
+"width": 0.05,
+"depth": 0.04
+},
+"type": "panel"
+},
+"melting-away--5": {
+"id": "melting-away--5",
+"room": "melting-away",
+"wall": "N",
+"along": 1.248,
+"row": 0,
+"pos": [
+1.248,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.867,
+"scale": 1.0,
+"frame": {
+"style": "black-lacquer",
+"width": 0.05,
+"depth": 0.04
+},
+"type": "panel"
+},
+"melting-away--6": {
+"id": "melting-away--6",
+"room": "melting-away",
+"wall": "N",
+"along": 3.054,
+"row": 0,
+"pos": [
+3.054,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 0.8,
+"h": 0.45,
+"scale": 1.0,
+"frame": {
+"style": "thin-metal",
+"width": 0.02,
+"depth": 0.03
+},
+"type": "panel-short"
+}
+},
+"fx": [
+{
+"name": "FX-melting-away_chandelier_0",
+"type": "chandelier",
+"pos": [
+0.0,
+4.0,
+5.4
+],
+"color": "#ffb070",
+"intensity": 110.0,
+"distance": 18,
+"shadow": 1
+},
+{
+"name": "FX-melting-away_laylight_0",
+"type": "laylight",
+"pos": [
+0.0,
+4.0,
+6.8
+],
+"color": "#fff3e0",
+"intensity": 0.428,
+"distance": 0,
+"shadow": 1,
+"size": [
+5.0,
+4.0
+]
+},
+{
+"name": "FX-melting-away_sconce_0",
+"type": "sconce",
+"pos": [
+-2.6,
+0.3,
+2.6
+],
+"color": "#ffb070",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-melting-away_sconce_1",
+"type": "sconce",
+"pos": [
+2.6,
+0.3,
+2.6
+],
+"color": "#ffb070",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+}
+],
+"props": [],
+"views": {
+"melting-away_door": {
+"pos": [
+0.0,
+2.2,
+1.7
+],
+"target": [
+0.0,
+4.8,
+2.2
+],
+"fov_deg": 70
+},
+"melting-away_corner": {
+"pos": [
+-2.5,
+5.2,
+1.7
+],
+"target": [
+1.5,
+6.8,
+2.2
+],
+"fov_deg": 70
+},
+"melting-away_west": {
+"pos": [
+2.0,
+4.4,
+1.7
+],
+"target": [
+-5.0,
+2.8,
+2.4
+],
+"fov_deg": 70
+}
+},
+"stats": {
+"works": 6,
+"scale": 1.0,
+"rows": [
+2,
+1,
+0
+],
+"fill": [
+1.148,
+0.574,
+0.0
+]
+}
+},
+"missing-campsites": {
+"kind": "room",
+"id": "missing-campsites",
+"name": "Missing Campsites",
+"wing": "writing",
+"intro": {
+"title": "Missing Campsites",
+"years": "horror-prose",
+"summary": "A book concept, horror prose mode. Themes: erasure, unreliable reality, isolation, cosmic dread. 2 passages, verbatim from 04_Book_Concepts/02_Missing_Campsites.md."
+},
+"style": {
+"theme": "cast-iron-glass",
+"wall": "#2f2224",
+"trim": "stone",
+"floor": "stone",
+"frame": "black-lacquer",
+"frame_small": "thin-metal",
+"light": {
+"color": "#ffb070",
+"intensity": 110
+}
+},
+"floor": {
+"x": [
+-5.0,
+5.0
+],
+"y": [
+0.0,
+8.0
+]
+},
+"size": [
+10.0,
+8.0
+],
+"height": 7.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"boxes": [
+{
+"name": "GEO-missing-campsites_floor",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+-0.2,
+0.0
+],
+"material": "stone"
+},
+{
+"name": "GEO-missing-campsites_ceiling",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+7.0,
+7.2
+],
+"material": "plaster_ceiling"
+},
+{
+"name": "GEO-missing-campsites_wallN_0",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+7.8,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-missing-campsites_wallS_0",
+"x": [
+-5.2,
+-1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-missing-campsites_wallS_1",
+"x": [
+1.6,
+5.2
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-missing-campsites_transomS_0",
+"x": [
+-1.6,
+1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-missing-campsites_wallW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-missing-campsites_wallW_1",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-missing-campsites_transomW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-missing-campsites_wallE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-missing-campsites_wallE_1",
+"x": [
+4.8,
+5.2
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-missing-campsites_transomE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+}
+],
+"mouldings": [
+{
+"name": "GEO-missing-campsites_skirting",
+"profile": "skirting",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-missing-campsites_picture_rail",
+"profile": "picture_rail",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-missing-campsites_cornice",
+"profile": "cornice",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-missing-campsites_architrave_hub",
+"profile": "architrave",
+"material": "stone",
+"door": "hub"
+},
+{
+"name": "GEO-missing-campsites_architrave_melting-away",
+"profile": "architrave",
+"material": "stone",
+"door": "melting-away"
+},
+{
+"name": "GEO-missing-campsites_architrave_low-in-the-water",
+"profile": "architrave",
+"material": "stone",
+"door": "low-in-the-water"
+}
+],
+"walls": [
+{
+"side": "W",
+"axis": "y",
+"const": -5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+1.0,
+0.0
+],
+"reverse": false,
+"free": [
+4.9,
+7.2
+]
+},
+{
+"side": "N",
+"axis": "x",
+"const": 8.0,
+"lo": -5.0,
+"hi": 5.0,
+"normal": [
+0.0,
+-1.0
+],
+"reverse": false,
+"free": [
+-4.2,
+4.2
+]
+},
+{
+"side": "E",
+"axis": "y",
+"const": 5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+-1.0,
+0.0
+],
+"reverse": true,
+"free": [
+4.9,
+7.2
+]
+}
+],
+"doors": [
+{
+"id": "hub",
+"target": "hub",
+"name": "The Hall",
+"years": "",
+"theme": "hall",
+"pos": [
+0.0,
+0.0,
+0.0
+],
+"normal": [
+0.0,
+1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"hub_side": null
+},
+{
+"id": "melting-away",
+"target": "melting-away",
+"name": "Melting Away",
+"years": "horror-prose",
+"theme": "cast-iron-glass",
+"pos": [
+-5.0,
+2.8,
+0.0
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+-2.4,
+2.8,
+0.0,
+0.0
+],
+"hub_side": null
+},
+{
+"id": "low-in-the-water",
+"target": "low-in-the-water",
+"name": "Low In The Water",
+"years": "horror-prose",
+"theme": "cast-iron-glass",
+"pos": [
+5.0,
+2.8,
+0.0
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+2.4,
+2.8,
+0.0,
+180.0
+],
+"hub_side": null
+}
+],
+"hangs": {
+"missing-campsites--1": {
+"id": "missing-campsites--1",
+"room": "missing-campsites",
+"wall": "W",
+"along": 6.05,
+"row": 0,
+"pos": [
+-4.75,
+6.05,
+1.55
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 1.467,
+"scale": 1.0,
+"frame": {
+"style": "black-lacquer",
+"width": 0.05,
+"depth": 0.04
+},
+"type": "panel"
+},
+"missing-campsites--2": {
+"id": "missing-campsites--2",
+"room": "missing-campsites",
+"wall": "N",
+"along": -0.0,
+"row": 0,
+"pos": [
+-0.0,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.827,
+"scale": 1.0,
+"frame": {
+"style": "black-lacquer",
+"width": 0.05,
+"depth": 0.04
+},
+"type": "panel"
+}
+},
+"fx": [
+{
+"name": "FX-missing-campsites_chandelier_0",
+"type": "chandelier",
+"pos": [
+0.0,
+4.0,
+5.4
+],
+"color": "#ffb070",
+"intensity": 110.0,
+"distance": 18,
+"shadow": 1
+},
+{
+"name": "FX-missing-campsites_laylight_0",
+"type": "laylight",
+"pos": [
+0.0,
+4.0,
+6.8
+],
+"color": "#fff3e0",
+"intensity": 0.428,
+"distance": 0,
+"shadow": 1,
+"size": [
+5.0,
+4.0
+]
+},
+{
+"name": "FX-missing-campsites_sconce_0",
+"type": "sconce",
+"pos": [
+-2.6,
+0.3,
+2.6
+],
+"color": "#ffb070",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-missing-campsites_sconce_1",
+"type": "sconce",
+"pos": [
+2.6,
+0.3,
+2.6
+],
+"color": "#ffb070",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-missing-campsites_piclight_0",
+"type": "picture_light",
+"pos": [
+-4.5,
+6.05,
+2.583
+],
+"color": "#ffe2b8",
+"intensity": 8,
+"distance": 3.0,
+"shadow": 0,
+"dir": [
+0,
+0,
+-1
+],
+"over": "missing-campsites--1"
+}
+],
+"props": [],
+"views": {
+"missing-campsites_door": {
+"pos": [
+0.0,
+2.2,
+1.7
+],
+"target": [
+0.0,
+4.8,
+2.2
+],
+"fov_deg": 70
+},
+"missing-campsites_corner": {
+"pos": [
+-2.5,
+5.2,
+1.7
+],
+"target": [
+1.5,
+6.8,
+2.2
+],
+"fov_deg": 70
+},
+"missing-campsites_west": {
+"pos": [
+2.0,
+4.4,
+1.7
+],
+"target": [
+-5.0,
+2.8,
+2.4
+],
+"fov_deg": 70
+}
+},
+"stats": {
+"works": 2,
+"scale": 1.0,
+"rows": [
+1,
+1,
+0
+],
+"fill": [
+0.574,
+0.157,
+0.0
+]
+}
+},
+"low-in-the-water": {
+"kind": "room",
+"id": "low-in-the-water",
+"name": "Low In The Water",
+"wing": "writing",
+"intro": {
+"title": "Low In The Water",
+"years": "horror-prose",
+"summary": "A story, horror prose mode. Themes: atmosphere of dread, tonal juxtaposition, roadside gothic. 1 passage, verbatim from 03_Stories/09_Low_In_The_Water.md."
+},
+"style": {
+"theme": "cast-iron-glass",
+"wall": "#2f2224",
+"trim": "stone",
+"floor": "stone",
+"frame": "black-lacquer",
+"frame_small": "thin-metal",
+"light": {
+"color": "#ffb070",
+"intensity": 110
+}
+},
+"floor": {
+"x": [
+-5.0,
+5.0
+],
+"y": [
+0.0,
+8.0
+]
+},
+"size": [
+10.0,
+8.0
+],
+"height": 7.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"boxes": [
+{
+"name": "GEO-low-in-the-water_floor",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+-0.2,
+0.0
+],
+"material": "stone"
+},
+{
+"name": "GEO-low-in-the-water_ceiling",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+7.0,
+7.2
+],
+"material": "plaster_ceiling"
+},
+{
+"name": "GEO-low-in-the-water_wallN_0",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+7.8,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-low-in-the-water_wallS_0",
+"x": [
+-5.2,
+-1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-low-in-the-water_wallS_1",
+"x": [
+1.6,
+5.2
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-low-in-the-water_transomS_0",
+"x": [
+-1.6,
+1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-low-in-the-water_wallW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-low-in-the-water_wallW_1",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-low-in-the-water_transomW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-low-in-the-water_wallE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-low-in-the-water_wallE_1",
+"x": [
+4.8,
+5.2
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-low-in-the-water_transomE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+}
+],
+"mouldings": [
+{
+"name": "GEO-low-in-the-water_skirting",
+"profile": "skirting",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-low-in-the-water_picture_rail",
+"profile": "picture_rail",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-low-in-the-water_cornice",
+"profile": "cornice",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-low-in-the-water_architrave_hub",
+"profile": "architrave",
+"material": "stone",
+"door": "hub"
+},
+{
+"name": "GEO-low-in-the-water_architrave_missing-campsites",
+"profile": "architrave",
+"material": "stone",
+"door": "missing-campsites"
+},
+{
+"name": "GEO-low-in-the-water_architrave_following-the-sheep",
+"profile": "architrave",
+"material": "stone",
+"door": "following-the-sheep"
+}
+],
+"walls": [
+{
+"side": "W",
+"axis": "y",
+"const": -5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+1.0,
+0.0
+],
+"reverse": false,
+"free": [
+4.9,
+7.2
+]
+},
+{
+"side": "N",
+"axis": "x",
+"const": 8.0,
+"lo": -5.0,
+"hi": 5.0,
+"normal": [
+0.0,
+-1.0
+],
+"reverse": false,
+"free": [
+-4.2,
+4.2
+]
+},
+{
+"side": "E",
+"axis": "y",
+"const": 5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+-1.0,
+0.0
+],
+"reverse": true,
+"free": [
+4.9,
+7.2
+]
+}
+],
+"doors": [
+{
+"id": "hub",
+"target": "hub",
+"name": "The Hall",
+"years": "",
+"theme": "hall",
+"pos": [
+0.0,
+0.0,
+0.0
+],
+"normal": [
+0.0,
+1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"hub_side": null
+},
+{
+"id": "missing-campsites",
+"target": "missing-campsites",
+"name": "Missing Campsites",
+"years": "horror-prose",
+"theme": "cast-iron-glass",
+"pos": [
+-5.0,
+2.8,
+0.0
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+-2.4,
+2.8,
+0.0,
+0.0
+],
+"hub_side": null
+},
+{
+"id": "following-the-sheep",
+"target": "following-the-sheep",
+"name": "Following The Sheep",
+"years": "horror-prose",
+"theme": "cast-iron-glass",
+"pos": [
+5.0,
+2.8,
+0.0
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+2.4,
+2.8,
+0.0,
+180.0
+],
+"hub_side": null
+}
+],
+"hangs": {
+"low-in-the-water--1": {
+"id": "low-in-the-water--1",
+"room": "low-in-the-water",
+"wall": "W",
+"along": 6.05,
+"row": 0,
+"pos": [
+-4.75,
+6.05,
+1.55
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.907,
+"scale": 1.0,
+"frame": {
+"style": "black-lacquer",
+"width": 0.05,
+"depth": 0.04
+},
+"type": "panel"
+}
+},
+"fx": [
+{
+"name": "FX-low-in-the-water_chandelier_0",
+"type": "chandelier",
+"pos": [
+0.0,
+4.0,
+5.4
+],
+"color": "#ffb070",
+"intensity": 110.0,
+"distance": 18,
+"shadow": 1
+},
+{
+"name": "FX-low-in-the-water_laylight_0",
+"type": "laylight",
+"pos": [
+0.0,
+4.0,
+6.8
+],
+"color": "#fff3e0",
+"intensity": 0.428,
+"distance": 0,
+"shadow": 1,
+"size": [
+5.0,
+4.0
+]
+},
+{
+"name": "FX-low-in-the-water_sconce_0",
+"type": "sconce",
+"pos": [
+-2.6,
+0.3,
+2.6
+],
+"color": "#ffb070",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-low-in-the-water_sconce_1",
+"type": "sconce",
+"pos": [
+2.6,
+0.3,
+2.6
+],
+"color": "#ffb070",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+}
+],
+"props": [],
+"views": {
+"low-in-the-water_door": {
+"pos": [
+0.0,
+2.2,
+1.7
+],
+"target": [
+0.0,
+4.8,
+2.2
+],
+"fov_deg": 70
+},
+"low-in-the-water_corner": {
+"pos": [
+-2.5,
+5.2,
+1.7
+],
+"target": [
+1.5,
+6.8,
+2.2
+],
+"fov_deg": 70
+},
+"low-in-the-water_west": {
+"pos": [
+2.0,
+4.4,
+1.7
+],
+"target": [
+-5.0,
+2.8,
+2.4
+],
+"fov_deg": 70
+}
+},
+"stats": {
+"works": 1,
+"scale": 1.0,
+"rows": [
+1,
+0,
+0
+],
+"fill": [
+0.574,
+0.0,
+0.0
+]
+}
+},
+"following-the-sheep": {
+"kind": "room",
+"id": "following-the-sheep",
+"name": "Following The Sheep",
+"wing": "writing",
+"intro": {
+"title": "Following The Sheep",
+"years": "horror-prose",
+"summary": "A story, horror prose mode. Themes: demonic pact, loss of agency, corporate satire, ritual sacrifice. 6 passages, verbatim from 03_Stories/08_Following_The_Sheep.md."
+},
+"style": {
+"theme": "cast-iron-glass",
+"wall": "#2f2224",
+"trim": "painted_trim",
+"floor": "dark_wood",
+"frame": "black-lacquer",
+"frame_small": "thin-metal",
+"light": {
+"color": "#ffb070",
+"intensity": 110
+}
+},
+"floor": {
+"x": [
+-5.0,
+5.0
+],
+"y": [
+0.0,
+8.0
+]
+},
+"size": [
+10.0,
+8.0
+],
+"height": 7.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"boxes": [
+{
+"name": "GEO-following-the-sheep_floor",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+-0.2,
+0.0
+],
+"material": "dark_wood"
+},
+{
+"name": "GEO-following-the-sheep_ceiling",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+7.0,
+7.2
+],
+"material": "plaster_ceiling"
+},
+{
+"name": "GEO-following-the-sheep_wallN_0",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+7.8,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-following-the-sheep_wallS_0",
+"x": [
+-5.2,
+-1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-following-the-sheep_wallS_1",
+"x": [
+1.6,
+5.2
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-following-the-sheep_transomS_0",
+"x": [
+-1.6,
+1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-following-the-sheep_wallW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-following-the-sheep_wallW_1",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-following-the-sheep_transomW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-following-the-sheep_wallE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-following-the-sheep_wallE_1",
+"x": [
+4.8,
+5.2
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-following-the-sheep_transomE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+}
+],
+"mouldings": [
+{
+"name": "GEO-following-the-sheep_skirting",
+"profile": "skirting",
+"material": "painted_trim",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-following-the-sheep_picture_rail",
+"profile": "picture_rail",
+"material": "painted_trim",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-following-the-sheep_cornice",
+"profile": "cornice",
+"material": "painted_trim",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-following-the-sheep_architrave_hub",
+"profile": "architrave",
+"material": "painted_trim",
+"door": "hub"
+},
+{
+"name": "GEO-following-the-sheep_architrave_low-in-the-water",
+"profile": "architrave",
+"material": "painted_trim",
+"door": "low-in-the-water"
+},
+{
+"name": "GEO-following-the-sheep_architrave_yellow-drop",
+"profile": "architrave",
+"material": "painted_trim",
+"door": "yellow-drop"
+}
+],
+"walls": [
+{
+"side": "W",
+"axis": "y",
+"const": -5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+1.0,
+0.0
+],
+"reverse": false,
+"free": [
+4.9,
+7.2
+]
+},
+{
+"side": "N",
+"axis": "x",
+"const": 8.0,
+"lo": -5.0,
+"hi": 5.0,
+"normal": [
+0.0,
+-1.0
+],
+"reverse": false,
+"free": [
+-4.2,
+4.2
+]
+},
+{
+"side": "E",
+"axis": "y",
+"const": 5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+-1.0,
+0.0
+],
+"reverse": true,
+"free": [
+4.9,
+7.2
+]
+}
+],
+"doors": [
+{
+"id": "hub",
+"target": "hub",
+"name": "The Hall",
+"years": "",
+"theme": "hall",
+"pos": [
+0.0,
+0.0,
+0.0
+],
+"normal": [
+0.0,
+1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"hub_side": null
+},
+{
+"id": "low-in-the-water",
+"target": "low-in-the-water",
+"name": "Low In The Water",
+"years": "horror-prose",
+"theme": "cast-iron-glass",
+"pos": [
+-5.0,
+2.8,
+0.0
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+-2.4,
+2.8,
+0.0,
+0.0
+],
+"hub_side": null
+},
+{
+"id": "yellow-drop",
+"target": "yellow-drop",
+"name": "The Yellow Drop and The Plain Before Sound",
+"years": "unclassified",
+"theme": "post-lintel-timber",
+"pos": [
+5.0,
+2.8,
+0.0
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+2.4,
+2.8,
+0.0,
+180.0
+],
+"hub_side": null
+}
+],
+"hangs": {
+"following-the-sheep--2": {
+"id": "following-the-sheep--2",
+"room": "following-the-sheep",
+"wall": "W",
+"along": 6.05,
+"row": 0,
+"pos": [
+-4.75,
+6.05,
+1.55
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 1.107,
+"scale": 1.0,
+"frame": {
+"style": "black-lacquer",
+"width": 0.05,
+"depth": 0.04
+},
+"type": "panel"
+},
+"following-the-sheep--1": {
+"id": "following-the-sheep--1",
+"room": "following-the-sheep",
+"wall": "W",
+"along": 6.05,
+"row": 1,
+"pos": [
+-4.75,
+6.05,
+2.937
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.827,
+"scale": 1.0,
+"frame": {
+"style": "black-lacquer",
+"width": 0.05,
+"depth": 0.04
+},
+"type": "panel"
+},
+"following-the-sheep--3": {
+"id": "following-the-sheep--3",
+"room": "following-the-sheep",
+"wall": "N",
+"along": -2.916,
+"row": 0,
+"pos": [
+-2.916,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.907,
+"scale": 1.0,
+"frame": {
+"style": "black-lacquer",
+"width": 0.05,
+"depth": 0.04
+},
+"type": "panel"
+},
+"following-the-sheep--4-1": {
+"id": "following-the-sheep--4-1",
+"room": "following-the-sheep",
+"wall": "N",
+"along": -0.972,
+"row": 0,
+"pos": [
+-0.972,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.627,
+"scale": 1.0,
+"frame": {
+"style": "black-lacquer",
+"width": 0.05,
+"depth": 0.04
+},
+"type": "panel"
+},
+"following-the-sheep--4-2": {
+"id": "following-the-sheep--4-2",
+"room": "following-the-sheep",
+"wall": "N",
+"along": 0.972,
+"row": 0,
+"pos": [
+0.972,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.707,
+"scale": 1.0,
+"frame": {
+"style": "black-lacquer",
+"width": 0.05,
+"depth": 0.04
+},
+"type": "panel"
+},
+"following-the-sheep--5": {
+"id": "following-the-sheep--5",
+"room": "following-the-sheep",
+"wall": "N",
+"along": 2.916,
+"row": 0,
+"pos": [
+2.916,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.747,
+"scale": 1.0,
+"frame": {
+"style": "black-lacquer",
+"width": 0.05,
+"depth": 0.04
+},
+"type": "panel"
+}
+},
+"fx": [
+{
+"name": "FX-following-the-sheep_chandelier_0",
+"type": "chandelier",
+"pos": [
+0.0,
+4.0,
+5.4
+],
+"color": "#ffb070",
+"intensity": 110.0,
+"distance": 18,
+"shadow": 1
+},
+{
+"name": "FX-following-the-sheep_laylight_0",
+"type": "laylight",
+"pos": [
+0.0,
+4.0,
+6.8
+],
+"color": "#fff3e0",
+"intensity": 0.428,
+"distance": 0,
+"shadow": 1,
+"size": [
+5.0,
+4.0
+]
+},
+{
+"name": "FX-following-the-sheep_sconce_0",
+"type": "sconce",
+"pos": [
+-2.6,
+0.3,
+2.6
+],
+"color": "#ffb070",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-following-the-sheep_sconce_1",
+"type": "sconce",
+"pos": [
+2.6,
+0.3,
+2.6
+],
+"color": "#ffb070",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+}
+],
+"props": [],
+"views": {
+"following-the-sheep_door": {
+"pos": [
+0.0,
+2.2,
+1.7
+],
+"target": [
+0.0,
+4.8,
+2.2
+],
+"fov_deg": 70
+},
+"following-the-sheep_corner": {
+"pos": [
+-2.5,
+5.2,
+1.7
+],
+"target": [
+1.5,
+6.8,
+2.2
+],
+"fov_deg": 70
+},
+"following-the-sheep_west": {
+"pos": [
+2.0,
+4.4,
+1.7
+],
+"target": [
+-5.0,
+2.8,
+2.4
+],
+"fov_deg": 70
+}
+},
+"stats": {
+"works": 6,
+"scale": 1.0,
+"rows": [
+2,
+1,
+0
+],
+"fill": [
+1.148,
+0.629,
+0.0
+]
+}
+},
+"yellow-drop": {
+"kind": "room",
+"id": "yellow-drop",
+"name": "The Yellow Drop and The Plain Before Sound",
+"wing": "writing",
+"intro": {
+"title": "The Yellow Drop and The Plain Before Sound",
+"years": "unclassified",
+"summary": "A story, unclassified mode. Themes: sensory genesis, sound as creation, waking and dreaming, origin myth. 3 passages, verbatim from 03_Stories/03_The_Yellow_Drop_and_The_Plain_Before_Sound.md."
+},
+"style": {
+"theme": "post-lintel-timber",
+"wall": "#34486a",
+"trim": "stone",
+"floor": "stone",
+"frame": "dark-wood",
+"frame_small": "thin-metal",
+"light": {
+"color": "#fff1dc",
+"intensity": 210
+}
+},
+"floor": {
+"x": [
+-5.0,
+5.0
+],
+"y": [
+0.0,
+8.0
+]
+},
+"size": [
+10.0,
+8.0
+],
+"height": 7.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"boxes": [
+{
+"name": "GEO-yellow-drop_floor",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+-0.2,
+0.0
+],
+"material": "stone"
+},
+{
+"name": "GEO-yellow-drop_ceiling",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+7.0,
+7.2
+],
+"material": "plaster_ceiling"
+},
+{
+"name": "GEO-yellow-drop_wallN_0",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+7.8,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-yellow-drop_wallS_0",
+"x": [
+-5.2,
+-1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-yellow-drop_wallS_1",
+"x": [
+1.6,
+5.2
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-yellow-drop_transomS_0",
+"x": [
+-1.6,
+1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-yellow-drop_wallW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-yellow-drop_wallW_1",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-yellow-drop_transomW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-yellow-drop_wallE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-yellow-drop_wallE_1",
+"x": [
+4.8,
+5.2
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-yellow-drop_transomE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+}
+],
+"mouldings": [
+{
+"name": "GEO-yellow-drop_skirting",
+"profile": "skirting",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-yellow-drop_picture_rail",
+"profile": "picture_rail",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-yellow-drop_cornice",
+"profile": "cornice",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-yellow-drop_architrave_hub",
+"profile": "architrave",
+"material": "stone",
+"door": "hub"
+},
+{
+"name": "GEO-yellow-drop_architrave_following-the-sheep",
+"profile": "architrave",
+"material": "stone",
+"door": "following-the-sheep"
+},
+{
+"name": "GEO-yellow-drop_architrave_heartstream",
+"profile": "architrave",
+"material": "stone",
+"door": "heartstream"
+}
+],
+"walls": [
+{
+"side": "W",
+"axis": "y",
+"const": -5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+1.0,
+0.0
+],
+"reverse": false,
+"free": [
+4.9,
+7.2
+]
+},
+{
+"side": "N",
+"axis": "x",
+"const": 8.0,
+"lo": -5.0,
+"hi": 5.0,
+"normal": [
+0.0,
+-1.0
+],
+"reverse": false,
+"free": [
+-4.2,
+4.2
+]
+},
+{
+"side": "E",
+"axis": "y",
+"const": 5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+-1.0,
+0.0
+],
+"reverse": true,
+"free": [
+4.9,
+7.2
+]
+}
+],
+"doors": [
+{
+"id": "hub",
+"target": "hub",
+"name": "The Hall",
+"years": "",
+"theme": "hall",
+"pos": [
+0.0,
+0.0,
+0.0
+],
+"normal": [
+0.0,
+1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"hub_side": null
+},
+{
+"id": "following-the-sheep",
+"target": "following-the-sheep",
+"name": "Following The Sheep",
+"years": "horror-prose",
+"theme": "cast-iron-glass",
+"pos": [
+-5.0,
+2.8,
+0.0
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+-2.4,
+2.8,
+0.0,
+0.0
+],
+"hub_side": null
+},
+{
+"id": "heartstream",
+"target": "heartstream",
+"name": "A Journey Into the Heartstream: The Rite of the Blue-Born",
+"years": "epic-fantasy",
+"theme": "pointed-arch",
+"pos": [
+5.0,
+2.8,
+0.0
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+2.4,
+2.8,
+0.0,
+180.0
+],
+"hub_side": null
+}
+],
+"hangs": {
+"yellow-drop--1": {
+"id": "yellow-drop--1",
+"room": "yellow-drop",
+"wall": "W",
+"along": 6.05,
+"row": 0,
+"pos": [
+-4.75,
+6.05,
+1.55
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.867,
+"scale": 1.0,
+"frame": {
+"style": "dark-wood",
+"width": 0.08,
+"depth": 0.05
+},
+"type": "panel"
+},
+"yellow-drop--2": {
+"id": "yellow-drop--2",
+"room": "yellow-drop",
+"wall": "N",
+"along": -1.29,
+"row": 0,
+"pos": [
+-1.29,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 1.187,
+"scale": 1.0,
+"frame": {
+"style": "dark-wood",
+"width": 0.08,
+"depth": 0.05
+},
+"type": "panel"
+},
+"yellow-drop--3": {
+"id": "yellow-drop--3",
+"room": "yellow-drop",
+"wall": "N",
+"along": 1.29,
+"row": 0,
+"pos": [
+1.29,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 1.147,
+"scale": 1.0,
+"frame": {
+"style": "dark-wood",
+"width": 0.08,
+"depth": 0.05
+},
+"type": "panel"
+}
+},
+"fx": [
+{
+"name": "FX-yellow-drop_chandelier_0",
+"type": "chandelier",
+"pos": [
+0.0,
+4.0,
+5.4
+],
+"color": "#fff1dc",
+"intensity": 210.0,
+"distance": 18,
+"shadow": 1
+},
+{
+"name": "FX-yellow-drop_laylight_0",
+"type": "laylight",
+"pos": [
+0.0,
+4.0,
+6.8
+],
+"color": "#fff3e0",
+"intensity": 0.817,
+"distance": 0,
+"shadow": 1,
+"size": [
+5.0,
+4.0
+]
+},
+{
+"name": "FX-yellow-drop_sconce_0",
+"type": "sconce",
+"pos": [
+-2.6,
+0.3,
+2.6
+],
+"color": "#fff1dc",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-yellow-drop_sconce_1",
+"type": "sconce",
+"pos": [
+2.6,
+0.3,
+2.6
+],
+"color": "#fff1dc",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+}
+],
+"props": [],
+"views": {
+"yellow-drop_door": {
+"pos": [
+0.0,
+2.2,
+1.7
+],
+"target": [
+0.0,
+4.8,
+2.2
+],
+"fov_deg": 70
+},
+"yellow-drop_corner": {
+"pos": [
+-2.5,
+5.2,
+1.7
+],
+"target": [
+1.5,
+6.8,
+2.2
+],
+"fov_deg": 70
+},
+"yellow-drop_west": {
+"pos": [
+2.0,
+4.4,
+1.7
+],
+"target": [
+-5.0,
+2.8,
+2.4
+],
+"fov_deg": 70
+}
+},
+"stats": {
+"works": 3,
+"scale": 1.0,
+"rows": [
+1,
+1,
+0
+],
+"fill": [
+0.6,
+0.329,
+0.0
+]
+}
+},
+"heartstream": {
+"kind": "room",
+"id": "heartstream",
+"name": "A Journey Into the Heartstream: The Rite of the Blue-Born",
+"wing": "writing",
+"intro": {
+"title": "A Journey Into the Heartstream: The Rite of the Blue-Born",
+"years": "epic-fantasy",
+"summary": "A story, epic fantasy mode. Themes: coming of age, separation, mortality, brotherhood. 4 passages, verbatim from 03_Stories/02_A_Journey_Into_the_Heartstream_-_The_Rite_of_the_Blue-Born.md."
+},
+"style": {
+"theme": "pointed-arch",
+"wall": "#34486a",
+"trim": "stone",
+"floor": "stone",
+"frame": "gilt-ornate",
+"frame_small": "gilt-simple",
+"light": {
+"color": "#fff1dc",
+"intensity": 210
+}
+},
+"floor": {
+"x": [
+-5.0,
+5.0
+],
+"y": [
+0.0,
+8.0
+]
+},
+"size": [
+10.0,
+8.0
+],
+"height": 7.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"boxes": [
+{
+"name": "GEO-heartstream_floor",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+-0.2,
+0.0
+],
+"material": "stone"
+},
+{
+"name": "GEO-heartstream_ceiling",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+7.0,
+7.2
+],
+"material": "plaster_ceiling"
+},
+{
+"name": "GEO-heartstream_wallN_0",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+7.8,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-heartstream_wallS_0",
+"x": [
+-5.2,
+-1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-heartstream_wallS_1",
+"x": [
+1.6,
+5.2
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-heartstream_transomS_0",
+"x": [
+-1.6,
+1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-heartstream_wallW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-heartstream_wallW_1",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-heartstream_transomW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-heartstream_wallE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-heartstream_wallE_1",
+"x": [
+4.8,
+5.2
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-heartstream_transomE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+}
+],
+"mouldings": [
+{
+"name": "GEO-heartstream_skirting",
+"profile": "skirting",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-heartstream_picture_rail",
+"profile": "picture_rail",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-heartstream_cornice",
+"profile": "cornice",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-heartstream_architrave_hub",
+"profile": "architrave",
+"material": "stone",
+"door": "hub"
+},
+{
+"name": "GEO-heartstream_architrave_yellow-drop",
+"profile": "architrave",
+"material": "stone",
+"door": "yellow-drop"
+},
+{
+"name": "GEO-heartstream_architrave_trip-tracker",
+"profile": "architrave",
+"material": "stone",
+"door": "trip-tracker"
+}
+],
+"walls": [
+{
+"side": "W",
+"axis": "y",
+"const": -5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+1.0,
+0.0
+],
+"reverse": false,
+"free": [
+4.9,
+7.2
+]
+},
+{
+"side": "N",
+"axis": "x",
+"const": 8.0,
+"lo": -5.0,
+"hi": 5.0,
+"normal": [
+0.0,
+-1.0
+],
+"reverse": false,
+"free": [
+-4.2,
+4.2
+]
+},
+{
+"side": "E",
+"axis": "y",
+"const": 5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+-1.0,
+0.0
+],
+"reverse": true,
+"free": [
+4.9,
+7.2
+]
+}
+],
+"doors": [
+{
+"id": "hub",
+"target": "hub",
+"name": "The Hall",
+"years": "",
+"theme": "hall",
+"pos": [
+0.0,
+0.0,
+0.0
+],
+"normal": [
+0.0,
+1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"hub_side": null
+},
+{
+"id": "yellow-drop",
+"target": "yellow-drop",
+"name": "The Yellow Drop and The Plain Before Sound",
+"years": "unclassified",
+"theme": "post-lintel-timber",
+"pos": [
+-5.0,
+2.8,
+0.0
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+-2.4,
+2.8,
+0.0,
+0.0
+],
+"hub_side": null
+},
+{
+"id": "trip-tracker",
+"target": "trip-tracker",
+"name": "Trip Tracker - July Fourteenth 2023",
+"years": "unclassified",
+"theme": "post-lintel-timber",
+"pos": [
+5.0,
+2.8,
+0.0
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+2.4,
+2.8,
+0.0,
+180.0
+],
+"hub_side": null
+}
+],
+"hangs": {
+"heartstream--1": {
+"id": "heartstream--1",
+"room": "heartstream",
+"wall": "W",
+"along": 6.05,
+"row": 0,
+"pos": [
+-4.75,
+6.05,
+1.55
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.867,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"heartstream--2": {
+"id": "heartstream--2",
+"room": "heartstream",
+"wall": "N",
+"along": -2.465,
+"row": 0,
+"pos": [
+-2.465,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 1.187,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"heartstream--3": {
+"id": "heartstream--3",
+"room": "heartstream",
+"wall": "N",
+"along": -0.0,
+"row": 0,
+"pos": [
+-0.0,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 1.387,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+},
+"heartstream--4": {
+"id": "heartstream--4",
+"room": "heartstream",
+"wall": "N",
+"along": 2.465,
+"row": 0,
+"pos": [
+2.465,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.787,
+"scale": 1.0,
+"frame": {
+"style": "gilt-ornate",
+"width": 0.12,
+"depth": 0.08
+},
+"type": "panel"
+}
+},
+"fx": [
+{
+"name": "FX-heartstream_chandelier_0",
+"type": "chandelier",
+"pos": [
+0.0,
+4.0,
+5.4
+],
+"color": "#fff1dc",
+"intensity": 210.0,
+"distance": 18,
+"shadow": 1
+},
+{
+"name": "FX-heartstream_laylight_0",
+"type": "laylight",
+"pos": [
+0.0,
+4.0,
+6.8
+],
+"color": "#fff3e0",
+"intensity": 0.817,
+"distance": 0,
+"shadow": 1,
+"size": [
+5.0,
+4.0
+]
+},
+{
+"name": "FX-heartstream_sconce_0",
+"type": "sconce",
+"pos": [
+-2.6,
+0.3,
+2.6
+],
+"color": "#fff1dc",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-heartstream_sconce_1",
+"type": "sconce",
+"pos": [
+2.6,
+0.3,
+2.6
+],
+"color": "#fff1dc",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+}
+],
+"props": [],
+"views": {
+"heartstream_door": {
+"pos": [
+0.0,
+2.2,
+1.7
+],
+"target": [
+0.0,
+4.8,
+2.2
+],
+"fov_deg": 70
+},
+"heartstream_corner": {
+"pos": [
+-2.5,
+5.2,
+1.7
+],
+"target": [
+1.5,
+6.8,
+2.2
+],
+"fov_deg": 70
+},
+"heartstream_west": {
+"pos": [
+2.0,
+4.4,
+1.7
+],
+"target": [
+-5.0,
+2.8,
+2.4
+],
+"fov_deg": 70
+}
+},
+"stats": {
+"works": 4,
+"scale": 1.0,
+"rows": [
+1,
+1,
+0
+],
+"fill": [
+0.635,
+0.521,
+0.0
+]
+}
+},
+"trip-tracker": {
+"kind": "room",
+"id": "trip-tracker",
+"name": "Trip Tracker - July Fourteenth 2023",
+"wing": "writing",
+"intro": {
+"title": "Trip Tracker - July Fourteenth 2023",
+"years": "unclassified",
+"summary": "A dream journal, unclassified mode. Themes: altered perception, ego dissolution, archetypal guide, self reconstruction. 3 passages, verbatim from 09_Dream_Journal/02_Trip_Tracker_-_July_Fourteenth_2023.md."
+},
+"style": {
+"theme": "post-lintel-timber",
+"wall": "#2f2224",
+"trim": "stone",
+"floor": "stone",
+"frame": "dark-wood",
+"frame_small": "thin-metal",
+"light": {
+"color": "#ffb070",
+"intensity": 110
+}
+},
+"floor": {
+"x": [
+-5.0,
+5.0
+],
+"y": [
+0.0,
+8.0
+]
+},
+"size": [
+10.0,
+8.0
+],
+"height": 7.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"boxes": [
+{
+"name": "GEO-trip-tracker_floor",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+-0.2,
+0.0
+],
+"material": "stone"
+},
+{
+"name": "GEO-trip-tracker_ceiling",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+7.0,
+7.2
+],
+"material": "plaster_ceiling"
+},
+{
+"name": "GEO-trip-tracker_wallN_0",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+7.8,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-trip-tracker_wallS_0",
+"x": [
+-5.2,
+-1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-trip-tracker_wallS_1",
+"x": [
+1.6,
+5.2
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-trip-tracker_transomS_0",
+"x": [
+-1.6,
+1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-trip-tracker_wallW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-trip-tracker_wallW_1",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-trip-tracker_transomW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-trip-tracker_wallE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-trip-tracker_wallE_1",
+"x": [
+4.8,
+5.2
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-trip-tracker_transomE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+}
+],
+"mouldings": [
+{
+"name": "GEO-trip-tracker_skirting",
+"profile": "skirting",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-trip-tracker_picture_rail",
+"profile": "picture_rail",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-trip-tracker_cornice",
+"profile": "cornice",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+1.2,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+],
+[
+[
+5.0,
+4.4,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-trip-tracker_architrave_hub",
+"profile": "architrave",
+"material": "stone",
+"door": "hub"
+},
+{
+"name": "GEO-trip-tracker_architrave_heartstream",
+"profile": "architrave",
+"material": "stone",
+"door": "heartstream"
+},
+{
+"name": "GEO-trip-tracker_architrave_architecture-of-being",
+"profile": "architrave",
+"material": "stone",
+"door": "architecture-of-being"
+}
+],
+"walls": [
+{
+"side": "W",
+"axis": "y",
+"const": -5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+1.0,
+0.0
+],
+"reverse": false,
+"free": [
+4.9,
+7.2
+]
+},
+{
+"side": "N",
+"axis": "x",
+"const": 8.0,
+"lo": -5.0,
+"hi": 5.0,
+"normal": [
+0.0,
+-1.0
+],
+"reverse": false,
+"free": [
+-4.2,
+4.2
+]
+},
+{
+"side": "E",
+"axis": "y",
+"const": 5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+-1.0,
+0.0
+],
+"reverse": true,
+"free": [
+4.9,
+7.2
+]
+}
+],
+"doors": [
+{
+"id": "hub",
+"target": "hub",
+"name": "The Hall",
+"years": "",
+"theme": "hall",
+"pos": [
+0.0,
+0.0,
+0.0
+],
+"normal": [
+0.0,
+1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"hub_side": null
+},
+{
+"id": "heartstream",
+"target": "heartstream",
+"name": "A Journey Into the Heartstream: The Rite of the Blue-Born",
+"years": "epic-fantasy",
+"theme": "pointed-arch",
+"pos": [
+-5.0,
+2.8,
+0.0
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+-2.4,
+2.8,
+0.0,
+0.0
+],
+"hub_side": null
+},
+{
+"id": "architecture-of-being",
+"target": "architecture-of-being",
+"name": "The Architecture of Being",
+"years": "essay-self-help",
+"theme": "doric-pediment",
+"pos": [
+5.0,
+2.8,
+0.0
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+2.4,
+2.8,
+0.0,
+180.0
+],
+"hub_side": null
+}
+],
+"hangs": {
+"trip-tracker--1-1": {
+"id": "trip-tracker--1-1",
+"room": "trip-tracker",
+"wall": "W",
+"along": 6.05,
+"row": 0,
+"pos": [
+-4.75,
+6.05,
+1.55
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 1.547,
+"scale": 1.0,
+"frame": {
+"style": "dark-wood",
+"width": 0.08,
+"depth": 0.05
+},
+"type": "panel"
+},
+"trip-tracker--1-2": {
+"id": "trip-tracker--1-2",
+"room": "trip-tracker",
+"wall": "N",
+"along": -1.29,
+"row": 0,
+"pos": [
+-1.29,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 1.347,
+"scale": 1.0,
+"frame": {
+"style": "dark-wood",
+"width": 0.08,
+"depth": 0.05
+},
+"type": "panel"
+},
+"trip-tracker--1-3": {
+"id": "trip-tracker--1-3",
+"room": "trip-tracker",
+"wall": "N",
+"along": 1.29,
+"row": 0,
+"pos": [
+1.29,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 1.347,
+"scale": 1.0,
+"frame": {
+"style": "dark-wood",
+"width": 0.08,
+"depth": 0.05
+},
+"type": "panel"
+}
+},
+"fx": [
+{
+"name": "FX-trip-tracker_chandelier_0",
+"type": "chandelier",
+"pos": [
+0.0,
+4.0,
+5.4
+],
+"color": "#ffb070",
+"intensity": 110.0,
+"distance": 18,
+"shadow": 1
+},
+{
+"name": "FX-trip-tracker_laylight_0",
+"type": "laylight",
+"pos": [
+0.0,
+4.0,
+6.8
+],
+"color": "#fff3e0",
+"intensity": 0.428,
+"distance": 0,
+"shadow": 1,
+"size": [
+5.0,
+4.0
+]
+},
+{
+"name": "FX-trip-tracker_sconce_0",
+"type": "sconce",
+"pos": [
+-2.6,
+0.3,
+2.6
+],
+"color": "#ffb070",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-trip-tracker_sconce_1",
+"type": "sconce",
+"pos": [
+2.6,
+0.3,
+2.6
+],
+"color": "#ffb070",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-trip-tracker_piclight_0",
+"type": "picture_light",
+"pos": [
+-4.5,
+6.05,
+2.654
+],
+"color": "#ffe2b8",
+"intensity": 8,
+"distance": 3.0,
+"shadow": 0,
+"dir": [
+0,
+0,
+-1
+],
+"over": "trip-tracker--1-1"
+}
+],
+"props": [],
+"views": {
+"trip-tracker_door": {
+"pos": [
+0.0,
+2.2,
+1.7
+],
+"target": [
+0.0,
+4.8,
+2.2
+],
+"fov_deg": 70
+},
+"trip-tracker_corner": {
+"pos": [
+-2.5,
+5.2,
+1.7
+],
+"target": [
+1.5,
+6.8,
+2.2
+],
+"fov_deg": 70
+},
+"trip-tracker_west": {
+"pos": [
+2.0,
+4.4,
+1.7
+],
+"target": [
+-5.0,
+2.8,
+2.4
+],
+"fov_deg": 70
+}
+},
+"stats": {
+"works": 3,
+"scale": 1.0,
+"rows": [
+1,
+1,
+0
+],
+"fill": [
+0.6,
+0.329,
+0.0
+]
+}
+},
+"architecture-of-being": {
+"kind": "room",
+"id": "architecture-of-being",
+"name": "The Architecture of Being",
+"wing": "writing",
+"intro": {
+"title": "The Architecture of Being",
+"years": "essay-self-help",
+"summary": "A essay, essay self help mode. Themes: duality of being, presence over time, choice as sovereignty, becoming as surrender, greatness through humility. 8 passages, verbatim from 11_Essays/02_The_Architecture_of_Being.md."
+},
+"style": {
+"theme": "doric-pediment",
+"wall": "#e6dfd2",
+"trim": "stone",
+"floor": "stone",
+"frame": "dark-wood",
+"frame_small": "dark-wood",
+"light": {
+"color": "#fff8ec",
+"intensity": 230
+}
+},
+"floor": {
+"x": [
+-5.0,
+5.0
+],
+"y": [
+0.0,
+8.0
+]
+},
+"size": [
+10.0,
+8.0
+],
+"height": 7.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"boxes": [
+{
+"name": "GEO-architecture-of-being_floor",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+-0.2,
+0.0
+],
+"material": "stone"
+},
+{
+"name": "GEO-architecture-of-being_ceiling",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+7.0,
+7.2
+],
+"material": "plaster_ceiling"
+},
+{
+"name": "GEO-architecture-of-being_wallN_0",
+"x": [
+-5.2,
+5.2
+],
+"y": [
+7.8,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-architecture-of-being_wallS_0",
+"x": [
+-5.2,
+-1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-architecture-of-being_wallS_1",
+"x": [
+1.6,
+5.2
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-architecture-of-being_transomS_0",
+"x": [
+-1.6,
+1.6
+],
+"y": [
+-0.2,
+0.2
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-architecture-of-being_wallW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+-0.2,
+1.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-architecture-of-being_wallW_1",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+4.4,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-architecture-of-being_transomW_0",
+"x": [
+-5.2,
+-4.8
+],
+"y": [
+1.2,
+4.4
+],
+"z": [
+4.0,
+7.0
+],
+"material": "plaster_wall"
+},
+{
+"name": "GEO-architecture-of-being_wallE_0",
+"x": [
+4.8,
+5.2
+],
+"y": [
+-0.2,
+8.2
+],
+"z": [
+0.0,
+7.0
+],
+"material": "plaster_wall"
+}
+],
+"mouldings": [
+{
+"name": "GEO-architecture-of-being_skirting",
+"profile": "skirting",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-architecture-of-being_picture_rail",
+"profile": "picture_rail",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-architecture-of-being_cornice",
+"profile": "cornice",
+"material": "stone",
+"runs": [
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-1.6,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+1.6,
+0.0,
+0.0
+],
+[
+5.0,
+0.0,
+0.0
+],
+[
+0.0,
+1.0,
+0.0
+]
+],
+[
+[
+-5.0,
+0.0,
+0.0
+],
+[
+-5.0,
+1.2,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+4.4,
+0.0
+],
+[
+-5.0,
+8.0,
+0.0
+],
+[
+1.0,
+0.0,
+0.0
+]
+],
+[
+[
+-5.0,
+8.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+0.0,
+-1.0,
+0.0
+]
+],
+[
+[
+5.0,
+0.0,
+0.0
+],
+[
+5.0,
+8.0,
+0.0
+],
+[
+-1.0,
+0.0,
+0.0
+]
+]
+]
+},
+{
+"name": "GEO-architecture-of-being_architrave_hub",
+"profile": "architrave",
+"material": "stone",
+"door": "hub"
+},
+{
+"name": "GEO-architecture-of-being_architrave_trip-tracker",
+"profile": "architrave",
+"material": "stone",
+"door": "trip-tracker"
+}
+],
+"walls": [
+{
+"side": "W",
+"axis": "y",
+"const": -5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+1.0,
+0.0
+],
+"reverse": false,
+"free": [
+4.9,
+7.2
+]
+},
+{
+"side": "N",
+"axis": "x",
+"const": 8.0,
+"lo": -5.0,
+"hi": 5.0,
+"normal": [
+0.0,
+-1.0
+],
+"reverse": false,
+"free": [
+-4.2,
+4.2
+]
+},
+{
+"side": "E",
+"axis": "y",
+"const": 5.0,
+"lo": 0.0,
+"hi": 8.0,
+"normal": [
+-1.0,
+0.0
+],
+"reverse": true,
+"free": [
+0.8,
+7.2
+]
+}
+],
+"doors": [
+{
+"id": "hub",
+"target": "hub",
+"name": "The Hall",
+"years": "",
+"theme": "hall",
+"pos": [
+0.0,
+0.0,
+0.0
+],
+"normal": [
+0.0,
+1.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+0.0,
+2.6,
+0.0,
+90.0
+],
+"hub_side": null
+},
+{
+"id": "trip-tracker",
+"target": "trip-tracker",
+"name": "Trip Tracker - July Fourteenth 2023",
+"years": "unclassified",
+"theme": "post-lintel-timber",
+"pos": [
+-5.0,
+2.8,
+0.0
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 3.2,
+"h": 4.0,
+"spawn": [
+-2.4,
+2.8,
+0.0,
+0.0
+],
+"hub_side": null
+}
+],
+"hangs": {
+"architecture-of-being--1-1": {
+"id": "architecture-of-being--1-1",
+"room": "architecture-of-being",
+"wall": "W",
+"along": 6.05,
+"row": 0,
+"pos": [
+-4.75,
+6.05,
+1.55
+],
+"normal": [
+1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 1.347,
+"scale": 1.0,
+"frame": {
+"style": "dark-wood",
+"width": 0.08,
+"depth": 0.05
+},
+"type": "panel"
+},
+"architecture-of-being--1-2": {
+"id": "architecture-of-being--1-2",
+"room": "architecture-of-being",
+"wall": "N",
+"along": -3.26,
+"row": 0,
+"pos": [
+-3.26,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.707,
+"scale": 1.0,
+"frame": {
+"style": "dark-wood",
+"width": 0.08,
+"depth": 0.05
+},
+"type": "panel"
+},
+"architecture-of-being--2-1": {
+"id": "architecture-of-being--2-1",
+"room": "architecture-of-being",
+"wall": "N",
+"along": -1.63,
+"row": 0,
+"pos": [
+-1.63,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 1.227,
+"scale": 1.0,
+"frame": {
+"style": "dark-wood",
+"width": 0.08,
+"depth": 0.05
+},
+"type": "panel"
+},
+"architecture-of-being--2-2": {
+"id": "architecture-of-being--2-2",
+"room": "architecture-of-being",
+"wall": "N",
+"along": -0.0,
+"row": 0,
+"pos": [
+-0.0,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 0.867,
+"scale": 1.0,
+"frame": {
+"style": "dark-wood",
+"width": 0.08,
+"depth": 0.05
+},
+"type": "panel"
+},
+"architecture-of-being--3-1": {
+"id": "architecture-of-being--3-1",
+"room": "architecture-of-being",
+"wall": "N",
+"along": 1.63,
+"row": 0,
+"pos": [
+1.63,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 1.067,
+"scale": 1.0,
+"frame": {
+"style": "dark-wood",
+"width": 0.08,
+"depth": 0.05
+},
+"type": "panel"
+},
+"architecture-of-being--3-2": {
+"id": "architecture-of-being--3-2",
+"room": "architecture-of-being",
+"wall": "N",
+"along": 3.26,
+"row": 0,
+"pos": [
+3.26,
+7.75,
+1.55
+],
+"normal": [
+0.0,
+-1.0,
+0.0
+],
+"w": 1.2,
+"h": 1.107,
+"scale": 1.0,
+"frame": {
+"style": "dark-wood",
+"width": 0.08,
+"depth": 0.05
+},
+"type": "panel"
+},
+"architecture-of-being--4-2": {
+"id": "architecture-of-being--4-2",
+"room": "architecture-of-being",
+"wall": "E",
+"along": 2.71,
+"row": 0,
+"pos": [
+4.75,
+2.71,
+1.55
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.747,
+"scale": 1.0,
+"frame": {
+"style": "dark-wood",
+"width": 0.08,
+"depth": 0.05
+},
+"type": "panel"
+},
+"architecture-of-being--4-1": {
+"id": "architecture-of-being--4-1",
+"room": "architecture-of-being",
+"wall": "E",
+"along": 5.29,
+"row": 0,
+"pos": [
+4.75,
+5.29,
+1.55
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 0.947,
+"scale": 1.0,
+"frame": {
+"style": "dark-wood",
+"width": 0.08,
+"depth": 0.05
+},
+"type": "panel"
+}
+},
+"fx": [
+{
+"name": "FX-architecture-of-being_chandelier_0",
+"type": "chandelier",
+"pos": [
+0.0,
+4.0,
+5.4
+],
+"color": "#fff8ec",
+"intensity": 230.0,
+"distance": 18,
+"shadow": 1
+},
+{
+"name": "FX-architecture-of-being_laylight_0",
+"type": "laylight",
+"pos": [
+0.0,
+4.0,
+6.8
+],
+"color": "#fff3e0",
+"intensity": 0.894,
+"distance": 0,
+"shadow": 1,
+"size": [
+5.0,
+4.0
+]
+},
+{
+"name": "FX-architecture-of-being_sconce_0",
+"type": "sconce",
+"pos": [
+-2.6,
+0.3,
+2.6
+],
+"color": "#fff8ec",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+},
+{
+"name": "FX-architecture-of-being_sconce_1",
+"type": "sconce",
+"pos": [
+2.6,
+0.3,
+2.6
+],
+"color": "#fff8ec",
+"intensity": 22,
+"distance": 6,
+"shadow": 0,
+"dir": [
+0,
+1,
+0
+]
+}
+],
+"props": [],
+"views": {
+"architecture-of-being_door": {
+"pos": [
+0.0,
+2.2,
+1.7
+],
+"target": [
+0.0,
+4.8,
+2.2
+],
+"fov_deg": 70
+},
+"architecture-of-being_corner": {
+"pos": [
+-2.5,
+5.2,
+1.7
+],
+"target": [
+1.5,
+6.8,
+2.2
+],
+"fov_deg": 70
+},
+"architecture-of-being_west": {
+"pos": [
+2.0,
+4.4,
+1.7
+],
+"target": [
+-5.0,
+2.8,
+2.4
+],
+"fov_deg": 70
+}
+},
+"stats": {
+"works": 8,
+"scale": 1.0,
+"rows": [
+1,
+1,
+1
+],
+"fill": [
+0.6,
+0.821,
+0.431
 ]
 }
 }
