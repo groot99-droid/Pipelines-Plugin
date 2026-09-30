@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ROSW studio hub</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="mark">ROSW · studio</div>
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab" data-tab="notes" role="tab">Notes</button>
+    <button class="tab" data-tab="runs" role="tab">Runs</button>
+    <button class="tab" data-tab="gates" role="tab">Gates</button>
+    <button class="tab" data-tab="new" role="tab">New run</button>
+    <button class="tab" data-tab="writing" role="tab">Writing</button>
+    <button class="tab" data-tab="brushes" role="tab">Brushes</button>
+  </nav>
+  <div class="status" id="status" aria-live="polite">loading</div>
+</header>
+
+<main>
+  <section id="view-notes" class="view" data-view="notes">
+    <div class="toolbar">
+      <input id="noteSearch" type="search" placeholder="search the index" aria-label="Search notes">
+      <select id="noteKind" aria-label="Kind"><option value="">any kind</option></select>
+      <select id="noteStatus" aria-label="Status"><option value="">any status</option></select>
+      <select id="noteProject" aria-label="Project"><option value="">any project</option></select>
+    </div>
+    <div id="noteHits" class="hits" hidden></div>
+    <div id="noteGrid" class="grid"></div>
+    <p id="noteEmpty" class="empty" hidden></p>
+  </section>
+
+  <section id="view-runs" class="view" data-view="runs" hidden>
+    <table class="table" id="runTable">
+      <thead><tr><th>status</th><th>next stage</th><th>pipeline</th><th>run</th><th>note</th><th>updated</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <p id="runEmpty" class="empty" hidden></p>
+  </section>
+
+  <section id="view-gates" class="view" data-view="gates" hidden>
+    <div id="gateList" class="grid"></div>
+  </section>
+
+  <section id="view-new" class="view" data-view="new" hidden>
+    <form id="newRun" class="form">
+      <label>pipeline
+        <select id="newPipeline" required></select>
+      </label>
+      <label>working title
+        <input id="newTitle" type="text" required maxlength="120" placeholder="what is being made">
+      </label>
+      <p id="newMakes" class="hint"></p>
+      <button type="submit" class="button">create the run</button>
+    </form>
+    <div id="newResult" class="result" hidden></div>
+    <p class="hint">The hub keeps the books. The run's work happens in a Claude Code session on this repo, through the <code>studio-pipeline</code> skill.</p>
+  </section>
+
+  <section id="view-writing" class="view" data-view="writing" hidden>
+    <p class="hint">Titles from the creative-writing vault's own index, when it has been built. A work is read only when you name it at a checkpoint.</p>
+    <table class="table" id="writingTable">
+      <thead><tr><th>kind</th><th>file</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <p id="writingEmpty" class="empty" hidden></p>
+  </section>
+
+  <section id="view-brushes" class="view" data-view="brushes" hidden>
+    <p class="hint">The brush designer. Export a bundle into a <code>brush</code> run's folder; <code>brush_pack.py</code> packs it.</p>
+    <iframe id="brushFrame" class="frame" title="Brush designer" src="about:blank" loading="lazy"></iframe>
+    <p id="brushEmpty" class="empty" hidden>The designer is not installed under studio/hub/brush/ yet.</p>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

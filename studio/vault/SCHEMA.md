@@ -71,7 +71,7 @@ pipelines: [still-image, brush]
 context_brand: [visual_identity, color_science]
 context_domain: []
 artifacts:
-  - path: assets/aurora/concept-01.png
+  - path: aurora/design/aurora-lead/concept-01.png
     role: concept-frame
 tags: [character, protagonist]
 ---
@@ -89,7 +89,7 @@ tags: [character, protagonist]
 | `pipelines` | the pipelines that have written to this note |
 | `context_brand` | the gates this note's decisions speak to. The ladder finds notes by this field |
 | `context_domain` | reference libraries a recipe cited. Never binding |
-| `artifacts` | `path` and `role`: `concept-frame`, `final`, `variant`, `reference` or `export` |
+| `artifacts` | `path` and `role`: `concept-frame`, `final`, `variant`, `reference` or `export`. The path is relative to `studio/assets/`, where `studio_run.py keep` put the file: `<project>/<kind>/<slug>/<file>`. Never a link |
 
 ### Required
 `id`, `type`, `kind`, `title`, `status`, `created`, `updated`
@@ -213,6 +213,8 @@ Wikilinks to related notes. Obsidian's graph is built from these.
 - **`## Method` must be sufficient to reproduce.** If a parameter mattered, it
   goes in.
 - **No presigned or share link, and no credential, goes in a note.**
+- **An artifact is a file the run kept.** `studio_run.py keep` copies it under
+  `studio/assets/`; the record write lists every kept file, and nothing else.
 - **Write through `content_md.py`.** It previews the change and writes only
   after the author has seen it.
 

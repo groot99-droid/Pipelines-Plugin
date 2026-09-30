@@ -229,6 +229,10 @@ them because they are "the studio's" is a category error.
   knows signed query parameters, the share links of a few hosts, and a few key
   prefixes. A shape it does not know passes, so do not rely on it: leave them out.
 - No pipeline calls a connector tool that shares, publishes, invites or deploys.
+  A pipeline that runs through a connector lists, under `connector: tools` in
+  the spec, every tool it may call; it calls no other.
+- A connector returns a short-lived link. The file is downloaded into the run
+  folder during execute; the link is never written down.
 
 ## Refusals
 
@@ -242,6 +246,8 @@ These hold always.
 - A Timeline step that was not taken is never recorded.
 - Nothing is written into the vault without a preview and a yes.
 - A brand gate is never generated.
+- An artifact a note lists is a file the run kept under `studio/assets/`,
+  through `studio_run.py keep`, after the execute go-ahead. Never a link.
 
 ## What is not enforced
 

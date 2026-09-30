@@ -103,15 +103,15 @@ Source: `DECISIONS.md`.
 
 | Decision | What it said | Here | Status |
 |---|---|---|---|
-| D1 | The memory layer is local-first: no seven-service cloud stack | the vault is plain files. An index of it, without note bodies, is to be built with the hub | planned |
-| D2 | The brush designer becomes a capability the system can call, not a panel it links to | a `brush` pipeline that drives the app and packs the file. Declared in the spec; it does not start | planned |
+| D1 | The memory layer is local-first: no seven-service cloud stack | the vault is plain files; `studio/vault/tools/vault_index.py` indexes it without note bodies | carried |
+| D2 | The brush designer becomes a capability the system can call, not a panel it links to | a `brush` pipeline: the designer exports a bundle, `studio/pipeline/brush_pack.py` packs it. It starts once the app is under `studio/hub/brush/` | planned |
 | D3 | The archive's canonical source is crispy-engine | the archive is not carried | dropped |
 | D4 | The archive's directory structure was derived from its imports | the archive is not carried | dropped |
 | D5 | A third-party key was scrubbed from the archive's docs | nothing from `archive/` is copied, its documents included | carried |
 | D6 | The unit of memory is the Content MD, not a ledger of live variables | `studio/vault/` | carried |
 | D6 addendum | Five skills gate on stale state; rewrite them after `brush_designer`, which goes first | the five are declared as pipelines. **The order changed**: the UI pipeline goes first (decision 6) | changed |
 | D7 | The router is mode-aware; autonomous never waits on a human | **Changed by decision 5.** The skill waits at every stage. What D7 protected is kept: nothing is guessed, and a blocker is written into the note | changed |
-| D8 | One Windows laptop, not a Mac and a CUDA node. Thresholds re-cut, single flight, models evicted, tiers instead of a model name | kept for anything that runs locally, when something does. The WSL branches are not carried: they never ran on this machine | planned |
+| D8 | One Windows laptop, not a Mac and a CUDA node. Thresholds re-cut, single flight, models evicted, tiers instead of a model name | `studio/pipeline/machine.yaml`: the thresholds and single flight, the author's to edit. Model tiers and eviction are not carried: no model runs locally | changed |
 | D9 | ui-ux-pro-max is vendored as a skill and authors three brand gates; two token authorities, split by consumer | the corpus is `plugins/ui-design`. The split is the `consumers:` block of `ui-direction` | carried |
 | D9 addendum | The generator misrouted twice; the old palette failed WCAG; four bugs appeared only on rendering | `ui-direction` checks the matched category before using a result and retries once. Rendering is `ui-build`'s, which is not built | carried |
 | D10 | HARD MONO: one family, no glow, inversion as elevation, three measured contrast floors | the three gate files, carried unchanged, and `studio/vault/_Context/brand/tokens.json` as a real file | carried |
@@ -128,13 +128,13 @@ implemented. The rest say what they need and what they carry, and do not start.
 |---|---|---|---|---|
 | `ui_ux_intelligence` | `ui-direction` | the anti-fabrication law, the query contract, the scope boundary between studio surfaces and product work, the propose-only loop | the vendored copy; `plugins/ui-design` replaces it. "Never install Python" is that plugin's own rule and stays there | rebuilt |
 | `css_html_ui` | `ui-build` | tokens are law; render and measure at each breakpoint; script toggles a token-backed class and never sets a literal colour; a status maps to a class as the token dictionary says; a new region is a grid area; HTML written from data is escaped | the token dictionary embedded in a skill file, which is now `tokens.json`. Its copy rules wait on `brand_voice`, which is the author's to write | planned |
-| `adobe_firefly` | `still-image` | a style reference is recorded, and a change supersedes it without erasing the old one | the credential step, the payload templates, the regex set | planned |
-| `higgsfield_api` | `video-shot` | continuity is carried in the note; a drift check after a run of shots | the API payloads | planned |
-| `suno_audio` | `music-cue` | tempo and key are decisions in force | the endpoints, which were never called | planned |
-| `adobe_suite_uxp` | `edit-2d` | never change a file that was not read in this task; work on a copy | the COM bridge and the ExtendScript wrappers | planned |
-| `blender_python` | `scene-3d` | fixed templates with a parameter file; a render needs a compute token | the headless templates; the installed Blender skills and connector replace them | planned |
-| `local_rag_orchestration` | an index of the vault | answer only from what was retrieved, and cite it; evict a model after use | local generation as the executor. Claude is the executor here | planned |
-| `hardware_compute` | a compute gate | one token authorizes one job; an unreadable reading closes the gate; one heavy job at a time; AC power and thermal headroom | thresholds embedded in markdown and extracted by a regular expression | planned |
+| `adobe_firefly` | `still-image` | a style reference is recorded, and a change supersedes it without erasing the old one; no speculative submission | the credential step, the payload templates, the regex set. The connector is Higgsfield, not Firefly: the installed image tools are edits, not generation | rebuilt |
+| `higgsfield_api` | `video-shot` | continuity is carried in the note; a continuation starts from the last frame; a drift check every third shot; the seed is never randomised | the API payloads, the continuity state machine file, the UUID protocol | rebuilt |
+| `suno_audio` | `music-cue` | tempo and key are decisions in force; one direction per generation | the endpoints, which were never called; the bracket-tag fixtures | rebuilt |
+| `adobe_suite_uxp` | `edit-2d` | never change a file that was not read in this task; work on a copy; the output spec comes from the gate | the COM bridge and the ExtendScript wrappers; Premiere | rebuilt |
+| `blender_python` | `scene-3d` | fixed scripts with their parameters as the Method; a local render needs a compute token | the headless templates; the Blender scene connector does the cloud branch, a local Blender the other, when installed | rebuilt |
+| `local_rag_orchestration` | `studio/vault/tools/vault_index.py` | a search names the note and the section it found; nothing is answered from outside the vault | local generation, the model tiers and the eviction: no model runs here | rebuilt |
+| `hardware_compute` | `studio/pipeline/compute_gate.py`, with `machine.yaml` and `probe.py` | one token authorizes one job; an unreadable reading closes the gate; one heavy job at a time; AC power and thermal headroom; a local-compute run cannot pass execute without a consumed token | thresholds embedded in markdown and extracted by a regular expression; the continuous-mode loop; the dashboard writeback | rebuilt |
 
 The Four-Part Artifact Architecture (header, prerequisites, process, embedded
 artifacts) maps to: a pipeline entry, the `context` and `recipe` stages, the
@@ -145,15 +145,15 @@ stage list, and real files.
 | Tool | Here | Status |
 |---|---|---|
 | `tools/ui-ux-pro-max/` | already `plugins/ui-design/`, with more than was vendored | carried |
-| `tools/brush-designer/` | the app, moved, with the Procreate export written again in Python | planned |
-| `hub/`, `tools/launcher/` | the hub without the browser-side Ask, served from an allow-list and not from the repo root | planned |
-| `tools/vault_manifest.py` | an index of the vault without note bodies | planned |
+| `tools/brush-designer/` | the Procreate export written again in Python: `studio/pipeline/brush_pack.py`. The app itself is copied in from the laptop when the author has it; its bplist encoder and its Ollama tab are left behind | changed |
+| `hub/`, `tools/launcher/` | `studio/hub/`: a page over the vault's notes, the runs and the gates, served by `studio/hub/serve.py` from its own folder only; the launcher and shortcut scripts under `studio/hub/launcher/`. No browser-side Ask, no Ollama | rebuilt |
+| `tools/vault_manifest.py` | `studio/vault/tools/vault_index.py`: one row per note without its body, and a search by section | rebuilt |
 | `tools/vault_rag.py` | not carried. Its index was built from a folder that no longer exists, and its generation step duplicates the executor | dropped |
-| `tools/hw/` | a compute gate with three defects fixed: a denial that overwrites a live token, a re-issue that clears who holds it, a test that writes to the real token | planned |
-| `tools/bootstrap.sh`, the embedded probe | a probe written for this laptop, as a real file | planned |
-| `tools/reconcile_models.py` | report only, against a settings file | planned |
+| `tools/hw/` | `studio/pipeline/compute_gate.py`, with the three defects fixed: a denial writes nothing, a re-mint keeps who holds it, and the token lives under the run folder the tests point elsewhere | rebuilt |
+| `tools/bootstrap.sh`, the embedded probe | `studio/pipeline/probe.py`: one file, one PowerShell call on Windows, `/proc` and `/sys` on Linux, null for what it cannot read. No bootstrap: there is nothing to extract | rebuilt |
+| `tools/reconcile_models.py` | not carried. Nothing here names a local model tag, so there is nothing to reconcile | dropped |
 | `tools/verify_system.py` | `studio/pipeline/tests/test_spec.py`. The idea is kept: a contract stated in several places is checked to agree | rebuilt |
-| `control_room.html`, `router.js` | a view of the runs, in the hub. The routing stubs are not carried | planned |
+| `control_room.html`, `router.js` | the Runs tab of `studio/hub/`. The routing stubs are not carried | rebuilt |
 | `dashboard.json` | split: `studio/pipeline/spec.yaml` holds the registry, `runs/` holds run state. Model settings get a file of their own when something local needs them | changed |
 | `context/brand/` (three authored) | `studio/vault/_Context/brand/`, byte for byte | carried |
 | `context/brand/` (seven unauthored) | names in the spec. No file exists until the author writes one | carried |

@@ -113,12 +113,28 @@ class Spec(unittest.TestCase):
         for name, cfg in implemented.items():
             with self.subTest(pipeline=name):
                 for key, path in cfg["executes_through"].items():
-                    self.assertTrue((REPO / path).is_file(), f"{key}: {path} is not in the repo")
+                    if "/" in path:  # a repo path; anything else names a connector
+                        self.assertTrue((REPO / path).is_file(), f"{key}: {path} is not in the repo")
+                    else:
+                        self.assertEqual(key, "connector")
+                        self.assertTrue(cfg["connector"]["tools"], f"{name} runs through a connector "
+                                        "and names no tool it may call")
                 for stage in self.spec["stages"]:
                     if f"{{pipeline.stage_notes.{stage['id']}}}" in stage["prompt"]:
                         self.assertTrue(cfg["stage_notes"].get(stage["id"]),
                                         f"no stage_notes.{stage['id']}")
                 self.assertIn("leaves_machine", cfg)
+
+    def test_a_pipeline_that_spends_names_what_it_calls(self):
+        for name, cfg in self.spec["pipelines"].items():
+            with self.subTest(pipeline=name):
+                self.assertIn(cfg.get("class"), ("none", "spend", "local-compute"))
+                if cfg.get("class") == "spend" and cfg["status"] == "implemented":
+                    self.assertTrue(cfg["connector"]["tools"])
+                    for tool in cfg["connector"]["tools"]:
+                        self.assertRegex(tool, r"^mcp__[A-Za-z0-9_]+__[a-z0-9_-]+$")
+        roles = self.spec["content_md"]["artifact_roles"]
+        self.assertEqual(roles, ["concept-frame", "final", "variant", "reference", "export"])
 
     def test_no_pipeline_lists_a_tool_it_may_never_call(self):
         never = self.spec["connectors"]["never"]

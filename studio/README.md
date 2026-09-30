@@ -15,7 +15,10 @@ studio/
     spec.yaml          the contract: gates, pipelines, stages, refusals
     studio_run.py      the bookkeeper: keeps a run's state, refuses what the spec refuses
     content_md.py      lints a note, previews a write, writes after a go-ahead
-    studio_common.py   what those two share
+    gate_md.py         the same, for a brand gate
+    brush_pack.py      a designer bundle -> a Procreate .brush or .brushset
+    compute_gate.py    one token, one heavy local job; machine.yaml and probe.py beside it
+    studio_common.py   what those share
     tests/
     runs/<run-id>/     one run's state and stage outputs. Ignored by git
   vault/               the Obsidian vault. Open THIS folder in Obsidian
@@ -24,10 +27,23 @@ studio/
     _Context/brand/    the brand gates, and tokens.json
     _Pipelines/        a map of the pipelines
     _templates/
+    tools/vault_index.py   one row per note, and a search by section
+  hub/                 the desk: serve.py, the page, launcher/ for Windows, brush/ for the designer
+  assets/              what runs keep. Ignored by git
   docs/
 ```
 
 The skill is at `.claude/skills/studio-pipeline/SKILL.md`, at the repo root.
+
+## Three ways in
+
+- **The desk.** `python studio/hub/serve.py`, then `http://127.0.0.1:8765/`: the
+  vault's notes, the runs and what they are parked on, the gates, a search, and
+  a way to start a run. On Windows, `studio/hub/launcher/Install-Shortcut.ps1`
+  puts "Studio Hub" on the Desktop and in the Start Menu (Ctrl+Alt+H).
+- **A run.** The `studio-pipeline` skill, in a Claude Code session on this repo.
+- **Brand work.** The `brand-gate` pipeline writes a gate from an interview;
+  `ui-direction` proposes against the gates. `tokens.json` is the author's.
 
 ## The six stages
 
@@ -56,15 +72,17 @@ writes the reason into the note. It does not guess.
 
 ## Pipelines
 
-Nine are declared in `spec.yaml`. Two are implemented.
+Nine are declared in `spec.yaml`. Seven are implemented.
 
 | Pipeline | Makes | Status |
 |---|---|---|
 | `ui-direction` | a design direction for a surface or a product, through `plugins/ui-design` | implemented |
 | `ui-build` | markup and CSS in which every value is a token | not yet |
 | `brand-gate` | one brand gate, transcribed from an interview with the author, through `gate_md.py` | implemented |
-| `brush` | a brush and an importable file | not yet |
-| `still-image`, `video-shot`, `music-cue`, `edit-2d`, `scene-3d` | through connectors | not yet |
+| `brush` | a brush and a Procreate file, through the designer and `brush_pack.py` | packer built; the app is still to be copied in |
+| `still-image`, `video-shot`, `music-cue` | through the Higgsfield connector; each spends credits after the execute go-ahead | implemented |
+| `edit-2d` | copies of existing images, through the Adobe connector | implemented |
+| `scene-3d` | through the Blender scene connector; a local Blender when the compute gate allows it | implemented (cloud branch) |
 
 A pipeline that is not implemented is a real entry: what it needs, what it
 carries from the skill it replaces, and what is still open. It does not start.
@@ -87,9 +105,17 @@ python studio/pipeline/studio_run.py facts   <run-id>     # what is on disk for 
 python studio/pipeline/studio_run.py advance <run-id>     # mark the stage done, if its checks pass
 python studio/pipeline/studio_run.py status               # every run
 
+python studio/pipeline/studio_run.py keep    <run-id> <file> --role final   # copy what the run made into studio/assets/
+
 python studio/pipeline/content_md.py lint --all
 python studio/pipeline/content_md.py plan  <run-id>       # preview; writes nothing to the vault
 python studio/pipeline/content_md.py apply <run-id> --confirm
+
+python studio/pipeline/compute_gate.py evaluate --all     # what this machine may run locally, now
+python studio/pipeline/compute_gate.py mint render_3d_cpu # a token for one job
+python studio/pipeline/brush_pack.py pack <bundle> --out <dir>
+
+python studio/vault/tools/vault_index.py index            # the search the hub uses
 ```
 
 Exit codes: 0 done, 1 refused, 2 usage or configuration error.
@@ -102,6 +128,7 @@ Needs Python 3 and `pyyaml` (`pip install -r studio/pipeline/requirements.txt`).
 |---|---|
 | `studio/pipeline/runs/<run-id>/` | freely. Bookkeeping; safe to delete once the run is complete or abandoned |
 | `studio/vault/` | only through `content_md.py apply --confirm`, after a plan and a go-ahead recorded after that plan, and only at `<project>/<kind>/<slug>.md` |
+| `studio/assets/` | only through `studio_run.py keep`, after the execute go-ahead: a copy of a file the run made, at `<project>/<kind>/<slug>/`. Not versioned |
 | anywhere else | only in `execute`, only what the recipe named, only after a go-ahead |
 
 `content_md.py apply` without `--confirm` is a dry run.
