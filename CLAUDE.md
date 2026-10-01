@@ -161,7 +161,9 @@ the author names at a `scene-3d` intake, through `writing-museum/build/`.
   DENY; the token lives under `runs/`.
 - **The hub** (`studio/hub/serve.py`) binds 127.0.0.1, serves only its own folder
   and a few JSON routes over the vault and the runs, and writes nothing but a new
-  run through the bookkeeper. Its stylesheet holds no literal value: every colour,
+  run through the bookkeeper. It links to the Writing Museum's library and viewer
+  on the museum's own server (`/api/museum`, `--museum-port`) and never serves or
+  reads the museum's files beyond whether `library.json` exists. Its stylesheet holds no literal value: every colour,
   size and font is a custom property set from `tokens.json` at load, and
   `tests/test_hub.py` refuses a literal. `studio/vault/tools/vault_index.py` is
   the index it searches; it carries no note bodies and is not versioned.

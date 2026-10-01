@@ -16,6 +16,7 @@
     <button class="tab" data-tab="new" role="tab">New run</button>
     <button class="tab" data-tab="writing" role="tab">Writing</button>
     <button class="tab" data-tab="brushes" role="tab">Brushes</button>
+    <a class="out" id="libraryTab" href="#" hidden>Library ↗</a>
   </nav>
   <div class="status" id="status" aria-live="polite">loading</div>
 </header>
@@ -61,6 +62,14 @@
   </section>
 
   <section id="view-writing" class="view" data-view="writing" hidden>
+    <div id="museum" class="museum">
+      <p>The Writing Museum has its own server, and the library page beside its viewer reads every work and looks through the rooms. The hub links there; it serves none of it.</p>
+      <p class="actions">
+        <a id="libraryLink" class="button" href="#">Read in the library</a>
+        <a id="walkLink" class="button" href="#">Walk the museum</a>
+      </p>
+      <p id="museumState" class="meta" aria-live="polite"></p>
+    </div>
     <p class="hint">Titles from the creative-writing vault's own index, when it has been built. A work is read only when you name it at a checkpoint.</p>
     <table class="table" id="writingTable">
       <thead><tr><th>kind</th><th>file</th></tr></thead>

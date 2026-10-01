@@ -54,6 +54,7 @@
     }
     try { localStorage.setItem("hub:tab", name); } catch (_) { /* private mode */ }
     if (name === "brushes") mountBrushes();
+    if (name === "writing") probeMuseum();
   }
 
   // ── notes ────────────────────────────────────────────────────────────
@@ -185,6 +186,35 @@
     $("writingEmpty").textContent = "No creative-writing index. Build it: python creative-writing/vault/tools/vault_search.py index";
   }
 
+  // ── the museum: a link to its own server, never a proxy ──────────────
+  let museum = null;
+  async function loadMuseum() {
+    museum = await getJSON("/api/museum");
+    $("libraryLink").href = museum.library;
+    $("walkLink").href = museum.viewer;
+    const tab = $("libraryTab");
+    tab.href = museum.library;
+    tab.hidden = false;
+    await probeMuseum();
+  }
+
+  // An opaque cross-origin fetch says only whether something answers on that port;
+  // the hub reads nothing from the museum.
+  async function probeMuseum() {
+    if (!museum) return;
+    const state = $("museumState");
+    let up = false;
+    try {
+      await fetch(museum.url + "data/museum-manifest.json", { mode: "no-cors", cache: "no-store" });
+      up = true;
+    } catch (_) { up = false; }
+    const built = museum.built ? "" : ` The library file is not built yet: <code>${esc(museum.build)}</code>.`;
+    state.innerHTML = up
+      ? `museum server up at <a href="${esc(museum.url)}">${esc(museum.url)}</a>.${built}`
+      : `museum server not running at ${esc(museum.url)}. Start it from the repo folder: <code>${esc(museum.command)}</code>${built}`;
+    for (const id of ["libraryLink", "walkLink", "libraryTab"]) $(id).classList.toggle("off", !up);
+  }
+
   // ── brushes ──────────────────────────────────────────────────────────
   let brushesMounted = false;
   async function mountBrushes() {
@@ -215,7 +245,7 @@
     let last = "notes";
     try { last = localStorage.getItem("hub:tab") || "notes"; } catch (_) { /* private mode */ }
     showTab(last);
-    const loads = [loadNotes(), loadRuns(), loadGates(), loadPipelines(), loadWriting()];
+    const loads = [loadNotes(), loadRuns(), loadGates(), loadPipelines(), loadWriting(), loadMuseum()];
     const results = await Promise.allSettled(loads);
     const failed = results.filter((r) => r.status === "rejected");
     status.textContent = failed.length ? `${failed.length} of ${loads.length} views failed: ${failed[0].reason.message}` : "live";

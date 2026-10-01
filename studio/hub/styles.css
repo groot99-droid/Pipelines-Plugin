@@ -45,7 +45,7 @@ em { color: var(--color-ink-dim); font-style: normal; }
   text-transform: uppercase;
 }
 .tabs { display: flex; gap: var(--space-1); flex-wrap: wrap; }
-.tab, .button {
+.tab, .button, .out {
   background: var(--color-bg-base);
   color: var(--color-ink-base);
   border: var(--border-hairline);
@@ -57,11 +57,14 @@ em { color: var(--color-ink-dim); font-style: normal; }
   text-transform: uppercase;
   cursor: pointer;
 }
-.tab.on, .button:hover {
+.tab.on, .button:hover, .out:hover {
   background: var(--color-accent-cyan);
   color: var(--color-bg-base);
   border-color: var(--color-accent-cyan);
 }
+a.button, .out { text-decoration: none; display: inline-block; }
+.out { color: var(--color-accent-cyan); }
+.out.off, a.button.off { color: var(--color-ink-dim); border-style: dashed; }
 .status { font-size: var(--type-scale-sm); color: var(--color-ink-dim); }
 
 /* views */
@@ -77,6 +80,17 @@ input, select {
   min-width: 24ch;
 }
 .hint, .meta, .empty { color: var(--color-ink-dim); font-size: var(--type-scale-sm); }
+.museum {
+  margin-bottom: var(--space-3);
+  padding: var(--space-3);
+  border: var(--border-hairline);
+  border-left: var(--border-heavy);
+  border-left-color: var(--color-accent-cyan);
+  background: var(--color-bg-panel);
+}
+.museum p { margin: 0 0 var(--space-2); }
+.museum p:last-child { margin-bottom: 0; }
+.actions { display: flex; gap: var(--space-2); flex-wrap: wrap; }
 .empty { padding: var(--space-3) 0; }
 
 .grid {

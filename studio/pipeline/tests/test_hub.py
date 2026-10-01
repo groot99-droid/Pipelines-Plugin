@@ -36,7 +36,8 @@ class HubCase(StudioCase):
         self.repo = self.root / "repo"
         self.repo.mkdir()
         self.index_path = self.root / "index.json"
-        self.server = serve.make_server(0, env=self.env, repo=self.repo, index_path=self.index_path, quiet=True)
+        self.server = serve.make_server(0, env=self.env, repo=self.repo, index_path=self.index_path, quiet=True,
+                                        museum_port=18768)
         self.port = self.server.server_address[1]
         self.thread = threading.Thread(target=self.server.serve_forever, daemon=True)
         self.thread.start()
@@ -132,6 +133,28 @@ class Routes(HubCase):
                                           "kind": "03_Stories"}])
         self.assertNotIn("PROSE", json.dumps(data))
 
+    def test_museum_is_a_link_to_its_own_server_never_a_proxy(self):
+        status, data = self.json("/api/museum")
+        self.assertEqual(status, 200)
+        self.assertEqual(data["url"], "http://127.0.0.1:18768/")
+        self.assertEqual(data["library"], "http://127.0.0.1:18768/web/explore.html")
+        self.assertEqual(data["viewer"], "http://127.0.0.1:18768/web/index.html")
+        self.assertIn("--directory writing-museum", data["command"])
+        self.assertIn("18768", data["command"])
+        self.assertFalse(data["built"])
+        library = self.repo / "writing-museum" / "data" / "library.json"
+        library.parent.mkdir(parents=True)
+        library.write_text(json.dumps({"works": [{"passages": [{"text": "THE PROSE ITSELF"}]}]}), encoding="utf-8")
+        status, data = self.json("/api/museum")
+        self.assertTrue(data["built"])
+        self.assertNotIn("PROSE", json.dumps(data))
+        # the hub does not serve the museum's folder
+        for path in ("/web/explore.html", "/data/library.json", "/../../writing-museum/data/library.json"):
+            status, body, _ = self.get(path)
+            with self.subTest(path=path):
+                self.assertEqual(status, 404)
+                self.assertNotIn(b"PROSE", body)
+
     def test_an_unknown_route_is_404(self):
         self.assertEqual(self.json("/api/nothing")[0], 404)
 
@@ -163,7 +186,7 @@ class NewRun(HubCase):
     def test_the_hub_writes_nothing_into_the_vault(self):
         before = sorted(p.as_posix() for p in self.vault.rglob("*"))
         self.json("/api/runs", method="POST", body={"pipeline": "ui-direction", "title": "Hub page"})
-        for route in ("/api/notes", "/api/gates", "/api/runs", "/api/tokens", "/api/writing"):
+        for route in ("/api/notes", "/api/gates", "/api/runs", "/api/tokens", "/api/writing", "/api/museum"):
             self.json(route)
         self.assertEqual(sorted(p.as_posix() for p in self.vault.rglob("*")), before)
 
@@ -215,6 +238,10 @@ class Stylesheet(unittest.TestCase):
         script = (HUB / "app.js").read_text(encoding="utf-8")
         for text in (page, script, self.css):
             self.assertNotRegex(text, r"https?://(?!127\.0\.0\.1)")
+        # the museum's address comes from the server, so the page carries no port of its own
+        self.assertNotRegex(page + script, r"\b8768\b")
+        for anchor in ("libraryLink", "walkLink", "libraryTab"):
+            self.assertIn(f'id="{anchor}"', page)
 
 
 if __name__ == "__main__":

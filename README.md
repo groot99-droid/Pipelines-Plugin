@@ -293,8 +293,11 @@ designer app.
 
 The hub, [`studio/hub`](studio/hub), is a local page over the vault's notes, the
 runs and the gates: `python studio/hub/serve.py`, then open
-`http://127.0.0.1:8765/`. On Windows, `studio/hub/launcher/Install-Shortcut.ps1`
-puts a shortcut on the Desktop and in the Start Menu.
+`http://127.0.0.1:8765/`. Its Writing tab links to the Writing Museum's library
+and viewer on their own server (`--museum-port`, default 8768) and says whether
+that server is up; the hub serves none of the museum itself. On Windows,
+`studio/hub/launcher/Install-Shortcut.ps1` puts a shortcut on the Desktop and in
+the Start Menu, and `Start-Hub.ps1 -Museum` starts both servers.
 
 It carries the ideas of Creative-Headquarters into this repo.
 [`studio/docs/INVENTORY.md`](studio/docs/INVENTORY.md) is what that repo
