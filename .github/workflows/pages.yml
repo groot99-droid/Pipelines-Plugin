@@ -4,6 +4,9 @@
 # The museum is rebuilt from the vault at deploy time, so the library and the rooms on the site
 # follow main: when a scene-3d run's scene is merged, its room is on the site a few minutes later.
 # The site: https://groot99-droid.github.io/Pipelines-Plugin/  (library: museum/web/explore.html)
+# The repository's Pages source must be "GitHub Actions". The first build step sets it: a
+# "deploy from a branch" source runs GitHub's own build on the same push, which lands after this
+# deploy and replaces the site with docs/ alone, so every museum/ link answers "File not found".
 name: pages
 
 on:
@@ -38,6 +41,19 @@ jobs:
           cp -r writing-museum/web writing-museum/data writing-museum/assets _site/museum/
           touch _site/.nojekyll
           du -sh _site
+      - name: Make this workflow the Pages source
+        # configure-pages only creates a site; it leaves an existing "deploy from a branch"
+        # site alone, and that branch build then lands after this one and drops museum/.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          current=$(gh api "repos/${GITHUB_REPOSITORY}/pages" --jq .build_type 2>/dev/null || echo none)
+          echo "Pages build_type: $current"
+          if [ "$current" = "legacy" ]; then
+            gh api -X PUT "repos/${GITHUB_REPOSITORY}/pages" -f build_type=workflow \
+              || { echo "::error::Could not switch the Pages source. Open Settings > Pages > Build and deployment and set Source to \"GitHub Actions\", then re-run this workflow."; exit 1; }
+            echo "Switched the Pages source to GitHub Actions."
+          fi
       - uses: actions/configure-pages@v5
         with:
           enablement: true
@@ -54,3 +70,15 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Check the site has the docs and the museum
+        run: |
+          base="${{ steps.deployment.outputs.page_url }}"
+          for path in index.html museum/web/index.html museum/web/explore.html museum/data/library.json; do
+            for attempt in 1 2 3 4 5 6; do
+              code=$(curl -sS -o /dev/null -w '%{http_code}' "${base}${path}")
+              [ "$code" = "200" ] && break
+              sleep 20
+            done
+            echo "$code  $path"
+            [ "$code" = "200" ] || { echo "::error::${base}${path} is $code after the deploy: the site was published from somewhere else, or the museum is missing from it."; exit 1; }
+          done
