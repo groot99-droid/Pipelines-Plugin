@@ -3055,7 +3055,7 @@
 0.0
 ],
 "w": 1.2,
-"h": 1.267,
+"h": 1.147,
 "scale": 1.0,
 "frame": {
 "style": "gilt-ornate",
@@ -3081,7 +3081,7 @@
 0.0
 ],
 "w": 1.2,
-"h": 0.747,
+"h": 0.707,
 "scale": 1.0,
 "frame": {
 "style": "gilt-ornate",
@@ -12566,7 +12566,7 @@
 0.0
 ],
 "w": 1.2,
-"h": 1.347,
+"h": 1.227,
 "scale": 1.0,
 "frame": {
 "style": "dark-wood",
@@ -12579,10 +12579,10 @@
 "id": "architecture-of-being--1-2",
 "room": "architecture-of-being",
 "wall": "N",
-"along": -3.26,
+"along": -2.934,
 "row": 0,
 "pos": [
--3.26,
+-2.934,
 7.75,
 1.55
 ],
@@ -12605,10 +12605,10 @@
 "id": "architecture-of-being--2-1",
 "room": "architecture-of-being",
 "wall": "N",
-"along": -1.63,
+"along": -0.978,
 "row": 0,
 "pos": [
--1.63,
+-0.978,
 7.75,
 1.55
 ],
@@ -12631,10 +12631,10 @@
 "id": "architecture-of-being--2-2",
 "room": "architecture-of-being",
 "wall": "N",
-"along": -0.0,
+"along": 0.978,
 "row": 0,
 "pos": [
--0.0,
+0.978,
 7.75,
 1.55
 ],
@@ -12657,10 +12657,10 @@
 "id": "architecture-of-being--3-1",
 "room": "architecture-of-being",
 "wall": "N",
-"along": 1.63,
+"along": 2.934,
 "row": 0,
 "pos": [
-1.63,
+2.934,
 7.75,
 1.55
 ],
@@ -12679,41 +12679,15 @@
 },
 "type": "panel"
 },
-"architecture-of-being--3-2": {
-"id": "architecture-of-being--3-2",
-"room": "architecture-of-being",
-"wall": "N",
-"along": 3.26,
-"row": 0,
-"pos": [
-3.26,
-7.75,
-1.55
-],
-"normal": [
-0.0,
--1.0,
-0.0
-],
-"w": 1.2,
-"h": 1.107,
-"scale": 1.0,
-"frame": {
-"style": "dark-wood",
-"width": 0.08,
-"depth": 0.05
-},
-"type": "panel"
-},
 "architecture-of-being--4-2": {
 "id": "architecture-of-being--4-2",
 "room": "architecture-of-being",
 "wall": "E",
-"along": 2.71,
+"along": 2.055,
 "row": 0,
 "pos": [
 4.75,
-2.71,
+2.055,
 1.55
 ],
 "normal": [
@@ -12735,11 +12709,11 @@
 "id": "architecture-of-being--4-1",
 "room": "architecture-of-being",
 "wall": "E",
-"along": 5.29,
+"along": 4.0,
 "row": 0,
 "pos": [
 4.75,
-5.29,
+4.0,
 1.55
 ],
 "normal": [
@@ -12749,6 +12723,32 @@
 ],
 "w": 1.2,
 "h": 0.947,
+"scale": 1.0,
+"frame": {
+"style": "dark-wood",
+"width": 0.08,
+"depth": 0.05
+},
+"type": "panel"
+},
+"architecture-of-being--3-2": {
+"id": "architecture-of-being--3-2",
+"room": "architecture-of-being",
+"wall": "E",
+"along": 5.945,
+"row": 0,
+"pos": [
+4.75,
+5.945,
+1.55
+],
+"normal": [
+-1.0,
+0.0,
+0.0
+],
+"w": 1.2,
+"h": 1.107,
 "scale": 1.0,
 "frame": {
 "style": "dark-wood",
@@ -12878,8 +12878,8 @@
 ],
 "fill": [
 0.6,
-0.821,
-0.431
+0.657,
+0.647
 ]
 }
 }

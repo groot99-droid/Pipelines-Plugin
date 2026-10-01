@@ -354,6 +354,15 @@ class EachRowItsOwnLine(Base):
         self.assertEqual(code, 0, err)
         self.assertIn("does not name it", out)
 
+    def test_three_stated_rows_of_one_day_keep_their_own_lines(self):
+        rows = [stated(name, "fixture_look") for name in ("quality bar", "when to re-render", "camera grammar")]
+        run_id = self.at_record(rows)
+        lines = "".join(f"- STATED {TODAY}: {name}: as the author said.\n"
+                        for name in ("quality bar", "when to re-render", "camera grammar"))
+        code, out, err = self.plan(run_id, GOOD_NOTE + lines)
+        self.assertEqual(code, 0, err)
+        self.assertNotIn("does not name it", out)
+
     def test_the_gate_is_in_context_brand(self):
         run_id = self.at_record([stated("scale note", "fixture_type")])
         line = f"- STATED {TODAY}: scale note: the body is 13px.\n"
