@@ -144,7 +144,7 @@ async function main() {
     controls.engage({ pointerLock });
   }
   blockerEl.addEventListener('click', (e) => {
-    if (e.target.closest('button')) return;
+    if (e.target.closest('button, a')) return;
     enter();
   });
   const exploreBtn = document.getElementById('btn-explore');

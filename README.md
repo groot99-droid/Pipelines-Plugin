@@ -320,10 +320,13 @@ path and lines. The room's door, walls, floor, frames and light follow the work'
 own mode, moods and motifs through one reference table. The engine and the data
 live in [`writing-museum/`](writing-museum) (its [README](writing-museum/README.md)
 says how to view and build it); every scene is made through the studio's
-`scene-3d` pipeline and has a note in `studio/vault/writing-museum/3d/`.
+`scene-3d` pipeline and has a note in `studio/vault/writing-museum/3d/`. Beside the
+3D viewer is **the library** (`web/explore.html`): a flat page to read every work of
+the vault, passage by passage, and look through the rooms, each with its colours,
+its door and where every value came from.
 
 ```powershell
-python -m http.server 8768 --directory writing-museum          # then open /web/index.html
+python -m http.server 8768 --directory writing-museum          # then open /web/index.html, or /web/explore.html to read
 python writing-museum/build/build_museum.py build --lint        # the layout lint
 python -m unittest discover -s writing-museum/build/tests       # the builder's tests
 node writing-museum/tools/walk_test.mjs                         # the browser walk-through

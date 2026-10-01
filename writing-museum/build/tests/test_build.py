@@ -16,6 +16,7 @@ sys.path.insert(0, str(BUILD))
 
 import build_museum  # noqa: E402
 import layout  # noqa: E402
+import library  # noqa: E402
 import works  # noqa: E402
 
 REPO = BUILD.parent.parent
@@ -55,6 +56,18 @@ I kept the clock you stopped.
 I kept the coat, the key, the cup.
 """ + "\n".join(["I kept the words you never said, and said them for you."] * 40) + "\n"
 
+STORIES_INDEX = """---
+title: "Stories — Index"
+type: moc
+folder: 03_Stories
+tags: [moc]
+---
+
+Short and flash fiction — mostly horror.
+
+- [[03_Stories/01_The_Lantern_Room|The Lantern Room]] — a house with one room nobody used, and a lantern nobody lit; see [[02_Novels/01_Other|the other one]] → annotation: [[_Annotations/03_Stories/01_The_Lantern_Room|notes]]
+"""
+
 
 def sidecar_for(vault, rel):
     """A sidecar in the tagger's shape for a work in the temp vault, tagging every chunk dread/threshold."""
@@ -82,6 +95,7 @@ class TempVault(unittest.TestCase):
         (self.vault / "03_Stories" / "01_The_Lantern_Room.md").write_text(WORK, encoding="utf-8")
         (self.vault / "07_Poems_and_Prose" / "01_Small_Hours.md").write_text(POEM, encoding="utf-8")
         sidecar_for(self.vault, "03_Stories/01_The_Lantern_Room.md")
+        (self.vault / "03_Stories" / "_index.md").write_text(STORIES_INDEX, encoding="utf-8")
         self.scenes = self.root / "scenes"
         self.scenes.mkdir()
         self.out = self.root / "out"
@@ -247,9 +261,100 @@ class Build(TempVault):
         self.assertTrue(any("overlap" in e for e in errors))
 
 
+class Library(TempVault):
+    """data/library.json: every work of the vault, with a room or without, and every scene."""
+
+    def test_every_work_is_in_the_library_whether_or_not_it_has_a_room(self):
+        self.spec("the-lantern-room", order=1)
+        lib = library.compose(build_museum.load_specs(self.scenes), self.vault)
+        self.assertEqual([w["path"] for w in lib["works"]],
+                         ["03_Stories/01_The_Lantern_Room.md", "07_Poems_and_Prose/01_Small_Hours.md"])
+        self.assertEqual([f["folder"] for f in lib["folders"]], ["03_Stories", "07_Poems_and_Prose"])
+        lantern, hours = lib["works"]
+        self.assertEqual(lantern["scene"], "the-lantern-room")
+        self.assertIsNone(hours["scene"])
+        self.assertEqual(lantern["slug"], "the-lantern-room")
+        self.assertEqual((lantern["type"], lantern["mode"], lantern["themes"]), ("story", "horror-prose", ["isolation", "threshold"]))
+        self.assertEqual(hours["type"], "poem")
+        self.assertNotIn("tags", lantern)   # the frontmatter's Obsidian tags are not carried
+
+    def test_the_folder_index_gives_the_name_the_description_and_the_blurbs(self):
+        lib = library.compose([], self.vault)
+        stories, poems = lib["folders"]
+        self.assertEqual((stories["name"], stories["about"]), ("Stories", "Short and flash fiction — mostly horror."))
+        self.assertEqual(lib["works"][0]["blurb"], "a house with one room nobody used, and a lantern nobody lit; see the other one.")
+        self.assertEqual((poems["name"], poems["about"]), ("Poems and Prose", ""))   # no _index.md: named from the folder
+        self.assertEqual(lib["works"][1]["blurb"], "")
+        self.assertEqual(library.folder_name("09_Dream_Journal", {"title": "09_Dream_Journal — Index"}), "Dream Journal")
+
+    def test_passages_are_the_vault_chunks_verbatim_without_the_header(self):
+        lib = library.compose([], self.vault)
+        lantern = lib["works"][0]
+        w = works.read_work("03_Stories/01_The_Lantern_Room.md", self.vault)
+        self.assertEqual([p["text"] for p in lantern["passages"]], [ch["text"] for ch in w["chunks"]])
+        self.assertEqual([p["lines"] for p in lantern["passages"]], [ch["file_lines"] for ch in w["chunks"]])
+        body = WORK.split("---\n", 2)[2]
+        for p in lantern["passages"]:
+            self.assertIn(" ".join(p["text"].split()), " ".join(body.split()))
+            self.assertNotIn("**Source:**", p["text"])
+            self.assertEqual(p["tags"]["mood_tags"], ["dread", "unease"])
+            self.assertTrue(p["tagged"])
+        self.assertFalse(lib["works"][1]["passages"][0]["tagged"])
+
+    def test_scenes_carry_the_spec_the_panel_count_the_room_size_and_the_note(self):
+        self.spec("small-hours", "07_Poems_and_Prose/01_Small_Hours.md", order=2)
+        self.spec("the-lantern-room", order=1, style={"theme": "cast-iron-glass", "wall": "#2f2224"}, sources={"wall": "a test"})
+        specs = build_museum.load_specs(self.scenes)
+        composed = build_museum.compose(specs, self.vault)
+        lib = library.compose(specs, self.vault, composed)
+        self.assertEqual([s["id"] for s in lib["scenes"]], ["the-lantern-room", "small-hours"])
+        lantern = lib["scenes"][0]
+        self.assertEqual(lantern["style"]["wall"], "#2f2224")
+        self.assertEqual(lantern["sources"], {"wall": "a test"})
+        self.assertEqual(lantern["passages"], len(next(e for e in composed["entries"] if e["slug"] == "the-lantern-room")["works"]))
+        self.assertEqual(lantern["size"], composed["layout_result"]["layout"]["scenes"]["the-lantern-room"]["size"])
+        self.assertEqual(lantern["note"], "studio/vault/writing-museum/3d/the-lantern-room.md")
+        self.assertEqual(lantern["slug"], "the-lantern-room")
+        self.assertTrue(lantern["intro"]["summary"])
+        without = library.compose(specs, self.vault)   # no composed result: counted here, size unknown
+        self.assertEqual(without["scenes"][0]["passages"], lantern["passages"])
+        self.assertEqual(without["scenes"][0]["size"], [])
+
+    def test_build_writes_the_library_and_lint_does_not(self):
+        self.spec("the-lantern-room")
+        self.assertEqual(build_museum.build(self.scenes, self.out, lint_only=True, vault=self.vault), 0)
+        self.assertFalse(self.out.exists())
+        self.assertEqual(build_museum.build(self.scenes, self.out, lint_only=False, vault=self.vault), 0)
+        lib = json.loads((self.out / "library.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(lib["works"]), 2)
+        self.assertEqual([s["id"] for s in lib["scenes"]], ["the-lantern-room"])
+        self.assertEqual(lib["scenes"][0]["size"], [10.0, 8.0])
+        self.assertEqual(lib["source"], "creative-writing/vault")
+
+    def test_the_page_reads_only_the_library(self):
+        web = BUILD.parent / "web"
+        page = (web / "explore.html").read_text(encoding="utf-8")
+        script = (web / "js" / "explore.js").read_text(encoding="utf-8")
+        css = (web / "css" / "explore.css").read_text(encoding="utf-8")
+        self.assertIn("../data/library.json", script)
+        self.assertNotIn("museum-manifest", script)
+        for text in (page, script, css):
+            self.assertNotRegex(text, r"https?://")
+        self.assertIn('href="explore.html"', (web / "index.html").read_text(encoding="utf-8"))
+
+
 @unittest.skipUnless((REAL_VAULT / "tools" / "vault_search.py").is_file(), "the creative-writing vault is not beside this tool")
 class RealVault(unittest.TestCase):
     """Read-only: the proposal path on the real vault, for one work of each mode."""
+
+    def test_the_library_lists_the_63_works_and_every_scene_is_one_of_them(self):
+        rels = library.list_works(REAL_VAULT)
+        self.assertEqual(len(rels), 63)
+        self.assertTrue(all(rel.endswith(".md") and not rel.endswith("_index.md") for rel in rels))
+        scenes = build_museum.SCENES
+        if scenes.is_dir():
+            for spec in build_museum.load_specs(scenes):
+                self.assertIn(spec["work"], rels)
 
     def test_a_real_work_proposes_a_valid_style(self):
         for rel in ("03_Stories/06_Melting_Away.md", "11_Essays/02_The_Architecture_of_Being.md",
