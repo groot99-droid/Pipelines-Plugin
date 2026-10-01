@@ -31,7 +31,8 @@
 
   <p class="toc">On this page: <a href="#what">What it is</a> · <a href="#room">How a work becomes a room</a> ·
   <a href="#studio">Made through the studio</a> · <a href="#library">The library</a> ·
-  <a href="#view">Viewing and building</a> · <a href="#limits">What it does not do</a></p>
+  <a href="#online">On the web</a> · <a href="#view">Viewing and building</a> ·
+  <a href="#limits">What it does not do</a></p>
 
   <h2 id="what">What it is</h2>
   <p>It is fashioned after the Chronicle Museum of the author's <code>Earth_Worldbuild</code> repo,
@@ -73,6 +74,17 @@
   passage count, where each value came from, the note that records it, and a door into the 3D
   room. It reads one file, <code>data/library.json</code>, which the build writes beside the
   manifest. Arrow keys move along the shelf; <code>/</code> searches.</p>
+
+  <h2 id="online">On the web</h2>
+  <p>The library and the museum are published to GitHub Pages beside these pages, on every push
+  to <code>main</code>, by <code>.github/workflows/pages.yml</code>:
+  <a href="museum/web/explore.html"><strong>the library</strong></a> and
+  <a href="museum/web/index.html"><strong>the museum</strong></a>. The deploy rebuilds the museum
+  from the vault, so the site follows <code>main</code>: when a <code>scene-3d</code> run's scene is
+  merged, its room and its card are on the site a few minutes later, and a new work in the vault
+  appears on the shelf. Only these pages, the viewer, the library and the museum's data and textures
+  are published. The links above work on the published site, not from a local copy of this
+  folder; locally, use the commands below.</p>
 
   <h2 id="view">Viewing and building</h2>
   <pre><code>python -m http.server 8768 --directory writing-museum     # then open /web/index.html, or /web/explore.html to read

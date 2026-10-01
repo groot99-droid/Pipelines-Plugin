@@ -328,6 +328,13 @@ says how to view and build it); every scene is made through the studio's
 the vault, passage by passage, and look through the rooms, each with its colours,
 its door and where every value came from.
 
+Both are published on GitHub Pages, with the docs pages, on every push to `main`
+(`.github/workflows/pages.yml`): the library at
+<https://groot99-droid.github.io/Pipelines-Plugin/museum/web/explore.html> and the
+museum at <https://groot99-droid.github.io/Pipelines-Plugin/museum/web/index.html>.
+The deploy rebuilds the museum from the vault, so a merged `scene-3d` run's room is
+on the site a few minutes later.
+
 ```powershell
 python -m http.server 8768 --directory writing-museum          # then open /web/index.html, or /web/explore.html to read
 python writing-museum/build/build_museum.py build --lint        # the layout lint

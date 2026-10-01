@@ -1,0 +1,56 @@
+# Publishes the docs pages and the Writing Museum to GitHub Pages on every push to main:
+#   docs/            at the site root (the pages describing each tool; not setup_keys.py or its tests)
+#   writing-museum/  under museum/ (the viewer, the library page, the data and the CC0 textures)
+# The museum is rebuilt from the vault at deploy time, so the library and the rooms on the site
+# follow main: when a scene-3d run's scene is merged, its room is on the site a few minutes later.
+# The site: https://groot99-droid.github.io/Pipelines-Plugin/  (library: museum/web/explore.html)
+name: pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Build the museum from the vault
+        run: python writing-museum/build/build_museum.py build
+      - name: Assemble the site
+        run: |
+          mkdir -p _site/museum
+          cp -r docs/. _site/
+          rm -rf _site/tests _site/__pycache__ _site/*.py
+          cp -r writing-museum/web writing-museum/data writing-museum/assets _site/museum/
+          touch _site/.nojekyll
+          du -sh _site
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
