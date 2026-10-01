@@ -74,7 +74,10 @@ rewrite layer and no image paths; `index.html` and `ui.js` say passage where the
 `build/layout.py` is that museum's `build_layout.py` with the per-room style read from the scene
 spec, no props or models, and a hall whose length follows its door count. `build/works.py` plays
 the part `people_entries.py` plays there. `tools/walk_test.mjs` is that harness, driven by the
-manifest instead of fixed room ids.
+manifest instead of fixed room ids, with two fixes of its own (2026-10-01): the map-click test
+enters the museum before opening the map, since the entry overlay sits above the map, and clicks
+the centre of a door's hit area rather than its first scanned edge point, which the mouse rounds
+off; the placard test ignores the `*` of italics. Both are worth carrying back to that repo.
 
 ## What it does not do
 

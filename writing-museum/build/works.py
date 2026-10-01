@@ -60,12 +60,13 @@ def slug_of(rel_path: str) -> str:
     return s or "work"
 
 
-HEADER_RE = re.compile(r"^\s*(\*\*(Type|Source|Text):\*\*|---\s*$|#\s)")
+HEADER_RE = re.compile(r"^\s*(\*\*[A-Za-z][A-Za-z ]{0,20}:\*\*|---\s*$|#\s)")
 
 
 def is_header_line(line: str) -> bool:
-    """A line of the vault's transcription header: `# Title`, `**Type:**`, `**Source:**`, `**Text:**`,
-    or the `---` rule that closes it. Added by the transcription above each work; not the author's prose."""
+    """A line of the vault's transcription header: `# Title`, a bold label such as `**Type:**`,
+    `**Source:**`, `**Text:**` or `**Note:**`, or the `---` rule that closes it. Added by the
+    transcription above each work; not the author's prose."""
     return bool(HEADER_RE.match(line))
 
 

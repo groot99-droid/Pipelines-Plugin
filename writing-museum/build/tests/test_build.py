@@ -116,6 +116,8 @@ class Adapter(TempVault):
         self.assertTrue(first.startswith("The house had one room"), first[:60])
         self.assertNotIn("**Source:**", first)
         self.assertEqual(works.strip_header("# T\n**Type:** x\n---\nProse here.\n\nMore."), "Prose here.\n\nMore.")
+        self.assertEqual(works.strip_header("**Type:** x\n**Note:** Chapter One: The Dunes.\n\n---\nIntroduction\n\nProse."), "Introduction\n\nProse.")
+        self.assertFalse(works.is_header_line("**Bold** words inside prose are not a label."))
 
     def test_file_lines_point_into_the_file(self):
         w = works.read_work("03_Stories/01_The_Lantern_Room.md", self.vault)

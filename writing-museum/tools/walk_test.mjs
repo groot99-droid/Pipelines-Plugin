@@ -314,7 +314,8 @@ if (N_ROOMS) {
     }, p.id);
     assert(r.ok && r.scene === ROOM_IDS[0], `goToWork: ${JSON.stringify(r)}`);
     assert(r.title === p.title, `title: ${r.title} vs ${p.title}`);
-    assert(r.desc.replace(/\s+/g, '').startsWith(p.text.replace(/\s+/g, '').slice(0, 60)), `the placard shows the passage: ${r.desc.slice(0, 80)}`);
+    const flat = (t) => t.replace(/[\s*]+/g, '');   // the placard renders *italics* as <em>
+    assert(flat(r.desc).startsWith(flat(p.text).slice(0, 60)), `the placard shows the passage: ${r.desc.slice(0, 80)}`);
     assert(r.credit.includes(p.credit.source_path) && r.credit.includes(`lines ${p.credit.lines[0]}`), `citation on the placard: ${r.credit}`);
     assert(r.imageHidden, 'a passage has no image on its placard');
     assert(/panel \d/.test(r.meta), `panel size on the placard: ${r.meta}`);
@@ -401,17 +402,23 @@ if (N_ROOMS) {
     const room = ROOM_IDS[0];
     await c.ev(async () => { await window.museumDebug.enterRoom('hub', { fade: false }); });
     await c.ev(B.settle);
-    await c.ev(() => { window.museumDebug.step(1 / 60, 40); window.museumDebug.hud.openMap(); });
+    // enter first: the entry overlay sits above the map and would take the click (ten doors put the first one under its buttons)
+    await c.ev(() => { const D = window.museumDebug; D.enter({ pointerLock: false }); D.step(1 / 60, 40); D.hud.openMap(); });
+    const under = await c.ev(() => { const el = document.elementFromPoint(640, 360); return el ? `${el.tagName}#${el.id || (el.parentElement && el.parentElement.id)}` : null; });
+    assert(/map-large/.test(under), `the large map should be on top at the screen centre, got ${under}`);
     await c.shot('feature_map_hub');
     const pt = await c.ev((rid) => {
       const D = window.museumDebug;
       const canvas = document.querySelector('#map-large canvas');
       const rect = canvas.getBoundingClientRect();
+      // the centre of the door's hit area, not its first scanned edge point: the mouse lands on whole pixels
+      const pts = [];
       for (let y = 0; y < rect.height; y += 3) for (let x = 0; x < rect.width; x += 3) {
         const h = D.hud.hitAtScreen(rect.left + x, rect.top + y);
-        if (h && h.kind === 'door' && h.id === rid) return { x: rect.left + x, y: rect.top + y };
+        if (h && h.kind === 'door' && h.id === rid) pts.push([rect.left + x, rect.top + y]);
       }
-      return null;
+      if (!pts.length) return null;
+      return { x: Math.round(pts.reduce((a, p) => a + p[0], 0) / pts.length), y: Math.round(pts.reduce((a, p) => a + p[1], 0) / pts.length) };
     }, room);
     assert(pt, `the large map should have a clickable ${room} door`);
     await c.page.mouse.click(pt.x, pt.y);
