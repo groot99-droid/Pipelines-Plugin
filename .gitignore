@@ -99,6 +99,12 @@ embeddings/
 # studio/pipeline/runs/ is already covered by `runs/` above.
 studio/assets/
 
+# ── GitHub Pages staging ─────────────────────────────────────────────────────
+# .github/workflows/pages.yml assembles the site under _site/ on the runner; a
+# local dry run of the same steps lands here too. Remove it before verify.py: the
+# index generator treats every top-level folder as a tool.
+_site/
+
 # ── Writing Museum test output ───────────────────────────────────────────────
 # Screenshots, the contact sheet and report.json of the browser walk-through
 # (node writing-museum/tools/walk_test.mjs). Regenerated on every run.

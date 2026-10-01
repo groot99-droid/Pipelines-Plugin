@@ -58,7 +58,8 @@ plugins/ui-design/   the ui-design plugin: the plugin root, and the whole of wha
   maintenance/       validators, relevance gate, refresh scripts, verify.py
   references/        prose the ui-design-catalog skill reads on demand
   README.md, LICENSE, NOTICE, CHANGELOG.md, .gitignore, .gitattributes
-.github/workflows/   verify.yml: CI for the whole repo (see "Working on the ui-design plugin")
+.github/workflows/   verify.yml: CI for the whole repo (see "Working on the ui-design plugin");
+                     pages.yml: publishes docs/ and the Writing Museum to GitHub Pages from main
 ```
 
 **Paths in the creative-writing and studio skills and agents are relative to this
@@ -203,6 +204,12 @@ panels cited by vault path and lines.
   It reads only `data/library.json`, which `build` writes from the whole vault through
   `build/library.py`. After a vault or scene change, rebuild; the walk test's
   `library_page` case checks the page against that file.
+- **On the web.** `.github/workflows/pages.yml` publishes `docs/` at the site root and
+  this folder's `web/`, `data/` and `assets/` under `museum/` to GitHub Pages on every
+  push to `main`, rebuilding the museum from the vault first. The site is
+  `https://groot99-droid.github.io/Pipelines-Plugin/`; the museum's pages use only
+  relative paths, so they must keep working under that `museum/` prefix. Nothing else
+  in the repo is published by it.
 - Tests: `python -m unittest discover -s writing-museum/build/tests`. They run on a
   temporary vault, and read the real one only to check the ten-work path.
 - It reads `creative-writing/vault/` and never writes it. The 63 works stay verbatim;
