@@ -711,7 +711,8 @@ if (N_ROOMS) {
 
 test('framing_views', async (c) => {
   await c.load('test');
-  const views = ['hub_west', 'hub_rotunda', 'hub_bays', 'hub_east', ...ROOM_IDS.map((r) => `${r}_corner`)];
+  // every room's three fixed views (door, corner, west), as the layout declares them, so all three reach the contact sheet
+  const views = ['hub_west', 'hub_rotunda', 'hub_bays', 'hub_east', ...ROOM_IDS.flatMap((r) => [`${r}_door`, `${r}_corner`, `${r}_west`])];
   for (const v of views) {
     const ok = await c.ev(async (name) => { const D = window.museumDebug; const r = await D.setView(name); await D.scenes.world().whenLoaded(); D.renderOnce(); return r; }, v);
     assert(ok, `unknown view ${v}`);
