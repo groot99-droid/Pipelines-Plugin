@@ -37,10 +37,12 @@ studio/              the studio tool
   assets/            what runs keep, by project, kind and slug. Not versioned
   docs/              what was carried from Creative-Headquarters, and how
 writing-museum/      the Writing Museum: a walkable 3D museum of the creative-writing vault,
-  build/             works.py (a work as passage panels), mapping.json, layout.py,
+  build/             works.py (a work as passage panels), mapping.json, layout.py, library.py,
                      build_museum.py, and their tests
-  data/              scenes/<id>.json (one per scene-3d run) and the built manifest + layout
-  web/, assets/      the viewer (copied from Earth_Worldbuild/_Museum) and its CC0 textures
+  data/              scenes/<id>.json (one per scene-3d run), the built manifest + layout,
+                     and library.json (every work and scene, for the explore page)
+  web/, assets/      the viewer (copied from Earth_Worldbuild/_Museum), the library page
+                     (explore.html, this museum's own) and the CC0 textures
   tools/             walk_test.mjs: the browser walk-through
 docs/                HTML pages describing each tool, and setup_keys.py (a localhost-only
                      helper that saves API keys to ~/.rosw/keys.env)
@@ -194,6 +196,11 @@ panels cited by vault path and lines.
   nothing). Walk it: `node writing-museum/tools/walk_test.mjs` (Playwright and
   Chromium; output under `writing-museum/tools/out/`, git-ignored). View it:
   `python -m http.server 8768 --directory writing-museum`, then `/web/index.html`.
+- **The library** (`web/explore.html`) is the flat page beside the viewer: every work
+  of the vault read passage by passage, and every scene with its colours and sources.
+  It reads only `data/library.json`, which `build` writes from the whole vault through
+  `build/library.py`. After a vault or scene change, rebuild; the walk test's
+  `library_page` case checks the page against that file.
 - Tests: `python -m unittest discover -s writing-museum/build/tests`. They run on a
   temporary vault, and read the real one only to check the ten-work path.
 - It reads `creative-writing/vault/` and never writes it. The 63 works stay verbatim;

@@ -16,7 +16,9 @@ style names things the viewer has, and the room lays out.
 `build` composes every spec under data/scenes/ into data/museum-manifest.json (everything
 textual: the rooms, the wing, the works and their passages) and data/museum-layout.json
 (everything spatial: hub + one scene per work), runs the lint first, and writes nothing on a
-lint failure. `--lint` checks and writes nothing.
+lint failure. It also writes data/library.json (library.py): every work of the vault, with a
+room or without, and every scene, for the explore page (web/explore.html). `--lint` checks and
+writes nothing.
 
 A scene spec:
 
@@ -50,12 +52,14 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import layout  # noqa: E402
+import library  # noqa: E402
 import works  # noqa: E402
 
 TOOL = HERE.parent
 DATA = TOOL / "data"
 SCENES = DATA / "scenes"
 MANIFEST_OUT = DATA / "museum-manifest.json"
+LIBRARY_OUT = DATA / "library.json"
 MAPPING = HERE / "mapping.json"
 WING = {"id": works.WING_ID, "name": "Creative Writing", "image_base": "", "nouns": ["works", "passages"], "years": ""}
 
@@ -207,6 +211,11 @@ def build(scenes_dir: Path = SCENES, out_dir: Path = DATA, lint_only: bool = Fal
     n_panels = sum(len(e["works"]) for e in out["entries"])
     print(f"Wrote {mpath} — {len(out['entries'])} works, {n_panels} passages, {len(out['manifest']['rooms'])} rooms.")
     print(f"Wrote {lpath} — {len(out['layout_result']['layout']['scenes'])} scenes.")
+    lib = library.compose(specs, vault, out)
+    bpath = out_dir / "library.json"
+    bpath.write_text(json.dumps(lib, ensure_ascii=False, indent=1), encoding="utf-8")
+    n_passages = sum(len(w["passages"]) for w in lib["works"])
+    print(f"Wrote {bpath} — {len(lib['works'])} works in {len(lib['folders'])} folders, {n_passages} passages, {len(lib['scenes'])} scenes.")
     return 0
 
 

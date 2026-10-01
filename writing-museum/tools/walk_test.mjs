@@ -732,6 +732,52 @@ test('classic_mode_loads', async (c) => {
   return n;
 });
 
+// ---- the library (web/explore.html): a flat page over data/library.json ------------------------
+test('library_page', async (c) => {
+  const LIBRARY_PATH = path.join(ROOT, 'data', 'library.json');
+  assert(fs.existsSync(LIBRARY_PATH), 'data/library.json must be built (build_museum.py build)');
+  const lib = JSON.parse(fs.readFileSync(LIBRARY_PATH, 'utf-8'));
+  assert(lib.works.length >= N_WORKS && lib.scenes.length === N_ROOMS, `library: ${lib.works.length} works, ${lib.scenes.length} scenes (museum: ${N_WORKS}, ${N_ROOMS})`);
+  if (!c.context) c.context = await c.browser.newContext({ viewport: { width: 1280, height: 720 } });
+  const page = await c.context.newPage();
+  const errors = [];
+  page.on('console', (m) => { const loc = m.location && m.location(); if (m.type() === 'error' && !ignoreConsole(`${m.text()} ${(loc && loc.url) || ''}`)) errors.push(m.text()); });
+  page.on('pageerror', (e) => errors.push(String(e)));
+  const first = lib.works.find((w) => w.scene) || lib.works[0];
+  await page.goto(`${c.base}/web/explore.html?work=${first.slug}`, { waitUntil: 'domcontentloaded' });
+  await page.waitForFunction(() => window.libraryDebug && window.libraryDebug.lib.works.length > 0, null, { timeout: opt.timeout });
+  const r = await page.evaluate(() => ({
+    title: document.querySelector('#reader h1').textContent, passages: document.querySelectorAll('.passage').length,
+    spines: document.querySelectorAll('.spine').length, texts: [...document.querySelectorAll('.passage .text')].map((t) => [...t.querySelectorAll('p')].map((p) => p.textContent).join(' ')),
+    room: !!document.querySelector('.actions a[href^="index.html?room="]'),
+  }));
+  assert(r.title === first.title, `reader title: ${r.title}`);
+  assert(r.passages === first.passages.length && r.spines === lib.works.length, `reader: ${JSON.stringify([r.passages, r.spines])}`);
+  const norm = (t) => t.replace(/\s+/g, ' ').trim();
+  first.passages.forEach((p, i) => assert(norm(r.texts[i]) === norm(p.text), `passage ${p.n} is not shown verbatim`));
+  assert(r.room === !!first.scene, 'a work with a room links to it');
+  await page.fill('#q', first.title.split(' ')[0]);
+  await page.waitForTimeout(250);
+  const found = await page.evaluate(() => window.libraryDebug.filtered());
+  assert(found.includes(first.slug), 'the search finds the work by its title');
+  await page.click('.view-tab[data-view="scenes"]');
+  const sc = await page.evaluate(() => ({ cards: document.querySelectorAll('.scene').length, doors: document.querySelectorAll('.door-hit').length, url: location.search }));
+  assert(sc.cards === N_ROOMS && sc.doors === N_ROOMS, `scenes: ${JSON.stringify(sc)}`);
+  if (N_ROOMS) {
+    const id = ROOM_IDS[ROOM_IDS.length - 1];
+    await page.click(`.door-hit[data-scene="${id}"]`);
+    const marked = await page.evaluate(() => [document.querySelector('.scene.on') && document.querySelector('.scene.on').dataset.scene, location.search]);
+    assert(marked[0] === id && marked[1].includes(`scene=${id}`), `door click: ${JSON.stringify(marked)}`);
+    const walk = await page.evaluate(() => document.querySelector('.scene.on a[href^="index.html?room="]').getAttribute('href'));
+    assert(walk === `index.html?room=${id}`, `walk link: ${walk}`);
+  }
+  if (opt.shots) { const file = path.join(opt.out, 'library_scenes.png'); await page.screenshot({ path: file }); shots.push(file); }
+  assert(errors.length === 0, `console errors: ${errors.join(' | ')}`);
+  const link = await c.ev(() => document.getElementById('link-library') && document.getElementById('link-library').getAttribute('href')).catch(() => null);
+  await page.close();
+  return { work: first.slug, passages: r.passages, scenes: sc.cards, viewerLink: link };
+});
+
 test('no_console_errors', async (c) => {
   await c.load('test');
   assert(c.errors.length === 0, `console errors on the last page: ${c.errors.join(' | ')}`);

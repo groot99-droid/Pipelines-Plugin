@@ -46,6 +46,8 @@ canvas { display: block; }
 }
 #instructions p { margin: 0.4rem 0; }
 #instructions .hint { color: #b9ac8f; font-size: 0.9rem; margin-top: 1rem; }
+#instructions .library-link { color: #b9ac8f; font-size: 0.9rem; margin-top: 0.8rem; }
+#instructions .library-link a { color: var(--gold); }
 
 #crosshair {
   position: fixed;

@@ -30,8 +30,8 @@
   </section>
 
   <p class="toc">On this page: <a href="#what">What it is</a> · <a href="#room">How a work becomes a room</a> ·
-  <a href="#studio">Made through the studio</a> · <a href="#view">Viewing and building</a> ·
-  <a href="#limits">What it does not do</a></p>
+  <a href="#studio">Made through the studio</a> · <a href="#library">The library</a> ·
+  <a href="#view">Viewing and building</a> · <a href="#limits">What it does not do</a></p>
 
   <h2 id="what">What it is</h2>
   <p>It is fashioned after the Chronicle Museum of the author's <code>Earth_Worldbuild</code> repo,
@@ -62,10 +62,22 @@
   record leaves a note at <code>studio/vault/&lt;project&gt;/3d/&lt;id&gt;.md</code>. The notes are
   the point: a later 3D run recalls their decisions, and derives from them once there are three.</p>
 
+  <h2 id="library">The library</h2>
+  <p>Beside the 3D viewer is a flat page, <code>web/explore.html</code>, for reading and looking
+  without walking. <strong>Works</strong> is a shelf of all 63 works in the vault's own folders,
+  with a search over titles, themes and the text itself, and a reader that shows the chosen work's
+  passages verbatim, each cited to its file lines and carrying its chunk tags, under the work's
+  frontmatter and the one-line blurb its folder index gives it. A work with a room links to it;
+  one without says so. <strong>Scenes</strong> is the hall as a plan, a door for every room, and
+  one card per room: its wall, light, floor, trim, frames and door theme, the room's size and
+  passage count, where each value came from, the note that records it, and a door into the 3D
+  room. It reads one file, <code>data/library.json</code>, which the build writes beside the
+  manifest. Arrow keys move along the shelf; <code>/</code> searches.</p>
+
   <h2 id="view">Viewing and building</h2>
-  <pre><code>python -m http.server 8768 --directory writing-museum     # then open /web/index.html
+  <pre><code>python -m http.server 8768 --directory writing-museum     # then open /web/index.html, or /web/explore.html to read
 python writing-museum/build/build_museum.py build --lint   # the layout lint
-python writing-museum/build/build_museum.py build          # write the manifest and the layout
+python writing-museum/build/build_museum.py build          # write the manifest, the layout and the library
 node writing-museum/tools/walk_test.mjs                    # the browser walk-through
 python -m unittest discover -s writing-museum/build/tests  # the builder's tests</code></pre>
   <p>The walk test needs Node, Playwright and Chromium; the build needs only Python.</p>

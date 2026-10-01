@@ -27,6 +27,24 @@ panel, `Space` `N` `P` drive the tour, `Esc` closes things; touch and a standard
 `?room=<id>`, `?work=<panel-id>`, `?resume=1`, `?classic`, `?view=<name>`, `?debug` and `?test` are
 the Chronicle Museum's URL flags and mean the same here.
 
+## The library
+
+`web/explore.html` is the flat side of the museum: a page to read through the works and look
+through the scenes without walking. The **Works** view is a shelf of all 63 works, in the vault's
+own folders, with a search over titles, themes and the text, a mode and folder filter, and a
+reader that shows the chosen work's frontmatter, the blurb its folder's `_index.md` gives it, and
+its passages, verbatim, cut as the vault's search tool cuts them, each cited to its file lines and
+carrying its chunk tags. A work with a room links to it (`index.html?room=<id>`); one without says
+so. The **Scenes** view is the hall as a plan with a door for every room, and one card per room:
+its wall, light, floor, trim, frames and door theme, the room's size and passage count, where
+each value came from (the scene spec's `sources`), the note that records it, and a door into the
+3D room. `←` `→` move along the shelf; `/` searches.
+
+It reads one file, `data/library.json`, which `build_museum.py build` writes beside the manifest
+(`build/library.py`): every work of the vault, with a room or without, and every scene spec with
+the panel count and room size the build gave it. `explore.html?work=<slug>` opens a work;
+`explore.html?view=scenes&scene=<id>` finds a room. The page remembers the last work read.
+
 Three.js r160 is vendored in `web/vendor/three/` (MIT). The textures and the sky are CC0
 (`assets/CREDITS.md`). There are no sculptures: `assets/models.json` is an empty catalog.
 
@@ -44,6 +62,7 @@ data/scenes/<id>.json               one scene spec per work, written by a studio
         ▼
 data/museum-manifest.json           everything textual: rooms, the wing, works, passages, credits
 data/museum-layout.json             everything spatial: boxes, mouldings, doors, hangs, frames, fixtures, views
+data/library.json                   every work of the vault and every scene, for web/explore.html (build/library.py)
         ▼
 web/js/*                            the Chronicle Museum viewer; procroom.js draws a text panel
                                     into a CanvasTexture when a hang's work carries `text`
@@ -70,7 +89,10 @@ run's own record of where each value came from (the builder ignores it).
 
 `web/` is the Chronicle Museum viewer, copied on 2026-09-30, with these changes: `procroom.js`
 draws text panels; `interactions.js` shows a passage and its citation on the placard, has no
-rewrite layer and no image paths; `index.html` and `ui.js` say passage where they said painting.
+rewrite layer and no image paths; `index.html` and `ui.js` say passage where they said painting;
+`index.html` links the library from the entry overlay, and `main.js` lets a click on that link
+through instead of entering the museum (2026-10-01). `explore.html`, `css/explore.css` and
+`js/explore.js` are this museum's own, not copied.
 `build/layout.py` is that museum's `build_layout.py` with the per-room style read from the scene
 spec, no props or models, and a hall whose length follows its door count. `build/works.py` plays
 the part `people_entries.py` plays there. `tools/walk_test.mjs` is that harness, driven by the
