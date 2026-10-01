@@ -14,6 +14,9 @@ pipeline does.
     GET  /api/gates         each gate in the spec: authored, answers, unresolved
     GET  /api/pipelines     each pipeline: status, kind, what it makes
     GET  /api/writing       the creative-writing index's files and kinds, titles only
+    GET  /api/museum        where the Writing Museum's own server is expected (--museum-port,
+                            default 8768): its url, the command that starts it, and whether
+                            its library has been built. The hub never serves the museum.
     GET  /api/tokens        tokens.json, so the page's stylesheet can take its values
     POST /api/runs          {"pipeline": ..., "title": ...} -> a new run, through the bookkeeper
 
@@ -45,6 +48,7 @@ from studio_common import Env, Refused, Usage, read_text  # noqa: E402
 
 HOST = "127.0.0.1"
 DEFAULT_PORT = 8765
+DEFAULT_MUSEUM_PORT = 8768   # python -m http.server 8768 --directory writing-museum
 MARK = "ROSW studio hub"  # the launcher looks for this in / to recognise a running hub
 
 
@@ -99,6 +103,22 @@ def writing_view(repo):
     return {"built": index.get("built"), "files": sorted(seen.values(), key=lambda f: f["file"])}
 
 
+def museum_view(repo, museum_port):
+    """Where the Writing Museum is served from, when it is: a link, never a proxy. The
+    museum has its own server over its own folder, and the library page beside its
+    viewer reads the vault's works; the hub only points at it and says whether the
+    library file exists. Nothing under writing-museum/ is read here."""
+    url = f"http://{HOST}:{museum_port}/"
+    return {
+        "url": url,
+        "library": url + "web/explore.html",
+        "viewer": url + "web/index.html",
+        "command": f"python -m http.server {museum_port} --bind {HOST} --directory writing-museum",
+        "built": (repo / "writing-museum" / "data" / "library.json").is_file(),
+        "build": "python writing-museum/build/build_museum.py build",
+    }
+
+
 def new_run(env, body):
     """A run through the bookkeeper's own command. Returns the summary and the
     skill invocation to paste into a Claude Code session."""
@@ -126,10 +146,11 @@ def new_run(env, body):
 class Handler(SimpleHTTPRequestHandler):
     server_version = "rosw-hub/1"
 
-    def __init__(self, *args, env=None, repo=None, index_path=None, **kwargs):
+    def __init__(self, *args, env=None, repo=None, index_path=None, museum_port=DEFAULT_MUSEUM_PORT, **kwargs):
         self.env = env
         self.repo = repo
         self.index_path = index_path
+        self.museum_port = museum_port
         super().__init__(*args, directory=str(HERE), **kwargs)
 
     # ── static files: this folder only ───────────────────────────────────
@@ -186,6 +207,8 @@ class Handler(SimpleHTTPRequestHandler):
                 return self.send_json(pipelines_view(self.env))
             if route == "writing":
                 return self.send_json(writing_view(self.repo))
+            if route == "museum":
+                return self.send_json(museum_view(self.repo, self.museum_port))
             if route == "tokens":
                 return self.send_json(json.loads(read_text(self.env.context / self.env.spec["tokens"]["file"])))
             if route == "mark":
@@ -210,10 +233,10 @@ class Handler(SimpleHTTPRequestHandler):
             return self.send_json({"error": str(problem)}, HTTPStatus.BAD_REQUEST)
 
 
-def make_server(port=DEFAULT_PORT, env=None, repo=REPO, index_path=None, quiet=False):
+def make_server(port=DEFAULT_PORT, env=None, repo=REPO, index_path=None, quiet=False, museum_port=DEFAULT_MUSEUM_PORT):
     env = env or Env()
     index_path = Path(index_path) if index_path else vault_index.DEFAULT_INDEX
-    handler = partial(Handler, env=env, repo=Path(repo), index_path=index_path)
+    handler = partial(Handler, env=env, repo=Path(repo), index_path=index_path, museum_port=int(museum_port))
     server = ThreadingHTTPServer((HOST, port), handler)
     server.quiet = quiet
     return server
@@ -223,10 +246,12 @@ def main(argv=None):
     parser = argparse.ArgumentParser(prog="serve.py", description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--port", type=int, default=DEFAULT_PORT)
+    parser.add_argument("--museum-port", type=int, default=DEFAULT_MUSEUM_PORT,
+                        help="where the Writing Museum's own server is expected (the hub links to it, never serves it)")
     parser.add_argument("--quiet", action="store_true")
     args = parser.parse_args(argv)
     try:
-        server = make_server(args.port, quiet=args.quiet)
+        server = make_server(args.port, quiet=args.quiet, museum_port=args.museum_port)
     except OSError as problem:
         print(f"error     cannot bind {HOST}:{args.port}: {problem}", file=sys.stderr)
         return 2
