@@ -1,0 +1,151 @@
+/* The hub's stylesheet. Every colour, size, font and radius is a custom
+   property that app.js sets from tokens.json (a.b.c -> --a-b-c). No literal
+   value appears here: a test refuses one. Layout widths use ch, %, fr, vh. */
+
+:root { color-scheme: dark; }
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--color-bg-base);
+  color: var(--color-ink-base);
+  font-family: var(--font-mono-stack);
+  font-weight: var(--font-mono-weight);
+  font-size: var(--type-scale-base);
+  line-height: 1.5;
+}
+
+a { color: var(--color-accent-cyan); }
+code, pre { font-family: var(--font-mono-stack); }
+pre {
+  background: var(--color-bg-panel);
+  border: var(--border-hairline);
+  padding: var(--space-2);
+  overflow: auto;
+}
+em { color: var(--color-ink-dim); font-style: normal; }
+
+:focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-offset); }
+
+/* header */
+.top {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--space-3);
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: var(--border-heavy);
+  background: var(--color-bg-raise);
+}
+.mark {
+  font-weight: var(--font-display-weight);
+  font-size: var(--type-scale-lg);
+  letter-spacing: var(--type-scale-tracking-brand);
+  text-transform: uppercase;
+}
+.tabs { display: flex; gap: var(--space-1); flex-wrap: wrap; }
+.tab, .button {
+  background: var(--color-bg-base);
+  color: var(--color-ink-base);
+  border: var(--border-hairline);
+  border-radius: var(--radius-chip);
+  padding: var(--space-1) var(--space-2);
+  font: inherit;
+  font-size: var(--type-scale-sm);
+  letter-spacing: var(--type-scale-tracking-label);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.tab.on, .button:hover {
+  background: var(--color-accent-cyan);
+  color: var(--color-bg-base);
+  border-color: var(--color-accent-cyan);
+}
+.status { font-size: var(--type-scale-sm); color: var(--color-ink-dim); }
+
+/* views */
+main { padding: var(--space-3); max-width: 160ch; margin: 0 auto; }
+.toolbar { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3); }
+input, select {
+  background: var(--color-bg-panel);
+  color: var(--color-ink-base);
+  border: var(--border-hairline);
+  border-radius: var(--radius-chip);
+  padding: var(--space-1) var(--space-2);
+  font: inherit;
+  min-width: 24ch;
+}
+.hint, .meta, .empty { color: var(--color-ink-dim); font-size: var(--type-scale-sm); }
+.empty { padding: var(--space-3) 0; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(38ch, 1fr));
+  gap: var(--space-3);
+}
+.card {
+  background: var(--color-bg-panel);
+  border: var(--border-hairline);
+  border-radius: var(--radius-panel);
+  padding: var(--space-3);
+  border-left: var(--border-heavy);
+}
+.card header { display: flex; gap: var(--space-2); align-items: baseline; flex-wrap: wrap; }
+.card h3 {
+  margin: 0;
+  flex: 1;
+  font-size: var(--type-scale-md);
+  font-weight: var(--font-display-weight);
+  letter-spacing: var(--type-scale-tracking-display);
+}
+.card p { margin: var(--space-2) 0 0; }
+.pill {
+  font-size: var(--type-scale-xs);
+  letter-spacing: var(--type-scale-tracking-label);
+  text-transform: uppercase;
+  border: var(--border-hairline);
+  border-radius: var(--radius-pill);
+  padding: 0 var(--space-1);
+  color: var(--color-ink-dim);
+}
+.step { color: var(--color-accent-amber); }
+
+/* state carried by a line in the accent, as the elevation model says */
+.s-blocked { border-left-color: var(--color-accent-alert); }
+.s-blocked .pill.state { color: var(--color-accent-alert); border-color: var(--color-accent-alert); }
+.s-in-progress, .s-active { border-left-color: var(--color-accent-cyan); }
+.s-in-progress .pill.state, .s-active .pill.state { color: var(--color-accent-cyan); border-color: var(--color-accent-cyan); }
+.s-complete { border-left-color: var(--color-accent-cyan); }
+.s-parked { border-left-color: var(--color-accent-amber); }
+.s-seed, .s-archived { border-left-color: var(--color-accent-queued); }
+.s-seed .pill.state { color: var(--color-accent-queued); border-color: var(--color-accent-queued); }
+
+.hits { margin-bottom: var(--space-3); border: var(--border-hairline); background: var(--color-bg-raise); }
+.hit { padding: var(--space-2); border-bottom: var(--border-hairline); }
+.hit:last-child { border-bottom: 0; }
+.score { color: var(--color-accent-cyan); }
+
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td {
+  text-align: left;
+  vertical-align: top;
+  padding: var(--space-1) var(--space-2);
+  border-bottom: var(--border-hairline);
+}
+.table th {
+  font-size: var(--type-scale-xs);
+  letter-spacing: var(--type-scale-tracking-label);
+  text-transform: uppercase;
+  color: var(--color-ink-dim);
+}
+tr.s-parked td:first-child { color: var(--color-accent-amber); }
+tr.s-blocked td:first-child { color: var(--color-accent-alert); }
+tr.s-complete td:first-child { color: var(--color-accent-cyan); }
+
+.form { display: grid; gap: var(--space-2); max-width: 72ch; }
+.form label { display: grid; gap: var(--space-1); font-size: var(--type-scale-sm); color: var(--color-ink-dim); }
+.result { margin-top: var(--space-3); border: var(--border-hairline); padding: var(--space-3); background: var(--color-bg-panel); }
+.frame { width: 100%; height: 80vh; border: var(--border-hairline); background: var(--color-bg-panel); }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none; animation: none; } }

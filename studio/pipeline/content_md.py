@@ -29,6 +29,12 @@ Once a run's context is attested, every write owes what the attestation found:
 each derived constraint as a PROVISIONAL decision, each stated one as STATED
 with its date, each on a line of its own.
 
+An artifact listed under `artifacts` is a file under studio/assets/, named
+by its path relative to that folder, with a role the spec allows. It got there
+through `studio_run.py keep`, and a record write lists every file the run
+kept. A missing file is a warning in `lint` (the assets are not versioned) and
+a refusal in a record write.
+
 What the lint catches in a link or a credential is a list of known shapes:
 signed query parameters, the share links of a few hosts, and a few key
 prefixes. A shape it does not know passes.
@@ -47,7 +53,7 @@ from urllib.parse import unquote_plus
 
 from studio_common import (
     EXIT_OK, EXIT_REFUSED, EXIT_USAGE, SPEC_PATH, Env, Refused, Usage,
-    bullets, cited_notes, current_stage, decisions, latest_confirmation, load_state, load_yaml,
+    artifact_path, artifact_roles, bullets, cited_notes, current_stage, decisions, latest_confirmation, load_state, load_yaml,
     log_event, normalize, note_index, notes_cited, now, open_console, outside_fences, read_text,
     resolve_note, save_state, scan, sections, split_note, squeeze, stamp, unstruck, vault_notes,
     warn, write_text,
@@ -289,6 +295,9 @@ def lint(text, env, relative=None):
     for name in lists["pipelines"]:
         if isinstance(name, str) and name not in env.spec["pipelines"]:
             warnings.append(f"`pipelines` names `{name}`, which is not in the spec")
+    more, notes = artifact_errors(env, lists["artifacts"])
+    errors += more
+    warnings += notes
 
     errors += body_shape_errors(body)
 
@@ -387,6 +396,33 @@ def lint(text, env, relative=None):
 
 
 # ── what a write owes ────────────────────────────────────────────────────────
+
+def artifact_errors(env, artifacts, must_exist=False):
+    """(errors, warnings) for the `artifacts` list: each entry a path under
+    the assets folder and a role the spec allows. A file that is not there is
+    a warning, or an error when `must_exist`."""
+    errors, warnings = [], []
+    roles = artifact_roles(env)
+    seen = set()
+    for entry in artifacts:
+        if not isinstance(entry, dict) or set(entry) - {"path", "role"} or "path" not in entry:
+            errors.append("each artifact is `- path: ...` and `role: ...`, and nothing else")
+            continue
+        target, problem = artifact_path(env, entry.get("path"))
+        if problem:
+            errors.append(problem)
+            continue
+        if entry.get("role") not in roles:
+            errors.append(f"artifact `{entry['path']}` has role `{entry.get('role')}`. "
+                          f"It is one of: {', '.join(roles)}")
+        if entry["path"] in seen:
+            errors.append(f"artifact `{entry['path']}` is listed twice")
+        seen.add(entry["path"])
+        if not target.is_file():
+            (errors if must_exist else warnings).append(
+                f"artifact `{entry['path']}` is not under the assets folder ({env.assets})")
+    return errors, warnings
+
 
 def digest(text):
     return hashlib.sha256(normalize(text).encode("utf-8")).hexdigest()
@@ -560,6 +596,19 @@ def purpose_errors(env, state, purpose, proposed):
         if not names(lead, state["run_id"]) or not names(lead, stage["id"]):
             errors.append("the first item under Next Steps must name the run and the stage to "
                           f"resume: `{state['run_id']}` at {stage['id']}")
+
+    if purpose == "record":
+        listed = front.get("artifacts") if isinstance(front.get("artifacts"), list) else []
+        more, _ = artifact_errors(env, listed, must_exist=True)
+        errors += more
+        by_path = {e["path"]: e.get("role") for e in listed if isinstance(e, dict) and "path" in e}
+        for kept in state.get("kept", []):
+            if kept["path"] not in by_path:
+                errors.append(f"the run kept `{kept['path']}` and the note does not list it under "
+                              "`artifacts`. Every kept file is recorded, or it is not kept.")
+            elif by_path[kept["path"]] != kept["role"]:
+                errors.append(f"`{kept['path']}` was kept as `{kept['role']}`, and the note says "
+                              f"`{by_path[kept['path']]}`")
 
     more, notes = owed_errors(env, state, front, proposed)
     return errors + more, warnings + notes
@@ -791,6 +840,7 @@ def build_parser():
     parser.add_argument("--runs-dir", help="where runs are kept (default: from the spec)")
     parser.add_argument("--vault-dir", help="the vault (default: from the spec)")
     parser.add_argument("--context-dir", help="the brand gates (default: from the spec)")
+    parser.add_argument("--assets-dir", help="where kept artifacts go (default: from the spec)")
     commands = parser.add_subparsers(dest="command", required=True)
 
     lint_ = commands.add_parser("lint", help="check notes against SCHEMA.md")
@@ -819,7 +869,7 @@ def main(argv=None):
         print("error     give a path, or --all", file=sys.stderr)
         return EXIT_USAGE
     try:
-        env = Env(args.spec, args.runs_dir, args.vault_dir, args.context_dir)
+        env = Env(args.spec, args.runs_dir, args.vault_dir, args.context_dir, args.assets_dir)
         return args.run(env, args)
     except Refused as refusal:
         print(f"REFUSED   {refusal}", file=sys.stderr)

@@ -279,11 +279,22 @@ is made before every constraint it needs has been resolved and its source shown;
 a constraint that cannot be sourced is asked for, never guessed.
 
 Nine pipelines are declared in
-[`studio/pipeline/spec.yaml`](studio/pipeline/spec.yaml) and three are implemented:
-`ui-direction`, which runs the ui-design catalog under the studio's brand gates,
-`brand-gate`, which writes a brand gate from an interview with the author, and
-`scene-3d`, which builds one room of the Writing Museum for a work the author
-names. The rest are entries that say what each needs and do not start.
+[`studio/pipeline/spec.yaml`](studio/pipeline/spec.yaml) and eight are
+implemented: `ui-direction`, which runs the ui-design catalog under the studio's
+brand gates; `brand-gate`, which writes a brand gate from an interview with the
+author; `still-image`, `video-shot` and `music-cue`, through the Higgsfield
+connector; `edit-2d`, through the Adobe connector; `scene-3d`, which builds one room of the
+Writing Museum for a work the author names; and `scene-blender`, through the
+Blender scene connector. Each names the connector tools it may call, spends
+nothing before the execute go-ahead, and keeps what the author keeps under
+`studio/assets/`. `ui-build` and `brush` are entries that say what each needs;
+`brush` has its packer (`studio/pipeline/brush_pack.py`) and waits for the
+designer app.
+
+The hub, [`studio/hub`](studio/hub), is a local page over the vault's notes, the
+runs and the gates: `python studio/hub/serve.py`, then open
+`http://127.0.0.1:8765/`. On Windows, `studio/hub/launcher/Install-Shortcut.ps1`
+puts a shortcut on the Desktop and in the Start Menu.
 
 It carries the ideas of Creative-Headquarters into this repo.
 [`studio/docs/INVENTORY.md`](studio/docs/INVENTORY.md) is what that repo

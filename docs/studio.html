@@ -80,7 +80,7 @@
   Parking is a correct result, not a failure.</p>
 
   <h2 id="pipelines">Pipelines</h2>
-  <p>Nine are declared in <code>studio/pipeline/spec.yaml</code>, and three are implemented. A pipeline
+  <p>Ten are declared in <code>studio/pipeline/spec.yaml</code>, and eight are implemented. A pipeline
   that is not implemented is a real entry, saying what it needs and what is open, but it does not start.</p>
   <div class="table-wrap"><table>
     <thead><tr><th>Pipeline</th><th>Makes</th><th>Status</th></tr></thead>
@@ -88,9 +88,11 @@
       <tr><td><code>ui-direction</code></td><td>A design direction for a surface or product, using the <a href="ui-design.html">UI design plugin</a> under the studio's brand gates</td><td><strong>implemented</strong></td></tr>
       <tr><td><code>ui-build</code></td><td>Markup and CSS in which every value is a token</td><td>not yet</td></tr>
       <tr><td><code>brand-gate</code></td><td>One brand gate, transcribed from an interview with the author</td><td><strong>implemented</strong></td></tr>
-      <tr><td><code>brush</code></td><td>A brush and an importable file</td><td>not yet</td></tr>
+      <tr><td><code>brush</code></td><td>A brush and a Procreate file, through the designer and <code>brush_pack.py</code></td><td>packer built; the app is still to be copied in</td></tr>
+      <tr><td><code>still-image</code>, <code>video-shot</code>, <code>music-cue</code></td><td>Through the Higgsfield connector; each spends credits after the execute go-ahead</td><td>implemented</td></tr>
+      <tr><td><code>edit-2d</code></td><td>Copies of existing images, through the Adobe connector</td><td>implemented</td></tr>
       <tr><td><code>scene-3d</code></td><td>One walkable room of the <a href="writing-museum.html">Writing Museum</a> for a work the author names: its passages hung as verbatim panels, built and walked in a headless browser</td><td><strong>implemented</strong></td></tr>
-      <tr><td><code>still-image</code>, <code>video-shot</code>, <code>music-cue</code>, <code>edit-2d</code></td><td>Through connectors</td><td>not yet</td></tr>
+      <tr><td><code>scene-blender</code></td><td>Through the Blender scene connector; a local Blender when the compute gate allows it</td><td>implemented (cloud branch)</td></tr>
     </tbody>
   </table></div>
 
