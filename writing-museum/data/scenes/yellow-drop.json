@@ -1,0 +1,31 @@
+{
+  "id": "yellow-drop",
+  "order": 7,
+  "work": "03_Stories/03_The_Yellow_Drop_and_The_Plain_Before_Sound.md",
+  "name": "The Yellow Drop and The Plain Before Sound",
+  "hub_side": "S",
+  "panels": "all",
+  "min_w": 10,
+  "min_d": 8,
+  "style": {
+    "theme": "post-lintel-timber",
+    "frame": "dark-wood",
+    "frame_small": "thin-metal",
+    "wall": "#34486a",
+    "light": {
+      "color": "#fff1dc",
+      "intensity": 210
+    },
+    "floor": "stone",
+    "trim": "stone"
+  },
+  "sources": {
+    "theme": "mapping.json mode.unclassified (frontmatter mode: unclassified)",
+    "frame": "mapping.json mode.unclassified (frontmatter mode: unclassified)",
+    "frame_small": "mapping.json mode.unclassified (frontmatter mode: unclassified)",
+    "wall": "mapping.json mood.wonder (mood_tag in 3 of 3 chunks)",
+    "light": "mapping.json mood.wonder (mood_tag in 3 of 3 chunks)",
+    "floor": "mapping.json motif.threshold (motif_tag in 2 of 3 chunks)",
+    "trim": "mapping.json motif.threshold (motif_tag in 2 of 3 chunks)"
+  }
+}

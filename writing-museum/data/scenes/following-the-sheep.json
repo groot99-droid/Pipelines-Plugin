@@ -1,0 +1,31 @@
+{
+  "id": "following-the-sheep",
+  "order": 6,
+  "work": "03_Stories/08_Following_The_Sheep.md",
+  "name": "Following The Sheep",
+  "hub_side": "N",
+  "panels": "all",
+  "min_w": 10,
+  "min_d": 8,
+  "style": {
+    "theme": "cast-iron-glass",
+    "frame": "black-lacquer",
+    "frame_small": "thin-metal",
+    "wall": "#2f2224",
+    "light": {
+      "color": "#ffb070",
+      "intensity": 110
+    },
+    "floor": "dark_wood",
+    "trim": "painted_trim"
+  },
+  "sources": {
+    "theme": "mapping.json mode.horror-prose (frontmatter mode: horror-prose)",
+    "frame": "mapping.json mode.horror-prose (frontmatter mode: horror-prose)",
+    "frame_small": "mapping.json mode.horror-prose (frontmatter mode: horror-prose)",
+    "wall": "mapping.json mood.dread (mood_tag in 4 of 5 chunks)",
+    "light": "mapping.json mood.dread (mood_tag in 4 of 5 chunks)",
+    "floor": "mapping.json motif.hands-and-grip (motif_tag in 3 of 5 chunks)",
+    "trim": "mapping.json motif.hands-and-grip (motif_tag in 3 of 5 chunks)"
+  }
+}

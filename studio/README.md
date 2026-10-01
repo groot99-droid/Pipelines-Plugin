@@ -72,7 +72,7 @@ writes the reason into the note. It does not guess.
 
 ## Pipelines
 
-Nine are declared in `spec.yaml`. Seven are implemented.
+Ten are declared in `spec.yaml`. Eight are implemented.
 
 | Pipeline | Makes | Status |
 |---|---|---|
@@ -82,7 +82,8 @@ Nine are declared in `spec.yaml`. Seven are implemented.
 | `brush` | a brush and a Procreate file, through the designer and `brush_pack.py` | packer built; the app is still to be copied in |
 | `still-image`, `video-shot`, `music-cue` | through the Higgsfield connector; each spends credits after the execute go-ahead | implemented |
 | `edit-2d` | copies of existing images, through the Adobe connector | implemented |
-| `scene-3d` | through the Blender scene connector; a local Blender when the compute gate allows it | implemented (cloud branch) |
+| `scene-3d` | one walkable room of the Writing Museum (`writing-museum/`) for a work the author names, built and walked locally; execute holds a `museum_walk` compute token | implemented |
+| `scene-blender` | through the Blender scene connector; a local Blender when the compute gate allows it | implemented (cloud branch) |
 
 A pipeline that is not implemented is a real entry: what it needs, what it
 carries from the skill it replaces, and what is still open. It does not start.

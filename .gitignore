@@ -75,6 +75,9 @@ captures/
 *.zip
 dist/
 build/
+# Not artifacts: the Writing Museum's builder and the vendored three.js build.
+!writing-museum/build/
+!writing-museum/web/vendor/three/build/
 
 # ── Local AI / embedding caches ──────────────────────────────────────────────
 # rag_index/index.json is a TF-IDF index of the whole vault, rebuilt with
@@ -95,6 +98,11 @@ embeddings/
 # record of how; the files themselves are large and are not versioned here.
 # studio/pipeline/runs/ is already covered by `runs/` above.
 studio/assets/
+
+# ── Writing Museum test output ───────────────────────────────────────────────
+# Screenshots, the contact sheet and report.json of the browser walk-through
+# (node writing-museum/tools/walk_test.mjs). Regenerated on every run.
+writing-museum/tools/out/
 
 # ── Obsidian machine-local state ─────────────────────────────────────────────
 # The first block covers a vault opened at the repo root. The second covers

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>The Writing Museum</title>
+<link rel="stylesheet" href="css/museum.css" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three/build/three.module.js",
+    "three/addons/": "./vendor/three/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="blocker">
+    <div id="instructions">
+      <h1>The Writing Museum</h1>
+      <p id="blocker-subtitle">Creative Writing</p>
+      <p class="intro-hall">A hall with a door to every work. Behind each door, one room shaped by that work: its passages hang on the walls as panels, verbatim, and the room's look follows the work's own mode, moods and motifs.</p>
+      <p class="intro-voice">Every panel is the author's own text, cited to its vault path and lines. Each room was made through the studio pipeline and has a note that says how.</p>
+      <div id="blocker-actions">
+        <button type="button" id="btn-explore" class="primary">Explore</button>
+        <button type="button" id="btn-tour">Start guided tour</button>
+        <select id="tour-wing" aria-label="Tour which wing"></select>
+        <button type="button" id="btn-resume" hidden>Resume last visit</button>
+      </div>
+      <p class="hint">WASD / arrows to walk &middot; mouse to look &middot; click a door to go through it &middot; click a panel or press E to read<br>M map &middot; Tab go to &middot; ? help<br>Xbox / standard controller: A to start, left stick walk, right stick look</p>
+    </div>
+  </div>
+
+  <div id="crosshair"></div>
+  <div id="look-prompt" hidden></div>
+
+  <div id="placard" class="hidden">
+    <button id="placard-close" aria-label="Close">&times;</button>
+    <div id="placard-image-wrap"><img id="placard-image" src="" alt="" /></div>
+    <div id="placard-body">
+      <h2 id="placard-title"></h2>
+      <p id="placard-meta"></p>
+      <p id="placard-artist"></p>
+      <p id="placard-description"></p>
+      <p id="placard-voice" hidden></p>
+      <p id="placard-credit"></p>
+      <div id="placard-nav">
+        <button type="button" id="placard-prev">&larr; Previous work</button>
+        <button type="button" id="placard-next">Next work &rarr;</button>
+      </div>
+      <div id="suggested-wrap">
+        <h3>Suggested next</h3>
+        <div id="suggested-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="room-label"></div>
+  <div id="title-card" hidden><h2></h2><p class="years"></p><p class="summary"></p></div>
+  <div id="fade"></div>
+  <div id="loading">Loading the museum&hellip;</div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

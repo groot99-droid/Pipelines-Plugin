@@ -53,6 +53,18 @@ classes:
     thermal.cpu_temp_c_max: 80
     thermal.cpu_perf_pct_min: 85
     disk.free_gb_min: 20
+  museum_walk:
+    # Proposed with the scene-3d pipeline (2026-10-01): one Writing Museum
+    # build (stdlib Python) and one headless-Chromium walk of about a minute.
+    # The thresholds are a guess at the lightest class; the author sets them.
+    describes: "one Writing Museum build and one headless browser walk test"
+    memory.available_gb_min: 3
+    memory.free_pct_min: 20
+    memory.swap_used_mb_max: 6144
+    power.source_in: [ac, battery]
+    thermal.cpu_temp_c_max: 90
+    thermal.cpu_perf_pct_min: 65
+    disk.free_gb_min: 2
   batch_2d:
     describes: "a batch of image edits run locally"
     memory.available_gb_min: 5

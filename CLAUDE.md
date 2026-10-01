@@ -36,6 +36,12 @@ studio/              the studio tool
                      the Windows launcher, and (once copied in) the brush designer
   assets/            what runs keep, by project, kind and slug. Not versioned
   docs/              what was carried from Creative-Headquarters, and how
+writing-museum/      the Writing Museum: a walkable 3D museum of the creative-writing vault,
+  build/             works.py (a work as passage panels), mapping.json, layout.py,
+                     build_museum.py, and their tests
+  data/              scenes/<id>.json (one per scene-3d run) and the built manifest + layout
+  web/, assets/      the viewer (copied from Earth_Worldbuild/_Museum) and its CC0 textures
+  tools/             walk_test.mjs: the browser walk-through
 docs/                HTML pages describing each tool, and setup_keys.py (a localhost-only
                      helper that saves API keys to ~/.rosw/keys.env)
 .claude-plugin/      marketplace.json: installs plugins/ui-design from this repo
@@ -117,7 +123,8 @@ running or changing a pipeline. `studio/pipeline/spec.yaml` is its
 machine-readable form and points back to it.
 
 Do not duplicate its rules here. The two vaults are separate: nothing in the
-studio reads or writes `creative-writing/vault/`.
+studio writes `creative-writing/vault/`, and nothing reads it except the one work
+the author names at a `scene-3d` intake, through `writing-museum/build/`.
 
 ## Working on the studio tool
 
@@ -168,6 +175,31 @@ studio reads or writes `creative-writing/vault/`.
 - A pipeline is entered by choice. Nothing here can stop a tool being called
   outside one, and the documents say so. Do not describe the studio as enforcing
   more than it does.
+
+## Working on the Writing Museum
+
+`writing-museum/` is the engine and the data of a walkable 3D museum of the
+creative-writing vault, fashioned after the Chronicle Museum in the author's
+`Earth_Worldbuild` repo (its viewer and layout builder were copied; `writing-museum/README.md`
+lists what changed). One room per work; the work's passages hang as verbatim text
+panels cited by vault path and lines.
+
+- A scene is made only through the studio's `scene-3d` pipeline
+  (`studio/pipeline/spec.yaml`), which writes `writing-museum/data/scenes/<id>.json`
+  at execute and leaves a note at `studio/vault/<project>/3d/<id>.md`. Do not write
+  a scene spec by hand.
+- `build/mapping.json` is a reference table, never binding: a run records which of
+  its rows it took and why. `build_museum.py propose <vault-path>` prints that.
+- Build: `python writing-museum/build/build_museum.py build` (`--lint` writes
+  nothing). Walk it: `node writing-museum/tools/walk_test.mjs` (Playwright and
+  Chromium; output under `writing-museum/tools/out/`, git-ignored). View it:
+  `python -m http.server 8768 --directory writing-museum`, then `/web/index.html`.
+- Tests: `python -m unittest discover -s writing-museum/build/tests`. They run on a
+  temporary vault, and read the real one only to check the ten-work path.
+- It reads `creative-writing/vault/` and never writes it. The 63 works stay verbatim;
+  the transcription header above a work's text is left off its panels.
+- `web/` stays the Chronicle Museum's viewer with the edits the README lists. Bring a
+  fix from that repo over as a copy, and note it there.
 
 ## Working on the ui-design plugin
 

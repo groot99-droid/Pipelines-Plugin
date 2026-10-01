@@ -1,0 +1,31 @@
+{
+  "id": "trip-tracker",
+  "order": 9,
+  "work": "09_Dream_Journal/02_Trip_Tracker_-_July_Fourteenth_2023.md",
+  "name": "Trip Tracker - July Fourteenth 2023",
+  "hub_side": "S",
+  "panels": "all",
+  "min_w": 10,
+  "min_d": 8,
+  "style": {
+    "theme": "post-lintel-timber",
+    "frame": "dark-wood",
+    "frame_small": "thin-metal",
+    "wall": "#2f2224",
+    "light": {
+      "color": "#ffb070",
+      "intensity": 110
+    },
+    "floor": "stone",
+    "trim": "stone"
+  },
+  "sources": {
+    "theme": "mapping.json mode.unclassified (frontmatter mode: unclassified)",
+    "frame": "mapping.json mode.unclassified (frontmatter mode: unclassified)",
+    "frame_small": "mapping.json mode.unclassified (frontmatter mode: unclassified)",
+    "wall": "mapping.json mood.dread (mood_tag in 1 of 1 chunks)",
+    "light": "mapping.json mood.dread (mood_tag in 1 of 1 chunks)",
+    "floor": "mapping.json motif.threshold (motif_tag in 1 of 1 chunks)",
+    "trim": "mapping.json motif.threshold (motif_tag in 1 of 1 chunks)"
+  }
+}

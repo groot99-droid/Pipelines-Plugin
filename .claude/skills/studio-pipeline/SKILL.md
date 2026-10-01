@@ -1,6 +1,6 @@
 ---
 name: studio-pipeline
-description: Walk one made thing through the studio's checkpointed pipeline (intake, context, recipe, execute, review, record), resolving and attesting its brand context before anything is run and leaving a Content MD in the studio vault. Use when the author wants a design system, palette, font pairing, style direction, UX review or accessibility audit made through the studio, or asks to start, resume or park a studio run. Not for the creative-writing vault, which has its own pipeline.
+description: Walk one made thing through the studio's checkpointed pipeline (intake, context, recipe, execute, review, record), resolving and attesting its brand context before anything is run and leaving a Content MD in the studio vault. Use when the author wants a design system, palette, font pairing, style direction, UX review or accessibility audit made through the studio, a walkable 3D scene of the Writing Museum for a work they name, or asks to start, resume or park a studio run. Not for the creative-writing vault, which has its own pipeline.
 ---
 
 # Studio pipeline
@@ -263,6 +263,9 @@ the run folder behind, and the note says nothing of it.
 - It does not read, search or write anything under `creative-writing/vault/`.
   If the author wants a made thing to draw on one of those works, they name the
   work at a checkpoint and you read that work only.
+  The `scene-3d` pipeline is that case: the work is named at intake, and only
+  that work, its `_ChunkTags` sidecar and its chunks are read, through
+  `writing-museum/build/build_museum.py` (see `writing-museum/README.md`).
 - It does not write or edit a file under `studio/vault/_Context/brand/`, except
   a gate a `brand-gate` run writes through `gate_md.py` after the author's yes.
   A change to `tokens.json` is proposed as a diff and left for the author.

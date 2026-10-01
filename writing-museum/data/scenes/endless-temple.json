@@ -1,0 +1,31 @@
+{
+  "id": "endless-temple",
+  "order": 1,
+  "work": "02_Novels/05_The_Endless_Temple_-_Elaris_Sel_Marden.md",
+  "name": "The Endless Temple - Elaris Sel Marden",
+  "hub_side": "S",
+  "panels": "all",
+  "min_w": 10,
+  "min_d": 8,
+  "style": {
+    "theme": "pointed-arch",
+    "frame": "gilt-ornate",
+    "frame_small": "gilt-simple",
+    "wall": "#34486a",
+    "light": {
+      "color": "#fff1dc",
+      "intensity": 210
+    },
+    "floor": "stone",
+    "trim": "stone"
+  },
+  "sources": {
+    "theme": "mapping.json mode.epic-fantasy (frontmatter mode: epic-fantasy)",
+    "frame": "mapping.json mode.epic-fantasy (frontmatter mode: epic-fantasy)",
+    "frame_small": "mapping.json mode.epic-fantasy (frontmatter mode: epic-fantasy)",
+    "wall": "mapping.json mood.wonder (mood_tag in 2 of 2 chunks)",
+    "light": "mapping.json mood.wonder (mood_tag in 2 of 2 chunks)",
+    "floor": "mapping.json motif.threshold (motif_tag in 1 of 2 chunks)",
+    "trim": "mapping.json motif.threshold (motif_tag in 1 of 2 chunks)"
+  }
+}

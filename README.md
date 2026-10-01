@@ -279,11 +279,12 @@ is made before every constraint it needs has been resolved and its source shown;
 a constraint that cannot be sourced is asked for, never guessed.
 
 Nine pipelines are declared in
-[`studio/pipeline/spec.yaml`](studio/pipeline/spec.yaml) and seven are
+[`studio/pipeline/spec.yaml`](studio/pipeline/spec.yaml) and eight are
 implemented: `ui-direction`, which runs the ui-design catalog under the studio's
 brand gates; `brand-gate`, which writes a brand gate from an interview with the
 author; `still-image`, `video-shot` and `music-cue`, through the Higgsfield
-connector; `edit-2d`, through the Adobe connector; and `scene-3d`, through the
+connector; `edit-2d`, through the Adobe connector; `scene-3d`, which builds one room of the
+Writing Museum for a work the author names; and `scene-blender`, through the
 Blender scene connector. Each names the connector tools it may call, spends
 nothing before the execute go-ahead, and keeps what the author keeps under
 `studio/assets/`. `ui-build` and `brush` are entries that say what each needs;
@@ -308,6 +309,24 @@ session.
 python -m unittest discover -s studio/pipeline/tests     # the studio's own check
 python studio/pipeline/studio_run.py status              # every run
 python studio/pipeline/content_md.py lint --all          # every note in the vault
+```
+
+## Writing Museum
+
+A walkable 3D museum of the creative-writing vault, fashioned after the Chronicle
+Museum of `Earth_Worldbuild`: a hall with a door to every scene, and one room per
+work whose passages hang on the walls as verbatim text panels, cited to their vault
+path and lines. The room's door, walls, floor, frames and light follow the work's
+own mode, moods and motifs through one reference table. The engine and the data
+live in [`writing-museum/`](writing-museum) (its [README](writing-museum/README.md)
+says how to view and build it); every scene is made through the studio's
+`scene-3d` pipeline and has a note in `studio/vault/writing-museum/3d/`.
+
+```powershell
+python -m http.server 8768 --directory writing-museum          # then open /web/index.html
+python writing-museum/build/build_museum.py build --lint        # the layout lint
+python -m unittest discover -s writing-museum/build/tests       # the builder's tests
+node writing-museum/tools/walk_test.mjs                         # the browser walk-through
 ```
 
 ## UI design plugin

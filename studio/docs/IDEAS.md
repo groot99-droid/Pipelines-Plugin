@@ -121,8 +121,9 @@ Source: `DECISIONS.md`.
 Source: the nine files in `skills/`. Each was a set of instructions for an agent
 to follow. No code executed any of them.
 
-Each is now an entry under `pipelines:` in `studio/pipeline/spec.yaml`. One is
-implemented. The rest say what they need and what they carry, and do not start.
+Each is now an entry under `pipelines:` in `studio/pipeline/spec.yaml`. Eight of
+the ten entries are implemented. The rest say what they need and what they carry,
+and do not start.
 
 | Skill | Becomes | What is kept | What is dropped | Status |
 |---|---|---|---|---|
@@ -132,7 +133,8 @@ implemented. The rest say what they need and what they carry, and do not start.
 | `higgsfield_api` | `video-shot` | continuity is carried in the note; a continuation starts from the last frame; a drift check every third shot; the seed is never randomised | the API payloads, the continuity state machine file, the UUID protocol | rebuilt |
 | `suno_audio` | `music-cue` | tempo and key are decisions in force; one direction per generation | the endpoints, which were never called; the bracket-tag fixtures | rebuilt |
 | `adobe_suite_uxp` | `edit-2d` | never change a file that was not read in this task; work on a copy; the output spec comes from the gate | the COM bridge and the ExtendScript wrappers; Premiere | rebuilt |
-| `blender_python` | `scene-3d` | fixed scripts with their parameters as the Method; a local render needs a compute token | the headless templates; the Blender scene connector does the cloud branch, a local Blender the other, when installed | rebuilt |
+| `blender_python` | `scene-blender` | fixed scripts with their parameters as the Method; a local render needs a compute token | the headless templates; the Blender scene connector does the cloud branch, a local Blender the other, when installed | rebuilt |
+| the Chronicle Museum (`Earth_Worldbuild/_Museum`), not a skill | `scene-3d` | one walkable room of the Writing Museum for a named work: the scene spec is the parameter file, the museum's builder and viewer (`writing-museum/`) the template; one go-ahead, one build, one walk test; the `museum_walk` compute token | the paintings, models, props and rewrite layer of the source museum | rebuilt |
 | `local_rag_orchestration` | `studio/vault/tools/vault_index.py` | a search names the note and the section it found; nothing is answered from outside the vault | local generation, the model tiers and the eviction: no model runs here | rebuilt |
 | `hardware_compute` | `studio/pipeline/compute_gate.py`, with `machine.yaml` and `probe.py` | one token authorizes one job; an unreadable reading closes the gate; one heavy job at a time; AC power and thermal headroom; a local-compute run cannot pass execute without a consumed token | thresholds embedded in markdown and extracted by a regular expression; the continuous-mode loop; the dashboard writeback | rebuilt |
 

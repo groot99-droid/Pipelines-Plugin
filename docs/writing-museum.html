@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing museum · ROSW</title>
+<meta name="description" content="The Writing Museum: a walkable 3D museum of the creative-writing vault, one room per work, made through the studio.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="top-inner">
+  <a class="brand" href="index.html">RO<span>SW</span></a>
+  <nav aria-label="Pages"><ul class="nav">
+    <li><a href="index.html">Overview</a></li>
+    <li><a href="creative-writing.html">Creative writing</a></li>
+    <li><a href="studio.html">Studio</a></li>
+    <li><a href="ui-design.html">UI design</a></li>
+    <li><a href="writing-museum.html" aria-current="page">Writing museum</a></li>
+    <li><a href="keys.html">Keys</a></li>
+  </ul></nav>
+</div></header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">writing-museum/</p>
+    <h1>Writing museum</h1>
+    <p class="lede">A walkable 3D museum of the creative-writing vault, generated in the browser
+    from data. A hall has a door to every work; behind each door is one room for that work, its
+    passages hung on the walls as text panels, verbatim, and cited to their vault path and lines.</p>
+  </section>
+
+  <p class="toc">On this page: <a href="#what">What it is</a> · <a href="#room">How a work becomes a room</a> ·
+  <a href="#studio">Made through the studio</a> · <a href="#view">Viewing and building</a> ·
+  <a href="#limits">What it does not do</a></p>
+
+  <h2 id="what">What it is</h2>
+  <p>It is fashioned after the Chronicle Museum of the author's <code>Earth_Worldbuild</code> repo,
+  whose viewer (three.js, walk, look, doors, floor plan, go-to, guided tour, touch and gamepad)
+  and layout builder (a salon-grid packer, a hall, a lint) were copied into this folder. What
+  changed is what hangs on the walls: not paintings at their real size but passages of the
+  author's own works, drawn as paper panels at a size that follows the text.</p>
+
+  <h2 id="room">How a work becomes a room</h2>
+  <ol>
+    <li>The work's own chunks (the ones <code>vault_search.py</code> cuts, and the chunk tagger
+    tagged) become the panels. The transcription header above the text is left off; nothing
+    in the text is changed.</li>
+    <li>The work's <code>mode</code> picks the door theme and the frame styles. The mood tag that
+    occurs most across its chunks picks the wall paint and the light; the motif tag that occurs
+    most and has a row picks the floor and the trim. The table is
+    <code>writing-museum/build/mapping.json</code>, and it is a reference, never binding.</li>
+    <li>The scene spec, <code>data/scenes/&lt;id&gt;.json</code>, records the resolved values. The
+    builder composes every spec into the manifest and the layout the viewer reads.</li>
+  </ol>
+
+  <h2 id="studio">Made through the studio</h2>
+  <p>A scene is made only through the studio's <code>scene-3d</code> pipeline
+  (<a href="studio.html#pipelines">Studio → Pipelines</a>). The author names the work at intake;
+  the context stage attests the render and camera constraints; the recipe lists every value of
+  the scene spec with its source; execute writes the spec, builds, and walks the room in a
+  headless browser; review checks each output against each constraint and the vault's own rules;
+  record leaves a note at <code>studio/vault/&lt;project&gt;/3d/&lt;id&gt;.md</code>. The notes are
+  the point: a later 3D run recalls their decisions, and derives from them once there are three.</p>
+
+  <h2 id="view">Viewing and building</h2>
+  <pre><code>python -m http.server 8768 --directory writing-museum     # then open /web/index.html
+python writing-museum/build/build_museum.py build --lint   # the layout lint
+python writing-museum/build/build_museum.py build          # write the manifest and the layout
+node writing-museum/tools/walk_test.mjs                    # the browser walk-through
+python -m unittest discover -s writing-museum/build/tests  # the builder's tests</code></pre>
+  <p>The walk test needs Node, Playwright and Chromium; the build needs only Python.</p>
+
+  <h2 id="limits">What it does not do</h2>
+  <ul>
+    <li>It never writes into <code>creative-writing/vault/</code>. The 63 works stay verbatim.</li>
+    <li>It never writes a note itself. The studio run does, through <code>content_md.py</code>,
+    after a preview and a yes.</li>
+    <li>A scene spec is not written by hand. It is a run's artifact.</li>
+    <li>There are no sculptures or models; the textures and the sky are CC0
+    (<code>writing-museum/assets/CREDITS.md</code>).</li>
+  </ul>
+</main>
+
+<footer>ROSW · <a href="https://github.com/groot99-droid/Pipelines-Plugin">Source on GitHub</a></footer>
+</body>
+</html>

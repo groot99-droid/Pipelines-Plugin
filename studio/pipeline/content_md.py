@@ -487,16 +487,24 @@ def carries(env, row, line, by_name):
     return all(squeeze(unstruck(quote)) in squeeze(line) for quote in row["quotes"])
 
 
-def assign(rows, lines, fits):
+def assign(rows, lines, fits, prefer=None):
     """Give each row a line of its own, where one can be found.
 
     Returns {row index: line index}. A plain matching: a row may take a line
-    another row holds if that row can move to another line.
+    another row holds if that row can move to another line. With `prefer`, a
+    row tries the lines it prefers first (the ones that name it), so three
+    STATED rows of the same day keep their own lines.
     """
     owner = {}
 
+    def order(row):
+        indices = range(len(lines))
+        if prefer is None:
+            return list(indices)
+        return sorted(indices, key=lambda index: not prefer(rows[row], lines[index]))
+
     def place(row, tried):
-        for index in range(len(lines)):
+        for index in order(row):
             if index in tried or not fits(rows[row], lines[index]):
                 continue
             tried.add(index)
@@ -523,7 +531,7 @@ def owed_errors(env, state, front, proposed):
     def fits(row, line):
         return carries(env, row, line, by_name)
 
-    given = assign(rows, lines, fits)
+    given = assign(rows, lines, fits, prefer=lambda row, line: squeeze(row["constraint"]) in squeeze(line))
     listed = gates_listed(front)
     for index, row in enumerate(rows):
         name = row["constraint"]

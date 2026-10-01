@@ -1,0 +1,31 @@
+{
+  "id": "heartstream",
+  "order": 8,
+  "work": "03_Stories/02_A_Journey_Into_the_Heartstream_-_The_Rite_of_the_Blue-Born.md",
+  "name": "A Journey Into the Heartstream: The Rite of the Blue-Born",
+  "hub_side": "N",
+  "panels": "all",
+  "min_w": 10,
+  "min_d": 8,
+  "style": {
+    "theme": "pointed-arch",
+    "frame": "gilt-ornate",
+    "frame_small": "gilt-simple",
+    "wall": "#34486a",
+    "light": {
+      "color": "#fff1dc",
+      "intensity": 210
+    },
+    "floor": "stone",
+    "trim": "stone"
+  },
+  "sources": {
+    "theme": "mapping.json mode.epic-fantasy (frontmatter mode: epic-fantasy)",
+    "frame": "mapping.json mode.epic-fantasy (frontmatter mode: epic-fantasy)",
+    "frame_small": "mapping.json mode.epic-fantasy (frontmatter mode: epic-fantasy)",
+    "wall": "mapping.json mood.wonder (mood_tag in 3 of 4 chunks)",
+    "light": "mapping.json mood.wonder (mood_tag in 3 of 4 chunks)",
+    "floor": "mapping.json motif.threshold (motif_tag in 3 of 4 chunks)",
+    "trim": "mapping.json motif.threshold (motif_tag in 3 of 4 chunks)"
+  }
+}
