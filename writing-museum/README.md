@@ -17,7 +17,9 @@ This folder holds the engine and the data; the studio vault holds the record.
 On the web: the library at <https://groot99-droid.github.io/Pipelines-Plugin/museum/web/explore.html>
 and the museum at <https://groot99-droid.github.io/Pipelines-Plugin/museum/web/index.html>, published
 from `main` by `.github/workflows/pages.yml` (this folder under `museum/`, rebuilt from the vault at
-deploy time, beside the `docs/` pages at the site root). Locally:
+deploy time, beside the `docs/` pages at the site root). The workflow is the site's only
+publisher: its first step sets the repository's Pages source to GitHub Actions, since a "deploy
+from a branch" source publishes `docs/` alone after it and drops `museum/`. Locally:
 
 ```
 python -m http.server 8768 --directory writing-museum

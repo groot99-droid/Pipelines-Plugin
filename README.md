@@ -333,7 +333,9 @@ Both are published on GitHub Pages, with the docs pages, on every push to `main`
 <https://groot99-droid.github.io/Pipelines-Plugin/museum/web/explore.html> and the
 museum at <https://groot99-droid.github.io/Pipelines-Plugin/museum/web/index.html>.
 The deploy rebuilds the museum from the vault, so a merged `scene-3d` run's room is
-on the site a few minutes later.
+on the site a few minutes later. The workflow is the site's only publisher: its first
+step sets the repository's Pages source to GitHub Actions, because a "deploy from a
+branch" source publishes `docs/` alone on the same push, after it, and drops `museum/`.
 
 ```powershell
 python -m http.server 8768 --directory writing-museum          # then open /web/index.html, or /web/explore.html to read
