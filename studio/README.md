@@ -149,10 +149,20 @@ Needs Python 3 and `pyyaml` (`pip install -r studio/pipeline/requirements.txt`).
 
 `studio/vault/CLAUDE.md` lists the rest under "What is not enforced".
 
+## The generations library
+
+`studio/library/` holds every generation the author has made on Higgsfield:
+`catalog.json`, thumbnails, and a page to look through them
+(`python -m http.server 8770 --directory studio/library`). The
+`higgsfield-library-sync` skill brings it up to date; originals are downloaded on
+request into `studio/library/files/`, which is not versioned. It is not a run and
+writes nothing into the vault. Its [README](library/README.md) has the rest.
+
 ## Checking it
 
 ```
 python -m unittest discover -s studio/pipeline/tests
+python -m unittest discover -s studio/library/tests
 ```
 
 The tests run against temporary folders and the real spec. They check that each

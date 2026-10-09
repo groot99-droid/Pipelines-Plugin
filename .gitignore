@@ -98,6 +98,9 @@ embeddings/
 # record of how; the files themselves are large and are not versioned here.
 # studio/pipeline/runs/ is already covered by `runs/` above.
 studio/assets/
+# The originals the generations library downloads (studio/library/library.py fetch).
+# A 3D model alone is ~70 MB; catalog.json and thumbs/ are what is versioned.
+studio/library/files/
 
 # ── GitHub Pages staging ─────────────────────────────────────────────────────
 # .github/workflows/pages.yml assembles the site under _site/ on the runner; a
