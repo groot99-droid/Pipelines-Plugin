@@ -2,7 +2,7 @@
 #   - the ui-design plugin's gate, plugins/ui-design/maintenance/verify.py (ten checks:
 #     data, contract, indexes, unit tests, the relevance gate, and a smoke test of
 #     every domain and stack), which stops at the first failure;
-#   - the creative-writing, studio, docs and writing-museum test suites, and the
+#   - the creative-writing, studio, studio library, docs and writing-museum test suites, and the
 #     writing-museum layout lint.
 #
 # The Windows and macOS jobs also prove the LF pin: the relevance gate fingerprints
@@ -42,6 +42,8 @@ jobs:
         run: python -m unittest discover -s creative-writing/pipeline/tests
       - name: studio tests
         run: python -m unittest discover -s studio/pipeline/tests
+      - name: studio library tests
+        run: python -m unittest discover -s studio/library/tests
       - name: docs tests
         run: python -m unittest discover -s docs/tests
       - name: writing-museum tests

@@ -15,12 +15,13 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | `studio/` | Checkpointed production pipelines and the notes they leave behind. | - |
 | `writing-museum/` | A walkable 3D museum of the creative-writing vault, one room per work, built through the studio's scene-3d pipeline. | - |
 
-## Skills (6)
+## Skills (7)
 
 | Skill | What it does |
 |---|---|
 | [chunk-tag-backfill](.claude/skills/chunk-tag-backfill/SKILL.md) | Runs (or re-runs) the creative-writing-chunk-tagger subagent over the vault's work files, writing/updating each one's creative-writing/vault/_ChunkTags/ sidecar. |
 | [creative-writing-pipeline](.claude/skills/creative-writing-pipeline/SKILL.md) | Walk a new idea for this vault through the checkpointed multi-stage pipeline (intake, reference pull, outline, draft, self-revision, vault integration) instead of writing a finished piece in one shot. |
+| [higgsfield-library-sync](.claude/skills/higgsfield-library-sync/SKILL.md) | Import the author's Higgsfield generations (images, videos, audio, 3D models) into the studio's generations library at studio/library/, or bring it up to date. |
 | [studio-pipeline](.claude/skills/studio-pipeline/SKILL.md) | Walk one made thing through the studio's checkpointed pipeline (intake, context, recipe, execute, review, record), resolving and attesting its brand context before anything is run and leaving a Content MD in the studio vault. |
 | [ui-design-catalog](plugins/ui-design/skills/ui-design-catalog/SKILL.md) | Searches a local BM25 catalog of UI styles, product palettes, font pairings, UX guidelines, icons, motion presets, chart types, and 22 stacks, and generates a contrast-checked design system from it -- instead of inventing visual decisions from memory. |
 | [ui-design-catalog-refresh](plugins/ui-design/skills/ui-design-catalog-refresh/SKILL.md) | Refreshes the ui-design catalog's upstream-derived data -- the Google Fonts and Phosphor icon catalogs -- by fetching the upstream sources, generating review-only candidates under the plugin's maintenance/candidates/, diffing them against the live rows, and stopping for human... |

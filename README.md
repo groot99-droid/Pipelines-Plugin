@@ -291,6 +291,11 @@ nothing before the execute go-ahead, and keeps what the author keeps under
 `brush` has its packer (`studio/pipeline/brush_pack.py`) and waits for the
 designer app.
 
+The generations library, [`studio/library`](studio/library), catalogues every
+image, video, audio clip and 3D model the author has made on Higgsfield, with
+thumbnails and a page to look through them. The `higgsfield-library-sync` skill
+brings it up to date; originals are downloaded on request and are not versioned.
+
 The hub, [`studio/hub`](studio/hub), is a local page over the vault's notes, the
 runs and the gates: `python studio/hub/serve.py`, then open
 `http://127.0.0.1:8765/`. Its Writing tab links to the Writing Museum's library

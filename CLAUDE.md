@@ -21,7 +21,8 @@ Where a tool's skills and agents live depends on how the tool is used:
 
 ```
 INDEX.md             generated index of the tools, skills and agents
-.claude/skills/      creative-writing-pipeline, chunk-tag-backfill, studio-pipeline
+.claude/skills/      creative-writing-pipeline, chunk-tag-backfill, studio-pipeline,
+                     higgsfield-library-sync
 .claude/agents/      creative-writing-{chunk-tagger,drafter,librarian-native}
 creative-writing/    the creative-writing tool
   vault/             the Obsidian vault — 63 works, annotations, chunk tags,
@@ -35,6 +36,9 @@ studio/              the studio tool
   hub/               the desk: a loopback server and page over the vault and the runs,
                      the Windows launcher, and (once copied in) the brush designer
   assets/            what runs keep, by project, kind and slug. Not versioned
+  library/           the generations library: every Higgsfield generation in catalog.json,
+                     thumbnails, a page over them, and library.py; originals under files/
+                     are downloaded on request and not versioned
   docs/              what was carried from Creative-Headquarters, and how
 writing-museum/      the Writing Museum: a walkable 3D museum of the creative-writing vault,
   build/             works.py (a work as passage panels), mapping.json, layout.py, library.py,
@@ -168,6 +172,11 @@ the author names at a `scene-3d` intake, through `writing-museum/build/`.
   size and font is a custom property set from `tokens.json` at load, and
   `tests/test_hub.py` refuses a literal. `studio/vault/tools/vault_index.py` is
   the index it searches; it carries no note bodies and is not versioned.
+- **The generations library** (`studio/library/`) catalogues the author's Higgsfield
+  history. It is not a run: the `higgsfield-library-sync` skill only browses the
+  history (no generate tool), and `library.py` writes `catalog.json`, `thumbs/` and the
+  git-ignored `files/`, nothing else. Never commit an original, and never keep a link
+  to an uploaded input. Tests: `python -m unittest discover -s studio/library/tests`.
 - `studio/pipeline/brush_pack.py` packs a designer bundle into a Procreate file
   with `plistlib`. A Procreate-written `.brush` under
   `studio/pipeline/tests/fixtures/procreate/` turns its format test on.
