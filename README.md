@@ -13,9 +13,12 @@ its skills and agents live inside it, under `plugins/ui-design/`.
 ```
 INDEX.md               generated index of the tools, skills and agents
 .claude/skills/        creative-writing-pipeline, chunk-tag-backfill,
-                       studio-pipeline
+                       studio-pipeline, blender-gemini
 .claude/agents/        creative-writing-{chunk-tagger,drafter,librarian-native}
+.mcp.json              the gemini MCP server Claude calls (see blender-gemini)
 CLAUDE.md              repo conventions; points at each vault's own CLAUDE.md
+blender-gemini/        installer and tests that register the Blender MCP server
+                       with the Gemini CLI; its skill is blender-gemini
 creative-writing/
   vault/               the Obsidian vault: 63 works, _Annotations/,
                        _ChunkTags/, _Idea_Library/, tools/, CLAUDE.md
@@ -350,6 +353,25 @@ python -m http.server 8768 --directory writing-museum          # then open /web/
 python writing-museum/build/build_museum.py build --lint        # the layout lint
 python -m unittest discover -s writing-museum/build/tests       # the builder's tests
 node writing-museum/tools/walk_test.mjs                         # the browser walk-through
+```
+
+## Blender through Gemini
+
+Lets Claude drive an open Blender by calling Gemini. Claude calls the `gemini` MCP server
+(`.mcp.json`), which runs the Gemini CLI, which has the Blender MCP server
+(`mcp-for-blender`) registered in its settings; that talks to an add-on inside Blender.
+`blender-gemini/install.py` writes that one settings entry and checks the whole chain;
+the `blender-gemini` skill tells Claude how to use it. The default profile lets Gemini
+only inspect the scene; running code in Blender is a separate, explicit choice. It runs
+on your machine, not in a cloud session, and it has not been run end to end: the
+[README](blender-gemini/README.md) lists what was and was not verified.
+
+```powershell
+python blender-gemini/install.py install --dry-run              # show the Gemini CLI entry, write nothing
+python blender-gemini/install.py install                        # read-only profile (add --profile full for code)
+python blender-gemini/install.py check                          # read-only preflight of the whole chain
+python blender-gemini/install.py sync-key --dry-run             # copy GEMINI_API_KEY from keys.env to ~/.gemini/.env
+python -m unittest discover -s blender-gemini/tests             # the installer's tests
 ```
 
 ## UI design plugin

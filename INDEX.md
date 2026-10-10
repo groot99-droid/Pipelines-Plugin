@@ -9,16 +9,18 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 
 | Folder | Purpose | Index |
 |---|---|---|
+| `blender-gemini/` | Registers the Blender MCP server with the Gemini CLI, and the skill that lets Claude call Gemini to inspect or change an open Blender scene. | - |
 | `creative-writing/` | The Obsidian vault of 63 works plus the checkpointed pipeline that writes into it. | - |
 | `docs/` | Browsable HTML pages describing each tool, and a local helper for setting API keys. | - |
 | `plugins/` | Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, with a design-system generator; and blender, skills for driving a live Blender through MCP. | [plugins/ui-design/INDEX.md](plugins/ui-design/INDEX.md) |
 | `studio/` | Checkpointed production pipelines and the notes they leave behind. | - |
 | `writing-museum/` | A walkable 3D museum of the creative-writing vault, one room per work, built through the studio's scene-3d pipeline. | - |
 
-## Skills (10)
+## Skills (11)
 
 | Skill | What it does |
 |---|---|
+| [blender-gemini](.claude/skills/blender-gemini/SKILL.md) | Drive the author's open Blender through the Gemini CLI by calling the gemini MCP server (ask-gemini), which has the Blender MCP server registered. |
 | [chunk-tag-backfill](.claude/skills/chunk-tag-backfill/SKILL.md) | Runs (or re-runs) the creative-writing-chunk-tagger subagent over the vault's work files, writing/updating each one's creative-writing/vault/_ChunkTags/ sidecar. |
 | [creative-writing-pipeline](.claude/skills/creative-writing-pipeline/SKILL.md) | Walk a new idea for this vault through the checkpointed multi-stage pipeline (intake, reference pull, outline, draft, self-revision, vault integration) instead of writing a finished piece in one shot. |
 | [higgsfield-library-sync](.claude/skills/higgsfield-library-sync/SKILL.md) | Import the author's Higgsfield generations (images, videos, audio, 3D models) into the studio's generations library at studio/library/, or bring it up to date. |
