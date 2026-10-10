@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "brushes": {
+      "command": "python",
+      "args": ["-I", "brushes/pipeline/mcp_server.py"]
+    }
+  }
+}

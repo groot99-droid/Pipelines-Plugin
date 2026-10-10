@@ -83,6 +83,8 @@ DATA_PURPOSE = {
 
 # What each top-level tool folder is for. Hidden folders (.claude, .obsidian) are skipped.
 TOOL_PURPOSE = {
+    "brushes": "A Procreate brush library with tag-based search, and a brush designer for the brush "
+               "file format. Under construction.",
     "creative-writing": "The Obsidian vault of 63 works plus the checkpointed pipeline that writes into it.",
     "docs": "Browsable HTML pages describing each tool, and a local helper for setting API keys.",
     "plugins": "Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, "

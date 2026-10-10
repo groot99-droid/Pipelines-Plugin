@@ -2,11 +2,14 @@
 # ROSW — repo-root ignore rules
 #
 # This repo holds multiple tools, each in its own folder under a tool root
-# (today: creative-writing/{vault,pipeline}, studio/{vault,pipeline} and
+# (today: brushes/{pipeline,vault,catalog,library,app},
+# creative-writing/{vault,pipeline}, studio/{vault,pipeline} and
 # plugins/ui-design/{catalog,maintenance}).
 # Rules here apply repo-wide.
 # The vault carries its own creative-writing/vault/.gitignore for
 # Obsidian-specific state; that file still applies inside the vault.
+# brushes/ carries two of its own: brushes/library/.gitignore and
+# brushes/vault/.gitignore.
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ── Secrets ──────────────────────────────────────────────────────────────────
@@ -95,6 +98,28 @@ embeddings/
 # record of how; the files themselves are large and are not versioned here.
 # studio/pipeline/runs/ is already covered by `runs/` above.
 studio/assets/
+
+# ── Brush library ────────────────────────────────────────────────────────────
+# brushes/library/ holds the original .brush and .brushset files. They ARE
+# committed, through Git LFS (.gitattributes), and so is what is derived from
+# them: brushes/catalog/, the vault notes, the tag sidecars and the previews.
+# The `*.zip` rule above still applies there, which is why a set is stored as
+# Name.brushset and never as Name.brushset.zip. The search index is covered by
+# `rag_index/` above.
+#
+# A test sitting on a device (brushes/pipeline/device_tests.py) is one folder
+# under brushes/device-tests/. The brush files built into it are scratch and
+# are NOT committed: every rule below ignores what sits directly in a sitting's
+# folder. Three things are kept, because no build can make them again:
+#   manifest.json   which brushes went to the device, under which folder names
+#                   (a new build draws new ones)
+#   CHECKLIST.md    the page the answers were written on
+#   returned/       what came back from the device: the only evidence there is
+# The brush files in returned/ go through Git LFS (.gitattributes).
+brushes/device-tests/*/*
+!brushes/device-tests/*/manifest.json
+!brushes/device-tests/*/CHECKLIST.md
+!brushes/device-tests/*/returned/
 
 # ── Obsidian machine-local state ─────────────────────────────────────────────
 # The first block covers a vault opened at the repo root. The second covers
