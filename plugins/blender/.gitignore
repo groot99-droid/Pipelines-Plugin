@@ -1,0 +1,12 @@
+# blender plugin -- ignore rules that travel with the plugin.
+.env
+.env.*
+*.key
+*.pem
+__pycache__/
+*.py[cod]
+# Downloaded assets, exports and scratch .blend files
+*.blend
+*.blend1
+*.glb
+*.fbx
