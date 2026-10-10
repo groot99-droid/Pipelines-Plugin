@@ -40,6 +40,9 @@ plugins/ui-design/     the ui-design plugin: self-contained
   maintenance/         validators, relevance gate, refresh scripts, verify.py
   references/          prose the ui-design-catalog skill reads on demand
   README.md, LICENSE, NOTICE, CHANGELOG.md
+plugins/blender/       the blender plugin: self-contained
+  .mcp.json            launches `uvx mcp-for-blender` with telemetry off
+  skills/, agents/     blender-{mcp,assets,polyhaven-library}, blender-scene-reviewer
 ```
 
 Paths in the creative-writing and studio skills and agents are relative to this
@@ -393,3 +396,12 @@ Install it from this repo in Claude Code with
 `/plugin marketplace add groot99-droid/Pipelines-Plugin`, then
 `/plugin install ui-design@rosw`. Release steps are in [`CLAUDE.md`](CLAUDE.md), under
 "Publishing".
+
+## Blender plugin
+
+`plugins/blender/` lets Claude drive a live Blender through the MCP for Blender server
+(scene inspection, bpy scripting checked by viewport screenshots, asset sourcing from
+Poly Haven, Sketchfab, Poly Pizza, Hyper3D Rodin and Hunyuan3D) and documents the Poly Haven
+Assets Asset Browser add-on. Install with `/plugin install blender@rosw`. The server's
+telemetry is disabled in `.mcp.json`; the GPL Poly Haven add-on is not bundled. See
+`plugins/blender/README.md`.

@@ -65,6 +65,8 @@ plugins/ui-design/   the ui-design plugin: the plugin root, and the whole of wha
   maintenance/       validators, relevance gate, refresh scripts, verify.py
   references/        prose the ui-design-catalog skill reads on demand
   README.md, LICENSE, NOTICE, CHANGELOG.md, .gitignore, .gitattributes
+plugins/blender/     the blender plugin: .mcp.json (uvx mcp-for-blender, telemetry off), skills
+                     blender-{mcp,assets,polyhaven-library}, agent blender-scene-reviewer
 .github/workflows/   verify.yml: CI for the whole repo (see "Working on the ui-design plugin");
                      pages.yml: publishes docs/ and the Writing Museum to GitHub Pages from main
 ```
@@ -230,6 +232,16 @@ panels cited by vault path and lines.
   the transcription header above a work's text is left off its panels.
 - `web/` stays the Chronicle Museum's viewer with the edits the README lists. Bring a
   fix from that repo over as a copy, and note it there.
+
+## Working on the blender plugin
+
+`plugins/blender/` is a plugin like ui-design: paths in its skills and agents start from
+`${CLAUDE_PLUGIN_ROOT}`, and nothing in it names this repo or `.claude/`. It bundles no
+third-party code: `mcp-for-blender` (MIT) is fetched by `uvx` at run time, and the Poly Haven
+Assets add-on (GPL-3.0) is only described, never copied. Keep `DISABLE_TELEMETRY=true` in
+`.mcp.json`, and never write an API key anywhere in the plugin (names of the
+`BLENDERMCP_*` variables only). Tool names in the skills must match the server's; check them
+against `server.py` of the version you document.
 
 ## Working on blender-gemini
 

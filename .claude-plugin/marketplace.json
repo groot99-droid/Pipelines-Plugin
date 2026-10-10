@@ -14,6 +14,11 @@
       "name": "ui-design",
       "source": "./plugins/ui-design",
       "description": "Searchable UI styles, palettes, fonts, UX rules, icons, motion and stacks; a contrast-checked design-system generator; a brief router; multipart search and page-review agents."
+    },
+    {
+      "name": "blender",
+      "source": "./plugins/blender",
+      "description": "Drive a live Blender through the MCP for Blender server: scene inspection, bpy scripting with screenshot verification, asset sourcing (Poly Haven, Sketchfab, Poly Pizza, Rodin, Hunyuan3D) and a Poly Haven Asset Browser guide."
     }
   ]
 }

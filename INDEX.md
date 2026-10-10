@@ -12,11 +12,11 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | `blender-gemini/` | Registers the Blender MCP server with the Gemini CLI, and the skill that lets Claude call Gemini to inspect or change an open Blender scene. | - |
 | `creative-writing/` | The Obsidian vault of 63 works plus the checkpointed pipeline that writes into it. | - |
 | `docs/` | Browsable HTML pages describing each tool, and a local helper for setting API keys. | - |
-| `plugins/` | Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, with a design-system generator. | [plugins/ui-design/INDEX.md](plugins/ui-design/INDEX.md) |
+| `plugins/` | Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, with a design-system generator; and blender, skills for driving a live Blender through MCP. | [plugins/ui-design/INDEX.md](plugins/ui-design/INDEX.md) |
 | `studio/` | Checkpointed production pipelines and the notes they leave behind. | - |
 | `writing-museum/` | A walkable 3D museum of the creative-writing vault, one room per work, built through the studio's scene-3d pipeline. | - |
 
-## Skills (8)
+## Skills (11)
 
 | Skill | What it does |
 |---|---|
@@ -25,17 +25,21 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | [creative-writing-pipeline](.claude/skills/creative-writing-pipeline/SKILL.md) | Walk a new idea for this vault through the checkpointed multi-stage pipeline (intake, reference pull, outline, draft, self-revision, vault integration) instead of writing a finished piece in one shot. |
 | [higgsfield-library-sync](.claude/skills/higgsfield-library-sync/SKILL.md) | Import the author's Higgsfield generations (images, videos, audio, 3D models) into the studio's generations library at studio/library/, or bring it up to date. |
 | [studio-pipeline](.claude/skills/studio-pipeline/SKILL.md) | Walk one made thing through the studio's checkpointed pipeline (intake, context, recipe, execute, review, record), resolving and attesting its brand context before anything is run and leaving a Content MD in the studio vault. |
+| [blender-assets](plugins/blender/skills/blender-assets/SKILL.md) | Choose and bring in 3D assets for a Blender scene through the MCP for Blender integrations -- Poly Haven models, textures and HDRIs, Sketchfab, Poly Pizza low-poly models, and AI generation with Hyper3D Rodin or Hunyuan3D -- then scale, place and credit them. |
+| [blender-mcp](plugins/blender/skills/blender-mcp/SKILL.md) | Drive a live Blender session from Claude through the MCP for Blender server -- connect, inspect the scene, build or change objects, materials and lighting with bpy, and verify every step with viewport screenshots. |
+| [blender-polyhaven-library](plugins/blender/skills/blender-polyhaven-library/SKILL.md) | Guide for using the Poly Haven Assets add-on in Blender, which mirrors polyhaven.com HDRIs, materials and models into the Asset Browser as a local asset library -- first-time setup, catalogs, downloading, resolution and LOD switching, displacement and texture scale, and script... |
 | [ui-design-catalog](plugins/ui-design/skills/ui-design-catalog/SKILL.md) | Searches a local BM25 catalog of UI styles, product palettes, font pairings, UX guidelines, icons, motion presets, chart types, and 22 stacks, and generates a contrast-checked design system from it -- instead of inventing visual decisions from memory. |
 | [ui-design-catalog-refresh](plugins/ui-design/skills/ui-design-catalog-refresh/SKILL.md) | Refreshes the ui-design catalog's upstream-derived data -- the Google Fonts and Phosphor icon catalogs -- by fetching the upstream sources, generating review-only candidates under the plugin's maintenance/candidates/, diffing them against the live rows, and stopping for human... |
 | [ui-design-multipart](plugins/ui-design/skills/ui-design-multipart/SKILL.md) | Orchestrates the two multipart ui-design workflows -- a search fan-out for a wide product brief, and a four-area review of a built page -- by splitting the work with a script, giving each part to one subagent, and merging and cross-checking the answers with merge_parts.py. |
 
-## Agents (6)
+## Agents (7)
 
 | Agent | What it does |
 |---|---|
 | [creative-writing-chunk-tagger](.claude/agents/creative-writing-chunk-tagger.md) | Tags ONE vault work's chunks with plot_tags/context_tags/mood_tags/motif_tags from the closed vocabulary in creative-writing/vault/_ChunkTags/vocabulary.yaml, so creative-writing/vault/tools/vault_search.py can surface per-chunk (not just per-file) matches. |
 | [creative-writing-drafter](.claude/agents/creative-writing-drafter.md) | Generates the heavy-lift artifact for one stage of the creative-writing pipeline (outline, draft, or self-revision) from context the caller provides. |
 | [creative-writing-librarian-native](.claude/agents/creative-writing-librarian-native.md) | Native (Claude-only, no-Ollama) equivalent of creative-writing/pipeline/librarian.py's condense_file/digest_files for the creative-writing-pipeline skill. |
+| [blender-scene-reviewer](plugins/blender/agents/blender-scene-reviewer.md) | Reviews the current Blender scene through the MCP for Blender connection and reports problems -- clipping, floating objects, wrong scale, missing materials, flat or blown-out lighting -- without changing anything. |
 | [ui-design-catalog-reviewer](plugins/ui-design/agents/ui-design-catalog-reviewer.md) | Reviews one machine-generated catalog refresh diff -- Google Fonts or Phosphor icon candidates staged under the plugin's maintenance/candidates/ -- against the live rows in the plugin's catalog/data, checking license fields, required columns, and count deltas. |
 | [ui-design-page-reviewer](plugins/ui-design/agents/ui-design-page-reviewer.md) | Reviews ONE area of ONE already-built page against the ui-design rule set in the plugin's references/quick-reference.md -- a11y+touch, layout, type-color-style, or motion -- and returns findings that each cite a real rule-id with the page line as evidence. |
 | [ui-design-search-part](plugins/ui-design/agents/ui-design-search-part.md) | Runs exactly ONE part of a ui-design search manifest -- one query against one catalog domain or one stack, as emitted by the plugin's route.py -- and returns a fixed PART / QUERY / RETRIED / VERDICT / ROWS block. |
