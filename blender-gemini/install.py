@@ -6,11 +6,15 @@
                                                [--settings PATH] [--dry-run]
     python blender-gemini/install.py uninstall [--scope ...] [--settings PATH] [--dry-run]
     python blender-gemini/install.py check     [--scope ...] [--settings PATH]
+    python blender-gemini/install.py sync-key  [--remove] [--dry-run]
 
 `install` merges one entry, `mcpServers.blender`, into the Gemini CLI's settings.json and
 touches nothing else in it. It refuses a file it cannot parse, keeps the first version of
 the file beside it as settings.json.rosw-bak, and writes through a temporary file. `check`
-only reads: it never starts a server and sends nothing to Blender.
+only reads: it never starts a server and sends nothing to Blender, and it reports whether
+GEMINI_API_KEY is visible to the Gemini CLI by name and location, never by value.
+`sync-key` copies GEMINI_API_KEY from ~/.rosw/keys.env (where docs/setup_keys.py saves it)
+into ~/.gemini/.env, which the Gemini CLI reads; it prints names and paths, never the key.
 
 Standard library only. The server it registers is the `mcp-for-blender` package, run
 with uvx; the Blender add-on it talks to is installed separately (see README.md).
@@ -20,6 +24,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import socket
 import sys
@@ -39,9 +44,21 @@ READ_ONLY_TOOLS = ["get_addon_status", "get_scene_info", "look"]
 NEVER_EXPOSED = ["record_trajectory_feedback"]
 PROFILES = ("readonly", "full")
 
+KEY_NAME = "GEMINI_API_KEY"
+# docs/setup_keys.py treats these as "no key yet"; tests/test_install.py checks the two agree.
+KEY_PLACEHOLDERS = {"your-key-here", "Add_Key"}
+# What a key may look like to be written into a .env file. Anything else (spaces, quotes, #,
+# $, backslashes) can be read differently by different dotenv parsers, so it is not copied.
+SAFE_KEY_VALUE = re.compile(r"[A-Za-z0-9_.\-]+")
+_KEY_LINE = re.compile(r"^\s*(?:export\s+)?" + KEY_NAME + r"\s*=")
+
 
 class SettingsError(Exception):
     """A settings file this script will not touch."""
+
+
+class KeySyncError(SettingsError):
+    """A key this script will not copy. Its message never contains the key."""
 
 
 def server_entry(profile="readonly", trust=False, safe_mode=True):
@@ -88,22 +105,115 @@ def load_settings(path):
     return data
 
 
-def write_settings(path, data):
+def _atomic_write(path, text, backup=True, private=False):
+    """Write through a temporary file in the same folder, then replace.
+
+    backup: keep the first copy of an existing file beside it as <name>.rosw-bak and never
+    overwrite that copy. private: mode 600 on POSIX (no-op on Windows).
+    """
     path.parent.mkdir(parents=True, exist_ok=True)
-    backup = path.with_name(path.name + ".rosw-bak")
-    if path.exists() and not backup.exists():
-        shutil.copy2(path, backup)  # the first copy is the pre-install state; never overwrite it
+    existed = path.exists()
+    if backup and existed:
+        backup_path = path.with_name(path.name + ".rosw-bak")
+        if not backup_path.exists():
+            shutil.copy2(path, backup_path)  # the first copy is the pre-install state
     fd, tmp = tempfile.mkstemp(dir=path.parent, prefix=path.name + ".", suffix=".tmp")
     try:
         with os.fdopen(fd, "w", encoding="utf-8", newline="\n") as handle:
-            json.dump(data, handle, indent=2)
-            handle.write("\n")
-        if path.exists():
+            handle.write(text)
+        if private:
+            if os.name != "nt":
+                os.chmod(tmp, 0o600)
+        elif existed:
             shutil.copymode(path, tmp)
         os.replace(tmp, path)
     except BaseException:
         Path(tmp).unlink(missing_ok=True)
         raise
+
+
+def write_settings(path, data):
+    _atomic_write(path, json.dumps(data, indent=2) + "\n")
+
+
+def rosw_keys_file():
+    """Where docs/setup_keys.py saves keys: ROSW_KEYS_FILE, else ~/.rosw/keys.env."""
+    override = os.environ.get("ROSW_KEYS_FILE")
+    return Path(override) if override else Path.home() / ".rosw" / "keys.env"
+
+
+def gemini_env_file():
+    """The .env the Gemini CLI reads for every project: ~/.gemini/.env."""
+    return Path.home() / ".gemini" / ".env"
+
+
+def read_key(path):
+    """GEMINI_API_KEY from a dotenv-style file, or None. The last non-empty, non-placeholder
+    assignment wins, as in docs/setup_keys.py. The value goes to the caller and nowhere else."""
+    try:
+        lines = path.read_text(encoding="utf-8-sig").splitlines()
+    except OSError:
+        return None
+    found = None
+    for line in lines:
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        name, _, value = line.partition("=")
+        name = name.strip()
+        if name.startswith("export "):
+            name = name[len("export "):].strip()
+        value = value.strip().strip('"').strip("'")
+        if name == KEY_NAME and value and value not in KEY_PLACEHOLDERS:
+            found = value
+    return found
+
+
+def _rewrite_key_lines(lines, new_line):
+    """lines with every GEMINI_API_KEY assignment replaced by new_line (kept at the position of
+    the first one, or appended), or dropped if new_line is None. Other lines are untouched."""
+    out, placed = [], False
+    for line in lines:
+        if _KEY_LINE.match(line):
+            if new_line is not None and not placed:
+                out.append(new_line)
+                placed = True
+            continue
+        out.append(line)
+    if new_line is not None and not placed:
+        out.append(new_line)
+    return out
+
+
+def sync_key(source, target, dry_run=False, remove=False):
+    """Copy GEMINI_API_KEY from `source` into the dotenv file `target`, or with remove=True
+    take it out of `target`. Returns added/updated/unchanged, or removed/absent. Nothing it
+    returns, prints or raises holds the key. No backup is made of `target`: it would be a
+    second copy of the old key."""
+    try:
+        lines = target.read_text(encoding="utf-8-sig").splitlines()
+    except OSError:
+        lines = []
+    present = any(_KEY_LINE.match(line) for line in lines)
+    if remove:
+        if not present:
+            return "absent"
+        if not dry_run:
+            _atomic_write(target, "\n".join(_rewrite_key_lines(lines, None)) + "\n", backup=False, private=True)
+        return "removed"
+    value = read_key(source)
+    if value is None:
+        raise KeySyncError(f"{KEY_NAME} is not set in {source}. Add it with: python docs/setup_keys.py")
+    if not SAFE_KEY_VALUE.fullmatch(value):
+        raise KeySyncError(f"the {KEY_NAME} in {source} has characters this script will not write into a "
+                           f".env file; put it in {target} by hand")
+    if read_key(target) == value:
+        return "unchanged"
+    status = "updated" if present else "added"
+    if not dry_run:
+        text = "\n".join(_rewrite_key_lines(lines, f"{KEY_NAME}={value}")) + "\n"
+        _atomic_write(target, text, backup=False, private=True)
+    return status
 
 
 def install(path, entry, dry_run=False):
@@ -159,8 +269,24 @@ def describe(entry):
     return f"{scope}; {approval}; {safe}"
 
 
-def run_checks(path, which=shutil.which, probe=port_open, platform=sys.platform, repo_root=REPO_ROOT):
+def key_row(env, keys_file, gemini_env):
+    """(status, detail) for whether the Gemini CLI can see GEMINI_API_KEY. Says where it was
+    found, never what it is."""
+    if env.get(KEY_NAME):
+        return "ok", f"{KEY_NAME} is set in this shell's environment"
+    if read_key(gemini_env):
+        return "ok", f"{KEY_NAME} is set in {gemini_env}"
+    if read_key(keys_file):
+        return "fail", (f"{KEY_NAME} is only in {keys_file}, which the Gemini CLI does not read; "
+                        "run: python blender-gemini/install.py sync-key")
+    return "fail", f"{KEY_NAME} is not set; add it with: python docs/setup_keys.py, then run: " \
+                   "python blender-gemini/install.py sync-key"
+
+
+def run_checks(path, which=shutil.which, probe=port_open, platform=sys.platform, repo_root=REPO_ROOT,
+               env=None, keys_file=None, gemini_env=None):
     """A list of (status, label, detail), status being ok, warn or fail. Reads only."""
+    env = os.environ if env is None else env
     rows = []
 
     def add(status, label, detail):
@@ -184,6 +310,9 @@ def run_checks(path, which=shutil.which, probe=port_open, platform=sys.platform,
                       ("npx", "runs the gemini MCP server Claude calls")):
         found = which(tool)
         add("ok" if found else "fail", tool, found or f"not on PATH ({why})")
+
+    status, detail = key_row(env, keys_file or rosw_keys_file(), gemini_env or gemini_env_file())
+    add(status, "gemini key", detail)
 
     mcp_json = repo_root / ".mcp.json"
     try:
@@ -238,6 +367,19 @@ def _cmd_uninstall(args):
     return 0
 
 
+def _cmd_sync_key(args):
+    source = Path(args.keys_file).expanduser() if args.keys_file else rosw_keys_file()
+    target = Path(args.env_file).expanduser() if args.env_file else gemini_env_file()
+    status = sync_key(source, target, dry_run=args.dry_run, remove=args.remove)
+    prefix = "(dry run, nothing written) " if args.dry_run else ""
+    where = f"in {target}" if args.remove else f"in {target} (from {source})"
+    print(f"{prefix}{status}: {KEY_NAME} {where}")  # names and paths only, never the value
+    if status in ("added", "updated") and not args.dry_run:
+        print("  that file is now a second copy of the key; mode 600 on Linux and macOS. "
+              "Undo with: python blender-gemini/install.py sync-key --remove")
+    return 0
+
+
 def _cmd_check(args):
     rows = run_checks(_path_from(args))
     for status, label, detail in rows:
@@ -275,6 +417,14 @@ def build_parser():
     p_check = sub.add_parser("check", help="read-only preflight of the whole chain")
     common(p_check)
     p_check.set_defaults(func=_cmd_check)
+
+    p_key = sub.add_parser("sync-key", help=f"copy {KEY_NAME} from ~/.rosw/keys.env to ~/.gemini/.env "
+                                           "(the Gemini CLI does not read keys.env); never prints the key")
+    p_key.add_argument("--keys-file", help="the file to copy from (default: ROSW_KEYS_FILE or ~/.rosw/keys.env)")
+    p_key.add_argument("--env-file", help="the file to copy into (default: ~/.gemini/.env)")
+    p_key.add_argument("--remove", action="store_true", help=f"remove {KEY_NAME} from the Gemini .env instead")
+    p_key.add_argument("--dry-run", action="store_true", help="say what would happen; write nothing")
+    p_key.set_defaults(func=_cmd_sync_key)
     return parser
 
 

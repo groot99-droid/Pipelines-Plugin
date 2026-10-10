@@ -56,6 +56,47 @@ off; export and import need it off). The add-on's socket has no authentication, 
 Both profiles also set `BLENDER_MCP_DISABLE_TELEMETRY=1`: the server sends usage telemetry
 unless told not to. Delete that line from the settings file if you want it on.
 
+## API keys
+
+One key, `GEMINI_API_KEY`, serves both halves: the `gemini` MCP plugin Claude calls and the
+Blender chain run the same Gemini CLI. **Never paste a key into a Claude chat, a prompt, a
+commit or an issue**; Claude does not need to see it and the skill is told never to read it.
+Do this on your own machine, not in a cloud session:
+
+1. `python docs/setup_keys.py` opens a page on 127.0.0.1 that saves keys to
+   `~/.rosw/keys.env`, outside the repo. Enter the new `GEMINI_API_KEY` there. Creative-writing's
+   Gemini backend reads this file too.
+2. The Gemini CLI does not read `keys.env`, so copy the key where it looks:
+   ```powershell
+   python blender-gemini/install.py sync-key --dry-run    # says added / updated / unchanged
+   python blender-gemini/install.py sync-key              # writes ~/.gemini/.env
+   ```
+   It prints names and paths, never the key. The file is mode 600 on Linux and macOS, only the
+   `GEMINI_API_KEY` line is touched, and no `.rosw-bak` is made (a backup would keep the old key).
+   It refuses a value with anything but letters, digits, `_`, `.` and `-`, so a dotenv parser
+   cannot read it differently. This does make a second copy of the key on disk;
+   `sync-key --remove` takes it out again.
+3. `python blender-gemini/install.py check` has a `gemini key` line: where the Gemini CLI can see
+   the key (this shell's environment, or `~/.gemini/.env`), or the command that fixes it.
+
+To replace a key, repeat 1 and 2 (`sync-key` reports `updated`), then revoke the old one in
+Google AI Studio; nothing here can do that. Exporting `GEMINI_API_KEY` in the shell that starts
+Claude Code also works, and `check` counts it.
+
+**The Blender add-on's own keys are separate.** The default profile needs none. The full
+profile's `search_assets`, `import_asset` and `generate_3d` can use Sketchfab, Poly Pizza,
+Hyper3D and Hunyuan3D, and the add-on (v2.1.9 source) reads `BLENDERMCP_SKETCHFAB_API_KEY`,
+`BLENDERMCP_POLYPIZZA_API_KEY`, `BLENDERMCP_HYPER3D_API_KEY`, `BLENDERMCP_HUNYUAN3D_SECRET_ID`,
+`BLENDERMCP_HUNYUAN3D_SECRET_KEY` and `BLENDERMCP_PREMIUM_LICENSE_KEY`. It reads them inside
+Blender, from its own preferences or panel, or from the environment Blender was started from. They
+do not belong in `mcpServers.blender.env` in the Gemini settings, which only reaches the
+separate server process. This tool does not store, sync or check them.
+
+Not verified: which `.env` locations the Gemini CLI reads and in what order (sources disagree),
+which wins when both the environment and `~/.gemini/.env` set a key, whether you must pick API-key
+sign-in once with `/auth` in an interactive `gemini`, and whether a free AI Studio key still
+works with the Gemini CLI after the 2026-06-18 account change.
+
 ## What was and was not verified
 
 On 2026-10-10, from the packages' own source and docs: the package name (`mcp-for-blender`,

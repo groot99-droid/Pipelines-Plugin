@@ -247,8 +247,17 @@ CLI; the root `.mcp.json` registers the `gemini` MCP server Claude calls; the
 - `.mcp.json` pins `GEMINI_MCP_BACKEND=gemini`: without it `gemini-mcp-tool` calls the
   Antigravity CLI, which does not read the file `install.py` writes. Keep the pin and the
   `check` that tests it together.
-- Keep it stdlib-only and its tests on temporary folders:
-  `python -m unittest discover -s blender-gemini/tests`. No key is involved; never add one.
+- **Keys.** `GEMINI_API_KEY` is set through `docs/setup_keys.py` (`~/.rosw/keys.env`), and
+  `install.py sync-key` copies it to `~/.gemini/.env`, which the Gemini CLI reads and
+  `keys.env` is not. Only the author runs either. Never read, print, echo or ask for a key
+  value, never open those two files or Blender's preferences, and never run `sync-key` or
+  `setup_keys.py` unasked. `check` reports presence by name and place only. `sync-key` makes no
+  backup of the `.env` (it would hold the old key), writes mode 600, and refuses a value
+  that is not `[A-Za-z0-9_.-]`. Its key logic mirrors `setup_keys.py` and a test keeps the two
+  in step.
+- Keep it stdlib-only and its tests on temporary folders, with fake key values:
+  `python -m unittest discover -s blender-gemini/tests`. Never put a real key in a test,
+  a fixture or a document.
 
 ## Working on the ui-design plugin
 

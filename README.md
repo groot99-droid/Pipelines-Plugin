@@ -367,6 +367,7 @@ on your machine, not in a cloud session, and it has not been run end to end: the
 python blender-gemini/install.py install --dry-run              # show the Gemini CLI entry, write nothing
 python blender-gemini/install.py install                        # read-only profile (add --profile full for code)
 python blender-gemini/install.py check                          # read-only preflight of the whole chain
+python blender-gemini/install.py sync-key --dry-run             # copy GEMINI_API_KEY from keys.env to ~/.gemini/.env
 python -m unittest discover -s blender-gemini/tests             # the installer's tests
 ```
 

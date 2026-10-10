@@ -20,6 +20,14 @@ tell the author which lines failed and stop; each line names its fix. Do not run
 `install` or `uninstall` yourself unless the author asks: they write to
 `~/.gemini/settings.json`, outside the repo.
 
+The `gemini key` line says where `GEMINI_API_KEY` is visible to the Gemini CLI, by name
+and place only. If it fails, tell the author to run `python docs/setup_keys.py` and then
+`python blender-gemini/install.py sync-key` themselves (add `--dry-run` to preview). Never
+read, print or ask for a key value: do not open `~/.gemini/.env`, `~/.rosw/keys.env` or
+Blender's preferences, do not paste a key into a prompt, and do not run `sync-key` or
+`setup_keys.py` unasked. If the author pastes a key into the chat, do not repeat it or put
+it in any file, and tell them to revoke it and set a new one through `setup_keys.py`.
+
 If `mcp__gemini__ask-gemini` is not among your tools, the author has not approved the
 `gemini` server from `.mcp.json` yet (`/mcp` lists it), or Claude Code was started
 before the file existed. Say so and stop.
