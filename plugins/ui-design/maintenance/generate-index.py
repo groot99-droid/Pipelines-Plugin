@@ -83,6 +83,8 @@ DATA_PURPOSE = {
 
 # What each top-level tool folder is for. Hidden folders (.claude, .obsidian) are skipped.
 TOOL_PURPOSE = {
+    "blender-gemini": "Registers the Blender MCP server with the Gemini CLI, and the skill that lets "
+                      "Claude call Gemini to inspect or change an open Blender scene.",
     "creative-writing": "The Obsidian vault of 63 works plus the checkpointed pipeline that writes into it.",
     "docs": "Browsable HTML pages describing each tool, and a local helper for setting API keys.",
     "plugins": "Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, "

@@ -22,8 +22,11 @@ Where a tool's skills and agents live depends on how the tool is used:
 ```
 INDEX.md             generated index of the tools, skills and agents
 .claude/skills/      creative-writing-pipeline, chunk-tag-backfill, studio-pipeline,
-                     higgsfield-library-sync
+                     higgsfield-library-sync, blender-gemini
 .claude/agents/      creative-writing-{chunk-tagger,drafter,librarian-native}
+.mcp.json            the gemini MCP server Claude calls to reach Blender (blender-gemini)
+blender-gemini/      install.py (registers the Blender MCP server with the Gemini CLI,
+                     and checks the chain), tests/, README.md
 creative-writing/    the creative-writing tool
   vault/             the Obsidian vault — 63 works, annotations, chunk tags,
                      idea library, and the vault's own search tooling
@@ -227,6 +230,25 @@ panels cited by vault path and lines.
   the transcription header above a work's text is left off its panels.
 - `web/` stays the Chronicle Museum's viewer with the edits the README lists. Bring a
   fix from that repo over as a copy, and note it there.
+
+## Working on blender-gemini
+
+`blender-gemini/` registers the Blender MCP server (`mcp-for-blender`) with the Gemini
+CLI; the root `.mcp.json` registers the `gemini` MCP server Claude calls; the
+`blender-gemini` skill ties them together. Details and what is unverified are in
+`blender-gemini/README.md`.
+
+- `install.py` writes one entry, `mcpServers.blender`, into the Gemini CLI's
+  `~/.gemini/settings.json` (outside this repo), only when the author runs it. Do not run
+  `install` or `uninstall` unasked. `check` only reads.
+- The default profile exposes read-only tools. `execute_blender_code` runs arbitrary Python
+  in the author's live Blender, so the `full` profile and `--trust` are the author's choice,
+  never a default and never something to turn on to get past a refusal.
+- `.mcp.json` pins `GEMINI_MCP_BACKEND=gemini`: without it `gemini-mcp-tool` calls the
+  Antigravity CLI, which does not read the file `install.py` writes. Keep the pin and the
+  `check` that tests it together.
+- Keep it stdlib-only and its tests on temporary folders:
+  `python -m unittest discover -s blender-gemini/tests`. No key is involved; never add one.
 
 ## Working on the ui-design plugin
 
