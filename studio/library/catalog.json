@@ -2,6 +2,77 @@
  "source": "higgsfield",
  "items": [
   {
+   "id": "ba65ff49-a8ae-4a21-aa7b-7bffde9673aa",
+   "type": "image",
+   "model": "gpt_image_2_5",
+   "created": "2026-10-10T23:31:32Z",
+   "prompt": "character model sheet of one Hollowmere villager, chibi game character exactly 3 heads tall (head is one third of total height, very short stubby legs, short torso), huge oversized hands, big square block boots, wool trench coat over a plain flat grey vest, rolled sleeves, no scarf and no hat, A-pose, two views side by side: front view and three-quarter view, same figure and same pose, full body, feet on one ground line. Keep the costume and colours of the reference image but NOT its proportions: 3-heads-tall, flat cel, two flat tones per material, no gradients, no soft shading, thick even dark ink outlines. stylized toon-noir, chunky low-poly 3-heads-tall proportions, flat two-tone cel shading, thick dark ink outlines, moody night lighting with warm lantern orange and cool moonlight blue, palette #12141C #2C3240 #6F7A8C #D9D2C2 #F2B33D #2EC4B6 #E04E9A, clean solid background, no text.",
+   "settings": {
+    "aspect_ratio": "16:9",
+    "resolution": "1k",
+    "quality": "medium",
+    "width": 1344,
+    "height": 752
+   },
+   "inputs": [
+    {
+     "id": "36824cc8-60e6-480e-8a37-a008f5402cde",
+     "type": "media_input",
+     "role": "image"
+    },
+    {
+     "id": "95652a8f-260d-45ca-92b5-01edcaaae25a",
+     "type": "media_input",
+     "role": "image"
+    }
+   ],
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3FLtFeWYb31yf0imryWeCHdgXc6/hf_20261010_233132_ba65ff49-a8ae-4a21-aa7b-7bffde9673aa.png",
+   "ext": "png",
+   "preview_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3FLtFeWYb31yf0imryWeCHdgXc6/hf_20261010_233132_ba65ff49-a8ae-4a21-aa7b-7bffde9673aa_min.webp"
+  },
+  {
+   "id": "88a9ae17-2b15-4588-b1b5-9aba9459a90d",
+   "type": "image",
+   "model": "gpt_image_2_5",
+   "created": "2026-10-10T19:39:34Z",
+   "prompt": "Character turnaround model sheet, four consistent full-body views in a row: front view, 3/4 view, side profile, back view, evenly spaced, feet on one ground line, identical original villager on all views, the same character as the reference image (wool trench coat over a plain grey vest, rolled sleeves, oversized hands, block boots, no scarf, no hat) but restyled as a chunky game figure exactly 3 heads tall with a big head, short stubby legs and huge hands, flat cel shading with only two tones per material, thick dark ink outlines, A-pose, single subject per view, no props, stylized toon-noir, chunky low-poly 3-heads-tall proportions, flat two-tone cel shading, thick dark ink outlines, moody night lighting with warm lantern orange and cool moonlight blue, palette #12141C #2C3240 #6F7A8C #D9D2C2 #F2B33D #2EC4B6 #E04E9A, clean solid background, no text.",
+   "settings": {
+    "aspect_ratio": "16:9",
+    "resolution": "1k",
+    "quality": "low",
+    "width": 1344,
+    "height": 752
+   },
+   "inputs": [
+    {
+     "id": "ab6c960d-28d9-4f48-b6bf-23def6ae3fb0",
+     "type": "image_job",
+     "role": "image"
+    }
+   ],
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3FLtFeWYb31yf0imryWeCHdgXc6/hf_20261010_193934_88a9ae17-2b15-4588-b1b5-9aba9459a90d.png",
+   "ext": "png",
+   "preview_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3FLtFeWYb31yf0imryWeCHdgXc6/hf_20261010_193934_88a9ae17-2b15-4588-b1b5-9aba9459a90d_min.webp"
+  },
+  {
+   "id": "ab6c960d-28d9-4f48-b6bf-23def6ae3fb0",
+   "type": "image",
+   "model": "gpt_image_2_5",
+   "created": "2026-10-10T19:39:00Z",
+   "prompt": "Hero concept of one original Hollowmere villager, a fog-bound 1931 northern harbour hamlet: adult with a defined jaw and weathered face, wool trench coat over a plain grey vest, rolled sleeves, oversized hands, chunky block boots, no scarf and no hat, standing full-body front view in a relaxed A-pose, whole body and both feet in frame, single subject only, stylized 3D character render with faceted low-poly forms, stylized toon-noir, chunky low-poly 3-heads-tall proportions, flat two-tone cel shading, thick dark ink outlines, moody night lighting with warm lantern orange and cool moonlight blue, palette #12141C #2C3240 #6F7A8C #D9D2C2 #F2B33D #2EC4B6 #E04E9A, clean solid background, no text.",
+   "settings": {
+    "aspect_ratio": "3:4",
+    "resolution": "1k",
+    "quality": "low",
+    "width": 880,
+    "height": 1168
+   },
+   "inputs": [],
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3FLtFeWYb31yf0imryWeCHdgXc6/hf_20261010_193900_ab6c960d-28d9-4f48-b6bf-23def6ae3fb0.png",
+   "ext": "png",
+   "preview_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3FLtFeWYb31yf0imryWeCHdgXc6/hf_20261010_193900_ab6c960d-28d9-4f48-b6bf-23def6ae3fb0_min.webp"
+  },
+  {
    "id": "9a3f20a6-21bd-4649-8f6a-bc335a6c5bb9",
    "type": "image",
    "model": "gpt_image_2_5",
@@ -23777,12 +23848,12 @@
    "preview_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3FLtFeWYb31yf0imryWeCHdgXc6/hf_20260619_234329_a48a9491-6eec-4455-9006-baf40bde8f89_min.webp"
   }
  ],
- "count": 1054,
+ "count": 1057,
  "counts": {
-  "image": 758,
+  "image": 761,
   "video": 103,
   "audio": 100,
   "3d": 93
  },
- "updated": "2026-10-09T20:27:34Z"
+ "updated": "2026-10-10T23:32:04Z"
 }
