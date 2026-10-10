@@ -14,3 +14,24 @@
 # published on its own and this root rule does not travel with it. Both say the
 # same thing; validate-contract.py checks the plugin's.
 plugins/ui-design/** text eol=lf
+
+# ── brushes/ ─────────────────────────────────────────────────────────────────
+# `text=auto`, not the forced `text` used above: this folder holds binary files
+# (brush archives, images, zips), and a forced `text` would rewrite CRLF byte
+# pairs inside them on a machine with core.autocrlf=true. Text files are still
+# stored and checked out with LF.
+brushes/** text=auto eol=lf
+# brushes/app/ is the earlier designer exactly as it was received. Nine of its
+# files have CRLF line endings; `-text` keeps every byte, so that what git
+# stores is what was received. The line goes when the app is rebuilt.
+brushes/app/** -text
+brushes/**/*.png binary
+brushes/**/*.archive binary
+# The original brush files are committed through Git LFS: one of them is over
+# the size a plain blob may have. brushes/pipeline/tests/test_repo_policy.py
+# checks these lines, and that no large file under brushes/ escapes them.
+brushes/library/**/*.brushset filter=lfs diff=lfs merge=lfs -text
+brushes/library/**/*.brush filter=lfs diff=lfs merge=lfs -text
+# So are the brush files that come back from a device test sitting.
+brushes/device-tests/**/returned/**/*.brushset filter=lfs diff=lfs merge=lfs -text
+brushes/device-tests/**/returned/**/*.brush filter=lfs diff=lfs merge=lfs -text
