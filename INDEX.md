@@ -16,7 +16,7 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | `studio/` | Checkpointed production pipelines and the notes they leave behind. | - |
 | `writing-museum/` | A walkable 3D museum of the creative-writing vault, one room per work, built through the studio's scene-3d pipeline. | - |
 
-## Skills (11)
+## Skills (12)
 
 | Skill | What it does |
 |---|---|
@@ -24,6 +24,7 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | [chunk-tag-backfill](.claude/skills/chunk-tag-backfill/SKILL.md) | Runs (or re-runs) the creative-writing-chunk-tagger subagent over the vault's work files, writing/updating each one's creative-writing/vault/_ChunkTags/ sidecar. |
 | [creative-writing-pipeline](.claude/skills/creative-writing-pipeline/SKILL.md) | Walk a new idea for this vault through the checkpointed multi-stage pipeline (intake, reference pull, outline, draft, self-revision, vault integration) instead of writing a finished piece in one shot. |
 | [higgsfield-library-sync](.claude/skills/higgsfield-library-sync/SKILL.md) | Import the author's Higgsfield generations (images, videos, audio, 3D models) into the studio's generations library at studio/library/, or bring it up to date. |
+| [render-pipeline](.claude/skills/render-pipeline/SKILL.md) | Move a Who Did It master (a character .blend kept under studio/assets/who-did-it/) through the game repo's Blender rig and sprite packer into the committed atlases under apps/client/public/assets/. Use when the author wants to render, re-render, pack or ship a who-did-it chara... |
 | [studio-pipeline](.claude/skills/studio-pipeline/SKILL.md) | Walk one made thing through the studio's checkpointed pipeline (intake, context, recipe, execute, review, record), resolving and attesting its brand context before anything is run and leaving a Content MD in the studio vault. |
 | [blender-assets](plugins/blender/skills/blender-assets/SKILL.md) | Choose and bring in 3D assets for a Blender scene through the MCP for Blender integrations -- Poly Haven models, textures and HDRIs, Sketchfab, Poly Pizza low-poly models, and AI generation with Hyper3D Rodin or Hunyuan3D -- then scale, place and credit them. |
 | [blender-mcp](plugins/blender/skills/blender-mcp/SKILL.md) | Drive a live Blender session from Claude through the MCP for Blender server -- connect, inspect the scene, build or change objects, materials and lighting with bpy, and verify every step with viewport screenshots. |
