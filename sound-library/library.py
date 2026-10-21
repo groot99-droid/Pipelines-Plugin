@@ -396,10 +396,23 @@ def _member_from_zip(zip_path, member, sha256):
 
 # ── verify, status ───────────────────────────────────────────────────────────
 
+def duplicates(catalog=CATALOG):
+    """Pairs of ids that hold the same recording under different names. Kept on
+    purpose (both names are the author's), so they are notes, not problems."""
+    hashes, pairs = {}, []
+    for entry in load(catalog)["items"]:
+        digest = entry.get("sha256", "")
+        if digest in hashes:
+            pairs.append((entry["id"], hashes[digest]))
+        hashes.setdefault(digest, entry["id"])
+    return pairs
+
+
 def verify(catalog=CATALOG, files=FILES):
-    """Problems with the catalog or the files on disk, as strings."""
+    """Problems with the catalog or the files on disk, as strings. Two names for
+    one recording are not a problem; see duplicates()."""
     data = load(catalog)
-    problems, seen, hashes = [], set(), {}
+    problems, seen = [], set()
     for entry in data["items"]:
         for key in ("id", "name", "category", "file", "sha256", "source", "tags"):
             if key not in entry:
@@ -413,9 +426,6 @@ def verify(catalog=CATALOG, files=FILES):
         if not str(entry.get("file", "")).startswith(entry.get("category", "") + "/"):
             problems.append(f"{ident}: file is outside its category folder")
         digest = entry.get("sha256", "")
-        if digest in hashes:
-            problems.append(f"{ident}: same content as {hashes[digest]}")
-        hashes.setdefault(digest, ident)
         path = local_path(entry, files)
         if path.exists() and hashlib.sha256(path.read_bytes()).hexdigest() != digest:
             problems.append(f"{ident}: the file on disk does not match the catalog")
@@ -530,6 +540,8 @@ def main(argv=None):
             print(f"{len(placed)} fetched, {len(failed)} failed, {len(wanted) - len(todo)} already here")
             return EXIT_FAILED if failed else EXIT_OK
         if args.cmd == "verify":
+            for ident, other in duplicates():
+                print(f"note {ident}: same content as {other}")
             problems = verify()
             for line in problems:
                 print(line)

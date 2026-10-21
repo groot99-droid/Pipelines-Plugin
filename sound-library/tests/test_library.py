@@ -222,6 +222,13 @@ class LibraryTest(unittest.TestCase):
         library.save(data, self.catalog)
         self.assertTrue(any("does not match category" in p for p in library.verify(self.catalog, self.files)))
 
+    def test_two_names_for_one_recording_are_a_note_not_a_problem(self):
+        self.ingest(self.zip)
+        twin = make_zip(self.tmp / "Twins.zip", {"Bicycle Bell Again.wav": self.bell})
+        self.assertEqual(self.ingest(twin), (1, 0, 0, 0))
+        self.assertEqual(library.verify(self.catalog, self.files), [])
+        self.assertEqual(library.duplicates(self.catalog), [("twins/bicycle-bell-again", "test-sounds/bike-bell")])
+
     def test_status_counts_by_category(self):
         self.ingest(self.zip)
         rows = library.status(self.catalog, self.files)

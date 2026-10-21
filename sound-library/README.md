@@ -77,7 +77,7 @@ project that needs it; this folder is not versioned and is never added to git.
    `ingest` prints `N new, N already there, N replaced, N refused`. A file whose
    name gives an id the catalog already holds with different content is refused
    unless `--replace`. Two files with the same content under different names are
-   both kept and noted.
+   both kept; `ingest` and `verify` note the pair and neither fails on it.
 4. Commit `catalog.json`. Nothing else here changes.
 
 In a Claude Code session on this repo, the `sound-library` skill does steps 3

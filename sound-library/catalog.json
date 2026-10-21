@@ -4314,6 +4314,1898 @@
       "added": "2026-10-21"
     },
     {
+      "id": "cars/american-muscle-start",
+      "name": "American Muscle Start",
+      "category": "cars",
+      "file": "cars/american-muscle-start.wav",
+      "format": "wav",
+      "bytes": 1716576,
+      "sha256": "819c80cf6273545be1707103c0bcda9a64352032ef7ea05b8844ed4e126c9044",
+      "duration_s": 2.96,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "american",
+        "muscle",
+        "start"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt8.zip",
+        "member": "Car Pt8/American Muscle Start.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/american-truck-rev",
+      "name": "American Truck Rev",
+      "category": "cars",
+      "file": "cars/american-truck-rev.wav",
+      "format": "wav",
+      "bytes": 1066444,
+      "sha256": "f7b7fcdcf71c1a0e8ceaa8e892df76492a5caf5e21baea63a4d01d134b174005",
+      "duration_s": 1.844,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "american",
+        "truck",
+        "rev"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt9.zip",
+        "member": "Car Pt9/American Truck Rev.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/amg-pulling-up",
+      "name": "AMG Pulling Up",
+      "category": "cars",
+      "file": "cars/amg-pulling-up.wav",
+      "format": "wav",
+      "bytes": 1376290,
+      "sha256": "96e4d143fd90af05da136acd7299bdc439bdd1e231d1f8376406f66fcae1e8f7",
+      "duration_s": 4.738,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "amg",
+        "pulling",
+        "up"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt9.zip",
+        "member": "Car Pt9/AMG Pulling Up.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/behind-porsche-racing-away",
+      "name": "Behind Porsche Racing Away",
+      "category": "cars",
+      "file": "cars/behind-porsche-racing-away.wav",
+      "format": "wav",
+      "bytes": 6699892,
+      "sha256": "e6a3c9cece09b033dadc7f68a43bf79e95b9b69238af96534d00fc79580aa7d7",
+      "duration_s": 11.612,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "behind",
+        "porsche",
+        "racing",
+        "away"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt2.zip",
+        "member": "Car Pt2/Behind Porsche Racing Away.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/bmw-pull-up",
+      "name": "BMW Pull Up",
+      "category": "cars",
+      "file": "cars/bmw-pull-up.wav",
+      "format": "wav",
+      "bytes": 2548568,
+      "sha256": "285f3db1aa62bcafbe97ba0387abaf7d4fd52e12adc49d2741e4b55f0fef0d1f",
+      "duration_s": 4.404,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bmw",
+        "pull",
+        "up"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt7.zip",
+        "member": "Car Pt7/BMW Pull Up.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/car-drift-garage",
+      "name": "Car Drift Garage",
+      "category": "cars",
+      "file": "cars/car-drift-garage.wav",
+      "format": "wav",
+      "bytes": 3675158,
+      "sha256": "d4dc54fe199554b3457e9f860b3435b584fa6ebfbe0ec9cda906557192427766",
+      "duration_s": 6.36,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "drift",
+        "garage"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt5.zip",
+        "member": "Car Pt5/Car Drift Garage.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/car-hard-stop",
+      "name": "Car Hard Stop",
+      "category": "cars",
+      "file": "cars/car-hard-stop.wav",
+      "format": "wav",
+      "bytes": 3076118,
+      "sha256": "c27b5001da6208c7f99c50e6a2850b5a9c1a17750b413cea40faebce51f1124a",
+      "duration_s": 5.32,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "hard",
+        "stop"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt5.zip",
+        "member": "Car Pt5/Car Hard Stop.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/car-racing-by",
+      "name": "Car Racing By",
+      "category": "cars",
+      "file": "cars/car-racing-by.wav",
+      "format": "wav",
+      "bytes": 2452550,
+      "sha256": "ec17af046838281d14a9c363b8c1b7c1faff42d05214c7f55b2b446cf42c4048",
+      "duration_s": 4.238,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "racing"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt7.zip",
+        "member": "Car Pt7/Car Racing By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/car-rev",
+      "name": "Car Rev",
+      "category": "cars",
+      "file": "cars/car-rev.wav",
+      "format": "wav",
+      "bytes": 1016806,
+      "sha256": "49e41e2d3776560dec19351444b5c31fda9b767d6585ae54ac1b6f623b889c27",
+      "duration_s": 1.758,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "rev"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt1.zip",
+        "member": "Car Pt1/Car Rev.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/car-start-showroom",
+      "name": "Car Start Showroom",
+      "category": "cars",
+      "file": "cars/car-start-showroom.wav",
+      "format": "wav",
+      "bytes": 3928576,
+      "sha256": "d46a670c5052d33d13b24bfce2f34cd0e7f25f669633ec1e8a1ac6ad6fb3a176",
+      "duration_s": 6.8,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "start",
+        "showroom"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt5.zip",
+        "member": "Car Pt5/Car Start Showroom.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/change-gear-leaver",
+      "name": "Change Gear Leaver",
+      "category": "cars",
+      "file": "cars/change-gear-leaver.wav",
+      "format": "wav",
+      "bytes": 780396,
+      "sha256": "9f1841c345e8b28c9b9c0b626e889e4f95878df747454250464216799f947f04",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "change",
+        "gear",
+        "leaver"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt1.zip",
+        "member": "Car Pt1/Change Gear Leaver.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/cinematic-car-passing-by",
+      "name": "Cinematic Car Passing By",
+      "category": "cars",
+      "file": "cars/cinematic-car-passing-by.wav",
+      "format": "wav",
+      "bytes": 2760002,
+      "sha256": "780dccf6101e4a7a8c1d8d60352cd38bfd5ec670479963aac59a24573297f543",
+      "duration_s": 4.771,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "car",
+        "passing"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt6.zip",
+        "member": "Car Pt6/Cinematic Car Passing By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/cinematic-speed-drive-by",
+      "name": "Cinematic Speed Drive By",
+      "category": "cars",
+      "file": "cars/cinematic-speed-drive-by.wav",
+      "format": "wav",
+      "bytes": 2298740,
+      "sha256": "3706c0ad36285068a34f22828535b7c41692fc8cb2be9615fb695f1dc65eabcb",
+      "duration_s": 3.971,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "speed",
+        "drive"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt7.zip",
+        "member": "Car Pt7/Cinematic Speed Drive By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/close-to-highway-pass-by",
+      "name": "Close To Highway Pass By",
+      "category": "cars",
+      "file": "cars/close-to-highway-pass-by.wav",
+      "format": "wav",
+      "bytes": 1799040,
+      "sha256": "606e94fef869872715863c70b707a3b573f8aba88aa004183de863ceba6b2f2c",
+      "duration_s": 3.103,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "close",
+        "highway",
+        "pass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt8.zip",
+        "member": "Car Pt8/Close To Highway Pass By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/cold-start-sportscar",
+      "name": "Cold Start Sportscar",
+      "category": "cars",
+      "file": "cars/cold-start-sportscar.wav",
+      "format": "wav",
+      "bytes": 1510820,
+      "sha256": "80bbe2a6563ac8c4e4b7e4de93f47623bdd0b9a717e79ab13303e647c1d1a848",
+      "duration_s": 5.205,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cold",
+        "start",
+        "sportscar"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt9.zip",
+        "member": "Car Pt9/Cold Start Sportscar.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/deep-car-engine",
+      "name": "Deep Car Engine",
+      "category": "cars",
+      "file": "cars/deep-car-engine.wav",
+      "format": "wav",
+      "bytes": 2125740,
+      "sha256": "f91c3a552573ba88b7556ab4c4b4186a4b33ca8e6e059333cd517a7aa9f5ba37",
+      "duration_s": 3.67,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "car",
+        "engine"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt8.zip",
+        "member": "Car Pt8/Deep Car Engine.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/deep-engine-idle",
+      "name": "Deep Engine Idle",
+      "category": "cars",
+      "file": "cars/deep-engine-idle.wav",
+      "format": "wav",
+      "bytes": 2125740,
+      "sha256": "f1815d29e153a98347d4ced3ee66959cfaa2adfe2be7f396f9181ec3ad769d3f",
+      "duration_s": 3.67,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "engine",
+        "idle"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt8.zip",
+        "member": "Car Pt8/Deep Engine Idle.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/dodge-ram-rev",
+      "name": "Dodge Ram Rev",
+      "category": "cars",
+      "file": "cars/dodge-ram-rev.wav",
+      "format": "wav",
+      "bytes": 2106522,
+      "sha256": "298568d1bc42b2ebe981bafe23216a85c6e0dcf8d886e82cf6746459d3611bb7",
+      "duration_s": 3.637,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "dodge",
+        "ram",
+        "rev"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt8.zip",
+        "member": "Car Pt8/Dodge Ram Rev.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/drifting-race-car",
+      "name": "Drifting Race Car",
+      "category": "cars",
+      "file": "cars/drifting-race-car.wav",
+      "format": "wav",
+      "bytes": 2490936,
+      "sha256": "82ae726335aae136ae3aff50de4701b539e854682eff85f393513f6b1c7c1587",
+      "duration_s": 4.304,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "drifting",
+        "race",
+        "car"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt7.zip",
+        "member": "Car Pt7/Drifting Race Car.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/drive-away-nissan-skyline",
+      "name": "Drive Away Nissan Skyline",
+      "category": "cars",
+      "file": "cars/drive-away-nissan-skyline.wav",
+      "format": "wav",
+      "bytes": 1606844,
+      "sha256": "358331fee4f7861e895b5a16ae155ba0e6b3ad8f56ba7ed483a54d1b4fa4f7cb",
+      "duration_s": 2.769,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "drive",
+        "away",
+        "nissan",
+        "skyline"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt8.zip",
+        "member": "Car Pt8/Drive Away Nissan Skyline.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/driving-porsche-911",
+      "name": "Driving Porsche 911",
+      "category": "cars",
+      "file": "cars/driving-porsche-911.wav",
+      "format": "wav",
+      "bytes": 5969582,
+      "sha256": "cc907155c6bd3998826f6e14610144d6956c482ad9dc06db876f9ac306919c13",
+      "duration_s": 10.344,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "driving",
+        "porsche",
+        "911"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt2.zip",
+        "member": "Car Pt2/Driving Porsche 911.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/electric-vehicle-pass-by",
+      "name": "Electric Vehicle Pass By",
+      "category": "cars",
+      "file": "cars/electric-vehicle-pass-by.wav",
+      "format": "wav",
+      "bytes": 2913734,
+      "sha256": "e8810f8e1051a43ff24660f03857e947206086c6e37e17d970dc988bfe498049",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "vehicle",
+        "pass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt6.zip",
+        "member": "Car Pt6/Electric Vehicle Pass By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/fast-car-cold-start",
+      "name": "Fast Car Cold Start",
+      "category": "cars",
+      "file": "cars/fast-car-cold-start.wav",
+      "format": "wav",
+      "bytes": 2361720,
+      "sha256": "2443d8c5d84045a46a792235a327799f5e73e2b17d67f26b97f24060f3c59e72",
+      "duration_s": 4.08,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fast",
+        "car",
+        "cold",
+        "start"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt7.zip",
+        "member": "Car Pt7/Fast Car Cold Start.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/fast-car-in-tunnel",
+      "name": "Fast Car In Tunnel",
+      "category": "cars",
+      "file": "cars/fast-car-in-tunnel.wav",
+      "format": "wav",
+      "bytes": 3421698,
+      "sha256": "57784b59f99c4d001ee1809ad153f16127d328ab3dc757b397beb0c6067e8be2",
+      "duration_s": 5.92,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fast",
+        "car",
+        "tunnel"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt5.zip",
+        "member": "Car Pt5/Fast Car In Tunnel.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/ferrari-pass-by-tunnel",
+      "name": "Ferrari Pass By Tunnel",
+      "category": "cars",
+      "file": "cars/ferrari-pass-by-tunnel.wav",
+      "format": "wav",
+      "bytes": 2548568,
+      "sha256": "25be058ef3ce5540a208e079e511f9e7f2b628ebdfcb55564e855b94246205ac",
+      "duration_s": 4.404,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ferrari",
+        "pass",
+        "tunnel"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt7.zip",
+        "member": "Car Pt7/Ferrari Pass By Tunnel.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/ferrari-pulling-up",
+      "name": "Ferrari Pulling Up",
+      "category": "cars",
+      "file": "cars/ferrari-pulling-up.wav",
+      "format": "wav",
+      "bytes": 2279588,
+      "sha256": "23f0fcc2f4b6c42343f9f63ae2e113a0050630f1f6bd1aba389a97dbcdd8cba8",
+      "duration_s": 3.937,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ferrari",
+        "pulling",
+        "up"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt7.zip",
+        "member": "Car Pt7/Ferrari Pulling Up.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/ferrari-speeding-away-racetrack",
+      "name": "Ferrari Speeding Away Racetrack",
+      "category": "cars",
+      "file": "cars/ferrari-speeding-away-racetrack.wav",
+      "format": "wav",
+      "bytes": 6911830,
+      "sha256": "6241bb49330cd21ee22de305fba3c2905375e5ada395951f14c8d60709d38453",
+      "duration_s": 11.979,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ferrari",
+        "speeding",
+        "away",
+        "racetrack"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt2.zip",
+        "member": "Car Pt2/Ferrari Speeding Away Racetrack.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/formule-1-2023-corner",
+      "name": "Formule 1 2023 Corner",
+      "category": "cars",
+      "file": "cars/formule-1-2023-corner.wav",
+      "format": "wav",
+      "bytes": 5566070,
+      "sha256": "dee406dda8e31db48c5b13fe3147c19a8d49bfd4fb3f26eb0f658a2e209f5d06",
+      "duration_s": 9.643,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "formule",
+        "1",
+        "2023",
+        "corner"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt3.zip",
+        "member": "Car Pt3/Formule 1 2023 Corner.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/formule-1-23-corner-left-to-right",
+      "name": "Formule 1 '23 Corner Left To Right",
+      "category": "cars",
+      "file": "cars/formule-1-23-corner-left-to-right.wav",
+      "format": "wav",
+      "bytes": 5566070,
+      "sha256": "aa4b56081e9d14a7a57634b072735a91a5d2d6b60645d5a9d278d395988a1c9d",
+      "duration_s": 9.643,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "formule",
+        "1",
+        "23",
+        "corner",
+        "left",
+        "right"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt3.zip",
+        "member": "Car Pt3/Formule 1 '23 Corner Left To Right.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/formule-1-23-corner-right-to-left",
+      "name": "Formule 1 '23 Corner Right To Left",
+      "category": "cars",
+      "file": "cars/formule-1-23-corner-right-to-left.wav",
+      "format": "wav",
+      "bytes": 5566070,
+      "sha256": "0e6139f587bd7c983d689b86d30a941e483e3e309f6d37408bee75aa78e81dc8",
+      "duration_s": 9.643,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "formule",
+        "1",
+        "23",
+        "corner",
+        "right",
+        "left"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt3.zip",
+        "member": "Car Pt3/Formule 1 '23 Corner Right To Left.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/formule-1-v6",
+      "name": "Formule 1 V6",
+      "category": "cars",
+      "file": "cars/formule-1-v6.wav",
+      "format": "wav",
+      "bytes": 5335362,
+      "sha256": "fa30517700352e9dec853b1b0b7541f17c29f8b88c9f304db58fb15d1d83674e",
+      "duration_s": 9.243,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "formule",
+        "1",
+        "v6"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt4.zip",
+        "member": "Car Pt4/Formule 1 V6.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/formule-1-v6-left-to-right",
+      "name": "Formule 1 V6 Left To Right",
+      "category": "cars",
+      "file": "cars/formule-1-v6-left-to-right.wav",
+      "format": "wav",
+      "bytes": 5335362,
+      "sha256": "1b59492a897522a26799e4972173ec2c4eeb7949a6db30db24563559c9a7b79a",
+      "duration_s": 9.243,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "formule",
+        "1",
+        "v6",
+        "left",
+        "right"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt3.zip",
+        "member": "Car Pt3/Formule 1 V6 Left To Right.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/formule-1-v6-right-to-left",
+      "name": "Formule 1 V6 Right To Left",
+      "category": "cars",
+      "file": "cars/formule-1-v6-right-to-left.wav",
+      "format": "wav",
+      "bytes": 5335362,
+      "sha256": "ea3c292eea4833c64c993bfeb596a382db329ebab8c8a2f6856f6a721fc80374",
+      "duration_s": 9.243,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "formule",
+        "1",
+        "v6",
+        "right",
+        "left"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt3.zip",
+        "member": "Car Pt3/Formule 1 V6 Right To Left.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/hard-stop-car",
+      "name": "Hard Stop Car",
+      "category": "cars",
+      "file": "cars/hard-stop-car.wav",
+      "format": "wav",
+      "bytes": 1030248,
+      "sha256": "42b789a6ce00e9ad312c3e7c382440398e7d91e7e9b62b3a2c49ab905004ac79",
+      "duration_s": 1.768,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hard",
+        "stop",
+        "car"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt2.zip",
+        "member": "Car Pt2/Hard Stop Car.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/inside-car-ambience",
+      "name": "Inside Car Ambience",
+      "category": "cars",
+      "file": "cars/inside-car-ambience.wav",
+      "format": "wav",
+      "bytes": 6923644,
+      "sha256": "83d55ed77c2c0800611a4a256ed905ab297202f2c7bc0076047610ad94d3e55e",
+      "duration_s": 12.0,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "car",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt1.zip",
+        "member": "Car Pt1/Inside Car Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/inside-car-rev",
+      "name": "Inside Car Rev",
+      "category": "cars",
+      "file": "cars/inside-car-rev.wav",
+      "format": "wav",
+      "bytes": 2606222,
+      "sha256": "9871c192a2560474e91c5fe80cf336669068518df42124061eada27566f52dc1",
+      "duration_s": 4.505,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "car",
+        "rev"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt6.zip",
+        "member": "Car Pt6/Inside Car Rev.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/inside-car-still-sound",
+      "name": "Inside Car Still Sound",
+      "category": "cars",
+      "file": "cars/inside-car-still-sound.wav",
+      "format": "wav",
+      "bytes": 1760574,
+      "sha256": "8f94c49f131e76051342128a4b7f74eec41f741f1dc25bb45f63c27229a6f84f",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "car",
+        "still",
+        "sound"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt8.zip",
+        "member": "Car Pt8/Inside Car Still Sound.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/inside-driving-porsche",
+      "name": "Inside Driving Porsche",
+      "category": "cars",
+      "file": "cars/inside-driving-porsche.wav",
+      "format": "wav",
+      "bytes": 5969568,
+      "sha256": "7b08fc00107ae81953a1b4c64436afff965f399ef7ee04f455a6ec9274f66527",
+      "duration_s": 10.344,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "driving",
+        "porsche"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt2.zip",
+        "member": "Car Pt2/Inside Driving Porsche.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/inside-driving-sportscar",
+      "name": "Inside Driving Sportscar",
+      "category": "cars",
+      "file": "cars/inside-driving-sportscar.wav",
+      "format": "wav",
+      "bytes": 2414030,
+      "sha256": "a436cf592a4022fcc9f148a1aa5e5b6e2f3da8d2ba486b75038e2809ec13dbd1",
+      "duration_s": 4.171,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "driving",
+        "sportscar"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt7.zip",
+        "member": "Car Pt7/Inside Driving Sportscar.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/inside-electric-car",
+      "name": "Inside Electric Car",
+      "category": "cars",
+      "file": "cars/inside-electric-car.wav",
+      "format": "wav",
+      "bytes": 1760574,
+      "sha256": "84902a45978c8567ac834f4d12b39819ccc076fcb7bdcf636ad4f059dd48ebbb",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "electric",
+        "car"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt8.zip",
+        "member": "Car Pt8/Inside Electric Car.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/inside-ferrari-pull-up",
+      "name": "Inside Ferrari Pull Up",
+      "category": "cars",
+      "file": "cars/inside-ferrari-pull-up.wav",
+      "format": "wav",
+      "bytes": 2548568,
+      "sha256": "150d0eeaa16c3eb48bf282f7fb77b1559f3dfb53db681c96d44fca641dd2c654",
+      "duration_s": 4.404,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "ferrari",
+        "pull",
+        "up"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt7.zip",
+        "member": "Car Pt7/Inside Ferrari Pull Up.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/inside-nissan-skyline",
+      "name": "Inside Nissan Skyline",
+      "category": "cars",
+      "file": "cars/inside-nissan-skyline.wav",
+      "format": "wav",
+      "bytes": 2164182,
+      "sha256": "a462f9c3511754be38ae40c918431df473b7ccf4d4a34fae98cfa35ccc63d9b2",
+      "duration_s": 3.737,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "nissan",
+        "skyline"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt8.zip",
+        "member": "Car Pt8/Inside Nissan Skyline.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/inside-porsche-911-driving",
+      "name": "Inside Porsche 911 Driving",
+      "category": "cars",
+      "file": "cars/inside-porsche-911-driving.wav",
+      "format": "wav",
+      "bytes": 8314362,
+      "sha256": "6fad677b037b2c39584d6e93b2b32a19625e3fbd51e167d36d562fda2da25ff2",
+      "duration_s": 14.414,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "porsche",
+        "911",
+        "driving"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt1.zip",
+        "member": "Car Pt1/Inside Porsche 911 Driving.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/inside-rally-car-drifting",
+      "name": "Inside Rally Car Drifting",
+      "category": "cars",
+      "file": "cars/inside-rally-car-drifting.wav",
+      "format": "wav",
+      "bytes": 4124566,
+      "sha256": "5bcf64487593c4784bf01ad92016c9d0c525628ee0a21c91b1cf4f40a87c693f",
+      "duration_s": 7.14,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "rally",
+        "car",
+        "drifting"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt5.zip",
+        "member": "Car Pt5/Inside Rally Car Drifting.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/inside-speeding-car",
+      "name": "Inside Speeding Car",
+      "category": "cars",
+      "file": "cars/inside-speeding-car.wav",
+      "format": "wav",
+      "bytes": 4343198,
+      "sha256": "313d96807115fbb9baa421db55f1b7b9005d083af83710c781bb0cd9c609052e",
+      "duration_s": 7.52,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "speeding",
+        "car"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt4.zip",
+        "member": "Car Pt4/Inside Speeding Car.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/inside-sportscar-shifting",
+      "name": "Inside Sportscar Shifting",
+      "category": "cars",
+      "file": "cars/inside-sportscar-shifting.wav",
+      "format": "wav",
+      "bytes": 7737780,
+      "sha256": "2aa39914a8851ba87c220f04497314cdc165cb6def20e08e702149b9206a77aa",
+      "duration_s": 13.413,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "sportscar",
+        "shifting"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt1.zip",
+        "member": "Car Pt1/Inside Sportscar Shifting .wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/interior-driving-fast-car",
+      "name": "Interior Driving Fast Car",
+      "category": "cars",
+      "file": "cars/interior-driving-fast-car.wav",
+      "format": "wav",
+      "bytes": 2759978,
+      "sha256": "6b59f4ea83485d44434ec96c051e7d8b95b438063f370a3afd581bd6a38f2094",
+      "duration_s": 4.771,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "interior",
+        "driving",
+        "fast",
+        "car"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt6.zip",
+        "member": "Car Pt6/Interior Driving Fast Car.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/japanese-car-rev",
+      "name": "Japanese Car Rev",
+      "category": "cars",
+      "file": "cars/japanese-car-rev.wav",
+      "format": "wav",
+      "bytes": 2529350,
+      "sha256": "a2349cb534cb20fb3bb2b92d5297e7e06d5dd56c341dc139e2d164bd47a3dc61",
+      "duration_s": 4.371,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "japanese",
+        "car",
+        "rev"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt7.zip",
+        "member": "Car Pt7/Japanese Car Rev.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/japanese-sportscar-rev",
+      "name": "Japanese Sportscar Rev",
+      "category": "cars",
+      "file": "cars/japanese-sportscar-rev.wav",
+      "format": "wav",
+      "bytes": 1041124,
+      "sha256": "67abbf0026b822fd0e748f06d624424f93326909cdca6412acf2f679357383e1",
+      "duration_s": 1.8,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "japanese",
+        "sportscar",
+        "rev"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt2.zip",
+        "member": "Car Pt2/Japanese Sportscar Rev.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/medium-car-drift",
+      "name": "Medium Car Drift",
+      "category": "cars",
+      "file": "cars/medium-car-drift.wav",
+      "format": "wav",
+      "bytes": 1030248,
+      "sha256": "ab36c342bf24830e24737ad55552ce006533faa1dae7db73648557097f42803c",
+      "duration_s": 1.768,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "medium",
+        "car",
+        "drift"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt1.zip",
+        "member": "Car Pt1/Medium Car Drift.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/old-car-driving-by",
+      "name": "Old Car Driving By",
+      "category": "cars",
+      "file": "cars/old-car-driving-by.wav",
+      "format": "wav",
+      "bytes": 4182040,
+      "sha256": "ef346aff646fbbe99013b775385f159e9f722947815f8ce4881145ae84f4875f",
+      "duration_s": 7.24,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "car",
+        "driving"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt4.zip",
+        "member": "Car Pt4/Old Car Driving By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/old-f1-car-driving-by",
+      "name": "Old F1 Car Driving By",
+      "category": "cars",
+      "file": "cars/old-f1-car-driving-by.wav",
+      "format": "wav",
+      "bytes": 4932254,
+      "sha256": "2ea0be4a9b83f1b62d7a4d2d66495d0ad7a1a06b3d4f9550b2c9b5deab8d63c0",
+      "duration_s": 8.542,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "f1",
+        "car",
+        "driving"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt4.zip",
+        "member": "Car Pt4/Old F1 Car Driving By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/old-sportscar-rev",
+      "name": "Old Sportscar Rev",
+      "category": "cars",
+      "file": "cars/old-sportscar-rev.wav",
+      "format": "wav",
+      "bytes": 1856676,
+      "sha256": "2ba87b22e88ded34ce59db287658cb160357b07e5fe517b7c8e9266c4b210ade",
+      "duration_s": 3.203,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "sportscar",
+        "rev"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt8.zip",
+        "member": "Car Pt8/Old Sportscar Rev.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/passing-by-fast-cars",
+      "name": "Passing By Fast Cars",
+      "category": "cars",
+      "file": "cars/passing-by-fast-cars.wav",
+      "format": "wav",
+      "bytes": 2106572,
+      "sha256": "3b96ffe1966d0c1acd86906f80bfcb6ae04cd3b6e187851f28c4f50741116e60",
+      "duration_s": 3.637,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "passing",
+        "fast",
+        "cars"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt8.zip",
+        "member": "Car Pt8/Passing By Fast Cars.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/passing-by-racetrack-car",
+      "name": "Passing By Racetrack Car",
+      "category": "cars",
+      "file": "cars/passing-by-racetrack-car.wav",
+      "format": "wav",
+      "bytes": 2740760,
+      "sha256": "f69fab6da06845affdd96efff8a1983a0d55a47e6f13714770ef82ee2caf0ebd",
+      "duration_s": 4.738,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "passing",
+        "racetrack",
+        "car"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt6.zip",
+        "member": "Car Pt6/Passing By Racetrack Car.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/porsche-turn-speeding-away",
+      "name": "Porsche Turn Speeding Away",
+      "category": "cars",
+      "file": "cars/porsche-turn-speeding-away.wav",
+      "format": "wav",
+      "bytes": 8391712,
+      "sha256": "27c1333bfc3c80b65fa94d81c934dedd8b80ed944b9cc9a4fa4cce612defc4c9",
+      "duration_s": 14.548,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "porsche",
+        "turn",
+        "speeding",
+        "away"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt1.zip",
+        "member": "Car Pt1/Porsche Turn Speeding Away.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/pull-up-v6",
+      "name": "Pull Up V6",
+      "category": "cars",
+      "file": "cars/pull-up-v6.wav",
+      "format": "wav",
+      "bytes": 2106522,
+      "sha256": "0f4c6d709fdba46a0ec8e4a029e8c2320cc1de5fd6c75033b70030e1dd290e2a",
+      "duration_s": 3.637,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "pull",
+        "up",
+        "v6"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt8.zip",
+        "member": "Car Pt8/Pull Up V6.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/race-car-drive-by",
+      "name": "Race Car Drive By",
+      "category": "cars",
+      "file": "cars/race-car-drive-by.wav",
+      "format": "wav",
+      "bytes": 1356972,
+      "sha256": "937d1b814cd14f8b713acd2920724516b4255e5fb4492e3ab26ca8b1d8ce7fb1",
+      "duration_s": 2.336,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "race",
+        "car",
+        "drive"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt9.zip",
+        "member": "Car Pt9/Race Car Drive By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/racetrack-cars",
+      "name": "Racetrack Cars",
+      "category": "cars",
+      "file": "cars/racetrack-cars.wav",
+      "format": "wav",
+      "bytes": 2932954,
+      "sha256": "d79f12d1116fa384cdb371e91a8ffdc482a3b7ad3c5cfe1af64bcea2b9cf500d",
+      "duration_s": 5.072,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "racetrack",
+        "cars"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt5.zip",
+        "member": "Car Pt5/Racetrack Cars.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/racetrack-fast-car",
+      "name": "Racetrack Fast Car",
+      "category": "cars",
+      "file": "cars/racetrack-fast-car.wav",
+      "format": "wav",
+      "bytes": 4201394,
+      "sha256": "97c80832b5e9c766beb3aef8d5da559004c274c5f0e9ddeb801d3497e081b849",
+      "duration_s": 7.274,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "racetrack",
+        "fast",
+        "car"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt4.zip",
+        "member": "Car Pt4/Racetrack Fast Car.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/racetrack-pass-by",
+      "name": "Racetrack Pass By",
+      "category": "cars",
+      "file": "cars/racetrack-pass-by.wav",
+      "format": "wav",
+      "bytes": 2798414,
+      "sha256": "3931904f6cdf31399290706fb77d779c03422dc812846feb9b17ea65516171a8",
+      "duration_s": 4.838,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "racetrack",
+        "pass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt6.zip",
+        "member": "Car Pt6/Racetrack Pass By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/rally-car-drive-away",
+      "name": "Rally Car Drive Away",
+      "category": "cars",
+      "file": "cars/rally-car-drive-away.wav",
+      "format": "wav",
+      "bytes": 1299344,
+      "sha256": "5eef4a10fcbef404f2d821a6a39bae7de0c16504bd7487945adfb3985e49ce06",
+      "duration_s": 2.236,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rally",
+        "car",
+        "drive",
+        "away"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt9.zip",
+        "member": "Car Pt9/Rally Car Drive Away.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/rev-american-car",
+      "name": "Rev American Car",
+      "category": "cars",
+      "file": "cars/rev-american-car.wav",
+      "format": "wav",
+      "bytes": 2615298,
+      "sha256": "7ff2b81bebf788fcc542aefb95aec97e2dd6005020ecc0c7a0f4ad4e9089ac02",
+      "duration_s": 4.52,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rev",
+        "american",
+        "car"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt6.zip",
+        "member": "Car Pt6/Rev American Car.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/revving-mclaren",
+      "name": "Revving McLaren",
+      "category": "cars",
+      "file": "cars/revving-mclaren.wav",
+      "format": "wav",
+      "bytes": 1606826,
+      "sha256": "9d3540d2f75fd344d64baa69517c240462aef606b5e9d156e1ddf2fb51306ee6",
+      "duration_s": 2.769,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "revving",
+        "mclaren"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt9.zip",
+        "member": "Car Pt9/Revving McLaren.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/short-drift",
+      "name": "Short Drift",
+      "category": "cars",
+      "file": "cars/short-drift.wav",
+      "format": "wav",
+      "bytes": 1030248,
+      "sha256": "d5197a9436ab2b0a4302ee70c42fe84c4fc5ff6b04dbf78391a915c933c4e9d0",
+      "duration_s": 1.768,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "drift"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt1.zip",
+        "member": "Car Pt1/Short Drift.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/skyline-idle-engine",
+      "name": "Skyline Idle Engine",
+      "category": "cars",
+      "file": "cars/skyline-idle-engine.wav",
+      "format": "wav",
+      "bytes": 2394832,
+      "sha256": "a2bafce5c3da056b44e3aecda1cb3fba4181ec827371c7aab7db7e2c15107e72",
+      "duration_s": 4.137,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "skyline",
+        "idle",
+        "engine"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt7.zip",
+        "member": "Car Pt7/Skyline Idle Engine.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/slow-car-ambience",
+      "name": "Slow Car Ambience",
+      "category": "cars",
+      "file": "cars/slow-car-ambience.wav",
+      "format": "wav",
+      "bytes": 1280094,
+      "sha256": "4b32f94b286fbdb1e7368bd42b0c33ba90d8beab91f40ede2dedf3bd5df46c6a",
+      "duration_s": 4.404,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slow",
+        "car",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt9.zip",
+        "member": "Car Pt9/Slow Car Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/smooth-drive-away-inside-car",
+      "name": "Smooth Drive Away Inside Car",
+      "category": "cars",
+      "file": "cars/smooth-drive-away-inside-car.wav",
+      "format": "wav",
+      "bytes": 2606222,
+      "sha256": "21fb01a06d96305784278338f045df59bd811eed0d7a00f04042310e24b8de8d",
+      "duration_s": 4.505,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "smooth",
+        "drive",
+        "away",
+        "inside",
+        "car"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt6.zip",
+        "member": "Car Pt6/Smooth Drive Away Inside Car.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/speeding-ferrari",
+      "name": "Speeding Ferrari",
+      "category": "cars",
+      "file": "cars/speeding-ferrari.wav",
+      "format": "wav",
+      "bytes": 2798390,
+      "sha256": "7eacd97d9aa6c78f12f371e76f7dcda9efdaf4cbb49130c5cf6bbacf2f3dff3b",
+      "duration_s": 4.838,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "speeding",
+        "ferrari"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt6.zip",
+        "member": "Car Pt6/Speeding Ferrari.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/sportscar-around-the-corner",
+      "name": "Sportscar Around the Corner",
+      "category": "cars",
+      "file": "cars/sportscar-around-the-corner.wav",
+      "format": "wav",
+      "bytes": 1020700,
+      "sha256": "3d7a64ab7cda1f7307d786a22541110228b159ed3e85e8b886369b156633ca64",
+      "duration_s": 3.503,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sportscar",
+        "around",
+        "corner"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt1.zip",
+        "member": "Car Pt1/Sportscar Around the Corner.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/sportscar-cold-start",
+      "name": "Sportscar Cold Start",
+      "category": "cars",
+      "file": "cars/sportscar-cold-start.wav",
+      "format": "wav",
+      "bytes": 3874696,
+      "sha256": "d60bab328715be97e48fed5109c8f781b681ffa3e29fe0d2ed4862ccd65beb11",
+      "duration_s": 6.707,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sportscar",
+        "cold",
+        "start"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt5.zip",
+        "member": "Car Pt5/Sportscar Cold Start.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/sportscar-drive-by",
+      "name": "Sportscar Drive By",
+      "category": "cars",
+      "file": "cars/sportscar-drive-by.wav",
+      "format": "wav",
+      "bytes": 2567786,
+      "sha256": "b77e6f3e23359b446846e7c2c8bfbaeb7577b9a35135a0651afe53d17d991718",
+      "duration_s": 4.438,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sportscar",
+        "drive"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt6.zip",
+        "member": "Car Pt6/Sportscar Drive By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/sportscar-pulling-up-ambience",
+      "name": "Sportscar Pulling Up Ambience",
+      "category": "cars",
+      "file": "cars/sportscar-pulling-up-ambience.wav",
+      "format": "wav",
+      "bytes": 2279516,
+      "sha256": "ac0ea4170b98d0155af4693a0b17bc68a449e779e45dcf545c26e9394234b71f",
+      "duration_s": 7.875,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sportscar",
+        "pulling",
+        "up",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt8.zip",
+        "member": "Car Pt8/Sportscar Pulling Up Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/sportscar-speeding",
+      "name": "Sportscar Speeding",
+      "category": "cars",
+      "file": "cars/sportscar-speeding.wav",
+      "format": "wav",
+      "bytes": 3048242,
+      "sha256": "14f65d7b173e4643136952afd29ac80df677d7b66e3f2ed87d14d684fa6da188",
+      "duration_s": 5.272,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sportscar",
+        "speeding"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt5.zip",
+        "member": "Car Pt5/Sportscar Speeding.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "cars/styled-car-pass-by",
+      "name": "Styled Car Pass By",
+      "category": "cars",
+      "file": "cars/styled-car-pass-by.wav",
+      "format": "wav",
+      "bytes": 996928,
+      "sha256": "4e246e846c74cef24d1c5d99dc2f936503b9abbdb5ad7015f6d1316e58da7d76",
+      "duration_s": 1.724,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "styled",
+        "car",
+        "pass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Car_Pt1.zip",
+        "member": "Car Pt1/Styled Car Pass By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "crowd-fans/cheering-crowd-stadium",
       "name": "Cheering Crowd Stadium",
       "category": "crowd-fans",
