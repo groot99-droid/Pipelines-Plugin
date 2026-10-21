@@ -2391,6 +2391,2980 @@
       "added": "2026-10-21"
     },
     {
+      "id": "atmospheric-accents/bass-metal-whoosh",
+      "name": "Bass Metal Whoosh",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/bass-metal-whoosh.wav",
+      "format": "wav",
+      "bytes": 511332,
+      "sha256": "a854c8c0f861fc95bf67428e700a9abb804fe040715e533591c44a5e0cc27753",
+      "duration_s": 0.868,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "metal",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Bass Metal Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/bass-punch",
+      "name": "Bass Punch",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/bass-punch.wav",
+      "format": "wav",
+      "bytes": 780396,
+      "sha256": "f10f68a32d9a342e9f05a87cb03c97defcceea0ea879c5ff773da71ef2a48ddc",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "punch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Bass Punch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/bulb-whoosh",
+      "name": "Bulb Whoosh",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/bulb-whoosh.wav",
+      "format": "wav",
+      "bytes": 741960,
+      "sha256": "67d576e48b9520795bac4f23e652017515b2fd67acdebdfc82508da6d10f8928",
+      "duration_s": 1.268,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bulb",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Bulb Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/car-bass-gear",
+      "name": "Car Bass Gear",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/car-bass-gear.wav",
+      "format": "wav",
+      "bytes": 626646,
+      "sha256": "7729425433f3713e771825347eef60f031babb06b99bd64ac34fbaafd9824ec1",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "bass",
+        "gear"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Car Bass Gear.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/car-impact-ticking",
+      "name": "Car Impact Ticking",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/car-impact-ticking.wav",
+      "format": "wav",
+      "bytes": 1049466,
+      "sha256": "5da66d4d7cf5dd3b5fd19e1e76c0df3d920e72051a9d0e51b13ce03da5343edd",
+      "duration_s": 1.802,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "impact",
+        "ticking"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Car Impact Ticking.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/car-metal-impact",
+      "name": "Car Metal Impact",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/car-metal-impact.wav",
+      "format": "wav",
+      "bytes": 530550,
+      "sha256": "d76af86de519eb8729694326a2facc6dc7880294c02c24525f98e772bf984456",
+      "duration_s": 0.901,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "metal",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Car Metal Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/car-trunk-open",
+      "name": "Car Trunk Open",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/car-trunk-open.wav",
+      "format": "wav",
+      "bytes": 1255838,
+      "sha256": "d4d2d73c9a96e42f4d8010cacb7e6e96618a4f4f7df920f8375e72428ef57060",
+      "duration_s": 2.16,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "trunk",
+        "open"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Car Trunk Open.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/change-gear-leaver",
+      "name": "Change Gear Leaver",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/change-gear-leaver.wav",
+      "format": "wav",
+      "bytes": 780396,
+      "sha256": "9f1841c345e8b28c9b9c0b626e889e4f95878df747454250464216799f947f04",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "change",
+        "gear",
+        "leaver"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Change Gear Leaver.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/cinematic-gear-change",
+      "name": "Cinematic Gear Change",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/cinematic-gear-change.wav",
+      "format": "wav",
+      "bytes": 684300,
+      "sha256": "c7ac9d37da25ab792f63d6a115a62f234426266e1826069b86b26a526694abb0",
+      "duration_s": 1.168,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "gear",
+        "change"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Cinematic Gear Change.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/cinematic-gear-change-deep",
+      "name": "Cinematic Gear Change Deep",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/cinematic-gear-change-deep.wav",
+      "format": "wav",
+      "bytes": 780396,
+      "sha256": "2e2bc72ef64b530e3e6eaae79bdd21d874fa9600a7acfc4b614f994d5bfa79a2",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "gear",
+        "change",
+        "deep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Cinematic Gear Change Deep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/cinematic-pass-by-super-fast-whoosh",
+      "name": "Cinematic Pass By Super Fast Whoosh",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/cinematic-pass-by-super-fast-whoosh.wav",
+      "format": "wav",
+      "bytes": 885370,
+      "sha256": "cfe8c2ddb13fc168c1f618018a5773b16ba49863470ad70022b5f34fe05e8b3a",
+      "duration_s": 1.53,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "pass",
+        "super",
+        "fast",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Cinematic Pass By Super Fast Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/deep",
+      "name": "Deep",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/deep.wav",
+      "format": "wav",
+      "bytes": 895716,
+      "sha256": "a3eb8121544ac7821f63f03067feff1db037ecfac24c3c34623dcfb8571afea7",
+      "duration_s": 1.535,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Deep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/deep-cinematic-bass",
+      "name": "Deep Cinematic Bass",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/deep-cinematic-bass.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "23cc1fdf5ecd3b3c7a98ca7f25fd1494a81805ffb88dd1e9cc830c54f1f04ddc",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "cinematic",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Deep Cinematic Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/deep-jitter-bass",
+      "name": "Deep Jitter Bass",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/deep-jitter-bass.wav",
+      "format": "wav",
+      "bytes": 1107126,
+      "sha256": "b537db5a3be2a05c4ea8ce7b16163e367c01b97891e2b6809add84e0ad3e41df",
+      "duration_s": 1.902,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "jitter",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Deep Jitter Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/deep-punch",
+      "name": "Deep punch",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/deep-punch.wav",
+      "format": "wav",
+      "bytes": 703524,
+      "sha256": "95ce1e489e00f6ce9c4552e4740e71625a8d1ed748e8dd6522f07c72978b644d",
+      "duration_s": 1.201,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "punch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Deep punch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/dial-ticks-car",
+      "name": "Dial Ticks Car",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/dial-ticks-car.wav",
+      "format": "wav",
+      "bytes": 626646,
+      "sha256": "144d5d0ea96c08cc256f71d33a25f47463800472e94759ca74c20b7efe2aee94",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "dial",
+        "ticks",
+        "car"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Dial Ticks Car.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/echo-whoosh",
+      "name": "Echo Whoosh",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/echo-whoosh.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "93a0f77eb5916c878b85300c8c3df63ad5bfd91d75d62ed0b645973da2b875d6",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "echo",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Echo Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/electric-car-whoosh",
+      "name": "Electric Car Whoosh",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/electric-car-whoosh.wav",
+      "format": "wav",
+      "bytes": 1011030,
+      "sha256": "b355f3989eb2aba9ed8a3185a649d7c45ca26bfe9283f26a6d15447f1fe7c64a",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "car",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Electric Car Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/electric-shift",
+      "name": "Electric Shift",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/electric-shift.wav",
+      "format": "wav",
+      "bytes": 703524,
+      "sha256": "8fc6c59abcb2a8eae7dce0d1d1868a2594709f8648f9463dd986d34478bdebac",
+      "duration_s": 1.201,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "shift"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Electric Shift.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/engine-sweep",
+      "name": "Engine Sweep",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/engine-sweep.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "37601ad06da9faf4fb76698900a923446dfc3d860b9ed6bed86881350209f258",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "engine",
+        "sweep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Engine Sweep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/fast-gear-change",
+      "name": "Fast Gear Change",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/fast-gear-change.wav",
+      "format": "wav",
+      "bytes": 1299312,
+      "sha256": "7a8a9add4fb762a43c6c09a4c67ffa82f9c329ceab9f0d180b8ddd8a1375debb",
+      "duration_s": 2.236,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fast",
+        "gear",
+        "change"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Fast Gear Change.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/fast-swell",
+      "name": "Fast Swell",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/fast-swell.wav",
+      "format": "wav",
+      "bytes": 703524,
+      "sha256": "c296453e82471339ac1c7e0ef47b6e5e7dc7076e9caa84571d34290e6719a012",
+      "duration_s": 1.201,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fast",
+        "swell"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Fast Swell.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/inside-car-pedals-shifting-gear",
+      "name": "Inside Car Pedals Shifting Gear",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/inside-car-pedals-shifting-gear.wav",
+      "format": "wav",
+      "bytes": 895744,
+      "sha256": "0de6814f1a7338242e164e05bc857f59a94c015c8c842917a7c20383d47dd2e8",
+      "duration_s": 1.535,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "car",
+        "pedals",
+        "shifting",
+        "gear"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Inside Car Pedals Shifting Gear.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/keys",
+      "name": "Keys",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/keys.wav",
+      "format": "wav",
+      "bytes": 472590,
+      "sha256": "5d5b3ecb80014878ae0a3f47ce342ad3797ab40ad1d567297cf047db4627666f",
+      "duration_s": 0.8,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "keys"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Keys.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/low-bass",
+      "name": "Low Bass",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/low-bass.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "e1fa77cd5600d6eee48ed6c203dc0b15602876a7071a069ee96f23f2e2a0a64a",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Low Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/metal-click",
+      "name": "Metal Click",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/metal-click.wav",
+      "format": "wav",
+      "bytes": 203818,
+      "sha256": "c3caae5cbb7fcc7e89c0121806a58f03edac5cfe63b521814e9043d1d002c28a",
+      "duration_s": 0.334,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "metal",
+        "click"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Metal Click.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/metal-gear-change",
+      "name": "Metal Gear Change",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/metal-gear-change.wav",
+      "format": "wav",
+      "bytes": 780396,
+      "sha256": "3cada42a96a20b9b0a200fb0c96f8578b3f6065c531d2517ad1df2bc73da0690",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "metal",
+        "gear",
+        "change"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Metal Gear Change.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/metal-punch",
+      "name": "Metal Punch",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/metal-punch.wav",
+      "format": "wav",
+      "bytes": 703524,
+      "sha256": "4f2851620c8e261b1d116682fac4d873054238595fdbb27fe6cadc08d70a69f9",
+      "duration_s": 1.201,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "metal",
+        "punch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Metal Punch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/metal-rise",
+      "name": "Metal Rise",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/metal-rise.wav",
+      "format": "wav",
+      "bytes": 1030248,
+      "sha256": "b1d90e1d0eaeb9487826527f99deb5cab0dd481ad97e14b45c79b8a2bac38fc2",
+      "duration_s": 1.768,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "metal",
+        "rise"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Metal Rise.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/metal-whoosh",
+      "name": "Metal Whoosh",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/metal-whoosh.wav",
+      "format": "wav",
+      "bytes": 761178,
+      "sha256": "ec316233c8683b5c21fdd5892257469ac7ab2dd4b1c9b41bbcfe8e2c413b3352",
+      "duration_s": 1.301,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "metal",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Metal Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/minimal-gear-change",
+      "name": "Minimal Gear Change",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/minimal-gear-change.wav",
+      "format": "wav",
+      "bytes": 780396,
+      "sha256": "c14e3f5b7e8cb28987627fd46cd989124a893566f8b7fcbc456fd0f0eb8831bc",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "minimal",
+        "gear",
+        "change"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Minimal Gear Change.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/ominous-bass",
+      "name": "Ominous Bass",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/ominous-bass.wav",
+      "format": "wav",
+      "bytes": 1356972,
+      "sha256": "dd5e5ae355c8212ccab2693823b37e5ee4332e141791770a395a1459c17318cd",
+      "duration_s": 2.336,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ominous",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Ominous Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/opening-car-door",
+      "name": "Opening Car Door",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/opening-car-door.wav",
+      "format": "wav",
+      "bytes": 449376,
+      "sha256": "cb6360e2b7ed58c8bed4603fc7bbeaaa51f0bfd99c1e0b3a5e8317eeb20ea301",
+      "duration_s": 0.76,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "opening",
+        "car",
+        "door"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Opening Car Door.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/opening-old-car-door",
+      "name": "Opening Old Car Door",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/opening-old-car-door.wav",
+      "format": "wav",
+      "bytes": 334356,
+      "sha256": "1748bdb911cfb678b65ff396627c15d0b97749ee50a8f284b599fc438c5ca8b4",
+      "duration_s": 0.56,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "opening",
+        "old",
+        "car",
+        "door"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Opening Old Car Door.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/pulse-swell",
+      "name": "Pulse Swell",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/pulse-swell.wav",
+      "format": "wav",
+      "bytes": 876492,
+      "sha256": "4163ff6ffa9c07be63fd6d5b967514d23be04b584590f6d423a001b0a2c484c6",
+      "duration_s": 1.502,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "pulse",
+        "swell"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Pulse Swell.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/rise-whoosh",
+      "name": "Rise Whoosh",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/rise-whoosh.wav",
+      "format": "wav",
+      "bytes": 472934,
+      "sha256": "889b3062f4f4ffbdf87b29f359a78dbdde13ae0bc144b9c5f284e07115d8585b",
+      "duration_s": 0.801,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rise",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Rise Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/slow-motion-transition",
+      "name": "Slow Motion Transition",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/slow-motion-transition.wav",
+      "format": "wav",
+      "bytes": 1722138,
+      "sha256": "b5b454792ee276cc980b4494ad9ffe528ee796ca284dcb0f44faf60e8375e615",
+      "duration_s": 2.97,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slow",
+        "motion",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Slow Motion Transition.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/soft-gear-change",
+      "name": "Soft Gear Change",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/soft-gear-change.wav",
+      "format": "wav",
+      "bytes": 808708,
+      "sha256": "e204281d804eec3ea856901671cdde831ab1f3d2da01a1dc5ef2aed7763791c7",
+      "duration_s": 1.397,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "soft",
+        "gear",
+        "change"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Soft Gear Change.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/speeding-car-riser",
+      "name": "Speeding Car Riser",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/speeding-car-riser.wav",
+      "format": "wav",
+      "bytes": 1184004,
+      "sha256": "befc1d02745389dfc43d5cf0419e5397f06ff8f569ac499549941b5801eecd4a",
+      "duration_s": 2.035,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "speeding",
+        "car",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Speeding Car Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/speeding-gear-change",
+      "name": "Speeding Gear Change",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/speeding-gear-change.wav",
+      "format": "wav",
+      "bytes": 511330,
+      "sha256": "e2ebd2a28fce78eacca0d7f7b64f8c3da33d35f4c3393256d3a22eb3e5ac2651",
+      "duration_s": 0.868,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "speeding",
+        "gear",
+        "change"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt2.zip",
+        "member": "Accents Pt2/Speeding Gear Change.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/sweep",
+      "name": "Sweep",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/sweep.wav",
+      "format": "wav",
+      "bytes": 1107126,
+      "sha256": "a0b79b0d7a887d5c1bc19294b58ef9155eced07f80a435cbfea3026c2f5e1e86",
+      "duration_s": 1.902,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sweep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Sweep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/whoosh",
+      "name": "Whoosh",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/whoosh.wav",
+      "format": "wav",
+      "bytes": 857274,
+      "sha256": "312b057d473abb6f76afbc6bb4f36144fa5d11f042f9399ef4f70c78ac411eb7",
+      "duration_s": 1.468,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-accents/window-broken-glass",
+      "name": "Window Broken Glass",
+      "category": "atmospheric-accents",
+      "file": "atmospheric-accents/window-broken-glass.wav",
+      "format": "wav",
+      "bytes": 933238,
+      "sha256": "2d57142e67ed222b1a45c3b741df0e8f25e858a0ea9fc11bbd86807552065523",
+      "duration_s": 1.6,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "window",
+        "broken",
+        "glass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Accents_Pt1.zip",
+        "member": "Accents Pt1/Window Broken Glass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-air",
+      "name": "Distort Air",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-air.wav",
+      "format": "wav",
+      "bytes": 895740,
+      "sha256": "4c034168f1e5ebc4218efbcafca07224b829ea23de05beb5629630c82ef7a2aa",
+      "duration_s": 1.535,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "air"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Air.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-bass",
+      "name": "Distort Bass",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-bass.wav",
+      "format": "wav",
+      "bytes": 1337908,
+      "sha256": "9d56f686c1ec4b6fef29f90283268e7e870c2b639d412cd778e21592b05a4e1a",
+      "duration_s": 2.302,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt4.zip",
+        "member": "Distortions Pt4/Distort Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-bass-fast",
+      "name": "Distort Bass Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-bass-fast.wav",
+      "format": "wav",
+      "bytes": 1068838,
+      "sha256": "931c46ebe2e77781e67122e98ee7519e8524c71f04436be98f6aa816c9c1b8d5",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "bass",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Bass Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-bass-impact",
+      "name": "Distort Bass Impact",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-bass-impact.wav",
+      "format": "wav",
+      "bytes": 3065672,
+      "sha256": "d97370edbf50b61e26a1e023c11c927e0bbdf867e35a97afc15e3afec5a688c2",
+      "duration_s": 5.3,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "bass",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt4.zip",
+        "member": "Distortions Pt4/Distort Bass Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-bass-impact-fast",
+      "name": "Distort Bass Impact Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-bass-impact-fast.wav",
+      "format": "wav",
+      "bytes": 2548550,
+      "sha256": "cb86a876feb24952412a832b517d831d6a02b06b35486c6c6be535ab753da7ae",
+      "duration_s": 4.404,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "bass",
+        "impact",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt4.zip",
+        "member": "Distortions Pt4/Distort Bass Impact Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-bass-impact-long",
+      "name": "Distort Bass Impact Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-bass-impact-long.wav",
+      "format": "wav",
+      "bytes": 3817016,
+      "sha256": "a398ab4333063b474b8fc5e32c691d21f780ee64a06f8abca2a231e48629dcec",
+      "duration_s": 6.607,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "bass",
+        "impact",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt6.zip",
+        "member": "Distortions Pt6/Distort Bass Impact Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-bass-long",
+      "name": "Distort Bass Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-bass-long.wav",
+      "format": "wav",
+      "bytes": 2145118,
+      "sha256": "7834acd70628143f81a33cfcf766cae0bbdfabf2534fe3aa5d9993d7a931cba3",
+      "duration_s": 3.704,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "bass",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt4.zip",
+        "member": "Distortions Pt4/Distort Bass Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-bass-scratch",
+      "name": "Distort Bass Scratch",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-bass-scratch.wav",
+      "format": "wav",
+      "bytes": 3451846,
+      "sha256": "888b67c8d4b12bcadbcb32e1124f4537d2b62d40c4f9af958bcc774a521d36e2",
+      "duration_s": 5.973,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "bass",
+        "scratch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt5.zip",
+        "member": "Distortions Pt5/Distort Bass Scratch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-bass-scratch-fast",
+      "name": "Distort Bass Scratch Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-bass-scratch-fast.wav",
+      "format": "wav",
+      "bytes": 2663860,
+      "sha256": "bde1a2bcc2f40cdfe0c582d1d35bb989d733e3186c42ac2ddbf79b016e2e255f",
+      "duration_s": 4.605,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "bass",
+        "scratch",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt4.zip",
+        "member": "Distortions Pt4/Distort Bass Scratch Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-bass-scratch-long",
+      "name": "Distort Bass Scratch Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-bass-scratch-long.wav",
+      "format": "wav",
+      "bytes": 3836230,
+      "sha256": "c6c2a291452eb4f24ce37c787f54e5ae5b3c7deb3adf202bd17fee31f5e9ece1",
+      "duration_s": 6.64,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "bass",
+        "scratch",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt6.zip",
+        "member": "Distortions Pt6/Distort Bass Scratch Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-chaos",
+      "name": "Distort Chaos",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-chaos.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "1016e0de522843557282a68a1d028a46fe62a9d97dde5db79a1c99cc0f938d1e",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "chaos"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Chaos.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-complete-chaos",
+      "name": "Distort Complete Chaos",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-complete-chaos.wav",
+      "format": "wav",
+      "bytes": 665336,
+      "sha256": "f5cdb181214484c6598e0de748a1f0beda02a07eeef39d694febafba51a3c703",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "complete",
+        "chaos"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Complete Chaos.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-complete-chaos-fast",
+      "name": "Distort Complete Chaos Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-complete-chaos-fast.wav",
+      "format": "wav",
+      "bytes": 511586,
+      "sha256": "053f2f806d23f201abc1f13dd85ecf951424fb85f5d4716f11e9fab20f42fc8d",
+      "duration_s": 0.868,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "complete",
+        "chaos",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt1.zip",
+        "member": "Distortions Pt1/Distort Complete Chaos Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-complete-chaos-long",
+      "name": "Distort Complete Chaos Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-complete-chaos-long.wav",
+      "format": "wav",
+      "bytes": 934408,
+      "sha256": "d4be2966d458c266c34bd0a59787862e1383ddb8c8823aefb0023aa467853ac7",
+      "duration_s": 1.602,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "complete",
+        "chaos",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Complete Chaos Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-deep-beat",
+      "name": "Distort Deep Beat",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-deep-beat.wav",
+      "format": "wav",
+      "bytes": 1030404,
+      "sha256": "383c4f55921d0b6cbc24c0627f5e4f312116d614d8f192e8ad9b442a4dde65f4",
+      "duration_s": 1.768,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "deep",
+        "beat"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Deep Beat.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-deep-beat-fast",
+      "name": "Distort Deep Beat Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-deep-beat-fast.wav",
+      "format": "wav",
+      "bytes": 799776,
+      "sha256": "e0464de42c5fe640bc6cb08e744f4efe6dd674c099ec6107f6a36130be1ff43c",
+      "duration_s": 1.368,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "deep",
+        "beat",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Deep Beat Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-deep-beat-long",
+      "name": "Distort Deep Beat Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-deep-beat-long.wav",
+      "format": "wav",
+      "bytes": 1472448,
+      "sha256": "843360d00c86a881d1699db124ebec7b2edc7bde3f1e1035d7c603627b6f4bc0",
+      "duration_s": 2.536,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "deep",
+        "beat",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt4.zip",
+        "member": "Distortions Pt4/Distort Deep Beat Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-electric-jitter",
+      "name": "Distort Electric Jitter",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-electric-jitter.wav",
+      "format": "wav",
+      "bytes": 838056,
+      "sha256": "5a634416df204dd01d690ac2b0892087e24a082253c350fec05a6f4044a1511c",
+      "duration_s": 1.435,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "electric",
+        "jitter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Electric Jitter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-extreme",
+      "name": "Distort Extreme",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-extreme.wav",
+      "format": "wav",
+      "bytes": 857274,
+      "sha256": "f5d47bee947efda51e4f22120a1dca09bb7ccdca959dc29bd7e14ba35b9d8632",
+      "duration_s": 1.468,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "extreme"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Extreme.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-fall",
+      "name": "Distort Fall",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-fall.wav",
+      "format": "wav",
+      "bytes": 722742,
+      "sha256": "e60c6fa8f04400109900b20cf21367783f44925a336d5f5b2c2059138c3f041c",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "fall"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Fall.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-glass-bass",
+      "name": "Distort Glass Bass",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-glass-bass.wav",
+      "format": "wav",
+      "bytes": 4316890,
+      "sha256": "b9981b6942e2273136e45ac12c216d7921f047dbee57f5c0693d9a5d15101fe4",
+      "duration_s": 7.474,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "glass",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt7.zip",
+        "member": "Distortions Pt7/Distort Glass Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-glass-bass-fast",
+      "name": "Distort Glass Bass Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-glass-bass-fast.wav",
+      "format": "wav",
+      "bytes": 3086860,
+      "sha256": "16977a2efb0ee4224cbde4f49d039927275efcbdb2bde0e39ca390e4fe5ac185",
+      "duration_s": 5.339,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "glass",
+        "bass",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt5.zip",
+        "member": "Distortions Pt5/Distort Glass Bass Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-glass-bass-long",
+      "name": "Distort Glass Bass Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-glass-bass-long.wav",
+      "format": "wav",
+      "bytes": 4797370,
+      "sha256": "fd9235a6d805a435f9a99d015417a5b11141dd7d36b1b6c9030e87db20698f0f",
+      "duration_s": 8.308,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "glass",
+        "bass",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt8.zip",
+        "member": "Distortions Pt8/Distort Glass Bass Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-glitch",
+      "name": "Distort Glitch",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-glitch.wav",
+      "format": "wav",
+      "bytes": 722742,
+      "sha256": "a73987f1421fa431d6b751f65a7f24d5fc3ebf0228e21c1b625ce75dfafde412",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-hollow",
+      "name": "Distort Hollow",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-hollow.wav",
+      "format": "wav",
+      "bytes": 7488056,
+      "sha256": "dda8b311e6e128e37f7d8cc6050fc390ad6aacafea873e1677e8c4cbc3700564",
+      "duration_s": 12.98,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "hollow"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt2.zip",
+        "member": "Distortions Pt2/Distort Hollow.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-hollow-fast",
+      "name": "Distort Hollow Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-hollow-fast.wav",
+      "format": "wav",
+      "bytes": 5623796,
+      "sha256": "5fc2d7ff24ee20822e4b6becc667670f3b8a25dfbdd4c3f3963eef793556edb9",
+      "duration_s": 9.743,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "hollow",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt8.zip",
+        "member": "Distortions Pt8/Distort Hollow Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-hollow-long",
+      "name": "Distort Hollow Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-hollow-long.wav",
+      "format": "wav",
+      "bytes": 11235800,
+      "sha256": "960a2ec1b21880ea18d40477580f7d5b93e6782600d3c9ff25e158465e51a0cb",
+      "duration_s": 19.486,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "hollow",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt1.zip",
+        "member": "Distortions Pt1/Distort Hollow Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-horror",
+      "name": "Distort Horror",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-horror.wav",
+      "format": "wav",
+      "bytes": 7488056,
+      "sha256": "3eb796b9054d681777f80385664445aee605c79cb3a091c8b19214b72915e04f",
+      "duration_s": 12.98,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "horror"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt2.zip",
+        "member": "Distortions Pt2/Distort Horror.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-horror-fast",
+      "name": "Distort Horror Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-horror-fast.wav",
+      "format": "wav",
+      "bytes": 5623796,
+      "sha256": "43881d71016997b100aca3b955dac2d8f551c4a6de4572108d96d59b6a15ae3e",
+      "duration_s": 9.743,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "horror",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt8.zip",
+        "member": "Distortions Pt8/Distort Horror Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-horror-long",
+      "name": "Distort Horror Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-horror-long.wav",
+      "format": "wav",
+      "bytes": 10197962,
+      "sha256": "74d7ded2f23269618d9dc29f1bf022abf23451fc06969a694fb00af2957517ef",
+      "duration_s": 17.684,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "horror",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt1.zip",
+        "member": "Distortions Pt1/Distort Horror Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-impact",
+      "name": "Distort Impact",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-impact.wav",
+      "format": "wav",
+      "bytes": 2491060,
+      "sha256": "b50b24032d70c7547a1b04b6cc94b11d62cd260a105769f25495cc20f9edcec1",
+      "duration_s": 4.304,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt4.zip",
+        "member": "Distortions Pt4/Distort Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-impact-fast",
+      "name": "Distort Impact Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-impact-fast.wav",
+      "format": "wav",
+      "bytes": 1664638,
+      "sha256": "b05d69407c63fc5cbc67144978e88157c8c2f6c9d50abad6f756e0ce88def084",
+      "duration_s": 2.87,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "impact",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt4.zip",
+        "member": "Distortions Pt4/Distort Impact Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-impact-long",
+      "name": "Distort Impact Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-impact-long.wav",
+      "format": "wav",
+      "bytes": 3548116,
+      "sha256": "8faef5460c948efea61b50de44bc84af249ce7506160113534836ecad05ebc9f",
+      "duration_s": 6.139,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "impact",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt6.zip",
+        "member": "Distortions Pt6/Distort Impact Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-laser",
+      "name": "Distort Laser",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-laser.wav",
+      "format": "wav",
+      "bytes": 799620,
+      "sha256": "5959afb39226d50899febc92a03223f7da1b7b403bc823b7f3950cd10d7b06fc",
+      "duration_s": 1.368,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "laser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Laser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-level",
+      "name": "Distort Level",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-level.wav",
+      "format": "wav",
+      "bytes": 3182962,
+      "sha256": "75c7101dc4cd1263353cbe211a690f522514281d314102e10fe1f1a838f195d9",
+      "duration_s": 5.505,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "level"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt5.zip",
+        "member": "Distortions Pt5/Distort Level.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-level-fast",
+      "name": "Distort Level Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-level-fast.wav",
+      "format": "wav",
+      "bytes": 2587168,
+      "sha256": "7a294f99f6d6d2831f5fc302d70a240c337b0ebac71e431e25c9bd35070a7934",
+      "duration_s": 4.471,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "level",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt4.zip",
+        "member": "Distortions Pt4/Distort Level Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-level-long",
+      "name": "Distort Level Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-level-long.wav",
+      "format": "wav",
+      "bytes": 4143922,
+      "sha256": "7a0339f5cf011e8aabf78cdb2b7478ef75269a19877c82dd540c995d5232cba7",
+      "duration_s": 7.174,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "level",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt7.zip",
+        "member": "Distortions Pt7/Distort Level Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-long-electric-jitter",
+      "name": "Distort Long Electric Jitter",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-long-electric-jitter.wav",
+      "format": "wav",
+      "bytes": 1433850,
+      "sha256": "7c08dc0d527cd5689c230b6b914af5a8e0bcde53d4af9c7fa8d97160b924b71b",
+      "duration_s": 2.469,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "long",
+        "electric",
+        "jitter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt4.zip",
+        "member": "Distortions Pt4/Distort Long Electric Jitter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-machine",
+      "name": "Distort Machine",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-machine.wav",
+      "format": "wav",
+      "bytes": 703524,
+      "sha256": "da4c2c4660a5ad434bcfd53d533a6221ed3469341d36a509dac8f27f07c4c048",
+      "duration_s": 1.201,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "machine"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Machine.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-machine-riser",
+      "name": "Distort Machine Riser",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-machine-riser.wav",
+      "format": "wav",
+      "bytes": 1260876,
+      "sha256": "ea95b4d8f0d4c669911929af3b6a0b1388824ac3e0d4adccdb4a0eb3140b6288",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "machine",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Machine Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-mono",
+      "name": "Distort Mono",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-mono.wav",
+      "format": "wav",
+      "bytes": 1529946,
+      "sha256": "b48b080f659ec0428abfde2923009889ef55317b28e882ca4bfda3abc0ce8f4a",
+      "duration_s": 2.636,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "mono"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt4.zip",
+        "member": "Distortions Pt4/Distort Mono.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-riser",
+      "name": "Distort Riser",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-riser.wav",
+      "format": "wav",
+      "bytes": 645864,
+      "sha256": "9b40f4c76bb46a1c9088324ae44e437903d3d85056df2b10f5933c178b0dc683",
+      "duration_s": 1.101,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt1.zip",
+        "member": "Distortions Pt1/Distort Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-riser-chaos",
+      "name": "Distort Riser Chaos",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-riser-chaos.wav",
+      "format": "wav",
+      "bytes": 3682506,
+      "sha256": "a46b1e0dfb46aabff81d2e0d025134ba8d8fe406d3361a0f577a824f9649bd33",
+      "duration_s": 6.373,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "riser",
+        "chaos"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt6.zip",
+        "member": "Distortions Pt6/Distort Riser Chaos.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-riser-chaos-fast",
+      "name": "Distort Riser Chaos Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-riser-chaos-fast.wav",
+      "format": "wav",
+      "bytes": 3163584,
+      "sha256": "81b15ca831e47b44cdad22ea1e6f4be1d3aa74cf1cb9204f56e74daf7d85ec20",
+      "duration_s": 5.472,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "riser",
+        "chaos",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt5.zip",
+        "member": "Distortions Pt5/Distort Riser Chaos Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-riser-chaos-long",
+      "name": "Distort Riser Chaos Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-riser-chaos-long.wav",
+      "format": "wav",
+      "bytes": 4412832,
+      "sha256": "322c097f63fa020681a50ee0738b9f2e8d3e34f45faa151b94d655a1c4818ef4",
+      "duration_s": 7.641,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "riser",
+        "chaos",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt7.zip",
+        "member": "Distortions Pt7/Distort Riser Chaos Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-rumble",
+      "name": "Distort Rumble",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-rumble.wav",
+      "format": "wav",
+      "bytes": 857274,
+      "sha256": "05059c791e57de126dae3ca3e9825f14eae87cd7f74c6f055ff33886153f3d47",
+      "duration_s": 1.468,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Rumble.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-scary",
+      "name": "Distort Scary",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-scary.wav",
+      "format": "wav",
+      "bytes": 396260,
+      "sha256": "a18b6be30614d2d14b468497817ed10b689934c0c4f544e7aba4b69d7f76609b",
+      "duration_s": 0.667,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "scary"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt1.zip",
+        "member": "Distortions Pt1/Distort Scary.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-scary-fast",
+      "name": "Distort Scary Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-scary-fast.wav",
+      "format": "wav",
+      "bytes": 300166,
+      "sha256": "611e0dabf61ac15beb3e2cc9441f5d17ed0c3270794d781799d0adc907996179",
+      "duration_s": 0.5,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "scary",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt1.zip",
+        "member": "Distortions Pt1/Distort Scary Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-scary-long",
+      "name": "Distort Scary Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-scary-long.wav",
+      "format": "wav",
+      "bytes": 550018,
+      "sha256": "ea5ca2c37979625a077f848bd5113adb03f506f0b5a0008ae5534d93f358c118",
+      "duration_s": 0.934,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "scary",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt1.zip",
+        "member": "Distortions Pt1/Distort Scary Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-screams",
+      "name": "Distort Screams",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-screams.wav",
+      "format": "wav",
+      "bytes": 1184004,
+      "sha256": "dad96ac2afbb897cd48251d5566a145bc9e25de1ddc6385fcb143437a653b1b2",
+      "duration_s": 2.035,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "screams"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Screams.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-start",
+      "name": "Distort Start",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-start.wav",
+      "format": "wav",
+      "bytes": 1337754,
+      "sha256": "eb4b34d559b59b161a5769cc6de521ba9c1dc04afcea51659830fda3e3449d8a",
+      "duration_s": 2.302,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "start"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Start.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-tension",
+      "name": "Distort Tension",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-tension.wav",
+      "format": "wav",
+      "bytes": 4720490,
+      "sha256": "1f0d33e2db482b977dc07e6eccc880db7b68be4fd58ce4487e7e141b8b801411",
+      "duration_s": 8.175,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt7.zip",
+        "member": "Distortions Pt7/Distort Tension.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-tension-bass",
+      "name": "Distort Tension Bass",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-tension-bass.wav",
+      "format": "wav",
+      "bytes": 3893898,
+      "sha256": "282a3a33efb68a85836cd5f28670bff9ea9e7ecd189eadd44af7d23f6771e56c",
+      "duration_s": 6.74,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "tension",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt6.zip",
+        "member": "Distortions Pt6/Distort Tension Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-tension-bass-fast",
+      "name": "Distort Tension Bass Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-tension-bass-fast.wav",
+      "format": "wav",
+      "bytes": 3432636,
+      "sha256": "2753b8046957aac0c6ffe98e47d2d16b2a18510cf9c3a01f038558edf5f2c0b2",
+      "duration_s": 5.939,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "tension",
+        "bass",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt5.zip",
+        "member": "Distortions Pt5/Distort Tension Bass Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-tension-bass-long",
+      "name": "Distort Tension Bass Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-tension-bass-long.wav",
+      "format": "wav",
+      "bytes": 4278282,
+      "sha256": "f590fd642962bdd1157efa1c216c6b165844854f388e342a144b4f1ae4f51af2",
+      "duration_s": 7.407,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "tension",
+        "bass",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt7.zip",
+        "member": "Distortions Pt7/Distort Tension Bass Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-tension-fast",
+      "name": "Distort Tension Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-tension-fast.wav",
+      "format": "wav",
+      "bytes": 3317492,
+      "sha256": "bfb6dc3fb9e4dcc59dda818a7c32027e1ddbce421445b266009fc411ba343be9",
+      "duration_s": 5.739,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "tension",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt5.zip",
+        "member": "Distortions Pt5/Distort Tension Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-tension-long",
+      "name": "Distort Tension Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-tension-long.wav",
+      "format": "wav",
+      "bytes": 6603974,
+      "sha256": "66427b3e4ec31ba8c6232fdebc54dcccc6a87d6b43ce91df561f2932ed1ae229",
+      "duration_s": 11.445,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "tension",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt2.zip",
+        "member": "Distortions Pt2/Distort Tension Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-up-down",
+      "name": "Distort Up Down",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-up-down.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "c5ea27a498dcec4c6bcab8528e13f6ffc8dccfac3f2e1d8a20f353b6a672c0b0",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "up",
+        "down"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Up Down.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-wave",
+      "name": "Distort Wave",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-wave.wav",
+      "format": "wav",
+      "bytes": 3490468,
+      "sha256": "d56340160b0859578cad9545ea7b50c32ad8ae51d0de4863b5cc0cf3b2dec63f",
+      "duration_s": 6.039,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "wave"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt6.zip",
+        "member": "Distortions Pt6/Distort Wave.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-wave-ambience",
+      "name": "Distort Wave Ambience",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-wave-ambience.wav",
+      "format": "wav",
+      "bytes": 3951546,
+      "sha256": "4336529729bf1d63a45f46fb34c8e65f4bc1ce570385605f256acbbecb976a2b",
+      "duration_s": 6.84,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "wave",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt6.zip",
+        "member": "Distortions Pt6/Distort Wave Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-wave-ambience-fast",
+      "name": "Distort Wave Ambience Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-wave-ambience-fast.wav",
+      "format": "wav",
+      "bytes": 2971368,
+      "sha256": "425c3dd8aaaa910da05dc8533dbda212f6697f5a72c3c3ba744a596e6007f38f",
+      "duration_s": 5.138,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "wave",
+        "ambience",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt4.zip",
+        "member": "Distortions Pt4/Distort Wave Ambience Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-wave-ambience-long",
+      "name": "Distort Wave Ambience Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-wave-ambience-long.wav",
+      "format": "wav",
+      "bytes": 5931126,
+      "sha256": "cb3442352ef566ad7c7a7b851c606175b2b5cfdbd1178657a43c6a3f3db0581b",
+      "duration_s": 10.277,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "wave",
+        "ambience",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt2.zip",
+        "member": "Distortions Pt2/Distort Wave Ambience Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-wave-fast",
+      "name": "Distort Wave Fast",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-wave-fast.wav",
+      "format": "wav",
+      "bytes": 2721700,
+      "sha256": "f80aca11fa4e3d15ae87bbcbc2a7cbbbf2490dd6a06edd196e182c4baf6515ef",
+      "duration_s": 4.705,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "wave",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt4.zip",
+        "member": "Distortions Pt4/Distort Wave Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-wave-long",
+      "name": "Distort Wave Long",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-wave-long.wav",
+      "format": "wav",
+      "bytes": 4893466,
+      "sha256": "fb2be20f686b24ac08a4ac91dfeca8d0f282e846f80d4b6c02154aa75ffab4f9",
+      "duration_s": 8.475,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "wave",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt8.zip",
+        "member": "Distortions Pt8/Distort Wave Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distort-wavering-roll",
+      "name": "Distort Wavering Roll",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distort-wavering-roll.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "58a4020b44ef1fa6449a76522e723f9fadc3c6b02922a47cbb5ace44835b33dd",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "wavering",
+        "roll"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distort Wavering Roll.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distorted-braam",
+      "name": "Distorted Braam",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distorted-braam.wav",
+      "format": "wav",
+      "bytes": 972582,
+      "sha256": "ccc4f586ac1f8f0243329dc3d977f9f1579aa9dbcf9c8c1cdef3bdb99726169d",
+      "duration_s": 1.668,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distorted Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distorted-glitch-fold",
+      "name": "Distorted Glitch Fold",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distorted-glitch-fold.wav",
+      "format": "wav",
+      "bytes": 703546,
+      "sha256": "2245050bea5da0041ea3b00caa1e8de580b3aec7a781e257580c1293128f26dd",
+      "duration_s": 1.201,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "glitch",
+        "fold"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distorted Glitch Fold.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distorted-high-glitch",
+      "name": "Distorted High Glitch",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distorted-high-glitch.wav",
+      "format": "wav",
+      "bytes": 722742,
+      "sha256": "a1a75d18ec248d9c4b9f5a95394fbb896ad412489fea992e53fec76863b1441b",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "high",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distorted High Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distorted-mono",
+      "name": "Distorted Mono",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distorted-mono.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "e9d5b9849898d51e69c0aa6d4ab120fe4620cedc5054e656b567d11c072782e0",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "mono"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distorted Mono.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distorted-rumble-impact",
+      "name": "Distorted Rumble Impact",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distorted-rumble-impact.wav",
+      "format": "wav",
+      "bytes": 3467656,
+      "sha256": "745dbf5453e374b5acac60419db5ce81c9cf3481b91e2c4e0a82bdc25545a07e",
+      "duration_s": 6.0,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "rumble",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt5.zip",
+        "member": "Distortions Pt5/Distorted Rumble Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distorted-rumble-impact-left",
+      "name": "Distorted Rumble Impact Left",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distorted-rumble-impact-left.wav",
+      "format": "wav",
+      "bytes": 3467656,
+      "sha256": "02079ec8b0d8324b7620e6938b2134ef04f1d31656eddc289cd48768e0983379",
+      "duration_s": 6.0,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "rumble",
+        "impact",
+        "left"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt6.zip",
+        "member": "Distortions Pt6/Distorted Rumble Impact Left.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distorted-rumble-impact-right",
+      "name": "Distorted Rumble Impact Right",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distorted-rumble-impact-right.wav",
+      "format": "wav",
+      "bytes": 3467656,
+      "sha256": "c757bfc8c899569cbc55afd0b6edd4e7b93ab12aed24e36ba4b36e1eb32b4898",
+      "duration_s": 6.0,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "rumble",
+        "impact",
+        "right"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt5.zip",
+        "member": "Distortions Pt5/Distorted Rumble Impact Right.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/distortion",
+      "name": "Distortion",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/distortion.wav",
+      "format": "wav",
+      "bytes": 1068684,
+      "sha256": "2d63d618fbc44f43a87bd74744f50828726e1ddd151af3e357e60f5d958831f3",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distortion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Distortion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/error",
+      "name": "Error",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/error.wav",
+      "format": "wav",
+      "bytes": 722742,
+      "sha256": "84dc8c3668c14e3452d08aca77977fdc31b266ba037d6b7ad1ebcd307db6ad27",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/radio-jitter",
+      "name": "Radio Jitter",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/radio-jitter.wav",
+      "format": "wav",
+      "bytes": 1529946,
+      "sha256": "776726a33b421a3e938bd88f01d2c72e36b70651de1ffbc61232901fac6e1897",
+      "duration_s": 2.636,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "radio",
+        "jitter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt4.zip",
+        "member": "Distortions Pt4/Radio Jitter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/rumbling-granular-glitch",
+      "name": "Rumbling Granular Glitch",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/rumbling-granular-glitch.wav",
+      "format": "wav",
+      "bytes": 722742,
+      "sha256": "410b9e24bf04f289c32a45941d36fcc30aaa96d80b9f4831b307831e750e41ce",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rumbling",
+        "granular",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Rumbling Granular Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "atmospheric-distortions/ticks-glitch",
+      "name": "Ticks Glitch",
+      "category": "atmospheric-distortions",
+      "file": "atmospheric-distortions/ticks-glitch.wav",
+      "format": "wav",
+      "bytes": 857274,
+      "sha256": "8ae08abc697a186de874fc55e5ad3d2b9086fed276f4919bea89f15a6d90ed76",
+      "duration_s": 1.468,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ticks",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Distortions_Pt3.zip",
+        "member": "Distortions Pt3/Ticks Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "ballsport/baseball-hit",
       "name": "Baseball Hit",
       "category": "ballsport",
