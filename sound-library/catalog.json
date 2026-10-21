@@ -30728,6 +30728,733 @@
       "added": "2026-10-21"
     },
     {
+      "id": "war-vehicles/apc-driving-away",
+      "name": "Apc Driving Away",
+      "category": "war-vehicles",
+      "file": "war-vehicles/apc-driving-away.wav",
+      "format": "wav",
+      "bytes": 3278894,
+      "sha256": "b3b14837353f72b84732dcf702d4fb5d1f9fdbb30050946488bd6845ffbf88ba",
+      "duration_s": 5.672,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "apc",
+        "driving",
+        "away"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt2.zip",
+        "member": "untitled folder 8/Apc Driving Away.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/apc-driving-over-rubble",
+      "name": "Apc Driving Over Rubble",
+      "category": "war-vehicles",
+      "file": "war-vehicles/apc-driving-over-rubble.wav",
+      "format": "wav",
+      "bytes": 2913734,
+      "sha256": "0b394fbbdb14fc1c761d714ca2d5f94519de2daac58e878372bb2fb1cf9ecfd0",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "apc",
+        "driving",
+        "over",
+        "rubble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt3.zip",
+        "member": "untitled folder 9/Apc Driving Over Rubble.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/cinematic-cannon-shot",
+      "name": "Cinematic Cannon Shot",
+      "category": "war-vehicles",
+      "file": "war-vehicles/cinematic-cannon-shot.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "cda78c5cede7ae110ed24c9df6a1f5fe1235dec1ef97d856d5e2bd00df47f644",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "cannon",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt3.zip",
+        "member": "untitled folder 9/Cinematic Cannon Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/crushing-rubble",
+      "name": "Crushing Rubble",
+      "category": "war-vehicles",
+      "file": "war-vehicles/crushing-rubble.wav",
+      "format": "wav",
+      "bytes": 2337156,
+      "sha256": "95c46719279d8e911f44fd185e236d37321d58c23cb1fad94b6df49a89437864",
+      "duration_s": 4.037,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "crushing",
+        "rubble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt3.zip",
+        "member": "untitled folder 9/Crushing Rubble.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/far-off-heavy-heli",
+      "name": "Far Off Heavy Heli",
+      "category": "war-vehicles",
+      "file": "war-vehicles/far-off-heavy-heli.wav",
+      "format": "wav",
+      "bytes": 2567786,
+      "sha256": "1a803f4e23d580dd909d94ed9227ed4b6b148f80201691bb1ef873fd1a91405d",
+      "duration_s": 4.438,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "far",
+        "off",
+        "heavy",
+        "heli"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt3.zip",
+        "member": "untitled folder 9/Far Off Heavy Heli.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/far-off-heli",
+      "name": "Far Off Heli",
+      "category": "war-vehicles",
+      "file": "war-vehicles/far-off-heli.wav",
+      "format": "wav",
+      "bytes": 2068110,
+      "sha256": "b256a9ad7c5ba3236dde1e3f53311c0585c540addab17c64df3172dfc3c6c399",
+      "duration_s": 3.57,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "far",
+        "off",
+        "heli"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt3.zip",
+        "member": "untitled folder 9/Far Off Heli.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/fighter-jet-fly-by",
+      "name": "Fighter Jet Fly By",
+      "category": "war-vehicles",
+      "file": "war-vehicles/fighter-jet-fly-by.wav",
+      "format": "wav",
+      "bytes": 4299450,
+      "sha256": "1c3da223c90ff83224342e2f4f850d47658acc26c59d1f62d445e69bc3ca8b5f",
+      "duration_s": 7.441,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fighter",
+        "jet",
+        "fly"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt2.zip",
+        "member": "untitled folder 8/Fighter Jet Fly By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/fighter-jet-fly-over",
+      "name": "Fighter Jet Fly Over",
+      "category": "war-vehicles",
+      "file": "war-vehicles/fighter-jet-fly-over.wav",
+      "format": "wav",
+      "bytes": 3355766,
+      "sha256": "016e007ca9aef61c24f9f34badc7fd6a1c10300f8e93047ba1cefef97f23627a",
+      "duration_s": 5.806,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fighter",
+        "jet",
+        "fly",
+        "over"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt2.zip",
+        "member": "untitled folder 8/Fighter Jet Fly Over.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/fighter-jet-fly-over-high",
+      "name": "Fighter Jet Fly Over High",
+      "category": "war-vehicles",
+      "file": "war-vehicles/fighter-jet-fly-over-high.wav",
+      "format": "wav",
+      "bytes": 4299450,
+      "sha256": "dd84d95d08a3cb7cd146ee10b6600bbcc9613375a546faf339048159ae9a2129",
+      "duration_s": 7.441,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fighter",
+        "jet",
+        "fly",
+        "over",
+        "high"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt2.zip",
+        "member": "untitled folder 8/Fighter Jet Fly Over High.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/fighter-jet-very-fast",
+      "name": "Fighter Jet Very Fast",
+      "category": "war-vehicles",
+      "file": "war-vehicles/fighter-jet-very-fast.wav",
+      "format": "wav",
+      "bytes": 6911910,
+      "sha256": "52dee9e52173af2bb1eb9859c932e1dea2ebe5c3467175f2b516d279d98c98a0",
+      "duration_s": 11.979,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fighter",
+        "jet",
+        "very",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt1.zip",
+        "member": "untitled folder 7/Fighter Jet Very Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/fly-over-heli-fast",
+      "name": "Fly Over Heli Fast",
+      "category": "war-vehicles",
+      "file": "war-vehicles/fly-over-heli-fast.wav",
+      "format": "wav",
+      "bytes": 2221836,
+      "sha256": "ac15ae24c9fab9fa1390cb79a43dd46ddb1e4cb6c57e31801643713b470c298f",
+      "duration_s": 3.837,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fly",
+        "over",
+        "heli",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt3.zip",
+        "member": "untitled folder 9/Fly Over Heli Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/heavy-helicopter-fly",
+      "name": "Heavy Helicopter Fly",
+      "category": "war-vehicles",
+      "file": "war-vehicles/heavy-helicopter-fly.wav",
+      "format": "wav",
+      "bytes": 2337156,
+      "sha256": "8e74e2b8a8614dae7a44d4edcff622ca7446fa02f670589efe58f8c6d12b17a8",
+      "duration_s": 4.037,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "heavy",
+        "helicopter",
+        "fly"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt3.zip",
+        "member": "untitled folder 9/Heavy Helicopter Fly.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/heavy-military-helicopter",
+      "name": "Heavy Military Helicopter",
+      "category": "war-vehicles",
+      "file": "war-vehicles/heavy-military-helicopter.wav",
+      "format": "wav",
+      "bytes": 7622434,
+      "sha256": "00a6c6c6d01bb60bef333878d12abd7f3e56aa0ecadaf566e0d2fac2bb3c614a",
+      "duration_s": 13.213,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "heavy",
+        "military",
+        "helicopter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt1.zip",
+        "member": "untitled folder 7/Heavy Military Helicopter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/idle-tank",
+      "name": "Idle Tank",
+      "category": "war-vehicles",
+      "file": "war-vehicles/idle-tank.wav",
+      "format": "wav",
+      "bytes": 3432652,
+      "sha256": "588c25d9f50a92824a1e343587fab248aca02ed498439b621db8d142b15c7f46",
+      "duration_s": 5.939,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "idle",
+        "tank"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt2.zip",
+        "member": "untitled folder 8/Idle Tank.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/inside-fighter-jet",
+      "name": "Inside Fighter Jet",
+      "category": "war-vehicles",
+      "file": "war-vehicles/inside-fighter-jet.wav",
+      "format": "wav",
+      "bytes": 6778374,
+      "sha256": "999feb0cf665ba0ac001c6b79fba72bed575b239975c53062d973f7f93d2afd1",
+      "duration_s": 11.745,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "fighter",
+        "jet"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt1.zip",
+        "member": "untitled folder 7/Inside Fighter Jet.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/inside-idle-army-truck",
+      "name": "Inside Idle Army Truck",
+      "category": "war-vehicles",
+      "file": "war-vehicles/inside-idle-army-truck.wav",
+      "format": "wav",
+      "bytes": 2913736,
+      "sha256": "680a97330688f52cadad421cb5b421580bd35fb2288b3d03189852a57c015482",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "idle",
+        "army",
+        "truck"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt2.zip",
+        "member": "untitled folder 8/Inside Idle Army Truck.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/inside-military-plane",
+      "name": "Inside Military Plane",
+      "category": "war-vehicles",
+      "file": "war-vehicles/inside-military-plane.wav",
+      "format": "wav",
+      "bytes": 11620024,
+      "sha256": "ca02baf6412b18b7a22c40a3c672189bc0af305faafc782313ac4a0c40de53eb",
+      "duration_s": 20.153,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "military",
+        "plane"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt4.zip",
+        "member": "Inside Military Plane.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/inside-shooting-tank",
+      "name": "Inside Shooting Tank",
+      "category": "war-vehicles",
+      "file": "war-vehicles/inside-shooting-tank.wav",
+      "format": "wav",
+      "bytes": 1049466,
+      "sha256": "c092fcb99aa97daa163fdcfcf3467f0281b725f93975fcdb9365dac8d89a9800",
+      "duration_s": 1.802,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "shooting",
+        "tank"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt3.zip",
+        "member": "untitled folder 9/Inside Shooting Tank.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/inside-tank",
+      "name": "Inside Tank",
+      "category": "war-vehicles",
+      "file": "war-vehicles/inside-tank.wav",
+      "format": "wav",
+      "bytes": 1318590,
+      "sha256": "81f0cf8f2a30b915c84b4a8deb2c6a28d00dfcc874147c5a6fb61480f36e282f",
+      "duration_s": 2.269,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "tank"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt3.zip",
+        "member": "untitled folder 9/Inside Tank.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/jetfighter-fly-by",
+      "name": "Jetfighter Fly By",
+      "category": "war-vehicles",
+      "file": "war-vehicles/jetfighter-fly-by.wav",
+      "format": "wav",
+      "bytes": 2144964,
+      "sha256": "a07f2c7a755ff379a92ed5af658ce6ff470bc5f70afedfc12c069737b83e0f9f",
+      "duration_s": 3.704,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "jetfighter",
+        "fly"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt3.zip",
+        "member": "untitled folder 9/Jetfighter Fly By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/jetfighter-fly-over",
+      "name": "Jetfighter Fly Over",
+      "category": "war-vehicles",
+      "file": "war-vehicles/jetfighter-fly-over.wav",
+      "format": "wav",
+      "bytes": 2587002,
+      "sha256": "75c5aa0c0275d0abe24beda8bb41b9d20a29d447293e6d8d705f159559f3b820",
+      "duration_s": 4.471,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "jetfighter",
+        "fly",
+        "over"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt3.zip",
+        "member": "untitled folder 9/Jetfighter Fly Over.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/light-helicopter",
+      "name": "Light Helicopter",
+      "category": "war-vehicles",
+      "file": "war-vehicles/light-helicopter.wav",
+      "format": "wav",
+      "bytes": 5085496,
+      "sha256": "9046051ca103418684aafcdbb1f99c526310410b6505aabbe365f40d6f4ba004",
+      "duration_s": 8.809,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "light",
+        "helicopter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt2.zip",
+        "member": "untitled folder 8/Light Helicopter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/military-helicopter-fly-over",
+      "name": "Military Helicopter Fly Over",
+      "category": "war-vehicles",
+      "file": "war-vehicles/military-helicopter-fly-over.wav",
+      "format": "wav",
+      "bytes": 8698708,
+      "sha256": "0e1f27d24c1b7b46a5a5436d093c89fcb46b76959d4154c2998d2593c2787813",
+      "duration_s": 15.082,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "military",
+        "helicopter",
+        "fly",
+        "over"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt1.zip",
+        "member": "untitled folder 7/Military Helicopter Fly Over.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/old-fighter-fly-over",
+      "name": "Old Fighter Fly Over",
+      "category": "war-vehicles",
+      "file": "war-vehicles/old-fighter-fly-over.wav",
+      "format": "wav",
+      "bytes": 3490310,
+      "sha256": "c4ad660ab81fe9e888dc9d852e72c5f82d06d3f96870f89918046b36cf92c476",
+      "duration_s": 6.039,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "fighter",
+        "fly",
+        "over"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt2.zip",
+        "member": "untitled folder 8/Old Fighter Fly Over.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/tank-ambience",
+      "name": "Tank Ambience",
+      "category": "war-vehicles",
+      "file": "war-vehicles/tank-ambience.wav",
+      "format": "wav",
+      "bytes": 3105926,
+      "sha256": "e1ab449eb8eb583dc8f4d42a9ec8c6f7d3eb264ff6667f097fc535735f0daf4d",
+      "duration_s": 5.372,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tank",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt2.zip",
+        "member": "untitled folder 8/Tank Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/tank-driving",
+      "name": "Tank Driving",
+      "category": "war-vehicles",
+      "file": "war-vehicles/tank-driving.wav",
+      "format": "wav",
+      "bytes": 2376248,
+      "sha256": "4a389614f2fb78f4f793981704ea2235262108e6ba214122a6adb62745e6e3b6",
+      "duration_s": 4.104,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tank",
+        "driving"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt3.zip",
+        "member": "untitled folder 9/Tank Driving.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/tank-shot",
+      "name": "Tank Shot",
+      "category": "war-vehicles",
+      "file": "war-vehicles/tank-shot.wav",
+      "format": "wav",
+      "bytes": 1337754,
+      "sha256": "8c5f23c6284d4194a2796f5d326f51cbceb58e9c78cde7551102d171ee60694f",
+      "duration_s": 2.302,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tank",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt3.zip",
+        "member": "untitled folder 9/Tank Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/tank-shot-deep",
+      "name": "Tank Shot Deep",
+      "category": "war-vehicles",
+      "file": "war-vehicles/tank-shot-deep.wav",
+      "format": "wav",
+      "bytes": 1337754,
+      "sha256": "c57054af26e1479baff695aa4bf526916055125ab47bff8346b2d14a8be3021e",
+      "duration_s": 2.302,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tank",
+        "shot",
+        "deep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt3.zip",
+        "member": "untitled folder 9/Tank Shot Deep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "war-vehicles/tank-shot-impact",
+      "name": "Tank Shot Impact",
+      "category": "war-vehicles",
+      "file": "war-vehicles/tank-shot-impact.wav",
+      "format": "wav",
+      "bytes": 1337754,
+      "sha256": "920644758fe055e5e1317a01e8e4fdf380c51ba40ab374cb83a164a0ba46973b",
+      "duration_s": 2.302,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tank",
+        "shot",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "War_Vehicles_Pt3.zip",
+        "member": "untitled folder 9/Tank Shot Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "weapons-assorted/50-cal-shots",
       "name": "50 Cal Shots",
       "category": "weapons-assorted",
