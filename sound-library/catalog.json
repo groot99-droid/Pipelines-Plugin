@@ -17403,6 +17403,542 @@
       "added": "2026-10-21"
     },
     {
+      "id": "deep-risers/deep-echo-riser",
+      "name": "Deep Echo Riser",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-echo-riser.wav",
+      "format": "wav",
+      "bytes": 2430820,
+      "sha256": "1b9d86bfce430eed15b3dc0995ad831c80dcb654ef3753e5d0b19b72c9686b34",
+      "duration_s": 4.2,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "echo",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt2.zip",
+        "member": "untitled folder 2/Deep Echo Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-fast",
+      "name": "Deep Fast",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-fast.wav",
+      "format": "wav",
+      "bytes": 2799438,
+      "sha256": "34fb60564e883b5a83a674eb1ebf45874f986865568af1532859f28f7050845a",
+      "duration_s": 4.84,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt1.zip",
+        "member": "Deep Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-hollow-riser",
+      "name": "Deep Hollow Riser",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-hollow-riser.wav",
+      "format": "wav",
+      "bytes": 6508878,
+      "sha256": "20b9ebba3565d146ed2d216a0a22bf94d7f7d3152c92a13d6a38172a52d9b046",
+      "duration_s": 11.28,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "hollow",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt3.zip",
+        "member": "untitled folder 5/Deep Hollow Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-riser-beat",
+      "name": "Deep Riser Beat",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-riser-beat.wav",
+      "format": "wav",
+      "bytes": 3083004,
+      "sha256": "05a8a9462e9ae9b68a92bf022e083165e783096d0329763f350fa5f1a27361ed",
+      "duration_s": 5.32,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "riser",
+        "beat"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt1.zip",
+        "member": "Deep Riser Beat.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-riser-classic",
+      "name": "Deep Riser Classic",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-riser-classic.wav",
+      "format": "wav",
+      "bytes": 2460286,
+      "sha256": "22cbbc487d6efc89e4f449f7fafacabc926d6f1e31eb6da106a14e5ee5700d09",
+      "duration_s": 4.24,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "riser",
+        "classic"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt1.zip",
+        "member": "Deep Riser Classic.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-riser-classic-long",
+      "name": "Deep Riser Classic Long",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-riser-classic-long.wav",
+      "format": "wav",
+      "bytes": 3934846,
+      "sha256": "e1bf4b92bab7bf4b5af346ea32dcb016c183f0a885dc42f25464816b73949ecd",
+      "duration_s": 6.8,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "riser",
+        "classic",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt1.zip",
+        "member": "Deep Riser Classic Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-riser-classic-right",
+      "name": "Deep Riser Classic Right",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-riser-classic-right.wav",
+      "format": "wav",
+      "bytes": 2460286,
+      "sha256": "58e8ac35e416c973df593805a8d6b9159c052f862ea03aa71544926c68aad4f1",
+      "duration_s": 4.24,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "riser",
+        "classic",
+        "right"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt1.zip",
+        "member": "Deep Riser Classic Right.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-riser-classic-short",
+      "name": "Deep Riser Classic Short",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-riser-classic-short.wav",
+      "format": "wav",
+      "bytes": 1976446,
+      "sha256": "e4e5a4900a6006271225fcda068ec04191e5da3d222b79f3dbdd371e1ede89cb",
+      "duration_s": 3.4,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "riser",
+        "classic",
+        "short"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt2.zip",
+        "member": "untitled folder 2/Deep Riser Classic Short.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-riser-distorted",
+      "name": "Deep Riser Distorted",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-riser-distorted.wav",
+      "format": "wav",
+      "bytes": 3681410,
+      "sha256": "f2a874b5a654a9fdf9c334c2e94283c663bdad48ecda534c0b920f740f109b90",
+      "duration_s": 6.36,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "riser",
+        "distorted"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt1.zip",
+        "member": "Deep Riser Distorted.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-riser-flicker",
+      "name": "Deep Riser Flicker",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-riser-flicker.wav",
+      "format": "wav",
+      "bytes": 2414008,
+      "sha256": "a73f24434a7166c56963c43efe27b78fbdaadc6e58721b19d565e80f270b69a0",
+      "duration_s": 4.171,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "riser",
+        "flicker"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt2.zip",
+        "member": "untitled folder 2/Deep Riser Flicker.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-riser-mechanicalwav",
+      "name": "Deep Riser Mechanicalwav",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-riser-mechanicalwav.wav",
+      "format": "wav",
+      "bytes": 2040892,
+      "sha256": "a56027f1d41656be4909f765b69975024baaa1fd6fdc62ed9190faadd51740ee",
+      "duration_s": 3.52,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "riser",
+        "mechanicalwav"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt2.zip",
+        "member": "untitled folder 2/Deep Riser Mechanicalwav.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-riser-plane",
+      "name": "Deep Riser Plane",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-riser-plane.wav",
+      "format": "wav",
+      "bytes": 2368768,
+      "sha256": "d8d2ff479d00b19432ce1ea551b7eadad05dd03d551572e2ecb5aa6a6c22728b",
+      "duration_s": 4.08,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "riser",
+        "plane"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt2.zip",
+        "member": "untitled folder 2/Deep Riser Plane.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-riser-rumble-gain",
+      "name": "Deep Riser Rumble Gain",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-riser-rumble-gain.wav",
+      "format": "wav",
+      "bytes": 2944100,
+      "sha256": "80a9b859cb8cb0c85c15b747e708747ffab421a2a5eb6ec7d76d4447c89cc9d2",
+      "duration_s": 5.08,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "riser",
+        "rumble",
+        "gain"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt1.zip",
+        "member": "Deep Riser Rumble Gain.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-riser-rumble-gain-fast",
+      "name": "Deep Riser Rumble Gain Fast",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-riser-rumble-gain-fast.wav",
+      "format": "wav",
+      "bytes": 1976420,
+      "sha256": "512ca3e8504b74bef2756553555c79629b8034d0b807dfe2680b0cc44c3792f7",
+      "duration_s": 3.4,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "riser",
+        "rumble",
+        "gain",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt2.zip",
+        "member": "untitled folder 2/Deep Riser Rumble Gain Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-riser-rumble-gain-long",
+      "name": "Deep Riser Rumble Gain Long",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-riser-rumble-gain-long.wav",
+      "format": "wav",
+      "bytes": 4211300,
+      "sha256": "0139adbf991c89e193801c9d594eff0783f5dae74ac6bc6703a0e69d12053761",
+      "duration_s": 7.28,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "riser",
+        "rumble",
+        "gain",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt3.zip",
+        "member": "untitled folder 5/Deep Riser Rumble Gain Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-riser-slow-gain",
+      "name": "Deep Riser Slow Gain",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-riser-slow-gain.wav",
+      "format": "wav",
+      "bytes": 5547676,
+      "sha256": "ba005b48a775ecab53de1d63c38a91847635f4e477267741bbda9961e5b55562",
+      "duration_s": 9.6,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "riser",
+        "slow",
+        "gain"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt3.zip",
+        "member": "untitled folder 5/Deep Riser Slow Gain.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-rumble-riser-fast",
+      "name": "Deep Rumble Riser Fast",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-rumble-riser-fast.wav",
+      "format": "wav",
+      "bytes": 1808716,
+      "sha256": "30dafd79f0680d9a163423c25b0e0bd97bcbc9e32e68fdfda2424b6d2e3f888b",
+      "duration_s": 3.12,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "rumble",
+        "riser",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt2.zip",
+        "member": "untitled folder 2/Deep Rumble Riser Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-scary-riser",
+      "name": "Deep Scary Riser",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-scary-riser.wav",
+      "format": "wav",
+      "bytes": 8469804,
+      "sha256": "5274f0c4d14f59bd14239338ee85a1fa69967969083e4f0d8a42421551466273",
+      "duration_s": 14.681,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "scary",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt4.zip",
+        "member": "Deep Scary Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-sharp-end-riser",
+      "name": "Deep Sharp End Riser",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-sharp-end-riser.wav",
+      "format": "wav",
+      "bytes": 3682484,
+      "sha256": "aac8c18836ca4f864378c99313599050e22deae1e6b2e80c16b02c4d4e0ae059",
+      "duration_s": 6.373,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "sharp",
+        "end",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt1.zip",
+        "member": "Deep Sharp End Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-sharp-riser-slow",
+      "name": "Deep Sharp Riser Slow",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-sharp-riser-slow.wav",
+      "format": "wav",
+      "bytes": 4432048,
+      "sha256": "0614cb7480aef6885931b449b9cd4a43d9a50aefdd5dc8a47554eab49e6be207",
+      "duration_s": 7.674,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "sharp",
+        "riser",
+        "slow"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt3.zip",
+        "member": "untitled folder 5/Deep Sharp Riser Slow.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "deep-risers/deep-sparkling-riser",
+      "name": "Deep Sparkling Riser",
+      "category": "deep-risers",
+      "file": "deep-risers/deep-sparkling-riser.wav",
+      "format": "wav",
+      "bytes": 4317298,
+      "sha256": "a72c5e1472b6a55ccc7960455abfd976410f3624fa04e0cd9e24eacc05cd2f47",
+      "duration_s": 7.474,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "sparkling",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Risers_Pt3.zip",
+        "member": "untitled folder 5/Deep Sparkling Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "glitches/air-glitch",
       "name": "Air Glitch",
       "category": "glitches",
