@@ -355,6 +355,23 @@ python -m unittest discover -s writing-museum/build/tests       # the builder's 
 node writing-museum/tools/walk_test.mjs                         # the browser walk-through
 ```
 
+## Sound library
+
+The author's own sound effects, catalogued in [`sound-library`](sound-library):
+one entry per recording with its name, category, length, format and hash, and a
+stdlib script that searches the catalog and puts a file on disk. The WAVs are not
+in git: a batch is hundreds of megabytes, so they are attached as zips to GitHub
+Releases of this repo and `fetch` brings one down, checks its hash and places it.
+The `sound-library` skill does the searching, fetching and ingesting from a
+session; its [README](sound-library/README.md) says how to add a batch.
+
+```powershell
+python sound-library/library.py search "boat horn"                          # rank the catalog
+python sound-library/library.py fetch --id boats/deep-boat-horn             # from the release
+python sound-library/library.py ingest Boats_Pt1.zip --release sfx-2026-10  # a new batch
+python -m unittest discover -s sound-library/tests
+```
+
 ## Blender through Gemini
 
 Lets Claude drive an open Blender by calling Gemini. Claude calls the `gemini` MCP server
