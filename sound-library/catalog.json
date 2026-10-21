@@ -40830,6 +40830,481 @@
       "added": "2026-10-21"
     },
     {
+      "id": "tension-builders/cinematic-tension-builder",
+      "name": "Cinematic Tension Builder",
+      "category": "tension-builders",
+      "file": "tension-builders/cinematic-tension-builder.wav",
+      "format": "wav",
+      "bytes": 7833822,
+      "sha256": "25e2c2d879063fe345b0a6e1ff6ec083a1be223d76594cf1c2b3dadf2ca24513",
+      "duration_s": 13.58,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "tension",
+        "builder"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt2.zip",
+        "member": "Cinematic Tension Builder.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/deep-bass-beat",
+      "name": "Deep Bass Beat",
+      "category": "tension-builders",
+      "file": "tension-builders/deep-bass-beat.wav",
+      "format": "wav",
+      "bytes": 5815826,
+      "sha256": "ce7cd95fc8bd5d5384d434868daebe86888e850100dc1946cd2b2434e89a9893",
+      "duration_s": 10.077,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass",
+        "beat"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt2.zip",
+        "member": "Deep Bass Beat.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/distorted-tension-builder",
+      "name": "Distorted Tension Builder",
+      "category": "tension-builders",
+      "file": "tension-builders/distorted-tension-builder.wav",
+      "format": "wav",
+      "bytes": 5758170,
+      "sha256": "186230b01b3daa15b58be8f260a9cab092f47fad8c2c202dabdcfac2ff373019",
+      "duration_s": 9.977,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "tension",
+        "builder"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt2.zip",
+        "member": "Distorted Tension Builder.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/double-tension-builder",
+      "name": "Double Tension Builder",
+      "category": "tension-builders",
+      "file": "tension-builders/double-tension-builder.wav",
+      "format": "wav",
+      "bytes": 4778548,
+      "sha256": "5ba5d52bffd45003e83fca3bdbb6b8887c65807a8c52e12e69e2d02ee61aa2b7",
+      "duration_s": 8.275,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "double",
+        "tension",
+        "builder"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt1.zip",
+        "member": "untitled folder/Double Tension Builder.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/drums-impact",
+      "name": "Drums Impact",
+      "category": "tension-builders",
+      "file": "tension-builders/drums-impact.wav",
+      "format": "wav",
+      "bytes": 1837428,
+      "sha256": "81817654b1c7f1401fc2d848941dc7c2840a58a51cbd36c46d178f4be43d0257",
+      "duration_s": 3.17,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "drums",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt1.zip",
+        "member": "untitled folder/Drums Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/ending-tension-builder",
+      "name": "Ending Tension Builder",
+      "category": "tension-builders",
+      "file": "tension-builders/ending-tension-builder.wav",
+      "format": "wav",
+      "bytes": 4779738,
+      "sha256": "fd340fcb36a63c93916a2288026d09ab8965bc666469ecdcd174974509b8d806",
+      "duration_s": 8.275,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ending",
+        "tension",
+        "builder"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt2.zip",
+        "member": "Ending Tension Builder.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/future-tension-builder",
+      "name": "Future Tension Builder",
+      "category": "tension-builders",
+      "file": "tension-builders/future-tension-builder.wav",
+      "format": "wav",
+      "bytes": 6067422,
+      "sha256": "76acbfa5f40a750d4b8a49ae2add6c58810645d50c173d51f193c41885bec7a8",
+      "duration_s": 10.511,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "future",
+        "tension",
+        "builder"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt2.zip",
+        "member": "Future Tension Builder.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/heartbeat-tension-builder",
+      "name": "Heartbeat Tension Builder",
+      "category": "tension-builders",
+      "file": "tension-builders/heartbeat-tension-builder.wav",
+      "format": "wav",
+      "bytes": 27853434,
+      "sha256": "6b68af12700bf134f69a821377b78ed331294d721d098642ff0261e815efdb5b",
+      "duration_s": 48.315,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "heartbeat",
+        "tension",
+        "builder"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt2.zip",
+        "member": "Heartbeat Tension Builder.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/jitter-tension-builder",
+      "name": "Jitter Tension Builder",
+      "category": "tension-builders",
+      "file": "tension-builders/jitter-tension-builder.wav",
+      "format": "wav",
+      "bytes": 4722048,
+      "sha256": "1cbd15b78cd98c9014ed7ba48c361a8b99e9ca27074368c4477b38cc69af8b7e",
+      "duration_s": 8.175,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "jitter",
+        "tension",
+        "builder"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt1.zip",
+        "member": "untitled folder/Jitter Tension Builder.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/opening-tension-builder",
+      "name": "Opening Tension Builder",
+      "category": "tension-builders",
+      "file": "tension-builders/opening-tension-builder.wav",
+      "format": "wav",
+      "bytes": 6065682,
+      "sha256": "d10b5409e943fe052318302029ae21c615db2cdf40e9b13a7533502e12b573ec",
+      "duration_s": 10.511,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "opening",
+        "tension",
+        "builder"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt2.zip",
+        "member": "Opening Tension Builder.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/phrased-tension-builder",
+      "name": "Phrased Tension Builder",
+      "category": "tension-builders",
+      "file": "tension-builders/phrased-tension-builder.wav",
+      "format": "wav",
+      "bytes": 7833822,
+      "sha256": "759bc55f01dc0e6f0a95aedc54297978048994c37c2717a09bcc4ea9ce9f16f9",
+      "duration_s": 13.58,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "phrased",
+        "tension",
+        "builder"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt2.zip",
+        "member": "Phrased Tension Builder.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/rhythm-ticks",
+      "name": "Rhythm Ticks",
+      "category": "tension-builders",
+      "file": "tension-builders/rhythm-ticks.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "673286442766ce69f953c159645e7459694d45d0efc0f3bff7819ceb62b14da7",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rhythm",
+        "ticks"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt1.zip",
+        "member": "untitled folder/Rhythm Ticks.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/sharp-distort-tension-builder",
+      "name": "Sharp Distort Tension Builder",
+      "category": "tension-builders",
+      "file": "tension-builders/sharp-distort-tension-builder.wav",
+      "format": "wav",
+      "bytes": 5931132,
+      "sha256": "551b70c02a32d74353b0b64be85cecf93103b51136a7c630d31123c627272673",
+      "duration_s": 10.277,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sharp",
+        "distort",
+        "tension",
+        "builder"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt2.zip",
+        "member": "Sharp Distort Tension Builder.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/sharp-tension-builder",
+      "name": "Sharp Tension Builder",
+      "category": "tension-builders",
+      "file": "tension-builders/sharp-tension-builder.wav",
+      "format": "wav",
+      "bytes": 5931132,
+      "sha256": "11c580ebe01e33a9800b6abc5928ae7b846d611f8f00bb5925a4a03a0adf75ca",
+      "duration_s": 10.277,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sharp",
+        "tension",
+        "builder"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt2.zip",
+        "member": "Sharp Tension Builder.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/short-tension-builder",
+      "name": "Short Tension Builder",
+      "category": "tension-builders",
+      "file": "tension-builders/short-tension-builder.wav",
+      "format": "wav",
+      "bytes": 3624820,
+      "sha256": "282b87d83285549e31e9756f438328e633e981795fc031c3200116466058aeda",
+      "duration_s": 6.273,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "tension",
+        "builder"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt1.zip",
+        "member": "untitled folder/Short Tension Builder.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/strange-tension-builder",
+      "name": "Strange Tension Builder",
+      "category": "tension-builders",
+      "file": "tension-builders/strange-tension-builder.wav",
+      "format": "wav",
+      "bytes": 4720312,
+      "sha256": "d8d7211f68ca65db5c830837145de88f88e8f81d002d98b3c32d944f1cbb7d62",
+      "duration_s": 8.175,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "strange",
+        "tension",
+        "builder"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt1.zip",
+        "member": "untitled folder/Strange Tension Builder.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/tension-build-up-slow",
+      "name": "Tension Build Up Slow",
+      "category": "tension-builders",
+      "file": "tension-builders/tension-build-up-slow.wav",
+      "format": "wav",
+      "bytes": 1693386,
+      "sha256": "e886935f5a93490887ce6eac67f14393abb0a45b2c7e33c72406c6218eb51be1",
+      "duration_s": 5.839,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tension",
+        "build",
+        "up",
+        "slow"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt1.zip",
+        "member": "untitled folder/Tension Build Up Slow.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/tick-tension-builder",
+      "name": "Tick Tension Builder",
+      "category": "tension-builders",
+      "file": "tension-builders/tick-tension-builder.wav",
+      "format": "wav",
+      "bytes": 26247604,
+      "sha256": "d0ead9d7809624304da6e1a2433e3cbd3360d51fd1137d215eb99ec529bf1df0",
+      "duration_s": 45.545,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tick",
+        "tension",
+        "builder"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt2.zip",
+        "member": "Tick Tension Builder.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/whoosh-tension-builder",
+      "name": "Whoosh Tension Builder",
+      "category": "tension-builders",
+      "file": "tension-builders/whoosh-tension-builder.wav",
+      "format": "wav",
+      "bytes": 6392406,
+      "sha256": "5afeae3ddea7e4d275f2c000249d7f511562550a040db755bb6c09f6281d6264",
+      "duration_s": 11.078,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "tension",
+        "builder"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt2.zip",
+        "member": "Whoosh Tension Builder.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "trains/braking-train",
       "name": "Braking Train",
       "category": "trains",
