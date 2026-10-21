@@ -12257,6 +12257,30 @@
       "added": "2026-10-21"
     },
     {
+      "id": "braams/at-ease-braam",
+      "name": "At Ease Braam",
+      "category": "braams",
+      "file": "braams/at-ease-braam.wav",
+      "format": "wav",
+      "bytes": 3240412,
+      "sha256": "a82cbaf6f6d74cdeef2f024c0b6769ec8dbb4d806035b70fb0bf9e4b032438e1",
+      "duration_s": 5.572,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ease",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt16.zip",
+        "member": "untitled folder 7/At Ease Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "braams/bass-braam",
       "name": "Bass Braam",
       "category": "braams",
@@ -12480,6 +12504,30 @@
       "added": "2026-10-21"
     },
     {
+      "id": "braams/braam-blow",
+      "name": "Braam Blow",
+      "category": "braams",
+      "file": "braams/braam-blow.wav",
+      "format": "wav",
+      "bytes": 4025776,
+      "sha256": "94884b7d504342639daf4a62e734173d658ac11e67a9dbbfa511b6ad73855a5a",
+      "duration_s": 5.2,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "braam",
+        "blow"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt17.zip",
+        "member": "untitled folder 10/Braam Blow.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "braams/braam-blow-fast",
       "name": "Braam Blow Fast",
       "category": "braams",
@@ -12501,6 +12549,31 @@
         "release": "sfx-2026-10",
         "asset": "Braams_Pt11.zip",
         "member": "untitled folder 5/Braam Blow Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/braam-blow-slow",
+      "name": "Braam Blow Slow",
+      "category": "braams",
+      "file": "braams/braam-blow-slow.wav",
+      "format": "wav",
+      "bytes": 5746100,
+      "sha256": "5a6ad43ec3f4d2b78a46d31cc016266f710dbe190a39b1abe4ec76b3ae1c8fc8",
+      "duration_s": 7.44,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "braam",
+        "blow",
+        "slow"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt22.zip",
+        "member": "untitled folder 15/Braam Blow Slow.wav"
       },
       "added": "2026-10-21"
     },
@@ -12631,6 +12704,106 @@
       "added": "2026-10-21"
     },
     {
+      "id": "braams/braam-deep-and-high",
+      "name": "Braam Deep and High",
+      "category": "braams",
+      "file": "braams/braam-deep-and-high.wav",
+      "format": "wav",
+      "bytes": 4701618,
+      "sha256": "fe878b04e6a8067ab1f40b9daa6ccd06c762f0fd54745d7d74a757e11c53884c",
+      "duration_s": 6.08,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "braam",
+        "deep",
+        "high"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt19.zip",
+        "member": "untitled folder 12/Braam Deep and High.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/braam-deep-jitter",
+      "name": "Braam Deep Jitter",
+      "category": "braams",
+      "file": "braams/braam-deep-jitter.wav",
+      "format": "wav",
+      "bytes": 3110532,
+      "sha256": "11921e1610cc145a691818ef4a6559cb4247c3530a88708dac0c593d4a478f91",
+      "duration_s": 4.0,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "braam",
+        "deep",
+        "jitter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt16.zip",
+        "member": "untitled folder 7/Braam Deep Jitter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/braam-deep-long",
+      "name": "Braam Deep Long",
+      "category": "braams",
+      "file": "braams/braam-deep-long.wav",
+      "format": "wav",
+      "bytes": 4688204,
+      "sha256": "8fdb2004c2eeaccdba4db8104c9c9b7bca4692205b1c6098c4d5458081999a53",
+      "duration_s": 6.08,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "braam",
+        "deep",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt19.zip",
+        "member": "untitled folder 12/Braam Deep Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/braam-double-cinematic",
+      "name": "Braam Double Cinematic",
+      "category": "braams",
+      "file": "braams/braam-double-cinematic.wav",
+      "format": "wav",
+      "bytes": 4466172,
+      "sha256": "1a66c2ab2b53c57d6c5c2bb6485e25f2d7481ea90b5e5d49fe6b6f33ec392433",
+      "duration_s": 7.708,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "braam",
+        "double",
+        "cinematic"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt19.zip",
+        "member": "untitled folder 12/Braam Double Cinematic.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "braams/braam-double-cinematic-fast",
       "name": "Braam Double Cinematic Fast",
       "category": "braams",
@@ -12678,6 +12851,31 @@
         "release": "sfx-2026-10",
         "asset": "Braams_Pt6.zip",
         "member": "untitled folder 3/Braam Easing Out.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/braam-echo-long",
+      "name": "Braam Echo Long",
+      "category": "braams",
+      "file": "braams/braam-echo-long.wav",
+      "format": "wav",
+      "bytes": 3171968,
+      "sha256": "ecc24eccdc5f75fc44d3cccf3e1007797ffccaaf604344ea4aaa585c2031db30",
+      "duration_s": 4.08,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "braam",
+        "echo",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt16.zip",
+        "member": "untitled folder 7/Braam Echo Long.wav"
       },
       "added": "2026-10-21"
     },
@@ -12854,6 +13052,31 @@
       "added": "2026-10-21"
     },
     {
+      "id": "braams/braam-hopeful-long",
+      "name": "Braam Hopeful Long",
+      "category": "braams",
+      "file": "braams/braam-hopeful-long.wav",
+      "format": "wav",
+      "bytes": 4165998,
+      "sha256": "f6e1a7389c2821d380835a7ac99ac7d0e93917c11677e92b116445555792102f",
+      "duration_s": 7.2,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "braam",
+        "hopeful",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt17.zip",
+        "member": "untitled folder 10/Braam Hopeful Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "braams/braam-horn-blow",
       "name": "Braam Horn Blow",
       "category": "braams",
@@ -12950,6 +13173,30 @@
         "release": "sfx-2026-10",
         "asset": "Braams_Pt6.zip",
         "member": "untitled folder 3/Braam Long Horn Blow.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/braam-low",
+      "name": "Braam Low",
+      "category": "braams",
+      "file": "braams/braam-low.wav",
+      "format": "wav",
+      "bytes": 5929704,
+      "sha256": "4f4bb08427d25b5d2680caaf6334c86d7713502cd1d0be4752f0d6831dfbcc6f",
+      "duration_s": 7.68,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "braam",
+        "low"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt22.zip",
+        "member": "untitled folder 15/Braam Low.wav"
       },
       "added": "2026-10-21"
     },
@@ -13349,6 +13596,54 @@
       "added": "2026-10-21"
     },
     {
+      "id": "braams/braam-space",
+      "name": "Braam Space",
+      "category": "braams",
+      "file": "braams/braam-space.wav",
+      "format": "wav",
+      "bytes": 7883802,
+      "sha256": "b504e1306a5361d0d827c81d4bd04f780e5c2496719b6a0cbbb3e905dec09c60",
+      "duration_s": 10.24,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "braam",
+        "space"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt20.zip",
+        "member": "untitled folder 16/Braam Space.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/braam-stress",
+      "name": "Braam Stress",
+      "category": "braams",
+      "file": "braams/braam-stress.wav",
+      "format": "wav",
+      "bytes": 8817412,
+      "sha256": "477a0de42b21e576d77bf1e4c12c904ff6a04920103c18317f6966abca6ff3ac",
+      "duration_s": 11.44,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "braam",
+        "stress"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt21.zip",
+        "member": "untitled folder 17/Braam Stress.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "braams/braam-tense-rise",
       "name": "Braam Tense Rise",
       "category": "braams",
@@ -13374,6 +13669,30 @@
       "added": "2026-10-21"
     },
     {
+      "id": "braams/braam-tension",
+      "name": "Braam Tension",
+      "category": "braams",
+      "file": "braams/braam-tension.wav",
+      "format": "wav",
+      "bytes": 5545682,
+      "sha256": "e034184cb28e59fc8e71439aedd64e5655ac82fb399b4993625844005c4cc4a6",
+      "duration_s": 7.16,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "braam",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt22.zip",
+        "member": "untitled folder 15/Braam Tension.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "braams/braam-wave",
       "name": "Braam Wave",
       "category": "braams",
@@ -13394,6 +13713,31 @@
         "release": "sfx-2026-10",
         "asset": "Braams_Pt10.zip",
         "member": "untitled folder 4/Braam Wave.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/build-up-braam",
+      "name": "Build Up Braam",
+      "category": "braams",
+      "file": "braams/build-up-braam.wav",
+      "format": "wav",
+      "bytes": 4159140,
+      "sha256": "456b7a024c9f19eb934a422db5562b11970dceb8bb6150cada305d67f0d40671",
+      "duration_s": 7.174,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "build",
+        "up",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt17.zip",
+        "member": "untitled folder 10/Build Up Braam.wav"
       },
       "added": "2026-10-21"
     },
@@ -13672,6 +14016,55 @@
       "added": "2026-10-21"
     },
     {
+      "id": "braams/deep-braam",
+      "name": "Deep Braam",
+      "category": "braams",
+      "file": "braams/deep-braam.wav",
+      "format": "wav",
+      "bytes": 4165960,
+      "sha256": "79110bcc897131a314ffae373fcf529d6c6dd1c242db6fb5fae18c2d18414d08",
+      "duration_s": 5.4,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt17.zip",
+        "member": "untitled folder 10/Deep Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/deep-braam-long",
+      "name": "Deep Braam Long",
+      "category": "braams",
+      "file": "braams/deep-braam-long.wav",
+      "format": "wav",
+      "bytes": 5923360,
+      "sha256": "19551ae66ede47e2e40cfcaeebbd986e656ffb312b7331bb40ad11a1301e2e06",
+      "duration_s": 7.68,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "braam",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt22.zip",
+        "member": "untitled folder 15/Deep Braam Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "braams/deep-braam-resonant",
       "name": "Deep Braam Resonant",
       "category": "braams",
@@ -13744,6 +14137,32 @@
         "release": "sfx-2026-10",
         "asset": "Braams_Pt8.zip",
         "member": "untitled folder 2/Deep Classic Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/deep-classic-soft-braam",
+      "name": "Deep Classic Soft Braam",
+      "category": "braams",
+      "file": "braams/deep-classic-soft-braam.wav",
+      "format": "wav",
+      "bytes": 3298812,
+      "sha256": "639f10461acb02d66aff6aa0e45e77bea0a2e24f9e8b0ef078bc675ed93ae2e7",
+      "duration_s": 5.672,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "classic",
+        "soft",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt16.zip",
+        "member": "untitled folder 7/Deep Classic Soft Braam.wav"
       },
       "added": "2026-10-21"
     },
@@ -13851,6 +14270,31 @@
       "added": "2026-10-21"
     },
     {
+      "id": "braams/deep-layered-braam",
+      "name": "Deep Layered Braam",
+      "category": "braams",
+      "file": "braams/deep-layered-braam.wav",
+      "format": "wav",
+      "bytes": 4041262,
+      "sha256": "79f02a1a03f556f80e1e692395432d0b0a9678555f006b54b01b72e12f336052",
+      "duration_s": 6.974,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "layered",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt17.zip",
+        "member": "untitled folder 10/Deep Layered Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "braams/deep-layered-orchestral-braam",
       "name": "Deep Layered Orchestral Braam",
       "category": "braams",
@@ -13873,6 +14317,31 @@
         "release": "sfx-2026-10",
         "asset": "Braams_Pt2.zip",
         "member": "untitled folder 2/Deep Layered Orchestral Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/deep-low-braam",
+      "name": "Deep Low Braam",
+      "category": "braams",
+      "file": "braams/deep-low-braam.wav",
+      "format": "wav",
+      "bytes": 4590070,
+      "sha256": "7369c23838d733ab5276da049df3965ad518abda854664e0ca615b5ef20c2e5b",
+      "duration_s": 7.962,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "low",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt19.zip",
+        "member": "untitled folder 12/Deep Low Braam.wav"
       },
       "added": "2026-10-21"
     },
@@ -15402,6 +15871,57 @@
       "added": "2026-10-21"
     },
     {
+      "id": "braams/long-bass-braam",
+      "name": "Long Bass Braam",
+      "category": "braams",
+      "file": "braams/long-bass-braam.wav",
+      "format": "wav",
+      "bytes": 3035370,
+      "sha256": "66735b0dbd56c34eeb769dfe9ea7c00eae89bc6794cb079738b5fc0998894846",
+      "duration_s": 5.205,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "long",
+        "bass",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt16.zip",
+        "member": "untitled folder 7/Long Bass Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/long-buil-up-braam",
+      "name": "Long Buil Up Braam",
+      "category": "braams",
+      "file": "braams/long-buil-up-braam.wav",
+      "format": "wav",
+      "bytes": 6913916,
+      "sha256": "bfbd692a12bae03396bec8d07bffd4af14e24b3dcf6a31b5126caf6077efb591",
+      "duration_s": 11.945,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "long",
+        "buil",
+        "up",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt20.zip",
+        "member": "untitled folder 16/Long Buil Up Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "braams/long-grilly-braam",
       "name": "Long Grilly Braam",
       "category": "braams",
@@ -15478,6 +15998,57 @@
       "added": "2026-10-21"
     },
     {
+      "id": "braams/long-jitter-braam",
+      "name": "Long Jitter Braam",
+      "category": "braams",
+      "file": "braams/long-jitter-braam.wav",
+      "format": "wav",
+      "bytes": 6598144,
+      "sha256": "408078d873cfd7e0c432b1930dc3c9247bcfbe6a186eede51df45631306c827e",
+      "duration_s": 11.411,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "long",
+        "jitter",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt20.zip",
+        "member": "untitled folder 16/Long Jitter Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/long-metal-impact-braam",
+      "name": "Long Metal Impact Braam",
+      "category": "braams",
+      "file": "braams/long-metal-impact-braam.wav",
+      "format": "wav",
+      "bytes": 4066914,
+      "sha256": "b23b6070c95876b18cd05566f61ca28a97c3293dfbb55acf8ee5ca6bd4cfd020",
+      "duration_s": 7.04,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "long",
+        "metal",
+        "impact",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt17.zip",
+        "member": "untitled folder 10/Long Metal Impact Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "braams/long-outerspace-braam",
       "name": "Long Outerspace Braam",
       "category": "braams",
@@ -15499,6 +16070,31 @@
         "release": "sfx-2026-10",
         "asset": "Braams_Pt12.zip",
         "member": "untitled folder 9/Long Outerspace Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/long-slow-braam",
+      "name": "Long Slow Braam",
+      "category": "braams",
+      "file": "braams/long-slow-braam.wav",
+      "format": "wav",
+      "bytes": 8199078,
+      "sha256": "c4c47a53fd841605ee07e360100db0db854a3c37080546c2fb12604b5df127c9",
+      "duration_s": 14.214,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "long",
+        "slow",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt21.zip",
+        "member": "untitled folder 17/Long Slow Braam.wav"
       },
       "added": "2026-10-21"
     },
@@ -16319,6 +16915,31 @@
       "added": "2026-10-21"
     },
     {
+      "id": "braams/rising-synth-braam",
+      "name": "Rising Synth Braam",
+      "category": "braams",
+      "file": "braams/rising-synth-braam.wav",
+      "format": "wav",
+      "bytes": 3509582,
+      "sha256": "ebd2c70bf2d3ecd8aedb1d5b62ba38724e4fa5477af325d243050c07efd2648e",
+      "duration_s": 6.073,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rising",
+        "synth",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt16.zip",
+        "member": "untitled folder 7/Rising Synth Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "braams/rising-tick-braam",
       "name": "Rising Tick Braam",
       "category": "braams",
@@ -16718,6 +17339,56 @@
       "added": "2026-10-21"
     },
     {
+      "id": "braams/slow-synth-braam",
+      "name": "Slow Synth Braam",
+      "category": "braams",
+      "file": "braams/slow-synth-braam.wav",
+      "format": "wav",
+      "bytes": 4701166,
+      "sha256": "3945452e4b8ed32e78cd57eeb352f9c82df2db5bb5d9d173135527bd3ff0ed2c",
+      "duration_s": 8.141,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slow",
+        "synth",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt19.zip",
+        "member": "untitled folder 12/Slow Synth Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/smooth-ambient-braam",
+      "name": "Smooth Ambient Braam",
+      "category": "braams",
+      "file": "braams/smooth-ambient-braam.wav",
+      "format": "wav",
+      "bytes": 3081040,
+      "sha256": "eaf0d1f1d38cc51a083245f4fa0b73a8e955ee2ed808a31571f41515532430dd",
+      "duration_s": 5.305,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "smooth",
+        "ambient",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt16.zip",
+        "member": "untitled folder 7/Smooth Ambient Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "braams/smooth-braam",
       "name": "Smooth Braam",
       "category": "braams",
@@ -16789,6 +17460,30 @@
         "release": "sfx-2026-10",
         "asset": "Braams_Pt12.zip",
         "member": "untitled folder 9/Smooth High Tone Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "braams/smooth-in-braam",
+      "name": "Smooth In Braam",
+      "category": "braams",
+      "file": "braams/smooth-in-braam.wav",
+      "format": "wav",
+      "bytes": 3081040,
+      "sha256": "ac74bae7c8f78f301ab31b28302abe0fd32910966b788416dfac5b3c21afabef",
+      "duration_s": 5.305,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "smooth",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Braams_Pt16.zip",
+        "member": "untitled folder 7/Smooth In Braam.wav"
       },
       "added": "2026-10-21"
     },
