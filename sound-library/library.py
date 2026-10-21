@@ -8,7 +8,7 @@
     python sound-library/library.py verify
     python sound-library/library.py status
 
-`ingest` reads WAV files from zips or folders (or, with --from-release, from
+`ingest` reads audio files (WAV, or M4A/MP4) from zips or folders (or, with --from-release, from
 every zip attached to that GitHub Release) and merges them into catalog.json:
 one entry per file, with its name, category, duration, sample rate, channels,
 bit depth, size, sha256, the tags its name yields, and where it came from (the
@@ -121,6 +121,61 @@ def wav_info(data):
             "bit_depth": fmt["bit_depth"], "duration_s": round(seconds, 3)}
 
 
+def _mp4_boxes(data, start, end):
+    pos = start
+    while pos + 8 <= end:
+        size = struct.unpack(">I", data[pos:pos + 4])[0]
+        kind = data[pos + 4:pos + 8]
+        head = 8
+        if size == 1:
+            size = struct.unpack(">Q", data[pos + 8:pos + 16])[0]
+            head = 16
+        elif size == 0:
+            size = end - pos
+        if size < head:
+            return
+        yield kind, pos + head, min(pos + size, end)
+        pos += size
+
+
+def mp4_info(data):
+    """Channels, sample rate and duration of an MP4/M4A file, from its mvhd and
+    mp4a boxes. Anything that is not one gives None."""
+    if len(data) < 12 or data[4:8] != b"ftyp":
+        return None
+    info = {}
+    containers = {b"moov", b"trak", b"mdia", b"minf", b"stbl"}
+
+    def walk(start, end):
+        for kind, body, stop in _mp4_boxes(data, start, end):
+            if kind == b"mvhd":
+                version = data[body]
+                if version == 1:
+                    scale, length = struct.unpack(">IQ", data[body + 20:body + 32])
+                else:
+                    scale, length = struct.unpack(">II", data[body + 12:body + 20])
+                if scale:
+                    info["duration_s"] = round(length / scale, 3)
+            elif kind == b"stsd":
+                walk(body + 8, stop)
+            elif kind == b"mp4a":
+                channels, bits = struct.unpack(">HH", data[body + 16:body + 20])
+                rate = struct.unpack(">I", data[body + 24:body + 28])[0] >> 16
+                info.update({"channels": channels, "bit_depth": bits, "sample_rate": rate})
+            elif kind in containers:
+                walk(body, stop)
+
+    walk(0, len(data))
+    if "duration_s" not in info:
+        return None
+    return {"channels": info.get("channels"), "sample_rate": info.get("sample_rate"),
+            "bit_depth": info.get("bit_depth"), "duration_s": info["duration_s"]}
+
+
+def audio_info(data):
+    return wav_info(data) or mp4_info(data)
+
+
 # ── catalog ──────────────────────────────────────────────────────────────────
 
 def load(catalog=CATALOG):
@@ -189,7 +244,7 @@ def ingest(sources, category=None, release=None, replace=False, catalog=CATALOG,
             name = display_name(member)
             ident = f"{cat}/{slug(name)}"
             digest = hashlib.sha256(blob).hexdigest()
-            info = wav_info(blob) or {}
+            info = audio_info(blob) or {}
             ext = Path(member).suffix.lower().lstrip(".")
             entry = {
                 "id": ident, "name": name, "category": cat,

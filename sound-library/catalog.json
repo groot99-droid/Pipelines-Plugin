@@ -9180,6 +9180,1213 @@
       "added": "2026-10-21"
     },
     {
+      "id": "combat/3-double-rounds-shooting",
+      "name": "3 Double Rounds Shooting",
+      "category": "combat",
+      "file": "combat/3-double-rounds-shooting.wav",
+      "format": "wav",
+      "bytes": 4220690,
+      "sha256": "5367bf1abaf99fa51ac35f56343b59ddb256f464218827ec08b47e5c5ef9b346",
+      "duration_s": 7.307,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "3",
+        "double",
+        "rounds",
+        "shooting"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt4.zip",
+        "member": "untitled folder 4/3 Double Rounds Shooting.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/battlefield-explosion-ambience",
+      "name": "Battlefield Explosion Ambience",
+      "category": "combat",
+      "file": "combat/battlefield-explosion-ambience.wav",
+      "format": "wav",
+      "bytes": 6301564,
+      "sha256": "c10e1db349d7e8301d915417acabe8a1eb6d4141f41c5003b8ed83cf453aa5e7",
+      "duration_s": 10.92,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "battlefield",
+        "explosion",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt5.zip",
+        "member": "untitled folder 5/Battlefield Explosion Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/battlefield-shots",
+      "name": "Battlefield Shots",
+      "category": "combat",
+      "file": "combat/battlefield-shots.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "69d80e5b92558c60eba2053dba483a76479f3bea66e7a42ed7f4a8a004e5a582",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "battlefield",
+        "shots"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt3.zip",
+        "member": "untitled folder 3/Battlefield Shots.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/castle-barricading",
+      "name": "Castle Barricading",
+      "category": "combat",
+      "file": "combat/castle-barricading.wav",
+      "format": "wav",
+      "bytes": 3451922,
+      "sha256": "73fdff9976e69ee94ffdfa7f251d8a7f354b4d375cb27e1fc682dd1abb8db24a",
+      "duration_s": 5.973,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "castle",
+        "barricading"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt3.zip",
+        "member": "untitled folder 3/Castle Barricading.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/city-bombing",
+      "name": "City Bombing",
+      "category": "combat",
+      "file": "combat/city-bombing.wav",
+      "format": "wav",
+      "bytes": 4720334,
+      "sha256": "103c0e4afd15e27e05d3b4aae4ea7f13563dbc57603113efac6342067d4a44cf",
+      "duration_s": 8.175,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "city",
+        "bombing"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt5.zip",
+        "member": "untitled folder 5/City Bombing.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/city-explosions",
+      "name": "City Explosions",
+      "category": "combat",
+      "file": "combat/city-explosions.wav",
+      "format": "wav",
+      "bytes": 2702372,
+      "sha256": "f58a59bdcbe45233b9f619a90974223c0eefacb15b8a99d89ce488cb69ad3d3d",
+      "duration_s": 4.671,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "city",
+        "explosions"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt1.zip",
+        "member": "untitled folder/City Explosions.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/close-firefight",
+      "name": "Close Firefight",
+      "category": "combat",
+      "file": "combat/close-firefight.wav",
+      "format": "wav",
+      "bytes": 4220690,
+      "sha256": "b983e10171e2258d90fe192a3b2cd0ca5717696070739d279ae39d0f71cd8c4d",
+      "duration_s": 7.307,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "close",
+        "firefight"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt4.zip",
+        "member": "untitled folder 4/Close Firefight.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/combat-city",
+      "name": "Combat City",
+      "category": "combat",
+      "file": "combat/combat-city.wav",
+      "format": "wav",
+      "bytes": 3932348,
+      "sha256": "707eedc8b9c89f5e7cb13b57c7bbb4025311e8f81beeaba3ac63681bd990749b",
+      "duration_s": 6.807,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "combat",
+        "city"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt4.zip",
+        "member": "untitled folder 4/Combat City.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/echo-round-of-shots",
+      "name": "Echo Round of Shots",
+      "category": "combat",
+      "file": "combat/echo-round-of-shots.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "6d6e4a09cf1921bd00064027ee24314e98d70c5e17dc5070dc0a2d45c0ff92b4",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "echo",
+        "round",
+        "shots"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt3.zip",
+        "member": "untitled folder 3/Echo Round of Shots.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/explosion-city-combat",
+      "name": "Explosion City Combat",
+      "category": "combat",
+      "file": "combat/explosion-city-combat.wav",
+      "format": "wav",
+      "bytes": 2702372,
+      "sha256": "1a9ed0eceabaeb5b161d75e57070fdf0abfd8006c6dd6ad2c50fbb13fdb2555f",
+      "duration_s": 4.671,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "explosion",
+        "city",
+        "combat"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt1.zip",
+        "member": "untitled folder/Explosion City Combat.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/explosion-combat",
+      "name": "Explosion Combat",
+      "category": "combat",
+      "file": "combat/explosion-combat.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "5b08318cd2032bb16ab219686b8607be882a66ea97f2ad6f25158a1a50da3efc",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "explosion",
+        "combat"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt3.zip",
+        "member": "untitled folder 3/Explosion Combat.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/far-off-fighting",
+      "name": "Far Off Fighting",
+      "category": "combat",
+      "file": "combat/far-off-fighting.wav",
+      "format": "wav",
+      "bytes": 4720334,
+      "sha256": "d7d87fee5c75ccf28ebca4e888f6ae7249129b811a16eed19d2fc7789dd56aa9",
+      "duration_s": 8.175,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "far",
+        "off",
+        "fighting"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt4.zip",
+        "member": "untitled folder 4/Far Off Fighting.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/fly-over-plane",
+      "name": "Fly Over Plane",
+      "category": "combat",
+      "file": "combat/fly-over-plane.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "eecffeb6321c39aeafe9a50476eeb4ebe737b4245e83c40079955d42d7d49e04",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fly",
+        "over",
+        "plane"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt2.zip",
+        "member": "untitled folder 2/Fly Over Plane.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/fly-over-plane-ambience",
+      "name": "Fly Over Plane Ambience",
+      "category": "combat",
+      "file": "combat/fly-over-plane-ambience.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "45187ffaecc13396f6554c09a0bceded29f884d8ef4c5b82954ca56001edf2b6",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fly",
+        "over",
+        "plane",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt2.zip",
+        "member": "untitled folder 2/Fly Over Plane Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/grenade-explosion",
+      "name": "Grenade Explosion",
+      "category": "combat",
+      "file": "combat/grenade-explosion.wav",
+      "format": "wav",
+      "bytes": 1145562,
+      "sha256": "676ef61186df471cc50fe487cec9476c9ddc5af413ccf295d56245f2673ec83c",
+      "duration_s": 1.969,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "grenade",
+        "explosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt1.zip",
+        "member": "untitled folder/Grenade Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/heavy-machine-gun-street",
+      "name": "Heavy Machine Gun Street",
+      "category": "combat",
+      "file": "combat/heavy-machine-gun-street.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "a23c69d2bdafb9954d62d08f911f514a0071820ea16d8821a436e96f1c0b0263",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "heavy",
+        "machine",
+        "gun",
+        "street"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt2.zip",
+        "member": "untitled folder 2/Heavy Machine Gun Street.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/heavy-sniper-shot",
+      "name": "Heavy Sniper Shot",
+      "category": "combat",
+      "file": "combat/heavy-sniper-shot.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "b7e6b35e8a0c1433c2e4974d1a86dcaf3cab887b8d6c2ebc1a598d682dcc0517",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "heavy",
+        "sniper",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt2.zip",
+        "member": "untitled folder 2/Heavy Sniper Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/high-fly-over-fighterjet",
+      "name": "High Fly Over Fighterjet",
+      "category": "combat",
+      "file": "combat/high-fly-over-fighterjet.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "2e64103bddac197d45197bfa2b067e770bfaa300130952c0413b982e88518428",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "high",
+        "fly",
+        "over",
+        "fighterjet"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt2.zip",
+        "member": "untitled folder 2/High Fly Over Fighterjet.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/horse-running-through-mediaval-combat-crowd",
+      "name": "Horse Running Through Mediaval Combat Crowd",
+      "category": "combat",
+      "file": "combat/horse-running-through-mediaval-combat-crowd.wav",
+      "format": "wav",
+      "bytes": 3451922,
+      "sha256": "b5be3e4bc7d5eb2fc272822a5bdf353d1ce977ec2b48215e64e1f024919d6fad",
+      "duration_s": 5.973,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "horse",
+        "running",
+        "through",
+        "mediaval",
+        "combat",
+        "crowd"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt3.zip",
+        "member": "untitled folder 3/Horse Running Through Mediaval Combat Crowd.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/impact-metal",
+      "name": "Impact Metal",
+      "category": "combat",
+      "file": "combat/impact-metal.wav",
+      "format": "wav",
+      "bytes": 972588,
+      "sha256": "c226062260a9b98c0ede58d7640002c951b752ca007a9ea4de497eb68dbdca7e",
+      "duration_s": 1.668,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "metal"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt1.zip",
+        "member": "untitled folder/Impact Metal.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/incoming-arrows-and-impacts-medieval",
+      "name": "Incoming Arrows and Impacts Medieval",
+      "category": "combat",
+      "file": "combat/incoming-arrows-and-impacts-medieval.wav",
+      "format": "wav",
+      "bytes": 31935672,
+      "sha256": "ef218dcc5c81dfec82251c6cf91f370fe73a69913d8fb79a2c2bed67d250fd17",
+      "duration_s": 55.422,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "incoming",
+        "arrows",
+        "impacts",
+        "medieval"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Incoming_Arrows_and_Impacts_Medieval.zip",
+        "member": "Incoming Arrows and Impacts Medieval.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/inside-house-explosion",
+      "name": "Inside House Explosion",
+      "category": "combat",
+      "file": "combat/inside-house-explosion.wav",
+      "format": "wav",
+      "bytes": 1453068,
+      "sha256": "0c77fd5dcb25bbacf422b98d9a8b4229cb1c4ad428643f59c03b7eea24acb8f1",
+      "duration_s": 2.502,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "house",
+        "explosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt1.zip",
+        "member": "untitled folder/Inside House Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/inside-old-plane-dogfight-shooting",
+      "name": "Inside Old Plane Dogfight Shooting",
+      "category": "combat",
+      "file": "combat/inside-old-plane-dogfight-shooting.wav",
+      "format": "wav",
+      "bytes": 2433308,
+      "sha256": "08264caecea33ce092ed19493cbab03911bf42c0dc906daec047f48cf8b03c98",
+      "duration_s": 4.204,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "old",
+        "plane",
+        "dogfight",
+        "shooting"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt1.zip",
+        "member": "untitled folder/Inside Old Plane Dogfight Shooting.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/marching-romans",
+      "name": "Marching Romans",
+      "category": "combat",
+      "file": "combat/marching-romans.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "381a3e0edc50f25b41f998b632b723df00c638e4797a657b58172bc70b97f8f4",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "marching",
+        "romans"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt2.zip",
+        "member": "untitled folder 2/Marching Romans.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/medieval-castle-rock-impact",
+      "name": "Medieval Castle Rock Impact",
+      "category": "combat",
+      "file": "combat/medieval-castle-rock-impact.wav",
+      "format": "wav",
+      "bytes": 3451922,
+      "sha256": "fae7a38d10329fc55697d245ef1e432fede1ab6f1e488b336f9db31a083a2d39",
+      "duration_s": 5.973,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "medieval",
+        "castle",
+        "rock",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt3.zip",
+        "member": "untitled folder 3/Medieval Castle Rock Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/medieval-fighting-ambience",
+      "name": "Medieval Fighting Ambience",
+      "category": "combat",
+      "file": "combat/medieval-fighting-ambience.wav",
+      "format": "wav",
+      "bytes": 5604476,
+      "sha256": "f542e3e1f617faef154785129ff83625fd4f3e4054a04719cfada161ad242044",
+      "duration_s": 9.71,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "medieval",
+        "fighting",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt5.zip",
+        "member": "untitled folder 5/Medieval Fighting Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/medieval-war-horn",
+      "name": "Medieval War Horn",
+      "category": "combat",
+      "file": "combat/medieval-war-horn.wav",
+      "format": "wav",
+      "bytes": 1530000,
+      "sha256": "e9e45e5741325f3801500dcd3b568c2aed786187f4d732a3724e3513ecd9d54f",
+      "duration_s": 2.636,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "medieval",
+        "war",
+        "horn"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt1.zip",
+        "member": "untitled folder/Medieval War Horn.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/old-gun-shots",
+      "name": "Old Gun Shots",
+      "category": "combat",
+      "file": "combat/old-gun-shots.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "08572f1abfb8d8b654c80f2392c4bdc44405a3c398db33500fa2f7b95a915b02",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "gun",
+        "shots"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt2.zip",
+        "member": "untitled folder 2/Old Gun Shots.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/open-air-fighter-fly-over-short",
+      "name": "Open Air Fighter Fly Over Short",
+      "category": "combat",
+      "file": "combat/open-air-fighter-fly-over-short.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "4efc6bae5c084124317cfff3e76da2c5d0c293b58ade4660409e2bd0ba7c39b3",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "open",
+        "air",
+        "fighter",
+        "fly",
+        "over",
+        "short"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt2.zip",
+        "member": "untitled folder 2/Open Air Fighter Fly Over Short.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/plane-dogfight-wwii",
+      "name": "Plane Dogfight WWII",
+      "category": "combat",
+      "file": "combat/plane-dogfight-wwii.wav",
+      "format": "wav",
+      "bytes": 2202672,
+      "sha256": "38ec282090bb230cc1e68bef1b47357ecd3f839fb2c588de856454d8275b8b66",
+      "duration_s": 3.804,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "plane",
+        "dogfight",
+        "wwii"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt1.zip",
+        "member": "untitled folder/Plane Dogfight WWII.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/roman-commander-speaking",
+      "name": "Roman Commander Speaking",
+      "category": "combat",
+      "file": "combat/roman-commander-speaking.wav",
+      "format": "wav",
+      "bytes": 3432704,
+      "sha256": "38a73d61ab05bb89a52cedc8969d9ee11fc54c69f944595146df0ac7323cfc88",
+      "duration_s": 5.939,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "roman",
+        "commander",
+        "speaking"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt3.zip",
+        "member": "untitled folder 3/Roman Commander Speaking.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/round-of-shots-in-desert",
+      "name": "Round of Shots In Desert",
+      "category": "combat",
+      "file": "combat/round-of-shots-in-desert.wav",
+      "format": "wav",
+      "bytes": 2048922,
+      "sha256": "e1f78735167ae04c63684c372bf102baf27fc40072107979a8ef7941255c1f6a",
+      "duration_s": 3.537,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "round",
+        "shots",
+        "desert"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt1.zip",
+        "member": "untitled folder/Round of Shots In Desert.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/run-to-survive-wwi",
+      "name": "Run to Survive WWI",
+      "category": "combat",
+      "file": "combat/run-to-survive-wwi.wav",
+      "format": "wav",
+      "bytes": 7276540,
+      "sha256": "df06581a094708303aba232635c6933b2f86b1780a7490972f33ab96efd14300",
+      "duration_s": 12.613,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "run",
+        "survive",
+        "wwi"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt5.zip",
+        "member": "untitled folder 5/Run to Survive WWI.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/salute-roman-empire-walk",
+      "name": "Salute Roman Empire Walk",
+      "category": "combat",
+      "file": "combat/salute-roman-empire-walk.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "73debe565764ccf81dbc1fb10b163bc18c1ac4eea1c9ed206effd9f18e4a06b3",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "salute",
+        "roman",
+        "empire",
+        "walk"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt2.zip",
+        "member": "untitled folder 2/Salute Roman Empire Walk.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/shooting-in-the-city",
+      "name": "Shooting In the City",
+      "category": "combat",
+      "file": "combat/shooting-in-the-city.wav",
+      "format": "wav",
+      "bytes": 4220690,
+      "sha256": "b1f58a097a5dd8f827c0c53dce0a9064859ed78d6c40e93096cca7330dff35dc",
+      "duration_s": 7.307,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "shooting",
+        "city"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt4.zip",
+        "member": "untitled folder 4/Shooting In the City.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/short-city-ambience-war",
+      "name": "Short City Ambience War",
+      "category": "combat",
+      "file": "combat/short-city-ambience-war.wav",
+      "format": "wav",
+      "bytes": 2704116,
+      "sha256": "abcd0be39869d857eb77a3ef789c6e62c01187a86b320fb14c29de5b832f4ff5",
+      "duration_s": 4.671,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "city",
+        "ambience",
+        "war"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt1.zip",
+        "member": "untitled folder/Short City Ambience War.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/short-combat-ambience-scream-wwii",
+      "name": "Short Combat Ambience Scream WWII",
+      "category": "combat",
+      "file": "combat/short-combat-ambience-scream-wwii.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "00c4971a3000928594a1882fca6d5c093a8b542f98a324a581d5746955d11db2",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "combat",
+        "ambience",
+        "scream",
+        "wwii"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt2.zip",
+        "member": "untitled folder 2/Short Combat Ambience Scream WWII.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/sniper-rifle-under-heavy-fire",
+      "name": "Sniper Rifle under Heavy Fire",
+      "category": "combat",
+      "file": "combat/sniper-rifle-under-heavy-fire.wav",
+      "format": "wav",
+      "bytes": 4503610,
+      "sha256": "8b66acfb89c20fc5baf1443d263de5ab8ba02ef561275d0d6d5f935c02054821",
+      "duration_s": 7.812,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sniper",
+        "rifle",
+        "under",
+        "heavy",
+        "fire"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt4.zip",
+        "member": "untitled folder 4/Sniper Rifle under Heavy Fire.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/spartans-in-combat",
+      "name": "Spartans In Combat",
+      "category": "combat",
+      "file": "combat/spartans-in-combat.wav",
+      "format": "wav",
+      "bytes": 6450116,
+      "sha256": "99a9a2900a0f600007da4c1ae84a5190858a9384342994d564852127cf99c026",
+      "duration_s": 11.178,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "spartans",
+        "combat"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt5.zip",
+        "member": "untitled folder 5/Spartans In Combat.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/street-shootout-war",
+      "name": "Street Shootout War",
+      "category": "combat",
+      "file": "combat/street-shootout-war.wav",
+      "format": "wav",
+      "bytes": 3663332,
+      "sha256": "86f7f5e1ed1180e06b24d6a09d23aba901b42688d9bfe37c7e3d0c55156fcaf9",
+      "duration_s": 6.34,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "street",
+        "shootout",
+        "war"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt3.zip",
+        "member": "untitled folder 3/Street Shootout War.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/the-battle-begins",
+      "name": "The battle begins",
+      "category": "combat",
+      "file": "combat/the-battle-begins.m4a",
+      "format": "m4a",
+      "bytes": 428135,
+      "sha256": "8c6a25109b7ba1cfebf9bb42a104662ea4312ee256acc0a8ee4bf90c114b073d",
+      "duration_s": 8.243,
+      "sample_rate": 44100,
+      "channels": 2,
+      "bit_depth": 16,
+      "loopable": false,
+      "tags": [
+        "battle",
+        "begins"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt6.zip",
+        "member": "The battle begins.m4a"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/urban-warfare-ambience",
+      "name": "Urban Warfare Ambience",
+      "category": "combat",
+      "file": "combat/urban-warfare-ambience.wav",
+      "format": "wav",
+      "bytes": 2702372,
+      "sha256": "9f1bfad0f2de2768e4f3194309388400ee68f0455ac02f6e59e0c6db0f75f838",
+      "duration_s": 4.671,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "urban",
+        "warfare",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt1.zip",
+        "member": "untitled folder/Urban Warfare Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/walking-soldier",
+      "name": "Walking Soldier",
+      "category": "combat",
+      "file": "combat/walking-soldier.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "c77c5774afb6a17e5b7cd036a95394eb39a821ecf2b36436e524f6510af78532",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "walking",
+        "soldier"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt1.zip",
+        "member": "untitled folder/Walking Soldier.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/war-horse-inside-castle-speeding",
+      "name": "War Horse Inside Castle Speeding",
+      "category": "combat",
+      "file": "combat/war-horse-inside-castle-speeding.wav",
+      "format": "wav",
+      "bytes": 3451922,
+      "sha256": "7530b6c6a9f11bd39b27d2fc4436d95eb5766ed653a945696a8b775ba1ccd4a7",
+      "duration_s": 5.973,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "war",
+        "horse",
+        "inside",
+        "castle",
+        "speeding"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt3.zip",
+        "member": "untitled folder 3/War Horse Inside Castle Speeding.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/wwi-battlefield",
+      "name": "WWI Battlefield",
+      "category": "combat",
+      "file": "combat/wwi-battlefield.wav",
+      "format": "wav",
+      "bytes": 2221884,
+      "sha256": "95e5c1411e782568b67b7e65db607cebe75a123caf2a6fef217eadf074a7369b",
+      "duration_s": 3.837,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "wwi",
+        "battlefield"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt1.zip",
+        "member": "untitled folder/WWI Battlefield.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/wwii-airplane-fly-over",
+      "name": "WWII Airplane Fly Over",
+      "category": "combat",
+      "file": "combat/wwii-airplane-fly-over.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "c5642b2f6f617c509c429e1b15a35e5df5968aee438e0f9f895182381b6292e4",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "wwii",
+        "airplane",
+        "fly",
+        "over"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt1.zip",
+        "member": "untitled folder/WWII Airplane Fly Over.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/wwii-combat-ambience",
+      "name": "WWII Combat Ambience",
+      "category": "combat",
+      "file": "combat/wwii-combat-ambience.wav",
+      "format": "wav",
+      "bytes": 11083296,
+      "sha256": "9a4df55b9f59961f0ca42270c678fdd6270aa452240dd52e829c062dbeb1c3a5",
+      "duration_s": 19.219,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "wwii",
+        "combat",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt6.zip",
+        "member": "WWII Combat Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "combat/wwii-explosions",
+      "name": "WWII Explosions",
+      "category": "combat",
+      "file": "combat/wwii-explosions.wav",
+      "format": "wav",
+      "bytes": 2913788,
+      "sha256": "61f3a7e93effdaf638e13e4459d6e1d398f9177fb90d498379c5cb13223b79fb",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "wwii",
+        "explosions"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Combat_Pt1.zip",
+        "member": "untitled folder/WWII Explosions.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "construction-factory/cutting-machine-close",
       "name": "Cutting Machine Close",
       "category": "construction-factory",

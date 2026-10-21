@@ -7,7 +7,7 @@ disk.
 | What | Versioned | |
 |---|---|---|
 | `catalog.json` | yes | one entry per sound: id, name, category, duration, sample rate, channels, bit depth, size, sha256, tags, and where its original is kept |
-| `files/<category>/<slug>.wav` | **no** | the originals. A batch of ten zips is 230 MB; the library will be several GB |
+| `files/<category>/<slug>.<ext>` | **no** | the originals. A batch of ten zips is 230 MB; the library will be several GB |
 | `library.py` | yes | `ingest`, `search`, `show`, `fetch`, `verify`, `status`. Stdlib only |
 | `tests/` | yes | run on temporary folders with generated WAVs |
 
@@ -52,7 +52,8 @@ project that needs it; this folder is not versioned and is never added to git.
 
 ## Add a batch
 
-1. The author zips a batch per category (`Boats_Pt1.zip`, `Boats_Pt2.zip`...).
+1. Recordings are WAV, or M4A where that is what exists; both are read for
+   duration, sample rate and channels. The author zips a batch per category (`Boats_Pt1.zip`, `Boats_Pt2.zip`...).
    The zip's name gives the category: `Motor_Bikes_Pt3.zip` → `motor-bikes`;
    `--category` overrides it. Folders inside the zip and macOS `__MACOSX`
    entries are fine.

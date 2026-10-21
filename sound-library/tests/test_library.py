@@ -30,6 +30,17 @@ def make_wav(seconds=0.5, rate=8000, channels=1, width=2, fill=0x11):
     return buf.getvalue()
 
 
+def make_m4a(seconds=2.5, rate=44100, channels=2):
+    """The smallest MP4 that carries a duration and an mp4a sample entry."""
+    def box(kind, payload):
+        return struct.pack(">I", 8 + len(payload)) + kind + payload
+    mvhd = box(b"mvhd", b"\x00" * 12 + struct.pack(">II", 1000, int(seconds * 1000)) + b"\x00" * 80)
+    mp4a = box(b"mp4a", b"\x00" * 16 + struct.pack(">HH", channels, 16) + b"\x00" * 4 + struct.pack(">I", rate << 16))
+    stsd = box(b"stsd", b"\x00" * 4 + struct.pack(">I", 1) + mp4a)
+    trak = box(b"trak", box(b"mdia", box(b"minf", box(b"stbl", stsd))))
+    return box(b"ftyp", b"M4A \x00\x00\x00\x00") + box(b"moov", mvhd + trak) + box(b"mdat", b"\x00" * 64)
+
+
 def make_zip(path, members):
     with zipfile.ZipFile(path, "w") as archive:
         for name, blob in members.items():
@@ -117,6 +128,16 @@ class LibraryTest(unittest.TestCase):
         self.assertIsNone(library.wav_info(b""))
         info = library.wav_info(make_wav(2.0, rate=44100, channels=2, width=3))
         self.assertEqual(info, {"channels": 2, "sample_rate": 44100, "bit_depth": 24, "duration_s": 2.0})
+
+    def test_m4a_is_read_too(self):
+        self.assertIsNone(library.mp4_info(self.bell))
+        self.assertIsNone(library.mp4_info(b"\x00" * 40))
+        info = library.mp4_info(make_m4a(2.5, 48000, 1))
+        self.assertEqual(info, {"channels": 1, "sample_rate": 48000, "bit_depth": 16, "duration_s": 2.5})
+        clip = make_zip(self.tmp / "Combat.zip", {"The Battle Begins.m4a": make_m4a()})
+        self.assertEqual(self.ingest(clip), (1, 0, 0, 0))
+        entry = library.by_id(library.load(self.catalog))["combat/the-battle-begins"]
+        self.assertEqual((entry["format"], entry["file"], entry["duration_s"]), ("m4a", "combat/the-battle-begins.m4a", 2.5))
 
     def test_search_ranks_and_filters(self):
         self.ingest(self.zip)
@@ -259,7 +280,7 @@ class RealCatalogTest(unittest.TestCase):
             self.assertTrue(entry["source"]["release"], entry["id"])
             self.assertTrue(entry["source"]["asset"].endswith(".zip"), entry["id"])
             self.assertIsNotNone(entry["duration_s"], entry["id"])
-            self.assertEqual(entry["format"], "wav", entry["id"])
+            self.assertIn(entry["format"], ("wav", "m4a"), entry["id"])
 
     def test_files_folder_is_ignored_by_git(self):
         ignore = (LIB.parent / ".gitignore").read_text(encoding="utf-8").splitlines()
