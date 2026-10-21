@@ -19764,6 +19764,1822 @@
       "added": "2026-10-21"
     },
     {
+      "id": "hits/blank-hit",
+      "name": "Blank Hit",
+      "category": "hits",
+      "file": "hits/blank-hit.wav",
+      "format": "wav",
+      "bytes": 1457098,
+      "sha256": "5fadb28aa40e89c141925ac3ac9298e3a3ccf7d4590750a415678668c1658f7d",
+      "duration_s": 2.523,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "blank",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt2.zip",
+        "member": "untitled folder 2/Blank Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/bulb-hit",
+      "name": "Bulb Hit",
+      "category": "hits",
+      "file": "hits/bulb-hit.wav",
+      "format": "wav",
+      "bytes": 743884,
+      "sha256": "6b69b6b959bed0158773b1e8ba1fb73c648287f4e459ece656fefc13388f3863",
+      "duration_s": 1.284,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bulb",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Bulb Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/cinematic-hit-deep",
+      "name": "Cinematic Hit Deep",
+      "category": "hits",
+      "file": "hits/cinematic-hit-deep.wav",
+      "format": "wav",
+      "bytes": 665076,
+      "sha256": "e6c6fbe9da0669b01da308c7c34f14cf50b78ada11789362c758396dfa0b7421",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "hit",
+        "deep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Cinematic Hit Deep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/cinematic-hollow-hit",
+      "name": "Cinematic Hollow Hit",
+      "category": "hits",
+      "file": "hits/cinematic-hollow-hit.wav",
+      "format": "wav",
+      "bytes": 511332,
+      "sha256": "b59ba6fb7b4f813618d49d6739188d24d99219eec3593638960d24b9bd20dff8",
+      "duration_s": 0.868,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "hollow",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Cinematic Hollow Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/cinematic-short-bass-hit",
+      "name": "Cinematic Short Bass Hit",
+      "category": "hits",
+      "file": "hits/cinematic-short-bass-hit.wav",
+      "format": "wav",
+      "bytes": 338358,
+      "sha256": "204f03dbee7587ca64c0c1b4ba35d35d68f56b7a8f9eabecaef18b30bd43f85a",
+      "duration_s": 0.567,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "short",
+        "bass",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Cinematic Short Bass Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/clap-hit",
+      "name": "Clap Hit",
+      "category": "hits",
+      "file": "hits/clap-hit.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "64f281c9c0ff53c726bd6d8c3e88e6d686f74088855825a74dedaa574c525e47",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "clap",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Clap Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/deep-bass-hit",
+      "name": "Deep Bass Hit",
+      "category": "hits",
+      "file": "hits/deep-bass-hit.wav",
+      "format": "wav",
+      "bytes": 841080,
+      "sha256": "1fb1ca592d226f550c71d38994ba79ed32aed028b05f3157ea3a5b685927da1d",
+      "duration_s": 1.458,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Deep Bass Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/deep-cinematic-hit",
+      "name": "Deep Cinematic Hit",
+      "category": "hits",
+      "file": "hits/deep-cinematic-hit.wav",
+      "format": "wav",
+      "bytes": 780390,
+      "sha256": "338a32300dcfda359de6c424bf656db40bb28b9ba0830bf6e76b37fd24936c4d",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "cinematic",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Deep Cinematic Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/deep-far-hit",
+      "name": "Deep Far Hit",
+      "category": "hits",
+      "file": "hits/deep-far-hit.wav",
+      "format": "wav",
+      "bytes": 2016160,
+      "sha256": "4013fa32f7763becb4d68dfa263e81be2d05f391e31f40990a74bfe68945e2ac",
+      "duration_s": 3.48,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "far",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt2.zip",
+        "member": "untitled folder 2/Deep Far Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/deep-hit",
+      "name": "Deep Hit",
+      "category": "hits",
+      "file": "hits/deep-hit.wav",
+      "format": "wav",
+      "bytes": 722736,
+      "sha256": "cc2f6565347e767f773a8d49543a01298b0cab5f7225be2558ba3e0447b7a0c2",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Deep Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/deep-low-hit",
+      "name": "Deep Low Hit",
+      "category": "hits",
+      "file": "hits/deep-low-hit.wav",
+      "format": "wav",
+      "bytes": 841080,
+      "sha256": "5e4b1bf7849d43669759d2d62d2cad31d79ff9bdfc4a858ceebe4dae9e189027",
+      "duration_s": 1.458,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "low",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Deep Low Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/deep-metal-hit",
+      "name": "Deep Metal Hit",
+      "category": "hits",
+      "file": "hits/deep-metal-hit.wav",
+      "format": "wav",
+      "bytes": 1226842,
+      "sha256": "4c31b6de58631df2d4e539b0b0df0b114ad56a8fbd65bc0c5d0fc4806d3c2bdf",
+      "duration_s": 2.123,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "metal",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Deep Metal Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/deep-simple-hit",
+      "name": "Deep Simple Hit",
+      "category": "hits",
+      "file": "hits/deep-simple-hit.wav",
+      "format": "wav",
+      "bytes": 905128,
+      "sha256": "40958ed7d40e3683ac3847786ff7117e90cab820470040acdfb033bcbc6019a6",
+      "duration_s": 1.564,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "simple",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Deep Simple Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/deep-tone-hit",
+      "name": "Deep Tone Hit",
+      "category": "hits",
+      "file": "hits/deep-tone-hit.wav",
+      "format": "wav",
+      "bytes": 700546,
+      "sha256": "953e3a811a114b6542d1e9c3febcce68308bac8508245b2c8447343346d1662f",
+      "duration_s": 1.209,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "tone",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Deep Tone Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/drums-hit",
+      "name": "Drums Hit",
+      "category": "hits",
+      "file": "hits/drums-hit.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "fbc6aef61b125989da2de612a21f0e2831a7f441b616f4200d7efac64cbad507",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "drums",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Drums Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/dry-clap-hit",
+      "name": "Dry Clap Hit",
+      "category": "hits",
+      "file": "hits/dry-clap-hit.wav",
+      "format": "wav",
+      "bytes": 319140,
+      "sha256": "6a07f42e886814b3763a271006df5738c62cc502bc1778ef3b1114e121fbfb1a",
+      "duration_s": 0.534,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "dry",
+        "clap",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Dry Clap Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/dry-echo-hit",
+      "name": "Dry Echo Hit",
+      "category": "hits",
+      "file": "hits/dry-echo-hit.wav",
+      "format": "wav",
+      "bytes": 838056,
+      "sha256": "f4ef2723db0a2c74a9498e478b1674173e5453bab27ac29e7c767bb12324ee4f",
+      "duration_s": 1.435,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "dry",
+        "echo",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Dry Echo Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/factory-metal-hit",
+      "name": "Factory Metal Hit",
+      "category": "hits",
+      "file": "hits/factory-metal-hit.wav",
+      "format": "wav",
+      "bytes": 665076,
+      "sha256": "0e39adb9bcbd55820a14ccfd0bf31cfb2d84d0d55a0bfc7c1c017a5f52149480",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "factory",
+        "metal",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Factory Metal Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/flat-hit",
+      "name": "Flat Hit",
+      "category": "hits",
+      "file": "hits/flat-hit.wav",
+      "format": "wav",
+      "bytes": 1529912,
+      "sha256": "7b0c0ee5d7b2f92ed81dbc00c06db9424d9bbad62ee57b3bb8e1bd24763abe9e",
+      "duration_s": 2.636,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "flat",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt2.zip",
+        "member": "untitled folder 2/Flat Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/granular-hit",
+      "name": "Granular Hit",
+      "category": "hits",
+      "file": "hits/granular-hit.wav",
+      "format": "wav",
+      "bytes": 665076,
+      "sha256": "29bab46800c90f1e7648ca42d321f331678c605c44594d8d0f83a0510c375876",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "granular",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Granular Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit",
+      "name": "Hit",
+      "category": "hits",
+      "file": "hits/hit.wav",
+      "format": "wav",
+      "bytes": 1061248,
+      "sha256": "4c53ac579c723a209ad842a0d8a10b3a125308e6aa0d7b726b24783eca12e970",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-aftermath",
+      "name": "Hit Aftermath",
+      "category": "hits",
+      "file": "hits/hit-aftermath.wav",
+      "format": "wav",
+      "bytes": 1924498,
+      "sha256": "ac2ada61613cee74eca89cc4e9db36f596fdd341ba8193ca88492d759cfbb684",
+      "duration_s": 3.32,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "aftermath"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt2.zip",
+        "member": "untitled folder 2/Hit Aftermath.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-aftermath-fast",
+      "name": "Hit Aftermath Fast",
+      "category": "hits",
+      "file": "hits/hit-aftermath-fast.wav",
+      "format": "wav",
+      "bytes": 1210258,
+      "sha256": "7c4006d73987e60357605bf0eee24e27a09434384286321397888c16430a0f1c",
+      "duration_s": 2.08,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "aftermath",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Hit Aftermath Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-aftermath-long",
+      "name": "Hit Aftermath Long",
+      "category": "hits",
+      "file": "hits/hit-aftermath-long.wav",
+      "format": "wav",
+      "bytes": 5118014,
+      "sha256": "34026330b790ed1e0a446ccdfc45dc88274e87d74e21ca9cd66f8e9297732eef",
+      "duration_s": 6.64,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "aftermath",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt3.zip",
+        "member": "untitled folder 3/Hit Aftermath Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-bass-stray",
+      "name": "Hit Bass Stray",
+      "category": "hits",
+      "file": "hits/hit-bass-stray.wav",
+      "format": "wav",
+      "bytes": 511332,
+      "sha256": "05a13aa77ee25297a265d0e640f0b15d4bfd7a8060a3314439862a22fcdb09a8",
+      "duration_s": 0.868,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "bass",
+        "stray"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Hit Bass Stray.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-bubble",
+      "name": "Hit Bubble",
+      "category": "hits",
+      "file": "hits/hit-bubble.wav",
+      "format": "wav",
+      "bytes": 2753948,
+      "sha256": "4f1cbaabb84f627adc6344eba0391a5eb9417ff3e4b413898158dce4c9825eb6",
+      "duration_s": 4.76,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "bubble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt2.zip",
+        "member": "untitled folder 2/Hit Bubble.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-chromatic",
+      "name": "Hit Chromatic",
+      "category": "hits",
+      "file": "hits/hit-chromatic.wav",
+      "format": "wav",
+      "bytes": 357786,
+      "sha256": "9d9b93f4d4f8d9f16049b2e1531342bb8037c02c62952519e949503716dbc21e",
+      "duration_s": 0.6,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "chromatic"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Hit Chromatic.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-deep",
+      "name": "Hit Deep",
+      "category": "hits",
+      "file": "hits/hit-deep.wav",
+      "format": "wav",
+      "bytes": 5457206,
+      "sha256": "f5db9f018ae2f64ffd55176a9b0f602a48945dffa58aac65ec614c7f8c2a6eb5",
+      "duration_s": 7.08,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "deep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt4.zip",
+        "member": "untitled folder 4/Hit Deep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-deep-explode",
+      "name": "Hit Deep Explode",
+      "category": "hits",
+      "file": "hits/hit-deep-explode.wav",
+      "format": "wav",
+      "bytes": 4585778,
+      "sha256": "f6b875d23e8d2f47a9fb2f4dd3c988aca586b064e8c97d725d4a738c5a6e405b",
+      "duration_s": 7.941,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "deep",
+        "explode"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt3.zip",
+        "member": "untitled folder 3/Hit Deep Explode.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-deep-explode-fast",
+      "name": "Hit Deep Explode Fast",
+      "category": "hits",
+      "file": "hits/hit-deep-explode-fast.wav",
+      "format": "wav",
+      "bytes": 3836228,
+      "sha256": "8785ab6c91ba5fb022d25b1ee073e2cb61ef268668d5f1bcdfd725eb4988ac8f",
+      "duration_s": 6.64,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "deep",
+        "explode",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt3.zip",
+        "member": "untitled folder 3/Hit Deep Explode Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-deep-explode-long",
+      "name": "Hit Deep Explode Long",
+      "category": "hits",
+      "file": "hits/hit-deep-explode-long.wav",
+      "format": "wav",
+      "bytes": 5738930,
+      "sha256": "ee1fcb97339b059da7642d61e7efcb590d669ed60d28015aef1cd0c739e2771a",
+      "duration_s": 9.943,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "deep",
+        "explode",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt5.zip",
+        "member": "untitled folder 5/Hit Deep Explode Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-deep-fast",
+      "name": "Hit Deep Fast",
+      "category": "hits",
+      "file": "hits/hit-deep-fast.wav",
+      "format": "wav",
+      "bytes": 4566330,
+      "sha256": "269a4d5a645cf374896a8e88099dbb7519be849e2e600a5285fc68736f79e482",
+      "duration_s": 5.92,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "deep",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt3.zip",
+        "member": "untitled folder 3/Hit Deep Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-deep-long",
+      "name": "Hit Deep Long",
+      "category": "hits",
+      "file": "hits/hit-deep-long.wav",
+      "format": "wav",
+      "bytes": 6071612,
+      "sha256": "26e4a3f56f11a179c3db7c714e4bc4d0d6debd543d675f07d91fcea710098817",
+      "duration_s": 7.88,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "deep",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt5.zip",
+        "member": "untitled folder 5/Hit Deep Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-double",
+      "name": "Hit Double",
+      "category": "hits",
+      "file": "hits/hit-double.wav",
+      "format": "wav",
+      "bytes": 9205074,
+      "sha256": "b0d3bdd23513299ac0231213b12e7c9b5e66e7cd07ba255e066908a4ab9d1420",
+      "duration_s": 11.96,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "double"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt6.zip",
+        "member": "Hit Double.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-double-fast",
+      "name": "Hit Double Fast",
+      "category": "hits",
+      "file": "hits/hit-double-fast.wav",
+      "format": "wav",
+      "bytes": 7669076,
+      "sha256": "0ed8896a2ebd17252ab83185fbfd6cd8de8de61a20fd9ef9c3550d82fac40e90",
+      "duration_s": 9.96,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "double",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt5.zip",
+        "member": "untitled folder 5/Hit Double Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-double-long",
+      "name": "Hit Double Long",
+      "category": "hits",
+      "file": "hits/hit-double-long.wav",
+      "format": "wav",
+      "bytes": 11509078,
+      "sha256": "ba087c26e8db7e291fa2748b56e99bf0f03b6695d07944aa2c7871a29d9d0d50",
+      "duration_s": 14.96,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "double",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt6.zip",
+        "member": "Hit Double Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-echo",
+      "name": "Hit Echo",
+      "category": "hits",
+      "file": "hits/hit-echo.wav",
+      "format": "wav",
+      "bytes": 5402960,
+      "sha256": "44085675d1dfabf5064b4875b722ce7106e1d5c39c20b90792e326ba5b32e3dc",
+      "duration_s": 9.36,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "echo"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt4.zip",
+        "member": "untitled folder 4/Hit Echo.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-error",
+      "name": "Hit Error",
+      "category": "hits",
+      "file": "hits/hit-error.wav",
+      "format": "wav",
+      "bytes": 1601946,
+      "sha256": "2a5bc407d300ca68797b23317bced940e84f99d007d70bbe6de4e13beb8473bf",
+      "duration_s": 2.76,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt2.zip",
+        "member": "untitled folder 2/Hit Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-fall",
+      "name": "Hit Fall",
+      "category": "hits",
+      "file": "hits/hit-fall.wav",
+      "format": "wav",
+      "bytes": 1760574,
+      "sha256": "3303896cfda33354a97b78ea0b724019537da26141633d5f46e2651ca7ae31ad",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "fall"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt2.zip",
+        "member": "untitled folder 2/Hit Fall.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-granular",
+      "name": "Hit Granular",
+      "category": "hits",
+      "file": "hits/hit-granular.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "0151cfc14cfa2620a05a26cc6f53cd87cf55089d44547941f530e87c4e3b8854",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "granular"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Hit Granular.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-hard",
+      "name": "Hit Hard",
+      "category": "hits",
+      "file": "hits/hit-hard.wav",
+      "format": "wav",
+      "bytes": 5393964,
+      "sha256": "5bca48248145cdf1be345c734fda3d77b8bbac67e132fa1fbbee5be762498726",
+      "duration_s": 7.0,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "hard"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt3.zip",
+        "member": "untitled folder 3/Hit Hard.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-hard-bass",
+      "name": "Hit Hard Bass",
+      "category": "hits",
+      "file": "hits/hit-hard-bass.wav",
+      "format": "wav",
+      "bytes": 4564538,
+      "sha256": "cb6e211ef9e3827b3dda76dfd56bfbc30cc795315d7ff47ada0118554e5ccd51",
+      "duration_s": 5.92,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "hard",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt3.zip",
+        "member": "untitled folder 3/Hit Hard Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-hard-bass-long",
+      "name": "Hit Hard Bass Long",
+      "category": "hits",
+      "file": "hits/hit-hard-bass-long.wav",
+      "format": "wav",
+      "bytes": 5486144,
+      "sha256": "829c5c91bfbb17138fd88bb22229a7063070b66ae6ec393ff963656fe7752baa",
+      "duration_s": 7.12,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "hard",
+        "bass",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt4.zip",
+        "member": "untitled folder 4/Hit Hard Bass Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-rumble",
+      "name": "Hit Rumble",
+      "category": "hits",
+      "file": "hits/hit-rumble.wav",
+      "format": "wav",
+      "bytes": 5470448,
+      "sha256": "2c9aaf6bdc4a829652d2955ff90aadc307998ca2ac76afcadabf244f95ed686a",
+      "duration_s": 9.476,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt4.zip",
+        "member": "untitled folder 4/Hit Rumble.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-rumble-fast",
+      "name": "Hit Rumble Fast",
+      "category": "hits",
+      "file": "hits/hit-rumble-fast.wav",
+      "format": "wav",
+      "bytes": 4567148,
+      "sha256": "116d7ffc5f9f1f1390e32156cb316936e1ad053547cd2e85071bd2dac0921955",
+      "duration_s": 7.908,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "rumble",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt3.zip",
+        "member": "untitled folder 3/Hit Rumble Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-rumble-long",
+      "name": "Hit Rumble Long",
+      "category": "hits",
+      "file": "hits/hit-rumble-long.wav",
+      "format": "wav",
+      "bytes": 6835010,
+      "sha256": "a15ce1fb1af84ac71232eea1ed88ac867f0bc881b9e836f3290e8a66ed7dbe2d",
+      "duration_s": 11.845,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "rumble",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt5.zip",
+        "member": "untitled folder 5/Hit Rumble Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-short",
+      "name": "Hit Short",
+      "category": "hits",
+      "file": "hits/hit-short.wav",
+      "format": "wav",
+      "bytes": 223610,
+      "sha256": "2efd5f037604604e34a6cafa71ef67698d51fff1aa161112d56690544cf7ed57",
+      "duration_s": 0.367,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "short"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Hit Short.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-smooth",
+      "name": "Hit Smooth",
+      "category": "hits",
+      "file": "hits/hit-smooth.wav",
+      "format": "wav",
+      "bytes": 3206478,
+      "sha256": "3032f35e0a459cb898c73419c4030b31465204a69f94b03e551b910c9ec97126",
+      "duration_s": 4.16,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "smooth"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt2.zip",
+        "member": "untitled folder 2/Hit Smooth.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hit-standard",
+      "name": "Hit Standard",
+      "category": "hits",
+      "file": "hits/hit-standard.wav",
+      "format": "wav",
+      "bytes": 1762612,
+      "sha256": "308b93746ad1f3c1e13ee52b91ae9432dd6d9148371b8c06977e16f6066bef68",
+      "duration_s": 2.28,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "standard"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt2.zip",
+        "member": "untitled folder 2/Hit Standard.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hits-bass",
+      "name": "Hits Bass",
+      "category": "hits",
+      "file": "hits/hits-bass.wav",
+      "format": "wav",
+      "bytes": 2721522,
+      "sha256": "b81b78df0fda4f20f91f2e87551e404e7c07be5914f883c397a976dc259c2237",
+      "duration_s": 4.705,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hits",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt2.zip",
+        "member": "untitled folder 2/Hits Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hits-bass-fast",
+      "name": "Hits Bass Fast",
+      "category": "hits",
+      "file": "hits/hits-bass-fast.wav",
+      "format": "wav",
+      "bytes": 2260260,
+      "sha256": "7e1a1948eb632907c4c7a96b087be6ba69c89094d9cd850db7d83ecb7f27d3b8",
+      "duration_s": 3.904,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hits",
+        "bass",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt2.zip",
+        "member": "untitled folder 2/Hits Bass Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/hits-bass-long",
+      "name": "Hits Bass Long",
+      "category": "hits",
+      "file": "hits/hits-bass-long.wav",
+      "format": "wav",
+      "bytes": 3394194,
+      "sha256": "6b1a8ad26177d54aae2905fc23261d607c3e53c13bfb9ec8a017415b9e77f30b",
+      "duration_s": 5.873,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hits",
+        "bass",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt4.zip",
+        "member": "untitled folder 4/Hits Bass Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/inside-hit",
+      "name": "Inside Hit",
+      "category": "hits",
+      "file": "hits/inside-hit.wav",
+      "format": "wav",
+      "bytes": 1076962,
+      "sha256": "4ac04f5e222f66498d754468e759d7c5736ea1c3922fa56f8f916cf41dd2718c",
+      "duration_s": 1.863,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Inside Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/low-clean-hit",
+      "name": "Low Clean Hit",
+      "category": "hits",
+      "file": "hits/low-clean-hit.wav",
+      "format": "wav",
+      "bytes": 640438,
+      "sha256": "62e82c31a424e09592ad80010f4cef54b470e4d0140533aa9dbeb44fd443a7b7",
+      "duration_s": 1.105,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "clean",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Low Clean Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/low-hit",
+      "name": "Low Hit",
+      "category": "hits",
+      "file": "hits/low-hit.wav",
+      "format": "wav",
+      "bytes": 922522,
+      "sha256": "3de8c16bb683dad6f752003a7da9e49b77aa59473eb582eaecb43f50ccde2612",
+      "duration_s": 1.594,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Low Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/magical-hit",
+      "name": "Magical Hit",
+      "category": "hits",
+      "file": "hits/magical-hit.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "17d5b61998a51b5da440fe6270e9c5a30f77d13d004e24a236903cea1b6854dc",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "magical",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Magical Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/metal-flat-hit",
+      "name": "Metal Flat Hit",
+      "category": "hits",
+      "file": "hits/metal-flat-hit.wav",
+      "format": "wav",
+      "bytes": 645864,
+      "sha256": "22c311cd2473ccaddee5d92a6a01f292bc4c09637e741c1ee24d03f46c3e6100",
+      "duration_s": 1.101,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "metal",
+        "flat",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Metal Flat Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/metal-flat-hit-echo",
+      "name": "Metal Flat Hit Echo",
+      "category": "hits",
+      "file": "hits/metal-flat-hit-echo.wav",
+      "format": "wav",
+      "bytes": 665082,
+      "sha256": "02913f6181f20f8de4eb5bad7317feb25da69845c48761d809bcb9eaa2a0c279",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "metal",
+        "flat",
+        "hit",
+        "echo"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Metal Flat Hit Echo.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/metal-hit",
+      "name": "Metal Hit",
+      "category": "hits",
+      "file": "hits/metal-hit.wav",
+      "format": "wav",
+      "bytes": 645864,
+      "sha256": "10d86f892f9e7c21de82988480107a8eb5b24046c479e5673c063b1f5e1bd4be",
+      "duration_s": 1.101,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "metal",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Metal Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/natural-hit-surround",
+      "name": "Natural Hit Surround",
+      "category": "hits",
+      "file": "hits/natural-hit-surround.wav",
+      "format": "wav",
+      "bytes": 1011024,
+      "sha256": "b78b04538ef7d614e39b25f207d5e7b6ac47263343781d0727a9e3c9c16e51ef",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "natural",
+        "hit",
+        "surround"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Natural Hit Surround.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/offense-hit",
+      "name": "Offense Hit",
+      "category": "hits",
+      "file": "hits/offense-hit.wav",
+      "format": "wav",
+      "bytes": 722736,
+      "sha256": "32cec3cd655a4d47e9808bcc9e989016e2ea4034d621bad9a503de067a8d2a4d",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "offense",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Offense Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/open-metal-hit",
+      "name": "Open Metal Hit",
+      "category": "hits",
+      "file": "hits/open-metal-hit.wav",
+      "format": "wav",
+      "bytes": 903232,
+      "sha256": "fb9181f6c71419470336e230cccb6c6b086f10b6ae26bf7ec708693f5ccd9d44",
+      "duration_s": 1.561,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "open",
+        "metal",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Open Metal Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/reverb-hit",
+      "name": "Reverb Hit",
+      "category": "hits",
+      "file": "hits/reverb-hit.wav",
+      "format": "wav",
+      "bytes": 1092106,
+      "sha256": "58f70ad96348a8798e5d6786f06572f72eb724f38aeb3a6bef3e7f3ad2da2046",
+      "duration_s": 1.889,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "reverb",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Reverb Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/scary-hit",
+      "name": "Scary Hit",
+      "category": "hits",
+      "file": "hits/scary-hit.wav",
+      "format": "wav",
+      "bytes": 1088956,
+      "sha256": "c8ee38e2769a69611b5744d334ecdb429b117f34f08960c140e01dca6bc29d52",
+      "duration_s": 1.883,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "scary",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Scary Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/short-hit",
+      "name": "Short Hit",
+      "category": "hits",
+      "file": "hits/short-hit.wav",
+      "format": "wav",
+      "bytes": 741960,
+      "sha256": "7109b6a1761ab37bf59bb172f5cefd8da111dae1bce2e243ca1d1f21c3b6776c",
+      "duration_s": 1.268,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Short Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/single-hit",
+      "name": "Single Hit",
+      "category": "hits",
+      "file": "hits/single-hit.wav",
+      "format": "wav",
+      "bytes": 674098,
+      "sha256": "87dd8d77f74c1e3ebd4511a16adb91fceae28ce3a162cc5eb34091375884c3f8",
+      "duration_s": 1.163,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "single",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Single Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/sleek-hit",
+      "name": "Sleek Hit",
+      "category": "hits",
+      "file": "hits/sleek-hit.wav",
+      "format": "wav",
+      "bytes": 342358,
+      "sha256": "aed9868096888fd3c818949f5d1ab455c33852528b67d4d4b8f63c234218584a",
+      "duration_s": 0.587,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sleek",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Sleek Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/small-hit",
+      "name": "Small Hit",
+      "category": "hits",
+      "file": "hits/small-hit.wav",
+      "format": "wav",
+      "bytes": 407446,
+      "sha256": "9aa71c4f317f6a6aa38caea1b02bba8b260f73f29ed15a15fca79f66bd6990fb",
+      "duration_s": 0.7,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "small",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Small Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/soft-hollow-hit",
+      "name": "Soft Hollow Hit",
+      "category": "hits",
+      "file": "hits/soft-hollow-hit.wav",
+      "format": "wav",
+      "bytes": 1096744,
+      "sha256": "c7701a554d22c39dbc01ec63e4847cbc8174684669b76302a984bbcd251f59ed",
+      "duration_s": 1.897,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "soft",
+        "hollow",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Soft Hollow Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/spacial-hit",
+      "name": "Spacial Hit",
+      "category": "hits",
+      "file": "hits/spacial-hit.wav",
+      "format": "wav",
+      "bytes": 994342,
+      "sha256": "4312fb9f6a4d4fe6463a690471608441957620b0754c1884e5337e1cdff0a72f",
+      "duration_s": 1.719,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "spacial",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Spacial Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/surround-hit-clap",
+      "name": "Surround Hit Clap",
+      "category": "hits",
+      "file": "hits/surround-hit-clap.wav",
+      "format": "wav",
+      "bytes": 780390,
+      "sha256": "6549689621700098bd1e8afcd271e8d08b49be5a825a464bb50cf5ead2e1066c",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "surround",
+        "hit",
+        "clap"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Surround Hit Clap.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/tick-hit",
+      "name": "Tick Hit",
+      "category": "hits",
+      "file": "hits/tick-hit.wav",
+      "format": "wav",
+      "bytes": 242262,
+      "sha256": "f6e7370e3db1c5678f7797b2f65d3c9d7cf4b6c1f1a4ead63061c158d05b903a",
+      "duration_s": 0.4,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tick",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Tick Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/tick-impact",
+      "name": "Tick Impact",
+      "category": "hits",
+      "file": "hits/tick-impact.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "0a559412fd2170a96a4d7b9b3a2f1f92bb1e4d80e19d623ef89f0dccbc9c1c87",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tick",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt1.zip",
+        "member": "untitled folder/Tick Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "hits/wavy-hit",
+      "name": "Wavy Hit",
+      "category": "hits",
+      "file": "hits/wavy-hit.wav",
+      "format": "wav",
+      "bytes": 2016160,
+      "sha256": "f9f763a85c5468c18d64442d703a9776264156e237da2b6a4c7c90572ed4bab9",
+      "duration_s": 3.48,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "wavy",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_Pt2.zip",
+        "member": "untitled folder 2/Wavy Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "household-doors/click-open-door",
       "name": "Click Open Door",
       "category": "household-doors",
