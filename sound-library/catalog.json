@@ -6458,6 +6458,3577 @@
       "added": "2026-10-21"
     },
     {
+      "id": "blockbuster-cars/car-crash-glass",
+      "name": "Car Crash Glass",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/car-crash-glass.wav",
+      "format": "wav",
+      "bytes": 857274,
+      "sha256": "6f13921c09e310a8fcc421e700b70bd1f82db657eae1e622c75fe7c7888e3981",
+      "duration_s": 1.468,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "crash",
+        "glass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Car Crash Glass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/car-horn",
+      "name": "Car Horn",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/car-horn.wav",
+      "format": "wav",
+      "bytes": 761176,
+      "sha256": "44b4bf14521d0b5dc62a804a591e27ba9acf62b6b85eb81320478c039b794e8f",
+      "duration_s": 2.603,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "horn"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Car Horn.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/car-speeding-fast",
+      "name": "Car Speeding Fast",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/car-speeding-fast.wav",
+      "format": "wav",
+      "bytes": 1270498,
+      "sha256": "fd447aa70fb74625f19befdf800ab7f6a29637b6be23b8a3f4cb394be6afc07b",
+      "duration_s": 4.371,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "speeding",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Car Speeding Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/car-trunk-close",
+      "name": "Car Trunk Close",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/car-trunk-close.wav",
+      "format": "wav",
+      "bytes": 597818,
+      "sha256": "095f0c639e8fb790323b9b7ae0bed863271f0a5a3e266bb16dd946d6f75550ba",
+      "duration_s": 2.035,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "trunk",
+        "close"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Car Trunk Close.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/car-window-whipers-fast",
+      "name": "Car Window Whipers Fast",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/car-window-whipers-fast.wav",
+      "format": "wav",
+      "bytes": 1597198,
+      "sha256": "5ee0b85bb783cacda68016076078d03def31e8e310f1be7f589ae41b398d0cf0",
+      "duration_s": 5.505,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "window",
+        "whipers",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Car Window Whipers Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/car-window-whipers-medium",
+      "name": "Car Window Whipers Medium",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/car-window-whipers-medium.wav",
+      "format": "wav",
+      "bytes": 1731736,
+      "sha256": "9a73aac25e73f52f695d99067f0cc0ede30075dd8ab79d21c29f4f1de491b002",
+      "duration_s": 5.973,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "window",
+        "whipers",
+        "medium"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Car Window Whipers Medium.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/car-window-whipers-slow",
+      "name": "Car Window Whipers Slow",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/car-window-whipers-slow.wav",
+      "format": "wav",
+      "bytes": 2077678,
+      "sha256": "378fba1e94f41285ff8e10c3a4a446bd931147ea0ba18fdbdb174875ba7a1fe0",
+      "duration_s": 7.174,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "window",
+        "whipers",
+        "slow"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Car Window Whipers Slow.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/car-wreck",
+      "name": "Car Wreck",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/car-wreck.wav",
+      "format": "wav",
+      "bytes": 857274,
+      "sha256": "8c79edc53e3ad775e0feb68b88d0418ae6db10850fa881ddc49839aaafb9f52d",
+      "duration_s": 1.468,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "wreck"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Car Wreck.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/cars-on-the-road",
+      "name": "Cars on the road",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/cars-on-the-road.wav",
+      "format": "wav",
+      "bytes": 4806824,
+      "sha256": "efb1c44a3033a6e99782bb3962356a5e5e31d84bd1f1661f53afad2d2a9da825",
+      "duration_s": 16.65,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cars",
+        "road"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Cars on the road.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/cinematic-car-fast-pass-by",
+      "name": "Cinematic Car Fast Pass By",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/cinematic-car-fast-pass-by.wav",
+      "format": "wav",
+      "bytes": 1068684,
+      "sha256": "db75453709f7479aaba9416966d9f9aec835f1100d531a081f2e7b4a30dad53e",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "car",
+        "fast",
+        "pass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Cinematic Car Fast Pass By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/drifting-car-middle",
+      "name": "Drifting Car Middle",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/drifting-car-middle.wav",
+      "format": "wav",
+      "bytes": 895692,
+      "sha256": "25ef79bc8e3c76c2659d432f5771690482c14a30aa55be3b27e3a3ec558dd919",
+      "duration_s": 3.07,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "drifting",
+        "car",
+        "middle"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Drifting Car Middle.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/falling-glass",
+      "name": "Falling Glass",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/falling-glass.wav",
+      "format": "wav",
+      "bytes": 857274,
+      "sha256": "75d8d126257aa2d4f80e9306494e62eee2fd2e6b95a40da377e2304eb6f16619",
+      "duration_s": 1.468,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "falling",
+        "glass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Falling Glass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/futuristic-car-pass-by",
+      "name": "Futuristic Car Pass By",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/futuristic-car-pass-by.wav",
+      "format": "wav",
+      "bytes": 1068684,
+      "sha256": "4fd980ebaf2a7a74c63c22cc14e7dd45da90b80baa4aea0cc9e1f4a853e5e13f",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "futuristic",
+        "car",
+        "pass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Futuristic Car Pass By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/heavy-car-driving-away",
+      "name": "Heavy Car Driving Away",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/heavy-car-driving-away.wav",
+      "format": "wav",
+      "bytes": 2173802,
+      "sha256": "4e7e490bbeac3975fda09cb1797459f807e642bef6221062be0a4cacb9a2e9bb",
+      "duration_s": 7.508,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "heavy",
+        "car",
+        "driving",
+        "away"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Heavy Car Driving Away.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/inside-drive-fast",
+      "name": "Inside Drive Fast",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/inside-drive-fast.wav",
+      "format": "wav",
+      "bytes": 857252,
+      "sha256": "36861293c056f3b9a8ea180177d8cedf822f143f94e503d376ef538a4525042e",
+      "duration_s": 2.936,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "drive",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Inside Drive Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/inside-drive-medium",
+      "name": "Inside Drive Medium",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/inside-drive-medium.wav",
+      "format": "wav",
+      "bytes": 1135934,
+      "sha256": "681f5be0b334426b1b47ff787b05768917a2c5c5201d8a92a193a6a3f1b6d4c2",
+      "duration_s": 3.904,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "drive",
+        "medium"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Inside Drive Medium.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/inside-drive-slow",
+      "name": "Inside Drive Slow",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/inside-drive-slow.wav",
+      "format": "wav",
+      "bytes": 1702900,
+      "sha256": "ab16cc2d3dfbbc8f57db2839b840ae6ae9a93e120f69658c0fda9cd8d57eb2f3",
+      "duration_s": 5.873,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "drive",
+        "slow"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Inside Drive Slow.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/inside-starting-car-deep",
+      "name": "Inside Starting Car  Deep",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/inside-starting-car-deep.wav",
+      "format": "wav",
+      "bytes": 1116746,
+      "sha256": "82aaf928401a88a3e42bedc9fe171e79888e2b47d5e311b2221092397e8153d7",
+      "duration_s": 3.837,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "starting",
+        "car",
+        "deep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Inside Starting Car  Deep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/rev-tuned-car",
+      "name": "Rev Tuned Car",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/rev-tuned-car.wav",
+      "format": "wav",
+      "bytes": 838048,
+      "sha256": "0cfe4b49f016f80a115e3568971e4558a01acc8a44b9af43504979460eeea1ab",
+      "duration_s": 2.87,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rev",
+        "tuned",
+        "car"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Rev Tuned Car.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/rev-v8-car",
+      "name": "Rev V8 Car",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/rev-v8-car.wav",
+      "format": "wav",
+      "bytes": 1126340,
+      "sha256": "0f1e6dc7a5c41262aa28f3b0349b5dd4379aff771f5a8bf3104e529d1b0e218b",
+      "duration_s": 3.871,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rev",
+        "v8",
+        "car"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Rev V8 Car.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/rev-v8-car-right",
+      "name": "Rev V8 Car Right",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/rev-v8-car-right.wav",
+      "format": "wav",
+      "bytes": 1126340,
+      "sha256": "4a92e6e0b3d9e2e85a4a5bede8c1deb03a1bf23c5127a3cb94a0cc6d377be225",
+      "duration_s": 3.871,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rev",
+        "v8",
+        "car",
+        "right"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Rev V8 Car Right.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/start-engine",
+      "name": "Start Engine",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/start-engine.wav",
+      "format": "wav",
+      "bytes": 962964,
+      "sha256": "43ec6aadad4028682b49dd0b9dd5307045c38b259ac5740fdd88d12421db2cab",
+      "duration_s": 3.303,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "start",
+        "engine"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Start Engine.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/starting-sports-car",
+      "name": "Starting Sports Car",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/starting-sports-car.wav",
+      "format": "wav",
+      "bytes": 674708,
+      "sha256": "735139bf59dd6c710e6f8df52fa07f948396cec572e16ba2b85a30af07e71cd3",
+      "duration_s": 2.302,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "starting",
+        "sports",
+        "car"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Starting Sports Car.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cars/wrecked-car-impact",
+      "name": "Wrecked Car Impact",
+      "category": "blockbuster-cars",
+      "file": "blockbuster-cars/wrecked-car-impact.wav",
+      "format": "wav",
+      "bytes": 857274,
+      "sha256": "6c4d88ec1e5c2d92ce38162fa21879ab67912a75f0d19ded694d3b05536ff8e2",
+      "duration_s": 1.468,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "wrecked",
+        "car",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cars.zip",
+        "member": "Cars/Wrecked Car Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cigarettes/burning-cigarette",
+      "name": "Burning Cigarette",
+      "category": "blockbuster-cigarettes",
+      "file": "blockbuster-cigarettes/burning-cigarette.wav",
+      "format": "wav",
+      "bytes": 693914,
+      "sha256": "bc0977bef098abb7d7e4fde1ce88309fe5e1c84b82667405cfc792f6fc960770",
+      "duration_s": 2.369,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "burning",
+        "cigarette"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cigarettes.zip",
+        "member": "Cigarettes/Burning Cigarette.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cigarettes/burning-inhale",
+      "name": "Burning Inhale",
+      "category": "blockbuster-cigarettes",
+      "file": "blockbuster-cigarettes/burning-inhale.wav",
+      "format": "wav",
+      "bytes": 347974,
+      "sha256": "63dc5dfafec7ca77df25e35a93ad25dfc986f1efa5471dc546abc0cc5603ce44",
+      "duration_s": 1.168,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "burning",
+        "inhale"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cigarettes.zip",
+        "member": "Cigarettes/Burning Inhale.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cigarettes/lighter",
+      "name": "Lighter",
+      "category": "blockbuster-cigarettes",
+      "file": "blockbuster-cigarettes/lighter.wav",
+      "format": "wav",
+      "bytes": 415230,
+      "sha256": "c5b023963592e7f5f853cdec93d9b757eeec8a6158ad0d933347843827449e09",
+      "duration_s": 1.401,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "lighter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cigarettes.zip",
+        "member": "Cigarettes/Lighter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-cigarettes/match-light-up",
+      "name": "Match Light Up",
+      "category": "blockbuster-cigarettes",
+      "file": "blockbuster-cigarettes/match-light-up.wav",
+      "format": "wav",
+      "bytes": 453672,
+      "sha256": "b0847f4b303a9e2f74db35622c978a27f44e5d3885eedd7b3ed9849e779669a5",
+      "duration_s": 1.535,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "match",
+        "light",
+        "up"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cigarettes.zip",
+        "member": "Cigarettes/Match Light Up.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-crashes/car-impact",
+      "name": "Car Impact",
+      "category": "blockbuster-crashes",
+      "file": "blockbuster-crashes/car-impact.wav",
+      "format": "wav",
+      "bytes": 1371402,
+      "sha256": "b673ead6ac85d30ff8acafcbc762f3499b10b48ed1dfa32215f0a6c12b2f2a23",
+      "duration_s": 2.36,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Crashes.zip",
+        "member": "Crashes/Car Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-crashes/car-on-fire",
+      "name": "Car on Fire",
+      "category": "blockbuster-crashes",
+      "file": "blockbuster-crashes/car-on-fire.wav",
+      "format": "wav",
+      "bytes": 9942506,
+      "sha256": "b64df17b67cff590d04abbac5ffa83c36a8ffba91a30018b626c8ada748dc9a6",
+      "duration_s": 17.24,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "fire"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Crashes.zip",
+        "member": "Crashes/Car on Fire.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-crashes/crash-explosion",
+      "name": "Crash Explosion",
+      "category": "blockbuster-crashes",
+      "file": "blockbuster-crashes/crash-explosion.wav",
+      "format": "wav",
+      "bytes": 1072056,
+      "sha256": "6a86d287be5dae5ac9816d09b9e189d4cf750b9a7c7f91c801cd0bc6da3277a7",
+      "duration_s": 1.84,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "crash",
+        "explosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Crashes.zip",
+        "member": "Crashes/Crash Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-crashes/crash-explosion-sharp",
+      "name": "Crash Explosion Sharp",
+      "category": "blockbuster-crashes",
+      "file": "blockbuster-crashes/crash-explosion-sharp.wav",
+      "format": "wav",
+      "bytes": 1440696,
+      "sha256": "dfbaf9002f064d77630aaf61d2b2e89776eebef744c9815dd7f7b55b32e9c2fa",
+      "duration_s": 2.48,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "crash",
+        "explosion",
+        "sharp"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Crashes.zip",
+        "member": "Crashes/Crash Explosion Sharp.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-crashes/explosion-after-crash",
+      "name": "Explosion After Crash",
+      "category": "blockbuster-crashes",
+      "file": "blockbuster-crashes/explosion-after-crash.wav",
+      "format": "wav",
+      "bytes": 2938320,
+      "sha256": "ef23ba832ffcb356d885c28cc7b073645308a4fbbe0bd0c3db02fb535e000f34",
+      "duration_s": 5.08,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "explosion",
+        "after",
+        "crash"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Crashes.zip",
+        "member": "Crashes/Explosion After Crash.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/big-can-explosion",
+      "name": "Big Can Explosion",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/big-can-explosion.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "ef18bb0f93c8dfde63f34a5799c3acd72d1d10a5eec9186a249dc91cb8a84e32",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "big",
+        "can",
+        "explosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Big Can Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/car-explosion-metal",
+      "name": "Car Explosion Metal",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/car-explosion-metal.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "a83be836b65abfac4b79ddcb92024b7da1527cc91612bffbd58884f0c28f7a61",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "car",
+        "explosion",
+        "metal"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Car Explosion Metal.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/deep-bass-explosion",
+      "name": "Deep Bass Explosion",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/deep-bass-explosion.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "ee536091264c6fbb42aa07180d873ae11f5c2c51613631502e5fa02aaa408bfa",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass",
+        "explosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Deep Bass Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/deep-distant-explosion",
+      "name": "Deep Distant Explosion",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/deep-distant-explosion.wav",
+      "format": "wav",
+      "bytes": 1762814,
+      "sha256": "c4636f6fed2e2bbc20620850f4f5b1b28e3df9a455fe2e24c0a3fce25d855a52",
+      "duration_s": 3.04,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "distant",
+        "explosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Deep Distant Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/deep-explosion-far-away",
+      "name": "Deep Explosion Far Away",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/deep-explosion-far-away.wav",
+      "format": "wav",
+      "bytes": 1462674,
+      "sha256": "42cdde53e0f3a0a21a451af97ecbfed1dfd863b4e8875c50b6b0090637b87a81",
+      "duration_s": 5.038,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "explosion",
+        "far",
+        "away"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Deep Explosion Far Away.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/distorted-explosion",
+      "name": "Distorted Explosion",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/distorted-explosion.wav",
+      "format": "wav",
+      "bytes": 2085842,
+      "sha256": "abdb6e7295b3e3bf29258a695bc19f63f0222cb85da26132bbfbbb018b180d6c",
+      "duration_s": 3.6,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "explosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Distorted Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/explosion-fire",
+      "name": "Explosion Fire",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/explosion-fire.wav",
+      "format": "wav",
+      "bytes": 1989094,
+      "sha256": "abc7975b77f5a6119864a2d05043b51bedb5d9704ba2cf60fe18202a416db0d2",
+      "duration_s": 3.446,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "explosion",
+        "fire"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Explosion Fire.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/explosion-fireflame",
+      "name": "Explosion Fireflame",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/explosion-fireflame.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "a2da39d62077debc214e44378f38a4dd81017ddc0c219467e3b0074c28619f18",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "explosion",
+        "fireflame"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Explosion Fireflame.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/explosion-flame",
+      "name": "Explosion Flame",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/explosion-flame.wav",
+      "format": "wav",
+      "bytes": 2483466,
+      "sha256": "8d094e34796222e6080792392820efa7b9169701be3ea242011153a72d53eb79",
+      "duration_s": 4.28,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "explosion",
+        "flame"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Explosion Flame.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/explosion-inside-glass-breaking",
+      "name": "Explosion Inside Glass Breaking",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/explosion-inside-glass-breaking.wav",
+      "format": "wav",
+      "bytes": 1895118,
+      "sha256": "bc7a166944575c9824a295d96fb266461870a1b0974205c859106e6ce1b68429",
+      "duration_s": 6.54,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "explosion",
+        "inside",
+        "glass",
+        "breaking"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Explosion Inside Glass Breaking.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/explosion-reverb",
+      "name": "Explosion Reverb",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/explosion-reverb.wav",
+      "format": "wav",
+      "bytes": 1602008,
+      "sha256": "d111af910deb83bf4d37100590b1e85beffe478f7e6ee60204efd467dcb4d5e9",
+      "duration_s": 2.76,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "explosion",
+        "reverb"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Explosion Reverb.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/explosion-rumble",
+      "name": "Explosion Rumble",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/explosion-rumble.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "9fe5022a8e989fb6b0f91b131af7f4549194cce341557941383028b712afaa95",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "explosion",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Explosion Rumble.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/flame-explosion",
+      "name": "Flame Explosion",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/flame-explosion.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "1b844ba2bff7c89582a1ee8593566fb013bcb7bb8b150e73260839fe37a9db03",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "flame",
+        "explosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Flame Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/gas-explosion-far-away",
+      "name": "Gas Explosion Far Away",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/gas-explosion-far-away.wav",
+      "format": "wav",
+      "bytes": 3197706,
+      "sha256": "104a1659baacf931b408e9aca842f8539a4bd8c5a0d2007a9d1f6b4e241cfa6d",
+      "duration_s": 5.52,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "gas",
+        "explosion",
+        "far",
+        "away"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Gas Explosion Far Away.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/huge-bomb-explosion",
+      "name": "Huge Bomb Explosion",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/huge-bomb-explosion.wav",
+      "format": "wav",
+      "bytes": 1818228,
+      "sha256": "90a7c21f2725bbd255d76f99c9d933bae538a750e445301679e8087597429839",
+      "duration_s": 6.273,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "huge",
+        "bomb",
+        "explosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Huge Bomb Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/hybrid-explosion",
+      "name": "Hybrid Explosion",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/hybrid-explosion.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "3acfb60d6518f3fdeb7916690fe7f7a76c9856301c6d55eb710f1cef72df9611",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hybrid",
+        "explosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Hybrid Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/sharp-explosion",
+      "name": "Sharp Explosion",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/sharp-explosion.wav",
+      "format": "wav",
+      "bytes": 1602008,
+      "sha256": "7b46962e92168708f2594dd38327705d579e2c019eecd6673df67be6494a261b",
+      "duration_s": 2.76,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sharp",
+        "explosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Sharp Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-explosions/small-explosion",
+      "name": "Small Explosion",
+      "category": "blockbuster-explosions",
+      "file": "blockbuster-explosions/small-explosion.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "89dd25856b53847fbe94a4534b76c0b4fd46b65349c2f3abd7f4b6598fb7f918",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "small",
+        "explosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Explosions.zip",
+        "member": "Explosions/Small Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fighting/cinematic-smack",
+      "name": "Cinematic Smack",
+      "category": "blockbuster-fighting",
+      "file": "blockbuster-fighting/cinematic-smack.wav",
+      "format": "wav",
+      "bytes": 511332,
+      "sha256": "45de4aaae8fcd3045659f5646d1aa231f4f10dfe4896ece151b83cd22cdd3c82",
+      "duration_s": 0.868,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "smack"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fighting.zip",
+        "member": "Fighting/Cinematic Smack.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fighting/fast-fight-sweep",
+      "name": "Fast Fight Sweep",
+      "category": "blockbuster-fighting",
+      "file": "blockbuster-fighting/fast-fight-sweep.wav",
+      "format": "wav",
+      "bytes": 357542,
+      "sha256": "c0383f2ffd9d21d95ba517151458ca02d4494f4c70c9681a44ea1fa683dc3843",
+      "duration_s": 0.601,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fast",
+        "fight",
+        "sweep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fighting.zip",
+        "member": "Fighting/Fast Fight Sweep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fighting/fight-sweep",
+      "name": "Fight Sweep",
+      "category": "blockbuster-fighting",
+      "file": "blockbuster-fighting/fight-sweep.wav",
+      "format": "wav",
+      "bytes": 415202,
+      "sha256": "181f86d3eaccc08f4a10522d8ce1c58fdfe78c3d33dac45ec045e0988554a2ff",
+      "duration_s": 0.701,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fight",
+        "sweep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fighting.zip",
+        "member": "Fighting/Fight Sweep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fighting/heavy-hit",
+      "name": "Heavy Hit",
+      "category": "blockbuster-fighting",
+      "file": "blockbuster-fighting/heavy-hit.wav",
+      "format": "wav",
+      "bytes": 588204,
+      "sha256": "4226431f54dd6201ee336ef98eb1144a3d9fe9f13fd76a4c053b549a751c5a31",
+      "duration_s": 1.001,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "heavy",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fighting.zip",
+        "member": "Fighting/Heavy Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fighting/hit-impact",
+      "name": "Hit Impact",
+      "category": "blockbuster-fighting",
+      "file": "blockbuster-fighting/hit-impact.wav",
+      "format": "wav",
+      "bytes": 492108,
+      "sha256": "66743846fba00259878e12b9fca88d87a1d273491f00b596cc6b28655d750026",
+      "duration_s": 0.834,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fighting.zip",
+        "member": "Fighting/Hit Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fighting/hollow-fight-sweep",
+      "name": "Hollow Fight Sweep",
+      "category": "blockbuster-fighting",
+      "file": "blockbuster-fighting/hollow-fight-sweep.wav",
+      "format": "wav",
+      "bytes": 338326,
+      "sha256": "bea29402f7f5451b15048f7613e57d160861c6b398d4be0b25703f6ce777d9d7",
+      "duration_s": 0.567,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hollow",
+        "fight",
+        "sweep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fighting.zip",
+        "member": "Fighting/Hollow Fight Sweep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fighting/impact-on-face",
+      "name": "Impact on Face",
+      "category": "blockbuster-fighting",
+      "file": "blockbuster-fighting/impact-on-face.wav",
+      "format": "wav",
+      "bytes": 588204,
+      "sha256": "9728caae82f6e6cb6f823f78aaccd3b3dec07cd742f97c99c13c794cb29d3308",
+      "duration_s": 1.001,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "face"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fighting.zip",
+        "member": "Fighting/Impact on Face.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fighting/kick-impact",
+      "name": "Kick Impact",
+      "category": "blockbuster-fighting",
+      "file": "blockbuster-fighting/kick-impact.wav",
+      "format": "wav",
+      "bytes": 396012,
+      "sha256": "fb193fdde5f04d248aa28c3968959be318edfd60a5a04e35820b55d5c1d44149",
+      "duration_s": 0.667,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "kick",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fighting.zip",
+        "member": "Fighting/Kick Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fighting/light-fight-sweep",
+      "name": "Light Fight Sweep",
+      "category": "blockbuster-fighting",
+      "file": "blockbuster-fighting/light-fight-sweep.wav",
+      "format": "wav",
+      "bytes": 357542,
+      "sha256": "d1913a8625980b13e1f75d37ae90017798f2dfc199bb40336f31bb62af1868e4",
+      "duration_s": 0.601,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "light",
+        "fight",
+        "sweep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fighting.zip",
+        "member": "Fighting/Light Fight Sweep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fighting/long-fight-sweep",
+      "name": "Long Fight Sweep",
+      "category": "blockbuster-fighting",
+      "file": "blockbuster-fighting/long-fight-sweep.wav",
+      "format": "wav",
+      "bytes": 434422,
+      "sha256": "5fe8fbb00a420dad906bf8eff05460176912473c44821cdc72c7987f4bd8bf8f",
+      "duration_s": 0.734,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "long",
+        "fight",
+        "sweep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fighting.zip",
+        "member": "Fighting/Long Fight Sweep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fire/big-fire-pit",
+      "name": "Big Fire pit",
+      "category": "blockbuster-fire",
+      "file": "blockbuster-fire/big-fire-pit.wav",
+      "format": "wav",
+      "bytes": 1760584,
+      "sha256": "049674ab06bfa4cc636c4ffbb267d4effc70f87340a7c295d75d96837b2509c3",
+      "duration_s": 6.073,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "big",
+        "fire",
+        "pit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fire.zip",
+        "member": "Fire/Big Fire pit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fire/fireflame",
+      "name": "Fireflame",
+      "category": "blockbuster-fire",
+      "file": "blockbuster-fire/fireflame.wav",
+      "format": "wav",
+      "bytes": 434426,
+      "sha256": "33b2fdda66fb461850367e0568976c8b2ff2e91887f738b61d3b5da45e245c49",
+      "duration_s": 1.468,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fireflame"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fire.zip",
+        "member": "Fire/Fireflame.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fire/fireflame-fast",
+      "name": "Fireflame Fast",
+      "category": "blockbuster-fire",
+      "file": "blockbuster-fire/fireflame-fast.wav",
+      "format": "wav",
+      "bytes": 338330,
+      "sha256": "11908723ff9fe061d3056c48d3d1d217bf748acb381b6cd2f3b4f9efabc3dab1",
+      "duration_s": 1.134,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fireflame",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fire.zip",
+        "member": "Fire/Fireflame Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fire/fireflame-slow-motion",
+      "name": "Fireflame Slow Motion",
+      "category": "blockbuster-fire",
+      "file": "blockbuster-fire/fireflame-slow-motion.wav",
+      "format": "wav",
+      "bytes": 1424218,
+      "sha256": "e8dcc33da7d251b6fc7a79e07ff9ef75173c56a93429508b082e289f1172ffcc",
+      "duration_s": 4.905,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fireflame",
+        "slow",
+        "motion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fire.zip",
+        "member": "Fire/Fireflame Slow Motion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fire/fireplace",
+      "name": "Fireplace",
+      "category": "blockbuster-fire",
+      "file": "blockbuster-fire/fireplace.wav",
+      "format": "wav",
+      "bytes": 1481898,
+      "sha256": "a6097c7eedcb9095fa6ef7926c142abee1f3470289d34495ed8bb325f5e15423",
+      "duration_s": 5.105,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fireplace"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fire.zip",
+        "member": "Fire/Fireplace.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fire/huge-fire-outside",
+      "name": "Huge Fire Outside",
+      "category": "blockbuster-fire",
+      "file": "blockbuster-fire/huge-fire-outside.wav",
+      "format": "wav",
+      "bytes": 1462680,
+      "sha256": "a38d0ef96f5867505208c2e0995e8203271cf4dc0f7ec02326a1f0977d305498",
+      "duration_s": 5.038,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "huge",
+        "fire",
+        "outside"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fire.zip",
+        "member": "Fire/Huge Fire Outside.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fire/open-lighter",
+      "name": "Open Lighter",
+      "category": "blockbuster-fire",
+      "file": "blockbuster-fire/open-lighter.wav",
+      "format": "wav",
+      "bytes": 174984,
+      "sha256": "69fc00f73768ee0af3151726a0fa506f3af6311bd48241e9e300340dc944b767",
+      "duration_s": 0.567,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "open",
+        "lighter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fire.zip",
+        "member": "Fire/Open Lighter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fire/putting-on-lighter",
+      "name": "Putting on Lighter",
+      "category": "blockbuster-fire",
+      "file": "blockbuster-fire/putting-on-lighter.wav",
+      "format": "wav",
+      "bytes": 877028,
+      "sha256": "a59dc5c233c09483bde88626b76b884ce63bae31045b49536c9757513c1d6b03",
+      "duration_s": 1.502,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "putting",
+        "lighter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fire.zip",
+        "member": "Fire/Putting on Lighter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fire/small-pit-fire",
+      "name": "Small Pit Fire",
+      "category": "blockbuster-fire",
+      "file": "blockbuster-fire/small-pit-fire.wav",
+      "format": "wav",
+      "bytes": 1241636,
+      "sha256": "eca2cbc693c17be6ce75d8ac346900b1222cd19392d24413d8361dc291a19103",
+      "duration_s": 4.271,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "small",
+        "pit",
+        "fire"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fire.zip",
+        "member": "Fire/Small Pit Fire.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fire/using-lighter",
+      "name": "Using Lighter",
+      "category": "blockbuster-fire",
+      "file": "blockbuster-fire/using-lighter.wav",
+      "format": "wav",
+      "bytes": 261468,
+      "sha256": "8494d18c450efbb4160c6c568a022128b77422033ef4083b5a96a998b08ea43a",
+      "duration_s": 0.868,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "using",
+        "lighter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fire.zip",
+        "member": "Fire/Using Lighter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-footsteps/fast-walk-melted-snow",
+      "name": "Fast Walk Melted Snow",
+      "category": "blockbuster-footsteps",
+      "file": "blockbuster-footsteps/fast-walk-melted-snow.wav",
+      "format": "wav",
+      "bytes": 2959844,
+      "sha256": "d09e27c2ccb8a430d19e5859cb1eda3a77d6f6e89b91cb52f74a65e8ee5d7387",
+      "duration_s": 10.244,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fast",
+        "walk",
+        "melted",
+        "snow"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Footsteps.zip",
+        "member": "Footsteps/Fast Walk Melted Snow.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-footsteps/footsteps-on-grass",
+      "name": "Footsteps on Grass",
+      "category": "blockbuster-footsteps",
+      "file": "blockbuster-footsteps/footsteps-on-grass.wav",
+      "format": "wav",
+      "bytes": 2971384,
+      "sha256": "81458ab0a40feaf7ba2f5dd1ec624ecdc41d10bbcc1d500a9b07ca5ecf4b5a33",
+      "duration_s": 5.138,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "footsteps",
+        "grass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Footsteps.zip",
+        "member": "Footsteps/Footsteps on Grass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-footsteps/footsteps-wooden-floor",
+      "name": "Footsteps Wooden Floor",
+      "category": "blockbuster-footsteps",
+      "file": "blockbuster-footsteps/footsteps-wooden-floor.wav",
+      "format": "wav",
+      "bytes": 1410988,
+      "sha256": "50423099d8ab276d740545a86945876edb4dab89eca6416c132234ca1b94582b",
+      "duration_s": 4.885,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "footsteps",
+        "wooden",
+        "floor"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Footsteps.zip",
+        "member": "Footsteps/Footsteps Wooden Floor.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-footsteps/grass-and-sand",
+      "name": "Grass and Sand",
+      "category": "blockbuster-footsteps",
+      "file": "blockbuster-footsteps/grass-and-sand.wav",
+      "format": "wav",
+      "bytes": 666016,
+      "sha256": "c42c900f5c66fa8e8195cbfefb8d6c8e492ae1c2f5ee6b1f782e73cec5db3244",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "grass",
+        "sand"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Footsteps.zip",
+        "member": "Footsteps/Grass and Sand.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-footsteps/heels-footsteps",
+      "name": "Heels Footsteps",
+      "category": "blockbuster-footsteps",
+      "file": "blockbuster-footsteps/heels-footsteps.wav",
+      "format": "wav",
+      "bytes": 1233928,
+      "sha256": "3efcc0c460ecb8d6b0fe232e38e3dbd2c9031907029025e094071b6a2ffa2eb2",
+      "duration_s": 4.27,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "heels",
+        "footsteps"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Footsteps.zip",
+        "member": "Footsteps/Heels Footsteps.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-footsteps/running-on-earth",
+      "name": "Running on Earth",
+      "category": "blockbuster-footsteps",
+      "file": "blockbuster-footsteps/running-on-earth.wav",
+      "format": "wav",
+      "bytes": 4220618,
+      "sha256": "41e04ba9058885b37c92258e3430aecdcfe973b9788bf2113e86951d81e434ad",
+      "duration_s": 7.307,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "running",
+        "earth"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Footsteps.zip",
+        "member": "Footsteps/Running on Earth.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-footsteps/step-on-stairs",
+      "name": "Step on Stairs",
+      "category": "blockbuster-footsteps",
+      "file": "blockbuster-footsteps/step-on-stairs.wav",
+      "format": "wav",
+      "bytes": 204300,
+      "sha256": "cc025a2d4b8235b4c588d23f5fac76368a77279a61c176c5fc2ea711c3e31933",
+      "duration_s": 0.334,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "step",
+        "stairs"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Footsteps.zip",
+        "member": "Footsteps/Step on Stairs.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-footsteps/step-on-stones",
+      "name": "Step on Stones",
+      "category": "blockbuster-footsteps",
+      "file": "blockbuster-footsteps/step-on-stones.wav",
+      "format": "wav",
+      "bytes": 223396,
+      "sha256": "af0539ec4d44bd7fe873c4841b00f10050b1e1050d6fb2f2823191368fc4acbb",
+      "duration_s": 0.367,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "step",
+        "stones"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Footsteps.zip",
+        "member": "Footsteps/Step on Stones.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-footsteps/walking-in-the-park-fast",
+      "name": "Walking in the Park Fast",
+      "category": "blockbuster-footsteps",
+      "file": "blockbuster-footsteps/walking-in-the-park-fast.wav",
+      "format": "wav",
+      "bytes": 1485490,
+      "sha256": "c60adc090da95da47ff6c24154b98e0496d19b001ac4eedaf8b3a2033faf282b",
+      "duration_s": 5.144,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "walking",
+        "park",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Footsteps.zip",
+        "member": "Footsteps/Walking in the Park Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-footsteps/walking-in-the-park-slow",
+      "name": "Walking in the Park Slow",
+      "category": "blockbuster-footsteps",
+      "file": "blockbuster-footsteps/walking-in-the-park-slow.wav",
+      "format": "wav",
+      "bytes": 2039932,
+      "sha256": "7b958f91c214d00b48efcddfb9e69a7704e82d33d8d721994a8f277311ce9077",
+      "duration_s": 7.069,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "walking",
+        "park",
+        "slow"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Footsteps.zip",
+        "member": "Footsteps/Walking in the Park Slow.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-footsteps/walking-on-earth",
+      "name": "Walking on Earth",
+      "category": "blockbuster-footsteps",
+      "file": "blockbuster-footsteps/walking-on-earth.wav",
+      "format": "wav",
+      "bytes": 5950346,
+      "sha256": "043c11a08f87f591937b30e56aef52e6b5217c2e777b46ba47df5837dd2816f0",
+      "duration_s": 10.31,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "walking",
+        "earth"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Footsteps.zip",
+        "member": "Footsteps/Walking on Earth.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-footsteps/walking-the-streets",
+      "name": "Walking the Streets",
+      "category": "blockbuster-footsteps",
+      "file": "blockbuster-footsteps/walking-the-streets.wav",
+      "format": "wav",
+      "bytes": 2124262,
+      "sha256": "ebbb185672caea37accbdf0e70797ccc3795f2f3c36e4ea7d8ed69cc3c474e44",
+      "duration_s": 7.362,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "walking",
+        "streets"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Footsteps.zip",
+        "member": "Footsteps/Walking the Streets.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-footsteps/wooden-floor-step",
+      "name": "Wooden Floor Step",
+      "category": "blockbuster-footsteps",
+      "file": "blockbuster-footsteps/wooden-floor-step.wav",
+      "format": "wav",
+      "bytes": 261834,
+      "sha256": "448f0fcaf3aa8730a5f24103a7361379b8ba3753efb632c66b01c51ebc96055e",
+      "duration_s": 0.434,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "wooden",
+        "floor",
+        "step"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Footsteps.zip",
+        "member": "Footsteps/Wooden Floor Step.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/9mm-shot-front",
+      "name": "9mm Shot Front",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/9mm-shot-front.wav",
+      "format": "wav",
+      "bytes": 261472,
+      "sha256": "6d191bf7acb8f368a17b5c4cced83b5d55cc36242264944bc9347d26207058b7",
+      "duration_s": 0.868,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "9mm",
+        "shot",
+        "front"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/9mm Shot Front.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/automatic-rifle-multiple-shots",
+      "name": "Automatic Rifle Multiple Shots",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/automatic-rifle-multiple-shots.wav",
+      "format": "wav",
+      "bytes": 761178,
+      "sha256": "85287c67dd8fa9c67530cbe07bab1081bfcabaa8ddd0654cc7cc1474e75c9353",
+      "duration_s": 1.301,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "automatic",
+        "rifle",
+        "multiple",
+        "shots"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Automatic Rifle Multiple Shots.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/deep-gun-shot",
+      "name": "Deep Gun Shot",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/deep-gun-shot.wav",
+      "format": "wav",
+      "bytes": 665082,
+      "sha256": "1316ede99595d855fd34e723307ea904b2ea5500b71b1659b2e94590bdd7d9cd",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "gun",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Deep Gun Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/echo-gunshot",
+      "name": "Echo Gunshot",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/echo-gunshot.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "84f8b8862a74ad1f658b6c8bdb0c03d5f4dbabf12af084c0bd6f76f6850c1ce3",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "echo",
+        "gunshot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Echo Gunshot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/far-off-gunfire",
+      "name": "Far Off Gunfire",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/far-off-gunfire.wav",
+      "format": "wav",
+      "bytes": 549768,
+      "sha256": "52290628858748860aef3d9bb2ddceb92cf0acaa20f3f64abdff17594739f8aa",
+      "duration_s": 0.934,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "far",
+        "off",
+        "gunfire"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Far Off Gunfire.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/gunshot-inside",
+      "name": "Gunshot Inside",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/gunshot-inside.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "b98cf7c74532628acca1ef925f415a5f4e6c8f24d245694fe6a75cba5ee16ae0",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "gunshot",
+        "inside"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Gunshot Inside.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/handgun-shot",
+      "name": "Handgun Shot",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/handgun-shot.wav",
+      "format": "wav",
+      "bytes": 780396,
+      "sha256": "bb511a7c8bf80d8032bacb21412288e712eae3937221cc836cb5c750cbef5156",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "handgun",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Handgun Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/heavy-machine-gun-shots",
+      "name": "Heavy Machine Gun Shots",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/heavy-machine-gun-shots.wav",
+      "format": "wav",
+      "bytes": 1011030,
+      "sha256": "71f62bff7de050771e1d4291dfd522440bb1483bcff86b37a22bbfe719c14f53",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "heavy",
+        "machine",
+        "gun",
+        "shots"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Heavy Machine Gun Shots.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/hunting-rifle-shot",
+      "name": "Hunting Rifle Shot",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/hunting-rifle-shot.wav",
+      "format": "wav",
+      "bytes": 780396,
+      "sha256": "a14bb6a66c3878f68616b350f199d0d1ef20c6ea5564d1552a43275f48adba56",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hunting",
+        "rifle",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Hunting Rifle Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/inside-trainig-bunker-shot",
+      "name": "Inside Trainig Bunker Shot",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/inside-trainig-bunker-shot.wav",
+      "format": "wav",
+      "bytes": 645864,
+      "sha256": "10942e3cf4f94ccc85ab4f5923ff3fd141d0564a9095812944e106816c72c8b5",
+      "duration_s": 1.101,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "trainig",
+        "bunker",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Inside Trainig Bunker Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/loading-gun-fast",
+      "name": "Loading Gun Fast",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/loading-gun-fast.wav",
+      "format": "wav",
+      "bytes": 175004,
+      "sha256": "8c83f855e21f9623d44e91c7f1510265531feebd0f5a9b7abbee954f492453d7",
+      "duration_s": 0.567,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "loading",
+        "gun",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Loading Gun Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/loading-gun-normal",
+      "name": "Loading Gun Normal",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/loading-gun-normal.wav",
+      "format": "wav",
+      "bytes": 223052,
+      "sha256": "f9542cc9f04d305d355673cf2d523727a1f20b911f0e8a64886d5518b427cf0c",
+      "duration_s": 0.734,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "loading",
+        "gun",
+        "normal"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Loading Gun Normal.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/loading-gun-slow-motion",
+      "name": "Loading Gun Slow Motion",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/loading-gun-slow-motion.wav",
+      "format": "wav",
+      "bytes": 290318,
+      "sha256": "831a0af54a352f59bdb1eb57f7762b5c8e881113f55450163104478d817b2626",
+      "duration_s": 0.968,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "loading",
+        "gun",
+        "slow",
+        "motion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Loading Gun Slow Motion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/loading-handgun",
+      "name": "Loading Handgun",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/loading-handgun.wav",
+      "format": "wav",
+      "bytes": 530572,
+      "sha256": "8c0922633dc76b35a2d518db438decc42df3c0839972968700dc0c94145c29df",
+      "duration_s": 0.901,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "loading",
+        "handgun"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Loading Handgun.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/machine-gun-fast-front",
+      "name": "Machine Gun Fast Front",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/machine-gun-fast-front.wav",
+      "format": "wav",
+      "bytes": 492096,
+      "sha256": "068e5a81befd8aaf34c5de16d9a79de5307b2541f5149b0bceca2e35c7d5d7df",
+      "duration_s": 1.668,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "machine",
+        "gun",
+        "fast",
+        "front"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Machine Gun Fast Front.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/machine-gun-normal-front",
+      "name": "Machine Gun Normal Front",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/machine-gun-normal-front.wav",
+      "format": "wav",
+      "bytes": 588192,
+      "sha256": "02700eef6f245bd85bd9ced007af043f2133f1ec5cfe12724b25e564df942bdd",
+      "duration_s": 2.002,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "machine",
+        "gun",
+        "normal",
+        "front"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Machine Gun Normal Front.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/machine-gun-shots-echo",
+      "name": "Machine Gun Shots Echo",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/machine-gun-shots-echo.wav",
+      "format": "wav",
+      "bytes": 1011030,
+      "sha256": "f2a795fe4a44beafc0fe3db304a7d39f528eb14f560d0d31f9e649b7d1370590",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "machine",
+        "gun",
+        "shots",
+        "echo"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Machine Gun Shots Echo.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/machine-gun-slow-motion-front",
+      "name": "Machine Gun Slow Motion Front",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/machine-gun-slow-motion-front.wav",
+      "format": "wav",
+      "bytes": 1164770,
+      "sha256": "0ba16dbe3280ca218f79a83f9f2c41e29f9181652680d6da75ab29ac4e262e58",
+      "duration_s": 4.004,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "machine",
+        "gun",
+        "slow",
+        "motion",
+        "front"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Machine Gun Slow Motion Front.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/meanded-shot",
+      "name": "Meanded Shot",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/meanded-shot.wav",
+      "format": "wav",
+      "bytes": 492108,
+      "sha256": "6f9977ee627bcd8acfa461ec676c82805e9eefac950b3ae18c044f59cc24a8c2",
+      "duration_s": 0.834,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "meanded",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Meanded Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/old-rifle-shot",
+      "name": "Old Rifle Shot",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/old-rifle-shot.wav",
+      "format": "wav",
+      "bytes": 780396,
+      "sha256": "6ffd57b5c0f1462f50add2b51197ade5221d04e46613787bd4924b5bd8657685",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "rifle",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Old Rifle Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/revolver-pin-pull-echo",
+      "name": "Revolver Pin Pull Echo",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/revolver-pin-pull-echo.wav",
+      "format": "wav",
+      "bytes": 501714,
+      "sha256": "785b7a4666c57db4fe5791b698c24ab64b8eaff8ee381d5ddda7ab99eccf0c94",
+      "duration_s": 1.702,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "revolver",
+        "pin",
+        "pull",
+        "echo"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Revolver Pin Pull Echo.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/revolver-shot",
+      "name": "Revolver Shot",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/revolver-shot.wav",
+      "format": "wav",
+      "bytes": 520934,
+      "sha256": "4384f85a3d54543461eaeacb0e624e88422a440c0f755673e6fbe89956d5bbb0",
+      "duration_s": 1.768,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "revolver",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Revolver Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/revolver-shot-slow-motion",
+      "name": "Revolver Shot Slow Motion",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/revolver-shot-slow-motion.wav",
+      "format": "wav",
+      "bytes": 1030246,
+      "sha256": "c076e019899c843ef035eb2f6052ee4634ce75d751cbb0a45b0cc2e6067b949d",
+      "duration_s": 3.537,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "revolver",
+        "shot",
+        "slow",
+        "motion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Revolver Shot Slow Motion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/shells-falling-echo",
+      "name": "Shells Falling Echo",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/shells-falling-echo.wav",
+      "format": "wav",
+      "bytes": 607422,
+      "sha256": "fee179b2ba0516e8f3ac935cc52a8d0b419f98672924fbe8418f50f9e2dac7c4",
+      "duration_s": 2.069,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "shells",
+        "falling",
+        "echo"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Shells Falling Echo.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/simple-rifle-shot",
+      "name": "Simple Rifle Shot",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/simple-rifle-shot.wav",
+      "format": "wav",
+      "bytes": 626646,
+      "sha256": "c2bfa5082bb3dc693feceff2e9c452f3d6fddc8c6e574753b554f6c365014d61",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "simple",
+        "rifle",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Simple Rifle Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/simple-single-shot",
+      "name": "Simple Single Shot",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/simple-single-shot.wav",
+      "format": "wav",
+      "bytes": 780398,
+      "sha256": "ab9854453009af50e35b0dac1b6879b14b396e53fc803834d175c64be9a7512b",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "simple",
+        "single",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Simple Single Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/single-abstract-shot",
+      "name": "Single Abstract Shot",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/single-abstract-shot.wav",
+      "format": "wav",
+      "bytes": 626646,
+      "sha256": "a8dea7fd960f96c0e10838bee1fdcd7c23c230b17dc5802ceb45789ef1e72d22",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "single",
+        "abstract",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Single Abstract Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/single-semi-automatic-rifle",
+      "name": "Single Semi Automatic Rifle",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/single-semi-automatic-rifle.wav",
+      "format": "wav",
+      "bytes": 607428,
+      "sha256": "b33f98929e09444ecda745bedd91999cf577cfdf1156a1f150c3c03c10c81e50",
+      "duration_s": 1.034,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "single",
+        "semi",
+        "automatic",
+        "rifle"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Single Semi Automatic Rifle.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/single-shot-colt",
+      "name": "Single Shot Colt",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/single-shot-colt.wav",
+      "format": "wav",
+      "bytes": 626646,
+      "sha256": "2a53fa4ea04c21c557bf7daccc7ef2cf0da733ab5279ed796f3cc297d54c81b0",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "single",
+        "shot",
+        "colt"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Single Shot Colt.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/sniper-rifle-shot",
+      "name": "Sniper Rifle Shot",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/sniper-rifle-shot.wav",
+      "format": "wav",
+      "bytes": 780396,
+      "sha256": "5d6996df0c86a4244872a19b09cbf5aa2e5ca717a35a93418061003b08bf94eb",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sniper",
+        "rifle",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Sniper Rifle Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/tank-machine-gun-shots",
+      "name": "Tank Machine Gun Shots",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/tank-machine-gun-shots.wav",
+      "format": "wav",
+      "bytes": 1011030,
+      "sha256": "1cee91bb7002e2775ba6f6bcb52af9108f0e08b8de71801a10ace319afe03920",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tank",
+        "machine",
+        "gun",
+        "shots"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Tank Machine Gun Shots.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-guns/western-movie-shot",
+      "name": "Western Movie Shot",
+      "category": "blockbuster-guns",
+      "file": "blockbuster-guns/western-movie-shot.wav",
+      "format": "wav",
+      "bytes": 780396,
+      "sha256": "5ef887c802c671c7a7bc148c52ec3074f119ab63611e92dac3f11959225d75a1",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "western",
+        "movie",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Guns.zip",
+        "member": "Guns/Western Movie Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-phone/phone-broken-line",
+      "name": "Phone Broken Line",
+      "category": "blockbuster-phone",
+      "file": "blockbuster-phone/phone-broken-line.wav",
+      "format": "wav",
+      "bytes": 1107128,
+      "sha256": "5f9fd9084954b7159c739cae3cbedb40fac33809ffc9f68790647d6e60d149b3",
+      "duration_s": 3.804,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "phone",
+        "broken",
+        "line"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phone.zip",
+        "member": "Phone/Phone Broken Line.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-phone/phone-calling",
+      "name": "Phone Calling",
+      "category": "blockbuster-phone",
+      "file": "blockbuster-phone/phone-calling.wav",
+      "format": "wav",
+      "bytes": 3009928,
+      "sha256": "b65f192c8b21a3b496987d3fffe56a2c5f23e41cb1c009ac4faaa78b2085db1b",
+      "duration_s": 10.41,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "phone",
+        "calling"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phone.zip",
+        "member": "Phone/Phone Calling.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-phone/phone-number-non-existent",
+      "name": "Phone Number Non Existent",
+      "category": "blockbuster-phone",
+      "file": "blockbuster-phone/phone-number-non-existent.wav",
+      "format": "wav",
+      "bytes": 1750974,
+      "sha256": "63a4e9135bd556b9a3588213c0748c71bdc72ca4e7ab355c82db6bbf88a3cf57",
+      "duration_s": 6.039,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "phone",
+        "number",
+        "non",
+        "existent"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phone.zip",
+        "member": "Phone/Phone Number Non Existent.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-phone/putting-the-phone-down",
+      "name": "Putting the phone down",
+      "category": "blockbuster-phone",
+      "file": "blockbuster-phone/putting-the-phone-down.wav",
+      "format": "wav",
+      "bytes": 146158,
+      "sha256": "9926b986dad10abc0f277fc52fc37071250e3ec6982a54fe6563348607830add",
+      "duration_s": 0.467,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "putting",
+        "phone",
+        "down"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phone.zip",
+        "member": "Phone/Putting the phone down.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-phone/smartphone-ringing",
+      "name": "Smartphone ringing",
+      "category": "blockbuster-phone",
+      "file": "blockbuster-phone/smartphone-ringing.wav",
+      "format": "wav",
+      "bytes": 1568480,
+      "sha256": "57afd0e1235b43acfaf06d7ae487bafac7b2585ff0c2f8bb77207d9b0f3ddb54",
+      "duration_s": 5.405,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "smartphone",
+        "ringing"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phone.zip",
+        "member": "Phone/Smartphone ringing.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-phone/typing-phone-number",
+      "name": "Typing Phone Number",
+      "category": "blockbuster-phone",
+      "file": "blockbuster-phone/typing-phone-number.wav",
+      "format": "wav",
+      "bytes": 578602,
+      "sha256": "d0d639709889c1f71bde95ca11cdb122b0ce995e304ba75e619fc8bb68d1ea82",
+      "duration_s": 1.969,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "typing",
+        "phone",
+        "number"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phone.zip",
+        "member": "Phone/Typing Phone Number.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-planes/helicopter-flying-over",
+      "name": "Helicopter Flying Over",
+      "category": "blockbuster-planes",
+      "file": "blockbuster-planes/helicopter-flying-over.wav",
+      "format": "wav",
+      "bytes": 2539046,
+      "sha256": "d7ad35336bc0cad890bf49fde76fa37592f6dc06537ea032a54d413f5d800f2f",
+      "duration_s": 8.775,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "helicopter",
+        "flying",
+        "over"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Planes.zip",
+        "member": "Planes/Helicopter Flying Over.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-planes/helicopter-flying-over-fast",
+      "name": "Helicopter Flying Over Fast",
+      "category": "blockbuster-planes",
+      "file": "blockbuster-planes/helicopter-flying-over-fast.wav",
+      "format": "wav",
+      "bytes": 2116154,
+      "sha256": "cbc79cbc6fc9071c53a17e89a955a2d727d8006955ab4d79a57948e4aee7afd1",
+      "duration_s": 7.307,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "helicopter",
+        "flying",
+        "over",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Planes.zip",
+        "member": "Planes/Helicopter Flying Over Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-planes/helicopter-flying-over-fast-left",
+      "name": "Helicopter Flying Over Fast Left",
+      "category": "blockbuster-planes",
+      "file": "blockbuster-planes/helicopter-flying-over-fast-left.wav",
+      "format": "wav",
+      "bytes": 2116154,
+      "sha256": "2e689513ccffd476f4ce4619834eee54b99ffd3be99ab10c96c2ac55b54f419c",
+      "duration_s": 7.307,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "helicopter",
+        "flying",
+        "over",
+        "fast",
+        "left"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Planes.zip",
+        "member": "Planes/Helicopter Flying Over Fast Left.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-planes/helicopter-flying-over-fast-right",
+      "name": "Helicopter Flying Over Fast Right",
+      "category": "blockbuster-planes",
+      "file": "blockbuster-planes/helicopter-flying-over-fast-right.wav",
+      "format": "wav",
+      "bytes": 2116154,
+      "sha256": "4b118d2b979bc075ce1131202492843ddf316d53b43325441b1c7ad1bc4d285a",
+      "duration_s": 7.307,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "helicopter",
+        "flying",
+        "over",
+        "fast",
+        "right"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Planes.zip",
+        "member": "Planes/Helicopter Flying Over Fast Right.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-planes/helicopter-over-the-city",
+      "name": "Helicopter Over the City",
+      "category": "blockbuster-planes",
+      "file": "blockbuster-planes/helicopter-over-the-city.wav",
+      "format": "wav",
+      "bytes": 2959844,
+      "sha256": "849d6fe2c4a59511240bd782998d5c70b5198f187338b126532eb264f53b1bf5",
+      "duration_s": 10.244,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "helicopter",
+        "over",
+        "city"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Planes.zip",
+        "member": "Planes/Helicopter Over the City.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-stress/beat-stress",
+      "name": "Beat Stress",
+      "category": "blockbuster-stress",
+      "file": "blockbuster-stress/beat-stress.wav",
+      "format": "wav",
+      "bytes": 2782048,
+      "sha256": "bc197d6b5d2ff978c6934b3f4e7e136ecacc1d1c9a92f61ba649109b557f1aaa",
+      "duration_s": 4.805,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "beat",
+        "stress"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Stress.zip",
+        "member": "Stress/Beat Stress.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-stress/bell-stress",
+      "name": "Bell Stress",
+      "category": "blockbuster-stress",
+      "file": "blockbuster-stress/bell-stress.wav",
+      "format": "wav",
+      "bytes": 3606766,
+      "sha256": "e6ddedfc97431d7c6628355ab83f30478d8e75c72389a3c594e7a718ed2fe849",
+      "duration_s": 6.24,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bell",
+        "stress"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Stress.zip",
+        "member": "Stress/Bell Stress.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-stress/deep-stress",
+      "name": "Deep Stress",
+      "category": "blockbuster-stress",
+      "file": "blockbuster-stress/deep-stress.wav",
+      "format": "wav",
+      "bytes": 1664464,
+      "sha256": "6ce930a1b8756b3cc7c51b9270ca197d837b22e8cf0fb07158db8dfca1570b1b",
+      "duration_s": 2.87,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "stress"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Stress.zip",
+        "member": "Stress/Deep Stress.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-stress/hollow-room-stress",
+      "name": "Hollow Room Stress",
+      "category": "blockbuster-stress",
+      "file": "blockbuster-stress/hollow-room-stress.wav",
+      "format": "wav",
+      "bytes": 4090442,
+      "sha256": "7096cab1197ec3109e47ed89eef4df1d81872aa520d4d7bd73ee0a6e9483ae64",
+      "duration_s": 7.08,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hollow",
+        "room",
+        "stress"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Stress.zip",
+        "member": "Stress/Hollow Room Stress.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-stress/scream-stress",
+      "name": "Scream Stress",
+      "category": "blockbuster-stress",
+      "file": "blockbuster-stress/scream-stress.wav",
+      "format": "wav",
+      "bytes": 2394816,
+      "sha256": "4c09842958e67eebe27ef21606f253d73033430f982b2bc65ddde2172d41680e",
+      "duration_s": 4.137,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "scream",
+        "stress"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Stress.zip",
+        "member": "Stress/Scream Stress.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-stress/slow-build-up-stress",
+      "name": "Slow Build Up Stress",
+      "category": "blockbuster-stress",
+      "file": "blockbuster-stress/slow-build-up-stress.wav",
+      "format": "wav",
+      "bytes": 8145484,
+      "sha256": "507192121e56bbfd5046804d5166c443a243ba1e25b4590b805a2e6e62a138c0",
+      "duration_s": 14.12,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slow",
+        "build",
+        "up",
+        "stress"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Stress.zip",
+        "member": "Stress/Slow Build Up Stress.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-stress/soft-stress",
+      "name": "Soft Stress",
+      "category": "blockbuster-stress",
+      "file": "blockbuster-stress/soft-stress.wav",
+      "format": "wav",
+      "bytes": 2615298,
+      "sha256": "f8ace5bb79499337e66009f5424bb6f6871d72698797a0779709fa9959f14d28",
+      "duration_s": 4.52,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "soft",
+        "stress"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Stress.zip",
+        "member": "Stress/Soft Stress.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-tones/deep-tone",
+      "name": "Deep Tone",
+      "category": "blockbuster-tones",
+      "file": "blockbuster-tones/deep-tone.wav",
+      "format": "wav",
+      "bytes": 1088476,
+      "sha256": "19654c718a00a6afb2fbe3a2f5e4631610f8b3db27b519c7f9d52e1c2ac3d515",
+      "duration_s": 1.869,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "tone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tones.zip",
+        "member": "Tones/Deep Tone.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-tones/deep-tone-wave",
+      "name": "Deep Tone Wave",
+      "category": "blockbuster-tones",
+      "file": "blockbuster-tones/deep-tone-wave.wav",
+      "format": "wav",
+      "bytes": 1511296,
+      "sha256": "3ec07a83534bb7035c86059bf3db2c0fd5f4f1ea7b85ee7dbb15d4789ca55cc0",
+      "duration_s": 2.603,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "tone",
+        "wave"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tones.zip",
+        "member": "Tones/Deep Tone Wave.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-tones/high-tick-tone",
+      "name": "High Tick Tone",
+      "category": "blockbuster-tones",
+      "file": "blockbuster-tones/high-tick-tone.wav",
+      "format": "wav",
+      "bytes": 405406,
+      "sha256": "d5c205a9e79fe7cdab59c5c5fcae9838cae794718b2f963109327c9d8141e44e",
+      "duration_s": 0.697,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "high",
+        "tick",
+        "tone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tones.zip",
+        "member": "Tones/High Tick Tone.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-tones/odd-walk-by-tone",
+      "name": "Odd Walk By Tone",
+      "category": "blockbuster-tones",
+      "file": "blockbuster-tones/odd-walk-by-tone.wav",
+      "format": "wav",
+      "bytes": 1877842,
+      "sha256": "ee54dadd64f7d62938a6cfb822310d3d73d5cfa358dde2c0b674b10a9ac42a9f",
+      "duration_s": 3.24,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "odd",
+        "walk",
+        "tone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tones.zip",
+        "member": "Tones/Odd Walk By Tone.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-tones/rise-tone",
+      "name": "Rise Tone",
+      "category": "blockbuster-tones",
+      "file": "blockbuster-tones/rise-tone.wav",
+      "format": "wav",
+      "bytes": 1140558,
+      "sha256": "d87a7735e151848bef053a630e63db9f173e878a092a8a36f3f3dda447a80160",
+      "duration_s": 1.96,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rise",
+        "tone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tones.zip",
+        "member": "Tones/Rise Tone.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-tones/saber-tone",
+      "name": "Saber Tone",
+      "category": "blockbuster-tones",
+      "file": "blockbuster-tones/saber-tone.wav",
+      "format": "wav",
+      "bytes": 265040,
+      "sha256": "7cdad794e4925105c3b8e762fdcf0fc9d4076b48f4784f26f219f35a2cee4ea2",
+      "duration_s": 0.44,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "saber",
+        "tone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tones.zip",
+        "member": "Tones/Saber Tone.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-tones/sci-fi-tone",
+      "name": "Sci-fi Tone",
+      "category": "blockbuster-tones",
+      "file": "blockbuster-tones/sci-fi-tone.wav",
+      "format": "wav",
+      "bytes": 979280,
+      "sha256": "710c0367035e452bad633af1fd88af7db071006ce85be9cee5acd4e0d6e8c0c2",
+      "duration_s": 1.68,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sci",
+        "fi",
+        "tone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tones.zip",
+        "member": "Tones/Sci-fi Tone.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-tones/sci-fi-tone-fast",
+      "name": "Sci-fi Tone Fast",
+      "category": "blockbuster-tones",
+      "file": "blockbuster-tones/sci-fi-tone-fast.wav",
+      "format": "wav",
+      "bytes": 449358,
+      "sha256": "b0f3cc8eccad8046ffd4334f72943c5930bd1f1c4d88da33e498abc65d721b74",
+      "duration_s": 0.76,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sci",
+        "fi",
+        "tone",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tones.zip",
+        "member": "Tones/Sci-fi Tone Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-tones/ticking-tone-sweep",
+      "name": "Ticking Tone Sweep",
+      "category": "blockbuster-tones",
+      "file": "blockbuster-tones/ticking-tone-sweep.wav",
+      "format": "wav",
+      "bytes": 633682,
+      "sha256": "24b95e58ef44bd5569f82826135c302f706652d5b7eead29d54353bb72338f69",
+      "duration_s": 1.08,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ticking",
+        "tone",
+        "sweep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tones.zip",
+        "member": "Tones/Ticking Tone Sweep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-tones/tone-hit",
+      "name": "Tone Hit",
+      "category": "blockbuster-tones",
+      "file": "blockbuster-tones/tone-hit.wav",
+      "format": "wav",
+      "bytes": 1448122,
+      "sha256": "9be0739e8ec9f776bf4b8d48f51f7bd0e13912a22146b1371b8b2d81fc7e1671",
+      "duration_s": 2.507,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tone",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tones.zip",
+        "member": "Tones/Tone Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "boats/big-ship-horn",
       "name": "Big Ship Horn",
       "category": "boats",
