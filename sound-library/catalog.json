@@ -3097,6 +3097,4765 @@
       "added": "2026-10-21"
     },
     {
+      "id": "science-fiction-cyber-distort/cyber-distort-around",
+      "name": "Cyber Distort Around",
+      "category": "science-fiction-cyber-distort",
+      "file": "science-fiction-cyber-distort/cyber-distort-around.wav",
+      "format": "wav",
+      "bytes": 2139636,
+      "sha256": "062bac5340e83399751d0237bc4f2a6b51e6cdafeb1c332ec61b4a068015d81f",
+      "duration_s": 3.68,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cyber",
+        "distort",
+        "around"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cyber_Distort.zip",
+        "member": "Cyber Distort/Cyber Distort Around.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-cyber-distort/cyber-distort-braam",
+      "name": "Cyber Distort Braam",
+      "category": "science-fiction-cyber-distort",
+      "file": "science-fiction-cyber-distort/cyber-distort-braam.wav",
+      "format": "wav",
+      "bytes": 1670662,
+      "sha256": "57f20910807fe6c1b87f806510dde723dbd2e65ce83b614665cca6c35aa8336a",
+      "duration_s": 2.893,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cyber",
+        "distort",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cyber_Distort.zip",
+        "member": "Cyber Distort/Cyber Distort Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-cyber-distort/cyber-distort-crack",
+      "name": "Cyber Distort Crack",
+      "category": "science-fiction-cyber-distort",
+      "file": "science-fiction-cyber-distort/cyber-distort-crack.wav",
+      "format": "wav",
+      "bytes": 11656352,
+      "sha256": "6528f6ee53c1ab468357f911aab82e19722fe093cbd49185afcff8e563e0a706",
+      "duration_s": 20.2,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cyber",
+        "distort",
+        "crack"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cyber_Distort.zip",
+        "member": "Cyber Distort/Cyber Distort Crack.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-cyber-distort/cyber-distort-error",
+      "name": "Cyber Distort Error",
+      "category": "science-fiction-cyber-distort",
+      "file": "science-fiction-cyber-distort/cyber-distort-error.wav",
+      "format": "wav",
+      "bytes": 2275954,
+      "sha256": "752aba18df1b1a2c39ff063db7f883c100a4f3981bd97c9387a026e3b1c83293",
+      "duration_s": 3.92,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cyber",
+        "distort",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cyber_Distort.zip",
+        "member": "Cyber Distort/Cyber Distort Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-cyber-distort/cyber-distort-fold",
+      "name": "Cyber Distort Fold",
+      "category": "science-fiction-cyber-distort",
+      "file": "science-fiction-cyber-distort/cyber-distort-fold.wav",
+      "format": "wav",
+      "bytes": 1008732,
+      "sha256": "c54cb644bb68bb3e84d12c267bfb7f7364325f25afd8f8c0527886b27d68a41f",
+      "duration_s": 1.72,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cyber",
+        "distort",
+        "fold"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cyber_Distort.zip",
+        "member": "Cyber Distort/Cyber Distort Fold.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-cyber-distort/cyber-distort-low",
+      "name": "Cyber Distort Low",
+      "category": "science-fiction-cyber-distort",
+      "file": "science-fiction-cyber-distort/cyber-distort-low.wav",
+      "format": "wav",
+      "bytes": 1239128,
+      "sha256": "83042deb5e5a4d3292719c6b4cb0ff15efc7b2aed113042d07aec14f6cb02794",
+      "duration_s": 2.12,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cyber",
+        "distort",
+        "low"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cyber_Distort.zip",
+        "member": "Cyber Distort/Cyber Distort Low.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-cyber-distort/cyber-distort-noise-crack",
+      "name": "Cyber Distort Noise Crack",
+      "category": "science-fiction-cyber-distort",
+      "file": "science-fiction-cyber-distort/cyber-distort-noise-crack.wav",
+      "format": "wav",
+      "bytes": 1515716,
+      "sha256": "8861ab30a8e1b7c637c1ef8305e0c32be440a79171b47ad5e983b3d9a77e7f23",
+      "duration_s": 2.6,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cyber",
+        "distort",
+        "noise",
+        "crack"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cyber_Distort.zip",
+        "member": "Cyber Distort/Cyber Distort Noise Crack.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-cyber-distort/cyber-distort-rise",
+      "name": "Cyber Distort Rise",
+      "category": "science-fiction-cyber-distort",
+      "file": "science-fiction-cyber-distort/cyber-distort-rise.wav",
+      "format": "wav",
+      "bytes": 5547640,
+      "sha256": "33393bbfcb9f770d6ab431e2efad8583471cf238c0d8c0534c3e9dfbbe429c36",
+      "duration_s": 9.6,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cyber",
+        "distort",
+        "rise"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cyber_Distort.zip",
+        "member": "Cyber Distort/Cyber Distort Rise.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-cyber-distort/cyber-distort-ship",
+      "name": "Cyber Distort Ship",
+      "category": "science-fiction-cyber-distort",
+      "file": "science-fiction-cyber-distort/cyber-distort-ship.wav",
+      "format": "wav",
+      "bytes": 2667648,
+      "sha256": "f8072ba8cadae60153aea8a22b663f68859c291c8f55839294ce4c43d35216f1",
+      "duration_s": 4.6,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cyber",
+        "distort",
+        "ship"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cyber_Distort.zip",
+        "member": "Cyber Distort/Cyber Distort Ship.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-cyber-distort/cyber-distort-splash",
+      "name": "Cyber Distort Splash",
+      "category": "science-fiction-cyber-distort",
+      "file": "science-fiction-cyber-distort/cyber-distort-splash.wav",
+      "format": "wav",
+      "bytes": 1193050,
+      "sha256": "d104d4556c8ef3d9382e5b3e097e83974823ac50185b4413348a8f589f6d79ae",
+      "duration_s": 2.04,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cyber",
+        "distort",
+        "splash"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Cyber_Distort.zip",
+        "member": "Cyber Distort/Cyber Distort Splash.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/clip-glitch",
+      "name": "Clip Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/clip-glitch.wav",
+      "format": "wav",
+      "bytes": 665062,
+      "sha256": "09ea1ad113976a5facfa6e321a1626bdb340036ac3f7b46da49506aa5934121f",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "clip",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Clip Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/complete-error-glitch",
+      "name": "Complete Error Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/complete-error-glitch.wav",
+      "format": "wav",
+      "bytes": 1991188,
+      "sha256": "69d611a76149fc5288cb524e9d2094a2fa8f0068cc9c693578b8335681b0198f",
+      "duration_s": 3.437,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "complete",
+        "error",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Complete Error Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/cracking-glitch",
+      "name": "Cracking Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/cracking-glitch.wav",
+      "format": "wav",
+      "bytes": 1087910,
+      "sha256": "4d183083d9b8617aec3126e3bed17adc352d9487fadbe53bd2a9fb375d0a3b71",
+      "duration_s": 1.869,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cracking",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Cracking Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/cyber-distort-impact-glitch",
+      "name": "Cyber Distort Impact Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/cyber-distort-impact-glitch.wav",
+      "format": "wav",
+      "bytes": 2214920,
+      "sha256": "bd6a4c330871d55cc0aa8d93a1bb19b4b04535a0c531ab3e998927892396048f",
+      "duration_s": 3.8,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cyber",
+        "distort",
+        "impact",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Cyber Distort Impact Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/deep-glitch",
+      "name": "Deep Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/deep-glitch.wav",
+      "format": "wav",
+      "bytes": 1875872,
+      "sha256": "af4ca55a94730f53c38af75971aee30a2ee8757f046d6e77bde05e465e16f38b",
+      "duration_s": 3.237,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Deep Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/disconnect-glitch",
+      "name": "Disconnect Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/disconnect-glitch.wav",
+      "format": "wav",
+      "bytes": 665086,
+      "sha256": "7c97cbc21c805f24cca1b6b799d8fefd7c2ae5a852892f297d1fd57c7426b655",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "disconnect",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Disconnect Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/distorted-glitch",
+      "name": "Distorted Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/distorted-glitch.wav",
+      "format": "wav",
+      "bytes": 1030228,
+      "sha256": "f353932a98b2e66bccf0707b31c428d822b285977d2b04dea63df4ccd1f375ba",
+      "duration_s": 1.768,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Distorted Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/fast-glitch",
+      "name": "Fast Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/fast-glitch.wav",
+      "format": "wav",
+      "bytes": 299894,
+      "sha256": "db11bfa25386468ebce7c69fe7221e4b8fd7beaca6e2d3503d6ed6bdc4c96ba9",
+      "duration_s": 0.5,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fast",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Fast Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/flickering-glitch",
+      "name": "Flickering Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/flickering-glitch.wav",
+      "format": "wav",
+      "bytes": 915010,
+      "sha256": "fcfa8d349b18664aa1f0832c87a66558c872ab763d9591de72d5f7777e80e160",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "flickering",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Flickering Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/fold-glitch",
+      "name": "Fold Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/fold-glitch.wav",
+      "format": "wav",
+      "bytes": 1030320,
+      "sha256": "715b9c6e722b131e7f1250a0f555b888f4072a182669ea599c69ceaf6db2d81d",
+      "duration_s": 1.768,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fold",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Fold Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/glitch-off",
+      "name": "Glitch Off",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/glitch-off.wav",
+      "format": "wav",
+      "bytes": 857254,
+      "sha256": "96da6497441d409d12ed252064f2d1d817c98ce1ef10edb17315c7e6e92aa552",
+      "duration_s": 1.468,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "glitch",
+        "off"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Glitch Off.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/impact-glitch-short",
+      "name": "Impact Glitch Short",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/impact-glitch-short.wav",
+      "format": "wav",
+      "bytes": 2819336,
+      "sha256": "f7c03c08e615d2228b6bae2ae7d98534d6e697e3f9b1b254c400e6df3ad05934",
+      "duration_s": 4.872,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "glitch",
+        "short"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Impact Glitch Short.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/light-glitch",
+      "name": "Light Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/light-glitch.wav",
+      "format": "wav",
+      "bytes": 1030228,
+      "sha256": "0544aa9450f3e855fa20f929bf31467f541de261e1966bfe5ad4c4d5f995411e",
+      "duration_s": 1.768,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "light",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Light Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/long-glitch",
+      "name": "Long Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/long-glitch.wav",
+      "format": "wav",
+      "bytes": 1068664,
+      "sha256": "fe9c2c713755e6a3cd31e4621be98d6a97610dba0c582ce3421e93ec804ebc75",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "long",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Long Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/machine-glitch",
+      "name": "Machine Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/machine-glitch.wav",
+      "format": "wav",
+      "bytes": 741938,
+      "sha256": "e6374b8408fac08642d93000569ec11e83a57470aa5d28a303693b3cf20dc12d",
+      "duration_s": 1.268,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "machine",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Machine Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/machine-reset",
+      "name": "Machine Reset",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/machine-reset.wav",
+      "format": "wav",
+      "bytes": 338336,
+      "sha256": "6955dba9aaad4904d1183fc1c36146565d87328d94f2c0e315d4ec503aea571f",
+      "duration_s": 0.567,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "machine",
+        "reset"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Machine Reset.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/mechanical-glitch",
+      "name": "Mechanical Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/mechanical-glitch.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "c7a51cb19c17500ea4201338e36e16061390b96033ea789de91bc7abd9f3eff2",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "mechanical",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Mechanical Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/noise-glitch",
+      "name": "Noise Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/noise-glitch.wav",
+      "format": "wav",
+      "bytes": 1376198,
+      "sha256": "2b1d98b4ee4abeb2f858f4f3e3755d965e7f3bc579386e90d2ccb0219c9d0826",
+      "duration_s": 2.369,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "noise",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Noise Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/odd-glitch",
+      "name": "Odd Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/odd-glitch.wav",
+      "format": "wav",
+      "bytes": 914914,
+      "sha256": "e217c7f2db95363e39dcbf328098b9f9adae5dfc403532fc667c4d07007ae9ea",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "odd",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Odd Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/razor-glitch",
+      "name": "Razor Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/razor-glitch.wav",
+      "format": "wav",
+      "bytes": 915008,
+      "sha256": "fa64b9c8e2a2fb95a368a4192e10956795741ef2b58f228e62e54cb8d8c2b6eb",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "razor",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Razor Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/rewind-glitch",
+      "name": "Rewind Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/rewind-glitch.wav",
+      "format": "wav",
+      "bytes": 1914310,
+      "sha256": "64d38c1110c167fc43f6d6b7cf9e57bcb115678906821d1a8c57fb25a4c49505",
+      "duration_s": 3.303,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rewind",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Rewind Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/rise-glitch",
+      "name": "Rise Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/rise-glitch.wav",
+      "format": "wav",
+      "bytes": 914928,
+      "sha256": "75dfdaf154079e23da3b3ffb40b684e8a1b5e0a645ec5ab80b12f4b489ad48a1",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rise",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Rise Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/robo-bass-glitch",
+      "name": "Robo Bass Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/robo-bass-glitch.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "45696a4543174cb373b5e8831725f677b6f3fc3cc84439d5792f6929d54aa016",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "robo",
+        "bass",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Robo Bass Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/robo-system-glitch",
+      "name": "Robo System Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/robo-system-glitch.wav",
+      "format": "wav",
+      "bytes": 1145642,
+      "sha256": "4303c6349e2380dd18bfd2d48c5b94618a9c4fbefc174942a93e73db48188ba0",
+      "duration_s": 1.969,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "robo",
+        "system",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Robo System Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/science-fiction-error",
+      "name": "Science Fiction Error",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/science-fiction-error.wav",
+      "format": "wav",
+      "bytes": 463344,
+      "sha256": "bd9e2e432b3b524e9d8bce7e85cc52176f769c2a187fe4a8e2ec43004858178c",
+      "duration_s": 1.568,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "science",
+        "fiction",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Science Fiction Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/short-glitch",
+      "name": "Short Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/short-glitch.wav",
+      "format": "wav",
+      "bytes": 665064,
+      "sha256": "059196db7ebffc364fe9e808d85c59098e4243397f4358865e4255115d6b09a9",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Short Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/soft-glitch",
+      "name": "Soft Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/soft-glitch.wav",
+      "format": "wav",
+      "bytes": 1049188,
+      "sha256": "9c54999228f0caaad78a9b007ebdd65b9bf46dd263a10fd346f85c1ea8447834",
+      "duration_s": 1.768,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "soft",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Soft Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/squeeky-glitch",
+      "name": "Squeeky Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/squeeky-glitch.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "39d084043887f3ee7e58cc81dd4bb80d882498678dbff930d56791ad923bcc73",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "squeeky",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Squeeky Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/start-up-glitch",
+      "name": "Start Up Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/start-up-glitch.wav",
+      "format": "wav",
+      "bytes": 1281856,
+      "sha256": "9c0a754ae7bdb4593d3f27851bdb97a44e44c60c21b29fa502b3b3f1b3b17981",
+      "duration_s": 2.202,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "start",
+        "up",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Start Up Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/straight-glitch",
+      "name": "Straight Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/straight-glitch.wav",
+      "format": "wav",
+      "bytes": 1281940,
+      "sha256": "faecec7b40c0404ee2c9cb5226bc9d17597f4b5c36b88ae66183194143874a49",
+      "duration_s": 2.202,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "straight",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Straight Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-glitches/swarm-glitch",
+      "name": "Swarm Glitch",
+      "category": "science-fiction-glitches",
+      "file": "science-fiction-glitches/swarm-glitch.wav",
+      "format": "wav",
+      "bytes": 1030342,
+      "sha256": "8785832495974cc48d26f24de12d32593d8657765df9c6cf5d2b6144cef7775c",
+      "duration_s": 1.768,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "swarm",
+        "glitch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Glitches.zip",
+        "member": "Glitches/Swarm Glitch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/bass-impact",
+      "name": "Bass Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/bass-impact.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "0eff40de04ed766b19ce336daadfcb738c9fc5d2ae6e9552d5295d1f7473530a",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Bass Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/bulb-impacts",
+      "name": "Bulb Impacts",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/bulb-impacts.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "64756cb652a3a993f652e9ee03c8f4fc0db2d90f2223f04d41d313541e81241e",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bulb",
+        "impacts"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Bulb Impacts.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/crumble-feather-impact",
+      "name": "Crumble Feather Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/crumble-feather-impact.wav",
+      "format": "wav",
+      "bytes": 3309226,
+      "sha256": "6de341f64ab2bdafae6005a9d3a5e9d2643e596e64b426deb8b9073313c44f57",
+      "duration_s": 5.738,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "crumble",
+        "feather",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Crumble Feather Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/decay-impact",
+      "name": "Decay Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/decay-impact.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "bb98a3fe3019757ed64b1489872d541d97b197a7c48a128e366faebca9fd4895",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "decay",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Decay Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/deep-decay-impact",
+      "name": "Deep Decay Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/deep-decay-impact.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "55339ed31cb06d19eb96c69ac9b9007dd0e1ee355f937dcd6a8bce9d3b78d07f",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "decay",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Deep Decay Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/deep-hit",
+      "name": "Deep Hit",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/deep-hit.wav",
+      "format": "wav",
+      "bytes": 761178,
+      "sha256": "daff750f3c5168e82d1c4ed37acf6f155bba237e4a77dfef186725f60b673697",
+      "duration_s": 1.301,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Deep Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/deep-hollow-impact",
+      "name": "Deep Hollow Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/deep-hollow-impact.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "0f5b8879c601ec83bcb6b91683c810441e36cd7a6ca3c814356d9e0f2ed395bc",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "hollow",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Deep Hollow Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/deep-horn-impact",
+      "name": "Deep Horn Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/deep-horn-impact.wav",
+      "format": "wav",
+      "bytes": 4994630,
+      "sha256": "8d993b43bffdd8f13bf58d0bb6e7947876a579620dcfb0f7debd27842018b152",
+      "duration_s": 6.48,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "horn",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Deep Horn Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/deep-smooth-space-impact",
+      "name": "Deep Smooth Space Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/deep-smooth-space-impact.wav",
+      "format": "wav",
+      "bytes": 607428,
+      "sha256": "49c73ae7b67364493d0b3f361dad247cf7571ac1ca010654befc62ec24a7b158",
+      "duration_s": 1.034,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "smooth",
+        "space",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Deep Smooth Space Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/deep-space-impact",
+      "name": "Deep Space Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/deep-space-impact.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "99b4c78e8e01fc018811211c52b70650c3d086d2bd01beca3e2bf64f2b769b95",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "space",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Deep Space Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/deep-spacial-impact",
+      "name": "Deep Spacial Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/deep-spacial-impact.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "bd3be55d73d5f4509ebbc85c6244bbe2d04a72cdbb93700abb14420895234f03",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "spacial",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Deep Spacial Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/double-impact",
+      "name": "Double Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/double-impact.wav",
+      "format": "wav",
+      "bytes": 2880352,
+      "sha256": "92583d52f78bed668b53fd1c05d4f5ee15ad8d2751b5377c0e6bb7fef5f0d537",
+      "duration_s": 3.745,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "double",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Double Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/double-machine-impact",
+      "name": "Double Machine Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/double-machine-impact.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "854201b45efb6582c735846e855d0c2399e9426db9e41753ea346a4dd091582d",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "double",
+        "machine",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Double Machine Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/electric-decay-impact",
+      "name": "Electric Decay Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/electric-decay-impact.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "51fa29c63f75ef1d0041b657257b1fb9f4c1953d3e388ca1ba15980f91fec26d",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "decay",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Electric Decay Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/electric-impact",
+      "name": "Electric Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/electric-impact.wav",
+      "format": "wav",
+      "bytes": 4104316,
+      "sha256": "da1d6a55bfa6388ef0d5a565ec40be886bdf5a300a696dcab041f7e26e6d480e",
+      "duration_s": 7.118,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Electric Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/feather-impact",
+      "name": "Feather Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/feather-impact.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "4195d449845ef44c2506c6913c19324530fbf91125c545f6758f0ff72d8ad06b",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "feather",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Feather Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/feather-reverb-explosion",
+      "name": "Feather Reverb Explosion",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/feather-reverb-explosion.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "79b511066271033f6e598364d8fb9ea1ac239847b13ff85d3bf17b12fd70f0c3",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "feather",
+        "reverb",
+        "explosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Feather Reverb Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/granular-sci-fi-impact",
+      "name": "Granular Sci-Fi Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/granular-sci-fi-impact.wav",
+      "format": "wav",
+      "bytes": 972588,
+      "sha256": "bf728ca72a2663ae9381fb422e55a4c3cf29aaacd4d3b504a5836b72ce8204af",
+      "duration_s": 1.668,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "granular",
+        "sci",
+        "fi",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Granular Sci-Fi Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/implosion-impact",
+      "name": "Implosion Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/implosion-impact.wav",
+      "format": "wav",
+      "bytes": 3202004,
+      "sha256": "22ffa2001315b47d17070b6df9b1997faca98b6b3cbc9552c042391e977736c4",
+      "duration_s": 5.539,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "implosion",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Implosion Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/incoming-impact",
+      "name": "Incoming Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/incoming-impact.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "5e5f896a295c0f762b4541766fad373fc7fa5fa02dc3f272fd6a966ebe16f859",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "incoming",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt2.zip",
+        "member": "Impacts Pt2/Incoming Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/long-tail-impact",
+      "name": "Long Tail Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/long-tail-impact.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "e2cd6320e66b6cc84100ef282c450fe40e9c544f936681085c85e81ce6ae7b75",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "long",
+        "tail",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt1.zip",
+        "member": "untitled folder/Long Tail Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/low-rumble-impact",
+      "name": "Low Rumble Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/low-rumble-impact.wav",
+      "format": "wav",
+      "bytes": 3925816,
+      "sha256": "9e19472ef54039f2799fe70a2238a99b31b8fcbfe73cb7b6815ddee8af161f18",
+      "duration_s": 6.809,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "rumble",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt2.zip",
+        "member": "Impacts Pt2/Low Rumble Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/machine-impact",
+      "name": "Machine Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/machine-impact.wav",
+      "format": "wav",
+      "bytes": 568986,
+      "sha256": "e09c8b947d0d598fc9c7bd05826a7dccdfca2f3033411639b320af8e2237f008",
+      "duration_s": 0.968,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "machine",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt2.zip",
+        "member": "Impacts Pt2/Machine Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/metal-crumble-impact",
+      "name": "Metal Crumble Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/metal-crumble-impact.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "4253b1eeb38a17583852c35efec9e43a24832527edce3d1a376da02b894e9f5e",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "metal",
+        "crumble",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt2.zip",
+        "member": "Impacts Pt2/Metal Crumble Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/metal-rumble-impact",
+      "name": "Metal Rumble Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/metal-rumble-impact.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "a9ac5d6d873e635d5f2c6a2c53b998e0b7a2aec3eccd46e12b67a54891da400c",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "metal",
+        "rumble",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt2.zip",
+        "member": "Impacts Pt2/Metal Rumble Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/one-impact",
+      "name": "One Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/one-impact.wav",
+      "format": "wav",
+      "bytes": 2021662,
+      "sha256": "13700f5eeb8085979ba7a1442615e4a7aeadb2774f3f6bf2ba852b40b1b4a2fa",
+      "duration_s": 3.503,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "one",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt2.zip",
+        "member": "Impacts Pt2/One Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/planet-cave-impact",
+      "name": "Planet Cave Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/planet-cave-impact.wav",
+      "format": "wav",
+      "bytes": 9371364,
+      "sha256": "7309f4814b20d29b6b24f8efac166899757093d54ed5258d8599009641aaf2dd",
+      "duration_s": 16.25,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "planet",
+        "cave",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt2.zip",
+        "member": "Impacts Pt2/Planet Cave Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/planet-impact",
+      "name": "Planet Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/planet-impact.wav",
+      "format": "wav",
+      "bytes": 3509510,
+      "sha256": "14bb5c4322a5e08c40636d437c8b7be8f7e5fbcff528115733d0fb4c5259e543",
+      "duration_s": 6.073,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "planet",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt2.zip",
+        "member": "Impacts Pt2/Planet Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/riser-slash-impact",
+      "name": "Riser Slash Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/riser-slash-impact.wav",
+      "format": "wav",
+      "bytes": 1839334,
+      "sha256": "2d651d9726064ec7e26e8371a9638215f58b9661633e37c83b1c8a32f1defd6b",
+      "duration_s": 3.186,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "riser",
+        "slash",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt3.zip",
+        "member": "untitled folder/Riser Slash Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/robot-impact",
+      "name": "Robot Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/robot-impact.wav",
+      "format": "wav",
+      "bytes": 2817618,
+      "sha256": "8b178e0524d00d82f685cc669e7226ee33cb5496a5d896d9ea288b1098021cbd",
+      "duration_s": 4.872,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "robot",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt3.zip",
+        "member": "untitled folder/Robot Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/sci-fi-tone-impact",
+      "name": "Sci-Fi Tone Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/sci-fi-tone-impact.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "56e6e3a4d287aa2fb1b4f40171f939629db66cd852c7eaf7187b5243fe0f7d13",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sci",
+        "fi",
+        "tone",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt2.zip",
+        "member": "Impacts Pt2/Sci-Fi Tone Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/sci-fi-water-impact",
+      "name": "Sci-Fi Water Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/sci-fi-water-impact.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "f91129776a3c04d6b67ed0d491a51ddd7b5a4ae0f68190cb4f1c1194b32c1c14",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sci",
+        "fi",
+        "water",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt2.zip",
+        "member": "Impacts Pt2/Sci-Fi Water Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/sf-cinematic-impact",
+      "name": "SF Cinematic Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/sf-cinematic-impact.wav",
+      "format": "wav",
+      "bytes": 2430808,
+      "sha256": "a772caaabb9a75f74d6e066a897cd9f4748e237de44bdb1b671ba238df03eab5",
+      "duration_s": 4.2,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sf",
+        "cinematic",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt3.zip",
+        "member": "untitled folder/SF Cinematic Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/sharp-impact",
+      "name": "Sharp Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/sharp-impact.wav",
+      "format": "wav",
+      "bytes": 8604396,
+      "sha256": "40959b448e86025d005a4e02a8b2ad5e25b4626fa964c0d6b8f8fab98a462cbe",
+      "duration_s": 14.915,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sharp",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt2.zip",
+        "member": "Impacts Pt2/Sharp Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/short-crumble-impact",
+      "name": "Short Crumble Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/short-crumble-impact.wav",
+      "format": "wav",
+      "bytes": 761178,
+      "sha256": "388b6f2c8fb8f33b0b906dd92d8cc5b5afbbf4baabe9ff59d53c697bc7eca19d",
+      "duration_s": 1.301,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "crumble",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt3.zip",
+        "member": "untitled folder/Short Crumble Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/short-science-impact",
+      "name": "Short Science Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/short-science-impact.wav",
+      "format": "wav",
+      "bytes": 1377376,
+      "sha256": "198cdfef1adb04dd822218adc88424f1584e61cfa18d117cdde48767f602f508",
+      "duration_s": 2.36,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "science",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt3.zip",
+        "member": "untitled folder/Short Science Impact .wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/slow-impact",
+      "name": "Slow Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/slow-impact.wav",
+      "format": "wav",
+      "bytes": 3605606,
+      "sha256": "cc2b6f1432ec0a8ab4fa6f1623e7374ec935ef97f82d2a48eb3a68d6809c6d27",
+      "duration_s": 6.24,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slow",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt3.zip",
+        "member": "untitled folder/Slow Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/slow-long-deep-impact",
+      "name": "Slow Long Deep Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/slow-long-deep-impact.wav",
+      "format": "wav",
+      "bytes": 5316116,
+      "sha256": "a6b9cad66267d82ff791141cab4391d0c9cf2878f95e11fb71709d4ae7f6310d",
+      "duration_s": 9.209,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slow",
+        "long",
+        "deep",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt3.zip",
+        "member": "untitled folder/Slow Long Deep Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/soft-tick-impact",
+      "name": "Soft Tick Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/soft-tick-impact.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "be7a1f9a12034108da9d7daa1e45afdb28091ed8383b401ef57196cc8ced1f2e",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "soft",
+        "tick",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt3.zip",
+        "member": "untitled folder/Soft Tick Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/space-deep-slow-impact",
+      "name": "Space Deep Slow Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/space-deep-slow-impact.wav",
+      "format": "wav",
+      "bytes": 3345440,
+      "sha256": "7caf857b96c5bb1efd168eba8a2d8c998587185633b7422624ad229031419cfa",
+      "duration_s": 4.351,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "space",
+        "deep",
+        "slow",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt3.zip",
+        "member": "untitled folder/Space Deep Slow Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/splash-impact",
+      "name": "Splash Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/splash-impact.wav",
+      "format": "wav",
+      "bytes": 4547344,
+      "sha256": "b8bedc2f1b54dfd68f9ba9906543bb8b63983cdf40e58eb7dfd82ca131a598e4",
+      "duration_s": 7.875,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "splash",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt3.zip",
+        "member": "untitled folder/Splash Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/splash-off-impact",
+      "name": "Splash Off Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/splash-off-impact.wav",
+      "format": "wav",
+      "bytes": 1203222,
+      "sha256": "92647094421fa2e38f1cdfa207172e552adbbda894bd42fef3234ad44b739961",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "splash",
+        "off",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt4.zip",
+        "member": "Splash Off Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/tense-impact",
+      "name": "Tense Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/tense-impact.wav",
+      "format": "wav",
+      "bytes": 4412804,
+      "sha256": "d072dbb2d9150ac524a15b1957fb93a51205732d53a3e9dde4e03d92b867740c",
+      "duration_s": 7.641,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tense",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt4.zip",
+        "member": "Tense Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/tension-impact",
+      "name": "Tension Impact",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/tension-impact.wav",
+      "format": "wav",
+      "bytes": 5836194,
+      "sha256": "5c47d96879a9145e9dbb673baa720a00a15951fb8a963131a01301eece20547c",
+      "duration_s": 10.11,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tension",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt4.zip",
+        "member": "Tension Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-impacts/tickling-impacts",
+      "name": "Tickling Impacts",
+      "category": "science-fiction-impacts",
+      "file": "science-fiction-impacts/tickling-impacts.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "154b4234a4c3fc06d614975dc94cbf9e90a9a443da955350319f415193107ac0",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tickling",
+        "impacts"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_Pt4.zip",
+        "member": "Tickling Impacts.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/airy-riser",
+      "name": "Airy Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/airy-riser.wav",
+      "format": "wav",
+      "bytes": 780420,
+      "sha256": "a4e87dbb71c08432ac107bd178b04c71ee43c9b403f0df3686cb405454d46532",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "airy",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Risers_Pt2.zip",
+        "member": "Airy Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/calm-riser",
+      "name": "Calm Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/calm-riser.wav",
+      "format": "wav",
+      "bytes": 3740136,
+      "sha256": "3d0b055330b25ba47c006051629d738fc490e3654c5a3fe8de0107a6e7e9b840",
+      "duration_s": 6.473,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "calm",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Risers_Pt2.zip",
+        "member": "Calm Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/cinematic-riser",
+      "name": "Cinematic Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/cinematic-riser.wav",
+      "format": "wav",
+      "bytes": 9851842,
+      "sha256": "2af70055b41e767547b238b76801982d1a3f497436c6537017810c386876b19a",
+      "duration_s": 17.084,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Risers_Pt2.zip",
+        "member": "Cinematic Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/deep-fantasy-riser",
+      "name": "Deep Fantasy Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/deep-fantasy-riser.wav",
+      "format": "wav",
+      "bytes": 5815848,
+      "sha256": "c2584b83ed6d86f74f19e05f578c1a180e8ad1a2788d335ccd58e678ce9d4e69",
+      "duration_s": 10.077,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "fantasy",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Risers_Pt2.zip",
+        "member": "Deep Fantasy Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/deep-reverse-riser",
+      "name": "Deep Reverse Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/deep-reverse-riser.wav",
+      "format": "wav",
+      "bytes": 914928,
+      "sha256": "50f9bdfcbba40e0955e6ac14a258794f712e6c742cc868d262476976743eb8bf",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "reverse",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Risers_Pt2.zip",
+        "member": "Deep Reverse Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/dramatic-distort-riser",
+      "name": "Dramatic Distort Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/dramatic-distort-riser.wav",
+      "format": "wav",
+      "bytes": 5700498,
+      "sha256": "af50413495d48230e8a9d9a6bba277d7e8488736ede33fe0d2c47a9156f83496",
+      "duration_s": 9.877,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "dramatic",
+        "distort",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Risers_Pt2.zip",
+        "member": "Dramatic Distort Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/electric-riser",
+      "name": "Electric Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/electric-riser.wav",
+      "format": "wav",
+      "bytes": 4470474,
+      "sha256": "fc438f058f3fde8be187323d4c1664109b0836fe5c6a72326dd39b17f46baf4b",
+      "duration_s": 7.741,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Risers_Pt2.zip",
+        "member": "Electric Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/electric-soft-riser",
+      "name": "Electric Soft  Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/electric-soft-riser.wav",
+      "format": "wav",
+      "bytes": 799644,
+      "sha256": "7b78db723ba5067cbfd71c67d3b10ad9014d5cb9ebc53c3e4f045be83eb24c8d",
+      "duration_s": 1.368,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "soft",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Risers_Pt2.zip",
+        "member": "Electric Soft  Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/fantasy-riser",
+      "name": "Fantasy Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/fantasy-riser.wav",
+      "format": "wav",
+      "bytes": 1760574,
+      "sha256": "7e7c3d6b7350f8efa8e028d0cbc3b0bbbcfb61e4f2e13e598f2f3443ea9657de",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Risers_Pt2.zip",
+        "member": "Fantasy Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/futuristic-high-riser",
+      "name": "Futuristic High Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/futuristic-high-riser.wav",
+      "format": "wav",
+      "bytes": 914928,
+      "sha256": "3fe2b606fe0121b0a09da9e5156888bfce2035056079e67fdcb89688d83d567c",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "futuristic",
+        "high",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Risers_Pt2.zip",
+        "member": "Futuristic High Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/futuristic-riser",
+      "name": "Futuristic Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/futuristic-riser.wav",
+      "format": "wav",
+      "bytes": 2298696,
+      "sha256": "42fd26cccd176f3287ef2c5056ffb77e7621c468b99212595ad6583aa7d721f4",
+      "duration_s": 3.971,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "futuristic",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Risers_Pt2.zip",
+        "member": "Futuristic Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/glitchy-end-riser",
+      "name": "Glitchy End Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/glitchy-end-riser.wav",
+      "format": "wav",
+      "bytes": 914928,
+      "sha256": "0855a0aa2ebcfd95d5f039066f30880413ac90a1720e9c39d4be07755add689f",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "glitchy",
+        "end",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Risers_Pt2.zip",
+        "member": "Glitchy End Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/heli-riser",
+      "name": "Heli Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/heli-riser.wav",
+      "format": "wav",
+      "bytes": 4105302,
+      "sha256": "eaf6060952f39eb2a75fc3aa607e974c9d78f1b23d813d693a31cc37560fe77e",
+      "duration_s": 7.107,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "heli",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Riser_Pt1.zip",
+        "member": "untitled folder/Heli Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/hollow-sci-fi-riser",
+      "name": "Hollow Sci-fi Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/hollow-sci-fi-riser.wav",
+      "format": "wav",
+      "bytes": 914928,
+      "sha256": "d6f6de34906fcf315e63fea68307e682ddcd2d0bbd5b96498c14db61efedf5d0",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hollow",
+        "sci",
+        "fi",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Riser_Pt1.zip",
+        "member": "untitled folder/Hollow Sci-fi Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/quick-riser",
+      "name": "Quick Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/quick-riser.wav",
+      "format": "wav",
+      "bytes": 914958,
+      "sha256": "f23235c9df2ac28820c7e86b619f3de10925b735794c672f93cbd1dfef5664fd",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "quick",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Riser_Pt1.zip",
+        "member": "untitled folder/Quick Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/reverse-riser",
+      "name": "Reverse Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/reverse-riser.wav",
+      "format": "wav",
+      "bytes": 914928,
+      "sha256": "f1295935f719933c9e9060c810ad2833a4428d5e398767f68604b5e56a919a44",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "reverse",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Riser_Pt1.zip",
+        "member": "untitled folder/Reverse Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/robo-riser",
+      "name": "Robo Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/robo-riser.wav",
+      "format": "wav",
+      "bytes": 6413348,
+      "sha256": "152b3de383d7d45edd6ca9cbe3fdad8696b780de62979fdc077e5f07f940f913",
+      "duration_s": 11.111,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "robo",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Riser_Pt1.zip",
+        "member": "untitled folder/Robo Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/sci-fi-riser",
+      "name": "Sci-Fi Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/sci-fi-riser.wav",
+      "format": "wav",
+      "bytes": 1011054,
+      "sha256": "fd603ce0fa432c714cbf9408cc6d3030bdd099c4bec4468c91c9a2327ad9a8ae",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sci",
+        "fi",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Riser_Pt1.zip",
+        "member": "untitled folder/Sci-Fi Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/science-fiction-tension-round",
+      "name": "Science Fiction Tension Round",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/science-fiction-tension-round.wav",
+      "format": "wav",
+      "bytes": 444862,
+      "sha256": "af0bedc29f6d5d8b34616c5c8afadbe553db1dfa6df5b31b4bc7b63c34a7a3d5",
+      "duration_s": 1.5,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "science",
+        "fiction",
+        "tension",
+        "round"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Riser_Pt1.zip",
+        "member": "untitled folder/Science Fiction Tension Round.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/shallow-riser",
+      "name": "Shallow Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/shallow-riser.wav",
+      "format": "wav",
+      "bytes": 3413412,
+      "sha256": "d61933bcf551f2557e6809b9aec13b1a9eceb17e985646f66e41ecbc826b11c8",
+      "duration_s": 5.906,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "shallow",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Riser_Pt1.zip",
+        "member": "untitled folder/Shallow Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/short-build-up-riser",
+      "name": "Short Build Up Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/short-build-up-riser.wav",
+      "format": "wav",
+      "bytes": 2683104,
+      "sha256": "1b292c870c66398484a33c0837fec1f708abb0d1f2401595d3de25f3b9d259e8",
+      "duration_s": 4.638,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "build",
+        "up",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Riser_Pt1.zip",
+        "member": "untitled folder/Short Build Up Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/short-riser-soft",
+      "name": "Short Riser Soft",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/short-riser-soft.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "4e4f459a95a9f30bc811f0f6fae59b8803fa329836faf3f5e5a0ab229e9e6dd8",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "riser",
+        "soft"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Riser_Pt1.zip",
+        "member": "untitled folder/Short Riser Soft.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/space-riser",
+      "name": "Space Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/space-riser.wav",
+      "format": "wav",
+      "bytes": 1760574,
+      "sha256": "50f420ae9b69b472df5dfc0768e7fab21734d79ca1950593749721e53667334a",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "space",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Riser_Pt1.zip",
+        "member": "untitled folder/Space Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/system-riser",
+      "name": "System Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/system-riser.wav",
+      "format": "wav",
+      "bytes": 3741856,
+      "sha256": "03ceb1af13cdcd6959bcbdd8428e629209617704c1e47a4f7aed37e07f97302b",
+      "duration_s": 6.473,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "system",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Riser_Pt1.zip",
+        "member": "untitled folder/System Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/system-start-riser",
+      "name": "System Start Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/system-start-riser.wav",
+      "format": "wav",
+      "bytes": 1760574,
+      "sha256": "f430efc6bb66ede8dc24225627610dc02c5c0c07b64543001f6f157f659d457a",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "system",
+        "start",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Riser_Pt1.zip",
+        "member": "untitled folder/System Start Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-risers/tension-riser",
+      "name": "Tension Riser",
+      "category": "science-fiction-risers",
+      "file": "science-fiction-risers/tension-riser.wav",
+      "format": "wav",
+      "bytes": 3413416,
+      "sha256": "1f79dfdd11cff99b3b5f2dc6b0ba481f085d8c058b94fa0b6e9e9b6ef5ade075",
+      "duration_s": 5.906,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tension",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Riser_Pt1.zip",
+        "member": "untitled folder/Tension Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/deep-sci-fi-shot",
+      "name": "Deep Sci-Fi Shot",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/deep-sci-fi-shot.wav",
+      "format": "wav",
+      "bytes": 626646,
+      "sha256": "4d8df81a1bcf7ca51619182e77d6ff3d4fe0f299d3583c326e741283b8f888a7",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "sci",
+        "fi",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Deep Sci-Fi Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/far-off-laser-shot",
+      "name": "Far Off Laser Shot",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/far-off-laser-shot.wav",
+      "format": "wav",
+      "bytes": 626646,
+      "sha256": "c551b376e810ec7a87317ff287a19d799da469f6aa72b2a514d26e0fde9f8667",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "far",
+        "off",
+        "laser",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Far Off Laser Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/laser-boomerang",
+      "name": "Laser Boomerang",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/laser-boomerang.wav",
+      "format": "wav",
+      "bytes": 3086682,
+      "sha256": "ea283c7f4c3804668a4280ec2561bfc26c458a47b91fc97cf6c4ecb2451b238e",
+      "duration_s": 5.339,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "laser",
+        "boomerang"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Laser Boomerang.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/laser-boomerang-fast",
+      "name": "Laser Boomerang Fast",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/laser-boomerang-fast.wav",
+      "format": "wav",
+      "bytes": 1933528,
+      "sha256": "8d16180b314fa0371332cb64b30ccec44997d17a14aa9c05fd4fa50fc4565bcd",
+      "duration_s": 3.337,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "laser",
+        "boomerang",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Laser Boomerang Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/loading-laser-gun",
+      "name": "Loading Laser Gun",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/loading-laser-gun.wav",
+      "format": "wav",
+      "bytes": 914928,
+      "sha256": "9c2f1809457b55efcde05718c23dfa759c5298319212af08dd9872d867a16769",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "loading",
+        "laser",
+        "gun"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Loading Laser Gun.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/loading-weapon",
+      "name": "Loading Weapon",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/loading-weapon.wav",
+      "format": "wav",
+      "bytes": 914928,
+      "sha256": "6eeff7e44d731d68b74951f4c13cb91371949a050ef4628f63af038f53fab5b8",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "loading",
+        "weapon"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Loading Weapon.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/open-weapon-shot",
+      "name": "Open Weapon Shot",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/open-weapon-shot.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "44e10b294e664afb4b9ebcf831bd9fe902322d1beb922b5b3d1b7494a28b3e55",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "open",
+        "weapon",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Open Weapon Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/reload-laser-weapon",
+      "name": "Reload Laser Weapon",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/reload-laser-weapon.wav",
+      "format": "wav",
+      "bytes": 395990,
+      "sha256": "54246c35f244acd7609bfecf11a863775a8227b537ee3bdbdf96f081a07eda80",
+      "duration_s": 0.667,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "reload",
+        "laser",
+        "weapon"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Reload Laser Weapon.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/sci-fi-explosion",
+      "name": "Sci-Fi Explosion",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/sci-fi-explosion.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "dad1fb28274f38af0b0d6d2bc7fb53fd0dd154c958495980414e139462cacede",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sci",
+        "fi",
+        "explosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Sci-Fi Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/sci-fi-revolver-shot",
+      "name": "Sci-fi Revolver Shot",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/sci-fi-revolver-shot.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "9249695669cfb8e1d8615c3340995a5b1e5092bba6fd8866fd7b73ef6313bb02",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sci",
+        "fi",
+        "revolver",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Sci-fi Revolver Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/science-fiction-laser-machine",
+      "name": "Science Fiction Laser Machine",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/science-fiction-laser-machine.wav",
+      "format": "wav",
+      "bytes": 1443438,
+      "sha256": "487d779d559abdeda5285040f642dbc82fe80ed41b16acf713afee3b0f413104",
+      "duration_s": 4.972,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "science",
+        "fiction",
+        "laser",
+        "machine"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Science Fiction Laser Machine.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/science-fiction-laser-machine-fast",
+      "name": "Science Fiction Laser Machine Fast",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/science-fiction-laser-machine-fast.wav",
+      "format": "wav",
+      "bytes": 261484,
+      "sha256": "7260b61b98d0f4d597c4657cfdac083cd3084193c9a1d9d00677bb2d422231ba",
+      "duration_s": 0.868,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "science",
+        "fiction",
+        "laser",
+        "machine",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Science Fiction Laser Machine Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/science-fiction-laser-shot-bulb",
+      "name": "Science Fiction Laser Shot Bulb",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/science-fiction-laser-shot-bulb.wav",
+      "format": "wav",
+      "bytes": 203796,
+      "sha256": "d0e5a7f1a2398263dc518b5f552cb4cf3fe968b1133755c6d21b1187ba58f228",
+      "duration_s": 0.667,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "science",
+        "fiction",
+        "laser",
+        "shot",
+        "bulb"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Science Fiction Laser Shot Bulb.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/science-fiction-laser-shot-deep",
+      "name": "Science Fiction Laser Shot Deep",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/science-fiction-laser-shot-deep.wav",
+      "format": "wav",
+      "bytes": 607422,
+      "sha256": "be2736a4dd0dc0e968c8f0bc3bfe0155b1f8e5ffc5db955f34b4e0e5d509f006",
+      "duration_s": 2.069,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "science",
+        "fiction",
+        "laser",
+        "shot",
+        "deep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Science Fiction Laser Shot Deep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/science-fiction-laser-shot-fast",
+      "name": "Science Fiction Laser Shot Fast",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/science-fiction-laser-shot-fast.wav",
+      "format": "wav",
+      "bytes": 232626,
+      "sha256": "ca7596cd10742d502db6a936666a354f84daddd46407c952edb4957131ee7865",
+      "duration_s": 0.767,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "science",
+        "fiction",
+        "laser",
+        "shot",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Science Fiction Laser Shot Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/science-fiction-laser-waves",
+      "name": "Science Fiction Laser Waves",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/science-fiction-laser-waves.wav",
+      "format": "wav",
+      "bytes": 1760660,
+      "sha256": "1570887643f717e00e125a98f4106eba1398a2186dd1d0a82fc0d7ebd87cdffd",
+      "duration_s": 6.073,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "science",
+        "fiction",
+        "laser",
+        "waves"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Science Fiction Laser Waves.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/small-weapon-shot",
+      "name": "Small Weapon Shot",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/small-weapon-shot.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "d6a145a6b945a2de730fc39bc7e1255c4f158e2b36ffd6082f7bbf0e0e710852",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "small",
+        "weapon",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Small Weapon Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/target-locked",
+      "name": "Target Locked",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/target-locked.wav",
+      "format": "wav",
+      "bytes": 914928,
+      "sha256": "a05050961f16ff3247c35f7efa8b9607698319244133a035d6fef0bb6e5d454e",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "target",
+        "locked"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Target Locked.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/weapon-ready",
+      "name": "Weapon Ready",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/weapon-ready.wav",
+      "format": "wav",
+      "bytes": 223020,
+      "sha256": "3334672f4cc386a04fa91d363b6b293f16fca344a0500da396cb7087527b5f56",
+      "duration_s": 0.367,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "weapon",
+        "ready"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Weapon Ready.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-weapons/weapon-shot",
+      "name": "Weapon Shot",
+      "category": "science-fiction-weapons",
+      "file": "science-fiction-weapons/weapon-shot.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "b983ff2574405c232ab2471e617c2e36d196e53ca0414af47daec89225c767e2",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "weapon",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Weapons.zip",
+        "member": "Weapons/Weapon Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/cinematic-granular-whoosh",
+      "name": "Cinematic Granular Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/cinematic-granular-whoosh.wav",
+      "format": "wav",
+      "bytes": 1203216,
+      "sha256": "813ac70e28aff013f9a60846919874d603319d73314f1bc8e9bdb7d4e8543ae2",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "granular",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Cinematic Granular Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/cinematic-pass-by-whoosh",
+      "name": "Cinematic Pass By Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/cinematic-pass-by-whoosh.wav",
+      "format": "wav",
+      "bytes": 1203216,
+      "sha256": "90dedbde1fb0b73457b4fb8f529fecdf1f91799cadd621039294fdb20cffaf63",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "pass",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Cinematic Pass By Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/classic-soft-whoosh",
+      "name": "Classic Soft Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/classic-soft-whoosh.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "a5eef2c0ba463b9ff1d864036cd7d99484a685b7a7ad74f1b101f220574df4e5",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "classic",
+        "soft",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Classic Soft Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/curious-short-whoosh",
+      "name": "Curious Short Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/curious-short-whoosh.wav",
+      "format": "wav",
+      "bytes": 841080,
+      "sha256": "939fa09931dba43e59ac7af298e9daf2dcea7933a5ba5825cb8acc3375fa7f4b",
+      "duration_s": 1.458,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "curious",
+        "short",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Curious Short Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/deep-bass-whoosh",
+      "name": "Deep Bass Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/deep-bass-whoosh.wav",
+      "format": "wav",
+      "bytes": 1760574,
+      "sha256": "28ef60557c0bb959aa453a4b9d7fcf50e6d817300363204b04d6e15c9424091b",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Deep Bass Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/deep-short-whoosh",
+      "name": "Deep Short Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/deep-short-whoosh.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "8f66ebdc8b8f68765e81c851ead4db7af09fe24d6b3b99a70576d619c5576091",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "short",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Deep Short Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/electric-dust-whoosh",
+      "name": "Electric Dust Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/electric-dust-whoosh.wav",
+      "format": "wav",
+      "bytes": 961080,
+      "sha256": "30e05899ba1469eb2378b005282e7feb7cdad16cd32c907427595406b6e51123",
+      "duration_s": 1.667,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "dust",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Electric Dust Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/electric-end-jitter-whoosh",
+      "name": "Electric End Jitter Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/electric-end-jitter-whoosh.wav",
+      "format": "wav",
+      "bytes": 745080,
+      "sha256": "c38c447abc1d65985047b490f5fce36b4fbd46dc9677e9997d416f2ab6073a42",
+      "duration_s": 1.292,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "end",
+        "jitter",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Electric End Jitter Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/electric-jitter-whoosh",
+      "name": "Electric Jitter Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/electric-jitter-whoosh.wav",
+      "format": "wav",
+      "bytes": 745080,
+      "sha256": "f9155df2bde4553cdbdbcf67bfb108f8baa42cee99dfc5b2ce1afe9e232bafd4",
+      "duration_s": 1.292,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "jitter",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Electric Jitter Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/electric-whoosh",
+      "name": "Electric Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/electric-whoosh.wav",
+      "format": "wav",
+      "bytes": 961080,
+      "sha256": "be01b898897a0245bb80c58bd24f24aa9d0da307929923ff9aceb18ad8277319",
+      "duration_s": 1.667,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Electric Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/futuristic-whoosh",
+      "name": "Futuristic Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/futuristic-whoosh.wav",
+      "format": "wav",
+      "bytes": 914928,
+      "sha256": "1a58f592ea2ea88377e7cbdf19453b745afb867567ff33c87ee6a28b3e317dbf",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "futuristic",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Futuristic Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/glitch-line-whoosh",
+      "name": "Glitch Line Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/glitch-line-whoosh.wav",
+      "format": "wav",
+      "bytes": 780390,
+      "sha256": "de1b790c4de2b43deca4d3664f75fb6862b83af3ab21da1e9513fbb8643c1d5e",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "glitch",
+        "line",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Glitch Line Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/glitch-whoosh",
+      "name": "Glitch Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/glitch-whoosh.wav",
+      "format": "wav",
+      "bytes": 780390,
+      "sha256": "b145da14aeb71a08c5e55f41b51248509e251e4cd216abf3afc052c3d307d6d8",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "glitch",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Glitch Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/granular-short-whoosh",
+      "name": "Granular Short Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/granular-short-whoosh.wav",
+      "format": "wav",
+      "bytes": 961080,
+      "sha256": "fdb86d2e1893f5ca21f4e274cc94586b9457ddcaa998be39cceb8cd576087cb4",
+      "duration_s": 1.667,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "granular",
+        "short",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Granular Short Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/hit-whoosh",
+      "name": "Hit Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/hit-whoosh.wav",
+      "format": "wav",
+      "bytes": 745080,
+      "sha256": "1705fbb0fcd162dd7783f1cf02877260d076bfa8f31e2eeb3ed88f3bb7b4123e",
+      "duration_s": 1.292,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Hit Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/jittering-whoosh",
+      "name": "Jittering Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/jittering-whoosh.wav",
+      "format": "wav",
+      "bytes": 961080,
+      "sha256": "d32ffdabf2bf6352f4b09e15c48614386c171f507b2eb02258bfa9b9a8751e00",
+      "duration_s": 1.667,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "jittering",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Jittering Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/kinetic-whoosh",
+      "name": "Kinetic Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/kinetic-whoosh.wav",
+      "format": "wav",
+      "bytes": 1683682,
+      "sha256": "632c8e85a71031bc6abfe2648abb1926add1e384e1f469df34c1506eb5cfebd8",
+      "duration_s": 2.903,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "kinetic",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Kinetic Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/laser-change-whoosh",
+      "name": "Laser Change Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/laser-change-whoosh.wav",
+      "format": "wav",
+      "bytes": 780390,
+      "sha256": "46a9e55b311d278d74ea23b1c0f3f22c858aa34c747513b0646b50f90b42bcc9",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "laser",
+        "change",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Laser Change Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/laser-saber-whoosh",
+      "name": "Laser Saber Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/laser-saber-whoosh.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "33834442afc8c30446f4a4bde2d3c9e93f7a583e9f582c949e0fd9114d520c90",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "laser",
+        "saber",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Laser Saber Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/laser-whoosh",
+      "name": "Laser Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/laser-whoosh.wav",
+      "format": "wav",
+      "bytes": 780390,
+      "sha256": "98103b2bf4a848c89bf00e5a310c0362e24ccba4b16303b0464a87d701f53101",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "laser",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Laser Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/left-to-right-metal-whoosh",
+      "name": "Left To Right Metal Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/left-to-right-metal-whoosh.wav",
+      "format": "wav",
+      "bytes": 1203216,
+      "sha256": "105cf8d854eec82849ae6b04b4f20ac4960de5436a883ebc512aafa682d7ad1b",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "left",
+        "right",
+        "metal",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Left To Right Metal Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/machine-pass-by-whoosh",
+      "name": "Machine Pass By Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/machine-pass-by-whoosh.wav",
+      "format": "wav",
+      "bytes": 780390,
+      "sha256": "a99eb251af15085fd18d37c78d7826544a369e3d11cc46a997d7101084e7f39d",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "machine",
+        "pass",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Machine Pass By Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/mechanical-passing-whoosh",
+      "name": "Mechanical Passing Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/mechanical-passing-whoosh.wav",
+      "format": "wav",
+      "bytes": 780390,
+      "sha256": "4c669fd0d4d6174365bc2794427acec6cb8cd171689966c446e3df5e96f4d9ed",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "mechanical",
+        "passing",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Mechanical Passing Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/mechanical-riser-whoosh",
+      "name": "Mechanical Riser Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/mechanical-riser-whoosh.wav",
+      "format": "wav",
+      "bytes": 1760574,
+      "sha256": "62d9ea289d28addf90026c47ea1876708445418a3d90fddd9f80c9cc240dc3d4",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "mechanical",
+        "riser",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Mechanical Riser Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/pass-by-glitch-whoosh",
+      "name": "Pass By Glitch Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/pass-by-glitch-whoosh.wav",
+      "format": "wav",
+      "bytes": 1203216,
+      "sha256": "c8d2dc44776aeb83f399b2fae7ea2ccd6f35d7cad2050cdc44af4935892ed66f",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "pass",
+        "glitch",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Pass By Glitch Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/robot-off-whoosh",
+      "name": "Robot Off Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/robot-off-whoosh.wav",
+      "format": "wav",
+      "bytes": 780390,
+      "sha256": "31dae4c9cb0e8ff73a28d55f29240c03096fde743f94583a627bb885f2b2bb1e",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "robot",
+        "off",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Robot Off Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/sci-fi-impact-whoosh",
+      "name": "Sci-fi Impact Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/sci-fi-impact-whoosh.wav",
+      "format": "wav",
+      "bytes": 961080,
+      "sha256": "297326fe80a92c901d56d9c3d054ef388248c64d203c0ed25550bc2f9a3c62e4",
+      "duration_s": 1.667,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sci",
+        "fi",
+        "impact",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Sci-fi Impact Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/sci-fi-whoosh",
+      "name": "Sci-Fi Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/sci-fi-whoosh.wav",
+      "format": "wav",
+      "bytes": 1760596,
+      "sha256": "2874cc3f1b872b73fcdb1b785f91434423f5ee3963d3e2038e97ca7b6d4145de",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sci",
+        "fi",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Sci-Fi Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/science-fiction-sweep",
+      "name": "Science Fiction Sweep",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/science-fiction-sweep.wav",
+      "format": "wav",
+      "bytes": 290284,
+      "sha256": "16539de81563b4f658ef2b72eb9500f56d9660d18c5080af75e5a71ab581ccbb",
+      "duration_s": 0.968,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "science",
+        "fiction",
+        "sweep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Science Fiction Sweep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/side-whoosh",
+      "name": "Side Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/side-whoosh.wav",
+      "format": "wav",
+      "bytes": 745080,
+      "sha256": "50eb80a539940fabcdec7975d918c5bcf44562e6233551aa784cca06e2a0df46",
+      "duration_s": 1.292,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "side",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Side Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/silent-whoosh",
+      "name": "Silent Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/silent-whoosh.wav",
+      "format": "wav",
+      "bytes": 741940,
+      "sha256": "c5c37d92b36a654a1abe7b74a53b093ca524036737a49f4bbe7fc289d29d58af",
+      "duration_s": 1.268,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "silent",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Silent Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/soft-space-whoosh",
+      "name": "Soft Space Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/soft-space-whoosh.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "fdf243874cd3ba39d88f1410ba0bdaada89bbfab7c45b6231a9123d4d61d36b4",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "soft",
+        "space",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Soft Space Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/spacecraft-whoosh",
+      "name": "Spacecraft Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/spacecraft-whoosh.wav",
+      "format": "wav",
+      "bytes": 914928,
+      "sha256": "504e513156c40cf545586587f668d37ae21e4ead389e57c74d0a8869d34d3747",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "spacecraft",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Spacecraft Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/straight-forward-whoosh",
+      "name": "Straight Forward Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/straight-forward-whoosh.wav",
+      "format": "wav",
+      "bytes": 780390,
+      "sha256": "69b4260048f6728c635ab8a30f1da54b16a75491fa127d7426b483789c2d9c14",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "straight",
+        "forward",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Straight Forward Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/unrealistic-metal-whoosh",
+      "name": "Unrealistic Metal Whoosh",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/unrealistic-metal-whoosh.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "7569b65d84a0d12f7655457a8c49cffa68ce28d2e6872eaf2f413a3cb0757061",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "unrealistic",
+        "metal",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Unrealistic Metal Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-electric",
+      "name": "Whoosh Electric",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-electric.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "0f73e614c24bd983215cca1ad945faed8cbdf0d11c95787f3f109b125ecf7aea",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "electric"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Whoosh Electric.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-electric-transition",
+      "name": "Whoosh Electric Transition",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-electric-transition.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "b19814d240faa208cbd41867f3ed8a8dc5ba9e8e65dac6d1ea4438a59e62eb9e",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "electric",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Whoosh Electric Transition.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-fiction-warp",
+      "name": "Whoosh Fiction Warp",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-fiction-warp.wav",
+      "format": "wav",
+      "bytes": 4184510,
+      "sha256": "076259f3aca507649e99dab1548cf2602ac34489c9c7f848818d94841e512abf",
+      "duration_s": 7.241,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "fiction",
+        "warp"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt1.zip",
+        "member": "Whoosh Fiction Warp.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-fiction-warp-fast",
+      "name": "Whoosh Fiction Warp Fast",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-fiction-warp-fast.wav",
+      "format": "wav",
+      "bytes": 2627756,
+      "sha256": "92a96d07444e15134db246ef1853615d36a12d7c0b266f5aba502945e21a79ad",
+      "duration_s": 4.538,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "fiction",
+        "warp",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Whoosh Fiction Warp Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-fiction-warp-long",
+      "name": "Whoosh Fiction Warp Long",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-fiction-warp-long.wav",
+      "format": "wav",
+      "bytes": 5971892,
+      "sha256": "5070e5151d3becf8dc3060970756e2638e65986864da8a1eeb1c7c8824995510",
+      "duration_s": 10.344,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "fiction",
+        "warp",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt1.zip",
+        "member": "Whoosh Fiction Warp Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-fold",
+      "name": "Whoosh Fold",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-fold.wav",
+      "format": "wav",
+      "bytes": 1895678,
+      "sha256": "d6f90dcc5ee46a7683ab281072784a29f49de21610dbc27e4f40b8e3376c68bd",
+      "duration_s": 3.27,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "fold"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Whoosh Fold.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-fold-fast",
+      "name": "Whoosh Fold Fast",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-fold-fast.wav",
+      "format": "wav",
+      "bytes": 1395980,
+      "sha256": "77634b3c59e318b77b1f71aa461db440ecb866cea3bfe0bebec7f1b4d24165f4",
+      "duration_s": 2.402,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "fold",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Whoosh Fold Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-fold-long",
+      "name": "Whoosh Fold Long",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-fold-long.wav",
+      "format": "wav",
+      "bytes": 2606788,
+      "sha256": "1fd0d064354bb2746c22be5b859a8f14efe29691cd48e820120261505b972636",
+      "duration_s": 4.505,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "fold",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Whoosh Fold Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-robo-stop",
+      "name": "Whoosh Robo Stop",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-robo-stop.wav",
+      "format": "wav",
+      "bytes": 1223002,
+      "sha256": "411971bc7d4888896847d1ed18ecc93c5a29a0af3e78b2e18c1d491e204cd46a",
+      "duration_s": 2.102,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "robo",
+        "stop"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Whoosh Robo Stop.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-robo-stop-fast",
+      "name": "Whoosh Robo Stop Fast",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-robo-stop-fast.wav",
+      "format": "wav",
+      "bytes": 761740,
+      "sha256": "80231d6e37a3a649c179b4e07e0d33a9d942aa0ae48c2f4bfe0dac2cfaf54bc0",
+      "duration_s": 1.301,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "robo",
+        "stop",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Whoosh Robo Stop Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-robo-stop-long",
+      "name": "Whoosh Robo Stop Long",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-robo-stop-long.wav",
+      "format": "wav",
+      "bytes": 1741918,
+      "sha256": "d4bc65d6f3a52a7b618717a925160914946315ab9b5ccb1c8c8c2e6c6581be20",
+      "duration_s": 3.003,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "robo",
+        "stop",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Whoosh Robo Stop Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-robotic",
+      "name": "Whoosh Robotic",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-robotic.wav",
+      "format": "wav",
+      "bytes": 1914894,
+      "sha256": "2590b76a338499e555ee525a00883f8a693844be5c67d8b79ff332a34bbbe156",
+      "duration_s": 3.303,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "robotic"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Whoosh Robotic.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-robotic-fast",
+      "name": "Whoosh Robotic Fast",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-robotic-fast.wav",
+      "format": "wav",
+      "bytes": 1165344,
+      "sha256": "95a3ab50f5c63e05a3debfacf92c3a6022cb06db7f8d9e210aed5844e0abd86a",
+      "duration_s": 2.002,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "robotic",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Whoosh Robotic Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-robotic-long",
+      "name": "Whoosh Robotic Long",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-robotic-long.wav",
+      "format": "wav",
+      "bytes": 2875856,
+      "sha256": "c72a9136004613ec938900d9ae27ba43507b02edc84bd47ddb7b9dcb36a1da76",
+      "duration_s": 4.972,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "robotic",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Whoosh Robotic Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-space",
+      "name": "Whoosh Space",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-space.wav",
+      "format": "wav",
+      "bytes": 2683078,
+      "sha256": "dfebfba6a399b77cbc6bd35e944bc6b231ba81e23f34ec7cec55da5abae8085f",
+      "duration_s": 4.638,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "space"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Whoosh Space.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-space-fast",
+      "name": "Whoosh Space Fast",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-space-fast.wav",
+      "format": "wav",
+      "bytes": 2010404,
+      "sha256": "58f72ee5cc10325f40df50880737d563893efadeb90ffdb355bbf7a7341b2a8e",
+      "duration_s": 3.47,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "space",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Whoosh Space Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-space-long",
+      "name": "Whoosh Space Long",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-space-long.wav",
+      "format": "wav",
+      "bytes": 4009204,
+      "sha256": "47d89b5bbb9741158cc3afcaeec5bceccc88eb5eee318de093348215d81345db",
+      "duration_s": 6.94,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "space",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt1.zip",
+        "member": "Whoosh Space Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-space-water",
+      "name": "Whoosh Space Water",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-space-water.wav",
+      "format": "wav",
+      "bytes": 3259658,
+      "sha256": "ccb8571650f4ffd99158e5c0764114d0e04bc3e2430279a5225226066a17bfaa",
+      "duration_s": 5.639,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "space",
+        "water"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt1.zip",
+        "member": "Whoosh Space Water.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-space-water-fast",
+      "name": "Whoosh Space Water Fast",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-space-water-fast.wav",
+      "format": "wav",
+      "bytes": 2452454,
+      "sha256": "ca00e126625d9b7ed57145fca62ae13f31c7e5ba07f956dcd479dc141eb11c94",
+      "duration_s": 4.238,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "space",
+        "water",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Whoosh Space Water Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-space-water-long",
+      "name": "Whoosh Space Water Long",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-space-water-long.wav",
+      "format": "wav",
+      "bytes": 4893290,
+      "sha256": "62ba116a57fe57a9f810513749396360d5d7ab9ea39cea2babea061b8da9fafb",
+      "duration_s": 8.475,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "space",
+        "water",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt1.zip",
+        "member": "Whoosh Space Water Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-space-wind",
+      "name": "Whoosh Space Wind",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-space-wind.wav",
+      "format": "wav",
+      "bytes": 2875862,
+      "sha256": "d00eaf544fdceff7812228b017c44edf4606ffbbefbfeca8a29ad2de82ceaf5b",
+      "duration_s": 4.972,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "space",
+        "wind"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Whoosh Space Wind.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-space-wind-fast",
+      "name": "Whoosh Space Wind Fast",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-space-wind-fast.wav",
+      "format": "wav",
+      "bytes": 1914902,
+      "sha256": "2a1dd366647d50629e627e8753689d606a229e039d86d00ccbfc377f35c9b6bb",
+      "duration_s": 3.303,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "space",
+        "wind",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt3.zip",
+        "member": "Whoosh Space Wind Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-space-wind-long",
+      "name": "Whoosh Space Wind Long",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-space-wind-long.wav",
+      "format": "wav",
+      "bytes": 4105892,
+      "sha256": "7db792cde76b5bed2a7313373755a3ae05a6dd80bffa97502768eb6708e11b09",
+      "duration_s": 7.107,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "space",
+        "wind",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt1.zip",
+        "member": "Whoosh Space Wind Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-transition",
+      "name": "Whoosh Transition",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-transition.wav",
+      "format": "wav",
+      "bytes": 626640,
+      "sha256": "0623225874d6b916ba99ff96af2850cfa681739f2542836ca3d5d13c8d7f0dcb",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Whoosh Transition.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-whooshes/whoosh-wave-build-up",
+      "name": "Whoosh Wave Build Up",
+      "category": "science-fiction-whooshes",
+      "file": "science-fiction-whooshes/whoosh-wave-build-up.wav",
+      "format": "wav",
+      "bytes": 1145542,
+      "sha256": "d865b44592d18bfb0bbe06995153592fdeb1988ac42235dc986f440cd2630bf3",
+      "duration_s": 1.969,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "wave",
+        "build",
+        "up"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "SCI-FI_Whooshes_Pt2.zip",
+        "member": "Whoosh Wave Build Up.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "trains/braking-train",
       "name": "Braking Train",
       "category": "trains",
