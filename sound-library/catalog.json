@@ -7528,6 +7528,3503 @@
       "added": "2026-10-21"
     },
     {
+      "id": "retro-arcade/arcade-end",
+      "name": "Arcade End",
+      "category": "retro-arcade",
+      "file": "retro-arcade/arcade-end.wav",
+      "format": "wav",
+      "bytes": 1702974,
+      "sha256": "1f421624346c4b584f22318f0c98e45ad1e8ec785ad1bca89f8b43d9c8d418c8",
+      "duration_s": 2.936,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "arcade",
+        "end"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Arcade.zip",
+        "member": "Arcade/Arcade End.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-arcade/arcade-hit",
+      "name": "Arcade Hit",
+      "category": "retro-arcade",
+      "file": "retro-arcade/arcade-hit.wav",
+      "format": "wav",
+      "bytes": 626700,
+      "sha256": "c113f7381cdaa64ab54176153fcd37c6cb8712342b448233aff13efad162ba7f",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "arcade",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Arcade.zip",
+        "member": "Arcade/Arcade Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-arcade/arcade-riser",
+      "name": "Arcade Riser",
+      "category": "retro-arcade",
+      "file": "retro-arcade/arcade-riser.wav",
+      "format": "wav",
+      "bytes": 1702974,
+      "sha256": "018ce526251571fc0541e73b117f6eba184f93e11302587333dafaf4cff5f72c",
+      "duration_s": 2.936,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "arcade",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Arcade.zip",
+        "member": "Arcade/Arcade Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-arcade/arcade-tone",
+      "name": "Arcade Tone",
+      "category": "retro-arcade",
+      "file": "retro-arcade/arcade-tone.wav",
+      "format": "wav",
+      "bytes": 1260930,
+      "sha256": "0883ce1a839f62f07139d16d9bb962de4846acc1853cbe8144f048e720442219",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "arcade",
+        "tone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Arcade.zip",
+        "member": "Arcade/Arcade Tone.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-arcade/bleep-tone",
+      "name": "Bleep Tone",
+      "category": "retro-arcade",
+      "file": "retro-arcade/bleep-tone.wav",
+      "format": "wav",
+      "bytes": 626700,
+      "sha256": "b6e5e83807d5c6068c0dc77f00ae55ca46fe178a8bc340183db7f553ee1fd3e0",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bleep",
+        "tone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Arcade.zip",
+        "member": "Arcade/Bleep Tone.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-arcade/deep-arcade-tone-high",
+      "name": "Deep Arcade Tone High",
+      "category": "retro-arcade",
+      "file": "retro-arcade/deep-arcade-tone-high.wav",
+      "format": "wav",
+      "bytes": 626700,
+      "sha256": "2b5e8e079f2f302dece77a095adfa8a6ea28ec6ed2f5003e46d6c025819ca7c9",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "arcade",
+        "tone",
+        "high"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Arcade.zip",
+        "member": "Arcade/Deep Arcade Tone High.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-arcade/error-arcade",
+      "name": "Error Arcade",
+      "category": "retro-arcade",
+      "file": "retro-arcade/error-arcade.wav",
+      "format": "wav",
+      "bytes": 1702974,
+      "sha256": "4ec3eee1b6a4049ec2c26569b331ed02ee3d1ef3aee320e9324cabfa427d0947",
+      "duration_s": 2.936,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "error",
+        "arcade"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Arcade.zip",
+        "member": "Arcade/Error Arcade.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-arcade/game-rewind",
+      "name": "Game Rewind",
+      "category": "retro-arcade",
+      "file": "retro-arcade/game-rewind.wav",
+      "format": "wav",
+      "bytes": 1260930,
+      "sha256": "0bb9882e25645640a22b4963b9910c0a512f831e98f2238ddeb836f84e9ae922",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "game",
+        "rewind"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Arcade.zip",
+        "member": "Arcade/Game Rewind.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-arcade/level-up-tone",
+      "name": "Level Up Tone",
+      "category": "retro-arcade",
+      "file": "retro-arcade/level-up-tone.wav",
+      "format": "wav",
+      "bytes": 1260930,
+      "sha256": "4e34560badefaef7405e208dee9a5c77049d268734a00229558a5976303711a8",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "level",
+        "up",
+        "tone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Arcade.zip",
+        "member": "Arcade/Level Up Tone.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-arcade/on-tone",
+      "name": "ON Tone",
+      "category": "retro-arcade",
+      "file": "retro-arcade/on-tone.wav",
+      "format": "wav",
+      "bytes": 626700,
+      "sha256": "3b9ddb4134c04e30d03ef91aebe7256fd9e9267ef9519ef6532e77e7e40824b8",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Arcade.zip",
+        "member": "Arcade/ON Tone.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-arcade/synth-riser",
+      "name": "Synth Riser",
+      "category": "retro-arcade",
+      "file": "retro-arcade/synth-riser.wav",
+      "format": "wav",
+      "bytes": 1702974,
+      "sha256": "4143eef4e6717860cdff29242576bc08150f488aa25b74989a6805dc80616baa",
+      "duration_s": 2.936,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "synth",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Arcade.zip",
+        "member": "Arcade/Synth Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-arcade/system-update",
+      "name": "System Update",
+      "category": "retro-arcade",
+      "file": "retro-arcade/system-update.wav",
+      "format": "wav",
+      "bytes": 1260930,
+      "sha256": "7563721e74a631f5d9d1f1ce6a215e5279dcbcee0cb78ccebd270467ab85f57e",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "system",
+        "update"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Arcade.zip",
+        "member": "Arcade/System Update.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/8mm-crackle-loud",
+      "name": "8mm Crackle Loud",
+      "category": "retro-camera",
+      "file": "retro-camera/8mm-crackle-loud.wav",
+      "format": "wav",
+      "bytes": 1539516,
+      "sha256": "3dabbc2d65e3ebaef74f480114b878e7de10d304b77600b11234a454b9b1f864",
+      "duration_s": 2.64,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "8mm",
+        "crackle",
+        "loud"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt1.zip",
+        "member": "8mm Crackle Loud.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/button-camera",
+      "name": "Button Camera",
+      "category": "retro-camera",
+      "file": "retro-camera/button-camera.wav",
+      "format": "wav",
+      "bytes": 645918,
+      "sha256": "38981152628e0b4854841b11cfac2b3a51f57c9df4ceea6766921375c4243409",
+      "duration_s": 1.101,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "button",
+        "camera"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Button Camera.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/camera-clicks",
+      "name": "Camera Clicks",
+      "category": "retro-camera",
+      "file": "retro-camera/camera-clicks.wav",
+      "format": "wav",
+      "bytes": 626700,
+      "sha256": "2cf38f889d3390478318e53516750a5793eb23f86441edb6ad5bded7696559eb",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "camera",
+        "clicks"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Camera Clicks.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/camera-flash",
+      "name": "Camera Flash",
+      "category": "retro-camera",
+      "file": "retro-camera/camera-flash.wav",
+      "format": "wav",
+      "bytes": 395986,
+      "sha256": "bb51c778f86fb512949b92f4ba2e38384b8af9a2b23ed54f2533c24d76105b0c",
+      "duration_s": 0.667,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "camera",
+        "flash"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Camera Flash.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/camera-mechanical-shutter",
+      "name": "Camera Mechanical Shutter",
+      "category": "retro-camera",
+      "file": "retro-camera/camera-mechanical-shutter.wav",
+      "format": "wav",
+      "bytes": 492160,
+      "sha256": "25db55209636781778417104253cd52675cfd630851c950d23afb7a4d2542b15",
+      "duration_s": 0.834,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "camera",
+        "mechanical",
+        "shutter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Camera Mechanical Shutter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/camera-roll-out",
+      "name": "Camera Roll Out",
+      "category": "retro-camera",
+      "file": "retro-camera/camera-roll-out.wav",
+      "format": "wav",
+      "bytes": 1068738,
+      "sha256": "8b6ee665699237bd1d19370db31ad024849a9cc13bdd89eac281cd5932284daa",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "camera",
+        "roll",
+        "out"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt1.zip",
+        "member": "Camera Roll Out.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/camera-shooting-multiple-shots",
+      "name": "Camera Shooting Multiple Shots",
+      "category": "retro-camera",
+      "file": "retro-camera/camera-shooting-multiple-shots.wav",
+      "format": "wav",
+      "bytes": 1087882,
+      "sha256": "1d0fb3676bf81af3cc57c573b3e02ba1c802bb2e0da6b63bc882826b08d07ced",
+      "duration_s": 1.869,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "camera",
+        "shooting",
+        "multiple",
+        "shots"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt1.zip",
+        "member": "Camera Shooting Multiple Shots.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/camera-shooting-multiple-shots-fast",
+      "name": "Camera Shooting Multiple Shots Fast",
+      "category": "retro-camera",
+      "file": "retro-camera/camera-shooting-multiple-shots-fast.wav",
+      "format": "wav",
+      "bytes": 914908,
+      "sha256": "acc51d05294f239a83fca47b97db18f75dfa02f537c40f2bc23e7918748265a5",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "camera",
+        "shooting",
+        "multiple",
+        "shots",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt1.zip",
+        "member": "Camera Shooting Multiple Shots Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/camera-shot",
+      "name": "Camera Shot",
+      "category": "retro-camera",
+      "file": "retro-camera/camera-shot.wav",
+      "format": "wav",
+      "bytes": 242338,
+      "sha256": "dca8690a07d16826b274e8cf98487aba208850dc4310689cf966c505fda7e499",
+      "duration_s": 0.4,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "camera",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Camera Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/click",
+      "name": "Click",
+      "category": "retro-camera",
+      "file": "retro-camera/click.wav",
+      "format": "wav",
+      "bytes": 1260930,
+      "sha256": "2fdad51902c45b60721a3d4c64daec0ba8513639c145af712fe11df39f974025",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "click"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt1.zip",
+        "member": "Click.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/click-manual-camera",
+      "name": "Click Manual Camera",
+      "category": "retro-camera",
+      "file": "retro-camera/click-manual-camera.wav",
+      "format": "wav",
+      "bytes": 607504,
+      "sha256": "3a144e162bfbbe697c59b63afbb03c82035af9d1c149d9e3817e8017eae82413",
+      "duration_s": 1.034,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "click",
+        "manual",
+        "camera"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Click Manual Camera.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/digital-camera-focus",
+      "name": "Digital Camera Focus",
+      "category": "retro-camera",
+      "file": "retro-camera/digital-camera-focus.wav",
+      "format": "wav",
+      "bytes": 242238,
+      "sha256": "c16f7198f3a0f54a44a2e30e6b29763271d2a71525c922eccffcde99248bb8e5",
+      "duration_s": 0.4,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "digital",
+        "camera",
+        "focus"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Digital Camera Focus .wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/digital-picture-shot",
+      "name": "Digital Picture Shot",
+      "category": "retro-camera",
+      "file": "retro-camera/digital-picture-shot.wav",
+      "format": "wav",
+      "bytes": 280668,
+      "sha256": "930a0ad3969144950afa4d0b6c0c7f433bc8e620bf496f8741ed8f1ca749c48e",
+      "duration_s": 0.467,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "digital",
+        "picture",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Digital Picture Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/fast-pace-camera-clicks",
+      "name": "Fast Pace Camera Clicks",
+      "category": "retro-camera",
+      "file": "retro-camera/fast-pace-camera-clicks.wav",
+      "format": "wav",
+      "bytes": 857328,
+      "sha256": "f5edff2ed822c3f756cf6c55f8f23460ee4804a396a880daf073c19c6cd8038a",
+      "duration_s": 1.468,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fast",
+        "pace",
+        "camera",
+        "clicks"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt1.zip",
+        "member": "Fast Pace Camera Clicks.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/old-camera-click",
+      "name": "Old Camera Click",
+      "category": "retro-camera",
+      "file": "retro-camera/old-camera-click.wav",
+      "format": "wav",
+      "bytes": 280670,
+      "sha256": "4bc0d077e708e4bd46870a9823421a565b273ef561a5c3f0a47f93634d8edffb",
+      "duration_s": 0.467,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "camera",
+        "click"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Old Camera Click.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/old-camera-click-fast",
+      "name": "Old Camera Click Fast",
+      "category": "retro-camera",
+      "file": "retro-camera/old-camera-click-fast.wav",
+      "format": "wav",
+      "bytes": 223014,
+      "sha256": "f938494fa4758916884f0d47d7aad0fb5b50decc1272d2824f1f906032e96da2",
+      "duration_s": 0.367,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "camera",
+        "click",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Old Camera Click Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/old-camera-rol-out",
+      "name": "Old Camera Rol Out",
+      "category": "retro-camera",
+      "file": "retro-camera/old-camera-rol-out.wav",
+      "format": "wav",
+      "bytes": 857328,
+      "sha256": "ca4091d384ae962c883ae973e4a999006ddde710eb9b6c8413b48585277634bd",
+      "duration_s": 1.468,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "camera",
+        "rol",
+        "out"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Old Camera Rol Out.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/photo-roll-swap",
+      "name": "Photo Roll Swap",
+      "category": "retro-camera",
+      "file": "retro-camera/photo-roll-swap.wav",
+      "format": "wav",
+      "bytes": 395984,
+      "sha256": "6f1c660524fff60f75be65764bf727673e0a153165c84f74673eb49d5c82acd5",
+      "duration_s": 0.667,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "photo",
+        "roll",
+        "swap"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Photo Roll Swap.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/preparing-camera",
+      "name": "Preparing Camera",
+      "category": "retro-camera",
+      "file": "retro-camera/preparing-camera.wav",
+      "format": "wav",
+      "bytes": 1260930,
+      "sha256": "03f53e0449ceb160db63c6d3d2bb3414a11e1e074eddbfd0ba0ab23510cf8d52",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "preparing",
+        "camera"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt1.zip",
+        "member": "Preparing Camera.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/re-enter-roll-camera",
+      "name": "Re-Enter Roll Camera",
+      "category": "retro-camera",
+      "file": "retro-camera/re-enter-roll-camera.wav",
+      "format": "wav",
+      "bytes": 626700,
+      "sha256": "20880e01f71b548582b690aae0ebdaede8710691f98e91d0e0aa8c520fb73b8b",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "re",
+        "enter",
+        "roll",
+        "camera"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Re-Enter Roll Camera.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/replacing-roll-old-camera",
+      "name": "Replacing Roll Old Camera",
+      "category": "retro-camera",
+      "file": "retro-camera/replacing-roll-old-camera.wav",
+      "format": "wav",
+      "bytes": 1068738,
+      "sha256": "4f44be01515cf1c7090602a34d8e706f4ad2c2eb23aee2c745900afd181f71f8",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "replacing",
+        "roll",
+        "old",
+        "camera"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt1.zip",
+        "member": "Replacing Roll Old Camera.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/shoot-camera-bass",
+      "name": "Shoot Camera Bass",
+      "category": "retro-camera",
+      "file": "retro-camera/shoot-camera-bass.wav",
+      "format": "wav",
+      "bytes": 415212,
+      "sha256": "d3c72afeef3038a3e9bf0e3e1482624c4f6b1ccf7f328aca96f77d2ca5b24e11",
+      "duration_s": 0.701,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "shoot",
+        "camera",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Shoot Camera Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/shutter",
+      "name": "Shutter",
+      "category": "retro-camera",
+      "file": "retro-camera/shutter.wav",
+      "format": "wav",
+      "bytes": 492160,
+      "sha256": "76692d13934e8a2ae895cda5a5192970056fc431bd926bb7cfb699d5d3e315b9",
+      "duration_s": 0.834,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "shutter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Shutter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/shutter-camera-front",
+      "name": "Shutter Camera Front",
+      "category": "retro-camera",
+      "file": "retro-camera/shutter-camera-front.wav",
+      "format": "wav",
+      "bytes": 492160,
+      "sha256": "e90b5aed89116650b2b00d05f11fbf94345c0a94fb484e8c50372c3f46ff7bf8",
+      "duration_s": 0.834,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "shutter",
+        "camera",
+        "front"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Shutter Camera Front.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/soft-8mm-crackle",
+      "name": "Soft 8mm Crackle",
+      "category": "retro-camera",
+      "file": "retro-camera/soft-8mm-crackle.wav",
+      "format": "wav",
+      "bytes": 1886248,
+      "sha256": "1ff8ef23d0d1c69a444471847bf49e6a615fd2baced612833c1710e2fb622185",
+      "duration_s": 3.24,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "soft",
+        "8mm",
+        "crackle"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt1.zip",
+        "member": "Soft 8mm Crackle.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/super-8-roll",
+      "name": "Super 8 Roll",
+      "category": "retro-camera",
+      "file": "retro-camera/super-8-roll.wav",
+      "format": "wav",
+      "bytes": 12446430,
+      "sha256": "3351dbb618114f8a89b6fa4682ed25290cf95e7da3bff8cb30485161ff3ffd01",
+      "duration_s": 21.588,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "super",
+        "8",
+        "roll"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt1.zip",
+        "member": "Super 8 Roll.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/vintage-camera-click",
+      "name": "Vintage Camera Click",
+      "category": "retro-camera",
+      "file": "retro-camera/vintage-camera-click.wav",
+      "format": "wav",
+      "bytes": 357628,
+      "sha256": "5a3eabb9dea0463b80898b1d7dcd2ff6757deb3eb1426485d907643e73a9189c",
+      "duration_s": 0.601,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "vintage",
+        "camera",
+        "click"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Vintage Camera Click.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/vintage-camera-shot",
+      "name": "Vintage Camera Shot",
+      "category": "retro-camera",
+      "file": "retro-camera/vintage-camera-shot.wav",
+      "format": "wav",
+      "bytes": 492160,
+      "sha256": "a16d71cf755b537b37be68497160b7d6ee2753ff38603989cdbbe8e1593cc16b",
+      "duration_s": 0.834,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "vintage",
+        "camera",
+        "shot"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Vintage Camera Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/vintage-roll",
+      "name": "Vintage Roll",
+      "category": "retro-camera",
+      "file": "retro-camera/vintage-roll.wav",
+      "format": "wav",
+      "bytes": 914988,
+      "sha256": "80f5e930ae4967b7129670de5a91a261847d782995ca907b41ad55b70398881b",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "vintage",
+        "roll"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt1.zip",
+        "member": "Vintage Roll.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/winding-camera",
+      "name": "Winding Camera",
+      "category": "retro-camera",
+      "file": "retro-camera/winding-camera.wav",
+      "format": "wav",
+      "bytes": 722818,
+      "sha256": "41430305bb8ab31d5ba4dc294446d6d560e1d38245b91be84f96311847a91fa0",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "winding",
+        "camera"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt2.zip",
+        "member": "Winding Camera.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-camera/winding-up-manual-camera",
+      "name": "Winding Up Manual Camera",
+      "category": "retro-camera",
+      "file": "retro-camera/winding-up-manual-camera.wav",
+      "format": "wav",
+      "bytes": 914988,
+      "sha256": "8322475c23d759d2444fac84e2fb7dfe9e178b4a2caebc268376ea6dc7f74efd",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "winding",
+        "up",
+        "manual",
+        "camera"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Camera_Pt1.zip",
+        "member": "Winding Up Manual Camera.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-errors/channel-error",
+      "name": "Channel Error",
+      "category": "retro-errors",
+      "file": "retro-errors/channel-error.wav",
+      "format": "wav",
+      "bytes": 626700,
+      "sha256": "60f789cd8bfb186d9f64184bd9dcd97b493bbe9873e92bb19025ea62ececf5be",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "channel",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Errors.zip",
+        "member": "Errors/Channel Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-errors/computer-error-old",
+      "name": "Computer Error Old",
+      "category": "retro-errors",
+      "file": "retro-errors/computer-error-old.wav",
+      "format": "wav",
+      "bytes": 722796,
+      "sha256": "d7ed3f98efc35fca6ce380e62af4914ac8081c7e4a1a2bd108bf0ee274eca30a",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "computer",
+        "error",
+        "old"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Errors.zip",
+        "member": "Errors/Computer Error Old.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-errors/deep-error",
+      "name": "Deep Error",
+      "category": "retro-errors",
+      "file": "retro-errors/deep-error.wav",
+      "format": "wav",
+      "bytes": 1124906,
+      "sha256": "14b340d7e3e9102af36b5d9dfc4bf40dc751dcdc019a6cd6ad51047e501d84d5",
+      "duration_s": 1.92,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Errors.zip",
+        "member": "Errors/Deep Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-errors/distort-error",
+      "name": "Distort Error",
+      "category": "retro-errors",
+      "file": "retro-errors/distort-error.wav",
+      "format": "wav",
+      "bytes": 722796,
+      "sha256": "919aefd18d40e23e199c476550db85d4b96bc4a158ba95541bd304d2b7aa2fb3",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distort",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Errors.zip",
+        "member": "Errors/Distort Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-errors/high-tone-error",
+      "name": "High Tone Error",
+      "category": "retro-errors",
+      "file": "retro-errors/high-tone-error.wav",
+      "format": "wav",
+      "bytes": 2300800,
+      "sha256": "68b175279b907e50579d30610a43c1bc4e5d1863323adc3a9a584f0432bb9106",
+      "duration_s": 3.96,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "high",
+        "tone",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Errors.zip",
+        "member": "Errors/High Tone Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-errors/noise-error",
+      "name": "Noise Error",
+      "category": "retro-errors",
+      "file": "retro-errors/noise-error.wav",
+      "format": "wav",
+      "bytes": 964162,
+      "sha256": "fbd0cd0301d087c593f3889c26860cee62cf1f93a6a11385bce8d512d4b851d7",
+      "duration_s": 1.64,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "noise",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Errors.zip",
+        "member": "Errors/Noise Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-errors/old-computer-error",
+      "name": "Old Computer Error",
+      "category": "retro-errors",
+      "file": "retro-errors/old-computer-error.wav",
+      "format": "wav",
+      "bytes": 722796,
+      "sha256": "df64c6e1b52aaaaa70e7aa3c03ea92f54ed7980119065c1f8f2499e648d4546b",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "computer",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Errors.zip",
+        "member": "Errors/Old Computer Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-errors/short-error",
+      "name": "Short Error",
+      "category": "retro-errors",
+      "file": "retro-errors/short-error.wav",
+      "format": "wav",
+      "bytes": 710186,
+      "sha256": "300517fe915a81f13619c4d542647ac256d4e91a5964fe7359f2c7b98952b245",
+      "duration_s": 1.2,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Errors.zip",
+        "member": "Errors/Short Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-errors/soft-error",
+      "name": "Soft Error",
+      "category": "retro-errors",
+      "file": "retro-errors/soft-error.wav",
+      "format": "wav",
+      "bytes": 1586560,
+      "sha256": "ae8116a6bbb17cdef95fc089770dada04a856f04a956ff2ef59427b4da8a3344",
+      "duration_s": 2.72,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "soft",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Errors.zip",
+        "member": "Errors/Soft Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-errors/strange-error",
+      "name": "Strange Error",
+      "category": "retro-errors",
+      "file": "retro-errors/strange-error.wav",
+      "format": "wav",
+      "bytes": 1808738,
+      "sha256": "e3aea509405bd391b0ff96a53f312c413d1c0a8894a9afc0399e7351b54f3312",
+      "duration_s": 3.12,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "strange",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Errors.zip",
+        "member": "Errors/Strange Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-errors/tape-error",
+      "name": "Tape Error",
+      "category": "retro-errors",
+      "file": "retro-errors/tape-error.wav",
+      "format": "wav",
+      "bytes": 626700,
+      "sha256": "c1cac58d1eeba6fc69225ab8e5460d78f529ed32f58073a9141344e6e50cc3ae",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tape",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Errors.zip",
+        "member": "Errors/Tape Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-errors/ticking-digits",
+      "name": "Ticking Digits",
+      "category": "retro-errors",
+      "file": "retro-errors/ticking-digits.wav",
+      "format": "wav",
+      "bytes": 818026,
+      "sha256": "39f3f8e8d7f95d9f12e59578327c9497f1141fba2f199dac429debea4623aa03",
+      "duration_s": 1.4,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ticking",
+        "digits"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Errors.zip",
+        "member": "Errors/Ticking Digits.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-errors/tv-error",
+      "name": "TV Error",
+      "category": "retro-errors",
+      "file": "retro-errors/tv-error.wav",
+      "format": "wav",
+      "bytes": 722796,
+      "sha256": "83e55af3e118383896c50b8c015715a022e593aae492bf0214349a936d612943",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tv",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Errors.zip",
+        "member": "Errors/TV Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-errors/vhs-error",
+      "name": "VHS Error",
+      "category": "retro-errors",
+      "file": "retro-errors/vhs-error.wav",
+      "format": "wav",
+      "bytes": 626700,
+      "sha256": "dd562f36349170b2bacd28a9e8448a6e7fc613f06907997d08f8c8a2ccf90ed8",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "vhs",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Errors.zip",
+        "member": "Errors/VHS Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-errors/vhs-hickup",
+      "name": "VHS Hickup",
+      "category": "retro-errors",
+      "file": "retro-errors/vhs-hickup.wav",
+      "format": "wav",
+      "bytes": 626700,
+      "sha256": "71c2e8d1e09c343e914b01908c52da734440c28259325c7a81ccddf4b7122b88",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "vhs",
+        "hickup"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Errors.zip",
+        "member": "Errors/VHS Hickup.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/camera-roll-full",
+      "name": "Camera Roll Full",
+      "category": "retro-film",
+      "file": "retro-film/camera-roll-full.wav",
+      "format": "wav",
+      "bytes": 626622,
+      "sha256": "63043d35cc30f3f78525c6f2da49d9d69ca0593f9a6655042da116e1967ee63e",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "camera",
+        "roll",
+        "full"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt2.zip",
+        "member": "Camera Roll Full.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/cinema-film-roll",
+      "name": "Cinema Film Roll",
+      "category": "retro-film",
+      "file": "retro-film/cinema-film-roll.wav",
+      "format": "wav",
+      "bytes": 2529322,
+      "sha256": "abb466f779eba482d1f5a26074f4ededc490e2063c39341b0a32816869a4dbbb",
+      "duration_s": 4.371,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinema",
+        "film",
+        "roll"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt2.zip",
+        "member": "Cinema Film Roll.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/end-of-play-filmroll",
+      "name": "End of Play Filmroll",
+      "category": "retro-film",
+      "file": "retro-film/end-of-play-filmroll.wav",
+      "format": "wav",
+      "bytes": 914988,
+      "sha256": "5a3e5e09f634049e3d0df04a50dbf5b7fe2e13c14d8715f06f5c432ead584dce",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "end",
+        "play",
+        "filmroll"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt2.zip",
+        "member": "End of Play Filmroll.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/exit-film-roll",
+      "name": "Exit Film Roll",
+      "category": "retro-film",
+      "file": "retro-film/exit-film-roll.wav",
+      "format": "wav",
+      "bytes": 1741328,
+      "sha256": "00ee47f29ae36f155acca519e6ad3b7e8dd6dcc7b0c88408c81858abd7e5cd8c",
+      "duration_s": 3.003,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "exit",
+        "film",
+        "roll"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt2.zip",
+        "member": "Exit Film Roll.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/film-playing",
+      "name": "Film Playing",
+      "category": "retro-film",
+      "file": "retro-film/film-playing.wav",
+      "format": "wav",
+      "bytes": 7603188,
+      "sha256": "6644342d825f3e88c628a371199876da384a2a35382135e032d28738765cf554",
+      "duration_s": 13.18,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "film",
+        "playing"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt1.zip",
+        "member": "untitled folder/Film Playing.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/film-roll-speed",
+      "name": "Film Roll Speed",
+      "category": "retro-film",
+      "file": "retro-film/film-roll-speed.wav",
+      "format": "wav",
+      "bytes": 4028418,
+      "sha256": "06dfbc99948ede9f48f516b2c020cd875f23091f0b755bf47d031b5c7b16259d",
+      "duration_s": 6.974,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "film",
+        "roll",
+        "speed"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt1.zip",
+        "member": "untitled folder/Film Roll Speed.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/filmroll",
+      "name": "Filmroll",
+      "category": "retro-film",
+      "file": "retro-film/filmroll.wav",
+      "format": "wav",
+      "bytes": 3855444,
+      "sha256": "303fbaa828131bd055db1e4da870d322e51762fca859f0668bd376526466ba98",
+      "duration_s": 6.673,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "filmroll"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt1.zip",
+        "member": "untitled folder/Filmroll .wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/filmroll-distortion",
+      "name": "Filmroll Distortion",
+      "category": "retro-film",
+      "file": "retro-film/filmroll-distortion.wav",
+      "format": "wav",
+      "bytes": 1357026,
+      "sha256": "325cfae0679a90154fb8680a99db2534dfc0648adba9848c3b20fc09d4dbe782",
+      "duration_s": 2.336,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "filmroll",
+        "distortion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt2.zip",
+        "member": "Filmroll Distortion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/filmroll-start",
+      "name": "Filmroll Start",
+      "category": "retro-film",
+      "file": "retro-film/filmroll-start.wav",
+      "format": "wav",
+      "bytes": 1357026,
+      "sha256": "4e0bda79577fe109a0c05d6cb895c92fe41c4156837efbf1c975de9811729224",
+      "duration_s": 2.336,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "filmroll",
+        "start"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt2.zip",
+        "member": "Filmroll Start.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/long-film-roll-on",
+      "name": "Long Film Roll On",
+      "category": "retro-film",
+      "file": "retro-film/long-film-roll-on.wav",
+      "format": "wav",
+      "bytes": 6968958,
+      "sha256": "06c19b1da00dc01cdfdda7b86c5996dab66109c85fc8ab5b13cd9296d18a2662",
+      "duration_s": 12.079,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "long",
+        "film",
+        "roll"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt1.zip",
+        "member": "untitled folder/Long Film Roll On.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/reattaching-filmroll",
+      "name": "Reattaching Filmroll",
+      "category": "retro-film",
+      "file": "retro-film/reattaching-filmroll.wav",
+      "format": "wav",
+      "bytes": 914988,
+      "sha256": "d0a13a94e1d2613c7b043dca7891b12541b8d7e1a3c93fb5e05063b72255f0ee",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "reattaching",
+        "filmroll"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt2.zip",
+        "member": "Reattaching Filmroll.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/replay-filmroll",
+      "name": "Replay Filmroll",
+      "category": "retro-film",
+      "file": "retro-film/replay-filmroll.wav",
+      "format": "wav",
+      "bytes": 1357026,
+      "sha256": "125810e835c840cc420ab4521929f44da22eb49a86513fd44051f44c6219cce1",
+      "duration_s": 2.336,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "replay",
+        "filmroll"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt2.zip",
+        "member": "Replay Filmroll.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/rewind-filmroll",
+      "name": "Rewind Filmroll",
+      "category": "retro-film",
+      "file": "retro-film/rewind-filmroll.wav",
+      "format": "wav",
+      "bytes": 1357026,
+      "sha256": "c182fef21ce53dbbdfd6f3fb811908ce735131cf56a5344c6aab9dca18f89846",
+      "duration_s": 2.336,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rewind",
+        "filmroll"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt2.zip",
+        "member": "Rewind Filmroll.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/short-fast-filmroll",
+      "name": "Short Fast Filmroll",
+      "category": "retro-film",
+      "file": "retro-film/short-fast-filmroll.wav",
+      "format": "wav",
+      "bytes": 1357026,
+      "sha256": "e698363f70f4f3985d1fb56fbac4d5cd15a6331ba4a38203b5967a0ac7925262",
+      "duration_s": 2.336,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "fast",
+        "filmroll"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt2.zip",
+        "member": "Short Fast Filmroll.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/soft-scratch-filmroll",
+      "name": "Soft Scratch Filmroll",
+      "category": "retro-film",
+      "file": "retro-film/soft-scratch-filmroll.wav",
+      "format": "wav",
+      "bytes": 914988,
+      "sha256": "6ec29cf3f0615a146c80b27a32992512786ac13ca657daa875ce48d5c0bc2bbe",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "soft",
+        "scratch",
+        "filmroll"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt2.zip",
+        "member": "Soft Scratch Filmroll.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/spinning-film-wheel-old",
+      "name": "Spinning Film Wheel Old",
+      "category": "retro-film",
+      "file": "retro-film/spinning-film-wheel-old.wav",
+      "format": "wav",
+      "bytes": 914988,
+      "sha256": "4ab0acb2224ffeac29ab03965a9648ec90163fe9860155a7aed8a962825a7048",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "spinning",
+        "film",
+        "wheel",
+        "old"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt2.zip",
+        "member": "Spinning Film Wheel Old.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/vintage-film-roll",
+      "name": "Vintage Film Roll",
+      "category": "retro-film",
+      "file": "retro-film/vintage-film-roll.wav",
+      "format": "wav",
+      "bytes": 4989378,
+      "sha256": "1150c5b5c89d88c82c9df5d1f61f275788225fe8eeffb607341975607320cee5",
+      "duration_s": 8.642,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "vintage",
+        "film",
+        "roll"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt1.zip",
+        "member": "untitled folder/Vintage Film Roll.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-film/vintage-film-roll-fast",
+      "name": "Vintage Film Roll Fast",
+      "category": "retro-film",
+      "file": "retro-film/vintage-film-roll-fast.wav",
+      "format": "wav",
+      "bytes": 6200216,
+      "sha256": "ef8b6883556af27a78a65aa477eb24737a13ac183bbb55d4cbb9228300b6ea20",
+      "duration_s": 10.744,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "vintage",
+        "film",
+        "roll",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Film_Pt1.zip",
+        "member": "untitled folder/Vintage Film Roll Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-old-tv/dvd-spinning",
+      "name": "DVD Spinning",
+      "category": "retro-old-tv",
+      "file": "retro-old-tv/dvd-spinning.wav",
+      "format": "wav",
+      "bytes": 1217190,
+      "sha256": "fa8047e496110969ef60c9e398d80346408017afde02aa3136d036f73e85c34d",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "dvd",
+        "spinning"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Old_TV.zip",
+        "member": "Old TV/DVD Spinning.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-old-tv/dvd-winding-up",
+      "name": "DVD Winding Up",
+      "category": "retro-old-tv",
+      "file": "retro-old-tv/dvd-winding-up.wav",
+      "format": "wav",
+      "bytes": 1024976,
+      "sha256": "3f5a540e76fa8be43049708338927fb8b33ea7a769f6415156912f3ebd9beaf4",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "dvd",
+        "winding",
+        "up"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Old_TV.zip",
+        "member": "Old TV/DVD Winding Up.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-old-tv/old-tv",
+      "name": "Old TV",
+      "category": "retro-old-tv",
+      "file": "retro-old-tv/old-tv.wav",
+      "format": "wav",
+      "bytes": 2068140,
+      "sha256": "479b8cc0dd182ee1fed5463383b0f725dd9b8b7b0398a7d36b7a28894701239b",
+      "duration_s": 3.57,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "tv"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Old_TV.zip",
+        "member": "Old TV/Old TV.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-old-tv/old-tv-error",
+      "name": "Old TV Error",
+      "category": "retro-old-tv",
+      "file": "retro-old-tv/old-tv-error.wav",
+      "format": "wav",
+      "bytes": 2305342,
+      "sha256": "c956562e5587aa02f6c0fb83cbdba723ee32d8823941ffd8bd059951dd89c728",
+      "duration_s": 3.971,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "tv",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Old_TV.zip",
+        "member": "Old TV/Old TV Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-old-tv/old-tv-not-working",
+      "name": "Old TV not working",
+      "category": "retro-old-tv",
+      "file": "retro-old-tv/old-tv-not-working.wav",
+      "format": "wav",
+      "bytes": 1920958,
+      "sha256": "e8519daf0c148c0c60b0976c5f1573895f9b381eca8db8249875d0f72cffddad",
+      "duration_s": 3.303,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "tv",
+        "not",
+        "working"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Old_TV.zip",
+        "member": "Old TV/Old TV not working.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-old-tv/on-off-noise",
+      "name": "On OFF Noise",
+      "category": "retro-old-tv",
+      "file": "retro-old-tv/on-off-noise.wav",
+      "format": "wav",
+      "bytes": 1116110,
+      "sha256": "01c68b4f98be79c6de001f9f9424a71f6cdfbbe827b89c684e12b113d7e4b9f8",
+      "duration_s": 1.902,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "off",
+        "noise"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Old_TV.zip",
+        "member": "Old TV/On OFF Noise.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-old-tv/plugging-tv",
+      "name": "Plugging TV",
+      "category": "retro-old-tv",
+      "file": "retro-old-tv/plugging-tv.wav",
+      "format": "wav",
+      "bytes": 2068140,
+      "sha256": "2ca1d18de4c00a6eae014fcb64d8c22894b55c0eac974343267ab50f9089c7f7",
+      "duration_s": 3.57,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "plugging",
+        "tv"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Old_TV.zip",
+        "member": "Old TV/Plugging TV.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-old-tv/sharp-bad-tv",
+      "name": "Sharp Bad TV",
+      "category": "retro-old-tv",
+      "file": "retro-old-tv/sharp-bad-tv.wav",
+      "format": "wav",
+      "bytes": 5587272,
+      "sha256": "8c2b5825fcae744389d76528291db23d45dfc09242d24bcfdf640ed70d421aaa",
+      "duration_s": 9.68,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sharp",
+        "bad",
+        "tv"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Old_TV.zip",
+        "member": "Old TV/Sharp Bad TV.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-old-tv/standard-noise",
+      "name": "Standard Noise",
+      "category": "retro-old-tv",
+      "file": "retro-old-tv/standard-noise.wav",
+      "format": "wav",
+      "bytes": 8305992,
+      "sha256": "fe941372199dba2f9be04f0d99e4790952ba0a3eda998787b3f8990be34649a8",
+      "duration_s": 14.4,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "standard",
+        "noise"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Old_TV.zip",
+        "member": "Old TV/Standard Noise.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-old-tv/still-old-tv",
+      "name": "Still Old TV",
+      "category": "retro-old-tv",
+      "file": "retro-old-tv/still-old-tv.wav",
+      "format": "wav",
+      "bytes": 2068140,
+      "sha256": "78d2c5a0c9deee3a1f63927b38b612582d01b106d8ab992f86bded8dc95928f4",
+      "duration_s": 3.57,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "still",
+        "old",
+        "tv"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Old_TV.zip",
+        "member": "Old TV/Still Old TV.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-old-tv/tuning-tv-signal",
+      "name": "Tuning TV Signal",
+      "category": "retro-old-tv",
+      "file": "retro-old-tv/tuning-tv-signal.wav",
+      "format": "wav",
+      "bytes": 1702974,
+      "sha256": "a86fba24d546c15626ad0f9334261d1929cd58cdefa8399b4e0a04f26d60673d",
+      "duration_s": 2.936,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tuning",
+        "tv",
+        "signal"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Old_TV.zip",
+        "member": "Old TV/Tuning TV Signal.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-old-tv/tv-button-on-off",
+      "name": "TV Button ON OFF",
+      "category": "retro-old-tv",
+      "file": "retro-old-tv/tv-button-on-off.wav",
+      "format": "wav",
+      "bytes": 979708,
+      "sha256": "8cbc1cf5b3b4de0524f892c01e6306ee53a879983c337307b2156c642f4ef04e",
+      "duration_s": 1.668,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tv",
+        "button",
+        "off"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Old_TV.zip",
+        "member": "Old TV/TV Button ON OFF.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-old-tv/tv-noise",
+      "name": "TV Noise",
+      "category": "retro-old-tv",
+      "file": "retro-old-tv/tv-noise.wav",
+      "format": "wav",
+      "bytes": 1401950,
+      "sha256": "c80719d8f49eaa4d2bed941330836f6a79cabc7661c7e44e71f73e52ddf454de",
+      "duration_s": 2.402,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tv",
+        "noise"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Old_TV.zip",
+        "member": "Old TV/TV Noise.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-old-tv/tv-not-working",
+      "name": "TV Not Working",
+      "category": "retro-old-tv",
+      "file": "retro-old-tv/tv-not-working.wav",
+      "format": "wav",
+      "bytes": 1702974,
+      "sha256": "23aca4c0fb8ce287f646b5571534ca626baf1d302ab91b56c9ad6d44a7f2cf9a",
+      "duration_s": 2.936,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tv",
+        "not",
+        "working"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Old_TV.zip",
+        "member": "Old TV/TV Not Working.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/2000-s-phone-ring-fast",
+      "name": "2000's phone ring Fast",
+      "category": "retro-phones",
+      "file": "retro-phones/2000-s-phone-ring-fast.wav",
+      "format": "wav",
+      "bytes": 2055614,
+      "sha256": "513b9c29da2b53bca27d966f3c74555f2a2d276b26cd35052cf49269cb25b954",
+      "duration_s": 3.537,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "2000",
+        "s",
+        "phone",
+        "ring",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/2000's phone ring Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/2000-s-phone-ring-slow",
+      "name": "2000's phone ring slow",
+      "category": "retro-phones",
+      "file": "retro-phones/2000-s-phone-ring-slow.wav",
+      "format": "wav",
+      "bytes": 2574530,
+      "sha256": "c7fb561a7292d086237b05ac6dc5da3a024ea0c7e55772cfa38f4bf6f260e555",
+      "duration_s": 4.438,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "2000",
+        "s",
+        "phone",
+        "ring",
+        "slow"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/2000's phone ring slow.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/dead-connection",
+      "name": "Dead Connection",
+      "category": "retro-phones",
+      "file": "retro-phones/dead-connection.wav",
+      "format": "wav",
+      "bytes": 196284,
+      "sha256": "68d9e3fda9e94c5cf9b5abe45d2f03f37f540981bd41f524358117c712b42eb8",
+      "duration_s": 1.92,
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "loopable": false,
+      "tags": [
+        "dead",
+        "connection"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Dead Connection.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/dial-one",
+      "name": "Dial One",
+      "category": "retro-phones",
+      "file": "retro-phones/dial-one.wav",
+      "format": "wav",
+      "bytes": 50364,
+      "sha256": "cd4904369916e33323775f2ee9a905e8ce5198569d65cf61523b4cf1deb6af52",
+      "duration_s": 0.4,
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "loopable": false,
+      "tags": [
+        "dial",
+        "one"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Dial One.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/mobile-phone",
+      "name": "Mobile Phone",
+      "category": "retro-phones",
+      "file": "retro-phones/mobile-phone.wav",
+      "format": "wav",
+      "bytes": 230520,
+      "sha256": "5459614559f4ea2b1c6a60f8a9ae3e9a611783111c2fce888b98351b84b11b83",
+      "duration_s": 2.28,
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "loopable": false,
+      "tags": [
+        "mobile",
+        "phone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Mobile Phone.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/mobile-phone-nearbywav",
+      "name": "Mobile Phone Nearbywav",
+      "category": "retro-phones",
+      "file": "retro-phones/mobile-phone-nearbywav.wav",
+      "format": "wav",
+      "bytes": 230504,
+      "sha256": "682186196345bdf76e2008faa450a519d2acd5b875b8eeb58260dd505a16587d",
+      "duration_s": 2.28,
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "loopable": false,
+      "tags": [
+        "mobile",
+        "phone",
+        "nearbywav"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Mobile Phone Nearbywav.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/mobile-phone-ring",
+      "name": "Mobile Phone Ring",
+      "category": "retro-phones",
+      "file": "retro-phones/mobile-phone-ring.wav",
+      "format": "wav",
+      "bytes": 392390,
+      "sha256": "34f52c5d14e780d878b89fe71e963ca2495de153e253c107fff582a64e5ebac7",
+      "duration_s": 3.96,
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "loopable": false,
+      "tags": [
+        "mobile",
+        "phone",
+        "ring"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Mobile Phone Ring.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/mobile-phone-typing",
+      "name": "Mobile Phone Typing",
+      "category": "retro-phones",
+      "file": "retro-phones/mobile-phone-typing.wav",
+      "format": "wav",
+      "bytes": 168248,
+      "sha256": "40878d8f42cddaf26a35467f25e5d4f56be51c641d118c38f75e0c8b8013f2c0",
+      "duration_s": 1.48,
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "loopable": false,
+      "tags": [
+        "mobile",
+        "phone",
+        "typing"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Mobile Phone Typing.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/mobile-ring-other-room",
+      "name": "Mobile Ring Other Room",
+      "category": "retro-phones",
+      "file": "retro-phones/mobile-ring-other-room.wav",
+      "format": "wav",
+      "bytes": 230504,
+      "sha256": "01ed0ef249cfa36c96f753cc3e448ea2b49aca4429929437300e30b2f5c29650",
+      "duration_s": 2.28,
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "loopable": false,
+      "tags": [
+        "mobile",
+        "ring",
+        "other",
+        "room"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Mobile Ring Other Room.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/old-phone-inside",
+      "name": "Old Phone Inside",
+      "category": "retro-phones",
+      "file": "retro-phones/old-phone-inside.wav",
+      "format": "wav",
+      "bytes": 149876,
+      "sha256": "2d483c8a086e6223c384d0bbba2f01086a1cee276d988e6865dd7b7de2a7d7a7",
+      "duration_s": 1.44,
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "loopable": false,
+      "tags": [
+        "old",
+        "phone",
+        "inside"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Old Phone Inside.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/old-phone-ring",
+      "name": "Old Phone Ring",
+      "category": "retro-phones",
+      "file": "retro-phones/old-phone-ring.wav",
+      "format": "wav",
+      "bytes": 412694,
+      "sha256": "a9ee86332b691e34d67c2372e5b2c1a44dc80998424454e1edab2d79a4ee8de0",
+      "duration_s": 4.16,
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "loopable": false,
+      "tags": [
+        "old",
+        "phone",
+        "ring"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Old Phone Ring.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/old-phone-room",
+      "name": "Old Phone Room",
+      "category": "retro-phones",
+      "file": "retro-phones/old-phone-room.wav",
+      "format": "wav",
+      "bytes": 211762,
+      "sha256": "6a9ddfef3b6c93c82c012cfb686a7d13ffd8c3c76df9786be76a0d3bacb6ed3b",
+      "duration_s": 2.08,
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "loopable": false,
+      "tags": [
+        "old",
+        "phone",
+        "room"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Old Phone Room.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/old-phone-rotating-number",
+      "name": "Old Phone Rotating Number",
+      "category": "retro-phones",
+      "file": "retro-phones/old-phone-rotating-number.wav",
+      "format": "wav",
+      "bytes": 1530000,
+      "sha256": "d511842c3fbbe47cdd87cc3c703429b0a570d9765fd5f82e2bcb097effe8f35a",
+      "duration_s": 2.636,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "phone",
+        "rotating",
+        "number"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Old Phone Rotating Number.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/phone-connecting",
+      "name": "Phone Connecting",
+      "category": "retro-phones",
+      "file": "retro-phones/phone-connecting.wav",
+      "format": "wav",
+      "bytes": 1011262,
+      "sha256": "7684f617d308a504e411528d098152747b64583bf61a92cbbb9280e17b2b9c78",
+      "duration_s": 1.702,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "phone",
+        "connecting"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Phone Connecting.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/phone-ring-room",
+      "name": "Phone Ring Room",
+      "category": "retro-phones",
+      "file": "retro-phones/phone-ring-room.wav",
+      "format": "wav",
+      "bytes": 230486,
+      "sha256": "255b1bd1ac2949388361290eb92fab4190d9ac884c4095fc965fe79be53107d8",
+      "duration_s": 2.28,
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "loopable": false,
+      "tags": [
+        "phone",
+        "ring",
+        "room"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Phone Ring Room.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/phone-trying-to-contact-long",
+      "name": "Phone Trying to Contact Long",
+      "category": "retro-phones",
+      "file": "retro-phones/phone-trying-to-contact-long.wav",
+      "format": "wav",
+      "bytes": 570740,
+      "sha256": "f1c4239d80ee83bcd1d3640e80ebbe7de9399421994e3f3398734fa149b862f9",
+      "duration_s": 5.68,
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "loopable": false,
+      "tags": [
+        "phone",
+        "trying",
+        "contact",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Phone Trying to Contact Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/phone-trying-to-contact-short",
+      "name": "Phone Trying to Contact Short",
+      "category": "retro-phones",
+      "file": "retro-phones/phone-trying-to-contact-short.wav",
+      "format": "wav",
+      "bytes": 189284,
+      "sha256": "c2a6ac8dc9899bf25b344536de3b12df39ade43fffa4e3d5741aa15a2f2f2a49",
+      "duration_s": 1.72,
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "loopable": false,
+      "tags": [
+        "phone",
+        "trying",
+        "contact",
+        "short"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Phone Trying to Contact Short.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/rotary-phone",
+      "name": "Rotary Phone",
+      "category": "retro-phones",
+      "file": "retro-phones/rotary-phone.wav",
+      "format": "wav",
+      "bytes": 1530000,
+      "sha256": "acd12a51f21ac22ab41abe9cb5178e3a76cdb0a4280bf0c5e4a611d26428d73d",
+      "duration_s": 2.636,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rotary",
+        "phone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Rotary Phone.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/rotary-phone-dialing",
+      "name": "Rotary Phone Dialing",
+      "category": "retro-phones",
+      "file": "retro-phones/rotary-phone-dialing.wav",
+      "format": "wav",
+      "bytes": 1530000,
+      "sha256": "7d68fdb88254087541b5c3d7116ca83af671dc6737d2495b7720af8de3da2ca5",
+      "duration_s": 2.636,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rotary",
+        "phone",
+        "dialing"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Rotary Phone Dialing.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-phones/trying-to-contact-short-far-off",
+      "name": "Trying to Contact Short Far Off",
+      "category": "retro-phones",
+      "file": "retro-phones/trying-to-contact-short-far-off.wav",
+      "format": "wav",
+      "bytes": 189308,
+      "sha256": "9e5ad93ba48705df50904da68bfe9daaabc804c66a55b765c5d825ce0d3754f7",
+      "duration_s": 1.72,
+      "sample_rate": 48000,
+      "channels": 1,
+      "bit_depth": 16,
+      "loopable": false,
+      "tags": [
+        "trying",
+        "contact",
+        "short",
+        "far",
+        "off"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Phones.zip",
+        "member": "Phones/Trying to Contact Short Far Off.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/finding-the-right-fm",
+      "name": "Finding The Right FM",
+      "category": "retro-radio",
+      "file": "retro-radio/finding-the-right-fm.wav",
+      "format": "wav",
+      "bytes": 1260930,
+      "sha256": "c8a34ca9740e052ea687995ba899e07bd9037668c67798c3b02c5e823d815daf",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "finding",
+        "right",
+        "fm"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Finding The Right FM.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/heavy-radio-noise",
+      "name": "Heavy Radio Noise",
+      "category": "retro-radio",
+      "file": "retro-radio/heavy-radio-noise.wav",
+      "format": "wav",
+      "bytes": 2497350,
+      "sha256": "be075419751caeaa9a958d8c0d61cfc007fef47f71edfe6758eb0f50bd824aba",
+      "duration_s": 4.304,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "heavy",
+        "radio",
+        "noise"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt1.zip",
+        "member": "Radio pt2/Heavy Radio Noise.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/inserting-cassette",
+      "name": "Inserting Cassette",
+      "category": "retro-radio",
+      "file": "retro-radio/inserting-cassette.wav",
+      "format": "wav",
+      "bytes": 1107204,
+      "sha256": "2b29b1e3e8ddf16515b891175b3b1ed2d4fc879729960dbc8bd7f44323bf59de",
+      "duration_s": 1.902,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inserting",
+        "cassette"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Inserting Cassette.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/inserting-tape-radio",
+      "name": "Inserting Tape Radio",
+      "category": "retro-radio",
+      "file": "retro-radio/inserting-tape-radio.wav",
+      "format": "wav",
+      "bytes": 1530000,
+      "sha256": "3751d1f400b1e6b5e7fc647276d46e46919f465b0f61d6a6476b80d08b488550",
+      "duration_s": 2.636,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inserting",
+        "tape",
+        "radio"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Inserting Tape Radio.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/needle-on-vhs",
+      "name": "Needle On VHS",
+      "category": "retro-radio",
+      "file": "retro-radio/needle-on-vhs.wav",
+      "format": "wav",
+      "bytes": 1702974,
+      "sha256": "6a7c851af4e3f9733e94991fc16cea41bfcf36dba63d6038741ca068f7c06730",
+      "duration_s": 2.936,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "needle",
+        "vhs"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Needle On VHS.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/no-connection-radio",
+      "name": "No Connection Radio",
+      "category": "retro-radio",
+      "file": "retro-radio/no-connection-radio.wav",
+      "format": "wav",
+      "bytes": 3698026,
+      "sha256": "2bfb6ff5c18c86de55070211055306f100c0cbc344ff8ce3c82bd76e901e616f",
+      "duration_s": 6.4,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "no",
+        "connection",
+        "radio"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt1.zip",
+        "member": "Radio pt2/No Connection Radio.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/old-fm-error",
+      "name": "Old FM Error",
+      "category": "retro-radio",
+      "file": "retro-radio/old-fm-error.wav",
+      "format": "wav",
+      "bytes": 1260930,
+      "sha256": "9d8709fae9074616caac26d200d6a3feaa2c2ff55603eebe4c0a4e293c080a48",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "fm",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Old FM Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/placing-needle",
+      "name": "Placing Needle",
+      "category": "retro-radio",
+      "file": "retro-radio/placing-needle.wav",
+      "format": "wav",
+      "bytes": 1702974,
+      "sha256": "f02aa87c15c8ca2cc76b18d554086879e8039092032c44298a539cb694b8f786",
+      "duration_s": 2.936,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "placing",
+        "needle"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Placing Needle.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/radio-chatter-noise",
+      "name": "Radio Chatter Noise",
+      "category": "retro-radio",
+      "file": "retro-radio/radio-chatter-noise.wav",
+      "format": "wav",
+      "bytes": 4438488,
+      "sha256": "5e8bb4aac523698c59f1e643295e8342f212561c05f9ece3d24656d181f3a2bb",
+      "duration_s": 7.674,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "radio",
+        "chatter",
+        "noise"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt1.zip",
+        "member": "Radio pt2/Radio Chatter Noise.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/radio-error",
+      "name": "Radio Error",
+      "category": "retro-radio",
+      "file": "retro-radio/radio-error.wav",
+      "format": "wav",
+      "bytes": 1532268,
+      "sha256": "5580b17f5739853703cd7f8d1543fc76dd4f43dc9c278d7d7e40f1482200cc82",
+      "duration_s": 2.64,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "radio",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Radio Error.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/radio-fm-distort",
+      "name": "Radio FM Distort",
+      "category": "retro-radio",
+      "file": "retro-radio/radio-fm-distort.wav",
+      "format": "wav",
+      "bytes": 1260930,
+      "sha256": "9e926ee7c4281ab82f0801752d824664c0ba0f455dbf23de8d555d6be8092bf1",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "radio",
+        "fm",
+        "distort"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Radio FM Distort.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/radio-jitter-talks",
+      "name": "Radio Jitter Talks",
+      "category": "retro-radio",
+      "file": "retro-radio/radio-jitter-talks.wav",
+      "format": "wav",
+      "bytes": 1702974,
+      "sha256": "27395fac81d40fbbf5bee482347f3c35c4b072f5ca32ec08163cdfd26485e3fb",
+      "duration_s": 2.936,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "radio",
+        "jitter",
+        "talks"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Radio Jitter Talks.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/radio-noise",
+      "name": "Radio Noise",
+      "category": "retro-radio",
+      "file": "retro-radio/radio-noise.wav",
+      "format": "wav",
+      "bytes": 6716262,
+      "sha256": "3194b93a390143cdf0a435e7e4fe978781a74ed8f251d81d9f8f38991e97df34",
+      "duration_s": 11.64,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "radio",
+        "noise"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt1.zip",
+        "member": "Radio pt2/Radio Noise.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/radio-on",
+      "name": "Radio On",
+      "category": "retro-radio",
+      "file": "retro-radio/radio-on.wav",
+      "format": "wav",
+      "bytes": 722796,
+      "sha256": "9b9897a296a58c57fe23ef432670b0127d8284bd8164714d4e5f9b63f3d56420",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "radio"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Radio On.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/radio-search",
+      "name": "Radio Search",
+      "category": "retro-radio",
+      "file": "retro-radio/radio-search.wav",
+      "format": "wav",
+      "bytes": 1702974,
+      "sha256": "76fe3e7bdceb05df013d6e8bf602946cd0389b8526e2bbe938f6b8599e7fc6fb",
+      "duration_s": 2.936,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "radio",
+        "search"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Radio Search.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/replacing-tape",
+      "name": "Replacing Tape",
+      "category": "retro-radio",
+      "file": "retro-radio/replacing-tape.wav",
+      "format": "wav",
+      "bytes": 1530000,
+      "sha256": "2cd8e8616f02918d2b7c5012b7a0efb6dc87ba40364190bfe67cf926fed39bd3",
+      "duration_s": 2.636,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "replacing",
+        "tape"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Replacing Tape.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/taking-out-cassette",
+      "name": "Taking Out Cassette",
+      "category": "retro-radio",
+      "file": "retro-radio/taking-out-cassette.wav",
+      "format": "wav",
+      "bytes": 1299396,
+      "sha256": "64701f752a78345e55c2ce8ef230684bb4d73dc35a93ad566847ae2fdc2e4a46",
+      "duration_s": 2.236,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "taking",
+        "out",
+        "cassette"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Taking Out Cassette.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/tape-insert",
+      "name": "Tape Insert",
+      "category": "retro-radio",
+      "file": "retro-radio/tape-insert.wav",
+      "format": "wav",
+      "bytes": 722796,
+      "sha256": "328bf0c7c87fb1724bc0948df6ba2e04f6350a10bdcefd3043d8fcf4f479df4f",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tape",
+        "insert"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Tape Insert.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/tape-tick",
+      "name": "Tape Tick",
+      "category": "retro-radio",
+      "file": "retro-radio/tape-tick.wav",
+      "format": "wav",
+      "bytes": 299992,
+      "sha256": "36f6044a53fac44eadd3cb3e046f5cf06c62a949b1374627ea841662d486000b",
+      "duration_s": 0.5,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tape",
+        "tick"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Tape Tick.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/vhs",
+      "name": "VHS",
+      "category": "retro-radio",
+      "file": "retro-radio/vhs.wav",
+      "format": "wav",
+      "bytes": 1702974,
+      "sha256": "4b4a52035abf746803e3c3ccc89b1c6a911553a9902b19fa54d9aa1184b616e7",
+      "duration_s": 2.936,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "vhs"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/VHS.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/vintage-cassette",
+      "name": "VIntage Cassette",
+      "category": "retro-radio",
+      "file": "retro-radio/vintage-cassette.wav",
+      "format": "wav",
+      "bytes": 902500,
+      "sha256": "5a319d36e8d8cc1f96aab595410c3e6706335809e433743d4968b601a1e24e2c",
+      "duration_s": 1.535,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "vintage",
+        "cassette"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/VIntage Cassette.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/vintage-cassette-open",
+      "name": "VIntage Cassette Open",
+      "category": "retro-radio",
+      "file": "retro-radio/vintage-cassette-open.wav",
+      "format": "wav",
+      "bytes": 902500,
+      "sha256": "39b595e3043d1d9f8138233b0db12deb73cf31ea17f6721715d7b3bafc0f3f89",
+      "duration_s": 1.535,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "vintage",
+        "cassette",
+        "open"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/VIntage Cassette Open.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/vinyl-radio",
+      "name": "Vinyl Radio",
+      "category": "retro-radio",
+      "file": "retro-radio/vinyl-radio.wav",
+      "format": "wav",
+      "bytes": 1702974,
+      "sha256": "4f5273c43e3250d6974ef2b7b5f216d94ad5f50473b1aece7aed0accbef714cc",
+      "duration_s": 2.936,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "vinyl",
+        "radio"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Vinyl Radio.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-radio/whirling-fm",
+      "name": "Whirling FM",
+      "category": "retro-radio",
+      "file": "retro-radio/whirling-fm.wav",
+      "format": "wav",
+      "bytes": 1260930,
+      "sha256": "8a3fb92a88915564d10d89de629482a17b750dcf7b1f054b8c5e8837d0c945c9",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whirling",
+        "fm"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Radio_Pt2.zip",
+        "member": "Radio/Whirling FM.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-typing/fast-typewriter",
+      "name": "Fast Typewriter",
+      "category": "retro-typing",
+      "file": "retro-typing/fast-typewriter.wav",
+      "format": "wav",
+      "bytes": 2068140,
+      "sha256": "9391e812fa0f18e4461e4182e05e740d2d12ced7fc17909c19c3702e5f2e4470",
+      "duration_s": 3.57,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fast",
+        "typewriter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Typing.zip",
+        "member": "Typing/Fast Typewriter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-typing/next-paper",
+      "name": "Next Paper",
+      "category": "retro-typing",
+      "file": "retro-typing/next-paper.wav",
+      "format": "wav",
+      "bytes": 914988,
+      "sha256": "45df0bd128fc6439ddd43baadd1f324525ea000fe988753819f968e8796e21ac",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "next",
+        "paper"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Typing.zip",
+        "member": "Typing/Next Paper.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-typing/set",
+      "name": "Set",
+      "category": "retro-typing",
+      "file": "retro-typing/set.wav",
+      "format": "wav",
+      "bytes": 914988,
+      "sha256": "0e7bd470c105f3dedf8bc879808a9593cb86ce7be7b2700b8782128813eb2c9d",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "set"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Typing.zip",
+        "member": "Typing/Set.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-typing/space-type",
+      "name": "Space Type",
+      "category": "retro-typing",
+      "file": "retro-typing/space-type.wav",
+      "format": "wav",
+      "bytes": 914988,
+      "sha256": "e5f6ed9ce01871de7faadcbf904e56f00c9bb150c912e0826f96c1d6a443b6bb",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "space",
+        "type"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Typing.zip",
+        "member": "Typing/Space Type.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-typing/type-re-enter",
+      "name": "Type Re-Enter",
+      "category": "retro-typing",
+      "file": "retro-typing/type-re-enter.wav",
+      "format": "wav",
+      "bytes": 914988,
+      "sha256": "fb4753afd40d7c6b3f57bcd0ade5aa10ca3b9d0b04b08731a1cca2269d25e085",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "type",
+        "re",
+        "enter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Typing.zip",
+        "member": "Typing/Type Re-Enter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-typing/typewriter",
+      "name": "Typewriter",
+      "category": "retro-typing",
+      "file": "retro-typing/typewriter.wav",
+      "format": "wav",
+      "bytes": 2068140,
+      "sha256": "bc6b33d787e1109ae9a190d46ddf95849dc831d92c9bb30f12d81007279630d5",
+      "duration_s": 3.57,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "typewriter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Typing.zip",
+        "member": "Typing/Typewriter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-typing/typing-and-next-line",
+      "name": "Typing and Next Line",
+      "category": "retro-typing",
+      "file": "retro-typing/typing-and-next-line.wav",
+      "format": "wav",
+      "bytes": 2068140,
+      "sha256": "c7a3693314a3b183f66803a95ab54a8cae937b5d485ecf21164c53bbb653f0fc",
+      "duration_s": 3.57,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "typing",
+        "next",
+        "line"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Typing.zip",
+        "member": "Typing/Typing and Next Line.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "retro-typing/typing-end-of-letter",
+      "name": "Typing End of Letter",
+      "category": "retro-typing",
+      "file": "retro-typing/typing-end-of-letter.wav",
+      "format": "wav",
+      "bytes": 2068140,
+      "sha256": "631bf638462cd76dd4a0d987db0222bed1a3d28141fa83a9a6980217b57b0d26",
+      "duration_s": 3.57,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "typing",
+        "end",
+        "letter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Typing.zip",
+        "member": "Typing/Typing End of Letter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "science-fiction-ambience/ambience-pulse-soft",
       "name": "Ambience Pulse Soft",
       "category": "science-fiction-ambience",
