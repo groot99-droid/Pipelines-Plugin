@@ -2751,6 +2751,352 @@
       "added": "2026-10-21"
     },
     {
+      "id": "science-fiction-ambience/ambience-pulse-soft",
+      "name": "Ambience Pulse Soft",
+      "category": "science-fiction-ambience",
+      "file": "science-fiction-ambience/ambience-pulse-soft.wav",
+      "format": "wav",
+      "bytes": 2146162,
+      "sha256": "522554ea1a0cc506ea7f852652b37579b818b9b6898d97170a29fff16054e95b",
+      "duration_s": 3.704,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ambience",
+        "pulse",
+        "soft"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Science_fiction_Ambience.zip",
+        "member": "Science fiction Ambience/Ambience Pulse Soft.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-ambience/calm-tone",
+      "name": "Calm Tone",
+      "category": "science-fiction-ambience",
+      "file": "science-fiction-ambience/calm-tone.wav",
+      "format": "wav",
+      "bytes": 2069284,
+      "sha256": "744a2faad6c818a8ef0b433c5791371783812374b9fedd97cd1836d5ea834398",
+      "duration_s": 3.57,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "calm",
+        "tone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Science_fiction_Ambience.zip",
+        "member": "Science fiction Ambience/Calm Tone.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-ambience/clear-space-ambience",
+      "name": "Clear Space Ambience",
+      "category": "science-fiction-ambience",
+      "file": "science-fiction-ambience/clear-space-ambience.wav",
+      "format": "wav",
+      "bytes": 1511324,
+      "sha256": "7ce7dd2391b464ca3c347ae908bd9b6772744abf39267b80f98088e65540fbd5",
+      "duration_s": 2.603,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "clear",
+        "space",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Science_fiction_Ambience.zip",
+        "member": "Science fiction Ambience/Clear Space Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-ambience/deep-ambience",
+      "name": "Deep Ambience",
+      "category": "science-fiction-ambience",
+      "file": "science-fiction-ambience/deep-ambience.wav",
+      "format": "wav",
+      "bytes": 24074654,
+      "sha256": "1b08a8dddba4333f5cd8b80d9a2f3eac9085339da027b9ac54d694d4695d2140",
+      "duration_s": 41.775,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Science_fiction_Ambience_Pt2.zip",
+        "member": "Deep Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-ambience/deep-ambience-sci-fi",
+      "name": "Deep Ambience Sci-Fi",
+      "category": "science-fiction-ambience",
+      "file": "science-fiction-ambience/deep-ambience-sci-fi.wav",
+      "format": "wav",
+      "bytes": 2165380,
+      "sha256": "8502b1f9462d3b0092014ee80c1cc0ece509c3c252a122ec3a4372344743eb76",
+      "duration_s": 3.737,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "ambience",
+        "sci",
+        "fi"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Science_fiction_Ambience.zip",
+        "member": "Science fiction Ambience/Deep Ambience Sci-Fi.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-ambience/deep-mars-ambience",
+      "name": "Deep Mars Ambience",
+      "category": "science-fiction-ambience",
+      "file": "science-fiction-ambience/deep-mars-ambience.wav",
+      "format": "wav",
+      "bytes": 15082950,
+      "sha256": "8bc64ee184209564d6f5d8d179a7f67740494a3d5647f5bc554f9655679e1cb8",
+      "duration_s": 26.159,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "mars",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Science_fiction_Ambience_Pt2.zip",
+        "member": "Deep Mars Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-ambience/deep-scary-ambience",
+      "name": "Deep Scary Ambience",
+      "category": "science-fiction-ambience",
+      "file": "science-fiction-ambience/deep-scary-ambience.wav",
+      "format": "wav",
+      "bytes": 24077600,
+      "sha256": "0a0d23bf6766b080ff1c7900def6b8900bf2273b0e6b2eb86eeee5181af053f3",
+      "duration_s": 41.775,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "scary",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Science_fiction_Ambience_Pt2.zip",
+        "member": "Deep Scary Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-ambience/hollow-bells-ambience",
+      "name": "Hollow Bells Ambience",
+      "category": "science-fiction-ambience",
+      "file": "science-fiction-ambience/hollow-bells-ambience.wav",
+      "format": "wav",
+      "bytes": 14829618,
+      "sha256": "4f30e32270d1aaeb107944ae3fc546c3bb79abddf7029bc6cc161a51718ce59c",
+      "duration_s": 25.726,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hollow",
+        "bells",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Science_fiction_Ambience_Pt2.zip",
+        "member": "Hollow Bells Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-ambience/rising-inside-ambience",
+      "name": "Rising Inside Ambience",
+      "category": "science-fiction-ambience",
+      "file": "science-fiction-ambience/rising-inside-ambience.wav",
+      "format": "wav",
+      "bytes": 18502214,
+      "sha256": "2aee00f84b9ec94704334390cf248c8a990d54bd0da99d9a830783ebd233f9b0",
+      "duration_s": 32.099,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rising",
+        "inside",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Science_fiction_Ambience_Pt2.zip",
+        "member": "Rising Inside Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-ambience/space-ambience-lost",
+      "name": "Space Ambience Lost",
+      "category": "science-fiction-ambience",
+      "file": "science-fiction-ambience/space-ambience-lost.wav",
+      "format": "wav",
+      "bytes": 2261476,
+      "sha256": "635767f65c65c0d25876af06d8ecb6e5bb79556397d2469d3bc8c9a4a6bc1b91",
+      "duration_s": 3.904,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "space",
+        "ambience",
+        "lost"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Science_fiction_Ambience.zip",
+        "member": "Science fiction Ambience/Space Ambience Lost.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-ambience/spaceship-ambience",
+      "name": "Spaceship Ambience",
+      "category": "science-fiction-ambience",
+      "file": "science-fiction-ambience/spaceship-ambience.wav",
+      "format": "wav",
+      "bytes": 16312408,
+      "sha256": "2cfab29f797cc889dd9388179f677d3b4bee455c4f41f5a22b7fe3b1364af3d4",
+      "duration_s": 28.295,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "spaceship",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Science_fiction_Ambience_Pt2.zip",
+        "member": "Spaceship Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-ambience/stars-ambience",
+      "name": "Stars Ambience",
+      "category": "science-fiction-ambience",
+      "file": "science-fiction-ambience/stars-ambience.wav",
+      "format": "wav",
+      "bytes": 23132318,
+      "sha256": "83070c6a71c4974755560b56125a7d7cb988cc41fa5e79cfd48c21b98031d5e2",
+      "duration_s": 40.14,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "stars",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Science_fiction_Ambience_Pt2.zip",
+        "member": "Stars Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-ambience/survive-space-ambience",
+      "name": "Survive Space Ambience",
+      "category": "science-fiction-ambience",
+      "file": "science-fiction-ambience/survive-space-ambience.wav",
+      "format": "wav",
+      "bytes": 14829624,
+      "sha256": "8a602f91eeed0368ae17a3d1942183f9153cd5edddee76a8366bd62fa1cddbd3",
+      "duration_s": 25.726,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "survive",
+        "space",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Science_fiction_Ambience_Pt2.zip",
+        "member": "Survive Space Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "science-fiction-ambience/tense-ambience",
+      "name": "Tense Ambience",
+      "category": "science-fiction-ambience",
+      "file": "science-fiction-ambience/tense-ambience.wav",
+      "format": "wav",
+      "bytes": 24079316,
+      "sha256": "9912b266306a11c35e33a091685b2608f8f6d666990d19be09069188b6a588c6",
+      "duration_s": 41.775,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tense",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Science_fiction_Ambience_Pt2.zip",
+        "member": "Tense Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "trains/braking-train",
       "name": "Braking Train",
       "category": "trains",
