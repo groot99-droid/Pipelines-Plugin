@@ -20753,6 +20753,4733 @@
       "added": "2026-10-21"
     },
     {
+      "id": "impacts/ambient-flat-impact",
+      "name": "Ambient Flat Impact",
+      "category": "impacts",
+      "file": "impacts/ambient-flat-impact.wav",
+      "format": "wav",
+      "bytes": 1068684,
+      "sha256": "9b9b9be2b0cc5247464d53fd98e8fe20dfcd2ea4f1a91c1196b83a593e406314",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ambient",
+        "flat",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Ambient Flat Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/bass-drop-impact",
+      "name": "Bass Drop Impact",
+      "category": "impacts",
+      "file": "impacts/bass-drop-impact.wav",
+      "format": "wav",
+      "bytes": 3009808,
+      "sha256": "a4538fda4e2ff5c0bef383493800dcd453cb5f81d6b21dffd3ca198e6d9ae9ba",
+      "duration_s": 5.205,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "drop",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt8.zip",
+        "member": "untitled folder 8/Bass Drop Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/bass-impact",
+      "name": "Bass Impact",
+      "category": "impacts",
+      "file": "impacts/bass-impact.wav",
+      "format": "wav",
+      "bytes": 2106930,
+      "sha256": "c69df8c2a69d56c55b58764cb48060553bef0b7971c231f4dccfacb65b1e2cad",
+      "duration_s": 2.72,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt5.zip",
+        "member": "untitled folder 5/Bass Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/bass-impact-echo",
+      "name": "Bass Impact Echo",
+      "category": "impacts",
+      "file": "impacts/bass-impact-echo.wav",
+      "format": "wav",
+      "bytes": 2169022,
+      "sha256": "8862a2412531bf149f8261725afec189dbf5edf3356a38bfe3459c3475b3dcf1",
+      "duration_s": 2.8,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "impact",
+        "echo"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt5.zip",
+        "member": "untitled folder 5/Bass Impact Echo.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/bass-impact-inside",
+      "name": "Bass Impact Inside",
+      "category": "impacts",
+      "file": "impacts/bass-impact-inside.wav",
+      "format": "wav",
+      "bytes": 1738298,
+      "sha256": "d510252a98b5285d4d77df09cbd25a07820480c98ebfec7d6d92a7eae2782241",
+      "duration_s": 2.24,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "impact",
+        "inside"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Bass Impact Inside.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/bass-jitter-impact",
+      "name": "Bass Jitter Impact",
+      "category": "impacts",
+      "file": "impacts/bass-jitter-impact.wav",
+      "format": "wav",
+      "bytes": 1837426,
+      "sha256": "7a72072e1107eeb51d71b7b3aef929e25aefacc03aabb1736267b2a39d64a80d",
+      "duration_s": 3.17,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "jitter",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt5.zip",
+        "member": "untitled folder 5/Bass Jitter Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/bass-rumble-impact",
+      "name": "Bass Rumble Impact",
+      "category": "impacts",
+      "file": "impacts/bass-rumble-impact.wav",
+      "format": "wav",
+      "bytes": 1057468,
+      "sha256": "549d34635f62b82be3c4ddc9e189562c7ffdcf376c99b8bf52d12a4f3ba9342a",
+      "duration_s": 1.829,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "rumble",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Bass Rumble Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/bass-spacial-impact",
+      "name": "Bass Spacial Impact",
+      "category": "impacts",
+      "file": "impacts/bass-spacial-impact.wav",
+      "format": "wav",
+      "bytes": 1222440,
+      "sha256": "5811fc64c0316c58ad15b0f02c5f600d36172b31846549a6472115e2f492c299",
+      "duration_s": 2.102,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "spacial",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Bass Spacial Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/bass-wire-impact",
+      "name": "Bass Wire Impact",
+      "category": "impacts",
+      "file": "impacts/bass-wire-impact.wav",
+      "format": "wav",
+      "bytes": 2500176,
+      "sha256": "03e047af609cdabc727d2fc477e6fc6aea2af5626b123ffb169f2e91d272d871",
+      "duration_s": 3.24,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "wire",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt6.zip",
+        "member": "untitled folder 6/Bass Wire Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/boom-short-impact",
+      "name": "Boom Short Impact",
+      "category": "impacts",
+      "file": "impacts/boom-short-impact.wav",
+      "format": "wav",
+      "bytes": 299896,
+      "sha256": "e409f190c85b163f4cdf4e240366d66e4e26ab44a6ab3279fd26bde516aecddb",
+      "duration_s": 0.5,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "boom",
+        "short",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Boom Short Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/braam-with-low-reverb",
+      "name": "Braam With Low Reverb",
+      "category": "impacts",
+      "file": "impacts/braam-with-low-reverb.wav",
+      "format": "wav",
+      "bytes": 1365706,
+      "sha256": "ebe47095f01d57caef2d235539d72332a99f3a70c2d8af7b8e255ab66d0261ab",
+      "duration_s": 2.364,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "braam",
+        "low",
+        "reverb"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Braam With Low Reverb.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/cinematic-bulb-impact",
+      "name": "Cinematic Bulb Impact",
+      "category": "impacts",
+      "file": "impacts/cinematic-bulb-impact.wav",
+      "format": "wav",
+      "bytes": 1139032,
+      "sha256": "d89dcb14d19833c47e1ab0fa87985634a80ff41d2742f0d15c8a7d1e3c264635",
+      "duration_s": 1.97,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "bulb",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Cinematic Bulb Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/cinematic-impact",
+      "name": "Cinematic Impact",
+      "category": "impacts",
+      "file": "impacts/cinematic-impact.wav",
+      "format": "wav",
+      "bytes": 921512,
+      "sha256": "0d965fd6d393bf4936cfd08fe7b8fa8b7cae9acf1c29bea4aee450401f83dafe",
+      "duration_s": 3.136,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Cinematic Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/cinematic-whoosh-impact",
+      "name": "CInematic Whoosh Impact",
+      "category": "impacts",
+      "file": "impacts/cinematic-whoosh-impact.wav",
+      "format": "wav",
+      "bytes": 2142784,
+      "sha256": "6f477c795e58080757f47ed169184a888a2307722f13d1d3a581c3c0af394be4",
+      "duration_s": 3.713,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "whoosh",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt5.zip",
+        "member": "untitled folder 5/CInematic Whoosh Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/clean-deep-impact",
+      "name": "Clean Deep Impact",
+      "category": "impacts",
+      "file": "impacts/clean-deep-impact.wav",
+      "format": "wav",
+      "bytes": 1125004,
+      "sha256": "862adf33c06e1a349ae9a57f54007c027eb149fdd609d280ce5c66723cd0e5fa",
+      "duration_s": 1.946,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "clean",
+        "deep",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Clean Deep Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/cracking-impact",
+      "name": "Cracking Impact",
+      "category": "impacts",
+      "file": "impacts/cracking-impact.wav",
+      "format": "wav",
+      "bytes": 1031794,
+      "sha256": "9412a673d1c2d26ef75a1fb68451b2d14045e6ead484d5a47d857cb8832444e7",
+      "duration_s": 1.784,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cracking",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Cracking Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/dark-impact",
+      "name": "Dark Impact",
+      "category": "impacts",
+      "file": "impacts/dark-impact.wav",
+      "format": "wav",
+      "bytes": 882896,
+      "sha256": "4a88ecb35a133dd27f7840aec1f6078d555f357cb4747b426b408808c94837ed",
+      "duration_s": 1.502,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "dark",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Dark Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/dark-layered-impact",
+      "name": "Dark Layered  Impact",
+      "category": "impacts",
+      "file": "impacts/dark-layered-impact.wav",
+      "format": "wav",
+      "bytes": 1402324,
+      "sha256": "a90d9ab00281073426cfa4d95cb39622827bcac78d17a19e54c14dc132e48e01",
+      "duration_s": 2.427,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "dark",
+        "layered",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Dark Layered  Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-ambient-impact",
+      "name": "Deep Ambient Impact",
+      "category": "impacts",
+      "file": "impacts/deep-ambient-impact.wav",
+      "format": "wav",
+      "bytes": 741960,
+      "sha256": "e2f4f96c73468e83de8df94a78bf1f67cca6813224f77bb845163ce9dae28522",
+      "duration_s": 1.268,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "ambient",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Deep Ambient Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-bass",
+      "name": "Deep Bass",
+      "category": "impacts",
+      "file": "impacts/deep-bass.wav",
+      "format": "wav",
+      "bytes": 450474,
+      "sha256": "02d4293e4f3d7cf2b42427ba9e81a72a3eb252423409d28b71e0f51360d031c6",
+      "duration_s": 1.502,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Deep Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-bass-far-impact",
+      "name": "Deep Bass Far Impact",
+      "category": "impacts",
+      "file": "impacts/deep-bass-far-impact.wav",
+      "format": "wav",
+      "bytes": 1126344,
+      "sha256": "4268941503564d06c71149f80b7a6096ae5a3667b253cc3154f6fa6f78ba6433",
+      "duration_s": 1.935,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass",
+        "far",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Deep Bass Far Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-bass-impact",
+      "name": "Deep Bass Impact",
+      "category": "impacts",
+      "file": "impacts/deep-bass-impact.wav",
+      "format": "wav",
+      "bytes": 1882302,
+      "sha256": "4dba9bbfb2dfd35eda5f96ed8fc72c9af59edbcb2268053a1cba4f585c85b4ea",
+      "duration_s": 3.237,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt5.zip",
+        "member": "untitled folder 5/Deep Bass Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-bass-low-impact",
+      "name": "Deep Bass Low Impact",
+      "category": "impacts",
+      "file": "impacts/deep-bass-low-impact.wav",
+      "format": "wav",
+      "bytes": 2817632,
+      "sha256": "c421d16de8f06f52750266b49c0a2dceb4e72b4b02fcdc422a8202a404ce999f",
+      "duration_s": 4.872,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass",
+        "low",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt8.zip",
+        "member": "untitled folder 8/Deep Bass Low Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-break-impact",
+      "name": "Deep Break Impact",
+      "category": "impacts",
+      "file": "impacts/deep-break-impact.wav",
+      "format": "wav",
+      "bytes": 3381400,
+      "sha256": "d6c3f7b89a5ce3603cc11913b219cc527ed75b850d97d63f0d0d462ae82ca345",
+      "duration_s": 5.839,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "break",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt9.zip",
+        "member": "untitled folder 9/Deep Break Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-down-impact",
+      "name": "Deep Down Impact",
+      "category": "impacts",
+      "file": "impacts/deep-down-impact.wav",
+      "format": "wav",
+      "bytes": 5795130,
+      "sha256": "b8cd3822ad3b3e5d27715ceabde008944172e4d0a722f16ae20af33219c999d5",
+      "duration_s": 7.52,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "down",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt11.zip",
+        "member": "untitled folder 11/Deep Down Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-electric-impact",
+      "name": "Deep Electric Impact",
+      "category": "impacts",
+      "file": "impacts/deep-electric-impact.wav",
+      "format": "wav",
+      "bytes": 2036058,
+      "sha256": "dcd86da4a54ba94e5206c18e45b731c3028c51142d372c36bad2bac369ae684f",
+      "duration_s": 3.503,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "electric",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt5.zip",
+        "member": "untitled folder 5/Deep Electric Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-feather-flame-impact",
+      "name": "Deep Feather Flame Impact",
+      "category": "impacts",
+      "file": "impacts/deep-feather-flame-impact.wav",
+      "format": "wav",
+      "bytes": 4854850,
+      "sha256": "b8c768a2a08fbfeebe99c529c27dec19073d710c2102ab518792e88267cb5bfe",
+      "duration_s": 8.408,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "feather",
+        "flame",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt11.zip",
+        "member": "untitled folder 11/Deep Feather Flame Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-flat-impact",
+      "name": "Deep Flat Impact",
+      "category": "impacts",
+      "file": "impacts/deep-flat-impact.wav",
+      "format": "wav",
+      "bytes": 511332,
+      "sha256": "40340048adda3115e21d5a13179d8230aeeabef861a7a5a45a648cb93e02047e",
+      "duration_s": 0.868,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "flat",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Deep Flat Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-high-tone-impact",
+      "name": "Deep High Tone Impact",
+      "category": "impacts",
+      "file": "impacts/deep-high-tone-impact.wav",
+      "format": "wav",
+      "bytes": 1301398,
+      "sha256": "c8f7f537e82b91f7b156aaa9850cb762aefbb2468e1febfa491fae907dfbcafe",
+      "duration_s": 2.252,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "high",
+        "tone",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Deep High Tone Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-hit-feather-impact",
+      "name": "Deep Hit Feather Impact",
+      "category": "impacts",
+      "file": "impacts/deep-hit-feather-impact.wav",
+      "format": "wav",
+      "bytes": 2721562,
+      "sha256": "5bd0e601b0d4dcc83e4fc47135d348cfdd7f4815dbe9a5efe18c227d3fb18e80",
+      "duration_s": 4.705,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "hit",
+        "feather",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt7.zip",
+        "member": "untitled folder 7/Deep Hit Feather Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-impact-rumble",
+      "name": "Deep Impact Rumble",
+      "category": "impacts",
+      "file": "impacts/deep-impact-rumble.wav",
+      "format": "wav",
+      "bytes": 7141940,
+      "sha256": "44b19a73f51c2ca35553f4c12563fe3652cbe778a946cfd3a5209bc3bad686c6",
+      "duration_s": 12.379,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "impact",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt12.zip",
+        "member": "untitled folder 12/Deep Impact Rumble.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-incoming-bass-impact",
+      "name": "Deep Incoming Bass Impact",
+      "category": "impacts",
+      "file": "impacts/deep-incoming-bass-impact.wav",
+      "format": "wav",
+      "bytes": 1330222,
+      "sha256": "05b22320888722ef4a5a7603caf14aa1704f0830249c340e423f2e24f2f2cf71",
+      "duration_s": 2.302,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "incoming",
+        "bass",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Deep Incoming Bass Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-incoming-impact",
+      "name": "Deep Incoming Impact",
+      "category": "impacts",
+      "file": "impacts/deep-incoming-impact.wav",
+      "format": "wav",
+      "bytes": 1279582,
+      "sha256": "edb581d3d10de93a42f5d364a07829186f26d0ac8b9d04d541da2a2bed5abbd2",
+      "duration_s": 2.214,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "incoming",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Deep Incoming Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-layered-impact",
+      "name": "Deep Layered Impact",
+      "category": "impacts",
+      "file": "impacts/deep-layered-impact.wav",
+      "format": "wav",
+      "bytes": 857868,
+      "sha256": "caa4b58f04cd60963c8979c5440ba1cc5b3fa3633f4f9d7cf8f34e2071960672",
+      "duration_s": 1.468,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "layered",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Deep Layered Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-layered-pure-impact",
+      "name": "Deep Layered Pure Impact",
+      "category": "impacts",
+      "file": "impacts/deep-layered-pure-impact.wav",
+      "format": "wav",
+      "bytes": 1381282,
+      "sha256": "cb3b60610299505103925fa246977ae28de67755eab6dad146123176f75431fc",
+      "duration_s": 2.391,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "layered",
+        "pure",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Deep Layered Pure Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-long-impact",
+      "name": "Deep Long Impact",
+      "category": "impacts",
+      "file": "impacts/deep-long-impact.wav",
+      "format": "wav",
+      "bytes": 4355154,
+      "sha256": "9a5148475b7ebe52b4707b8676d7c72facc807573ab8392f59fe0d7acf02d367",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "long",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt10.zip",
+        "member": "untitled folder 10/Deep Long Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-low-smooth-impact",
+      "name": "Deep Low Smooth Impact",
+      "category": "impacts",
+      "file": "impacts/deep-low-smooth-impact.wav",
+      "format": "wav",
+      "bytes": 3110944,
+      "sha256": "7469bc387acfe8dff9581914dc00517c96eeeabf7ef2deef82e8e9aef8553ffa",
+      "duration_s": 5.394,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "low",
+        "smooth",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt9.zip",
+        "member": "untitled folder 9/Deep Low Smooth Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-low-straight-impact",
+      "name": "Deep Low Straight Impact",
+      "category": "impacts",
+      "file": "impacts/deep-low-straight-impact.wav",
+      "format": "wav",
+      "bytes": 1068684,
+      "sha256": "2bc4054aa27539989b0dda0cc149f3ed57c861fa90bf90a81a3397e2f5438cec",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "low",
+        "straight",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Deep Low Straight Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-mechanical-impact",
+      "name": "Deep Mechanical Impact",
+      "category": "impacts",
+      "file": "impacts/deep-mechanical-impact.wav",
+      "format": "wav",
+      "bytes": 2420446,
+      "sha256": "6acfc6789b91e865f899a366ce0edf38847d93fba6a6ab4f362a4f83f8fcb7fb",
+      "duration_s": 4.171,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "mechanical",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt6.zip",
+        "member": "untitled folder 6/Deep Mechanical Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-metal-impact",
+      "name": "Deep Metal Impact",
+      "category": "impacts",
+      "file": "impacts/deep-metal-impact.wav",
+      "format": "wav",
+      "bytes": 1939956,
+      "sha256": "0c4c5283de32a3ba146195e62b2cbbe439148f03daa986d9dccdf93a68331439",
+      "duration_s": 3.337,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "metal",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt5.zip",
+        "member": "untitled folder 5/Deep Metal Impact .wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-ominous-impact",
+      "name": "Deep Ominous Impact",
+      "category": "impacts",
+      "file": "impacts/deep-ominous-impact.wav",
+      "format": "wav",
+      "bytes": 2478102,
+      "sha256": "22c3cf0864c9f111207c91d9072fd3cc3853326b37302042ebf43e0280f19b0c",
+      "duration_s": 4.271,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "ominous",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt6.zip",
+        "member": "untitled folder 6/Deep Ominous Impact .wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-pure-impact",
+      "name": "Deep Pure Impact",
+      "category": "impacts",
+      "file": "impacts/deep-pure-impact.wav",
+      "format": "wav",
+      "bytes": 1479196,
+      "sha256": "454d9537fd7e2afc32d18dc327afe5d1649feb129117a779aa348ae449cae955",
+      "duration_s": 2.561,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "pure",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Deep Pure Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-rave-impact",
+      "name": "Deep Rave Impact",
+      "category": "impacts",
+      "file": "impacts/deep-rave-impact.wav",
+      "format": "wav",
+      "bytes": 665082,
+      "sha256": "38a29125ed7d64d39ac656f07c912bbbe808e206df609abc8dafcb9b0d3895aa",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "rave",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Deep Rave Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-reverb-impact",
+      "name": "Deep Reverb Impact",
+      "category": "impacts",
+      "file": "impacts/deep-reverb-impact.wav",
+      "format": "wav",
+      "bytes": 1370410,
+      "sha256": "49ceedce2ab7834e63e49d0b6bbe896a6b83fe8c943a7a60641882944724f3e4",
+      "duration_s": 2.372,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "reverb",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Deep Reverb Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-reverb-tail-impact",
+      "name": "Deep Reverb Tail Impact",
+      "category": "impacts",
+      "file": "impacts/deep-reverb-tail-impact.wav",
+      "format": "wav",
+      "bytes": 1414632,
+      "sha256": "667c5383c7277204e3ff0fc2e924642fc3074705c7c1aaa7d988c44e035d528b",
+      "duration_s": 2.436,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "reverb",
+        "tail",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Deep Reverb Tail Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-space-impact",
+      "name": "Deep Space Impact",
+      "category": "impacts",
+      "file": "impacts/deep-space-impact.wav",
+      "format": "wav",
+      "bytes": 1807206,
+      "sha256": "43ca169e2f6bd15ab97040018a0e80a86e6601f39164883d98421e8499d01901",
+      "duration_s": 3.103,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "space",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Deep Space Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-spacial-impact",
+      "name": "Deep Spacial Impact",
+      "category": "impacts",
+      "file": "impacts/deep-spacial-impact.wav",
+      "format": "wav",
+      "bytes": 998224,
+      "sha256": "6a694a4fef9c17e536e95fdca76f2b87ecf31e286849945631a0f3d3fdfc9540",
+      "duration_s": 1.702,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "spacial",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Deep Spacial Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-sub-impact",
+      "name": "Deep Sub Impact",
+      "category": "impacts",
+      "file": "impacts/deep-sub-impact.wav",
+      "format": "wav",
+      "bytes": 1021624,
+      "sha256": "cf4f2c76be3bc968dd23f83432d20be51299d3b0420f5b91ec1a04743052b325",
+      "duration_s": 1.767,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "sub",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt5.zip",
+        "member": "untitled folder 5/Deep Sub Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/deep-tone-impact",
+      "name": "Deep Tone Impact",
+      "category": "impacts",
+      "file": "impacts/deep-tone-impact.wav",
+      "format": "wav",
+      "bytes": 1301608,
+      "sha256": "391de186bbbb6ad93ec5e34d074195999b81e467efeacc38c994bb1c1e8f890e",
+      "duration_s": 2.253,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "tone",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Deep Tone Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/distorted-ambience-impact",
+      "name": "Distorted Ambience Impact",
+      "category": "impacts",
+      "file": "impacts/distorted-ambience-impact.wav",
+      "format": "wav",
+      "bytes": 3642950,
+      "sha256": "40dcb3fbbc34f835572de58e65d9f9fb2acd3da2dd12f9dcc9ce1a8100b9c7b4",
+      "duration_s": 4.72,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "ambience",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt9.zip",
+        "member": "untitled folder 9/Distorted Ambience Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/distorted-feather-impact",
+      "name": "Distorted Feather Impact",
+      "category": "impacts",
+      "file": "impacts/distorted-feather-impact.wav",
+      "format": "wav",
+      "bytes": 1203216,
+      "sha256": "38f6884a5c84c4ebdaa10d2c5b728985e8a97128788b8982dad0cf20fba02af6",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "feather",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Distorted Feather Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/distorted-impact",
+      "name": "Distorted Impact",
+      "category": "impacts",
+      "file": "impacts/distorted-impact.wav",
+      "format": "wav",
+      "bytes": 1864338,
+      "sha256": "7ae803b6309ff7761263e444b2bf34c0b3d08042f64df1a4466ddeebd0c1b070",
+      "duration_s": 3.203,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt5.zip",
+        "member": "untitled folder 5/Distorted Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/double-impact",
+      "name": "Double Impact",
+      "category": "impacts",
+      "file": "impacts/double-impact.wav",
+      "format": "wav",
+      "bytes": 4971908,
+      "sha256": "f88bad96d9ea6c1a54952e5b326188855d0882d021e7ac4855b427da9c46b6e7",
+      "duration_s": 8.609,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "double",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt11.zip",
+        "member": "untitled folder 11/Double Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/double-metal-impact",
+      "name": "Double Metal Impact",
+      "category": "impacts",
+      "file": "impacts/double-metal-impact.wav",
+      "format": "wav",
+      "bytes": 2143630,
+      "sha256": "c2e88038cf897340d9b66b23b0083d4f571c460e0323bac8a9ae052fe41b63ee",
+      "duration_s": 3.714,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "double",
+        "metal",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt5.zip",
+        "member": "untitled folder 5/Double Metal Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/drum-bass-impact",
+      "name": "Drum Bass Impact",
+      "category": "impacts",
+      "file": "impacts/drum-bass-impact.wav",
+      "format": "wav",
+      "bytes": 1011316,
+      "sha256": "55bbffd7fd2e8414a8e9692cacdec5391f68b1135974104a1cf0f85e80d7f02f",
+      "duration_s": 1.749,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "drum",
+        "bass",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Drum Bass Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/drum-impact",
+      "name": "Drum Impact",
+      "category": "impacts",
+      "file": "impacts/drum-impact.wav",
+      "format": "wav",
+      "bytes": 2490888,
+      "sha256": "ebaec082d91db2d6537690cf83bed28ac13dae3203d3958d3a7b28ac64dd3d1c",
+      "duration_s": 4.304,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "drum",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt6.zip",
+        "member": "untitled folder 6/Drum Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/dust-whoosh-impact",
+      "name": "Dust Whoosh Impact",
+      "category": "impacts",
+      "file": "impacts/dust-whoosh-impact.wav",
+      "format": "wav",
+      "bytes": 2817630,
+      "sha256": "c824a2c078c0bc833cfe757c42a2f2be342962ffe25db44c0feeb884b6b3988a",
+      "duration_s": 4.872,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "dust",
+        "whoosh",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt7.zip",
+        "member": "untitled folder 7/Dust Whoosh Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/echo-reverb-impact",
+      "name": "Echo Reverb Impact",
+      "category": "impacts",
+      "file": "impacts/echo-reverb-impact.wav",
+      "format": "wav",
+      "bytes": 1209632,
+      "sha256": "f175c5b59de1f0909f172191e577dbe019d2a2e2de4e5db46fd7773a3284ef83",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "echo",
+        "reverb",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Echo Reverb Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/error-impact",
+      "name": "Error Impact",
+      "category": "impacts",
+      "file": "impacts/error-impact.wav",
+      "format": "wav",
+      "bytes": 722742,
+      "sha256": "9d6dbb8f362ce51c9b24ee04a0aa682ffa26ff5747bcee0b31b1726d63d8a593",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "error",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Error Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/explode-impact",
+      "name": "Explode Impact",
+      "category": "impacts",
+      "file": "impacts/explode-impact.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "f20944696c9beb28ba8e9d399371e152541ea5353c224d8f64e6105d2564514c",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "explode",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Explode Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/exploding-impact",
+      "name": "Exploding Impact",
+      "category": "impacts",
+      "file": "impacts/exploding-impact.wav",
+      "format": "wav",
+      "bytes": 2735602,
+      "sha256": "8ca53260ffd539beab8d1c9ae27a2e452146942dce3b06fc552c85750741b62c",
+      "duration_s": 4.742,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "exploding",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt7.zip",
+        "member": "untitled folder 7/Exploding Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/explosion-deep-low-impact",
+      "name": "Explosion Deep Low Impact",
+      "category": "impacts",
+      "file": "impacts/explosion-deep-low-impact.wav",
+      "format": "wav",
+      "bytes": 1036918,
+      "sha256": "7c0a3a2fee1cf3bb7ac5425a32f5bd64517883930d3272d8b163e495fbc25487",
+      "duration_s": 1.793,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "explosion",
+        "deep",
+        "low",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Explosion Deep Low Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/explosion-impact",
+      "name": "Explosion Impact",
+      "category": "impacts",
+      "file": "impacts/explosion-impact.wav",
+      "format": "wav",
+      "bytes": 1212824,
+      "sha256": "bb3970d4ffb7d81f68e2cc1ecdbdb5b06b450d7270f96bc011f407f35657253e",
+      "duration_s": 4.171,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "explosion",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Explosion Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/extra-deep-impact",
+      "name": "Extra Deep Impact",
+      "category": "impacts",
+      "file": "impacts/extra-deep-impact.wav",
+      "format": "wav",
+      "bytes": 1148356,
+      "sha256": "c715e6e0656b94866c58636b7db0413b859adef1ab2ea4c9e17b0c1effe41a26",
+      "duration_s": 1.987,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "extra",
+        "deep",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Extra Deep Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/extra-deep-low-impact",
+      "name": "Extra Deep Low Impact",
+      "category": "impacts",
+      "file": "impacts/extra-deep-low-impact.wav",
+      "format": "wav",
+      "bytes": 1316896,
+      "sha256": "9ea54d293849366af701918bc4133ad1b957859c792db20473aa37b875e1a75e",
+      "duration_s": 2.279,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "extra",
+        "deep",
+        "low",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Extra Deep Low Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/extremely-deep-impact",
+      "name": "Extremely Deep Impact",
+      "category": "impacts",
+      "file": "impacts/extremely-deep-impact.wav",
+      "format": "wav",
+      "bytes": 1320052,
+      "sha256": "831a21c8ffc5579a4dc4a3755884cb01db13b8cefc7ce1bc06b0456887536376",
+      "duration_s": 2.285,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "extremely",
+        "deep",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Extremely Deep Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/fade-impact",
+      "name": "Fade Impact",
+      "category": "impacts",
+      "file": "impacts/fade-impact.wav",
+      "format": "wav",
+      "bytes": 1414632,
+      "sha256": "dead1cb42e1274fcf93f4fc3a6b683bdb8ba02086cbb9c0872a5071840d7f081",
+      "duration_s": 2.436,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fade",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Fade Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/fade-out-rumble-impact",
+      "name": "Fade Out Rumble Impact",
+      "category": "impacts",
+      "file": "impacts/fade-out-rumble-impact.wav",
+      "format": "wav",
+      "bytes": 1414632,
+      "sha256": "2709cc86aa8d77aa9b9cf6767352eeac355f6e999df5feacb77a4c2bbb057e47",
+      "duration_s": 2.436,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fade",
+        "out",
+        "rumble",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Fade Out Rumble Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/far-off-impact",
+      "name": "Far Off Impact",
+      "category": "impacts",
+      "file": "impacts/far-off-impact.wav",
+      "format": "wav",
+      "bytes": 1068684,
+      "sha256": "d50d8c2934091135835eaa200b828ae750a389baf4010263231def08a7099682",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "far",
+        "off",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Far Off Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/fast-braam-impact",
+      "name": "Fast Braam Impact",
+      "category": "impacts",
+      "file": "impacts/fast-braam-impact.wav",
+      "format": "wav",
+      "bytes": 2798474,
+      "sha256": "91efe9b46cd4b872b1d02474d03f8d84b30415b11094d6308959bc7c1ef272b3",
+      "duration_s": 4.838,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fast",
+        "braam",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt7.zip",
+        "member": "untitled folder 7/Fast Braam Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/fast-deep-impact",
+      "name": "Fast Deep Impact",
+      "category": "impacts",
+      "file": "impacts/fast-deep-impact.wav",
+      "format": "wav",
+      "bytes": 645864,
+      "sha256": "bf43257881428afc5f9c9746a1f386b4ba8b279b62fc555939380649e47dfffd",
+      "duration_s": 1.101,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fast",
+        "deep",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Fast Deep Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/fast-impact-aftermath",
+      "name": "Fast Impact Aftermath",
+      "category": "impacts",
+      "file": "impacts/fast-impact-aftermath.wav",
+      "format": "wav",
+      "bytes": 1529924,
+      "sha256": "4afaa195781876c24e09b97b457a0ae525caf617ac92efc2ec069ab67437ae49",
+      "duration_s": 2.636,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fast",
+        "impact",
+        "aftermath"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Fast Impact Aftermath.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/feather-impact",
+      "name": "Feather Impact",
+      "category": "impacts",
+      "file": "impacts/feather-impact.wav",
+      "format": "wav",
+      "bytes": 895694,
+      "sha256": "886cc9817b32739961d99d6896ba0a59560663c07c8dc7db30712979b198397c",
+      "duration_s": 1.535,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "feather",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Feather Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/futuristic-deep-bass-impact",
+      "name": "Futuristic Deep Bass Impact",
+      "category": "impacts",
+      "file": "impacts/futuristic-deep-bass-impact.wav",
+      "format": "wav",
+      "bytes": 3417220,
+      "sha256": "3f4068a888bcfaf6b05a9a8c153e7c1ab360d334017fa73fc56c4a24e62d4175",
+      "duration_s": 5.926,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "futuristic",
+        "deep",
+        "bass",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt9.zip",
+        "member": "untitled folder 9/Futuristic Deep Bass Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/granular-impact",
+      "name": "Granular Impact",
+      "category": "impacts",
+      "file": "impacts/granular-impact.wav",
+      "format": "wav",
+      "bytes": 2817632,
+      "sha256": "4fd8a44a16fb288ee2800b34b0f88e765c20e6cc913de1db63a75c7dfd1fb73b",
+      "duration_s": 4.872,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "granular",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt7.zip",
+        "member": "untitled folder 7/Granular Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/granular-metal-impact",
+      "name": "Granular Metal Impact",
+      "category": "impacts",
+      "file": "impacts/granular-metal-impact.wav",
+      "format": "wav",
+      "bytes": 994762,
+      "sha256": "1e63070e0174bc34257b2097ce327f7b71f74867c798a792678470dc495a197e",
+      "duration_s": 1.72,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "granular",
+        "metal",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Granular Metal Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/granular-reverb-impact",
+      "name": "Granular Reverb Impact",
+      "category": "impacts",
+      "file": "impacts/granular-reverb-impact.wav",
+      "format": "wav",
+      "bytes": 1017444,
+      "sha256": "a0966df10298ff52a8de76bbbefdb98cca651fbedff7e8b699238bfab404d2dc",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "granular",
+        "reverb",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Granular Reverb Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/hall-impact",
+      "name": "Hall Impact",
+      "category": "impacts",
+      "file": "impacts/hall-impact.wav",
+      "format": "wav",
+      "bytes": 2193100,
+      "sha256": "74a7803057b9b025ecabe991bf60903c4873caf4285926ce0c6a3f163c16dd56",
+      "duration_s": 2.84,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "hall",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt6.zip",
+        "member": "untitled folder 6/Hall Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/heavy-metal-impact",
+      "name": "Heavy Metal Impact",
+      "category": "impacts",
+      "file": "impacts/heavy-metal-impact.wav",
+      "format": "wav",
+      "bytes": 1313602,
+      "sha256": "a85349c1648c8da6f7e3de625dc9a430e0524da5e889ed32518f204f8a810aa8",
+      "duration_s": 2.273,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "heavy",
+        "metal",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Heavy Metal Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/hollow-bass-impact",
+      "name": "Hollow Bass Impact",
+      "category": "impacts",
+      "file": "impacts/hollow-bass-impact.wav",
+      "format": "wav",
+      "bytes": 1302220,
+      "sha256": "811f707185b4493135527e786befcc7bae4e7713a7f03da5021c4304bc79b92d",
+      "duration_s": 1.68,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "hollow",
+        "bass",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Hollow Bass Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/hollow-echo-impact",
+      "name": "Hollow Echo Impact",
+      "category": "impacts",
+      "file": "impacts/hollow-echo-impact.wav",
+      "format": "wav",
+      "bytes": 2126266,
+      "sha256": "43af82fe53909d5e08eaf7cb2c3c6009f7ea20271b347fbe7503ac2e5611cc6c",
+      "duration_s": 3.67,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hollow",
+        "echo",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt5.zip",
+        "member": "untitled folder 5/Hollow Echo Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/hollow-far-off-impact",
+      "name": "Hollow Far Off Impact",
+      "category": "impacts",
+      "file": "impacts/hollow-far-off-impact.wav",
+      "format": "wav",
+      "bytes": 1664484,
+      "sha256": "21ec1b10c410f746916fe229133797b56e391457628e2a83195167a3899c9c74",
+      "duration_s": 2.87,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hollow",
+        "far",
+        "off",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Hollow Far Off Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/hollow-impact",
+      "name": "Hollow Impact",
+      "category": "impacts",
+      "file": "impacts/hollow-impact.wav",
+      "format": "wav",
+      "bytes": 1020620,
+      "sha256": "86951994b51a2924e405ff411f7140b5094e63e575c16eda1b7b4280b1818b2b",
+      "duration_s": 3.503,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hollow",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Hollow Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/hollow-smooth-impact",
+      "name": "Hollow Smooth Impact",
+      "category": "impacts",
+      "file": "impacts/hollow-smooth-impact.wav",
+      "format": "wav",
+      "bytes": 2740740,
+      "sha256": "d37c9ea25d20ec0f04bbb5faf2bee1c730f7b32ee2a08a219c1691144b95f3aa",
+      "duration_s": 4.738,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hollow",
+        "smooth",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt7.zip",
+        "member": "untitled folder 7/Hollow Smooth Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/hollow-spacial-impact",
+      "name": "Hollow Spacial Impact",
+      "category": "impacts",
+      "file": "impacts/hollow-spacial-impact.wav",
+      "format": "wav",
+      "bytes": 1664484,
+      "sha256": "330c3424e9dafd44f8204964fa649f4655200e2add34c6fe8c380baa204252f7",
+      "duration_s": 2.87,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hollow",
+        "spacial",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Hollow Spacial Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/horror-strange-impact",
+      "name": "Horror Strange Impact",
+      "category": "impacts",
+      "file": "impacts/horror-strange-impact.wav",
+      "format": "wav",
+      "bytes": 1785746,
+      "sha256": "04a9bec0202717a578c466c57e1582a0d137eb1c6382dc71186a38ea158aa17a",
+      "duration_s": 3.08,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "horror",
+        "strange",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Horror Strange Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/hybrid-impact",
+      "name": "Hybrid Impact",
+      "category": "impacts",
+      "file": "impacts/hybrid-impact.wav",
+      "format": "wav",
+      "bytes": 722742,
+      "sha256": "3e306e251378a77a90d54f77b767c8fa95f41f77d40120f136205035cb05b1ca",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hybrid",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Hybrid Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-after-sound",
+      "name": "Impact After Sound",
+      "category": "impacts",
+      "file": "impacts/impact-after-sound.wav",
+      "format": "wav",
+      "bytes": 1339484,
+      "sha256": "21ae06134a0fa72ad646dce9c04daf1e624c4fde928b36b9f940a24634bc2016",
+      "duration_s": 4.605,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "after",
+        "sound"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Impact After Sound.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-cinematic-drift",
+      "name": "Impact Cinematic Drift",
+      "category": "impacts",
+      "file": "impacts/impact-cinematic-drift.wav",
+      "format": "wav",
+      "bytes": 3048248,
+      "sha256": "e58e40c4efe34de612bd6695619bee99b540fc45746a8800222e1a6c8564c06d",
+      "duration_s": 5.272,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "cinematic",
+        "drift"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt8.zip",
+        "member": "untitled folder 8/Impact Cinematic Drift.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-cinematic-drift-fast",
+      "name": "Impact Cinematic Drift Fast",
+      "category": "impacts",
+      "file": "impacts/impact-cinematic-drift-fast.wav",
+      "format": "wav",
+      "bytes": 2548550,
+      "sha256": "a5c406750496109766652caa1a36292d3a74f3fdf40fb03211f43cb0e6650008",
+      "duration_s": 4.404,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "cinematic",
+        "drift",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt6.zip",
+        "member": "untitled folder 6/Impact Cinematic Drift Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-cinematic-drift-long",
+      "name": "Impact Cinematic Drift Long",
+      "category": "impacts",
+      "file": "impacts/impact-cinematic-drift-long.wav",
+      "format": "wav",
+      "bytes": 3817016,
+      "sha256": "b1dc10751fadca29b5f7dc62fd7c7f234eeca371e5f151ada7a70f5cd1b5f31b",
+      "duration_s": 6.607,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "cinematic",
+        "drift",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt10.zip",
+        "member": "untitled folder 10/Impact Cinematic Drift Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-deep-short",
+      "name": "Impact Deep Short",
+      "category": "impacts",
+      "file": "impacts/impact-deep-short.wav",
+      "format": "wav",
+      "bytes": 578586,
+      "sha256": "40fc45ae349a830930894f667eb407136a2e7017a1a2d0967ab7df86a352a81f",
+      "duration_s": 1.969,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "deep",
+        "short"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Impact Deep Short.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-distortion",
+      "name": "Impact Distortion",
+      "category": "impacts",
+      "file": "impacts/impact-distortion.wav",
+      "format": "wav",
+      "bytes": 3451846,
+      "sha256": "37613b435d58f9f0b8863b3c559947f8d17be9a68574912b3a18c9f40603ba62",
+      "duration_s": 5.973,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "distortion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt9.zip",
+        "member": "untitled folder 9/Impact Distortion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-distortion-fast",
+      "name": "Impact Distortion Fast",
+      "category": "impacts",
+      "file": "impacts/impact-distortion-fast.wav",
+      "format": "wav",
+      "bytes": 2875270,
+      "sha256": "95571963763685fd1b62037ef69d757d198b7386a2dffd76b682790b3fbdcb92",
+      "duration_s": 4.972,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "distortion",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt8.zip",
+        "member": "untitled folder 8/Impact Distortion Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-distortion-long",
+      "name": "Impact Distortion Long",
+      "category": "impacts",
+      "file": "impacts/impact-distortion-long.wav",
+      "format": "wav",
+      "bytes": 4316710,
+      "sha256": "1945377481d400869f8a16eacdd568e93b555ea4593adb97836a0013faa8ff22",
+      "duration_s": 7.474,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "distortion",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt10.zip",
+        "member": "untitled folder 10/Impact Distortion Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-hit",
+      "name": "Impact Hit",
+      "category": "impacts",
+      "file": "impacts/impact-hit.wav",
+      "format": "wav",
+      "bytes": 578586,
+      "sha256": "6edd0e3a28be83befce16e36156ac852fdaffae53ecd55f172c90cbc01d61a96",
+      "duration_s": 1.969,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Impact Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-in-hall",
+      "name": "Impact in Hall",
+      "category": "impacts",
+      "file": "impacts/impact-in-hall.wav",
+      "format": "wav",
+      "bytes": 2740738,
+      "sha256": "b97e3a2b288a0ac89889dd01bb9fee3ac2ee5cb9cb185df988fe0125f0460e7b",
+      "duration_s": 4.738,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "hall"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt7.zip",
+        "member": "untitled folder 7/Impact in Hall.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-relapse",
+      "name": "Impact Relapse",
+      "category": "impacts",
+      "file": "impacts/impact-relapse.wav",
+      "format": "wav",
+      "bytes": 991806,
+      "sha256": "4e378fb06058f47c4e4ec7d0087481ece08d08e799a678ac4a0617e60cf525e0",
+      "duration_s": 1.702,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "relapse"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Impact Relapse.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-scream",
+      "name": "Impact Scream",
+      "category": "impacts",
+      "file": "impacts/impact-scream.wav",
+      "format": "wav",
+      "bytes": 934458,
+      "sha256": "7cf8c6ee530e23de55ea626d4d39e310eaf75a7d4bcb6c0c8306b050987d13e4",
+      "duration_s": 1.602,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "scream"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Impact Scream.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-soft-deep-bass",
+      "name": "Impact Soft Deep Bass",
+      "category": "impacts",
+      "file": "impacts/impact-soft-deep-bass.wav",
+      "format": "wav",
+      "bytes": 4605588,
+      "sha256": "dabf46f7b9a862d6d01899b219a08ff306a885f36c64966b03143b54ba5a2228",
+      "duration_s": 7.975,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "soft",
+        "deep",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt12.zip",
+        "member": "untitled folder 12/Impact Soft Deep Bass .wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-soft-deep-bass-fast",
+      "name": "Impact Soft Deep Bass Fast",
+      "category": "impacts",
+      "file": "impacts/impact-soft-deep-bass-fast.wav",
+      "format": "wav",
+      "bytes": 3548532,
+      "sha256": "03f041ab14443d17996002fb2f716a359ef82b664df8788d58076a08297b26d6",
+      "duration_s": 6.139,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "soft",
+        "deep",
+        "bass",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt9.zip",
+        "member": "untitled folder 9/Impact Soft Deep Bass Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-soft-deep-bass-long",
+      "name": "Impact Soft Deep Bass Long",
+      "category": "impacts",
+      "file": "impacts/impact-soft-deep-bass-long.wav",
+      "format": "wav",
+      "bytes": 5758740,
+      "sha256": "b8f271d7302ffefb97ef1135b6a42cde4f206659320b77482b8272c735181bb1",
+      "duration_s": 9.977,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "soft",
+        "deep",
+        "bass",
+        "long"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt11.zip",
+        "member": "untitled folder 11/Impact Soft Deep Bass Long.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-straight",
+      "name": "Impact Straight",
+      "category": "impacts",
+      "file": "impacts/impact-straight.wav",
+      "format": "wav",
+      "bytes": 1664462,
+      "sha256": "f2c47a7eb9b0c079ee7253a5b14923503a5d87a0b8e683b6d6b51485b1ff9761",
+      "duration_s": 2.87,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "straight"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Impact Straight.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-turn-down",
+      "name": "Impact Turn Down",
+      "category": "impacts",
+      "file": "impacts/impact-turn-down.wav",
+      "format": "wav",
+      "bytes": 3086678,
+      "sha256": "c3b08658310affa6316830ed8b4f09cb7aff757ba57045df4f328b08b11d450e",
+      "duration_s": 5.339,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "turn",
+        "down"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt8.zip",
+        "member": "untitled folder 8/Impact Turn Down.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/impact-vibration",
+      "name": "Impact Vibration",
+      "category": "impacts",
+      "file": "impacts/impact-vibration.wav",
+      "format": "wav",
+      "bytes": 3048834,
+      "sha256": "c5c4c5d7880ef13190f87993b1df28c3ec73bc6a3d5c739c15e75dda765848a9",
+      "duration_s": 5.272,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "vibration"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt8.zip",
+        "member": "untitled folder 8/Impact Vibration.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/implode-cinematic",
+      "name": "Implode Cinematic",
+      "category": "impacts",
+      "file": "impacts/implode-cinematic.wav",
+      "format": "wav",
+      "bytes": 2663880,
+      "sha256": "f4dd967b011370c53e8f5e7002d0e0319c75e8a63555a45ab59d61e563e24b29",
+      "duration_s": 4.605,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "implode",
+        "cinematic"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt6.zip",
+        "member": "untitled folder 6/Implode Cinematic.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/implode-impact",
+      "name": "Implode Impact",
+      "category": "impacts",
+      "file": "impacts/implode-impact.wav",
+      "format": "wav",
+      "bytes": 1241658,
+      "sha256": "c728e68177020cd88504c9af630f2c5974720c4171c0712cfac50ba159381771",
+      "duration_s": 2.135,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "implode",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Implode Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/implosion-impact",
+      "name": "Implosion Impact",
+      "category": "impacts",
+      "file": "impacts/implosion-impact.wav",
+      "format": "wav",
+      "bytes": 1477090,
+      "sha256": "5026a8f49ec09234dca1a3cd0762b4c2144f75b3a3ff7bf4a3e34b375fb35407",
+      "duration_s": 2.557,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "implosion",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Implosion Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/incoming-impact",
+      "name": "Incoming Impact",
+      "category": "impacts",
+      "file": "impacts/incoming-impact.wav",
+      "format": "wav",
+      "bytes": 642814,
+      "sha256": "de09a7595446f2c0800ac2030661f4dd2dade2613ad357c7c908eed8b99babc1",
+      "duration_s": 2.169,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "incoming",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Incoming Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/incoming-smooth-impact",
+      "name": "Incoming Smooth Impact",
+      "category": "impacts",
+      "file": "impacts/incoming-smooth-impact.wav",
+      "format": "wav",
+      "bytes": 2817618,
+      "sha256": "f707eaf25ab04aa92eef3c5fdbc116bca51b41b8e5b80ed5e18c0f9ea3129f25",
+      "duration_s": 4.872,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "incoming",
+        "smooth",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt7.zip",
+        "member": "untitled folder 7/Incoming Smooth Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/incoming-trembling-impact",
+      "name": "Incoming Trembling Impact",
+      "category": "impacts",
+      "file": "impacts/incoming-trembling-impact.wav",
+      "format": "wav",
+      "bytes": 2315596,
+      "sha256": "c033476d6e542151a69f02944bc04bb16cf3d9e53af7c26b6f1309341e9f0185",
+      "duration_s": 3.0,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "incoming",
+        "trembling",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt6.zip",
+        "member": "untitled folder 6/Incoming Trembling Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/jitter-reverb-impact",
+      "name": "Jitter Reverb Impact",
+      "category": "impacts",
+      "file": "impacts/jitter-reverb-impact.wav",
+      "format": "wav",
+      "bytes": 876492,
+      "sha256": "4a9db2b97530185aaeafff480b8a870687af7ba7be5d58d69fccda3261b481d9",
+      "duration_s": 1.502,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "jitter",
+        "reverb",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Jitter Reverb Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/layered-low-impact",
+      "name": "Layered Low Impact",
+      "category": "impacts",
+      "file": "impacts/layered-low-impact.wav",
+      "format": "wav",
+      "bytes": 1316128,
+      "sha256": "d797c895ffb633cdba157a32f78164ba9b7dfefe1d69aac65a9cde3d15cb41b9",
+      "duration_s": 2.278,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "layered",
+        "low",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Layered Low Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/layered-spatial-impact",
+      "name": "Layered Spatial Impact",
+      "category": "impacts",
+      "file": "impacts/layered-spatial-impact.wav",
+      "format": "wav",
+      "bytes": 1414632,
+      "sha256": "e1500c5749b67f539652da87b60b86daf8ae4cf1612cdb9ae3a3514cdfbbb5c8",
+      "duration_s": 2.436,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "layered",
+        "spatial",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Layered Spatial Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/left-right-impacts",
+      "name": "Left Right Impacts",
+      "category": "impacts",
+      "file": "impacts/left-right-impacts.wav",
+      "format": "wav",
+      "bytes": 6027214,
+      "sha256": "38849a3f344e20976a838e8dcb1ee433c277601c016fd4ce12412ce29a8f773a",
+      "duration_s": 10.444,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "left",
+        "right",
+        "impacts"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt12.zip",
+        "member": "untitled folder 12/Left Right Impacts.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/long-echo-impact",
+      "name": "Long Echo Impact",
+      "category": "impacts",
+      "file": "impacts/long-echo-impact.wav",
+      "format": "wav",
+      "bytes": 2125716,
+      "sha256": "9ada5da922131189eb0e493669687e11fba6c1a1e1c9fce53e00602fdecc94a4",
+      "duration_s": 3.67,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "long",
+        "echo",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt5.zip",
+        "member": "untitled folder 5/Long Echo Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/low-bass-impact",
+      "name": "Low Bass Impact",
+      "category": "impacts",
+      "file": "impacts/low-bass-impact.wav",
+      "format": "wav",
+      "bytes": 2343566,
+      "sha256": "69554e4ffebf3d5b6f9c333a45520b3cd737fcebc242cbeaa86eb822342e8453",
+      "duration_s": 4.037,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "bass",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt6.zip",
+        "member": "untitled folder 6/Low Bass Impact .wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/low-deep-bass-impact",
+      "name": "Low Deep Bass Impact",
+      "category": "impacts",
+      "file": "impacts/low-deep-bass-impact.wav",
+      "format": "wav",
+      "bytes": 1045960,
+      "sha256": "51cc892982153689a204c9951109c42dd61d25b3275ead9887007507482ec367",
+      "duration_s": 1.809,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "deep",
+        "bass",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Low Deep Bass Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/low-deep-reverb-impact",
+      "name": "Low Deep Reverb Impact",
+      "category": "impacts",
+      "file": "impacts/low-deep-reverb-impact.wav",
+      "format": "wav",
+      "bytes": 1018186,
+      "sha256": "35cfac39f42a98ccac78a7c29dc891b60f8b31cffa084af6ddd3d6c4ee2dd817",
+      "duration_s": 1.761,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "deep",
+        "reverb",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Low Deep Reverb Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/low-end-bass-impact",
+      "name": "Low End Bass Impact",
+      "category": "impacts",
+      "file": "impacts/low-end-bass-impact.wav",
+      "format": "wav",
+      "bytes": 1022536,
+      "sha256": "a8569185b08ad72661476f666d0e0008cc873b417033caa429ef3a9c02abd383",
+      "duration_s": 1.768,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "end",
+        "bass",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt5.zip",
+        "member": "untitled folder 5/Low End Bass Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/low-impact",
+      "name": "Low Impact",
+      "category": "impacts",
+      "file": "impacts/low-impact.wav",
+      "format": "wav",
+      "bytes": 1184004,
+      "sha256": "5e3d5e7a2032af62859267141dda6263ac79e426d725cff6af13833626099d4e",
+      "duration_s": 2.035,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Low Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/low-ominous-impact",
+      "name": "Low Ominous Impact",
+      "category": "impacts",
+      "file": "impacts/low-ominous-impact.wav",
+      "format": "wav",
+      "bytes": 2939364,
+      "sha256": "97afd743f05c778208df9a27ed74bfb8b20d7f629d091cd64f69a472abec23ba",
+      "duration_s": 5.072,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "ominous",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt8.zip",
+        "member": "untitled folder 8/Low Ominous Impact .wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/low-reverb-impact",
+      "name": "Low Reverb Impact",
+      "category": "impacts",
+      "file": "impacts/low-reverb-impact.wav",
+      "format": "wav",
+      "bytes": 1393624,
+      "sha256": "ff19d0f26f09de84ab72b259707556b60cc8cad5119a4f2c81ea1d9f33ca58c5",
+      "duration_s": 2.412,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "reverb",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Low Reverb Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/metal-hit-impact",
+      "name": "Metal Hit Impact",
+      "category": "impacts",
+      "file": "impacts/metal-hit-impact.wav",
+      "format": "wav",
+      "bytes": 982912,
+      "sha256": "137069d6d8754d8e152e3221e1a7fb0fc9f91e40b4b9d8e6562e4b3214e93ac2",
+      "duration_s": 1.699,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "metal",
+        "hit",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Metal Hit Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/metal-impact",
+      "name": "Metal Impact",
+      "category": "impacts",
+      "file": "impacts/metal-impact.wav",
+      "format": "wav",
+      "bytes": 2856050,
+      "sha256": "3934c7dfb93fe8057af03926d44128bdaef977d3daa0f7943cc020110782dc15",
+      "duration_s": 4.938,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "metal",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt8.zip",
+        "member": "untitled folder 8/Metal Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/movie-trailer-impact",
+      "name": "Movie Trailer Impact",
+      "category": "impacts",
+      "file": "impacts/movie-trailer-impact.wav",
+      "format": "wav",
+      "bytes": 1641484,
+      "sha256": "4af29a420ee3e49a2d939753950c866e831a4e26cf0317973ebd94a02739716b",
+      "duration_s": 2.843,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "movie",
+        "trailer",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Movie Trailer Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/multiple-impacts",
+      "name": "Multiple Impacts",
+      "category": "impacts",
+      "file": "impacts/multiple-impacts.wav",
+      "format": "wav",
+      "bytes": 3767764,
+      "sha256": "84eb31f3caf9d3515cad2250cb09b001a7d7dbb4a7343779be76c52fd17cdf76",
+      "duration_s": 6.506,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "multiple",
+        "impacts"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt10.zip",
+        "member": "untitled folder 10/Multiple Impacts.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/multiple-impacts-fast",
+      "name": "Multiple Impacts Fast",
+      "category": "impacts",
+      "file": "impacts/multiple-impacts-fast.wav",
+      "format": "wav",
+      "bytes": 3152752,
+      "sha256": "9f20514997b55422cb9fb34c095bd0da7459b58b3a417fb17b12f548ee5b575a",
+      "duration_s": 5.439,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "multiple",
+        "impacts",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt9.zip",
+        "member": "untitled folder 9/Multiple Impacts Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/multiple-impacts-slow",
+      "name": "Multiple Impacts Slow",
+      "category": "impacts",
+      "file": "impacts/multiple-impacts-slow.wav",
+      "format": "wav",
+      "bytes": 4709506,
+      "sha256": "7f58da0599967a984f1f0e3a95d3292156aaab4210f8fee839e63f0efa6008be",
+      "duration_s": 8.141,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "multiple",
+        "impacts",
+        "slow"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt11.zip",
+        "member": "untitled folder 11/Multiple Impacts Slow.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/ominous-impact",
+      "name": "Ominous Impact",
+      "category": "impacts",
+      "file": "impacts/ominous-impact.wav",
+      "format": "wav",
+      "bytes": 961444,
+      "sha256": "c517596c9f753fe289c242fd70357f25717183a883de6aa3708af91e5fc0d013",
+      "duration_s": 1.662,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ominous",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Ominous Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/ominous-rumble-impact",
+      "name": "Ominous Rumble Impact",
+      "category": "impacts",
+      "file": "impacts/ominous-rumble-impact.wav",
+      "format": "wav",
+      "bytes": 2034436,
+      "sha256": "2a8d3ac7fc5da24b2e2bc42c64e19f61f503b1f42b2b6d5de590b50d9e8c34f5",
+      "duration_s": 3.525,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ominous",
+        "rumble",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt5.zip",
+        "member": "untitled folder 5/Ominous Rumble Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/omnious-impact",
+      "name": "Omnious Impact",
+      "category": "impacts",
+      "file": "impacts/omnious-impact.wav",
+      "format": "wav",
+      "bytes": 1068684,
+      "sha256": "de399463af96c226a2233072d51e01bc9ff987a3c92260012212b66fa1945e49",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "omnious",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Omnious Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/perfect-impact",
+      "name": "Perfect Impact",
+      "category": "impacts",
+      "file": "impacts/perfect-impact.wav",
+      "format": "wav",
+      "bytes": 4355152,
+      "sha256": "56afc39e444a64c397a78c23ed01cfafc79d492a77c200882406f349d643a1a9",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "perfect",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt10.zip",
+        "member": "untitled folder 10/Perfect Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/poweful-flame-impact",
+      "name": "Poweful Flame Impact",
+      "category": "impacts",
+      "file": "impacts/poweful-flame-impact.wav",
+      "format": "wav",
+      "bytes": 987466,
+      "sha256": "933a3e3d1e7dc4d078f6677068ebc26c36d47425d142565250d335391cce9cdb",
+      "duration_s": 1.707,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "poweful",
+        "flame",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Poweful Flame Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/prolaps-impact",
+      "name": "Prolaps Impact",
+      "category": "impacts",
+      "file": "impacts/prolaps-impact.wav",
+      "format": "wav",
+      "bytes": 1414632,
+      "sha256": "d6f37a737bd488e6421344e8643fbc7e463149f87647f3f1840c958d094949d1",
+      "duration_s": 2.436,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "prolaps",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Prolaps Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/quiete-impact",
+      "name": "Quiete Impact",
+      "category": "impacts",
+      "file": "impacts/quiete-impact.wav",
+      "format": "wav",
+      "bytes": 2837814,
+      "sha256": "364feacdaf58a987bfeff55d2d5ff022a273a93d3f38d4fe4e1d360775d658b7",
+      "duration_s": 3.68,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "quiete",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt8.zip",
+        "member": "untitled folder 8/Quiete Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/reverb-jitter-low-impact",
+      "name": "Reverb Jitter Low Impact",
+      "category": "impacts",
+      "file": "impacts/reverb-jitter-low-impact.wav",
+      "format": "wav",
+      "bytes": 1068684,
+      "sha256": "059da62fd04d36e732dda0ced2ecf887a327325fc30ccb8a01ebf954c318d83c",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "reverb",
+        "jitter",
+        "low",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Reverb Jitter Low Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/reverb-low-impact",
+      "name": "Reverb Low Impact",
+      "category": "impacts",
+      "file": "impacts/reverb-low-impact.wav",
+      "format": "wav",
+      "bytes": 2500196,
+      "sha256": "4a237b424f0ea4c0bb855c11aba564d3f7949502751b9b4e38a63f705cb30896",
+      "duration_s": 3.24,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "reverb",
+        "low",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt6.zip",
+        "member": "untitled folder 6/Reverb Low Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/reverb-tail-impact",
+      "name": "Reverb Tail Impact",
+      "category": "impacts",
+      "file": "impacts/reverb-tail-impact.wav",
+      "format": "wav",
+      "bytes": 1414632,
+      "sha256": "b1a3d3565014a605a7e54f0fe3ec4cdcd3829bb862097e82f5ed8139e4286b4f",
+      "duration_s": 2.436,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "reverb",
+        "tail",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Reverb Tail Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/reverse-impact",
+      "name": "Reverse Impact",
+      "category": "impacts",
+      "file": "impacts/reverse-impact.wav",
+      "format": "wav",
+      "bytes": 1293052,
+      "sha256": "6610535f5394bcd2a2247c3dd80aadead64d0d36a3820344029293392e20555a",
+      "duration_s": 2.238,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "reverse",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Reverse Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/rising-braam-impact",
+      "name": "Rising Braam Impact",
+      "category": "impacts",
+      "file": "impacts/rising-braam-impact.wav",
+      "format": "wav",
+      "bytes": 5181656,
+      "sha256": "e6f194ad50e5feedca90b393b894abc6a686379085b336ef07dd542134c6d5e3",
+      "duration_s": 8.976,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rising",
+        "braam",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt11.zip",
+        "member": "untitled folder 11/Rising Braam Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/robotic-impact",
+      "name": "Robotic Impact",
+      "category": "impacts",
+      "file": "impacts/robotic-impact.wav",
+      "format": "wav",
+      "bytes": 934138,
+      "sha256": "e1fa603a48573541cef0c382eb488db10f3216d5fdcdd5e713a190365ce551e1",
+      "duration_s": 1.602,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "robotic",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Robotic Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/rumble-impact",
+      "name": "Rumble Impact",
+      "category": "impacts",
+      "file": "impacts/rumble-impact.wav",
+      "format": "wav",
+      "bytes": 3467656,
+      "sha256": "a4cf4380cc8296037472007bd552dd24be7ceac4cda7aca17829cd2011448591",
+      "duration_s": 6.0,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rumble",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt9.zip",
+        "member": "untitled folder 9/Rumble Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/scary-bass-impact",
+      "name": "Scary Bass Impact",
+      "category": "impacts",
+      "file": "impacts/scary-bass-impact.wav",
+      "format": "wav",
+      "bytes": 2365078,
+      "sha256": "7f98e381ed3f3b6d466f826ea7b075bb56a50b8f1312d92a7d3a56b62957622e",
+      "duration_s": 4.099,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "scary",
+        "bass",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt6.zip",
+        "member": "untitled folder 6/Scary Bass Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/sharp-edge-impact",
+      "name": "Sharp Edge Impact",
+      "category": "impacts",
+      "file": "impacts/sharp-edge-impact.wav",
+      "format": "wav",
+      "bytes": 1595788,
+      "sha256": "a8299cb39443592b5f030c3e500b1fba0692fae19ad0ebfc4bd0372e45095b7f",
+      "duration_s": 2.736,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sharp",
+        "edge",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Sharp Edge Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/sharp-edge-impact-fast",
+      "name": "Sharp Edge Impact Fast",
+      "category": "impacts",
+      "file": "impacts/sharp-edge-impact-fast.wav",
+      "format": "wav",
+      "bytes": 1230622,
+      "sha256": "15ac5f26f384f9eed42004abe0f7d67cef39d283a9f0ab26d2d1bf4e0ececdb8",
+      "duration_s": 2.102,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sharp",
+        "edge",
+        "impact",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Sharp Edge Impact Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/sharp-hit-impact",
+      "name": "Sharp Hit Impact",
+      "category": "impacts",
+      "file": "impacts/sharp-hit-impact.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "9a0027ad9db5200db5ada3147d499851db5404d9381c3ef7547c7e7397210ef6",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sharp",
+        "hit",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Sharp Hit Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/sharp-impact",
+      "name": "Sharp Impact",
+      "category": "impacts",
+      "file": "impacts/sharp-impact.wav",
+      "format": "wav",
+      "bytes": 1615776,
+      "sha256": "4d896375862fa1949f8ab8c6b4534d83c9100df011ddd2a3acda71ce093d55ee",
+      "duration_s": 2.08,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "sharp",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Sharp Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/sharp-strike-impact",
+      "name": "Sharp Strike Impact",
+      "category": "impacts",
+      "file": "impacts/sharp-strike-impact.wav",
+      "format": "wav",
+      "bytes": 2051186,
+      "sha256": "8fbdc6309d659d833a7ebb0a9007229069bcdc2d8dd770cfabd84f05a24ef992",
+      "duration_s": 3.537,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sharp",
+        "strike",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt5.zip",
+        "member": "untitled folder 5/Sharp Strike Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/short-bulb-braam",
+      "name": "Short Bulb Braam",
+      "category": "impacts",
+      "file": "impacts/short-bulb-braam.wav",
+      "format": "wav",
+      "bytes": 1203216,
+      "sha256": "7cca044c6c7c6a07d4afbac87412d7a6b3381044f4648e2a9aaf56dc175425e8",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "bulb",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Short Bulb Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/short-clap-impact",
+      "name": "Short Clap Impact",
+      "category": "impacts",
+      "file": "impacts/short-clap-impact.wav",
+      "format": "wav",
+      "bytes": 972582,
+      "sha256": "8f24fbb0026da5441a0362564c6024e3e46ffc36e8fdef2dddca7c8755649a14",
+      "duration_s": 1.668,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "clap",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Short Clap Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/short-deep-fade-braam",
+      "name": "Short Deep Fade Braam",
+      "category": "impacts",
+      "file": "impacts/short-deep-fade-braam.wav",
+      "format": "wav",
+      "bytes": 1203216,
+      "sha256": "13d42e127c0037b55d31c80fb9ab733810dfb2751802e8b944545804e655b360",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "deep",
+        "fade",
+        "braam"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Short Deep Fade Braam.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/short-deep-impact",
+      "name": "Short Deep Impact",
+      "category": "impacts",
+      "file": "impacts/short-deep-impact.wav",
+      "format": "wav",
+      "bytes": 806120,
+      "sha256": "6fcf1547ec06c8d70c5da9be4aa44990e53efcab4dda4882522736e58484bd95",
+      "duration_s": 1.368,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "deep",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Short Deep Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/short-flat-impact",
+      "name": "Short Flat Impact",
+      "category": "impacts",
+      "file": "impacts/short-flat-impact.wav",
+      "format": "wav",
+      "bytes": 780396,
+      "sha256": "0e36365cb23a2ff17f5c22bea059739cb4a365a3b18011053eea0b6a2f60ce39",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "flat",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Short Flat Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/short-impact",
+      "name": "Short Impact",
+      "category": "impacts",
+      "file": "impacts/short-impact.wav",
+      "format": "wav",
+      "bytes": 818814,
+      "sha256": "be57d7ec2698cc17437129173dd96e1809483880ba01bbc6139528c8313db5f5",
+      "duration_s": 1.401,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Short Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/short-low-end-impact",
+      "name": "Short Low End Impact",
+      "category": "impacts",
+      "file": "impacts/short-low-end-impact.wav",
+      "format": "wav",
+      "bytes": 1068684,
+      "sha256": "1734d477cdb2b26cedc4094788cc33ad0b5f4c917dc766e2eaa464b0d0133a18",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "low",
+        "end",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Short Low End Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/short-opening-impact",
+      "name": "Short Opening Impact",
+      "category": "impacts",
+      "file": "impacts/short-opening-impact.wav",
+      "format": "wav",
+      "bytes": 1203216,
+      "sha256": "b65dc21f0f50a3b154975cc47a8b329b78355b23340a14efc0324d6909f1b257",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "opening",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Short Opening Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/simple-impact",
+      "name": "Simple Impact",
+      "category": "impacts",
+      "file": "impacts/simple-impact.wav",
+      "format": "wav",
+      "bytes": 1280078,
+      "sha256": "658220b8ca409aa6556126e7ca46f090fe144b14f58264fb788b128b0cfd02c7",
+      "duration_s": 2.202,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "simple",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Simple Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/simple-single-impact",
+      "name": "Simple Single Impact",
+      "category": "impacts",
+      "file": "impacts/simple-single-impact.wav",
+      "format": "wav",
+      "bytes": 952264,
+      "sha256": "2595ebfde95e527004b9c8e62c35b79ade91bec40a2025d5a0996a29fe0ec5c8",
+      "duration_s": 1.646,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "simple",
+        "single",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Simple Single Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/slam-impact",
+      "name": "Slam Impact",
+      "category": "impacts",
+      "file": "impacts/slam-impact.wav",
+      "format": "wav",
+      "bytes": 722742,
+      "sha256": "3b36b69cab7739e71c1d6a70257494fccb402fd701d07884f680452f2de82db0",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slam",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Slam Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/slam-slow-reverb-impact",
+      "name": "Slam Slow Reverb Impact",
+      "category": "impacts",
+      "file": "impacts/slam-slow-reverb-impact.wav",
+      "format": "wav",
+      "bytes": 1267264,
+      "sha256": "9392ceb85cf337b0696501b6683620ecbe84dd190c80fb795dec6ab7823202b0",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slam",
+        "slow",
+        "reverb",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Slam Slow Reverb Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/slow-impact-aftermath",
+      "name": "Slow Impact Aftermath",
+      "category": "impacts",
+      "file": "impacts/slow-impact-aftermath.wav",
+      "format": "wav",
+      "bytes": 3817012,
+      "sha256": "03b1c1eaa16722b8f5d460a8232afeba75d865349a00301af829c0d54d464ee8",
+      "duration_s": 6.607,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slow",
+        "impact",
+        "aftermath"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt10.zip",
+        "member": "untitled folder 10/Slow Impact Aftermath.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/slow-impact-cinematic",
+      "name": "Slow Impact Cinematic",
+      "category": "impacts",
+      "file": "impacts/slow-impact-cinematic.wav",
+      "format": "wav",
+      "bytes": 4566562,
+      "sha256": "db14e716802877ccf70021406e00c930a356fd86ff5b26f784c5d9277dbc81d3",
+      "duration_s": 7.908,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slow",
+        "impact",
+        "cinematic"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt10.zip",
+        "member": "untitled folder 10/Slow Impact Cinematic.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/slow-jitter-impact",
+      "name": "Slow Jitter Impact",
+      "category": "impacts",
+      "file": "impacts/slow-jitter-impact.wav",
+      "format": "wav",
+      "bytes": 3478758,
+      "sha256": "00cac958676c51c5de29dd411fe7ab4e66ddb8a85f38f94efc65b966609268b7",
+      "duration_s": 6.006,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slow",
+        "jitter",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt9.zip",
+        "member": "untitled folder 9/Slow Jitter Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/smooth-impact",
+      "name": "Smooth Impact",
+      "category": "impacts",
+      "file": "impacts/smooth-impact.wav",
+      "format": "wav",
+      "bytes": 2999010,
+      "sha256": "d7f9414951776934ce622c0d1a1822dbdc73ff25c73f8a5bef63c336b88e169e",
+      "duration_s": 5.172,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "smooth",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt8.zip",
+        "member": "untitled folder 8/Smooth Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/smooth-impact-short",
+      "name": "Smooth Impact Short",
+      "category": "impacts",
+      "file": "impacts/smooth-impact-short.wav",
+      "format": "wav",
+      "bytes": 2307120,
+      "sha256": "4fb034147fbce8fb9064e90092c2098748d8020237b1c67a8d693e196a09d43b",
+      "duration_s": 3.971,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "smooth",
+        "impact",
+        "short"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt6.zip",
+        "member": "untitled folder 6/Smooth Impact Short.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/soft-deep-impact",
+      "name": "Soft Deep Impact",
+      "category": "impacts",
+      "file": "impacts/soft-deep-impact.wav",
+      "format": "wav",
+      "bytes": 1329592,
+      "sha256": "26414c59a4f2f0e4287dc39d8ddf2f66bf76907d4f1201d26d3f67b3ece7f28e",
+      "duration_s": 2.301,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "soft",
+        "deep",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Soft Deep Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/soft-short-deep-impact",
+      "name": "Soft Short Deep Impact",
+      "category": "impacts",
+      "file": "impacts/soft-short-deep-impact.wav",
+      "format": "wav",
+      "bytes": 761178,
+      "sha256": "b3882d6aa6a347e5a818f1b9362ea9e9ead84bb5851ba8598cdaae74f861bdbc",
+      "duration_s": 1.301,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "soft",
+        "short",
+        "deep",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Soft Short Deep Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/soft-tail-impact",
+      "name": "Soft Tail Impact",
+      "category": "impacts",
+      "file": "impacts/soft-tail-impact.wav",
+      "format": "wav",
+      "bytes": 1068684,
+      "sha256": "0e5acd7e8cc101e0e44bac320ff7e352134197352cd8c56a463b77358305ad9c",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "soft",
+        "tail",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Soft Tail Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/space-ambience-impact",
+      "name": "Space Ambience Impact",
+      "category": "impacts",
+      "file": "impacts/space-ambience-impact.wav",
+      "format": "wav",
+      "bytes": 1363954,
+      "sha256": "5063eb1ea8b8c0f4a3679bcd37f999f5dd356c340355bb66c4b97e72f1d2d539",
+      "duration_s": 2.361,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "space",
+        "ambience",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Space Ambience Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/space-impact",
+      "name": "Space Impact",
+      "category": "impacts",
+      "file": "impacts/space-impact.wav",
+      "format": "wav",
+      "bytes": 1068684,
+      "sha256": "e23a3d6cc2f60203c51a6feff1b3bbb0545d04d5a0ab56ce7a8c0cf42e428c74",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "space",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Space Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/steel-impact",
+      "name": "Steel Impact",
+      "category": "impacts",
+      "file": "impacts/steel-impact.wav",
+      "format": "wav",
+      "bytes": 1011384,
+      "sha256": "edc5c88cd4d4712c0b6520183c9bfa66ff790e79c4fef8e7ce90ac6b62caada6",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "steel",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Steel Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/straight-soft-impact",
+      "name": "Straight Soft Impact",
+      "category": "impacts",
+      "file": "impacts/straight-soft-impact.wav",
+      "format": "wav",
+      "bytes": 626646,
+      "sha256": "198b3ab040819590399185f251c7b395b8d34c099a1af83df3ac360d9a0ad61b",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "straight",
+        "soft",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Straight Soft Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/strange-explode-impact",
+      "name": "Strange Explode Impact",
+      "category": "impacts",
+      "file": "impacts/strange-explode-impact.wav",
+      "format": "wav",
+      "bytes": 665082,
+      "sha256": "f0bae7a6681c2bdfa3b67022c07fcc8d0fd1f0ce81abe2a3cbfaf468658d9c02",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "strange",
+        "explode",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Strange Explode Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/strange-impact",
+      "name": "Strange Impact",
+      "category": "impacts",
+      "file": "impacts/strange-impact.wav",
+      "format": "wav",
+      "bytes": 972988,
+      "sha256": "159e831629f24dfd5ae726c6ef4cedb90e6eee5ce61b051e8bbbc2841d400a21",
+      "duration_s": 1.668,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "strange",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Strange Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/strange-rumble-impact",
+      "name": "Strange Rumble Impact",
+      "category": "impacts",
+      "file": "impacts/strange-rumble-impact.wav",
+      "format": "wav",
+      "bytes": 1664484,
+      "sha256": "86073df1b315e0be4903cba6bd3c5cb00a4821041ca1903a8de3aa77bcb7b96d",
+      "duration_s": 2.87,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "strange",
+        "rumble",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Strange Rumble Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/stray-impact",
+      "name": "Stray Impact",
+      "category": "impacts",
+      "file": "impacts/stray-impact.wav",
+      "format": "wav",
+      "bytes": 1068684,
+      "sha256": "fe7b5593cc68e321e62f99a65e69bf3ce8ae6b9a8feffc9aae4c87b34d3ef536",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "stray",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Stray Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/sub-deep-impact",
+      "name": "Sub Deep Impact",
+      "category": "impacts",
+      "file": "impacts/sub-deep-impact.wav",
+      "format": "wav",
+      "bytes": 1664484,
+      "sha256": "2d25b58ce76c7419c1c62d0fb52e8ee701162f87aac414780197e3fc07c5f599",
+      "duration_s": 2.87,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sub",
+        "deep",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt4.zip",
+        "member": "untitled folder 4/Sub Deep Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/surround-feather-impact",
+      "name": "Surround Feather Impact",
+      "category": "impacts",
+      "file": "impacts/surround-feather-impact.wav",
+      "format": "wav",
+      "bytes": 2817630,
+      "sha256": "dbd33b2893e8b18b17550c43a808709e3c719039fb10ff0e9a6eb53c82f47574",
+      "duration_s": 4.872,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "surround",
+        "feather",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt7.zip",
+        "member": "untitled folder 7/Surround Feather Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/tense-riser-impact",
+      "name": "Tense Riser Impact",
+      "category": "impacts",
+      "file": "impacts/tense-riser-impact.wav",
+      "format": "wav",
+      "bytes": 1343614,
+      "sha256": "dbeaf34862263f7892aa444eb8169250ec2c315bd242539885d147848c6b1457",
+      "duration_s": 2.326,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tense",
+        "riser",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Tense Riser Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/tension-impact",
+      "name": "Tension Impact",
+      "category": "impacts",
+      "file": "impacts/tension-impact.wav",
+      "format": "wav",
+      "bytes": 2588720,
+      "sha256": "354d7245220ef5eca61c0b959959d06b5f0dfcd3305d6790437b1f271ccfb59e",
+      "duration_s": 4.471,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tension",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt6.zip",
+        "member": "untitled folder 6/Tension Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/textural-sharp-impact",
+      "name": "Textural Sharp Impact",
+      "category": "impacts",
+      "file": "impacts/textural-sharp-impact.wav",
+      "format": "wav",
+      "bytes": 703524,
+      "sha256": "cb0ec8ed915b79d5a73e32fa33af57681c9c00e9907bbefbe027a362d4c30ba5",
+      "duration_s": 1.201,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "textural",
+        "sharp",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Textural Sharp Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/throne-high-tone-impact",
+      "name": "Throne High Tone Impact",
+      "category": "impacts",
+      "file": "impacts/throne-high-tone-impact.wav",
+      "format": "wav",
+      "bytes": 1271452,
+      "sha256": "3f1b633fa87644ce4f317e8be1beb9d734ae6e3f55ccf23024d53a4f15411753",
+      "duration_s": 2.2,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "throne",
+        "high",
+        "tone",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Throne High Tone Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/tone-impact",
+      "name": "Tone Impact",
+      "category": "impacts",
+      "file": "impacts/tone-impact.wav",
+      "format": "wav",
+      "bytes": 665082,
+      "sha256": "a49b65a9013613064911eda5ccedd0c4b6ee724c0c07abee94b2093d012d0e54",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tone",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Tone Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/treble-impact",
+      "name": "Treble Impact",
+      "category": "impacts",
+      "file": "impacts/treble-impact.wav",
+      "format": "wav",
+      "bytes": 665082,
+      "sha256": "1ff7be66b833c9a540361e2798103bdd5d57536b1714212d241389b7805450ed",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "treble",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt1.zip",
+        "member": "untitled folder/Treble Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/universal-deep-impact",
+      "name": "Universal Deep Impact",
+      "category": "impacts",
+      "file": "impacts/universal-deep-impact.wav",
+      "format": "wav",
+      "bytes": 1414632,
+      "sha256": "c40a27c1b6735387e136ffdb99976f750af19342e835c0800fb89d93f8762c8c",
+      "duration_s": 2.436,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "universal",
+        "deep",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Universal Deep Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/warp-impact",
+      "name": "Warp Impact",
+      "category": "impacts",
+      "file": "impacts/warp-impact.wav",
+      "format": "wav",
+      "bytes": 1126414,
+      "sha256": "66783ff491727da290b10bf110463f9cd75338a4447a1d378191cf917c200660",
+      "duration_s": 1.935,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "warp",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Warp Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/wavering-impact",
+      "name": "Wavering Impact",
+      "category": "impacts",
+      "file": "impacts/wavering-impact.wav",
+      "format": "wav",
+      "bytes": 1068684,
+      "sha256": "3a7defd828128db00215b519df6e9e412148c39acb1fa4103ca3a150ebe0211d",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "wavering",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Wavering Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/wavey-impact",
+      "name": "Wavey Impact",
+      "category": "impacts",
+      "file": "impacts/wavey-impact.wav",
+      "format": "wav",
+      "bytes": 1126320,
+      "sha256": "ebad2ea5d2df623e4ecc4fa6e5604722fd727824f52399671d57e4fd9d9c541d",
+      "duration_s": 1.935,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "wavey",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt2.zip",
+        "member": "untitled folder 2/Wavey Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "impacts/wind-down-impact",
+      "name": "Wind Down Impact",
+      "category": "impacts",
+      "file": "impacts/wind-down-impact.wav",
+      "format": "wav",
+      "bytes": 1299296,
+      "sha256": "8a58451bd729a9b2f77c79e71c174110188b497ab58b79bc664c7ff363dbb543",
+      "duration_s": 2.236,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "wind",
+        "down",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts_SFX_Pt3.zip",
+        "member": "untitled folder 3/Wind Down Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "match-crowds/basketball-match-crowd",
       "name": "Basketball Match Crowd",
       "category": "match-crowds",
