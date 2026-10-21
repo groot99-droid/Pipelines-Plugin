@@ -4314,6 +4314,991 @@
       "added": "2026-10-21"
     },
     {
+      "id": "crowd-fans/cheering-crowd-stadium",
+      "name": "Cheering Crowd Stadium",
+      "category": "crowd-fans",
+      "file": "crowd-fans/cheering-crowd-stadium.wav",
+      "format": "wav",
+      "bytes": 2183400,
+      "sha256": "2fd3ee324e310def31744bbda2a49f56bfff5b8aea681f74f54045ad4dbafba0",
+      "duration_s": 3.77,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cheering",
+        "crowd",
+        "stadium"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fans_Pt2.zip",
+        "member": "Cheering Crowd Stadium.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-fans/cheering-fans",
+      "name": "Cheering Fans",
+      "category": "crowd-fans",
+      "file": "crowd-fans/cheering-fans.wav",
+      "format": "wav",
+      "bytes": 2356374,
+      "sha256": "d69403bd599956aaaa789ddd979e93e51b4f2e9009234b3cc4bcae5dfcac65de",
+      "duration_s": 4.071,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cheering",
+        "fans"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fans_Pt2.zip",
+        "member": "Cheering Fans.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-fans/crowd-after-concert",
+      "name": "Crowd After Concert",
+      "category": "crowd-fans",
+      "file": "crowd-fans/crowd-after-concert.wav",
+      "format": "wav",
+      "bytes": 21922662,
+      "sha256": "35aa8e16985908e9072a491053fa90acdd7b204198ec196ffb749f7029ed549d",
+      "duration_s": 38.04,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "crowd",
+        "after",
+        "concert"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fans_Pt2.zip",
+        "member": "Crowd After Concert.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-fans/crowd-cheering-end-of-show",
+      "name": "Crowd Cheering End of Show",
+      "category": "crowd-fans",
+      "file": "crowd-fans/crowd-cheering-end-of-show.wav",
+      "format": "wav",
+      "bytes": 9135442,
+      "sha256": "b943868c472759cf7d6306d49357c518a5705902abf9a2c850d11174193a53f0",
+      "duration_s": 15.84,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "crowd",
+        "cheering",
+        "end",
+        "show"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fans_Pt1.zip",
+        "member": "Archive 2/Crowd Cheering End of Show.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-fans/crowd-cheering-hall",
+      "name": "Crowd Cheering Hall",
+      "category": "crowd-fans",
+      "file": "crowd-fans/crowd-cheering-hall.wav",
+      "format": "wav",
+      "bytes": 9135442,
+      "sha256": "009ab52acd7eb2353be0251582d8a8a83d47aeec04edbb727fb0d6ccf90e4a7e",
+      "duration_s": 15.84,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "crowd",
+        "cheering",
+        "hall"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fans_Pt1.zip",
+        "member": "Archive 2/Crowd Cheering Hall.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-fans/enthusiastic-crowd",
+      "name": "Enthusiastic Crowd",
+      "category": "crowd-fans",
+      "file": "crowd-fans/enthusiastic-crowd.wav",
+      "format": "wav",
+      "bytes": 2510126,
+      "sha256": "7fd2b020b271b2df72739d4fce146c62955106640ce7e158b12a62c37214aafd",
+      "duration_s": 4.338,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "enthusiastic",
+        "crowd"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fans_Pt3.zip",
+        "member": "Archive 3/Enthusiastic Crowd.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-fans/fans-clapping-performance",
+      "name": "Fans Clapping Performance",
+      "category": "crowd-fans",
+      "file": "crowd-fans/fans-clapping-performance.wav",
+      "format": "wav",
+      "bytes": 8467282,
+      "sha256": "737cdf8a5f5b6f1467f4bc9774c58cf77e8199764573314d79d86aa588562ea1",
+      "duration_s": 14.68,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fans",
+        "clapping",
+        "performance"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fans_Pt3.zip",
+        "member": "Archive 3/Fans Clapping Performance.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-fans/fans-concert",
+      "name": "Fans Concert",
+      "category": "crowd-fans",
+      "file": "crowd-fans/fans-concert.wav",
+      "format": "wav",
+      "bytes": 4684428,
+      "sha256": "e579026c392c57b7e1ab9ebdea2249e7d7fd978974762422b2ec23a423721550",
+      "duration_s": 8.108,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fans",
+        "concert"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fans_Pt1.zip",
+        "member": "Archive 2/Fans Concert.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-fans/football-stadium-crowd",
+      "name": "Football Stadium Crowd",
+      "category": "crowd-fans",
+      "file": "crowd-fans/football-stadium-crowd.wav",
+      "format": "wav",
+      "bytes": 2875292,
+      "sha256": "f7827f0c553c4182a21578d5fc30827d1246a8ea7e9e04e6028557f3a544d5e8",
+      "duration_s": 4.972,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "football",
+        "stadium",
+        "crowd"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fans_Pt1.zip",
+        "member": "Archive 2/Football Stadium Crowd.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-fans/ice-hockey-crowd",
+      "name": "Ice Hockey Crowd",
+      "category": "crowd-fans",
+      "file": "crowd-fans/ice-hockey-crowd.wav",
+      "format": "wav",
+      "bytes": 2875292,
+      "sha256": "94e4f9ef0b176d90bf149ad02ed235e4cdc626c4856d846aa0e9e35f79f83a0e",
+      "duration_s": 4.972,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ice",
+        "hockey",
+        "crowd"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fans_Pt3.zip",
+        "member": "Archive 3/Ice Hockey Crowd.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-fans/inside-stadium-mumbling",
+      "name": "Inside Stadium Mumbling",
+      "category": "crowd-fans",
+      "file": "crowd-fans/inside-stadium-mumbling.wav",
+      "format": "wav",
+      "bytes": 3168130,
+      "sha256": "25a3a8fd8df4d6accdc8380109161efa8a70704c74b719627c640db1947496a1",
+      "duration_s": 5.48,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "stadium",
+        "mumbling"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fans_Pt3.zip",
+        "member": "Archive 3/Inside Stadium Mumbling.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-fans/stadium-applause",
+      "name": "Stadium Applause",
+      "category": "crowd-fans",
+      "file": "crowd-fans/stadium-applause.wav",
+      "format": "wav",
+      "bytes": 3628930,
+      "sha256": "2f70c4e8ecb9957fa2f4c9bb99fd864be9615e835f8dbc40c32136a2106a4ea3",
+      "duration_s": 6.28,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "stadium",
+        "applause"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fans_Pt1.zip",
+        "member": "Archive 2/Stadium Applause.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-festival/crowd-applause",
+      "name": "Crowd Applause",
+      "category": "crowd-festival",
+      "file": "crowd-festival/crowd-applause.wav",
+      "format": "wav",
+      "bytes": 1741356,
+      "sha256": "f75ecd86a91a2f3e3c93e5e6907813f6ccd2b0d116f5b27519ff1b5ee60d5b31",
+      "duration_s": 3.003,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "crowd",
+        "applause"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Festival_Pt1.zip",
+        "member": "Crowd Applause.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-festival/crowd-at-beach-bar",
+      "name": "Crowd At Beach Bar",
+      "category": "crowd-festival",
+      "file": "crowd-festival/crowd-at-beach-bar.wav",
+      "format": "wav",
+      "bytes": 2875292,
+      "sha256": "195a74b420211cb85871d03321653185e3187a7cf1208389c8cb58e7f97a2159",
+      "duration_s": 4.972,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "crowd",
+        "beach",
+        "bar"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Festival_Pt2.zip",
+        "member": "Crowd At Beach Bar.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-festival/crowd-back-off-stage",
+      "name": "Crowd Back Off Stage",
+      "category": "crowd-festival",
+      "file": "crowd-festival/crowd-back-off-stage.wav",
+      "format": "wav",
+      "bytes": 2875292,
+      "sha256": "649f07a6905d36dd0d07bc17330cb23865b5594eb2db82f0d2e96e2db25039db",
+      "duration_s": 4.972,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "crowd",
+        "back",
+        "off",
+        "stage"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Festival_Pt2.zip",
+        "member": "Crowd Back Off Stage.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-festival/crowd-half-time-show",
+      "name": "Crowd Half Time Show",
+      "category": "crowd-festival",
+      "file": "crowd-festival/crowd-half-time-show.wav",
+      "format": "wav",
+      "bytes": 2337158,
+      "sha256": "306ee79df70a632333ba7d4933f34e5467f717d6106052fc397e094d906e9a46",
+      "duration_s": 4.037,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "crowd",
+        "half",
+        "time",
+        "show"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Festival_Pt2.zip",
+        "member": "Crowd Half Time Show.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-festival/crowd-roaring",
+      "name": "Crowd Roaring",
+      "category": "crowd-festival",
+      "file": "crowd-festival/crowd-roaring.wav",
+      "format": "wav",
+      "bytes": 2875292,
+      "sha256": "67bae8a9d0bb3ae853a400845fbf9da18acdf85cc565450abf7ffaf2dd473c9f",
+      "duration_s": 4.972,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "crowd",
+        "roaring"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Festival_Pt2.zip",
+        "member": "Crowd Roaring.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-festival/crowd-standing-ovation",
+      "name": "Crowd Standing Ovation",
+      "category": "crowd-festival",
+      "file": "crowd-festival/crowd-standing-ovation.wav",
+      "format": "wav",
+      "bytes": 2010426,
+      "sha256": "7322d4cfd12133487b87f8a2f1db9f599e3b13b9de4c3cec768222792986af51",
+      "duration_s": 3.47,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "crowd",
+        "standing",
+        "ovation"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Festival_Pt1.zip",
+        "member": "Crowd Standing Ovation.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-festival/excited-crowd",
+      "name": "Excited Crowd",
+      "category": "crowd-festival",
+      "file": "crowd-festival/excited-crowd.wav",
+      "format": "wav",
+      "bytes": 2453914,
+      "sha256": "096520a011a0a0f1afbb9e6993642ec124000e705aa8a48a2b8e60159187baa2",
+      "duration_s": 4.24,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "excited",
+        "crowd"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Festival_Pt2.zip",
+        "member": "Excited Crowd.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-festival/festival-ambience-people",
+      "name": "Festival Ambience People",
+      "category": "crowd-festival",
+      "file": "crowd-festival/festival-ambience-people.wav",
+      "format": "wav",
+      "bytes": 24019314,
+      "sha256": "f35817ddc6fd360705f95ce50c61c2ff80e574b7b699672853ac697227696bb8",
+      "duration_s": 41.68,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "festival",
+        "ambience",
+        "people"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Festival_Pt1.zip",
+        "member": "Festival Ambience People.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-festival/festival-crowd-hyping",
+      "name": "Festival Crowd Hyping",
+      "category": "crowd-festival",
+      "file": "crowd-festival/festival-crowd-hyping.wav",
+      "format": "wav",
+      "bytes": 14688110,
+      "sha256": "18d8eec42f3b7e24269e7e10132f95e695a40090abf1f95093a8c6bc0aae6038",
+      "duration_s": 25.48,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "festival",
+        "crowd",
+        "hyping"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Festival_Pt2.zip",
+        "member": "Festival Crowd Hyping.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-festival/short-festival-cheer",
+      "name": "Short Festival Cheer",
+      "category": "crowd-festival",
+      "file": "crowd-festival/short-festival-cheer.wav",
+      "format": "wav",
+      "bytes": 896124,
+      "sha256": "fc09ed4f5ff80aec183e72cdacf8053e3a5ba5579e9f6fce047d4204de12ac91",
+      "duration_s": 1.52,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "festival",
+        "cheer"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Festival_Pt1.zip",
+        "member": "Short Festival Cheer.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-festival/whistling-crowd",
+      "name": "Whistling Crowd",
+      "category": "crowd-festival",
+      "file": "crowd-festival/whistling-crowd.wav",
+      "format": "wav",
+      "bytes": 481428,
+      "sha256": "5223a947b938d782f8e52ec7837cc6ecdbaf7de0d479c53de86b7b163b758109",
+      "duration_s": 0.8,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whistling",
+        "crowd"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Festival_Pt1.zip",
+        "member": "Whistling Crowd.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/busy-cafe",
+      "name": "Busy Cafe╠ü",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/busy-cafe.wav",
+      "format": "wav",
+      "bytes": 3009832,
+      "sha256": "9649dc7f8e034de5ea07a6b1126f4116297967e0b0154150f69d3735cf39a3cd",
+      "duration_s": 10.41,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "busy",
+        "cafe"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt2.zip",
+        "member": "Busy Cafe╠ü.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/busy-restaurant-ambience",
+      "name": "Busy Restaurant Ambience",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/busy-restaurant-ambience.wav",
+      "format": "wav",
+      "bytes": 1856676,
+      "sha256": "a6cf7e0e90eabe98886ea782d02f052527ce7b85ed9d9ad8c3965989a16edfb0",
+      "duration_s": 3.203,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "busy",
+        "restaurant",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt2.zip",
+        "member": "Busy Restaurant Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/cafe-white-noise",
+      "name": "Cafe╠ü White Noise",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/cafe-white-noise.wav",
+      "format": "wav",
+      "bytes": 2433304,
+      "sha256": "aa8f486a110d4853893d5829465ff50fb4d2b156373bdc3b52fe7f81ef119f5a",
+      "duration_s": 8.408,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cafe",
+        "white",
+        "noise"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt2.zip",
+        "member": "Cafe╠ü White Noise.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/chatting-in-cafe",
+      "name": "Chatting in Cafe╠ü",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/chatting-in-cafe.wav",
+      "format": "wav",
+      "bytes": 3538360,
+      "sha256": "972f244943ad347e4ff16a5e81d743f47acc7f62ff40f492e26a175c72ad190c",
+      "duration_s": 12.246,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "chatting",
+        "cafe"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt1.zip",
+        "member": "Chatting in Cafe╠ü.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/inside-cafe-talks",
+      "name": "Inside Cafe╠ü Talks",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/inside-cafe-talks.wav",
+      "format": "wav",
+      "bytes": 1578046,
+      "sha256": "4c13da12347eaba153d1b779e5b7efba461053e5ce8eb6fba18a27572fd4539f",
+      "duration_s": 5.439,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "cafe",
+        "talks"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt2.zip",
+        "member": "Inside Cafe╠ü Talks.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/inside-cafetaria",
+      "name": "Inside Cafetaria",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/inside-cafetaria.wav",
+      "format": "wav",
+      "bytes": 2068086,
+      "sha256": "f70228df7d67056a7e0efe079a9152b4d13ad0708fab255b03161c6dedfc1872",
+      "duration_s": 3.57,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "cafetaria"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt2.zip",
+        "member": "Inside Cafetaria.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/inside-kitchen",
+      "name": "Inside Kitchen",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/inside-kitchen.wav",
+      "format": "wav",
+      "bytes": 2048868,
+      "sha256": "f0e739b07173acef5fa6dc164f979768a8254da463fb62a43cefb4f758c25aa3",
+      "duration_s": 3.537,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "kitchen"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt2.zip",
+        "member": "Inside Kitchen.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/inside-noise",
+      "name": "Inside Noise",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/inside-noise.wav",
+      "format": "wav",
+      "bytes": 2971396,
+      "sha256": "0771ab5699f1f569d539a3810ea44f465451ee7513a159db9ea04920e9a70935",
+      "duration_s": 10.277,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "noise"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt2.zip",
+        "member": "Inside Noise.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/inside-take-away",
+      "name": "Inside Take Away",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/inside-take-away.wav",
+      "format": "wav",
+      "bytes": 2068086,
+      "sha256": "67534dbe27fb9353ebe0100f228f5a1ebac715c587d5f4fb70de5c9c8bb7413e",
+      "duration_s": 3.57,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "take",
+        "away"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt2.zip",
+        "member": "Inside Take Away.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/people-laughing",
+      "name": "People Laughing",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/people-laughing.wav",
+      "format": "wav",
+      "bytes": 2663900,
+      "sha256": "f199b198b0df8f9cbbbf555ad32dfcb4cdabed6c00870fd787f1f072822211c2",
+      "duration_s": 9.209,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "people",
+        "laughing"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt2.zip",
+        "member": "People Laughing.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/people-laughing-loudly",
+      "name": "People Laughing Loudly",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/people-laughing-loudly.wav",
+      "format": "wav",
+      "bytes": 2173808,
+      "sha256": "7af1818bfff9420163d3d937ce294f42d08a51f0452e32347f2745c9cf1d29e4",
+      "duration_s": 7.508,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "people",
+        "laughing",
+        "loudly"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt2.zip",
+        "member": "People Laughing Loudly.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/people-talking-room",
+      "name": "People Talking Room",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/people-talking-room.wav",
+      "format": "wav",
+      "bytes": 4191810,
+      "sha256": "dc76bdbf252dcd3bc074cc6e6b56c532de4c11aeaeff905acc9be6886d5ff945",
+      "duration_s": 14.514,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "people",
+        "talking",
+        "room"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt1.zip",
+        "member": "People Talking Room.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/piano-restaurant",
+      "name": "Piano Restaurant",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/piano-restaurant.wav",
+      "format": "wav",
+      "bytes": 2452512,
+      "sha256": "3dd43360183228384cc80b0f237a4649c18febaee636e993fe936a84594b4995",
+      "duration_s": 8.475,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "piano",
+        "restaurant"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt2.zip",
+        "member": "Piano Restaurant.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/restaurant-ambience",
+      "name": "Restaurant Ambience",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/restaurant-ambience.wav",
+      "format": "wav",
+      "bytes": 17522024,
+      "sha256": "eebd89ff56eb134bc05a02bf725e9baaec288fef4ce8dc5e3ec977373a50d30f",
+      "duration_s": 30.4,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "restaurant",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt1.zip",
+        "member": "Restaurant Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/restaurant-chatter-quietely",
+      "name": "Restaurant Chatter Quietely",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/restaurant-chatter-quietely.wav",
+      "format": "wav",
+      "bytes": 2702368,
+      "sha256": "3f9057b9f488025b38fe4d431a6e92ca87211e8b8b35d5f8523f12108572042c",
+      "duration_s": 9.343,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "restaurant",
+        "chatter",
+        "quietely"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt2.zip",
+        "member": "Restaurant Chatter Quietely.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/restaurant-crowd",
+      "name": "Restaurant Crowd",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/restaurant-crowd.wav",
+      "format": "wav",
+      "bytes": 3009856,
+      "sha256": "003dfa7f4f82997ee43b43f9d6960a02ddf7a9cea493169856776686debd141a",
+      "duration_s": 10.41,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "restaurant",
+        "crowd"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt2.zip",
+        "member": "Restaurant Crowd.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "crowd-restaurants/small-cafe",
+      "name": "Small Cafe╠ü",
+      "category": "crowd-restaurants",
+      "file": "crowd-restaurants/small-cafe.wav",
+      "format": "wav",
+      "bytes": 5181604,
+      "sha256": "e3c8119eba32892d6d693125ef2e719bf818a537bc761e96ed3e395e66091ed3",
+      "duration_s": 17.951,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "small",
+        "cafe"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Restaurants_Pt1.zip",
+        "member": "Small Cafe╠ü.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "gym-ambience/airconditioned-gym-ambience",
       "name": "Airconditioned Gym Ambience",
       "category": "gym-ambience",
