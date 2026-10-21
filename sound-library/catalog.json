@@ -6458,6 +6458,604 @@
       "added": "2026-10-21"
     },
     {
+      "id": "blockbuster-bass/bass-explosion",
+      "name": "Bass Explosion",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/bass-explosion.wav",
+      "format": "wav",
+      "bytes": 742416,
+      "sha256": "15fca80cd746490eb68bdb21ea84e1e58f6ebf9c79ff1f1adcd4e5e865a84814",
+      "duration_s": 1.268,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "explosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Bass Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/bass-jitter",
+      "name": "Bass Jitter",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/bass-jitter.wav",
+      "format": "wav",
+      "bytes": 7499598,
+      "sha256": "024d25b251308a14be8d98c8f4718522ff3d2bac4ba57f83002efdfb40180f45",
+      "duration_s": 13.0,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "jitter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass2.zip",
+        "member": "Bass 2/Bass Jitter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/bass-rumble",
+      "name": "Bass Rumble",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/bass-rumble.wav",
+      "format": "wav",
+      "bytes": 7559262,
+      "sha256": "7b3a39b4baf2d0d66d78e2b7af0f32c9e137d8e03c624bc8aa852f7d83a5f3c0",
+      "duration_s": 13.08,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass2.zip",
+        "member": "Bass 2/Bass Rumble.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/bass-tension",
+      "name": "Bass Tension",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/bass-tension.wav",
+      "format": "wav",
+      "bytes": 5909846,
+      "sha256": "dfbcd57655b8881e6d4b9e88dc91ffcea1e1dc47d2adf6f50409719a60c3cc19",
+      "duration_s": 10.24,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass2.zip",
+        "member": "Bass 2/Bass Tension.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/bass-wave",
+      "name": "Bass Wave",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/bass-wave.wav",
+      "format": "wav",
+      "bytes": 4573516,
+      "sha256": "aee5cdaf827b6db0bcb39b1a1168bbd69d3a3b7dbeaabf414dfe0f9d56919338",
+      "duration_s": 7.92,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "wave"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Bass Wave.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/cinematic-bass-rumble",
+      "name": "Cinematic Bass Rumble",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/cinematic-bass-rumble.wav",
+      "format": "wav",
+      "bytes": 1203216,
+      "sha256": "17f10b700eb3b4ef4e162338b4b943547aa5a905eec43eb87384fde7413b135b",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "bass",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Cinematic Bass Rumble.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/cinematic-turn-down-bass",
+      "name": "Cinematic Turn Down Bass",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/cinematic-turn-down-bass.wav",
+      "format": "wav",
+      "bytes": 601080,
+      "sha256": "150e5e36dbcaefcffbd5b8f160b3b43a87779fb9ce2740d24b8a00ab286afdda",
+      "duration_s": 1.042,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "turn",
+        "down",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Cinematic Turn Down Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/deep-bass",
+      "name": "Deep Bass",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/deep-bass.wav",
+      "format": "wav",
+      "bytes": 4448838,
+      "sha256": "f8ab93c794f2266f1977138e19e60f21183032216ff039899f8833d66416d7e1",
+      "duration_s": 7.68,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Deep Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/deep-bass-freq",
+      "name": "Deep Bass Freq",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/deep-bass-freq.wav",
+      "format": "wav",
+      "bytes": 1203216,
+      "sha256": "4698917d7a3a3eb1345d0a2e8d8366b5c68046124a6ee86080fedb6b4535fcd8",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass",
+        "freq"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Deep Bass Freq.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/deep-bass-rumble",
+      "name": "Deep Bass Rumble",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/deep-bass-rumble.wav",
+      "format": "wav",
+      "bytes": 2084908,
+      "sha256": "4653c3e602fd06cecf554ae17bea4ad4b9f0e660525573b9ef1aefed5ca203c1",
+      "duration_s": 3.613,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Deep Bass Rumble.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/deep-build-up-bass",
+      "name": "Deep Build Up Bass",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/deep-build-up-bass.wav",
+      "format": "wav",
+      "bytes": 2817632,
+      "sha256": "801349c7f5aa4085044f6112a3c31a4e359806b8b364c94a4f2d99eb7af55aec",
+      "duration_s": 4.872,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "build",
+        "up",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Deep Build Up Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/deep-natural-rumble-bass",
+      "name": "Deep Natural Rumble Bass",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/deep-natural-rumble-bass.wav",
+      "format": "wav",
+      "bytes": 889080,
+      "sha256": "69501174a82ef86cf000b22a2e74b4c2a93ce7f97b1aa083ad63fac9548446de",
+      "duration_s": 1.542,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "natural",
+        "rumble",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Deep Natural Rumble Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/deep-rumble-bass",
+      "name": "Deep Rumble Bass",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/deep-rumble-bass.wav",
+      "format": "wav",
+      "bytes": 841080,
+      "sha256": "59b4c903b492064046c18d19dc6f3ab5b385a6bb946b4a8bde6e35c9bb15b8db",
+      "duration_s": 1.458,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "rumble",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Deep Rumble Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/deep-space-ambience",
+      "name": "Deep Space Ambience",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/deep-space-ambience.wav",
+      "format": "wav",
+      "bytes": 4734800,
+      "sha256": "a69f3e06373a9970912c46c2ab79270bbc22b54366f8d806149614ba6617c0d2",
+      "duration_s": 8.2,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "space",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Deep Space Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/deep-turn-down-bass",
+      "name": "Deep Turn Down Bass",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/deep-turn-down-bass.wav",
+      "format": "wav",
+      "bytes": 841080,
+      "sha256": "27fe22db7183e83b6f66dc52b6ef7bbd4a0b14050a5f842caf77d450d8c40c3b",
+      "duration_s": 1.458,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "turn",
+        "down",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Deep Turn Down Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/moon-rumble-space",
+      "name": "Moon Rumble Space",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/moon-rumble-space.wav",
+      "format": "wav",
+      "bytes": 7776080,
+      "sha256": "ec4f132d73090cb5627fa27ecac37407c376deb978100d561ab01dc1a0cb029d",
+      "duration_s": 13.48,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "moon",
+        "rumble",
+        "space"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass2.zip",
+        "member": "Bass 2/Moon Rumble Space.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/reverb-bass",
+      "name": "Reverb Bass",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/reverb-bass.wav",
+      "format": "wav",
+      "bytes": 601080,
+      "sha256": "e1c30d2daca36f98c13b8039f71c53f6eb3a0143d6c72b4ccb4f4d5aa3c64f64",
+      "duration_s": 1.042,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "reverb",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Reverb Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/reverb-turn-down-bass",
+      "name": "Reverb Turn Down Bass",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/reverb-turn-down-bass.wav",
+      "format": "wav",
+      "bytes": 601080,
+      "sha256": "92aceed9d12ea860fa5c553c2d8dab898d4d263def8d7bcbe131f1e2222803ac",
+      "duration_s": 1.042,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "reverb",
+        "turn",
+        "down",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Reverb Turn Down Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/short-bass-ambience",
+      "name": "Short Bass Ambience",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/short-bass-ambience.wav",
+      "format": "wav",
+      "bytes": 1400446,
+      "sha256": "6b117acffb3b9997c4e469d42d870293e8d9d53e642012c36d67bdebacd9582c",
+      "duration_s": 2.4,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "bass",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Short Bass Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/short-deep-rumble-bass",
+      "name": "Short Deep Rumble Bass",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/short-deep-rumble-bass.wav",
+      "format": "wav",
+      "bytes": 841080,
+      "sha256": "662fd6d46ec6bf345666446c826e1f46264356ab00e41262d1601f5bebfd8377",
+      "duration_s": 1.458,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "deep",
+        "rumble",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Short Deep Rumble Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/short-hollow-bass",
+      "name": "Short Hollow Bass",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/short-hollow-bass.wav",
+      "format": "wav",
+      "bytes": 1203216,
+      "sha256": "8d078edc7dcb5c268e612ad85a5e2cc4c364f712ac12d34f304933a64504ece3",
+      "duration_s": 2.069,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "hollow",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Short Hollow Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/tension-rumble-bass",
+      "name": "Tension Rumble Bass",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/tension-rumble-bass.wav",
+      "format": "wav",
+      "bytes": 889080,
+      "sha256": "0574e0cb824d017fd4514e0f8bce5f6dd489bd8d32261724a64fe044f814dee9",
+      "duration_s": 1.542,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tension",
+        "rumble",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass2.zip",
+        "member": "Bass 2/Tension Rumble Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/touch-bass",
+      "name": "Touch Bass",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/touch-bass.wav",
+      "format": "wav",
+      "bytes": 841080,
+      "sha256": "3a546b37c52c2054105e86fd3c3da5eae3d4448a7e545d394b361393a2c2d7df",
+      "duration_s": 1.458,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "touch",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Touch Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-bass/whoosh-bass-driven",
+      "name": "Whoosh Bass Driven",
+      "category": "blockbuster-bass",
+      "file": "blockbuster-bass/whoosh-bass-driven.wav",
+      "format": "wav",
+      "bytes": 972562,
+      "sha256": "0ff8b20d2ea17d7c9074deed4a5f0a9422a4835b5027d5de316077d795ba9ed1",
+      "duration_s": 1.668,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "bass",
+        "driven"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Bass.zip",
+        "member": "Bass/Whoosh Bass Driven.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "blockbuster-cars/car-crash-glass",
       "name": "Car Crash Glass",
       "category": "blockbuster-cars",
@@ -7717,6 +8315,719 @@
         "release": "sfx-2026-10",
         "asset": "Explosions.zip",
         "member": "Explosions/Small Explosion.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/crab-whoosh",
+      "name": "Crab Whoosh",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/crab-whoosh.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "6ea04f7b6ae1aa2dc952441ce21d48f8404b0a88109ac8ac3999f5f43c2bebe4",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "crab",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Crab Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/echo-whoosh",
+      "name": "Echo Whoosh",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/echo-whoosh.wav",
+      "format": "wav",
+      "bytes": 1011024,
+      "sha256": "dde048b6e4454c89334cbdce234be66b8ff57f1eedc34e07d968c4328955c690",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "echo",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Echo Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy",
+      "name": "Fantasy",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy.wav",
+      "format": "wav",
+      "bytes": 1011024,
+      "sha256": "35d86165df8fb63a70ea216d63f12e984faab3cbed93cd7846e244851c88c4de",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-ambience-switch",
+      "name": "Fantasy Ambience Switch",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-ambience-switch.wav",
+      "format": "wav",
+      "bytes": 1155176,
+      "sha256": "6b1fdfc52b8ac07b734f7b57bbc10142e6b866aa2553abddbc3a4bc479253620",
+      "duration_s": 3.971,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "ambience",
+        "switch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Ambience Switch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-animal-ambience",
+      "name": "Fantasy Animal Ambience",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-animal-ambience.wav",
+      "format": "wav",
+      "bytes": 1558754,
+      "sha256": "d915b80b5d04cfc4c352c300c4e166719419664ba8aaad08829c4c7901796909",
+      "duration_s": 5.372,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "animal",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Animal Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-animal-fly-by",
+      "name": "Fantasy Animal Fly By",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-animal-fly-by.wav",
+      "format": "wav",
+      "bytes": 1779800,
+      "sha256": "d2f33d0a96c83b1e0d8b563d178262408107c2093274957e8a902e04ad015d75",
+      "duration_s": 6.139,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "animal",
+        "fly"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy.zip",
+        "member": "Fantasy/Fantasy Animal Fly By.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-animal-speaking",
+      "name": "Fantasy Animal Speaking",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-animal-speaking.wav",
+      "format": "wav",
+      "bytes": 1472362,
+      "sha256": "878fcb61cfef3e65ca08741936ea939fd72c4bfceb74b7a4612464c52f0841b6",
+      "duration_s": 5.072,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "animal",
+        "speaking"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Animal Speaking.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-bass",
+      "name": "Fantasy Bass",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-bass.wav",
+      "format": "wav",
+      "bytes": 1664480,
+      "sha256": "d5fbf335acf3ac0158cafa3e347fbaefc02fa66448194e3809c52b67d569d3b8",
+      "duration_s": 5.739,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-bells",
+      "name": "Fantasy Bells",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-bells.wav",
+      "format": "wav",
+      "bytes": 1164756,
+      "sha256": "45e151cc87af4945ef1bce2fb37127469b47a3f991128ea15871c26707ad8f1b",
+      "duration_s": 4.004,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "bells"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Bells.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-fast-sweep",
+      "name": "Fantasy Fast Sweep",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-fast-sweep.wav",
+      "format": "wav",
+      "bytes": 549742,
+      "sha256": "63a0b2e6f5679b33cd581b222c215afc3b7c804f887a43301f9ba07ca2d17650",
+      "duration_s": 1.869,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "fast",
+        "sweep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Fast Sweep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-high-tone-tension",
+      "name": "Fantasy High Tone Tension",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-high-tone-tension.wav",
+      "format": "wav",
+      "bytes": 1011024,
+      "sha256": "40c20d3b5748a032b3cbf3a2bca3674fbb4615b03715024aacc160c2784b58d0",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "high",
+        "tone",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy High Tone Tension.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-impact",
+      "name": "Fantasy Impact",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-impact.wav",
+      "format": "wav",
+      "bytes": 309526,
+      "sha256": "b0c9a4222f1595ed981967e0a7c3b41e7ed11044af813db6d76978f0da6f03b3",
+      "duration_s": 1.034,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-monkey",
+      "name": "Fantasy Monkey",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-monkey.wav",
+      "format": "wav",
+      "bytes": 1645262,
+      "sha256": "9ef65a01a208ae86bdfcd784085d69d033ba7529a20124050393cadb0a14606a",
+      "duration_s": 5.672,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "monkey"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Monkey.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-monster",
+      "name": "Fantasy Monster",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-monster.wav",
+      "format": "wav",
+      "bytes": 1145540,
+      "sha256": "7348c89529c846ccc098b66a85d25ec81be3ac4371c71013b62cd3a099544d28",
+      "duration_s": 3.937,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "monster"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Monster.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-positive-normal",
+      "name": "Fantasy Positive Normal",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-positive-normal.wav",
+      "format": "wav",
+      "bytes": 2567760,
+      "sha256": "4cf3873470326234ad51294e7e3bdd5e1a3ef80234c2ed7ae5d4e65508baaf0a",
+      "duration_s": 8.876,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "positive",
+        "normal"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy.zip",
+        "member": "Fantasy/Fantasy Positive Normal.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-riser",
+      "name": "Fantasy Riser",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-riser.wav",
+      "format": "wav",
+      "bytes": 5815826,
+      "sha256": "c1a5f700e015312828c2890fe019d053c2669039792750c0bb228921f6daea0a",
+      "duration_s": 10.077,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy.zip",
+        "member": "Fantasy/Fantasy Riser.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-scary-laughing",
+      "name": "Fantasy Scary Laughing",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-scary-laughing.wav",
+      "format": "wav",
+      "bytes": 1087980,
+      "sha256": "0fab4bbccf1816dc02faca3e7afce68e48081f73028560b9e68d77f2cf34899d",
+      "duration_s": 3.737,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "scary",
+        "laughing"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Scary Laughing.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-sharp-tension-fast",
+      "name": "Fantasy Sharp Tension Fast",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-sharp-tension-fast.wav",
+      "format": "wav",
+      "bytes": 463258,
+      "sha256": "444da88c79407e8050a8077dd28e3f4756ba56db91d685e296964d46b6e62e70",
+      "duration_s": 1.568,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "sharp",
+        "tension",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Sharp Tension Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-slow-impact",
+      "name": "Fantasy Slow Impact",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-slow-impact.wav",
+      "format": "wav",
+      "bytes": 1011024,
+      "sha256": "8c4c63dc2ff35cc6742f96caf405fb6d5c96c09f8e55c903507d873ffb019535",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "slow",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Slow Impact.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-strings-whoosh",
+      "name": "Fantasy Strings Whoosh",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-strings-whoosh.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "84b515c86d0fe81a6ea3c07c7c632f23642258b684238c9c077c090fec579f58",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "strings",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Strings Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-sweep",
+      "name": "Fantasy Sweep",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-sweep.wav",
+      "format": "wav",
+      "bytes": 540156,
+      "sha256": "f6c66092a039ea0244a0df1fd09123d9ca98754b239169c155a2bc4e9f498c4e",
+      "duration_s": 1.835,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "sweep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Sweep.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-tension",
+      "name": "Fantasy Tension",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-tension.wav",
+      "format": "wav",
+      "bytes": 905298,
+      "sha256": "b58fe99d54032b384e432995b1e1b29ab6457547130d694ae7e278d1789240ef",
+      "duration_s": 3.103,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Tension.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-tension-build",
+      "name": "Fantasy Tension Build",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-tension-build.wav",
+      "format": "wav",
+      "bytes": 1991206,
+      "sha256": "fedc89c261e85aa760b846c3906b7018576447eeb61edf3a03269bedabb456c5",
+      "duration_s": 6.874,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "tension",
+        "build"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy.zip",
+        "member": "Fantasy/Fantasy Tension Build.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-tension-build-up",
+      "name": "Fantasy Tension Build Up",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-tension-build-up.wav",
+      "format": "wav",
+      "bytes": 1664574,
+      "sha256": "0d9b0bb600f96f3e12c53bdd6d15bcdeaedee918985111a77725361c80d65f0f",
+      "duration_s": 5.739,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "tension",
+        "build",
+        "up"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy.zip",
+        "member": "Fantasy/Fantasy Tension Build Up.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-tension-positive",
+      "name": "Fantasy Tension Positive",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-tension-positive.wav",
+      "format": "wav",
+      "bytes": 1155248,
+      "sha256": "2d5e9694cbccacc604e0ee94d62dc4acbe7673bc39f9da618c154239d2224197",
+      "duration_s": 3.971,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "tension",
+        "positive"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Tension Positive.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-tone",
+      "name": "Fantasy Tone",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-tone.wav",
+      "format": "wav",
+      "bytes": 3293668,
+      "sha256": "95cba381d44f80a01b3bdab47fa167e1399d0334d821d3a2ee0947212fe6be0d",
+      "duration_s": 5.711,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "tone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy.zip",
+        "member": "Fantasy/Fantasy Tone.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-underwater",
+      "name": "Fantasy Underwater",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-underwater.wav",
+      "format": "wav",
+      "bytes": 1347456,
+      "sha256": "244b163e2464acb7483fb204c976f2745030cb68ddc8a05fd2aeaabe6847e19e",
+      "duration_s": 4.638,
+      "sample_rate": 48000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "underwater"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Underwater.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/fantasy-whoosh",
+      "name": "Fantasy Whoosh",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/fantasy-whoosh.wav",
+      "format": "wav",
+      "bytes": 1011024,
+      "sha256": "9f40eb2e44f99aeb05fba8863de2b5daebf745a0cc739a0058690ea2ceb01f55",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fantasy",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy_2.zip",
+        "member": "Fantasy/Fantasy Whoosh.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-fantasy/soft-fantasy-riser",
+      "name": "Soft Fantasy Riser",
+      "category": "blockbuster-fantasy",
+      "file": "blockbuster-fantasy/soft-fantasy-riser.wav",
+      "format": "wav",
+      "bytes": 4036294,
+      "sha256": "dcafd56fcc6443512c05ada77c256cce407a899af9f71c9837895a60a5944776",
+      "duration_s": 7.0,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "soft",
+        "fantasy",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Fantasy.zip",
+        "member": "Fantasy/Soft Fantasy Riser.wav"
       },
       "added": "2026-10-21"
     },
@@ -9328,6 +10639,450 @@
         "release": "sfx-2026-10",
         "asset": "Guns.zip",
         "member": "Guns/Western Movie Shot.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/cinematic-hit",
+      "name": "Cinematic Hit",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/cinematic-hit.wav",
+      "format": "wav",
+      "bytes": 1011024,
+      "sha256": "95302ac5a345bec49e554cd1dacf30294d79257ef2ce08d0d52287bb0143166b",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits.zip",
+        "member": "Hits/Cinematic Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/cinematic-riser-hit",
+      "name": "Cinematic Riser Hit",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/cinematic-riser-hit.wav",
+      "format": "wav",
+      "bytes": 1760574,
+      "sha256": "70e253b610d5a30567ac4668b42d9b6dc95b02e570151f8e215e291748c8f957",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "riser",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits.zip",
+        "member": "Hits/Cinematic Riser Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/deep-bass-hit",
+      "name": "Deep Bass Hit",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/deep-bass-hit.wav",
+      "format": "wav",
+      "bytes": 1011024,
+      "sha256": "4d02aa362ed1878a141dabe63c6ae6ca8c7deca7c496ea69e9fd34e7d2e2f038",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits.zip",
+        "member": "Hits/Deep Bass Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/deep-hit-smooth",
+      "name": "Deep Hit Smooth",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/deep-hit-smooth.wav",
+      "format": "wav",
+      "bytes": 3342094,
+      "sha256": "faa13ef41911fede0a350a64e2fbcece5ec0d82319be7f9faab1ca99ba83ebef",
+      "duration_s": 4.32,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "hit",
+        "smooth"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_2.zip",
+        "member": "Hits/Deep Hit Smooth.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/deep-intense-hit",
+      "name": "Deep Intense Hit",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/deep-intense-hit.wav",
+      "format": "wav",
+      "bytes": 1760574,
+      "sha256": "a84bb903f6c0ac11ece26ac52b038748c732d421072fb9f68a875809c24023ee",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "intense",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits.zip",
+        "member": "Hits/Deep Intense Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/distorted-hit-echo",
+      "name": "Distorted Hit Echo",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/distorted-hit-echo.wav",
+      "format": "wav",
+      "bytes": 3342096,
+      "sha256": "ae0a046fc80227f23bbd21c8bb666b4f9db73862006f1fa4de43c8de5cff2d5d",
+      "duration_s": 4.32,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "hit",
+        "echo"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_2.zip",
+        "member": "Hits/Distorted Hit Echo.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/echo-cinematic-hit",
+      "name": "Echo Cinematic Hit",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/echo-cinematic-hit.wav",
+      "format": "wav",
+      "bytes": 1676900,
+      "sha256": "e9871f0ef79a8f530ba5f0ceac3628c8329dde27ba16b9c305febae97c2950bd",
+      "duration_s": 2.88,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "echo",
+        "cinematic",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits.zip",
+        "member": "Hits/Echo Cinematic Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/hall-hit",
+      "name": "Hall Hit",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/hall-hit.wav",
+      "format": "wav",
+      "bytes": 2506342,
+      "sha256": "8f95357d27748ca12ef8f80d444018489e8e65ef98affe117fd1d5ca3f78e1ce",
+      "duration_s": 4.32,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hall",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_2.zip",
+        "member": "Hits/Hall Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/hall-hit-new",
+      "name": "Hall Hit NEW",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/hall-hit-new.wav",
+      "format": "wav",
+      "bytes": 3342086,
+      "sha256": "9b739c62468cd4b20c541904a876ee5db4dc56a59bfcd2c1c579934e5c972e1a",
+      "duration_s": 4.32,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 32,
+      "loopable": false,
+      "tags": [
+        "hall",
+        "hit",
+        "new"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_2.zip",
+        "member": "Hits/Hall Hit NEW.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/hall-hit-right",
+      "name": "Hall Hit Right",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/hall-hit-right.wav",
+      "format": "wav",
+      "bytes": 2506342,
+      "sha256": "4eaaf6018fe41342e4b9e75515c75ec292cfd6a83014756064899ca637aeb7ff",
+      "duration_s": 4.32,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hall",
+        "hit",
+        "right"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_2.zip",
+        "member": "Hits/Hall Hit Right.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/hit-distorted-jitter",
+      "name": "Hit Distorted Jitter",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/hit-distorted-jitter.wav",
+      "format": "wav",
+      "bytes": 2162528,
+      "sha256": "520a99383b25cb4ee912c9ea4b6f13dfa38902391d24b27037131791206e1486",
+      "duration_s": 3.72,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "distorted",
+        "jitter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_2.zip",
+        "member": "Hits/Hit Distorted Jitter.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/hit-extra-bass",
+      "name": "Hit Extra Bass",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/hit-extra-bass.wav",
+      "format": "wav",
+      "bytes": 1555866,
+      "sha256": "e2f9c1e8572b35edd492ba63ac497fb029b5c4b42b203c0603c0b6ab288c590a",
+      "duration_s": 2.68,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "extra",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits.zip",
+        "member": "Hits/Hit Extra Bass.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/hit-long-aftermath",
+      "name": "Hit Long Aftermath",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/hit-long-aftermath.wav",
+      "format": "wav",
+      "bytes": 4558690,
+      "sha256": "2b090a1922832970059f78409b8b32327a53457730a74cb1143bb7f96c61f7ee",
+      "duration_s": 7.88,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "long",
+        "aftermath"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_2.zip",
+        "member": "Hits/Hit Long Aftermath.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/hit-reverb",
+      "name": "Hit Reverb",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/hit-reverb.wav",
+      "format": "wav",
+      "bytes": 3429728,
+      "sha256": "6d5fcd5921ae1734955e51e7aa41f6a088823d483feea8f3788d2049a6b31f5f",
+      "duration_s": 5.92,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "reverb"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_2.zip",
+        "member": "Hits/Hit Reverb.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/hit-reverb-wave",
+      "name": "Hit Reverb Wave",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/hit-reverb-wave.wav",
+      "format": "wav",
+      "bytes": 1048986,
+      "sha256": "1e9ec86b05a2c23940372c8ce62c3c07544dd2d0b8e2c373bef01dad0502ec61",
+      "duration_s": 1.8,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "reverb",
+        "wave"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits.zip",
+        "member": "Hits/Hit Reverb Wave.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/hit-short",
+      "name": "Hit Short",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/hit-short.wav",
+      "format": "wav",
+      "bytes": 824942,
+      "sha256": "21ed6a1874c962a1ea8452add3f8fa0ecf83df9c194e85eebecc25d0a41c610d",
+      "duration_s": 1.4,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "short"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits.zip",
+        "member": "Hits/Hit Short.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/hit-strange",
+      "name": "Hit Strange",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/hit-strange.wav",
+      "format": "wav",
+      "bytes": 225898,
+      "sha256": "84d5fc7a233797b99d31d0b54c5b2e3c979646712b946248a571a88600f38464",
+      "duration_s": 0.36,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hit",
+        "strange"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits.zip",
+        "member": "Hits/Hit Strange.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "blockbuster-hits/plane-hit",
+      "name": "Plane Hit",
+      "category": "blockbuster-hits",
+      "file": "blockbuster-hits/plane-hit.wav",
+      "format": "wav",
+      "bytes": 2782822,
+      "sha256": "fbeadeb03a06ee48253f1b42f77afabd67b96e0b88c53f34fa75a283fa0ed65f",
+      "duration_s": 4.8,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "plane",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Hits_2.zip",
+        "member": "Hits/Plane Hit.wav"
       },
       "added": "2026-10-21"
     },
