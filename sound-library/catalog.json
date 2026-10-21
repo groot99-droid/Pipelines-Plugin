@@ -4314,6 +4314,1406 @@
       "added": "2026-10-21"
     },
     {
+      "id": "gym-ambience/airconditioned-gym-ambience",
+      "name": "Airconditioned Gym Ambience",
+      "category": "gym-ambience",
+      "file": "gym-ambience/airconditioned-gym-ambience.wav",
+      "format": "wav",
+      "bytes": 2971388,
+      "sha256": "f68ad0bf5105f409ddd478e18d4c8364c73e5cc469f3664531dc77bbd2b086be",
+      "duration_s": 5.138,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "airconditioned",
+        "gym",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Ambience.zip",
+        "member": "Gym Ambience/Airconditioned Gym Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-ambience/crowded-gym",
+      "name": "Crowded Gym",
+      "category": "gym-ambience",
+      "file": "gym-ambience/crowded-gym.wav",
+      "format": "wav",
+      "bytes": 3720938,
+      "sha256": "f5a9d7a66fd082ced4bd0b3b19aec98e718ecdc1b2a8c1f770ac808012e793ae",
+      "duration_s": 6.44,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "crowded",
+        "gym"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Ambience.zip",
+        "member": "Gym Ambience/Crowded Gym.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-ambience/empty-gym",
+      "name": "Empty Gym",
+      "category": "gym-ambience",
+      "file": "gym-ambience/empty-gym.wav",
+      "format": "wav",
+      "bytes": 2971388,
+      "sha256": "e353571fa550996244bbffa8593986b7d74db3936c411505782c976bbe456c6f",
+      "duration_s": 5.138,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "empty",
+        "gym"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Ambience.zip",
+        "member": "Gym Ambience/Empty Gym.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-ambience/falling-dumbells-on-floor",
+      "name": "Falling Dumbells On Floor",
+      "category": "gym-ambience",
+      "file": "gym-ambience/falling-dumbells-on-floor.wav",
+      "format": "wav",
+      "bytes": 722764,
+      "sha256": "5f67044207e55888afea354916d4feeb686109525b1ba073c9f783c72f2718d7",
+      "duration_s": 1.235,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "falling",
+        "dumbells",
+        "floor"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Ambience.zip",
+        "member": "Gym Ambience/Falling Dumbells On Floor.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-ambience/gym-locker",
+      "name": "Gym Locker",
+      "category": "gym-ambience",
+      "file": "gym-ambience/gym-locker.wav",
+      "format": "wav",
+      "bytes": 203818,
+      "sha256": "a032f551de4b002cb964d4bceb275ffec77f661adf44e62372be603f811b6de1",
+      "duration_s": 0.334,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "gym",
+        "locker"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Ambience.zip",
+        "member": "Gym Ambience/Gym Locker.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-ambience/gym-locker-left",
+      "name": "Gym Locker Left",
+      "category": "gym-ambience",
+      "file": "gym-ambience/gym-locker-left.wav",
+      "format": "wav",
+      "bytes": 203818,
+      "sha256": "1e2c43a93bc2137ab46d30cbf526133514c3999c23d5e26e547747bb5a46fbb3",
+      "duration_s": 0.334,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "gym",
+        "locker",
+        "left"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Ambience.zip",
+        "member": "Gym Ambience/Gym Locker Left.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-ambience/inside-quiet-big-gym",
+      "name": "Inside Quiet Big Gym",
+      "category": "gym-ambience",
+      "file": "gym-ambience/inside-quiet-big-gym.wav",
+      "format": "wav",
+      "bytes": 3451868,
+      "sha256": "6a0d7e37677afb0917e7157cecc35a8cd65b7f8b6e9e9cd8b4fe4a44725d411a",
+      "duration_s": 5.973,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "quiet",
+        "big",
+        "gym"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Ambience.zip",
+        "member": "Gym Ambience/Inside Quiet Big Gym.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-bag/closing-gym-bag",
+      "name": "Closing Gym Bag",
+      "category": "gym-bag",
+      "file": "gym-bag/closing-gym-bag.wav",
+      "format": "wav",
+      "bytes": 165792,
+      "sha256": "e69f3889bfd4e87b5310db56ec35a71b72d49cccaa687ee183e1195d519eaf67",
+      "duration_s": 0.267,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "closing",
+        "gym",
+        "bag"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Bag.zip",
+        "member": "Gym Bag/Closing Gym Bag.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-bag/slow-short-closing-gym-bag",
+      "name": "Slow Short Closing Gym Bag",
+      "category": "gym-bag",
+      "file": "gym-bag/slow-short-closing-gym-bag.wav",
+      "format": "wav",
+      "bytes": 1434386,
+      "sha256": "894a29354aa5c5395c2cd2d5d78b79ac4901902aca457d15dbb745327be41364",
+      "duration_s": 2.469,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slow",
+        "short",
+        "closing",
+        "gym",
+        "bag"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Bag.zip",
+        "member": "Gym Bag/Slow Short Closing Gym Bag.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/2-hits-boxing-bag",
+      "name": "2 Hits Boxing Bag",
+      "category": "gym-boxing",
+      "file": "gym-boxing/2-hits-boxing-bag.wav",
+      "format": "wav",
+      "bytes": 665106,
+      "sha256": "11035741218680ae9f57d9a5c4b8b2c72e0ed529ec20fc0cdeac9cfab6491f38",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "2",
+        "hits",
+        "boxing",
+        "bag"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/2 Hits Boxing Bag.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/box-hit-pad",
+      "name": "Box Hit Pad",
+      "category": "gym-boxing",
+      "file": "gym-boxing/box-hit-pad.wav",
+      "format": "wav",
+      "bytes": 428228,
+      "sha256": "469d17dc78233b5ee8b068fb581835d22878b76778030016b34638e3e7af821a",
+      "duration_s": 0.72,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "box",
+        "hit",
+        "pad"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/Box Hit Pad.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/boxing-bell",
+      "name": "Boxing Bell",
+      "category": "gym-boxing",
+      "file": "gym-boxing/boxing-bell.wav",
+      "format": "wav",
+      "bytes": 914972,
+      "sha256": "384dbea4680009ae7888cf2d5286e63c988093a50bebdc58ca0dbefd5fda5098",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "boxing",
+        "bell"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/Boxing Bell.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/boxing-bell-3-times",
+      "name": "Boxing Bell 3 Times",
+      "category": "gym-boxing",
+      "file": "gym-boxing/boxing-bell-3-times.wav",
+      "format": "wav",
+      "bytes": 3240872,
+      "sha256": "4582c00e3a25840919b7d6c39503ec9970cb600b5be82debdd3713ac2811506b",
+      "duration_s": 5.606,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "boxing",
+        "bell",
+        "3",
+        "times"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/Boxing Bell 3 Times.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/boxing-combination",
+      "name": "Boxing Combination",
+      "category": "gym-boxing",
+      "file": "gym-boxing/boxing-combination.wav",
+      "format": "wav",
+      "bytes": 1110200,
+      "sha256": "54634fb0bfd74dcb3f74a04ba554013697e8c7e98c426fd930912921210c1c31",
+      "duration_s": 1.902,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "boxing",
+        "combination"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/Boxing Combination.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/boxing-hit-bag",
+      "name": "Boxing Hit Bag",
+      "category": "gym-boxing",
+      "file": "gym-boxing/boxing-hit-bag.wav",
+      "format": "wav",
+      "bytes": 357636,
+      "sha256": "fbcba0eecf4c7fbc8460144dbbc33de8a13aa781864bb3b38a92dc37bd3bf3d3",
+      "duration_s": 0.601,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "boxing",
+        "hit",
+        "bag"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/Boxing Hit Bag.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/boxing-hit-bag-hooks",
+      "name": "Boxing Hit Bag Hooks",
+      "category": "gym-boxing",
+      "file": "gym-boxing/boxing-hit-bag-hooks.wav",
+      "format": "wav",
+      "bytes": 627364,
+      "sha256": "5f466a81eb49cca4837d0736f22cbea840e3652a4b3762155444c17d9d8239cd",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "boxing",
+        "hit",
+        "bag",
+        "hooks"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/Boxing Hit Bag Hooks.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/boxing-kick-bag",
+      "name": "Boxing Kick Bag",
+      "category": "gym-boxing",
+      "file": "gym-boxing/boxing-kick-bag.wav",
+      "format": "wav",
+      "bytes": 357260,
+      "sha256": "dab214275f97c6ccdfce14496fdc7b22aebb4734e12a3987af044bfe922bcb90",
+      "duration_s": 0.6,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "boxing",
+        "kick",
+        "bag"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/Boxing Kick Bag.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/boxing-punch",
+      "name": "Boxing Punch",
+      "category": "gym-boxing",
+      "file": "gym-boxing/boxing-punch.wav",
+      "format": "wav",
+      "bytes": 513218,
+      "sha256": "f4eba1a8d6415e6faeef83a0af8cc3f9d6436b6768db78f5af8e24590a37c177",
+      "duration_s": 0.868,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "boxing",
+        "punch"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/Boxing Punch.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/boxing-punch-2-times",
+      "name": "Boxing Punch 2 Times",
+      "category": "gym-boxing",
+      "file": "gym-boxing/boxing-punch-2-times.wav",
+      "format": "wav",
+      "bytes": 686780,
+      "sha256": "0cc89fceb0f3ce53a1021edc73ce2a0922b2328532979c3146685b065fcf90e0",
+      "duration_s": 1.168,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "boxing",
+        "punch",
+        "2",
+        "times"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/Boxing Punch 2 Times.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/cinematic-boxing-bell",
+      "name": "Cinematic Boxing Bell",
+      "category": "gym-boxing",
+      "file": "gym-boxing/cinematic-boxing-bell.wav",
+      "format": "wav",
+      "bytes": 665082,
+      "sha256": "ad02495af7cd62411a4df92b4ca61bb05d1b301fbf159b5e453a6378f92c616b",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "boxing",
+        "bell"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/Cinematic Boxing Bell.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/gym-bag-hit",
+      "name": "Gym Bag Hit",
+      "category": "gym-boxing",
+      "file": "gym-boxing/gym-bag-hit.wav",
+      "format": "wav",
+      "bytes": 495508,
+      "sha256": "5abe42c83ef3cf13d3da6c79cae8ea6d25c0f4a40b24084f1e8118764936c18c",
+      "duration_s": 0.84,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "gym",
+        "bag",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/Gym Bag Hit.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/high-boxing-bell",
+      "name": "High Boxing Bell",
+      "category": "gym-boxing",
+      "file": "gym-boxing/high-boxing-bell.wav",
+      "format": "wav",
+      "bytes": 665082,
+      "sha256": "4e64107607b8e6254e0a090227423e8dc793dc241d8c380497b90bdea8eb3537",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "high",
+        "boxing",
+        "bell"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/High Boxing Bell.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/hitting-the-bag-combo",
+      "name": "Hitting The Bag Combo",
+      "category": "gym-boxing",
+      "file": "gym-boxing/hitting-the-bag-combo.wav",
+      "format": "wav",
+      "bytes": 1184066,
+      "sha256": "c38d83a03dcd40264bd1f86bd8ce4ab53fdc77a1f5cdd8edddf182e12e4ce83b",
+      "duration_s": 2.035,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hitting",
+        "bag",
+        "combo"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/Hitting The Bag Combo.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/pad-work",
+      "name": "Pad Work",
+      "category": "gym-boxing",
+      "file": "gym-boxing/pad-work.wav",
+      "format": "wav",
+      "bytes": 991814,
+      "sha256": "e02ac2ceb63abba2000bccf3b2f0a1b197b727e3e163e403b3ab2d46e0eec109",
+      "duration_s": 1.702,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "pad",
+        "work"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/Pad Work.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/pads-combo",
+      "name": "Pads Combo",
+      "category": "gym-boxing",
+      "file": "gym-boxing/pads-combo.wav",
+      "format": "wav",
+      "bytes": 741962,
+      "sha256": "0cd54e70169d21cbe50202639bef24edee26bce16b1a8d13803e223be628c99e",
+      "duration_s": 1.268,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "pads",
+        "combo"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/Pads Combo.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-boxing/single-hit-boxing-bag",
+      "name": "Single Hit Boxing Bag",
+      "category": "gym-boxing",
+      "file": "gym-boxing/single-hit-boxing-bag.wav",
+      "format": "wav",
+      "bytes": 434454,
+      "sha256": "5f8921e3d91d071896d04dba785a4e3410c5b194587fd8d8d77e9db0863c19f5",
+      "duration_s": 0.734,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "single",
+        "hit",
+        "boxing",
+        "bag"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Boxing.zip",
+        "member": "Gym Boxing/Single Hit Boxing Bag.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-machines/cable-machine",
+      "name": "Cable Machine",
+      "category": "gym-machines",
+      "file": "gym-machines/cable-machine.wav",
+      "format": "wav",
+      "bytes": 934152,
+      "sha256": "0293f595c5fd4a34b06ec916ec8097efd79704337a74656831111a5633c8268d",
+      "duration_s": 1.602,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cable",
+        "machine"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Machines_Pt1.zip",
+        "member": "Cable Machine.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-machines/close-by-gym-ambience",
+      "name": "Close by Gym Ambience",
+      "category": "gym-machines",
+      "file": "gym-machines/close-by-gym-ambience.wav",
+      "format": "wav",
+      "bytes": 9826700,
+      "sha256": "72f6603251a2e3c0d334e6759d7072c068b05074002198d02e68d46726dfad41",
+      "duration_s": 17.04,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "close",
+        "gym",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Machines_Pt2.zip",
+        "member": "Close by Gym Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-machines/close-by-gym-ambience-left",
+      "name": "Close by Gym Ambience Left",
+      "category": "gym-machines",
+      "file": "gym-machines/close-by-gym-ambience-left.wav",
+      "format": "wav",
+      "bytes": 9826700,
+      "sha256": "d3db8dfa97a77b3fd34e1446ead8bf02dbfb6654eb4d35720652a633dad23066",
+      "duration_s": 17.04,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "close",
+        "gym",
+        "ambience",
+        "left"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Machines_Pt2.zip",
+        "member": "Close by Gym Ambience Left.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-machines/far-off-gym-ambience",
+      "name": "Far Off Gym Ambience",
+      "category": "gym-machines",
+      "file": "gym-machines/far-off-gym-ambience.wav",
+      "format": "wav",
+      "bytes": 7917970,
+      "sha256": "29fb6f80485dc13657c43af3febed2f389f137510888ffd208286b233ec6509c",
+      "duration_s": 13.72,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "far",
+        "off",
+        "gym",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Machines_Pt2.zip",
+        "member": "Far Off Gym Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-machines/far-off-gym-ambience-left",
+      "name": "Far Off Gym Ambience Left",
+      "category": "gym-machines",
+      "file": "gym-machines/far-off-gym-ambience-left.wav",
+      "format": "wav",
+      "bytes": 7917970,
+      "sha256": "39a7d63415afcaa8bdacebc62124ad9d820aed8b7245a9fdd8765ccfd00d2442",
+      "duration_s": 13.72,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "far",
+        "off",
+        "gym",
+        "ambience",
+        "left"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Machines_Pt2.zip",
+        "member": "Far Off Gym Ambience Left.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-machines/gym-quiete-ambience",
+      "name": "Gym Quiete Ambience",
+      "category": "gym-machines",
+      "file": "gym-machines/gym-quiete-ambience.wav",
+      "format": "wav",
+      "bytes": 14273420,
+      "sha256": "746545f4063714375594923eaa690bf7478e0db3944663b9637949e67b51a0ef",
+      "duration_s": 24.76,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "gym",
+        "quiete",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Machines_Pt3.zip",
+        "member": "Gym Quiete Ambience.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-machines/gym-quiete-ambience-left",
+      "name": "Gym Quiete Ambience Left",
+      "category": "gym-machines",
+      "file": "gym-machines/gym-quiete-ambience-left.wav",
+      "format": "wav",
+      "bytes": 14273420,
+      "sha256": "62c9475be2f0e31f8457cd092f5bfd148e4dfea3703c4478fe8123c24e970c3a",
+      "duration_s": 24.76,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "gym",
+        "quiete",
+        "ambience",
+        "left"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Machines_Pt3.zip",
+        "member": "Gym Quiete Ambience Left.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-machines/old-machine",
+      "name": "Old Machine",
+      "category": "gym-machines",
+      "file": "gym-machines/old-machine.wav",
+      "format": "wav",
+      "bytes": 953394,
+      "sha256": "21d6acae8e6b071c3dd8dddabf97940534cb50d28d7093769f59022cff70bef7",
+      "duration_s": 1.635,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "old",
+        "machine"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Machines_Pt1.zip",
+        "member": "Old Machine.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-machines/rope-work",
+      "name": "Rope Work",
+      "category": "gym-machines",
+      "file": "gym-machines/rope-work.wav",
+      "format": "wav",
+      "bytes": 2570950,
+      "sha256": "a572969773b46c963b252f258c0f7263c625e65d3516aabe4a6a0c8ffbb03915",
+      "duration_s": 4.44,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rope",
+        "work"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Machines_Pt4.zip",
+        "member": "Rope Work.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-machines/treadmill",
+      "name": "Treadmill",
+      "category": "gym-machines",
+      "file": "gym-machines/treadmill.wav",
+      "format": "wav",
+      "bytes": 12846882,
+      "sha256": "dd3c4c75d4d2edfcb4832cf2b86bf5faaf69930d3e27db3f95b0843ddead46c5",
+      "duration_s": 22.28,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "treadmill"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Machines_Pt1.zip",
+        "member": "Treadmill.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-machines/treadmill-fast-running",
+      "name": "Treadmill Fast Running",
+      "category": "gym-machines",
+      "file": "gym-machines/treadmill-fast-running.wav",
+      "format": "wav",
+      "bytes": 2221836,
+      "sha256": "b27522a3c718cb88768a798cf4abfed6f70630003301e1ef631f266c607c17fe",
+      "duration_s": 3.837,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "treadmill",
+        "fast",
+        "running"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Machines_Pt4.zip",
+        "member": "Treadmill Fast Running.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-machines/treadmill-running",
+      "name": "Treadmill Running",
+      "category": "gym-machines",
+      "file": "gym-machines/treadmill-running.wav",
+      "format": "wav",
+      "bytes": 1702920,
+      "sha256": "623aef636300b14d932cfcd343a5f1ba806b4dfc6028ba486465d6e5c1cb3667",
+      "duration_s": 2.936,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "treadmill",
+        "running"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Machines_Pt4.zip",
+        "member": "Treadmill Running.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-machines/treadmill-running-fast",
+      "name": "Treadmill Running Fast",
+      "category": "gym-machines",
+      "file": "gym-machines/treadmill-running-fast.wav",
+      "format": "wav",
+      "bytes": 11372322,
+      "sha256": "2e10138b36e0534f6bd997851c1f597432a774ac1d62658f36c879233b481c80",
+      "duration_s": 19.72,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "treadmill",
+        "running",
+        "fast"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Machines_Pt4.zip",
+        "member": "Treadmill Running Fast.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-machines/treadmill-walking",
+      "name": "Treadmill Walking",
+      "category": "gym-machines",
+      "file": "gym-machines/treadmill-walking.wav",
+      "format": "wav",
+      "bytes": 17385762,
+      "sha256": "da4eade8ac32ade323fc8cb64653acf179e53770b345f6866d2a33d8163b73f9",
+      "duration_s": 30.16,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "treadmill",
+        "walking"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Machines_Pt1.zip",
+        "member": "Treadmill Walking.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-machines/weighted-machine-stack",
+      "name": "Weighted Machine Stack",
+      "category": "gym-machines",
+      "file": "gym-machines/weighted-machine-stack.wav",
+      "format": "wav",
+      "bytes": 495492,
+      "sha256": "2baaa0ef26de50e8e9424dfa57f378782fc19ad527aeadcbb9e6498039248bb6",
+      "duration_s": 0.84,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "weighted",
+        "machine",
+        "stack"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Machines_Pt1.zip",
+        "member": "Weighted Machine Stack.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-material/barbell-drop",
+      "name": "Barbell Drop",
+      "category": "gym-material",
+      "file": "gym-material/barbell-drop.wav",
+      "format": "wav",
+      "bytes": 357252,
+      "sha256": "707d662aaf4235c8eba0414b9b72d7e51849b5b84f5802d0011aab7a714c7500",
+      "duration_s": 0.6,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "barbell",
+        "drop"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Material.zip",
+        "member": "Gym Material/Barbell Drop.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-material/change-load-machine",
+      "name": "Change Load Machine",
+      "category": "gym-material",
+      "file": "gym-material/change-load-machine.wav",
+      "format": "wav",
+      "bytes": 588226,
+      "sha256": "239b69b489d46c7ee8e0191ca36bb96f3025835c417c56f39055639d8e14adaf",
+      "duration_s": 1.001,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "change",
+        "load",
+        "machine"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Material.zip",
+        "member": "Gym Material/Change Load Machine.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-material/change-weight-chest-machine",
+      "name": "Change Weight Chest Machine",
+      "category": "gym-material",
+      "file": "gym-material/change-weight-chest-machine.wav",
+      "format": "wav",
+      "bytes": 780396,
+      "sha256": "1f708bcd72ef3e88c6563e18f8c61624c7d2cae375ebb04b7c5dfaa14d72978b",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "change",
+        "weight",
+        "chest",
+        "machine"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Material.zip",
+        "member": "Gym Material/Change Weight Chest Machine.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-material/dumbell-rubber-mat-impac",
+      "name": "Dumbell Rubber Mat Impac",
+      "category": "gym-material",
+      "file": "gym-material/dumbell-rubber-mat-impac.wav",
+      "format": "wav",
+      "bytes": 607426,
+      "sha256": "a61b7fce492c2465a9cac857ef5bb79c85bf225fe533770e81483eab096dac20",
+      "duration_s": 1.034,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "dumbell",
+        "rubber",
+        "mat",
+        "impac"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Material.zip",
+        "member": "Gym Material/Dumbell Rubber Mat Impac.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-material/gym-chain",
+      "name": "Gym Chain",
+      "category": "gym-material",
+      "file": "gym-material/gym-chain.wav",
+      "format": "wav",
+      "bytes": 302400,
+      "sha256": "3249c78c5aa78febfaf3d266024dcb3d87337363cd708f56ead3649d4759192d",
+      "duration_s": 0.5,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "gym",
+        "chain"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Material.zip",
+        "member": "Gym Material/Gym Chain.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-material/gym-chain-in-hand",
+      "name": "Gym Chain in Hand",
+      "category": "gym-material",
+      "file": "gym-material/gym-chain-in-hand.wav",
+      "format": "wav",
+      "bytes": 1837988,
+      "sha256": "e1217d0427754a85bb8eace8b474f03cfe753107ea6d82979153ba66d2f27905",
+      "duration_s": 3.17,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "gym",
+        "chain",
+        "hand"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Material.zip",
+        "member": "Gym Material/Gym Chain in Hand.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-material/gym-deadlift-weights",
+      "name": "Gym Deadlift Weights",
+      "category": "gym-material",
+      "file": "gym-material/gym-deadlift-weights.wav",
+      "format": "wav",
+      "bytes": 1818248,
+      "sha256": "00d035a7ab811a13948c0fa0df51b47346f12bafd958b4a721b3cbbfe42220c4",
+      "duration_s": 3.136,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "gym",
+        "deadlift",
+        "weights"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Material.zip",
+        "member": "Gym Material/Gym Deadlift Weights.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-material/gym-heavy-weight-plates",
+      "name": "Gym Heavy Weight Plates",
+      "category": "gym-material",
+      "file": "gym-material/gym-heavy-weight-plates.wav",
+      "format": "wav",
+      "bytes": 1087922,
+      "sha256": "06266bd1302db6058d498d42e1b83e3be2c7217ed35aee1ffc84f6d188e87880",
+      "duration_s": 1.869,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "gym",
+        "heavy",
+        "weight",
+        "plates"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Material.zip",
+        "member": "Gym Material/Gym Heavy Weight Plates.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-material/gym-weight",
+      "name": "Gym Weight",
+      "category": "gym-material",
+      "file": "gym-material/gym-weight.wav",
+      "format": "wav",
+      "bytes": 379366,
+      "sha256": "ecc946565fc6c0a31aff874c0ba2105798b5baf570e19039c7a2416c3165e682",
+      "duration_s": 0.634,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "gym",
+        "weight"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Material.zip",
+        "member": "Gym Material/Gym Weight.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-material/gym-weight-put-back",
+      "name": "Gym Weight Put Back",
+      "category": "gym-material",
+      "file": "gym-material/gym-weight-put-back.wav",
+      "format": "wav",
+      "bytes": 449412,
+      "sha256": "2864a1aa4809ffbf0b450d8194bf8341cc652527225d4c2a8e1acd9b2d9ad87c",
+      "duration_s": 0.76,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "gym",
+        "weight",
+        "put",
+        "back"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Material.zip",
+        "member": "Gym Material/Gym Weight Put Back.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-material/gym-weight-up-rack",
+      "name": "Gym Weight Up Rack",
+      "category": "gym-material",
+      "file": "gym-material/gym-weight-up-rack.wav",
+      "format": "wav",
+      "bytes": 651308,
+      "sha256": "b9255a07ab2c08f6c65f39c309eca726282ea0a8c77837337413f2d2bd9ceec7",
+      "duration_s": 1.101,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "gym",
+        "weight",
+        "up",
+        "rack"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Material.zip",
+        "member": "Gym Material/Gym Weight Up Rack.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-material/heavy-metal-weight",
+      "name": "Heavy Metal Weight",
+      "category": "gym-material",
+      "file": "gym-material/heavy-metal-weight.wav",
+      "format": "wav",
+      "bytes": 1094582,
+      "sha256": "d3df66afeeb32914173a884bc913623061c2f0586c8a2e069cb79b364c36f100",
+      "duration_s": 1.88,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "heavy",
+        "metal",
+        "weight"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Material.zip",
+        "member": "Gym Material/Heavy Metal Weight.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-material/put-back-weight",
+      "name": "Put Back Weight",
+      "category": "gym-material",
+      "file": "gym-material/put-back-weight.wav",
+      "format": "wav",
+      "bytes": 761200,
+      "sha256": "d8c48397e3c580794b641f243461279159c35f5ccec4ef2a8bbff1a1fb42de34",
+      "duration_s": 1.301,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "put",
+        "back",
+        "weight"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Material.zip",
+        "member": "Gym Material/Put Back Weight.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-material/weight-rack",
+      "name": "Weight Rack",
+      "category": "gym-material",
+      "file": "gym-material/weight-rack.wav",
+      "format": "wav",
+      "bytes": 665082,
+      "sha256": "f5be10f619cbc8e107b47ba13f5193ee872e0de5f692cd6ca2fd2f80b67da6ef",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "weight",
+        "rack"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Material.zip",
+        "member": "Gym Material/Weight Rack.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
+      "id": "gym-material/weights-falling-wooden-floor",
+      "name": "Weights Falling Wooden Floor",
+      "category": "gym-material",
+      "file": "gym-material/weights-falling-wooden-floor.wav",
+      "format": "wav",
+      "bytes": 645886,
+      "sha256": "78bafb2708dbe2456ae8bca6e70c4c18b8efbd11c5b9265cf24da600843c3690",
+      "duration_s": 1.101,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "weights",
+        "falling",
+        "wooden",
+        "floor"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Gym_Material.zip",
+        "member": "Gym Material/Weights Falling Wooden Floor.wav"
+      },
+      "added": "2026-10-21"
+    },
+    {
       "id": "household-doors/click-open-door",
       "name": "Click Open Door",
       "category": "household-doors",
