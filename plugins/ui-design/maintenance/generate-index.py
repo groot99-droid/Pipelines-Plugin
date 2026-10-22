@@ -90,6 +90,8 @@ TOOL_PURPOSE = {
     "plugins": "Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, "
                "a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, "
                "with a design-system generator; and blender, skills for driving a live Blender through MCP.",
+    "sound-library": "The author's own sound effects, catalogued by name, category, duration and hash; "
+                     "the files live on GitHub Releases and are fetched on request.",
     "studio": "Checkpointed production pipelines and the notes they leave behind.",
     "writing-museum": "A walkable 3D museum of the creative-writing vault, one room per work, built "
                       "through the studio's scene-3d pipeline.",
