@@ -27,6 +27,11 @@ exists. Keys stay in `~/.rosw/keys.env`; none is needed here.
 
 Kinds: `character`, `design`, `audio`, `video`, `3d`, `ui`, `world`.
 
+For `video` made for Who Did It (the `video-shot` trailer loop and the Vicar memorial),
+`$WDI/docs/round6/media.md` is the brief: the slugs, the per-file caps, the manifest rows and the provenance
+rows it expects. The game's `audio` is not a run: every sound it ships (the owner's tracks and recordings, the
+stingers, the ambiences) comes from `sound-library/` through the `sound-library` skill, by catalog id.
+
 ## Steps
 
 1. **Check the master.** The character `.blend` follows the contract in `$WDI/tools/blender/README.md`

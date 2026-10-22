@@ -33,7 +33,10 @@ when you report back.
    files are called, with no network.
 3. The file is at `sound-library/files/<category>/<slug>.wav`. **Copy** it into
    the project that asked for it (a game's assets folder, a run folder). Never
-   move it, and never `git add` anything under `sound-library/files/`.
+   move it, and never `git add` anything under `sound-library/files/`. For the
+   Who Did It game, `docs/round6/media.md` in that repo lists the ids it needs
+   (its section 4), the release its own uploads go in (section 1) and the rows
+   it writes for a sound (section 7); the game cites a sound by this catalog id.
 
 ## Add a batch the author uploads
 
