@@ -36,7 +36,7 @@ script.
 ```
 python sound-library/library.py fetch --dry-run --category boats
 python sound-library/library.py fetch --id boats/deep-boat-horn --id bus/bus-hydraulic
-python sound-library/library.py fetch --query "harley" --release sfx-2026-10
+python sound-library/library.py fetch --query "harley" --release SFX_2026_01
 python sound-library/library.py fetch --category bicycle --from ~/Downloads/Bicycle_Pt1.zip --from ~/Downloads/Bicycle_Pt2.zip
 ```
 
@@ -46,6 +46,12 @@ before placing it. One download serves every sound in that zip. With `--from`,
 it takes the files from a local zip or folder by content hash, so the author's
 own copies, or a zip uploaded to a session, work without the network and whatever
 they are named. A sound already on disk is never downloaded again.
+
+All 2,648 sounds in the catalog are in the release `SFX_2026_01`, in 16 zips of
+at most about 350 MB (`Sounds_B01.zip` to `Sounds_B15.zip` and `Sounds_12.zip`),
+each holding `<category>/<file>.wav`. The catalog records only these 16; any
+other zip attached to the release is not used by it. An entry's name is the
+author's, the member name inside the zip is the cleaned file name.
 
 The file lands at `sound-library/files/<category>/<slug>.wav`. Copy it into the
 project that needs it; this folder is not versioned and is never added to git.
