@@ -374,3 +374,13 @@ The plugin installs from it through the root `.claude-plugin/marketplace.json`
    `python plugins/ui-design/maintenance/generate-index.py` and
    `python plugins/ui-design/maintenance/verify.py`. The same two commands follow
    any new skill or agent.
+
+## Compact instructions
+
+A long session compacts its context at 400k tokens (`.claude/settings.json`, `autoCompactWindow`). When a
+compaction summary is written here, it keeps, in this order: which tool it is working in (creative-writing,
+studio, writing-museum, a plugin) and its branch; for a studio run, the run id, its current stage and whether
+the author's go-ahead was recorded; the files it has edited since its last push; the test command and its last
+result; and which `CLAUDE.md` (this one, a vault's, a plugin's) it still has to re-read. It drops tool output,
+file contents it can re-read, and anything a document already says. It never carries a key value, a path under
+`~/.rosw/` or `~/.gemini/`, or the contents of a `.env` into a summary.

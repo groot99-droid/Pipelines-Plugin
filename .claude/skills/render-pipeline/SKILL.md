@@ -27,6 +27,10 @@ exists. Keys stay in `~/.rosw/keys.env`; none is needed here.
 
 Kinds: `character`, `design`, `audio`, `video`, `3d`, `ui`, `world`.
 
+For `audio` and `video` made for Who Did It (the owner's tracks, the `music-cue` stingers, the
+`video-shot` trailer and memorial), `$WDI/docs/round6/media.md` is the brief: the slugs, the mastering
+targets, the per-file caps, the manifest rows and the provenance rows it expects.
+
 ## Steps
 
 1. **Check the master.** The character `.blend` follows the contract in `$WDI/tools/blender/README.md`
