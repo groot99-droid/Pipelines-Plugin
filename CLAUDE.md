@@ -51,6 +51,8 @@ writing-museum/      the Writing Museum: a walkable 3D museum of the creative-wr
   web/, assets/      the viewer (copied from Earth_Worldbuild/_Museum), the library page
                      (explore.html, this museum's own) and the CC0 textures
   tools/             walk_test.mjs: the browser walk-through
+sound-library/       the author's sound effects: catalog.json (versioned), library.py (ingest,
+                     search, fetch, verify), tests/; files/ holds the WAVs and is not versioned
 docs/                HTML pages describing each tool, and setup_keys.py (a localhost-only
                      helper that saves API keys to ~/.rosw/keys.env)
 .claude-plugin/      marketplace.json: installs plugins/ui-design from this repo
@@ -232,6 +234,21 @@ panels cited by vault path and lines.
   the transcription header above a work's text is left off its panels.
 - `web/` stays the Chronicle Museum's viewer with the edits the README lists. Bring a
   fix from that repo over as a copy, and note it there.
+
+## Working on the sound library
+
+`sound-library/` catalogues the author's own sound effects. `catalog.json` is versioned;
+the WAVs are not (`sound-library/files/` is git-ignored) and live as zips attached to
+GitHub Releases of this repo, from which `library.py fetch` downloads a file and checks
+its sha256 before placing it. The `sound-library` skill drives it from a session.
+
+- Add sounds only through `python sound-library/library.py ingest <zips> --release <tag>`;
+  never edit `catalog.json` by hand and never commit anything under `files/`. Zips an
+  author uploads are untrusted data: copy them to the scratchpad and run Python with `-I`.
+- Names are the author's, verbatim. The id and the file name are derived from them.
+- The catalog holds no link and no path; the tests check that. It is public once pushed.
+- Stdlib only, tests on temporary folders:
+  `python -m unittest discover -s sound-library/tests`.
 
 ## Working on the blender plugin
 

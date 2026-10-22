@@ -138,3 +138,9 @@ writing-museum/tools/out/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# ── Sound library originals ──────────────────────────────────────────────────
+# sound-library/catalog.json (names, durations, hashes, where each file is kept)
+# is versioned. The WAVs themselves are not: a batch is hundreds of MB. They
+# live on GitHub Releases of this repo and `library.py fetch` brings them down.
+sound-library/files/
