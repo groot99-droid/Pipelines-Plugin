@@ -25154,6 +25154,1515 @@
       "added": "2026-10-21"
     },
     {
+      "id": "deep-impacts/3d-bass-rumble",
+      "name": "3D Bass Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/3d-bass-rumble.wav",
+      "format": "wav",
+      "bytes": 4451270,
+      "sha256": "ffa24af6f94695aad3650d2f5c01bf9a2597498956bff80698a938080d179e8e",
+      "duration_s": 7.708,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "3d",
+        "bass",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt4.zip",
+        "member": "untitled folder 4/3D Bass Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/bass-simple",
+      "name": "Bass Simple",
+      "category": "deep-impacts",
+      "file": "deep-impacts/bass-simple.wav",
+      "format": "wav",
+      "bytes": 1184004,
+      "sha256": "6010a68f0bc155e69fab00337567deda8f91090d4c89385800aff3a746511a51",
+      "duration_s": 2.035,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "simple"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Bass Simple.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/cinematic-deep-bass-rumble",
+      "name": "Cinematic Deep Bass Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/cinematic-deep-bass-rumble.wav",
+      "format": "wav",
+      "bytes": 4451270,
+      "sha256": "ab10b932c369e9c2f27e4161d16a0ba083604117ce6451a9eecdfad6b76e179c",
+      "duration_s": 7.708,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "deep",
+        "bass",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt4.zip",
+        "member": "untitled folder 4/Cinematic Deep Bass Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/cinematic-impact-rumble",
+      "name": "Cinematic Impact Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/cinematic-impact-rumble.wav",
+      "format": "wav",
+      "bytes": 1837452,
+      "sha256": "799b27b96bb544c99d70bd6b323b99a02847e227d8d28cabcdae139820f58de8",
+      "duration_s": 3.17,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "cinematic",
+        "impact",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Cinematic Impact Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-bass-dry-hit",
+      "name": "Deep Bass Dry Hit",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-bass-dry-hit.wav",
+      "format": "wav",
+      "bytes": 1145562,
+      "sha256": "df5d3b060f273ad097f62975355bf07d2f708c6c8c044f58b98a5fcec9a6282d",
+      "duration_s": 1.969,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass",
+        "dry",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Deep Bass Dry Hit.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-bass-rumble",
+      "name": "Deep Bass Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-bass-rumble.wav",
+      "format": "wav",
+      "bytes": 2856098,
+      "sha256": "b6bc37837d14e4a4ca0c331d01322e6cb76245ac8cf8ff846c23dd759538e017",
+      "duration_s": 4.938,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt2.zip",
+        "member": "untitled folder 2/Deep Bass Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-explosion-aftermath-rumble",
+      "name": "Deep Explosion Aftermath Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-explosion-aftermath-rumble.wav",
+      "format": "wav",
+      "bytes": 3009830,
+      "sha256": "f399c87abe16f4960d3739906ccf0fd5eb23fb6559d78235a45f7f34a670cdd8",
+      "duration_s": 5.205,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "explosion",
+        "aftermath",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt2.zip",
+        "member": "untitled folder 2/Deep Explosion Aftermath Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-impact-low-end-rumble",
+      "name": "Deep Impact Low End Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-impact-low-end-rumble.wav",
+      "format": "wav",
+      "bytes": 4451270,
+      "sha256": "478d0a1ef08b136bea3ae04a964462c160b9540dc5777949775ceda1bd545099",
+      "duration_s": 7.708,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "impact",
+        "low",
+        "end",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt4.zip",
+        "member": "untitled folder 4/Deep Impact Low End Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-implode-bass",
+      "name": "Deep Implode Bass",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-implode-bass.wav",
+      "format": "wav",
+      "bytes": 1164780,
+      "sha256": "cd6b77255e567f9306a6b789a05b03c849f8c4b7dcd4acfe010a8daacb9af8d2",
+      "duration_s": 2.002,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "implode",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Deep Implode Bass.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-jittering-rumble",
+      "name": "Deep Jittering Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-jittering-rumble.wav",
+      "format": "wav",
+      "bytes": 2587002,
+      "sha256": "709721cc883d18c0ea42b354e412a36b506d9ff4814be817979ddb05522815c8",
+      "duration_s": 4.471,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "jittering",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Deep Jittering Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-metallic-impact",
+      "name": "Deep Metallic Impact",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-metallic-impact.wav",
+      "format": "wav",
+      "bytes": 1049466,
+      "sha256": "b272da3baaff7401a307da31682fe1c90af45a64d8120c4147382a6bd35f9297",
+      "duration_s": 1.802,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "metallic",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Deep Metallic Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-ominous-impact",
+      "name": "Deep Ominous Impact",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-ominous-impact.wav",
+      "format": "wav",
+      "bytes": 2510124,
+      "sha256": "27cd2dd6b91b16bf374fd42fde6ad15587afbd8a78cab34aced8a652d685c6e3",
+      "duration_s": 4.338,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "ominous",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Deep Ominous Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-oppenheimer-impact",
+      "name": "Deep Oppenheimer Impact",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-oppenheimer-impact.wav",
+      "format": "wav",
+      "bytes": 4777994,
+      "sha256": "1250a11d95a5c267c7e2c2ddf0bcb85d7125c7606fd40ec70f030b47afda9146",
+      "duration_s": 8.275,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "oppenheimer",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt4.zip",
+        "member": "untitled folder 4/Deep Oppenheimer Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-oppenheimer-quantum-rumble",
+      "name": "Deep Oppenheimer Quantum Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-oppenheimer-quantum-rumble.wav",
+      "format": "wav",
+      "bytes": 5815832,
+      "sha256": "41aceabae677ddfcd113671a5ad5487d96d5c8d1daf996f1ac2272dada876ec8",
+      "duration_s": 10.077,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "oppenheimer",
+        "quantum",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt5.zip",
+        "member": "untitled folder 5/Deep Oppenheimer Quantum Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-reverbarating-rumble",
+      "name": "Deep Reverbarating Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-reverbarating-rumble.wav",
+      "format": "wav",
+      "bytes": 5316134,
+      "sha256": "235925c10c8c4dda5c47108ab4a7d1b27b4171acdd4176e28d1199a01d67e437",
+      "duration_s": 9.209,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "reverbarating",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt5.zip",
+        "member": "untitled folder 5/Deep Reverbarating Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-rumble-bass",
+      "name": "Deep Rumble Bass",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-rumble-bass.wav",
+      "format": "wav",
+      "bytes": 1164780,
+      "sha256": "d2e21f7c98eacd05c461d4b7d9be95ef96b6e4dad7deec8a996a86081ee1d7d3",
+      "duration_s": 2.002,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "rumble",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Deep Rumble Bass.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-shaking-rumble",
+      "name": "Deep Shaking Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-shaking-rumble.wav",
+      "format": "wav",
+      "bytes": 3009830,
+      "sha256": "71c7b49fa5aa58516df892803f3fcae2cf2b7989963d3b9377d13749733dd952",
+      "duration_s": 5.205,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "shaking",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt2.zip",
+        "member": "untitled folder 2/Deep Shaking Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-short-impact-rumble",
+      "name": "Deep Short Impact Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-short-impact-rumble.wav",
+      "format": "wav",
+      "bytes": 2241060,
+      "sha256": "4fa7901cd31ae5f15f087903d5b1218e7eb359c925b794657c411feb432d26be",
+      "duration_s": 3.871,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "short",
+        "impact",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Deep Short Impact Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-short-rumble",
+      "name": "Deep Short Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-short-rumble.wav",
+      "format": "wav",
+      "bytes": 934152,
+      "sha256": "0a40f4cf83d66919d1118294fe4ed76b88cd87b28a917bcabeed7394ac3cb8c4",
+      "duration_s": 1.602,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "short",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Deep Short Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-short-sub-bass",
+      "name": "Deep Short Sub Bass",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-short-sub-bass.wav",
+      "format": "wav",
+      "bytes": 1164780,
+      "sha256": "b95a1b64ab483a97f38604d744ac45f659300b60615ee06047d9666ee3578b94",
+      "duration_s": 2.002,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "short",
+        "sub",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Deep Short Sub Bass.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-soft-bass",
+      "name": "Deep Soft Bass",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-soft-bass.wav",
+      "format": "wav",
+      "bytes": 972588,
+      "sha256": "288efe01550dd434eec8ba975b3b19d93116ab02847f01a5543a1e832300241b",
+      "duration_s": 1.668,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "soft",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Deep Soft Bass.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-steel-impact",
+      "name": "Deep Steel Impact",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-steel-impact.wav",
+      "format": "wav",
+      "bytes": 1472292,
+      "sha256": "e119d36eeb19dbaf82318cd3d1aaa02a6e9691ccce64897558280a2148c9fa6d",
+      "duration_s": 2.536,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "steel",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Deep Steel Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/deep-strange-shake-rumble",
+      "name": "Deep Strange Shake Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/deep-strange-shake-rumble.wav",
+      "format": "wav",
+      "bytes": 4451270,
+      "sha256": "a123480976f86e7157174df89fa43ff1627c3e6ead6b9b4d88e016e5b0bb8e8e",
+      "duration_s": 7.708,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "strange",
+        "shake",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt3.zip",
+        "member": "untitled folder 3/Deep Strange Shake Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/double-flat-impact",
+      "name": "Double Flat Impact",
+      "category": "deep-impacts",
+      "file": "deep-impacts/double-flat-impact.wav",
+      "format": "wav",
+      "bytes": 1664484,
+      "sha256": "b0bcf6df682e044e02eb7c1f1073e9a7b3e50e542f353c83acf6e94dd723ccb6",
+      "duration_s": 2.87,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "double",
+        "flat",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Double Flat Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/dry-impact",
+      "name": "Dry Impact",
+      "category": "deep-impacts",
+      "file": "deep-impacts/dry-impact.wav",
+      "format": "wav",
+      "bytes": 1472292,
+      "sha256": "d1b0ba616e6033a123526249b881ea581430588612a5ec08295286d017559c2d",
+      "duration_s": 2.536,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "dry",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Dry Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/dust-jitter",
+      "name": "Dust Jitter",
+      "category": "deep-impacts",
+      "file": "deep-impacts/dust-jitter.wav",
+      "format": "wav",
+      "bytes": 972588,
+      "sha256": "0b0f0503bdbeae883ffe7592ee333738a73620cb468c34871ae4ac2725d04fb9",
+      "duration_s": 1.668,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "dust",
+        "jitter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Dust Jitter.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/extreme-deep-bass-rumble",
+      "name": "Extreme Deep Bass Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/extreme-deep-bass-rumble.wav",
+      "format": "wav",
+      "bytes": 4451270,
+      "sha256": "93b3e2ed6c5acf26e19d05d96cdc8d1eb25daf9c5def99b38c03df5bdd179ecb",
+      "duration_s": 7.708,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "extreme",
+        "deep",
+        "bass",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt3.zip",
+        "member": "untitled folder 3/Extreme Deep Bass Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/flat-deep-bass-hit",
+      "name": "Flat Deep Bass Hit",
+      "category": "deep-impacts",
+      "file": "deep-impacts/flat-deep-bass-hit.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "1bf6d240e1bdd03e34e87feda8e9408d4c8705bb2f47e17723d631455d22dab6",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "flat",
+        "deep",
+        "bass",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Flat Deep Bass Hit.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/granular-fall",
+      "name": "Granular Fall",
+      "category": "deep-impacts",
+      "file": "deep-impacts/granular-fall.wav",
+      "format": "wav",
+      "bytes": 1184004,
+      "sha256": "0ae17b3f30e124e0880a1034d730752f86501e5060a29042c8cd09acf89c14b5",
+      "duration_s": 2.035,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "granular",
+        "fall"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Granular Fall.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/granular-impact",
+      "name": "Granular Impact",
+      "category": "deep-impacts",
+      "file": "deep-impacts/granular-impact.wav",
+      "format": "wav",
+      "bytes": 1222440,
+      "sha256": "51ddbfebcb696e52f8c5322bbb281d413e60183173d0a4b280209bdaa3f88b05",
+      "duration_s": 2.102,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "granular",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Granular Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/hollow-flat-impact",
+      "name": "Hollow Flat Impact",
+      "category": "deep-impacts",
+      "file": "deep-impacts/hollow-flat-impact.wav",
+      "format": "wav",
+      "bytes": 1472292,
+      "sha256": "7738bc7db7ca8e740820eb25763bd2881d489229b12c39d259cbc4581aa817bd",
+      "duration_s": 2.536,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hollow",
+        "flat",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Hollow Flat Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/hollow-smooth-rumble",
+      "name": "Hollow Smooth Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/hollow-smooth-rumble.wav",
+      "format": "wav",
+      "bytes": 2913734,
+      "sha256": "a5bcbbd70d6479e02cc9ca852d1d924163dd41075a7c0491f46e1de85c50c52a",
+      "duration_s": 5.038,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hollow",
+        "smooth",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt2.zip",
+        "member": "untitled folder 2/Hollow Smooth Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/impact-deep-rumble",
+      "name": "Impact Deep Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/impact-deep-rumble.wav",
+      "format": "wav",
+      "bytes": 3009830,
+      "sha256": "7aea039c8e80f86e8d6b8c5aaf5fb48657e6ecb2133b627cf6f5dc65825800c4",
+      "duration_s": 5.205,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "deep",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt2.zip",
+        "member": "untitled folder 2/Impact Deep Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/implosion-aftermath",
+      "name": "Implosion Aftermath",
+      "category": "deep-impacts",
+      "file": "deep-impacts/implosion-aftermath.wav",
+      "format": "wav",
+      "bytes": 1856676,
+      "sha256": "95e09a7facbb3748585f766bf36f7200b46d73aa52cd62859ee4bac6b3656a21",
+      "duration_s": 3.203,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "implosion",
+        "aftermath"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Implosion Aftermath.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/incoming-low-impact",
+      "name": "Incoming Low Impact",
+      "category": "deep-impacts",
+      "file": "deep-impacts/incoming-low-impact.wav",
+      "format": "wav",
+      "bytes": 1107126,
+      "sha256": "28ebfa6ba4644ca18e866ec04e66b9a361eafa27cd8b4deaa92797d22672bc9d",
+      "duration_s": 1.902,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "incoming",
+        "low",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Incoming Low Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/inside-powerplant-rumble",
+      "name": "Inside Powerplant Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/inside-powerplant-rumble.wav",
+      "format": "wav",
+      "bytes": 3547964,
+      "sha256": "4c01ef8a3e172fa603a2a70acdc67822a0a04d1d099ab53286168793f7befb36",
+      "duration_s": 6.139,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "inside",
+        "powerplant",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt2.zip",
+        "member": "untitled folder 2/Inside Powerplant Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/intense-deep-rumble",
+      "name": "Intense Deep Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/intense-deep-rumble.wav",
+      "format": "wav",
+      "bytes": 4355174,
+      "sha256": "c18fd1867c0228e5af476270203a526536eebf35dfe453b3ea4f4a580e7f3651",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "intense",
+        "deep",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt3.zip",
+        "member": "untitled folder 3/Intense Deep Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/long-deep-flat",
+      "name": "Long Deep Flat",
+      "category": "deep-impacts",
+      "file": "deep-impacts/long-deep-flat.wav",
+      "format": "wav",
+      "bytes": 1376196,
+      "sha256": "9d7955008dae02a86f5ef93b9324129e9403fa169a03c51b2e499a4b18b0e494",
+      "duration_s": 2.369,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "long",
+        "deep",
+        "flat"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Long Deep Flat.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/low-end-granular-impact",
+      "name": "Low-End Granular Impact",
+      "category": "deep-impacts",
+      "file": "deep-impacts/low-end-granular-impact.wav",
+      "format": "wav",
+      "bytes": 1722138,
+      "sha256": "dae5c26afb1ae58498da8736013a052b4a9c6725c91eb25fad78f1e9d22a6cbc",
+      "duration_s": 2.97,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "end",
+        "granular",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Low-End Granular Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/low-fire-impact",
+      "name": "Low Fire Impact",
+      "category": "deep-impacts",
+      "file": "deep-impacts/low-fire-impact.wav",
+      "format": "wav",
+      "bytes": 1356972,
+      "sha256": "1cb570413ef05af522f61cd7b535e58a02f0ab239cf30c89848d440d350dfe4c",
+      "duration_s": 2.336,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "fire",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Low Fire Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/low-shaking-impact-rumble",
+      "name": "Low Shaking Impact Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/low-shaking-impact-rumble.wav",
+      "format": "wav",
+      "bytes": 4528164,
+      "sha256": "deac9b81e30026a224d9a0595e2412ead10ec9c85185fd6a402247859dd3bda7",
+      "duration_s": 7.841,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "shaking",
+        "impact",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt4.zip",
+        "member": "untitled folder 4/Low Shaking Impact Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/low-soft-fade-impact",
+      "name": "Low Soft Fade Impact",
+      "category": "deep-impacts",
+      "file": "deep-impacts/low-soft-fade-impact.wav",
+      "format": "wav",
+      "bytes": 1164780,
+      "sha256": "80a1f81893b11cd971f7857af7ef7edc7bf8d36873cf2aee202b608371f2c520",
+      "duration_s": 2.002,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "soft",
+        "fade",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Low Soft Fade Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/low-turn-down-rumble",
+      "name": "Low Turn Down Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/low-turn-down-rumble.wav",
+      "format": "wav",
+      "bytes": 4451270,
+      "sha256": "177121f85ee21b11fdf8321ddc4d62ec8592978d9bebd1b39fae629a783a7988",
+      "duration_s": 7.708,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "turn",
+        "down",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt3.zip",
+        "member": "untitled folder 3/Low Turn Down Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/low-waving-bass-rumble",
+      "name": "Low Waving Bass Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/low-waving-bass-rumble.wav",
+      "format": "wav",
+      "bytes": 5085500,
+      "sha256": "6b739460f8309ee76c70df8768e70879a680471632ca7ee12249ac614c5dd5cf",
+      "duration_s": 8.809,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "waving",
+        "bass",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt4.zip",
+        "member": "untitled folder 4/Low Waving Bass Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/mechanical-impact",
+      "name": "Mechanical Impact",
+      "category": "deep-impacts",
+      "file": "deep-impacts/mechanical-impact.wav",
+      "format": "wav",
+      "bytes": 1472292,
+      "sha256": "60e75d25d96a200231a578392d9d4d5e3ee6eee8ba65e8b2c023dac4fc599512",
+      "duration_s": 2.536,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "mechanical",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Mechanical Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/ominous-deep-bass",
+      "name": "Ominous Deep Bass",
+      "category": "deep-impacts",
+      "file": "deep-impacts/ominous-deep-bass.wav",
+      "format": "wav",
+      "bytes": 780396,
+      "sha256": "c33a3ab94fcec2b1a17d142ef8e915c6474c38e5d2b91f9f206e8d2141ce0ff6",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ominous",
+        "deep",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Ominous Deep Bass.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/oppenheimer-deep-thoughts-rumble",
+      "name": "Oppenheimer Deep Thoughts Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/oppenheimer-deep-thoughts-rumble.wav",
+      "format": "wav",
+      "bytes": 5815832,
+      "sha256": "88ff29b355b97a8d7bbc9926c64cbc61dcf45f3a1f5801b935f8bef0cdc47362",
+      "duration_s": 10.077,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "oppenheimer",
+        "deep",
+        "thoughts",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt5.zip",
+        "member": "untitled folder 5/Oppenheimer Deep Thoughts Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/rumble",
+      "name": "Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/rumble.wav",
+      "format": "wav",
+      "bytes": 1722138,
+      "sha256": "fe9f7593f0fd05858d4546174c0e3502332630415822afa76e4f92edaca13f0b",
+      "duration_s": 2.97,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/rumble-build-up",
+      "name": "Rumble Build Up",
+      "category": "deep-impacts",
+      "file": "deep-impacts/rumble-build-up.wav",
+      "format": "wav",
+      "bytes": 3547964,
+      "sha256": "82d2109b59bcefe6c2594d848db7a7701215c9d1551b651b54cfa7c19c761387",
+      "duration_s": 6.139,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rumble",
+        "build",
+        "up"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt2.zip",
+        "member": "untitled folder 2/Rumble Build Up.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/shimmering-impact-rumble",
+      "name": "Shimmering Impact Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/shimmering-impact-rumble.wav",
+      "format": "wav",
+      "bytes": 2241060,
+      "sha256": "1115cade110c81e111176df750f7e525dc7879dbc090b4f7e59ffec7e3e31226",
+      "duration_s": 3.871,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "shimmering",
+        "impact",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Shimmering Impact Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/short-deep-bass-flat",
+      "name": "Short Deep Bass Flat",
+      "category": "deep-impacts",
+      "file": "deep-impacts/short-deep-bass-flat.wav",
+      "format": "wav",
+      "bytes": 588202,
+      "sha256": "1f7425ef1ff0fcae2587ed2d44aabe8c69cf9dfa356b14f6e81220926e6bc74b",
+      "duration_s": 1.001,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "deep",
+        "bass",
+        "flat"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Short Deep Bass Flat.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/short-dry-metal-impact",
+      "name": "Short Dry Metal Impact",
+      "category": "deep-impacts",
+      "file": "deep-impacts/short-dry-metal-impact.wav",
+      "format": "wav",
+      "bytes": 568984,
+      "sha256": "123d3b46c833ac272cf5d869e78df8e36614bddb1367f81be3f809ebff1d2074",
+      "duration_s": 0.968,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "dry",
+        "metal",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Short Dry Metal Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/short-gramular-impact",
+      "name": "Short Gramular Impact",
+      "category": "deep-impacts",
+      "file": "deep-impacts/short-gramular-impact.wav",
+      "format": "wav",
+      "bytes": 741960,
+      "sha256": "a3ea157739014479d318959abfb1c20e7d3e14a938ae3174b549f7c161663026",
+      "duration_s": 1.268,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "gramular",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Short Gramular Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/short-rumble",
+      "name": "Short Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/short-rumble.wav",
+      "format": "wav",
+      "bytes": 2510124,
+      "sha256": "e35c3c44b60db2f85413d94caabaf0b5d0a49448a9928a3df15f7485c2b7975b",
+      "duration_s": 4.338,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Short Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/short-rumble-build-up",
+      "name": "Short Rumble Build Up",
+      "category": "deep-impacts",
+      "file": "deep-impacts/short-rumble-build-up.wav",
+      "format": "wav",
+      "bytes": 2241060,
+      "sha256": "330a7471bd3292ff694109c5e4463c364ee76d9d49c0837c45442f6a8361f19e",
+      "duration_s": 3.871,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "rumble",
+        "build",
+        "up"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt1.zip",
+        "member": "untitled folder/Short Rumble Build Up.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/short-simple-implosion",
+      "name": "Short Simple Implosion",
+      "category": "deep-impacts",
+      "file": "deep-impacts/short-simple-implosion.wav",
+      "format": "wav",
+      "bytes": 1030248,
+      "sha256": "41df873f0aaad142869cbbe94220ca896054752be721bffc6a250ac48acb6dda",
+      "duration_s": 1.768,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "simple",
+        "implosion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Impacts.zip",
+        "member": "Impacts/Short Simple Implosion.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/slow-progressive-rumble-riser",
+      "name": "Slow Progressive Rumble Riser",
+      "category": "deep-impacts",
+      "file": "deep-impacts/slow-progressive-rumble-riser.wav",
+      "format": "wav",
+      "bytes": 4355174,
+      "sha256": "4c0c8c86f9c1406058b6e1f64f7ddac09130c8d847d017c6936ed636737baea0",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slow",
+        "progressive",
+        "rumble",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt3.zip",
+        "member": "untitled folder 3/Slow Progressive Rumble Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/slow-rumble",
+      "name": "Slow Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/slow-rumble.wav",
+      "format": "wav",
+      "bytes": 3105950,
+      "sha256": "8547131460a3ec387ff7cf5871584b1861d4ace9c32a59bd6cd30525adf6d243",
+      "duration_s": 5.372,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slow",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt2.zip",
+        "member": "untitled folder 2/Slow Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/smooth-rumble",
+      "name": "Smooth Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/smooth-rumble.wav",
+      "format": "wav",
+      "bytes": 3009830,
+      "sha256": "0af83cd7803e31df3ee2a656c1410ba176b5a6355a915af64e2cb02931c57726",
+      "duration_s": 5.205,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "smooth",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt2.zip",
+        "member": "untitled folder 2/Smooth Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "deep-impacts/tectonic-shiffering-rumble",
+      "name": "Tectonic Shiffering Rumble",
+      "category": "deep-impacts",
+      "file": "deep-impacts/tectonic-shiffering-rumble.wav",
+      "format": "wav",
+      "bytes": 4451270,
+      "sha256": "b727015c0738570c4f8324d4a9922d5b848d5d42a5e9709bac83e70b3449875d",
+      "duration_s": 7.708,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tectonic",
+        "shiffering",
+        "rumble"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Deep_Impacts_Pt3.zip",
+        "member": "untitled folder 3/Tectonic Shiffering Rumble.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
       "id": "deep-risers/deep-echo-riser",
       "name": "Deep Echo Riser",
       "category": "deep-risers",
@@ -25688,6 +27197,616 @@
         "member": "untitled folder 5/Deep Sparkling Riser.wav"
       },
       "added": "2026-10-21"
+    },
+    {
+      "id": "electric-magnetic-energy/distorted-magnetic-jitter",
+      "name": "Distorted Magnetic Jitter",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/distorted-magnetic-jitter.wav",
+      "format": "wav",
+      "bytes": 1510728,
+      "sha256": "182fae7c448879c84dde93f72c5dcd6b32e343e85623879499b43555177ea632",
+      "duration_s": 2.603,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "magnetic",
+        "jitter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Distorted Magnetic Jitter.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/electric-distorted-jitter",
+      "name": "Electric Distorted Jitter",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/electric-distorted-jitter.wav",
+      "format": "wav",
+      "bytes": 1049466,
+      "sha256": "0d6fa8632bd44b347592d6792727f95b58f8d8bf40e852c15413f95461f95c82",
+      "duration_s": 1.802,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "distorted",
+        "jitter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Electric Distorted Jitter.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/electric-distortion",
+      "name": "Electric Distortion",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/electric-distortion.wav",
+      "format": "wav",
+      "bytes": 1395414,
+      "sha256": "3a125ef02f1a6230514e278c7e7a2d69039b09e619073ee7f261882f08c442ff",
+      "duration_s": 2.402,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "distortion"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Electric Distortion.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/electric-error",
+      "name": "Electric Error",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/electric-error.wav",
+      "format": "wav",
+      "bytes": 1337754,
+      "sha256": "79da0b7e9657e3fd3bca5009782c3e9167aa482dd666ff477625d8c7db3c0675",
+      "duration_s": 2.302,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Electric Error.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/electric-flickering",
+      "name": "Electric Flickering",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/electric-flickering.wav",
+      "format": "wav",
+      "bytes": 1260900,
+      "sha256": "bf3e16ded434fec53440b6092e570bf575fdc9c69a5566caa251780c4921dde0",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "flickering"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Electric Flickering.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/electric-fold-up",
+      "name": "Electric Fold Up",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/electric-fold-up.wav",
+      "format": "wav",
+      "bytes": 972588,
+      "sha256": "afdbb5392f1db34e697e9e22af39a1a3f04a17a21e118a1b74acca5d78f0171e",
+      "duration_s": 1.668,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "fold",
+        "up"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Electric Fold Up.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/electric-impact-spark",
+      "name": "Electric Impact Spark",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/electric-impact-spark.wav",
+      "format": "wav",
+      "bytes": 972588,
+      "sha256": "c691f8a53148cc6ac005c77a60fb22782c1b0118017d7cf5f4b6989efecf707f",
+      "duration_s": 1.668,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "impact",
+        "spark"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Electric Impact Spark.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/electric-jitter",
+      "name": "Electric Jitter",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/electric-jitter.wav",
+      "format": "wav",
+      "bytes": 1260876,
+      "sha256": "553991aefb1cd52154907d0093a00be59a416530eee0aab655a9a94f68bbfc91",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "jitter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Electric Jitter.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/electric-machine-ambience",
+      "name": "Electric Machine Ambience",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/electric-machine-ambience.wav",
+      "format": "wav",
+      "bytes": 1260876,
+      "sha256": "efa40d496ac1885fee3037aaa27d193ff3928b49fce82a1eef50bb615f3ddbc8",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "machine",
+        "ambience"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Electric Machine Ambience.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/electric-noise",
+      "name": "Electric Noise",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/electric-noise.wav",
+      "format": "wav",
+      "bytes": 818838,
+      "sha256": "a8b5b5fae710946edde07a4940d21b6cbc91ccff778836d78bfbe22035888d15",
+      "duration_s": 1.401,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "noise"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Electric Noise.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/electric-sparks",
+      "name": "Electric Sparks",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/electric-sparks.wav",
+      "format": "wav",
+      "bytes": 780396,
+      "sha256": "adf2c21358d9fae1e30641f3aa6220f77480dbe4f179a80882943e144188a8d4",
+      "duration_s": 1.335,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "sparks"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Electric Sparks.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/electric-whoosh",
+      "name": "Electric Whoosh",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/electric-whoosh.wav",
+      "format": "wav",
+      "bytes": 1260876,
+      "sha256": "247e670d66e0446e8ca069e918972af7a07e03b5040fa2089f0af6043e3e35a7",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Electric Whoosh.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/electric-wire",
+      "name": "Electric Wire",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/electric-wire.wav",
+      "format": "wav",
+      "bytes": 1260900,
+      "sha256": "b29ba5d7ea44eeb0bd24f96e82c35b36aab3087629a5288f771c53b0f4278f3f",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "wire"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Electric Wire.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/flickering-electric-light",
+      "name": "Flickering Electric Light",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/flickering-electric-light.wav",
+      "format": "wav",
+      "bytes": 1664484,
+      "sha256": "49917949a88505ef1ac50a4cda5a1ef9da2b4e897574fb9d8f1f01838b47e612",
+      "duration_s": 2.87,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "flickering",
+        "electric",
+        "light"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Flickering Electric Light.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/high-tone-electric",
+      "name": "High Tone Electric",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/high-tone-electric.wav",
+      "format": "wav",
+      "bytes": 1818234,
+      "sha256": "2f7366d69bf949718b966c66c988571cccb560590f9870292ed8c77f804fa7d7",
+      "duration_s": 3.136,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "high",
+        "tone",
+        "electric"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/High Tone Electric.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/jitter",
+      "name": "Jitter",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/jitter.wav",
+      "format": "wav",
+      "bytes": 818838,
+      "sha256": "cf8f3c03621837b78aa33f5b36b089af5fe1c9fd655c12eafccd390a340f7b43",
+      "duration_s": 1.401,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "jitter"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Jitter.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/jitter-magnetic-object",
+      "name": "Jitter Magnetic Object",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/jitter-magnetic-object.wav",
+      "format": "wav",
+      "bytes": 1107126,
+      "sha256": "113b1f40e0ad45e2ea1df3bdd1cc574ac082517030ee640f0f669b41b2670981",
+      "duration_s": 1.902,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "jitter",
+        "magnetic",
+        "object"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Jitter Magnetic Object.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/magnetic-attachment",
+      "name": "Magnetic Attachment",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/magnetic-attachment.wav",
+      "format": "wav",
+      "bytes": 1049466,
+      "sha256": "090b2ea604d5c226163b6fe48b2567345d37f142ae1235c5f0590ff7512c9b75",
+      "duration_s": 1.802,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "magnetic",
+        "attachment"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Magnetic Attachment.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/magnetic-field-rise",
+      "name": "Magnetic Field Rise",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/magnetic-field-rise.wav",
+      "format": "wav",
+      "bytes": 1260876,
+      "sha256": "19c8ed098e29020628d6a2b2a8f6a8db813cb0a54fdb5c82d5ffbe6fb32b96a4",
+      "duration_s": 2.169,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "magnetic",
+        "field",
+        "rise"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Magnetic Field Rise.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/magnetic-impact",
+      "name": "Magnetic Impact",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/magnetic-impact.wav",
+      "format": "wav",
+      "bytes": 1664484,
+      "sha256": "1e9cd3f59cc01f2d16d2849acc485077e439b43e03ce61b68b84646b685b9e72",
+      "duration_s": 2.87,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "magnetic",
+        "impact"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Magnetic Impact.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/magnetic-jitter-field",
+      "name": "Magnetic Jitter Field",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/magnetic-jitter-field.wav",
+      "format": "wav",
+      "bytes": 1895112,
+      "sha256": "a1b2a6207bf5e01fc81ea831dcd5722dcebd41e1539e010426a5e07831f82f04",
+      "duration_s": 3.27,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "magnetic",
+        "jitter",
+        "field"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Magnetic Jitter Field.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/magnetic-pulses",
+      "name": "Magnetic Pulses",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/magnetic-pulses.wav",
+      "format": "wav",
+      "bytes": 818838,
+      "sha256": "69a616723c4b7fa6c8d6aea4d2eaad7e3a397712b6c5e7c7a26449b2c7be7013",
+      "duration_s": 1.401,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "magnetic",
+        "pulses"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Magnetic Pulses.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/magnetic-sweep",
+      "name": "Magnetic Sweep",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/magnetic-sweep.wav",
+      "format": "wav",
+      "bytes": 1030248,
+      "sha256": "f8c98acd2bc33b1a3f84d94295aeefaa7ba282452b03941d382c221592a92308",
+      "duration_s": 1.768,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "magnetic",
+        "sweep"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Magnetic Sweep.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/magnetic-whoosh",
+      "name": "Magnetic Whoosh",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/magnetic-whoosh.wav",
+      "format": "wav",
+      "bytes": 1568388,
+      "sha256": "1beebcb37d4dc46108bc75a5d0446031dccf367c851435ddc9a070a39979a11d",
+      "duration_s": 2.703,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "magnetic",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Magnetic Whoosh.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "electric-magnetic-energy/ticks-magnetic-field",
+      "name": "Ticks Magnetic Field",
+      "category": "electric-magnetic-energy",
+      "file": "electric-magnetic-energy/ticks-magnetic-field.wav",
+      "format": "wav",
+      "bytes": 1049466,
+      "sha256": "0ee6c9c8778a809b8b5b65000361fd63254ef76d8ec8d428d7996c90878a33fb",
+      "duration_s": 1.802,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ticks",
+        "magnetic",
+        "field"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Electric__Magnetic_Energy.zip",
+        "member": "Electric & Magnetic Energy/Ticks Magnetic Field.wav"
+      },
+      "added": "2026-10-22"
     },
     {
       "id": "glitches/air-glitch",
@@ -39154,6 +41273,274 @@
       "added": "2026-10-21"
     },
     {
+      "id": "internal-sounds/deep-thought",
+      "name": "Deep Thought",
+      "category": "internal-sounds",
+      "file": "internal-sounds/deep-thought.wav",
+      "format": "wav",
+      "bytes": 2779196,
+      "sha256": "e128ba99ac09406db2f45a60ae339253edfe4da9350785ae3e42722acc7835d9",
+      "duration_s": 4.805,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "thought"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Internal_Sounds.zip",
+        "member": "Psychological:Internal Sounds/Deep Thought.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "internal-sounds/high-tone",
+      "name": "High Tone",
+      "category": "internal-sounds",
+      "file": "internal-sounds/high-tone.wav",
+      "format": "wav",
+      "bytes": 1875894,
+      "sha256": "8e9ebf661542d987993b1d69bee746260de5566622e49407c0ae6d3d738c8cea",
+      "duration_s": 3.237,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "high",
+        "tone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Internal_Sounds.zip",
+        "member": "Psychological:Internal Sounds/High Tone.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "internal-sounds/hollow-thoughts",
+      "name": "Hollow Thoughts",
+      "category": "internal-sounds",
+      "file": "internal-sounds/hollow-thoughts.wav",
+      "format": "wav",
+      "bytes": 2433254,
+      "sha256": "d7cbc6ff5b35d4e154814c657c0ae5a2a27ec8898ec176a997e6cc2858c9059f",
+      "duration_s": 4.204,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hollow",
+        "thoughts"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Internal_Sounds.zip",
+        "member": "Psychological:Internal Sounds/Hollow Thoughts.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "internal-sounds/incoming-high-tone",
+      "name": "Incoming High Tone",
+      "category": "internal-sounds",
+      "file": "internal-sounds/incoming-high-tone.wav",
+      "format": "wav",
+      "bytes": 2702316,
+      "sha256": "d64ff55c4a4ad5dae06a23c9597d7ff70e752da25a91ae64883050782dc7c759",
+      "duration_s": 4.671,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "incoming",
+        "high",
+        "tone"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Internal_Sounds.zip",
+        "member": "Psychological:Internal Sounds/Incoming High Tone.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "internal-sounds/jittering-bass",
+      "name": "Jittering Bass",
+      "category": "internal-sounds",
+      "file": "internal-sounds/jittering-bass.wav",
+      "format": "wav",
+      "bytes": 799620,
+      "sha256": "538582f63e2f82aa405754dcdcf59f1e470ff2e25cbcff9688485b288e1275ca",
+      "duration_s": 1.368,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "jittering",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Internal_Sounds.zip",
+        "member": "Psychological:Internal Sounds/Jittering Bass.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "internal-sounds/jittering-thought-bass",
+      "name": "Jittering Thought Bass",
+      "category": "internal-sounds",
+      "file": "internal-sounds/jittering-thought-bass.wav",
+      "format": "wav",
+      "bytes": 2683100,
+      "sha256": "0fe5e37e739c63d04f3e0faf48e496fbb4abd05365e5a94d67f45a3fe9f27b40",
+      "duration_s": 4.638,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "jittering",
+        "thought",
+        "bass"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Internal_Sounds.zip",
+        "member": "Psychological:Internal Sounds/Jittering Thought Bass.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "internal-sounds/jittering-thought-flat",
+      "name": "Jittering Thought Flat",
+      "category": "internal-sounds",
+      "file": "internal-sounds/jittering-thought-flat.wav",
+      "format": "wav",
+      "bytes": 1760580,
+      "sha256": "67702a914c731e000968c03c326b8264047913a59017c89802b6940636f3d940",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "jittering",
+        "thought",
+        "flat"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Internal_Sounds.zip",
+        "member": "Psychological:Internal Sounds/Jittering Thought Flat.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "internal-sounds/realising-thought",
+      "name": "Realising Thought",
+      "category": "internal-sounds",
+      "file": "internal-sounds/realising-thought.wav",
+      "format": "wav",
+      "bytes": 2683100,
+      "sha256": "e0955c5229b331ff41ea9ddc9cf77be93c403a7a4aad95675aff3c8b20439bf7",
+      "duration_s": 4.638,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "realising",
+        "thought"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Internal_Sounds.zip",
+        "member": "Psychological:Internal Sounds/Realising Thought.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "internal-sounds/rising-scary-thought",
+      "name": "Rising Scary Thought",
+      "category": "internal-sounds",
+      "file": "internal-sounds/rising-scary-thought.wav",
+      "format": "wav",
+      "bytes": 2375618,
+      "sha256": "b6f5c489a7d809684129d5bfa8aa2bcae08b147ab778b07ffddcea83d2d19397",
+      "duration_s": 4.104,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rising",
+        "scary",
+        "thought"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Internal_Sounds.zip",
+        "member": "Psychological:Internal Sounds/Rising Scary Thought.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "internal-sounds/shaking-thoughts",
+      "name": "Shaking Thoughts",
+      "category": "internal-sounds",
+      "file": "internal-sounds/shaking-thoughts.wav",
+      "format": "wav",
+      "bytes": 1895112,
+      "sha256": "6b3f53bea49ded3ef6b78f4d1e1d27e88f1a524065d6d2b40e938d0f776d5271",
+      "duration_s": 3.27,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "shaking",
+        "thoughts"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Internal_Sounds.zip",
+        "member": "Psychological:Internal Sounds/Shaking Thoughts.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "internal-sounds/thought-whoosh",
+      "name": "Thought Whoosh",
+      "category": "internal-sounds",
+      "file": "internal-sounds/thought-whoosh.wav",
+      "format": "wav",
+      "bytes": 2433254,
+      "sha256": "9a3627e4c8fa28bd682d0aefb71fdb6c10e896bf96fdf0eaba831eba61680515",
+      "duration_s": 4.204,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "thought",
+        "whoosh"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Internal_Sounds.zip",
+        "member": "Psychological:Internal Sounds/Thought Whoosh.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
       "id": "match-crowds/basketball-match-crowd",
       "name": "Basketball Match Crowd",
       "category": "match-crowds",
@@ -39303,6 +41690,201 @@
         "member": "NFL Cheering Crowd.wav"
       },
       "added": "2026-10-21"
+    },
+    {
+      "id": "mechanical-industrial-tension/air-lift",
+      "name": "Air Lift",
+      "category": "mechanical-industrial-tension",
+      "file": "mechanical-industrial-tension/air-lift.wav",
+      "format": "wav",
+      "bytes": 549766,
+      "sha256": "89ce173de9bf763fade44e9cbed0ea7e31b1b1d20fdb9cefc368262d658c7e93",
+      "duration_s": 0.934,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "air",
+        "lift"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Mechanical__Industrial_Tension.zip",
+        "member": "Mechanical & Industrial Tension/Air Lift.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "mechanical-industrial-tension/industrial-air-riser",
+      "name": "Industrial Air Riser",
+      "category": "mechanical-industrial-tension",
+      "file": "mechanical-industrial-tension/industrial-air-riser.wav",
+      "format": "wav",
+      "bytes": 626646,
+      "sha256": "11ac9f5679a83d32980fee6c8fb0d6e1963017e372d44aa8352a14352173e975",
+      "duration_s": 1.068,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "industrial",
+        "air",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Mechanical__Industrial_Tension.zip",
+        "member": "Mechanical & Industrial Tension/Industrial Air Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "mechanical-industrial-tension/industrial-machine",
+      "name": "Industrial Machine",
+      "category": "mechanical-industrial-tension",
+      "file": "mechanical-industrial-tension/industrial-machine.wav",
+      "format": "wav",
+      "bytes": 818838,
+      "sha256": "48ae9bb77f44227d0eb615e6dd3eccb077a9b0de6ca67482813ff76428be60f5",
+      "duration_s": 1.401,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "industrial",
+        "machine"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Mechanical__Industrial_Tension.zip",
+        "member": "Mechanical & Industrial Tension/Industrial Machine.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "mechanical-industrial-tension/industrial-machine-error",
+      "name": "Industrial Machine Error",
+      "category": "mechanical-industrial-tension",
+      "file": "mechanical-industrial-tension/industrial-machine-error.wav",
+      "format": "wav",
+      "bytes": 1222440,
+      "sha256": "218d4f27a9719563855e9ac59be726bb2642445afc67716a926ac26f3536bafa",
+      "duration_s": 2.102,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "industrial",
+        "machine",
+        "error"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Mechanical__Industrial_Tension.zip",
+        "member": "Mechanical & Industrial Tension/Industrial Machine Error.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "mechanical-industrial-tension/industrial-rise",
+      "name": "Industrial Rise",
+      "category": "mechanical-industrial-tension",
+      "file": "mechanical-industrial-tension/industrial-rise.wav",
+      "format": "wav",
+      "bytes": 1222440,
+      "sha256": "f062ef872efbe6d3c63ff559c418c432fc444a458658102903247386643960a4",
+      "duration_s": 2.102,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "industrial",
+        "rise"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Mechanical__Industrial_Tension.zip",
+        "member": "Mechanical & Industrial Tension/Industrial Rise.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "mechanical-industrial-tension/mechanical-clicks",
+      "name": "Mechanical Clicks",
+      "category": "mechanical-industrial-tension",
+      "file": "mechanical-industrial-tension/mechanical-clicks.wav",
+      "format": "wav",
+      "bytes": 1011030,
+      "sha256": "42e59832a577529f9577acaf98c538000de349bb2c380b17efbb4f71c4ebb6a5",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "mechanical",
+        "clicks"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Mechanical__Industrial_Tension.zip",
+        "member": "Mechanical & Industrial Tension/Mechanical Clicks.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "mechanical-industrial-tension/mechanical-hit",
+      "name": "Mechanical Hit",
+      "category": "mechanical-industrial-tension",
+      "file": "mechanical-industrial-tension/mechanical-hit.wav",
+      "format": "wav",
+      "bytes": 838056,
+      "sha256": "162c19de1de115ac5de7cade97917e00282b6dfafd74640add29b6d512d3d601",
+      "duration_s": 1.435,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "mechanical",
+        "hit"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Mechanical__Industrial_Tension.zip",
+        "member": "Mechanical & Industrial Tension/Mechanical Hit.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "mechanical-industrial-tension/rolling-mechanical-machine",
+      "name": "Rolling Mechanical Machine",
+      "category": "mechanical-industrial-tension",
+      "file": "mechanical-industrial-tension/rolling-mechanical-machine.wav",
+      "format": "wav",
+      "bytes": 1011030,
+      "sha256": "3cf2c15d853b6e2a890757bc9f7fe3388211ae61aa0ce09aa72ab587b140470b",
+      "duration_s": 1.735,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rolling",
+        "mechanical",
+        "machine"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Mechanical__Industrial_Tension.zip",
+        "member": "Mechanical & Industrial Tension/Rolling Mechanical Machine.wav"
+      },
+      "added": "2026-10-22"
     },
     {
       "id": "motor-bikes/cinematic-motorbike-pass-by-fast",
@@ -39977,6 +42559,474 @@
         "member": "Motorsport/Wheel Gun.wav"
       },
       "added": "2026-10-21"
+    },
+    {
+      "id": "quantum-risers/air-riser",
+      "name": "Air Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/air-riser.wav",
+      "format": "wav",
+      "bytes": 838056,
+      "sha256": "7e1a13a29aaaf54369c5c9a22a096d78ba46c061f2c83f732ab773a623476f92",
+      "duration_s": 1.435,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "air",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Air Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/beat-riser",
+      "name": "Beat Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/beat-riser.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "8df5c6ffd703ead05635605cb35d464b22958df9f078ad59a4d52d94557f74f4",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "beat",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Beat Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/deep-bass-riser",
+      "name": "Deep Bass Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/deep-bass-riser.wav",
+      "format": "wav",
+      "bytes": 799620,
+      "sha256": "1325c4493d78725e84b96841c3da54dd3d309a623122f73521c432bc31e8961b",
+      "duration_s": 1.368,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Deep Bass Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/deep-impact-riser",
+      "name": "Deep Impact Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/deep-impact-riser.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "314ebf12a42bf3d910b6653b1a9d4b6473c3ff8953e7074abb8e2687cbe16981",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "impact",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Deep Impact Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/deep-jitter-riser",
+      "name": "Deep Jitter Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/deep-jitter-riser.wav",
+      "format": "wav",
+      "bytes": 1087908,
+      "sha256": "b9c26a18247a64b733ef71fe3ff292c5c143637733b1be59322b5f8822f9b612",
+      "duration_s": 1.869,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "jitter",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Deep Jitter Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/doppler-riser",
+      "name": "Doppler Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/doppler-riser.wav",
+      "format": "wav",
+      "bytes": 991834,
+      "sha256": "4adf1f31f9dba14a912584dec69165d863b3d05e1b963f36abe2555a79e6c54b",
+      "duration_s": 1.702,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "doppler",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Doppler Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/electric-flicker-riser",
+      "name": "Electric Flicker Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/electric-flicker-riser.wav",
+      "format": "wav",
+      "bytes": 741960,
+      "sha256": "2b75fbd480478c4edb3734b63a3756b2915a7816054bd8bb2a36994bf2d76043",
+      "duration_s": 1.268,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "flicker",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Electric Flicker Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/freq-smooth-riser",
+      "name": "Freq. Smooth Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/freq-smooth-riser.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "9d9759c29a82c0a9af0a5ef17e10d1db06e1f6addcb3af90c34064063f999692",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "freq",
+        "smooth",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Freq. Smooth Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/granular-riser",
+      "name": "Granular Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/granular-riser.wav",
+      "format": "wav",
+      "bytes": 741960,
+      "sha256": "74fabeea96a7c2da35b423de2294877f7ddb2595fe6c7f2334f447e2734c3549",
+      "duration_s": 1.268,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "granular",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Granular Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/hollow-tone-riser",
+      "name": "Hollow Tone Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/hollow-tone-riser.wav",
+      "format": "wav",
+      "bytes": 703524,
+      "sha256": "b1b337a057653b10daf9180affb686bbdcbd0ed83cc02f54419de7ecbf3f3e3f",
+      "duration_s": 1.201,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hollow",
+        "tone",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Hollow Tone Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/laser-riser",
+      "name": "Laser Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/laser-riser.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "f63df2a5aa14cde6f8738f4bd130ffa74ee27193c3fa99915e165c7574a08adb",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "laser",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Laser Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/loading-quantum-riser",
+      "name": "Loading Quantum Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/loading-quantum-riser.wav",
+      "format": "wav",
+      "bytes": 914934,
+      "sha256": "77c95bef8318a8fd25392cd28ac8d39e93c02d2dab691c3dd683c450bd78caa3",
+      "duration_s": 1.568,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "loading",
+        "quantum",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Loading Quantum Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/machine-glow-riser",
+      "name": "Machine Glow Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/machine-glow-riser.wav",
+      "format": "wav",
+      "bytes": 665082,
+      "sha256": "45b023220c0bb9d80aacd70f93a24b85057da7e44d08d63a2309ca074cb94c1c",
+      "duration_s": 1.134,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "machine",
+        "glow",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Machine Glow Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/quantum-start-riser",
+      "name": "Quantum Start Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/quantum-start-riser.wav",
+      "format": "wav",
+      "bytes": 761178,
+      "sha256": "876ebaf2ebfb2071001d180a9690a9354c5deabf244a08931319f58dd3de921d",
+      "duration_s": 1.301,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "quantum",
+        "start",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Quantum Start Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/quantum-strings-riser",
+      "name": "Quantum Strings Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/quantum-strings-riser.wav",
+      "format": "wav",
+      "bytes": 1145562,
+      "sha256": "ac9215c8b541ab6664fd7223331f482007aa65e27db903f2ed2ffa1f5bcf2802",
+      "duration_s": 1.969,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "quantum",
+        "strings",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Quantum Strings Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/sharp-air-riser",
+      "name": "Sharp Air Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/sharp-air-riser.wav",
+      "format": "wav",
+      "bytes": 818838,
+      "sha256": "c9ca8c2b89711ed7c164567eebed9109166aa48de517a94d640151be9ab6f1fc",
+      "duration_s": 1.401,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sharp",
+        "air",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Sharp Air Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/sharp-riser",
+      "name": "Sharp Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/sharp-riser.wav",
+      "format": "wav",
+      "bytes": 838056,
+      "sha256": "d48989a666eb98a9e47e6ab037ffe31200ab80badc2c75c3125b824d374deac0",
+      "duration_s": 1.435,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sharp",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Sharp Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/short-riser",
+      "name": "Short Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/short-riser.wav",
+      "format": "wav",
+      "bytes": 703524,
+      "sha256": "86a64a0c038364ca4058b54929733589de6f24508ee46b0d7803e7b860947541",
+      "duration_s": 1.201,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Short Riser.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "quantum-risers/static-flicker-riser",
+      "name": "Static Flicker Riser",
+      "category": "quantum-risers",
+      "file": "quantum-risers/static-flicker-riser.wav",
+      "format": "wav",
+      "bytes": 818838,
+      "sha256": "f50978e233090d076092745ff8e035e42f54702329c5449c8b971e73e17a5405",
+      "duration_s": 1.401,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "static",
+        "flicker",
+        "riser"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Quantum_Risers.zip",
+        "member": "Quantum Risers/Static Flicker Riser.wav"
+      },
+      "added": "2026-10-22"
     },
     {
       "id": "retro-arcade/arcade-end",
@@ -48581,6 +51631,857 @@
       "added": "2026-10-21"
     },
     {
+      "id": "temporal-transitions/abstract-metal-transition",
+      "name": "Abstract Metal Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/abstract-metal-transition.wav",
+      "format": "wav",
+      "bytes": 1068684,
+      "sha256": "ac41c03e957e103120088563163f5e68b25e94c66d89cc6214b3ad7abb26bd6a",
+      "duration_s": 1.835,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "abstract",
+        "metal",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Abstract Metal Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/air-suspense-transition",
+      "name": "Air Suspense Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/air-suspense-transition.wav",
+      "format": "wav",
+      "bytes": 2048868,
+      "sha256": "9d62aebeccb3a15b455cf73101376343cf4e7dbcb6e20780ae2f1530ff9d1de5",
+      "duration_s": 3.537,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "air",
+        "suspense",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions_Pt2.zip",
+        "member": "untitled folder/Air Suspense Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/air-tense-transition",
+      "name": "Air Tense Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/air-tense-transition.wav",
+      "format": "wav",
+      "bytes": 1895112,
+      "sha256": "88c8510c79b374d2bc435328b92a12dcac25182f4c408f25a2f940df5213ded5",
+      "duration_s": 3.27,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "air",
+        "tense",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions_Pt2.zip",
+        "member": "untitled folder/Air Tense Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/dark-glitch-transition",
+      "name": "Dark Glitch Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/dark-glitch-transition.wav",
+      "format": "wav",
+      "bytes": 1760580,
+      "sha256": "b0a9d1baf9505bed4825aede260bcd7bbb52e87d862003a74362a4e1ac20ab23",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "dark",
+        "glitch",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Dark Glitch Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/dark-riser-transition",
+      "name": "Dark Riser Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/dark-riser-transition.wav",
+      "format": "wav",
+      "bytes": 2221836,
+      "sha256": "489f9a4b71751f2f1f84f6258c3379790ded9a8f1eb53940b513cefe44781703",
+      "duration_s": 3.837,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "dark",
+        "riser",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions_Pt2.zip",
+        "member": "untitled folder/Dark Riser Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/deeo-left-right-transition",
+      "name": "Deeo Left Right Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/deeo-left-right-transition.wav",
+      "format": "wav",
+      "bytes": 2990606,
+      "sha256": "0daaeb319e37fc6b5307001d3dc0620e0dd009d7915d2083ddd5c9a239ef3113",
+      "duration_s": 5.172,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deeo",
+        "left",
+        "right",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Deeo Left Right Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/deep-bass-transition",
+      "name": "Deep Bass Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/deep-bass-transition.wav",
+      "format": "wav",
+      "bytes": 2894510,
+      "sha256": "ee3b0db395c3458b99037e11f2dc352b0ca72ed9b031aa8d1ef48f857246f7dd",
+      "duration_s": 5.005,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "bass",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions_Pt2.zip",
+        "member": "untitled folder/Deep Bass Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/deep-crash-transition",
+      "name": "Deep Crash Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/deep-crash-transition.wav",
+      "format": "wav",
+      "bytes": 2202618,
+      "sha256": "d03d2df0579e78a92b7fb6b1f98c40c72a7f3f433e434e406681d03bfbcaf163",
+      "duration_s": 3.804,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "crash",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions_Pt2.zip",
+        "member": "untitled folder/Deep Crash Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/deep-high-tone-bass-transition",
+      "name": "Deep High Tone Bass Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/deep-high-tone-bass-transition.wav",
+      "format": "wav",
+      "bytes": 1760580,
+      "sha256": "9cb42e76e2de2544abcc28313452055a89e3ed3e054712d434fc8b81a726e5ac",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "high",
+        "tone",
+        "bass",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Deep High Tone Bass Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/deep-high-tone-transition",
+      "name": "Deep High Tone Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/deep-high-tone-transition.wav",
+      "format": "wav",
+      "bytes": 2048868,
+      "sha256": "0f5f39556549fcf747c688d57c718d7d40846a8ba591747922afc2b362816875",
+      "duration_s": 3.537,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "high",
+        "tone",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions_Pt2.zip",
+        "member": "untitled folder/Deep High Tone Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/deep-impact-hollow-transition",
+      "name": "Deep Impact Hollow Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/deep-impact-hollow-transition.wav",
+      "format": "wav",
+      "bytes": 1991208,
+      "sha256": "ccbf3fee93316fd4dc863997bbe65e78286dcb895121491f4db6e78724d94b68",
+      "duration_s": 3.437,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "deep",
+        "impact",
+        "hollow",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions_Pt2.zip",
+        "member": "untitled folder/Deep Impact Hollow Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/echo-impact-transition",
+      "name": "Echo Impact Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/echo-impact-transition.wav",
+      "format": "wav",
+      "bytes": 2452472,
+      "sha256": "7e9ec16c5eaa82dfcf12244c2d0bcb23edb3b27e630b37f2e33ca18c922573df",
+      "duration_s": 4.238,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "echo",
+        "impact",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions_Pt2.zip",
+        "member": "untitled folder/Echo Impact Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/electric-transition",
+      "name": "Electric Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/electric-transition.wav",
+      "format": "wav",
+      "bytes": 280696,
+      "sha256": "35373b78cf68bf1caf1c425a970c7843cd06d5f842427f7f5e447deacb30b638",
+      "duration_s": 0.467,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "electric",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Electric Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/fade-in-transition",
+      "name": "Fade In Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/fade-in-transition.wav",
+      "format": "wav",
+      "bytes": 1568388,
+      "sha256": "f4afabd90493f10ccfe78af2eccb197058a2c3697446bdba0c597ad58c00b34c",
+      "duration_s": 2.703,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fade",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Fade In Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/glitch-impact-transition",
+      "name": "Glitch Impact Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/glitch-impact-transition.wav",
+      "format": "wav",
+      "bytes": 1760580,
+      "sha256": "417c8824afde375f0821e012651db0f868f6598771a8f1945d48e1a2d438d777",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "glitch",
+        "impact",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Glitch Impact Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/glitch-transition",
+      "name": "Glitch Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/glitch-transition.wav",
+      "format": "wav",
+      "bytes": 357574,
+      "sha256": "3134a3516227e804dc9ff63593d8e8ff5ad092b1c8c7a34674cb5908057d5b9a",
+      "duration_s": 0.601,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "glitch",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Glitch Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/granular-deep-transition",
+      "name": "Granular Deep Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/granular-deep-transition.wav",
+      "format": "wav",
+      "bytes": 2759978,
+      "sha256": "d9c1d918b0e7f2491dad0661d9350b2c04d7e5105abbfde54869304f780e79f3",
+      "duration_s": 4.771,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "granular",
+        "deep",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions_Pt2.zip",
+        "member": "untitled folder/Granular Deep Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/high-tone-transition",
+      "name": "High Tone Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/high-tone-transition.wav",
+      "format": "wav",
+      "bytes": 1472292,
+      "sha256": "3aaeaefe67665ae73f7a3cbd5de1159acb9cb7232f7fb66f066e7cbfec098872",
+      "duration_s": 2.536,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "high",
+        "tone",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/High Tone Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/impact-transition",
+      "name": "Impact Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/impact-transition.wav",
+      "format": "wav",
+      "bytes": 1760580,
+      "sha256": "2029e6d3dd51f8339055c4eb610ba2981a97c35022957bb74985e6ef7fc901a7",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "impact",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Impact Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/jitter-fold-glitch-transition",
+      "name": "Jitter Fold Glitch Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/jitter-fold-glitch-transition.wav",
+      "format": "wav",
+      "bytes": 1472292,
+      "sha256": "454b973598d40fb40954da888cc004530345aebfad5e1544c3781dc6f9130057",
+      "duration_s": 2.536,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "jitter",
+        "fold",
+        "glitch",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Jitter Fold Glitch Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/jitter-glitch-transition",
+      "name": "Jitter Glitch Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/jitter-glitch-transition.wav",
+      "format": "wav",
+      "bytes": 1241658,
+      "sha256": "95a4d785ae16c96d44329fd08f4e82224370404816033781224d43fa6ec2ee30",
+      "duration_s": 2.135,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "jitter",
+        "glitch",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Jitter Glitch Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/magnetic-slow-transition",
+      "name": "Magnetic Slow Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/magnetic-slow-transition.wav",
+      "format": "wav",
+      "bytes": 2759978,
+      "sha256": "626bc0450b8febf096d00d8d9b471bc3758d76a539c9bb36d70596a5d6097c33",
+      "duration_s": 4.771,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "magnetic",
+        "slow",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions_Pt2.zip",
+        "member": "untitled folder/Magnetic Slow Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/mechanical-air-transition",
+      "name": "Mechanical Air Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/mechanical-air-transition.wav",
+      "format": "wav",
+      "bytes": 1107126,
+      "sha256": "cd39dbbb7bd0f5916489a6f652edc66d5032a3cb3dca2096d96cb13aecd03424",
+      "duration_s": 1.902,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "mechanical",
+        "air",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Mechanical Air Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/metal-transition",
+      "name": "Metal Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/metal-transition.wav",
+      "format": "wav",
+      "bytes": 1356972,
+      "sha256": "a3d0968bb6a237791071b0ce2fbc16d01c285ae5e2f21d448a633e6091208e96",
+      "duration_s": 2.336,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "metal",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Metal Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/rising-whoosh-transition",
+      "name": "Rising Whoosh Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/rising-whoosh-transition.wav",
+      "format": "wav",
+      "bytes": 1760580,
+      "sha256": "cdf3dfbf3b24ecc50ff182afb9339461d32017fb1cbbddaa46e78cf58334ea25",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rising",
+        "whoosh",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Rising Whoosh Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/rumble-whoosh-transition",
+      "name": "Rumble Whoosh Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/rumble-whoosh-transition.wav",
+      "format": "wav",
+      "bytes": 2990606,
+      "sha256": "070e592e05228b1cc6439731954d816eafc6eb88cfc12fd6612a52a7e352d8c2",
+      "duration_s": 5.172,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rumble",
+        "whoosh",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions_Pt2.zip",
+        "member": "untitled folder/Rumble Whoosh Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/sharp-whoosh-transition",
+      "name": "Sharp Whoosh Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/sharp-whoosh-transition.wav",
+      "format": "wav",
+      "bytes": 1472292,
+      "sha256": "de18b722a9882c017a45bcd6ecc10e04ed9d1c2acf1d14857ab3ad71174ece9e",
+      "duration_s": 2.536,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "sharp",
+        "whoosh",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Sharp Whoosh Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/short-glitch-transition",
+      "name": "Short Glitch Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/short-glitch-transition.wav",
+      "format": "wav",
+      "bytes": 338356,
+      "sha256": "6730f81a25dd99e2be3a10ce7aeb9ac1a4e2789aabeb9766f1f536675409f86a",
+      "duration_s": 0.567,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "glitch",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Short Glitch Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/short-mechanical-air-transition",
+      "name": "Short Mechanical Air Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/short-mechanical-air-transition.wav",
+      "format": "wav",
+      "bytes": 703524,
+      "sha256": "4068b55aa07e6217a88d707b11ed418d34a25e55e94d1a31de39f548591f0c1b",
+      "duration_s": 1.201,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "short",
+        "mechanical",
+        "air",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Short Mechanical Air Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/tone-string-transition",
+      "name": "Tone String Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/tone-string-transition.wav",
+      "format": "wav",
+      "bytes": 280696,
+      "sha256": "907e2a0ac8ee67f839144ceeafd72fae09b8b4534db911dd801ffba11588d62a",
+      "duration_s": 0.467,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tone",
+        "string",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Tone String Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "temporal-transitions/whoosh-low-end-transition",
+      "name": "Whoosh Low End Transition",
+      "category": "temporal-transitions",
+      "file": "temporal-transitions/whoosh-low-end-transition.wav",
+      "format": "wav",
+      "bytes": 1760580,
+      "sha256": "26b016e5959a14fd45b8bdc9b4ead065a7ffc0f44081bf97357bc822db546c60",
+      "duration_s": 3.036,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "whoosh",
+        "low",
+        "end",
+        "transition"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Temporal_Transitions.zip",
+        "member": "Temporal Transitions/Whoosh Low End Transition.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "tension-builders/ambient-tension",
+      "name": "Ambient Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/ambient-tension.wav",
+      "format": "wav",
+      "bytes": 4355174,
+      "sha256": "7a8f18b3dd0cfdfbdc939e36f670a9fd1faf3629af37e61ed79ffd7470e1ce4c",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ambient",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt3.zip",
+        "member": "untitled folder/Ambient Tension.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "tension-builders/bass-tension",
+      "name": "Bass Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/bass-tension.wav",
+      "format": "wav",
+      "bytes": 3567182,
+      "sha256": "8ef04e1b69c9279698968b7c63be3513ffa86015b82df1807265790046d8d22b",
+      "duration_s": 6.173,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_4.zip",
+        "member": "Tension Builders 3/Bass Tension.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "tension-builders/bass-wave-tension",
+      "name": "Bass Wave Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/bass-wave-tension.wav",
+      "format": "wav",
+      "bytes": 4355174,
+      "sha256": "32d536edd668a561ae1299447953c1928a7cffffb6937eed4b202c0bbc14bb55",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "bass",
+        "wave",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt3.zip",
+        "member": "untitled folder/Bass Wave Tension.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
       "id": "tension-builders/cinematic-tension-builder",
       "name": "Cinematic Tension Builder",
       "category": "tension-builders",
@@ -48606,6 +52507,31 @@
       "added": "2026-10-21"
     },
     {
+      "id": "tension-builders/constant-bass-tension",
+      "name": "Constant Bass Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/constant-bass-tension.wav",
+      "format": "wav",
+      "bytes": 4086126,
+      "sha256": "4ffc5c2e0fc4582f1020ccbcc86c6e0d01c115f8d48284f52669314c479c1423",
+      "duration_s": 7.074,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "constant",
+        "bass",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_4.zip",
+        "member": "Tension Builders 3/Constant Bass Tension.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
       "id": "tension-builders/deep-bass-beat",
       "name": "Deep Bass Beat",
       "category": "tension-builders",
@@ -48629,6 +52555,31 @@
         "member": "Deep Bass Beat.wav"
       },
       "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/distorted-reverb-tension",
+      "name": "Distorted Reverb Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/distorted-reverb-tension.wav",
+      "format": "wav",
+      "bytes": 4355174,
+      "sha256": "1a102b823328d677f97f4772ea3866c16c9a482ad4f23ef358667077ae2390dd",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "distorted",
+        "reverb",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt3.zip",
+        "member": "untitled folder/Distorted Reverb Tension.wav"
+      },
+      "added": "2026-10-22"
     },
     {
       "id": "tension-builders/distorted-tension-builder",
@@ -48730,6 +52681,32 @@
       "added": "2026-10-21"
     },
     {
+      "id": "tension-builders/fast-magnetic-wave-tension",
+      "name": "Fast Magnetic Wave Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/fast-magnetic-wave-tension.wav",
+      "format": "wav",
+      "bytes": 2971388,
+      "sha256": "a492ada71d12f641ca955e28066b2acd90363514bba5d25e685831ac3164debf",
+      "duration_s": 5.138,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "fast",
+        "magnetic",
+        "wave",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_4.zip",
+        "member": "Tension Builders 3/Fast Magnetic Wave Tension.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
       "id": "tension-builders/future-tension-builder",
       "name": "Future Tension Builder",
       "category": "tension-builders",
@@ -48753,6 +52730,31 @@
         "member": "Future Tension Builder.wav"
       },
       "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/ghostly-bass-tension",
+      "name": "Ghostly Bass Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/ghostly-bass-tension.wav",
+      "format": "wav",
+      "bytes": 4355174,
+      "sha256": "6dc20bfb1852de245176c582b046a020fbc486a2692fa2c5f58935724692f14b",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "ghostly",
+        "bass",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt3.zip",
+        "member": "untitled folder/Ghostly Bass Tension.wav"
+      },
+      "added": "2026-10-22"
     },
     {
       "id": "tension-builders/heartbeat-tension-builder",
@@ -48780,6 +52782,55 @@
       "added": "2026-10-21"
     },
     {
+      "id": "tension-builders/high-tone-tension",
+      "name": "High Tone Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/high-tone-tension.wav",
+      "format": "wav",
+      "bytes": 4355174,
+      "sha256": "d4a716ef9ba3ed1a0ffd98a2ec00cd96ad11b8555869363aacb4f26b52d23286",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "high",
+        "tone",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt3.zip",
+        "member": "untitled folder/High Tone Tension.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "tension-builders/hollow-tension",
+      "name": "Hollow Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/hollow-tension.wav",
+      "format": "wav",
+      "bytes": 3663278,
+      "sha256": "c4bb4405c05d9b0190b2c69fdeb4acade1ed7a2e2b0444e9e1e7f911d2f31154",
+      "duration_s": 6.34,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "hollow",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_4.zip",
+        "member": "Tension Builders 3/Hollow Tension.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
       "id": "tension-builders/jitter-tension-builder",
       "name": "Jitter Tension Builder",
       "category": "tension-builders",
@@ -48803,6 +52854,56 @@
         "member": "untitled folder/Jitter Tension Builder.wav"
       },
       "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/low-rumble-tension",
+      "name": "Low Rumble Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/low-rumble-tension.wav",
+      "format": "wav",
+      "bytes": 4355174,
+      "sha256": "ea54a055947a984af986641fc428ab9283ec6d11f95e450b8b71c051db2dafb3",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "low",
+        "rumble",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt5.zip",
+        "member": "untitled folder 2/Low Rumble Tension.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "tension-builders/magnetic-jitter-tension",
+      "name": "Magnetic Jitter Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/magnetic-jitter-tension.wav",
+      "format": "wav",
+      "bytes": 4566584,
+      "sha256": "674f07debcaf98c04740fafdb16c1356245e6ddd963802ce3643f314dd8992c2",
+      "duration_s": 7.908,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "magnetic",
+        "jitter",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt3.zip",
+        "member": "untitled folder/Magnetic Jitter Tension.wav"
+      },
+      "added": "2026-10-22"
     },
     {
       "id": "tension-builders/opening-tension-builder",
@@ -48877,6 +52978,104 @@
         "member": "untitled folder/Rhythm Ticks.wav"
       },
       "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/rising-tension",
+      "name": "Rising Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/rising-tension.wav",
+      "format": "wav",
+      "bytes": 4355174,
+      "sha256": "8c49c12d291957ed9b84acf2d471300f80bda2169fc50e64ef73bd9a801cf394",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rising",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt5.zip",
+        "member": "untitled folder 2/Rising Tension.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "tension-builders/rumbling-rising-tension",
+      "name": "Rumbling Rising Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/rumbling-rising-tension.wav",
+      "format": "wav",
+      "bytes": 4355174,
+      "sha256": "d81215e4dc8a6ca81a91a0470a864f62f45ba882cf61e8ce409fc36676223667",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rumbling",
+        "rising",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt5.zip",
+        "member": "untitled folder 2/Rumbling Rising Tension.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "tension-builders/rumbling-tension",
+      "name": "Rumbling Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/rumbling-tension.wav",
+      "format": "wav",
+      "bytes": 4355174,
+      "sha256": "f3e379a4ddce55b7b337ee461bb66750028d9e3fdb17c9e15b715612275cab0c",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "rumbling",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt5.zip",
+        "member": "untitled folder 2/Rumbling Tension.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "tension-builders/scary-echo-tension",
+      "name": "Scary Echo Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/scary-echo-tension.wav",
+      "format": "wav",
+      "bytes": 4355174,
+      "sha256": "4e826fb47559164f539d8fb358512121d5de0d5406e9e513cfe2a560f28932a2",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "scary",
+        "echo",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt5.zip",
+        "member": "untitled folder 2/Scary Echo Tension.wav"
+      },
+      "added": "2026-10-22"
     },
     {
       "id": "tension-builders/sharp-distort-tension-builder",
@@ -48955,6 +53154,83 @@
       "added": "2026-10-21"
     },
     {
+      "id": "tension-builders/slow-bass-rising-tension",
+      "name": "Slow Bass Rising Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/slow-bass-rising-tension.wav",
+      "format": "wav",
+      "bytes": 3105950,
+      "sha256": "7d74b2cab408bf0292fc8cc42461203beacd9d4fc8c78565f8a3efec9a9c15f4",
+      "duration_s": 5.372,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slow",
+        "bass",
+        "rising",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_4.zip",
+        "member": "Tension Builders 3/Slow Bass Rising Tension.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "tension-builders/slow-distorted-tension",
+      "name": "Slow Distorted Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/slow-distorted-tension.wav",
+      "format": "wav",
+      "bytes": 4355174,
+      "sha256": "eb7eed8439108a801fe82b9ba260d291fb4c762f60d52133cdfdb4946f796aca",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slow",
+        "distorted",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt5.zip",
+        "member": "untitled folder 2/Slow Distorted Tension.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
+      "id": "tension-builders/slow-magnetic-wave-tension",
+      "name": "Slow Magnetic Wave Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/slow-magnetic-wave-tension.wav",
+      "format": "wav",
+      "bytes": 4355174,
+      "sha256": "a3556e51eac41fd3dee3c0720fe23422f9a4059aa33cb6581676dc4b00b82a50",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "slow",
+        "magnetic",
+        "wave",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_Pt5.zip",
+        "member": "untitled folder 2/Slow Magnetic Wave Tension.wav"
+      },
+      "added": "2026-10-22"
+    },
+    {
       "id": "tension-builders/strange-tension-builder",
       "name": "Strange Tension Builder",
       "category": "tension-builders",
@@ -49029,6 +53305,30 @@
         "member": "Tick Tension Builder.wav"
       },
       "added": "2026-10-21"
+    },
+    {
+      "id": "tension-builders/tone-tension",
+      "name": "Tone Tension",
+      "category": "tension-builders",
+      "file": "tension-builders/tone-tension.wav",
+      "format": "wav",
+      "bytes": 4355174,
+      "sha256": "83a96f7dbd5e4bbc21284326e8a1260f82d6b705ba991f54922bfc707315d4e1",
+      "duration_s": 7.541,
+      "sample_rate": 96000,
+      "channels": 2,
+      "bit_depth": 24,
+      "loopable": false,
+      "tags": [
+        "tone",
+        "tension"
+      ],
+      "source": {
+        "release": "sfx-2026-10",
+        "asset": "Tension_Builders_4.zip",
+        "member": "Tension Builders 3/Tone Tension.wav"
+      },
+      "added": "2026-10-22"
     },
     {
       "id": "tension-builders/whoosh-tension-builder",
