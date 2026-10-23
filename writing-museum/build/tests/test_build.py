@@ -5,6 +5,7 @@ once, read-only, to check that the ten-work path works on real data. Nothing is
 written under writing-museum/data/ or creative-writing/vault/.
 """
 import json
+import re
 import shutil
 import sys
 import tempfile
@@ -349,7 +350,10 @@ class RealVault(unittest.TestCase):
 
     def test_the_library_lists_the_63_works_and_every_scene_is_one_of_them(self):
         rels = library.list_works(REAL_VAULT)
-        self.assertEqual(len(rels), 63)
+        # The 63 certified transcriptions carry a source_volume; works the pipeline adds later carry none.
+        originals = [rel for rel in rels
+                     if re.search(r"^source_volume:\s*\S", (REAL_VAULT / rel).read_text(encoding="utf-8"), re.M)]
+        self.assertEqual(len(originals), 63)
         self.assertTrue(all(rel.endswith(".md") and not rel.endswith("_index.md") for rel in rels))
         scenes = build_museum.SCENES
         if scenes.is_dir():
