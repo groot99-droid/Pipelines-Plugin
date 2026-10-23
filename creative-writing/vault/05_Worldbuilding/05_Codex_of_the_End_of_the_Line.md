@@ -76,6 +76,7 @@ Motto: PRODUCTION IS OBLIGATION.
 Law: Camp Investigator → Mine Warden → Circuit Judge.
 Places: the yard, the broken trestle, the flume; the Bunkhouse; Vane Sawmill; the kilns; the Workings, one name chalked out on the tally board; the Company Office and the Harrow line, which rarely works; the Forge; the Deep Level; Widow-Maker Ridge; the Pit-Head; the Infirmary.
 Dread: feeding the furnace, or fuel.
+Later, typed in a margin: GROUNDS 99, 1952. The same motto over the same gate. The rack and the whistle stand. A program called ANOMALY UNKNOWN keeps the books.
 
 **PORT-AU-LEVAIN — the Sovereign Sourdough Council**
 Owner: the Council, under the Master Bakers' lineage.
@@ -144,7 +145,7 @@ Sign left behind: a brass casing (.45), and flour dust.
 *Tag: everything is owned, so everything can be taken.*
 
 **CONTRACT — a person breaks**
-HollowMere: the Hitman. A black-wax envelope comes in the mailbag: "Burn the Letter & Keep Your Mundane Life, OR Accept the Baron's Contract." A needle or a derringer; he leaves on the train. "Take only its mark." / Port-au-Levain: the Black-Crust Contract, with a pigeon cylinder and a nightshade glaze. / BlackPine: the Pit-Poisoner, and a slip in a lunchbox.
+HollowMere: the Hitman. A black-wax envelope comes in the mailbag: "Burn the Letter & Keep Your Mundane Life, OR Accept the Baron's Contract." A needle or a derringer; he leaves on the train. "Take only its mark." / Port-au-Levain: the Black-Crust Contract, with a pigeon cylinder and a nightshade glaze. / BlackPine: the Pit-Poisoner, and a slip in a lunchbox. By 1952 the slip is an enlistment, its department under a black bar, and the hand that takes it up is the Secret Agent's.
 Sign left behind: a wax seal.
 *Tag: nobody starts as the Hitman.*
 
@@ -326,6 +327,10 @@ They come when the town riots, with the Baron and the guard dogs. They leave whe
 It wants the quota met. It enforces through the Tallyman, the Roll Call and the fine. It fears an empty bunk at midnight.
 *Colours: PRODUCTION IS OBLIGATION.*
 
+**The Program — Grounds 99, 1952**
+It wants ████. It enforces through the roll, the rack and the dawn tribunal, and through the four services that each say their interest is limited. It fears nothing on paper.
+*Colours: a black bar.*
+
 **The Order Enforcement Agents (OEAs) — BlackPine**
 They are sent out when the Roll Call finds empty bunks or a steam main ruptures. Gas masks. Searchlights.
 *Colours: the searchlight.*
@@ -395,3 +400,5 @@ To the Company, miasma. To the town, mere-rot.
 17. Dawn of the first match.
 
 Then the train.
+
+*Pasted to the last page, typed: 1952. An old grade south of the trestle, owner of record none. A camp redesignated GROUNDS 99. PRODUCTION IS OBLIGATION, new paint on old. Then the Payroll Train.*
