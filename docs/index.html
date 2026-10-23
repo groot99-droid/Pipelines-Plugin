@@ -16,6 +16,7 @@
     <li><a href="studio.html">Studio</a></li>
     <li><a href="ui-design.html">UI design</a></li>
     <li><a href="writing-museum.html">Writing museum</a></li>
+    <li><a href="udgt.html">Teardowns</a></li>
     <li><a href="keys.html">Keys</a></li>
   </ul></nav>
 </div></header>
@@ -63,6 +64,14 @@
       <a class="go" href="writing-museum.html">What it does →</a>
       <a class="go" href="museum/web/explore.html">Read the library →</a>
       <a class="go" href="museum/web/index.html">Walk the museum →</a>
+    </article>
+    <article class="card">
+      <span class="tag">plugins/udgt/</span>
+      <h3>Teardowns (UDGT)</h3>
+      <p>Pulls a game's repository apart into a cross-linked dataset, chapters written with
+      the owner through short creative briefs, and an explorer page in the game's own look.
+      The first teardown is Who Did It.</p>
+      <a class="go" href="udgt.html">What it does →</a>
     </article>
   </div>
 
@@ -114,6 +123,7 @@ pip install -r studio/pipeline/requirements.txt</pre></li>
       <tr><td><code>studio/vault/</code></td><td>A second vault: one note per made thing, and the brand gates</td></tr>
       <tr><td><code>studio/pipeline/</code></td><td>The studio's spec, bookkeeper and note writer</td></tr>
       <tr><td><code>plugins/ui-design/</code></td><td>The UI design plugin, complete and self-contained</td></tr>
+      <tr><td><code>plugins/udgt/</code>, <code>teardowns/</code></td><td>The teardown plugin, and one folder per torn-down game: its profile, dataset, the owner's answers and the chapters</td></tr>
       <tr><td><code>.claude/skills/</code>, <code>.claude/agents/</code></td><td>The creative-writing and studio skills and agents. They load when this repo is your working folder</td></tr>
       <tr><td><code>docs/</code></td><td>These pages, and the key setup helper</td></tr>
       <tr><td><code>CLAUDE.md</code>, <code>INDEX.md</code></td><td>The repo's conventions, and a generated index of every tool, skill and agent</td></tr>

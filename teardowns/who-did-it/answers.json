@@ -1,0 +1,12 @@
+{
+ "answers": [
+  {"stage":"1","question":"Brief 1 (explorer look): how closely should the explorer copy Who Did It's menu screen?","answer":"Full menu clone (Recommended)","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"1","question":"The pixel fonts (Press Start 2P, Pixelify Sans) aren't loaded yet. How should the explorer get them?","answer":"Copy the game's font files (Recommended)","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"1","question":"How should a role or item record look in the Lobby view?","answer":"Like the in-game role card","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"1","question":"Which tab names fit the game's voice?","answer":"Game flow (current)","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"0","question":"Should the analysis be descriptive only, or also critical?","answer":"Describe, Compare, Critique","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"0","question":"Where should the Who Did It teardown be written?","answer":"it stays on ROSW but make it reachable whenever claude uses plugins pipelines to work on Who did it","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"0","question":"First creative brief: what should the explorer page feel like?","answer":"explore page mimics the application it toredown","date":"2026-10-23","asked_as":"chat"}
+ ],
+ "about": "The owner's answers to the teardown briefs, verbatim, in the order given. Appended by `udgt.py record`; never generated or edited."
+}

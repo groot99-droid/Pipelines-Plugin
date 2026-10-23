@@ -1,0 +1,12 @@
+{
+  "name": "udgt",
+  "version": "0.1.0",
+  "description": "UI, Dataset & Gameplay Teardown: pull a game's repository apart (design docs, decision log, datasets, code, design tokens, UI copy, git history, future plans) into a cross-linked dataset, written Describe/Compare/Critique chapters built with the owner through short creative briefs, and an explorer page dressed in the game's own look.",
+  "author": {
+    "name": "groot99-droid"
+  },
+  "homepage": "https://github.com/groot99-droid/Pipelines-Plugin/tree/main/plugins/udgt",
+  "repository": "https://github.com/groot99-droid/Pipelines-Plugin",
+  "license": "MIT",
+  "keywords": ["game-design", "teardown", "design-review", "documentation", "ui", "dataset", "gameplay"]
+}

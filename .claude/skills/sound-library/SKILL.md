@@ -23,6 +23,9 @@ when you report back.
 
 ## Put it where the project needs it
 
+For Who Did It, its teardown (`teardowns/who-did-it/`, the `udgt-consult` skill) says where sound sits
+in the game's design and what the owner said about it; read it before choosing.
+
 1. `python sound-library/library.py fetch --dry-run --id <id>...` shows what
    would be downloaded and from which zip. Then run it without `--dry-run`. It
    reads the recorded release of this repo through the public GitHub API (no

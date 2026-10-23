@@ -102,7 +102,8 @@ edit `state.json` by hand, and never work around a refusal.
    python studio/pipeline/studio_run.py facts <run-id>
    ```
 
-   Read every gate file it lists, in full. Resolve each needed constraint on the
+   Read every gate file it lists, in full. For a `who-did-it` run, the game's teardown
+   (`teardowns/who-did-it/`, queried with the `udgt-consult` skill) is context to read, never a gate. Resolve each needed constraint on the
    ladder in `studio/vault/CLAUDE.md` and write `attestation.md` in the shape the
    stage instructions give: one row for each constraint `facts` lists, in its
    words.

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UDGT · ROSW</title>
+<meta name="description" content="UDGT, the UI, Dataset and Gameplay Teardown plugin: a game's repository pulled apart into a dataset, chapters written with the owner, and an explorer page in the game's own look.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="top-inner">
+  <a class="brand" href="index.html">RO<span>SW</span></a>
+  <nav aria-label="Pages"><ul class="nav">
+    <li><a href="index.html">Overview</a></li>
+    <li><a href="creative-writing.html">Creative writing</a></li>
+    <li><a href="studio.html">Studio</a></li>
+    <li><a href="ui-design.html">UI design</a></li>
+    <li><a href="writing-museum.html">Writing museum</a></li>
+    <li><a href="udgt.html" aria-current="page">Teardowns</a></li>
+    <li><a href="keys.html">Keys</a></li>
+  </ul></nav>
+</div></header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">plugins/udgt/ · teardowns/</p>
+    <h1>UDGT: UI, Dataset &amp; Gameplay Teardown</h1>
+    <p class="lede">A plugin that takes a game's repository apart. It records every design choice:
+    what it is, how it was made, how it changed and what is planned next. It covers the frontend,
+    the backend, the datasets, the gameplay, the world bible and the art pipeline. The owner takes
+    part through a short creative brief before each chapter.</p>
+  </section>
+
+  <p class="toc">On this page: <a href="#what">What it makes</a> · <a href="#stages">Stages and briefs</a> ·
+  <a href="#look">The explorer</a> · <a href="#wdi">Who Did It</a> · <a href="#use">Using it</a> ·
+  <a href="#limits">What it does not do</a></p>
+
+  <h2 id="what">What it makes</h2>
+  <ul>
+    <li><strong>A dataset</strong>, <code>teardown.json</code>: a graph of the game's numbered document
+    sections, decisions and open questions, data records, code areas and ordered anchors (a phase
+    machine, a tick order), protocol messages, design tokens, UI copy, screens, pull requests,
+    commits and stated plans, linked by the citations between them.</li>
+    <li><strong>Chapters</strong>, one per stage. Each choice is written up in three parts:
+    <em>Describe</em> (with citations), <em>Compare</em> (with genre references) and
+    <em>Critique</em>. Compare and Critique are labelled as Claude's analysis.</li>
+    <li><strong>An explorer page</strong> that wears the game's own look.</li>
+  </ul>
+
+  <h2 id="stages">Stages and briefs</h2>
+  <p>A profile names the stages, for example: overview, UI, datasets, gameplay, backend, world,
+  art and audio, history, future. Before each chapter, <code>udgt.py brief</code> gathers the stage's
+  prompts and the gaps the scan found: open items, unresolved questions, and plans a later document
+  withdrew. Claude asks the owner two to four questions, and <code>udgt.py record</code> keeps the
+  answers verbatim in <code>answers.json</code>. Nothing else writes that file, and no answer is ever
+  edited.</p>
+
+  <h2 id="look">The explorer</h2>
+  <p><code>udgt.py build</code> themes the page from the game's design tokens and copies the
+  font files the profile names. The title view is laid out like the game's main menu, and records
+  are dealt as the game's cards. The page reads only the teardown's own JSON.</p>
+
+  <h2 id="wdi">Who Did It</h2>
+  <p><code>teardowns/who-did-it/</code> is the first teardown. It reads a sibling checkout of the
+  game and never writes into it. The game's sessions reach it through the plugin's
+  <code>udgt-consult</code> skill, and so do the render, sound and studio pipelines here when they
+  work on Who Did It.</p>
+
+  <h2 id="use">Using it</h2>
+  <pre><code>U="python plugins/udgt/engine/udgt.py"; P=teardowns/who-did-it/profile.json
+$U scan  --profile $P        # read the game (sibling checkout, or --game)
+$U check --profile $P        # broken citations, stale scan, chapter links; writes nothing
+$U brief 3 --profile $P      # a stage's questions for the owner
+$U build --profile $P        # then: python -m http.server --directory teardowns/who-did-it 8791
+python -m unittest discover -s plugins/udgt/tests</code></pre>
+  <p>Install it elsewhere with <code>/plugin install udgt@rosw</code>.</p>
+
+  <h2 id="limits">What it does not do</h2>
+  <ul>
+    <li>It never writes into the game's repository, and it runs none of the game's code.</li>
+    <li>It never paraphrases the owner, and it never presents its own critique as the owner's.</li>
+    <li>It copies nothing from the game except token values and the font files the profile names.</li>
+  </ul>
+</main>
+
+<footer>ROSW · <a href="https://github.com/groot99-droid/Pipelines-Plugin">Source on GitHub</a></footer>
+</body>
+</html>

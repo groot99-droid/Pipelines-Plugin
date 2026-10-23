@@ -144,3 +144,7 @@ desktop.ini
 # is versioned. The WAVs themselves are not: a batch is hundreds of MB. They
 # live on GitHub Releases of this repo and `library.py fetch` brings them down.
 sound-library/files/
+
+# ── Teardowns (udgt) ─────────────────────────────────────────────────────────
+# `udgt.py build` regenerates a teardown's explorer/ (page, theme, copied fonts).
+teardowns/*/explorer/

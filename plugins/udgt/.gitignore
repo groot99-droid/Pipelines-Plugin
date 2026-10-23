@@ -1,0 +1,6 @@
+# udgt plugin -- ignore rules that travel with the plugin.
+.env
+.env.*
+__pycache__/
+*.py[cod]
+*.part

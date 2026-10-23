@@ -1,0 +1,6 @@
+udgt
+Copyright (c) 2026 groot99-droid. MIT licence (see LICENSE).
+
+The plugin bundles no third-party code or assets. `udgt.py build` copies into a teardown folder only
+the design-token values and the font files a game's profile names; their licences are the game's and
+the fonts' own, and a teardown records them in its README.
