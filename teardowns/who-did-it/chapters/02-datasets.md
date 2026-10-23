@@ -49,8 +49,8 @@ guessing. Two weak spots remain:
 
 ## Every number is a guess, for now
 
-**Describe.** You answered that every number in `balance.json` was set by feel. Nothing in the repo
-contradicts that.
+**Describe.** You answered that every number in `balance.json` was set by feel. That feel comes from
+watching five playtests (stage 8), but none of them is written down.
 - No balance value cites a playtest. `docs/PLAYTESTS/` holds a run sheet, a form, a scorecard and an
   unfilled M2 stub (`2026-xx-xx-m2.md`).
 - `tools/auto/` can already run all-NPC matches. It has a `checks/` runner and a `report/` writer. No report
@@ -155,7 +155,8 @@ role transformations (the Wild Child, the Doppelgänger) as expansion content, n
   Chapter 0 asked whether "does this let information cross a door?" should be a review question. `events.json`
   is that question in data form: its `spreadScenes` is the leak. Make 0 the default and justify every row
   above it.
-- **Order.** You chose round 8, and the M3 playtest is still open. That is your call. If round 8 has room for
+- **Order.** You chose round 8, and that is your call. The playtests you have run are not written down,
+  so round 8's sessions cannot see what they showed. If round 8 has room for
   only one of the three, `laws.json` is the safest to start with. It touches only the meeting, which is
   already the climax pillar, and not space.
 
@@ -183,8 +184,8 @@ role transformations (the Wild Child, the Doppelgänger) as expansion content, n
 ## Open threads
 
 - Add a `basis` field (feel, auto, playtest) to the key balance numbers?
-- Which comes first: an auto-runner sweep of `byCount` (match length and Cabal win rate by player count), or
-  a friends' playtest?
+- An auto-runner sweep of `byCount` (match length and Cabal win rate by player count), next to written-up
+  playtests?
 - A card-text drift test now, templated card text when the round-8 roles land?
 - A "how to add a role" page before the first friend's pull request?
 - In round 8, which of evolutions, laws and events comes first? And should `events.json` default to

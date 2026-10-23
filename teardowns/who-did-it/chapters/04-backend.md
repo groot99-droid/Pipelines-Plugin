@@ -146,8 +146,8 @@ a function of kill cooldown, and how many clues survive to a meeting.
 - The report answers the soak's own questions, with your new targets: a median of 20 to 25 minutes
   (chapter 3) and at most one third reaching the Final Night.
 - Each report becomes the `basis: auto:<date>` that chapter 2 proposes for the numbers in `balance.json`.
-- Know the limit. NPCs do not deceive, so the lab measures pace and pressure, never fun or fairness. The
-  M3 playtest still decides those.
+- Know the limit. NPCs do not deceive, so the lab measures pace and pressure, never fun or fairness. Your
+  playtests decide those.
 
 ## Smaller findings
 
@@ -174,4 +174,4 @@ a function of kill cooldown, and how many clues survive to a meeting.
 - One swarm run of two rooms of ten bots, with its `tickP95` written into ARCHITECTURE 5.10.
 - A headless `sweep` command with dated reports, as the source of `basis: auto`.
 - Add the seed and the build to `MatchLog` so a reported match can be replayed.
-- Does anti-cheat ship with open parties (R7b), or before the first friends' playtest?
+- Does anti-cheat ship with open parties (R7b), or before the next playtest with strangers?

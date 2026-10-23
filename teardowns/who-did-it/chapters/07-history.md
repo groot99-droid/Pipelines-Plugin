@@ -38,8 +38,9 @@ in seams files per round (`docs/round6/seams.md`, `docs/round7/...`), and in con
 
 **Critique** (Claude's analysis). The process scaled well in one respect: the code holds. Tests, frozen ids
 and the queued-actions rule survived seven rounds of parallel edits. It scaled badly in another. The size of
-each round grew faster than anyone could *play* the result. No round ended with a playtest (chapter 0), so
-each one built on assumptions the one before had not tested. Rounds 6 and 7 were the largest and came after
+each round grew faster than its playtests could be written down. You ran five playtests and learned from
+watching them (chapter 8), but none of them is in the repo (chapter 0). So each round's sessions built
+without seeing what the last playtest showed. Rounds 6 and 7 were the largest and came after
 the longest pause (10-18 to 10-22). That is the point where your answer below starts.
 
 ## The quick mode: directions misunderstood
@@ -103,14 +104,14 @@ the core, what is later, what is never.
 **Critique** (Claude's analysis). Your answer matches what chapters 0, 2 and 3 found from the code:
 - the second layer arrived before the first was played;
 - the round-8 stubs were built because the schemas were ready, not because play asked for them;
-- the match grew from the GDD's 12 to 18 minutes to 20 to 25 minutes without a single playtest.
+- the match grew from the GDD's 12 to 18 minutes to 20 to 25 minutes, and no recorded playtest shows it.
 
 Doing it differently would look like this:
 - **Round 6 as pre-production.** One session reads the Bible, sorts it into *core / round 8 / later*, and asks
   you the brief questions. Then a small round builds the core.
-- **A playtest gate between rounds.** The M3 gate is called "fun or stop" ([[milestone:M3]]). Make it a real
-  gate: no round of new systems starts until a friends' match has been played and its form filled in
-  (`docs/PLAYTESTS/`).
+- **A playtest record between rounds.** The M3 gate is called "fun or stop" ([[milestone:M3]]). You already
+  play between rounds. Make the gate the *write-up*: no round of new systems starts until the last playtest's
+  form is in `docs/PLAYTESTS/`, so the sessions read what you saw.
 
 ## The decision log as a record
 
@@ -137,7 +138,7 @@ your own words, to rows that create a feature.
 
 - An intent brief ("feel, like, never") at the top of each round's contract, starting with `docs/round8/` and
   Port-au-Levain.
-- Make the M3 "fun or stop" gate a real gate between rounds.
+- Make the M3 gate a write-up gate: the last playtest's form is in `docs/PLAYTESTS/` before a round starts.
 - An intent column in DECISIONS for rows that create a feature.
 - Round 8 opens with a pre-production pass over the Bible: core, round 8, later, never.
 - Parallel sessions: keep, shrink, or pause? This is still open.

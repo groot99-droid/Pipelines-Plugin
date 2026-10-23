@@ -86,10 +86,11 @@ play, where social reading outweighs the systems. Dread Hunger and Project Winte
 other side: survival systems that eat the attention deduction needs.
 
 **Critique** (Claude's analysis).
-- **No playtest is on record yet.** `docs/PLAYTESTS/` holds a run sheet, a form, a scorecard and one
-  unfilled M2 stub. The roadmap's M3 gate is called "fun or stop" ([[milestone:M3]]), but there is no
-  entry saying it was passed. Seven rounds of systems now rest on an untested core. For a Friday-night
-  game this is the single largest risk.
+- **The playtests are not written down.** You have run five playtests with friends (your stage 8 answer,
+  chapter 8). But `docs/PLAYTESTS/` holds only a run sheet, a form, a scorecard and one unfilled M2 stub,
+  and the roadmap's M3 gate, "fun or stop" ([[milestone:M3]]), has no entry. What you learned from watching
+  people play reaches the building sessions only through you. *(Corrected after the stage 8 brief: this line
+  first said no playtest had happened, because the repo records none.)*
 - Rounds 5 to 7 added resources, crafting, mobs, quests, hunger, a train, vendettas and an economy
   plan. Each is defensible on its own. Together they compete with the 20-second readability pillar and
   with the deduction. The Bible's later Books (I to VI) stage even more ([[sec:round6/owner-brief:BOOK I]]).
@@ -121,6 +122,6 @@ to pitch the game. Each later chapter ends with its own open threads. The scan's
 
 - Should GDD §1's pillar table be rewritten for public looks (A49), with deduction as "who is really who,
   and who was where"?
-- When will the first friends' playtest (the M3 "fun or stop") happen, and does round 8 wait for it?
+- Write the five playtests into `docs/PLAYTESTS/` (one short form each), and tick the M3 gate?
 - Do open parties and profiles stay, or does the game narrow back to private links for friends?
 - Should "does this let information cross a door?" become a review question for every round-8/9 system?
