@@ -6,7 +6,11 @@
   {"stage":"1","question":"Which tab names fit the game's voice?","answer":"Game flow (current)","date":"2026-10-23","asked_as":"chat"},
   {"stage":"0","question":"Should the analysis be descriptive only, or also critical?","answer":"Describe, Compare, Critique","date":"2026-10-23","asked_as":"chat"},
   {"stage":"0","question":"Where should the Who Did It teardown be written?","answer":"it stays on ROSW but make it reachable whenever claude uses plugins pipelines to work on Who did it","date":"2026-10-23","asked_as":"chat"},
-  {"stage":"0","question":"First creative brief: what should the explorer page feel like?","answer":"explore page mimics the application it toredown","date":"2026-10-23","asked_as":"chat"}
+  {"stage":"0","question":"First creative brief: what should the explorer page feel like?","answer":"explore page mimics the application it toredown","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"0","question":"GDD §1 names four pillars. If everything else had to be cut, which one would you defend?","answer":"Space is information","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"0","question":"In one line: what should the table feel the moment a body is found?","answer":"Dread, then suspicion","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"0","question":"Who is the game for first?","answer":"My friends, Friday night","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"0","question":"What should this teardown help you decide next?","answer":"All of those","date":"2026-10-23","asked_as":"chat"}
  ],
  "about": "The owner's answers to the teardown briefs, verbatim, in the order given. Appended by `udgt.py record`; never generated or edited."
 }
