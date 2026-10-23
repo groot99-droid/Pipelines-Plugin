@@ -368,7 +368,7 @@ session; its [README](sound-library/README.md) says how to add a batch.
 ```powershell
 python sound-library/library.py search "boat horn"                          # rank the catalog
 python sound-library/library.py fetch --id boats/deep-boat-horn             # from the release
-python sound-library/library.py ingest Boats_Pt1.zip --release sfx-2026-10  # a new batch
+python sound-library/library.py ingest Boats_Pt1.zip --release SFX_2026_01  # a new batch
 python -m unittest discover -s sound-library/tests
 ```
 

@@ -225,9 +225,10 @@ panels cited by vault path and lines.
   push to `main`, rebuilding the museum from the vault first. The site is
   `https://groot99-droid.github.io/Pipelines-Plugin/`; the museum's pages use only
   relative paths, so they must keep working under that `museum/` prefix. Nothing else
-  in the repo is published by it. The workflow's first step sets the repository's Pages
-  source to GitHub Actions: a "deploy from a branch" source publishes `docs/` alone on
-  the same push, after it, and drops `museum/`.
+  in the repo is published by it. The workflow tries to set the repository's Pages
+  source to GitHub Actions, but its token cannot (HTTP 403), so the owner sets it once in
+  Settings > Pages; until then the workflow warns and skips the deploy, and a "deploy from
+  a branch" source publishes `docs/` alone and drops `museum/`.
 - Tests: `python -m unittest discover -s writing-museum/build/tests`. They run on a
   temporary vault, and read the real one only to check the ten-work path.
 - It reads `creative-writing/vault/` and never writes it. The 63 works stay verbatim;
