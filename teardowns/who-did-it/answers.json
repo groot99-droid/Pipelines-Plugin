@@ -10,7 +10,11 @@
   {"stage":"0","question":"GDD §1 names four pillars. If everything else had to be cut, which one would you defend?","answer":"Space is information","date":"2026-10-23","asked_as":"chat"},
   {"stage":"0","question":"In one line: what should the table feel the moment a body is found?","answer":"Dread, then suspicion","date":"2026-10-23","asked_as":"chat"},
   {"stage":"0","question":"Who is the game for first?","answer":"My friends, Friday night","date":"2026-10-23","asked_as":"chat"},
-  {"stage":"0","question":"What should this teardown help you decide next?","answer":"All of those","date":"2026-10-23","asked_as":"chat"}
+  {"stage":"0","question":"What should this teardown help you decide next?","answer":"All of those","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"1","question":"The round-7 re-skin (A103) moved menus to night glass + pixel type, but the role card, HUD chips and toasts are still bone 'paper' with ink frames. Is that two-material split intended?","answer":"Yes: paper = what you hold (Recommended)","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"1","question":"Press Start 2P is very hard to read below ~12px and on phones. Where should pixel type stop, given the 'Readable in 20 seconds' pillar?","answer":"Pixel on menus, not in matches","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"1","question":"Space is your pillar. How much should the UI tell a player about places they are NOT in?","answer":"A little more (current)","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"1","question":"Phone or desktop for your Friday-night friends?","answer":"Equal","date":"2026-10-23","asked_as":"chat"}
  ],
  "about": "The owner's answers to the teardown briefs, verbatim, in the order given. Appended by `udgt.py record`; never generated or edited."
 }

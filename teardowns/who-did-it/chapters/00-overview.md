@@ -101,8 +101,9 @@ other side: survival systems that eat the attention deduction needs.
 You asked for all four: what to cut, what to build in round 8, where docs and code disagree, and how
 to pitch the game. Each later chapter ends with its own open threads. The scan's first findings:
 
-- **Drift.** Two citations point at sections that do not exist. UI 14.28 is cited by the round-7 log.
-  WORLD 4.11 (Port-au-Levain) is planned but not yet written. GDD §1's pillar text predates A49.
+- **Drift.** One citation points at a section that does not exist yet: WORLD 4.11 (Port-au-Levain),
+  which is planned in [[sec:round6/bible-seams:2.2]]. A second miss, UI 14.28, was filled by the latest
+  round-7 merge between two scans. GDD §1's pillar text predates A49.
 - **Withdrawn plans.** The quick mode is removed by A115, but `apps/server/src/sim/Onub.ts` (216 lines)
   and `Conductor.ts` (170) still stand while 7J's removal lands. GDD 3.11 still describes the mode until
   then.
