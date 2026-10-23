@@ -172,8 +172,48 @@ def mp4_info(data):
             "bit_depth": info.get("bit_depth"), "duration_s": info["duration_s"]}
 
 
+# ── MP3 ──────────────────────────────────────────────────────────────────────
+
+_MP3_RATES = {3: (44100, 48000, 32000), 2: (22050, 24000, 16000), 0: (11025, 12000, 8000)}
+_MP3_KBPS = {1: (0, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320),
+             2: (0, 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160)}
+
+
+def mp3_info(data):
+    """Channels, sample rate and duration of an MPEG Layer III file, from its first
+    frame header and its Xing/Info frame count, or from its bitrate when it has
+    none (constant bitrate). Anything that is not one gives None."""
+    pos = 0
+    if data[:3] == b"ID3" and len(data) >= 10:
+        size = data[6] << 21 | data[7] << 14 | data[8] << 7 | data[9]
+        pos = 10 + size + (10 if data[5] & 0x10 else 0)
+    end = min(len(data) - 4, pos + 65536)
+    while pos < end:
+        if data[pos] == 0xFF and data[pos + 1] & 0xE0 == 0xE0:
+            h = struct.unpack(">I", data[pos:pos + 4])[0]
+            version, layer = (h >> 19) & 3, (h >> 17) & 3
+            bitrate, rate_i = (h >> 12) & 15, (h >> 10) & 3
+            if version != 1 and layer == 1 and 0 < bitrate < 15 and rate_i < 3:
+                break
+        pos += 1
+    else:
+        return None
+    rate = _MP3_RATES[version][rate_i]
+    kbps = _MP3_KBPS[1 if version == 3 else 2][bitrate]
+    channels = 1 if (h >> 6) & 3 == 3 else 2
+    per_frame = 1152 if version == 3 else 576
+    side = (32 if channels == 2 else 17) if version == 3 else (17 if channels == 2 else 9)
+    tag = pos + 4 + side
+    if data[tag:tag + 4] in (b"Xing", b"Info") and struct.unpack(">I", data[tag + 4:tag + 8])[0] & 1:
+        frames = struct.unpack(">I", data[tag + 8:tag + 12])[0]
+        seconds = frames * per_frame / rate
+    else:
+        seconds = (len(data) - pos) * 8 / (kbps * 1000)
+    return {"channels": channels, "sample_rate": rate, "bit_depth": None, "duration_s": round(seconds, 3)}
+
+
 def audio_info(data):
-    return wav_info(data) or mp4_info(data)
+    return wav_info(data) or mp4_info(data) or mp3_info(data)
 
 
 # ── catalog ──────────────────────────────────────────────────────────────────
@@ -262,6 +302,9 @@ def ingest(sources, category=None, release=None, replace=False, catalog=CATALOG,
                     same += 1
                     if release and not old["source"].get("release"):
                         old["source"] = entry["source"]
+                    if old.get("duration_s") is None and entry["duration_s"] is not None:
+                        for key in ("duration_s", "sample_rate", "channels", "bit_depth"):
+                            old[key] = entry[key]
                     _place(blob, local_path(old, files))
                     continue
                 if not replace:
