@@ -169,7 +169,7 @@ item it adds is a clue or a red herring with rules already implied:
   exclusive rule yet.
 - **Port-au-Levain** moved to round 8 with its map ([[dec:A105]]).
 
-The lore's Codex gives each settlement its own clock, verdict, predator and identity prop (Codex:58-88). But
+The lore's Codex gives each settlement its own clock, currency, law and identity prop (Codex:58-88). But
 the Ledger also says the three towns "keep three sets of books, and they come to the same column totals"
 (Ledger:301-317). They mirror each other on purpose.
 
@@ -179,8 +179,8 @@ Dread Hunger's two maps and Project Winter's seasons change resources, threats a
 differently", and it costs a separate balance pass per map.
 
 **Critique** (Claude's analysis). "Play differently" multiplies the balance work from chapters 2 and 4 by the
-number of maps. The lore suggests a way to keep that cost bounded. Mirror the *structure*, and vary the four
-things the Codex names:
+number of maps. The lore suggests a way to keep that cost bounded. Mirror the *structure*, and vary four things
+the Codex and Book V name:
 
 | | Hollowmere | Blackpine | Port-au-Levain |
 |---|---|---|---|
