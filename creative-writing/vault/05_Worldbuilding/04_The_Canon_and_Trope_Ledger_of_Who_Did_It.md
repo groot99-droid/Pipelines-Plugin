@@ -374,16 +374,16 @@ Entered. Ruled. Not believed.
 
 | Trope | Family | Where it is owed (map / role / place) | Settled by |
 |---|---|---|---|
-| The locked room | whodunit / locked-room | HollowMere, Vane Manor study door (`manor_upper`); study keys in Hale Barn and the Undercroft | |
+| The locked room | whodunit / locked-room | HollowMere, Vane Manor study door (`manor_upper`); study keys in Hale Barn and the Undercroft | [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |
 | The stopped clock | whodunit / locked-room | Vane Manor hall (`manor_hall`), clock at 11:47 | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |
-| Footprints that don't add up | whodunit / locked-room | muddy bootprints on the manor carpet; Height trait | |
-| The thread on the nail | whodunit / locked-room | forensics: Scarf (thread), Hat (felt) | |
-| The cleaned-up crime scene | whodunit / locked-room | Killer card: "clean one clue, wash at the well" | |
+| Footprints that don't add up | whodunit / locked-room | muddy bootprints on the manor carpet; Height trait | [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]]; [[03_Stories/11_Eleven_Forty_Seven|Eleven Forty-Seven]] |
+| The thread on the nail | whodunit / locked-room | forensics: Scarf (thread), Hat (felt) | [[05_Worldbuilding/10_The_HollowMere_Gazette_Morning_Edition|The HollowMere Gazette]] |
+| The cleaned-up crime scene | whodunit / locked-room | Killer card: "clean one clue, wash at the well" | [[03_Stories/12_What_the_Well_Remembers|What the Well Remembers]]; [[07_Poems_and_Prose/22_The_Daybook_of_Crumb_s_Ovens|The Daybook of Crumb's Ovens]] |
 | The reading of the will | whodunit / locked-room | Vane's will: "whoever remains when the last lantern goes out" | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]]; [[05_Worldbuilding/04_The_Canon_and_Trope_Ledger_of_Who_Did_It|Canon and Trope Ledger]] |
 | The poisoned cup | whodunit / locked-room | caption "Something in the cup was not sugar"; Herbalist | |
-| The empty slot on the shelf | whodunit / locked-room | Mallory Apothecary, "NOT FOR SALE" shelf | |
+| The empty slot on the shelf | whodunit / locked-room | Mallory Apothecary, "NOT FOR SALE" shelf | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]]; [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |
 | Gathering the suspects | whodunit / locked-room | the Town Bell; the Tribunal | |
-| The case file and the stamp | whodunit / locked-room | Detective: "Collect, inspect, cross-reference." | |
+| The case file and the stamp | whodunit / locked-room | Detective: "Collect, inspect, cross-reference." | [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |
 | The alibi witness | whodunit / locked-room | Accomplice: "You never hold the knife, only the alibi." | |
 | Murder at the dinner table | whodunit / locked-room | Crumb's Ovens wake table, ten plates | |
 | The loudest accuser | hidden-role / social-deduction | Killer: "be the loudest voice asking who did it" | |
@@ -391,11 +391,11 @@ Entered. Ruled. Not believed.
 | Skin-walking the victim | hidden-role / social-deduction | Zealot in the Vicar's robes; Timber-Wolf against the Forest Chaplain | |
 | The jester who wants to hang | hidden-role / social-deduction | Drifter: "You want to hang." | |
 | The bodyguard at one door | hidden-role / social-deduction | Watchman | |
-| One bottle saves, one ends | hidden-role / social-deduction | Herbalist | |
+| One bottle saves, one ends | hidden-role / social-deduction | Herbalist | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]] |
 | The heir to the knife | hidden-role / social-deduction | Heir (the Accomplice who inherits the Knife) | |
 | Taking one with you | hidden-role / social-deduction | Gamekeeper: "you will not go alone" | |
 | The seer | hidden-role / social-deduction | Medium (seance chalk) | |
-| The innocent who sees everything | hidden-role / social-deduction | Child: "Hide, watch, remember." | |
+| The innocent who sees everything | hidden-role / social-deduction | Child: "Hide, watch, remember." | [[03_Stories/12_What_the_Well_Remembers|What the Well Remembers]] |
 | The town vote | hidden-role / social-deduction | caption "The town has spoken." | |
 | Secret recruitment | hidden-role / social-deduction | the Vicar's conversions; Zealot's Dark Positions | |
 | Identity at dawn | hidden-role / social-deduction | role card / Wake Loaf platter / tally log | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |
@@ -403,14 +403,14 @@ Entered. Ruled. Not believed.
 | The stranger off the train | frontier western | the Daily Train; Stowaway | [[06_Songs/06_Ballad_of_the_Iron_Beast|Ballad of the Iron Beast]]; [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |
 | The hanging tree | frontier western | Fenwood hanging oak; Gallows Wood | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |
 | One shot in the square | frontier western | caption "One shot, and the whole square goes quiet."; six-shooter, .45 | |
-| The sawed-off behind the bar | frontier western | Drowned Lantern; Bartender → Vigilante | |
+| The sawed-off behind the bar | frontier western | Drowned Lantern; Bartender → Vigilante | [[05_Worldbuilding/11_Mrs_Grieves_s_Tab_Book|Mrs Grieves's Tab Book]] |
 | The tin star | frontier western | Police Officer | |
 | Don't miss the last train | frontier western | the train as the only exit; Hitman extraction | [[06_Songs/06_Ballad_of_the_Iron_Beast|Ballad of the Iron Beast]] |
-| The wanted notice | frontier western | overworld notice board; HollowMere Gazette | |
+| The wanted notice | frontier western | overworld notice board; HollowMere Gazette | [[05_Worldbuilding/10_The_HollowMere_Gazette_Morning_Edition|The HollowMere Gazette]] |
 | The circuit judge rides in | frontier western | BlackPine Circuit Judge | |
 | Paid in scrip | company town / labour | Company Scrip; Syndicate scrip | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |
 | Owing your soul to the company store | company town / labour | Clerk's Midday Rent; debtors' prison; BlackPine Company Store | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |
-| The strike | company town / labour | Bartender → Union Boss; NPC mood Rioting | |
+| The strike | company town / labour | Bartender → Union Boss; NPC mood Rioting | [[05_Worldbuilding/11_Mrs_Grieves_s_Tab_Book|Mrs Grieves's Tab Book]] |
 | The Pinkertons come | company town / labour | Cornelius Thorne's arrival | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]] |
 | The soapbox agitator | company town / labour | Activist, Public Unrest at the bell | |
 | Dynamite on the tracks | company town / labour | Activist | |
@@ -423,19 +423,19 @@ Entered. Ruled. Not believed.
 | The portrait turned to the wall | gothic | `widow_parlour` | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]]; [[05_Worldbuilding/04_The_Canon_and_Trope_Ledger_of_Who_Did_It|Canon and Trope Ledger]] |
 | The house of the dead lord | gothic | Vane Manor | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |
 | The letter that should not be opened | gothic | parlour letter box; Postmaster steaming envelopes | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]] |
-| The gravestone with tomorrow's date | gothic | HollowMere prop | |
+| The gravestone with tomorrow's date | gothic | HollowMere prop | [[05_Worldbuilding/10_The_HollowMere_Gazette_Morning_Edition|The HollowMere Gazette]]; [[05_Worldbuilding/11_Mrs_Grieves_s_Tab_Book|Mrs Grieves's Tab Book]]; [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |
 | The light that should be out | gothic | drowned lantern in the Fenwood; dead man's lamp at BlackPine | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |
-| The single candle | gothic | `widow_bedroom` | |
+| The single candle | gothic | `widow_bedroom` | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]] |
 | The cult in the village | folk-horror / cult | Zealot; Minion, Mob Boss, Cultist, High Priest | |
 | Sigils on the doors | folk-horror / cult | Cultist, ash-and-blood on five buildings | |
-| The bell tolls backward | folk-horror / cult | the Dark Mass | |
+| The bell tolls backward | folk-horror / cult | the Dark Mass | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]] |
 | The crimson sky | folk-horror / cult | the Dark Mass | |
 | The wise woman in the woods | folk-horror / cult | Mother Moll's charcoal hut | |
-| The scarecrow that is watching | folk-horror / cult | scarecrow in a trench coat, the square | |
+| The scarecrow that is watching | folk-horror / cult | scarecrow in a trench coat, the square | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]]; [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |
 | Bread for the dead | folk-horror / cult | wake loaves, three for the dead, wax-sealed tokens | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |
 | The heretic sect | folk-horror / cult | Port-au-Levain Leaven-Rot; Spore-Caller, Groat-Master, Cellar-Ghoul, Arch-Fermenter | |
-| The baker up before dawn | cosy-bakery | Baker: "Up before anyone, flour to the elbows." | |
-| The bakery as rumour mill | cosy-bakery | Rumor Loaves | |
+| The baker up before dawn | cosy-bakery | Baker: "Up before anyone, flour to the elbows." | [[07_Poems_and_Prose/22_The_Daybook_of_Crumb_s_Ovens|The Daybook of Crumb's Ovens]] |
+| The bakery as rumour mill | cosy-bakery | Rumor Loaves | [[07_Poems_and_Prose/22_The_Daybook_of_Crumb_s_Ovens|The Daybook of Crumb's Ovens]]; [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]] |
 | The sweet that hides poison | cosy-bakery | Black-Crust Contract, nightshade glaze | |
 | The heirloom starter | cosy-bakery | the Mother of Mothers, Subterranean Yeast Vault | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]] |
 | The kitchen brigade | cosy-bakery | the ten kitchen rooms; old kitchen roles folded into guild lore | |
@@ -477,7 +477,7 @@ Entered. Ruled. Not believed.
 | Fined into ruin | courtroom | Scrip Forfeiture; Guild Fine | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |
 | The vault job | heist | Company Bank and Vault | |
 | Lifting the chapel plate | heist | Bandit at St Brannock's | |
-| The calling-card tip | heist | Bandit's gold coin at the bakery | |
+| The calling-card tip | heist | Bandit's gold coin at the bakery | [[05_Worldbuilding/10_The_HollowMere_Gazette_Morning_Edition|The HollowMere Gazette]]; [[07_Poems_and_Prose/22_The_Daybook_of_Crumb_s_Ovens|The Daybook of Crumb's Ovens]] |
 | The swap | heist | loaf swaps (Smuggler-Blackguard); log swaps (Company Enforcer) | |
 | Heirloom theft | heist | Thief | |
 | Vengeance tenfold | revenge | the Ascended Vicar | |
@@ -490,22 +490,22 @@ Entered. Ruled. Not believed.
 | The martyr returns wrong | religious horror | Ascended Vicar's pillar of light and iron crosier | |
 | The altar below | religious horror | Deep Cave Altar, Flooded Gallery | |
 | The body in the lead coffin | religious horror | Undertaker → Grave Robber | |
-| Wolves that fear the light | creature feature | mere-wolves; Lamplighter | |
-| Will-o'-the-wisp | creature feature | bog-wisps | |
+| Wolves that fear the light | creature feature | mere-wolves; Lamplighter | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]] |
+| Will-o'-the-wisp | creature feature | bog-wisps | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]] |
 | The Beast in the cave | creature feature | the Beast, woken by mere-rot | |
 | The werewolf pack | creature feature | Timber-Wolf; Timber-Stalker, Pit-Fiend, Den-Keeper, Alpha-Born; the Blood-Moon Howl | |
 | Things in the tunnels | creature feature | Tunnel Crawlers | |
-| The pelt on the door | creature feature | Hale Barn | |
-| The butler did it (tired, to subvert) | tired / subverted | Butler: "You know every door in Hollowmere." | |
+| The pelt on the door | creature feature | Hale Barn | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]]; [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |
+| The butler did it (tired, to subvert) | tired / subverted | Butler: "You know every door in Hollowmere." | [[03_Stories/11_Eleven_Forty_Seven|Eleven Forty-Seven]] |
 | It was all a dream (tired) | tired / subverted | the gravestone with tomorrow's date; the bell tolling backward | |
 | The chosen one (tired) | tired / subverted | the will's "whoever remains" | |
 | The last-minute confession (tired) | tired / subverted | Vicar: "Everyone ... confesses to you" | |
 | The evil twin (tired) | tired / subverted | the cross-map mirroring | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |
-| The detective did it (tired) | tired / subverted | Detective; Camp Investigator; Inquisitor | |
+| The detective did it (tired) | tired / subverted | Detective; Camp Investigator; Inquisitor | [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |
 | The dog that didn't bark (tired) | tired / subverted | guard dogs; the goat in Hale Barn | |
 | The narrator did it (tired) | tired / subverted | this ledger's clerk | [[05_Worldbuilding/04_The_Canon_and_Trope_Ledger_of_Who_Did_It|Canon and Trope Ledger]] |
 | The dying message (tired) | tired / subverted | the Vicar's last words | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |
-| The red herring (tired) | tired / subverted | Fisher; the Rusty/Drowned Lantern name | |
+| The red herring (tired) | tired / subverted | Fisher; the Rusty/Drowned Lantern name | [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |
 | The cavalry arrives (deus ex machina, tired) | tired / subverted | the Baron by train | |
 | The doctor who poisons (tired) | tired / subverted | Doc Mallory; Company Doctor | |
 

@@ -1,5 +1,5 @@
 {
- "built": "2026-10-23T15:34:25Z",
+ "built": "2026-10-23T16:59:37Z",
  "source": "creative-writing/vault",
  "folders": [
   {
@@ -6242,6 +6242,674 @@
    ]
   },
   {
+   "slug": "eleven-forty-seven",
+   "path": "03_Stories/11_Eleven_Forty_Seven.md",
+   "title": "Eleven Forty-Seven",
+   "folder": "03_Stories",
+   "type": "story",
+   "mode": "horror-prose",
+   "genre": [
+    "frontier-gothic",
+    "horror",
+    "haunted-house"
+   ],
+   "status": "draft",
+   "pov": "third-person close (the Butler)",
+   "tense": "past",
+   "themes": [
+    "service",
+    "the-will",
+    "time",
+    "complicity",
+    "the-house"
+   ],
+   "words": 1660,
+   "blurb": "the night after the will is read, Horace the Butler walks Vane Manor's last round with thirty-one keys and his day-book, and each wrong thing (the clock, the safe, the bootprints, the crepe, three study keys) undoes his excuse for the last, until at 11:47 the day-book is already written in his hand.",
+   "scene": null,
+   "passages": [
+    {
+     "n": 1,
+     "heading": "Eleven Forty-Seven",
+     "lines": [
+      18,
+      18
+     ],
+     "words": 15,
+     "text": "In the hall of Vane Manor it was eleven forty-seven, and it always had been.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 2,
+     "heading": "Front door, barred. Hall, dark. Clock, as ever.",
+     "lines": [
+      24,
+      30
+     ],
+     "words": 167,
+     "text": "Horace wrote the line before he walked it. He had kept the day-book that way for twenty-two years: write the round down, then go and make it true. He saw no reason for a will to change that.\n\nThe last mourner had gone at half past nine, with her wake loaf wrapped in her shawl. Horace held the door for her and bowed, and she did not look at him. Then he barred it. He left the day-book open on the hall table, as he always did, so the ink could dry while he walked.\n\nHe carried the lamp in his left hand and the keyring in his right. He counted the keys the way he did in the dark, by their teeth against his thumb. Cellar. Pantry. Linen. Wine. Safe. Study. Thirty-one keys, and he knew each one by its bite.\n\nThe hall looked the way a hall looks after a crowd. Chairs out of line. Crumbs on the runner. A cold smell of wet wool.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 3,
+     "heading": "Front door, barred. Hall, dark. Clock, as ever.",
+     "lines": [
+      32,
+      38
+     ],
+     "words": 134,
+     "text": "The clock stood at the foot of the stair. Eleven forty-seven. It had said so on the day he came to be interviewed, when he was a young man with his hair still black, and nobody had ever told him why. On Sundays he drew the weight up its chain, always stopping two links short of the top so the chain would not strain. The clock never ran. Nobody had ever told him to stop.\n\nHe had let himself think about the will once, at the reading. *Whoever remains when the last lantern goes out.* He had looked down at his own lamp, and then he was ashamed, and he put the thought away like a spoon in a drawer.\n\nThen the clock ticked once.\n\nOne tick, from a clock that had none left.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 4,
+     "heading": "Clock. Cold in the brass.",
+     "lines": [
+      44,
+      56
+     ],
+     "words": 150,
+     "text": "\"Cold in the brass,\" he said aloud, because a thing said aloud in an empty house is half true already.\n\nNobody had lit a fire since the reading. Brass shrinks in the cold, and old wood complains. And he was tired, and a tired ear will hear what it is waiting for.\n\nHe found the clock key by its teeth and opened the case to prove it to himself. He put his palm flat on the pendulum. It hung still and cold, and it had been still for as long as he had served here.\n\nGood.\n\nThen his knuckles brushed the chain.\n\nThe weight had been drawn all the way to the top, not two links short. Someone had drawn it tonight, and not the way he did it.\n\nThe chain was wet. He brought his fingers to the lamp and smelled them: reed, rot and standing water. The mere.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 5,
+     "heading": "Clock. Cold in the brass.",
+     "lines": [
+      58,
+      60
+     ],
+     "words": 20,
+     "text": "Cold does not wind a clock.\n\nSomebody had wound it tonight with mere-wet hands. Somebody with the fen on them.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 6,
+     "heading": "Safe, locked.",
+     "lines": [
+      66,
+      74
+     ],
+     "words": 152,
+     "text": "So it was a mourner, then. He knew how it happened. They had come in from the fen for the reading: fishers whom the fog kept off the boats, tinners whose mine was shut and whose hands were not. Each of them hoped to hear their own name read out and did not. One of them had stayed behind when the rest went out.\n\nHe did not blame them. He only wanted to know where they were.\n\nThere was a stranger in the house, then. And a stranger would go to the safe.\n\nHe crossed the hall with the lamp held low. The safe stood in its alcove beside the clock, and it was locked. He tried the handle twice. Only one key opened it, and Vane had put it on his ring the year the house was finished. It had never come off.\n\nHe opened the safe anyway, to be sure.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 7,
+     "heading": "Safe, locked.",
+     "lines": [
+      76,
+      80
+     ],
+     "words": 71,
+     "text": "The will lay inside, just where it had lain before the reading. It was folded in thirds, the way he folded letters for the post, with the crease pressed down hard under a thumbnail. At four o'clock that afternoon he had watched the Company clerk slide that will into a satchel and walk it down to the Bank.\n\nNo draught. No mourner. No key but his.\n\nOnly his key opens it.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 8,
+     "heading": "Boots, blacked.",
+     "lines": [
+      86,
+      98
+     ],
+     "words": 172,
+     "text": "Grief, then, and habit.\n\nEvery night since the wire came, he had laid out the master's slippers by the bed: left, then right, toes to the wall. A man who could do that could walk to a safe in his sleep. He could fetch back a paper he had seen leave, fold it his own way, and put it to bed, all without waking.\n\nHis own hands, then. Nobody else's.\n\nHe looked down at his boots to prove it. He had blacked them at six. They were dry, black and clean.\n\nThen he lowered the lamp.\n\nThere were bootprints on the carpet, in fen mud still wet enough to shine. They came from the barred front door and went to the clock, then to the safe, right past where he stood, and on to the stair.\n\nHe set his own foot beside one of them. It did not fit. He went through the mourners: the Widow's small boot, the clerk's town shoes, the tinners in their hobnails. It was none of theirs.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 9,
+     "heading": "Boots, blacked.",
+     "lines": [
+      100,
+      102
+     ],
+     "words": 13,
+     "text": "The size matched no one in the house.\n\nThey went up the stair.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 10,
+     "heading": "Stair. Study door, locked.",
+     "lines": [
+      108,
+      116
+     ],
+     "words": 168,
+     "text": "He followed them up, lamp in one hand and ring in the other. He had stopped asking whose they were. He had run out of people.\n\nThe prints climbed the stair steadily and without hurry, the way a man walks up his own stairs. On the landing they turned left and stopped at the study.\n\nHe had locked the study door himself, at three o'clock before the reading, and tried it twice. It was locked now. He put his hand on the knob and it did not give.\n\nBlack crepe hung on the door.\n\nHe knew that crepe. It had hung on the front door for three nights, and he had taken it down at noon because the Widow said a will is business, and business does not come in through crepe. He had folded it and laid it in the linen press. Now it was tied across the study door in his own knot: a reef with the tail tucked under, the knot his mother taught him.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 11,
+     "heading": "Stair. Study door, locked.",
+     "lines": [
+      118,
+      122
+     ],
+     "words": 35,
+     "text": "Crepe goes on the front door of a house with a death in it, where the street can see it.\n\nThis door was inside.\n\nThe house was mourning someone behind the study door. Not Vane.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 12,
+     "heading": "Study.",
+     "lines": [
+      128,
+      146
+     ],
+     "words": 142,
+     "text": "He did not knock.\n\nOpening doors was what he was for. He knew every door in Hollowmere: which ones stuck in wet weather, which ones a woman could lean against in the dark and weep, and which ones he must never open without being asked.\n\nThe ring was in his hand. He counted for the study key by its teeth, as he had counted all his life.\n\nStudy.\n\nStudy.\n\nStudy.\n\nThere were three. One was his. The second had barn straw caught in its bow and a pale twist of goat hair. The third was so cold it ached, and when he raised it to the lamp it smelled of the Undercroft's gas.\n\nHe had never hung either of them. He had never cut a copy of a key in his life.\n\nThe ring was no longer his count.\n\nHe stopped counting.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 13,
+     "heading": "11:47.",
+     "lines": [
+      152,
+      176
+     ],
+     "words": 151,
+     "text": "He fitted a key without choosing which one, and it turned.\n\nThe study was as it had always been. The desk. The master's chair, with its back to the window. The curtains drawn, as he had drawn them.\n\nHe put his hand on the chair. It was warm.\n\nThe day-book lay open on the desk.\n\nHe had left it downstairs, on the hall table, to dry. He knew that as surely as he knew the teeth of the keys. Now it lay open on the desk with tonight's page written all the way down. The ink was still wet, and every word was in his hand.\n\n*Front door, barred. Hall, dark. Clock, as ever.*\n*Clock. Cold in the brass.*\n*Safe, locked.*\n*Boots, blacked.*\n*Stair. Study door, locked.*\n*Study.*\n\nThen the lines he had not walked yet.\n\n*Crepe, front door.*\n*Key, Hale Barn.*\n*Key, Undercroft.*\n*Clock, wound.*\n*Hall. One clock, standing.*\n*11:47.*",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 14,
+     "heading": "11:47.",
+     "lines": [
+      178,
+      190
+     ],
+     "words": 165,
+     "text": "He read it twice. It was a good round. He would have written it the same way himself. He had.\n\nThe night was already written, and it ended at 11:47.\n\nSo he walked it.\n\nHe untied the crepe from the study door and carried it down, and he tied it across the front door in a reef with the tail tucked under.\n\nHe drew back the bar and went out across the wet ground to Hale Barn, where the wolf pelt hung on the door. The goat watched him, as goats watch everyone, and he hung the key with the straw in its bow where it would be found.\n\nHe crossed the square. Every window was dark. He went down the Well Ladder rung by rung, into the cold and the smell of gas, and laid the third key in the Undercroft where it would be found.\n\nHe came back in by the front door. He had barred it. He did not wonder about that.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 15,
+     "heading": "11:47.",
+     "lines": [
+      192,
+      200
+     ],
+     "words": 65,
+     "text": "His boots were not dry any more.\n\nIn the hall he opened the case and took the chain in his wet hands and drew the weight all the way to the top.\n\nThe hands did not move.\n\nHe did not put out the lamp. He did not ask himself why.\n\nIn the hall of Vane Manor it was eleven forty-seven, and it always had been.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    }
+   ]
+  },
+  {
+   "slug": "what-the-well-remembers",
+   "path": "03_Stories/12_What_the_Well_Remembers.md",
+   "title": "What the Well Remembers",
+   "folder": "03_Stories",
+   "type": "story",
+   "mode": "horror-prose",
+   "genre": [
+    "frontier-gothic",
+    "horror",
+    "coming-of-age"
+   ],
+   "status": "draft",
+   "pov": "first-person (the Child)",
+   "tense": "past",
+   "themes": [
+    "childhood",
+    "knowledge",
+    "faith",
+    "the-lie-a-town-tells",
+    "complicity"
+   ],
+   "words": 2189,
+   "blurb": "a girl who counts things hides on the Well Ladder at curfew, is driven down by a stranger washing at the well-head, and crosses the Undercroft into St Brannock's, where a sleeper's pallet, a post-dated Gazette and a red-darned glove in the bell rope take Father Bray's train east away from her.",
+   "scene": null,
+   "passages": [
+    {
+     "n": 1,
+     "heading": "What the Well Remembers",
+     "lines": [
+      18,
+      28
+     ],
+     "words": 186,
+     "text": "Father Bray went back east on the train.\n\nMy mother said it at supper, the week he went, the way you say the pump is frozen. She said it to the bread. Nobody at the table asked her anything else.\n\nI remember him in three things.\n\nHe set the hymn numbers on the board every Sunday, and while he set them he made me read them back to him, and that is how I learned numbers. After Mass he read the Gazette on the chapel step and let me sound out the big letters at the top. That is how I learned letters.\n\nHe let me stand inside his arms when he rang the Company bell. The rope went up past my face and came down past it again, and the floor hummed.\n\nHis gloves were worn through at the palm from that rope. He darned them himself in red wool, badly. The darn sat right in front of my eyes when I stood inside his arms. I used to count the stitches. Nine on the left hand. I never saw the right one close enough.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 2,
+     "heading": "What the Well Remembers",
+     "lines": [
+      30,
+      32
+     ],
+     "words": 52,
+     "text": "I count things. Planks on the platform: forty-two. Lanterns on the square: four. Plates on Crumb's wake table: ten, every time, whether there are ten mourners or two. Counting is how I keep things. If you have counted it, it happened.\n\nSo I believed it. Trains go east. Priests go with them.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 3,
+     "heading": "1.",
+     "lines": [
+      36,
+      42
+     ],
+     "words": 176,
+     "text": "Saloon was over. The Curfew bell rang. The wolves came down to the fence the way they do, and the Watchman walked the lanes knocking on shutters and sending children in.\n\nI did not go in.\n\nThere is a ladder in the well on the square. Iron rungs, set into the shaft wall, going down to the shortcut under the town. Grown men use it sometimes in the day, sideways, cursing, because the rungs sit too close to the stone for a man's shoulders. They don't fit me badly at all. I have hidden on it on curfew nights since I was seven. You go down three rungs, where the light from the square still reaches, and you sit with your knees against the wall, and when the Station Rush starts you climb out and walk home like you've been to the pump.\n\nThree rungs down. Knees on the stone. Four lanterns on the square. I counted them lit, one, two, three, and I was still waiting on the fourth when I stopped watching for it.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 4,
+     "heading": "1.",
+     "lines": [
+      44,
+      44
+     ],
+     "words": 14,
+     "text": "Up was always the way home. Up was the only way home I knew.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 5,
+     "heading": "2.",
+     "lines": [
+      48,
+      58
+     ],
+     "words": 168,
+     "text": "Boots on the well-head.\n\nNot the Watchman's. The Watchman drags his left heel. These didn't drag.\n\nThe bucket came down past my face on its chain and went into the water below me and came up again full, close enough that it brushed my hair. Then washing. Hands, by the sound. Rubbing. Rinsing. Rubbing. A long time. Longer than flour takes. Longer than mud.\n\nWater spilled over the lip and came down the shaft onto me. It was colder than well water. In the little light it was darker than well water, too. I did not look at my sleeve after. I am telling you that so you know I didn't.\n\nThen the washing stopped, and he did not leave.\n\nHe stood at the top of the well with his hands held out, maybe, waiting for something to dry. I could not see a face. I could only see that something was standing between me and the lantern, because the light on the rungs above me had gone.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 6,
+     "heading": "2.",
+     "lines": [
+      60,
+      64
+     ],
+     "words": 50,
+     "text": "You cannot climb past someone at the top of the only ladder. You can't even breathe loudly. The ladder up was held by whoever had washed there, and I was small, and quiet, and I stayed still the way you stay still.\n\nHe did not go.\n\nSo I went down.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 7,
+     "heading": "3.",
+     "lines": [
+      68,
+      74
+     ],
+     "words": 155,
+     "text": "Below the rungs I knew there were more rungs, and below those there was a passage, low and wet, and at the end of the passage there was the Undercroft.\n\nI had never gone that far. I knew where it came out, the way you know what is behind a door you've been told not to open. The Undercroft lies under St Brannock's. There is a stair from the Undercroft up into the chapel. The chapel door is never barred, because Father Bray said God's house has no bar, and nobody since has thought to fit one.\n\nThat was my plan. Down. Across. Up the stair. Out the chapel door. Home by the back lanes before anyone at the well thought to look down it.\n\nAnd nobody would be in the Undercroft. I was sure of that. Nobody comes down there at night. It is a cellar. Cellars are for the dead and the potatoes.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 8,
+     "heading": "3.",
+     "lines": [
+      76,
+      76
+     ],
+     "words": 6,
+     "text": "Dark. Cold. A smell of gas.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 9,
+     "heading": "4.",
+     "lines": [
+      80,
+      90
+     ],
+     "words": 177,
+     "text": "The Undercroft has two alcoves for the gas, one north and one south. The north one was dark.\n\nThe south one was lit.\n\nThe lamp was turned down to a bead, a blue drop on the end of the pipe, but it was burning. Under it was a pallet made of sacking, pressed flat in the shape of a body that had lain there more than once. A tin cup. A candle stub, burned to a puddle. On the shelf over the pallet, a key with a brass tag. I could read the tag. STUDY, and under it, smaller, VANE.\n\nSomeone sleeps here.\n\nI knew it the way you know a bed has been slept in. You don't need to touch it.\n\nSo I made it into something. A stowaway off the train. The Gazette says they come in the freight crates, under the flour, and they have to sleep somewhere when they get out. Somewhere dry. Somewhere nobody comes down to at night. A stowaway had found the Undercroft before I did, and that was all.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 10,
+     "heading": "4.",
+     "lines": [
+      92,
+      94
+     ],
+     "words": 25,
+     "text": "I took the key. I don't know why. Children keep things. It went into my pocket and it stayed there.\n\nA stowaway. That was all.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 11,
+     "heading": "5.",
+     "lines": [
+      98,
+      110
+     ],
+     "words": 198,
+     "text": "There was chalk on the wall by the pallet. Low down, where a man lying on his side would write if he had a piece of chalk and nothing to do with the night.\n\nFour numbers.\n\n23. 140. 8. 271.\n\nI knew them. I knew them the way you know your own name said in another room. They were the hymn numbers from Father Bray's last Sunday. I read them back to him that morning while he slid the cards into the board, and he said *good*, and he said *again*, and I said them again. They are still on the board upstairs. Nobody has changed them since he went. Nobody has set any numbers at all.\n\nA stowaway off the train would not know those numbers. Nobody off the train would.\n\nSo that wasn't it.\n\nSo it was him. It was Father Bray who slept here, and it was before his train. A night, maybe two, before he went east. He came down under his own chapel to say goodbye to it from underneath, and he wrote his last hymns on the wall so he'd have them. That is a thing a priest might do. It is.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 12,
+     "heading": "5.",
+     "lines": [
+      112,
+      112
+     ],
+     "words": 4,
+     "text": "Before his train. Before.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 13,
+     "heading": "6.",
+     "lines": [
+      116,
+      124
+     ],
+     "words": 98,
+     "text": "If Father Bray slept here before his train, then something of his might still be here. I wanted something of his. I had kept his hymn numbers in my head all that time and nobody had told me I could keep anything else.\n\nI lifted the head of the pallet to look underneath it.\n\nA Gazette, folded flat. Folded the way he folded it on the chapel step, in half and in half again, so it would fit in a coat.\n\nMine now, I thought. His or not.\n\nI unfolded it to see what he had been reading.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 14,
+     "heading": "7.",
+     "lines": [
+      128,
+      140
+     ],
+     "words": 204,
+     "text": "You read the date first. He taught me that. *Before you believe a paper, find out what day it thinks it is.*\n\nI read it the way he taught me. Letter by letter, under the blue bead of the lamp. The day. The month. The number.\n\nThe number was after his last Sunday. Not much after. Enough.\n\nThe Gazette comes in on the Daily Train. That is the only way it comes. So this one came in on a train after the train that took him east.\n\nSomeone else brought it down, then. That's what I said. Anyone could have. Anyone could fold a paper in half and in half again. I said it in my head twice, the way he made me say the hymns twice, and the second time it was thinner than the first, and I did not believe it either time.\n\nAnd the lamp.\n\nThe lamp in the south alcove was turned low. Not out. Turned down to a bead, the way you leave a lamp you are coming back to. You turn a lamp out when you go away. You turn it down when you are going up to do something and you will want it again before morning.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 15,
+     "heading": "7.",
+     "lines": [
+      142,
+      144
+     ],
+     "words": 20,
+     "text": "Whoever slept here was out, and the alcove's sleeper was coming back tonight.\n\nThe lamp was turned down, not out.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 16,
+     "heading": "8.",
+     "lines": [
+      148,
+      156
+     ],
+     "words": 121,
+     "text": "Up the well was the washer. Down here was a bed someone was coming back to. The chapel was the only other way out I knew.\n\nI took the stair.\n\nSt Brannock's at night. Plank walls. Pews. The smell of cold wax. The hymn board, white cards in black slots, *23 140 8 271*, still. The windows grey. The door at the far end. And between me and the door, the place under the bell, where the rope comes down.\n\nThe chapel was empty. I told myself that. It was empty, and the door was ten steps away, and the way to it ran under the bell and past the rope, the way it always had.\n\nTen steps. I counted them.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 17,
+     "heading": "9.",
+     "lines": [
+      160,
+      174
+     ],
+     "words": 159,
+     "text": "The Company bell hangs over that spot with the Company's mark stamped on its shoulder. I have looked up at it every Sunday of my life.\n\nThe rope was moving.\n\nOnly a little. A slow sway, side to side, getting smaller. The way a rope does after. After someone has let go of it. After something has come off it. So the chapel was not empty. Or it had not been, a moment before I came up the stair.\n\nThere was something caught in the rope. Twisted into the lay of it, about where a grown man's hands would be if he reached up to ring.\n\nA glove.\n\nNot a whole one. The cuff, and half the palm, the rest torn away. The palm worn through from rope. Darned over the worn place in red wool. Badly.\n\nI knew it.\n\nI have stood inside those arms with that darn in front of my eyes. I have counted those stitches.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 18,
+     "heading": "9.",
+     "lines": [
+      176,
+      186
+     ],
+     "words": 154,
+     "text": "I started to tell myself something. Other men darn their gloves. Other men ring bells. Red wool is cheap. Everybody has red wool. I got that far. I could not get any further. I could not get to the end of it, and I have never got to the end of it since.\n\nI did not count the stitches. I did not want to know if there were nine.\n\nWhat the glove did not tell me: whether he rang that bell until the rope tore his hand out of it. Whether he climbed. Whether the rope was for something else. Whether someone took it off him. Whether he pulled his hand out himself and left the glove behind and walked down to the platform and got on the train like they said.\n\nThe bell did not ring. Nothing rang.\n\nI did not take the glove. I had the key.\n\nI knew whose it was.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 19,
+     "heading": "9.",
+     "lines": [
+      188,
+      188
+     ],
+     "words": 13,
+     "text": "I could not unknow it. I have tried. It does not go back.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 20,
+     "heading": "10.",
+     "lines": [
+      192,
+      200
+     ],
+     "words": 155,
+     "text": "I went out by the chapel door, which has no bar, and home by the back lanes, and I was in my bed with my wet sleeve under the blanket before the Station Rush.\n\nThe whistle out of the pines. The platform lantern going pale. The well-head stones, when I went out for water, dark and wet, and nobody standing at them.\n\nThe train had brought a Vicar. He came up the square in a coat too good for the mud, with his bag in one hand, looking at everything the way you look at a house you have been told is yours. He stopped at the pump, where I was. He bent down, because grown men do that to children, and smiled, and asked me.\n\nWhere did Father Bray go?\n\nThe key was in my pocket. My mother was at our door. Mrs Grieves was sweeping the tavern step, and she had stopped sweeping.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 21,
+     "heading": "10.",
+     "lines": [
+      202,
+      208
+     ],
+     "words": 29,
+     "text": "\"Father Bray went back east on the train,\" I said.\n\nThe Vicar nodded. My mother nodded. Mrs Grieves nodded, and went back to her sweeping.\n\nThree.\n\nI counted them.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    }
+   ]
+  },
+  {
    "slug": "behind-the-peephole",
    "path": "04_Book_Concepts/01_Behind_the_Peephole.md",
    "title": "Behind the Peephole",
@@ -7948,7 +8616,7 @@
     "company-power",
     "identity"
    ],
-   "words": 5790,
+   "words": 5918,
    "blurb": "a Thorne & Expanse clerk's ledger setting the game's record against the Bible's canon, entry by entry, with a 127-row account book of every trope the project owes.",
    "scene": null,
    "passages": [
@@ -8401,8 +9069,8 @@
       373,
       510
      ],
-     "words": 2380,
-     "text": "*Accounts owed by the project. Each is to be marked settled when a later work pays it.*\n\n| Trope | Family | Where it is owed (map / role / place) | Settled by |\n|---|---|---|---|\n| The locked room | whodunit / locked-room | HollowMere, Vane Manor study door (`manor_upper`); study keys in Hale Barn and the Undercroft | |\n| The stopped clock | whodunit / locked-room | Vane Manor hall (`manor_hall`), clock at 11:47 | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |\n| Footprints that don't add up | whodunit / locked-room | muddy bootprints on the manor carpet; Height trait | |\n| The thread on the nail | whodunit / locked-room | forensics: Scarf (thread), Hat (felt) | |\n| The cleaned-up crime scene | whodunit / locked-room | Killer card: \"clean one clue, wash at the well\" | |\n| The reading of the will | whodunit / locked-room | Vane's will: \"whoever remains when the last lantern goes out\" | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]]; [[05_Worldbuilding/04_The_Canon_and_Trope_Ledger_of_Who_Did_It|Canon and Trope Ledger]] |\n| The poisoned cup | whodunit / locked-room | caption \"Something in the cup was not sugar\"; Herbalist | |\n| The empty slot on the shelf | whodunit / locked-room | Mallory Apothecary, \"NOT FOR SALE\" shelf | |\n| Gathering the suspects | whodunit / locked-room | the Town Bell; the Tribunal | |\n| The case file and the stamp | whodunit / locked-room | Detective: \"Collect, inspect, cross-reference.\" | |\n| The alibi witness | whodunit / locked-room | Accomplice: \"You never hold the knife, only the alibi.\" | |\n| Murder at the dinner table | whodunit / locked-room | Crumb's Ovens wake table, ten plates | |\n| The loudest accuser | hidden-role / social-deduction | Killer: \"be the loudest voice asking who did it\" | |\n| The borrowed face | hidden-role / social-deduction | Killer in a borrowed character; the cover roles | |\n| Skin-walking the victim | hidden-role / social-deduction | Zealot in the Vicar's robes; Timber-Wolf against the Forest Chaplain | |\n| The jester who wants to hang | hidden-role / social-deduction | Drifter: \"You want to hang.\" | |\n| The bodyguard at one door | hidden-role / social-deduction | Watchman | |\n| One bottle saves, one ends | hidden-role / social-deduction | Herbalist | |\n| The heir to the knife | hidden-role / social-deduction | Heir (the Accomplice who inherits the Knife) | |\n| Taking one with you | hidden-role / social-deduction | Gamekeeper: \"you will not go alone\" | |\n| The seer | hidden-role / social-deduction | Medium (seance chalk) | |\n| The innocent who sees everything | hidden-role / social-deduction | Child: \"Hide, watch, remember.\" | |\n| The town vote | hidden-role / social-deduction | caption \"The town has spoken.\" | |\n| Secret recruitment | hidden-role / social-deduction | the Vicar's conversions; Zealot's Dark Positions | |\n| Identity at dawn | hidden-role / social-deduction | role card / Wake Loaf platter / tally log | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |\n| The outlaw in a bandana | frontier western | Bandit | |\n| The stranger off the train | frontier western | the Daily Train; Stowaway | [[06_Songs/06_Ballad_of_the_Iron_Beast|Ballad of the Iron Beast]]; [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |\n| The hanging tree | frontier western | Fenwood hanging oak; Gallows Wood | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |\n| One shot in the square | frontier western | caption \"One shot, and the whole square goes quiet.\"; six-shooter, .45 | |\n| The sawed-off behind the bar | frontier western | Drowned Lantern; Bartender → Vigilante | |\n| The tin star | frontier western | Police Officer | |\n| Don't miss the last train | frontier western | the train as the only exit; Hitman extraction | [[06_Songs/06_Ballad_of_the_Iron_Beast|Ballad of the Iron Beast]] |\n| The wanted notice | frontier western | overworld notice board; HollowMere Gazette | |\n| The circuit judge rides in | frontier western | BlackPine Circuit Judge | |\n| Paid in scrip | company town / labour | Company Scrip; Syndicate scrip | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |\n| Owing your soul to the company store | company town / labour | Clerk's Midday Rent; debtors' prison; BlackPine Company Store | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |\n| The strike | company town / labour | Bartender → Union Boss; NPC mood Rioting | |\n| The Pinkertons come | company town / labour | Cornelius Thorne's arrival | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]] |\n| The soapbox agitator | company town / labour | Activist, Public Unrest at the bell | |\n| Dynamite on the tracks | company town / labour | Activist | |\n| Fire in the mill | company town / labour | Activist; Waterwheel Lumber Mill | |\n| You are your number | company town / labour | BlackPine Tally Rack, ten billets | |\n| The embezzling clerk | company town / labour | Company Clerk → Embezzler | |\n| Forced labour for debt | company town / labour | the mill as forfeit for unpaid rent | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |\n| The motto on the gate | company town / labour | \"PRODUCTION IS OBLIGATION.\" | |\n| The widow in black | gothic | Widow Vane's parlour | [[05_Worldbuilding/04_The_Canon_and_Trope_Ledger_of_Who_Did_It|Canon and Trope Ledger]] |\n| The portrait turned to the wall | gothic | `widow_parlour` | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]]; [[05_Worldbuilding/04_The_Canon_and_Trope_Ledger_of_Who_Did_It|Canon and Trope Ledger]] |\n| The house of the dead lord | gothic | Vane Manor | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |\n| The letter that should not be opened | gothic | parlour letter box; Postmaster steaming envelopes | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]] |\n| The gravestone with tomorrow's date | gothic | HollowMere prop | |\n| The light that should be out | gothic | drowned lantern in the Fenwood; dead man's lamp at BlackPine | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |\n| The single candle | gothic | `widow_bedroom` | |\n| The cult in the village | folk-horror / cult | Zealot; Minion, Mob Boss, Cultist, High Priest | |\n| Sigils on the doors | folk-horror / cult | Cultist, ash-and-blood on five buildings | |\n| The bell tolls backward | folk-horror / cult | the Dark Mass | |\n| The crimson sky | folk-horror / cult | the Dark Mass | |\n| The wise woman in the woods | folk-horror / cult | Mother Moll's charcoal hut | |\n| The scarecrow that is watching | folk-horror / cult | scarecrow in a trench coat, the square | |\n| Bread for the dead | folk-horror / cult | wake loaves, three for the dead, wax-sealed tokens | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |\n| The heretic sect | folk-horror / cult | Port-au-Levain Leaven-Rot; Spore-Caller, Groat-Master, Cellar-Ghoul, Arch-Fermenter | |\n| The baker up before dawn | cosy-bakery | Baker: \"Up before anyone, flour to the elbows.\" | |\n| The bakery as rumour mill | cosy-bakery | Rumor Loaves | |\n| The sweet that hides poison | cosy-bakery | Black-Crust Contract, nightshade glaze | |\n| The heirloom starter | cosy-bakery | the Mother of Mothers, Subterranean Yeast Vault | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]] |\n| The kitchen brigade | cosy-bakery | the ten kitchen rooms; old kitchen roles folded into guild lore | |\n| The critic who doesn't leave | cosy-bakery | Le Critique Gastronomique (island guild lore) | |\n| The ration tyrant | cosy-bakery | Baker → Ration Tyrant; the Starving | |\n| The contract in the mail | noir | black-wax envelope in the mailbag | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]] |\n| The one last job / going straight | noir | Hitman: \"Burn the Letter & Keep Your Mundane Life\" | |\n| Omertà | noir | Mob Boss | |\n| The blackmail letter | noir | Postmaster → Extortionist | |\n| The paper prints the dirt | noir | HollowMere Gazette | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |\n| The widow with secrets (femme fatale, subverted) | noir | Widow Vane | |\n| The fence | noir | Baker → Fence | |\n| Robbing the express safe | railroad | Bandit's fourth score | |\n| The Baron's private arrival | railroad | Cornelius Thorne with Pinkertons | |\n| The stowaway in the freight | railroad | Stowaway reading the Baron's manifest | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]] |\n| End of the line | railroad | opening narration; overworld platform | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |\n| The train as the clock | railroad | Daily Train; BlackPine Payroll Train | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]]; [[06_Songs/06_Ballad_of_the_Iron_Beast|Ballad of the Iron Beast]] |\n| The cargo that is a person | railroad | the Baron's manifest; freight crate | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]] |\n| The fog-bound island | island / sea | Port-au-Levain; the Morning Ferry | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]] |\n| The lighthouse keeper | island / sea | island lighthouse; Old Fennick's marsh light | |\n| The smugglers' wharf | island / sea | Smuggler's Wharf; Smuggler-Blackguard | |\n| The drowned who walk | island / sea | Salt-Flat Drowners; Tide-Ghouls | |\n| Pay the ferryman | island / sea | Tuck the ferry boy; Harbourmaster Pell | |\n| The closed council | island / sea | Sovereign Sourdough Council; High Chancellor | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]] |\n| The sea exit | island / sea | Thief (later release) | |\n| The mine that should stay shut | industrial horror | the Flooded Gallery; Tinner | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |\n| The name chalked out | industrial horror | tally board, Blackpine Workings | |\n| The dead man's lamp | industrial horror | BlackPine prop | |\n| The air is killing us | industrial horror | mere-rot / miasma; soot and Lung-Rot | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |\n| The machine that eats men | industrial horror | head saw; the Great Sawmill Blade | |\n| Masks and searchlights | industrial horror | OEAs | |\n| Dug too deep | industrial horror | coal under the tin; the Deep Level | |\n| The poisoned lunchbox | industrial horror | Pit-Poisoner | |\n| Three verdicts | courtroom | Tribunal: Acquittal, Heavy Fine, Death | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |\n| The trapdoor | courtroom | the gallows; Judge | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |\n| Rumour hardens into indictment | courtroom | Dirty Deed Ledger Slips | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |\n| Trial by fire | courtroom | Great Hearth, Port-au-Levain | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]] |\n| The redemption vote | courtroom | Activist | |\n| Fined into ruin | courtroom | Scrip Forfeiture; Guild Fine | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |\n| The vault job | heist | Company Bank and Vault | |\n| Lifting the chapel plate | heist | Bandit at St Brannock's | |\n| The calling-card tip | heist | Bandit's gold coin at the bakery | |\n| The swap | heist | loaf swaps (Smuggler-Blackguard); log swaps (Company Enforcer) | |\n| Heirloom theft | heist | Thief | |\n| Vengeance tenfold | revenge | the Ascended Vicar | |\n| The prayed-for who snaps | revenge | the Apostate, rusted pitchfork | |\n| The starving rise | revenge | the Starving | |\n| The vendetta pair | revenge | Zealot/Vicar; Activist/Baron; Timber-Wolf/Chaplain; Slate-Breaker/Inspector; Pyre-Master/Inspector-General | |\n| The priest who vanished | religious horror | Father Bray | [[05_Worldbuilding/04_The_Canon_and_Trope_Ledger_of_Who_Did_It|Canon and Trope Ledger]] |\n| The desecrated chapel | religious horror | St Brannock's, the rope and the torn glove | |\n| Indulgences for sale | religious horror | Faith economy; Parish Seals | |\n| The martyr returns wrong | religious horror | Ascended Vicar's pillar of light and iron crosier | |\n| The altar below | religious horror | Deep Cave Altar, Flooded Gallery | |\n| The body in the lead coffin | religious horror | Undertaker → Grave Robber | |\n| Wolves that fear the light | creature feature | mere-wolves; Lamplighter | |\n| Will-o'-the-wisp | creature feature | bog-wisps | |\n| The Beast in the cave | creature feature | the Beast, woken by mere-rot | |\n| The werewolf pack | creature feature | Timber-Wolf; Timber-Stalker, Pit-Fiend, Den-Keeper, Alpha-Born; the Blood-Moon Howl | |\n| Things in the tunnels | creature feature | Tunnel Crawlers | |\n| The pelt on the door | creature feature | Hale Barn | |\n| The butler did it (tired, to subvert) | tired / subverted | Butler: \"You know every door in Hollowmere.\" | |\n| It was all a dream (tired) | tired / subverted | the gravestone with tomorrow's date; the bell tolling backward | |\n| The chosen one (tired) | tired / subverted | the will's \"whoever remains\" | |\n| The last-minute confession (tired) | tired / subverted | Vicar: \"Everyone ... confesses to you\" | |\n| The evil twin (tired) | tired / subverted | the cross-map mirroring | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |\n| The detective did it (tired) | tired / subverted | Detective; Camp Investigator; Inquisitor | |\n| The dog that didn't bark (tired) | tired / subverted | guard dogs; the goat in Hale Barn | |\n| The narrator did it (tired) | tired / subverted | this ledger's clerk | [[05_Worldbuilding/04_The_Canon_and_Trope_Ledger_of_Who_Did_It|Canon and Trope Ledger]] |\n| The dying message (tired) | tired / subverted | the Vicar's last words | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |\n| The red herring (tired) | tired / subverted | Fisher; the Rusty/Drowned Lantern name | |\n| The cavalry arrives (deus ex machina, tired) | tired / subverted | the Baron by train | |\n| The doctor who poisons (tired) | tired / subverted | Doc Mallory; Company Doctor | |",
+     "words": 2508,
+     "text": "*Accounts owed by the project. Each is to be marked settled when a later work pays it.*\n\n| Trope | Family | Where it is owed (map / role / place) | Settled by |\n|---|---|---|---|\n| The locked room | whodunit / locked-room | HollowMere, Vane Manor study door (`manor_upper`); study keys in Hale Barn and the Undercroft | [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |\n| The stopped clock | whodunit / locked-room | Vane Manor hall (`manor_hall`), clock at 11:47 | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |\n| Footprints that don't add up | whodunit / locked-room | muddy bootprints on the manor carpet; Height trait | [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]]; [[03_Stories/11_Eleven_Forty_Seven|Eleven Forty-Seven]] |\n| The thread on the nail | whodunit / locked-room | forensics: Scarf (thread), Hat (felt) | [[05_Worldbuilding/10_The_HollowMere_Gazette_Morning_Edition|The HollowMere Gazette]] |\n| The cleaned-up crime scene | whodunit / locked-room | Killer card: \"clean one clue, wash at the well\" | [[03_Stories/12_What_the_Well_Remembers|What the Well Remembers]]; [[07_Poems_and_Prose/22_The_Daybook_of_Crumb_s_Ovens|The Daybook of Crumb's Ovens]] |\n| The reading of the will | whodunit / locked-room | Vane's will: \"whoever remains when the last lantern goes out\" | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]]; [[05_Worldbuilding/04_The_Canon_and_Trope_Ledger_of_Who_Did_It|Canon and Trope Ledger]] |\n| The poisoned cup | whodunit / locked-room | caption \"Something in the cup was not sugar\"; Herbalist | |\n| The empty slot on the shelf | whodunit / locked-room | Mallory Apothecary, \"NOT FOR SALE\" shelf | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]]; [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |\n| Gathering the suspects | whodunit / locked-room | the Town Bell; the Tribunal | |\n| The case file and the stamp | whodunit / locked-room | Detective: \"Collect, inspect, cross-reference.\" | [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |\n| The alibi witness | whodunit / locked-room | Accomplice: \"You never hold the knife, only the alibi.\" | |\n| Murder at the dinner table | whodunit / locked-room | Crumb's Ovens wake table, ten plates | |\n| The loudest accuser | hidden-role / social-deduction | Killer: \"be the loudest voice asking who did it\" | |\n| The borrowed face | hidden-role / social-deduction | Killer in a borrowed character; the cover roles | |\n| Skin-walking the victim | hidden-role / social-deduction | Zealot in the Vicar's robes; Timber-Wolf against the Forest Chaplain | |\n| The jester who wants to hang | hidden-role / social-deduction | Drifter: \"You want to hang.\" | |\n| The bodyguard at one door | hidden-role / social-deduction | Watchman | |\n| One bottle saves, one ends | hidden-role / social-deduction | Herbalist | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]] |\n| The heir to the knife | hidden-role / social-deduction | Heir (the Accomplice who inherits the Knife) | |\n| Taking one with you | hidden-role / social-deduction | Gamekeeper: \"you will not go alone\" | |\n| The seer | hidden-role / social-deduction | Medium (seance chalk) | |\n| The innocent who sees everything | hidden-role / social-deduction | Child: \"Hide, watch, remember.\" | [[03_Stories/12_What_the_Well_Remembers|What the Well Remembers]] |\n| The town vote | hidden-role / social-deduction | caption \"The town has spoken.\" | |\n| Secret recruitment | hidden-role / social-deduction | the Vicar's conversions; Zealot's Dark Positions | |\n| Identity at dawn | hidden-role / social-deduction | role card / Wake Loaf platter / tally log | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |\n| The outlaw in a bandana | frontier western | Bandit | |\n| The stranger off the train | frontier western | the Daily Train; Stowaway | [[06_Songs/06_Ballad_of_the_Iron_Beast|Ballad of the Iron Beast]]; [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |\n| The hanging tree | frontier western | Fenwood hanging oak; Gallows Wood | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |\n| One shot in the square | frontier western | caption \"One shot, and the whole square goes quiet.\"; six-shooter, .45 | |\n| The sawed-off behind the bar | frontier western | Drowned Lantern; Bartender → Vigilante | [[05_Worldbuilding/11_Mrs_Grieves_s_Tab_Book|Mrs Grieves's Tab Book]] |\n| The tin star | frontier western | Police Officer | |\n| Don't miss the last train | frontier western | the train as the only exit; Hitman extraction | [[06_Songs/06_Ballad_of_the_Iron_Beast|Ballad of the Iron Beast]] |\n| The wanted notice | frontier western | overworld notice board; HollowMere Gazette | [[05_Worldbuilding/10_The_HollowMere_Gazette_Morning_Edition|The HollowMere Gazette]] |\n| The circuit judge rides in | frontier western | BlackPine Circuit Judge | |\n| Paid in scrip | company town / labour | Company Scrip; Syndicate scrip | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |\n| Owing your soul to the company store | company town / labour | Clerk's Midday Rent; debtors' prison; BlackPine Company Store | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |\n| The strike | company town / labour | Bartender → Union Boss; NPC mood Rioting | [[05_Worldbuilding/11_Mrs_Grieves_s_Tab_Book|Mrs Grieves's Tab Book]] |\n| The Pinkertons come | company town / labour | Cornelius Thorne's arrival | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]] |\n| The soapbox agitator | company town / labour | Activist, Public Unrest at the bell | |\n| Dynamite on the tracks | company town / labour | Activist | |\n| Fire in the mill | company town / labour | Activist; Waterwheel Lumber Mill | |\n| You are your number | company town / labour | BlackPine Tally Rack, ten billets | |\n| The embezzling clerk | company town / labour | Company Clerk → Embezzler | |\n| Forced labour for debt | company town / labour | the mill as forfeit for unpaid rent | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |\n| The motto on the gate | company town / labour | \"PRODUCTION IS OBLIGATION.\" | |\n| The widow in black | gothic | Widow Vane's parlour | [[05_Worldbuilding/04_The_Canon_and_Trope_Ledger_of_Who_Did_It|Canon and Trope Ledger]] |\n| The portrait turned to the wall | gothic | `widow_parlour` | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]]; [[05_Worldbuilding/04_The_Canon_and_Trope_Ledger_of_Who_Did_It|Canon and Trope Ledger]] |\n| The house of the dead lord | gothic | Vane Manor | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |\n| The letter that should not be opened | gothic | parlour letter box; Postmaster steaming envelopes | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]] |\n| The gravestone with tomorrow's date | gothic | HollowMere prop | [[05_Worldbuilding/10_The_HollowMere_Gazette_Morning_Edition|The HollowMere Gazette]]; [[05_Worldbuilding/11_Mrs_Grieves_s_Tab_Book|Mrs Grieves's Tab Book]]; [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |\n| The light that should be out | gothic | drowned lantern in the Fenwood; dead man's lamp at BlackPine | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |\n| The single candle | gothic | `widow_bedroom` | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]] |\n| The cult in the village | folk-horror / cult | Zealot; Minion, Mob Boss, Cultist, High Priest | |\n| Sigils on the doors | folk-horror / cult | Cultist, ash-and-blood on five buildings | |\n| The bell tolls backward | folk-horror / cult | the Dark Mass | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]] |\n| The crimson sky | folk-horror / cult | the Dark Mass | |\n| The wise woman in the woods | folk-horror / cult | Mother Moll's charcoal hut | |\n| The scarecrow that is watching | folk-horror / cult | scarecrow in a trench coat, the square | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]]; [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |\n| Bread for the dead | folk-horror / cult | wake loaves, three for the dead, wax-sealed tokens | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |\n| The heretic sect | folk-horror / cult | Port-au-Levain Leaven-Rot; Spore-Caller, Groat-Master, Cellar-Ghoul, Arch-Fermenter | |\n| The baker up before dawn | cosy-bakery | Baker: \"Up before anyone, flour to the elbows.\" | [[07_Poems_and_Prose/22_The_Daybook_of_Crumb_s_Ovens|The Daybook of Crumb's Ovens]] |\n| The bakery as rumour mill | cosy-bakery | Rumor Loaves | [[07_Poems_and_Prose/22_The_Daybook_of_Crumb_s_Ovens|The Daybook of Crumb's Ovens]]; [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]] |\n| The sweet that hides poison | cosy-bakery | Black-Crust Contract, nightshade glaze | |\n| The heirloom starter | cosy-bakery | the Mother of Mothers, Subterranean Yeast Vault | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]] |\n| The kitchen brigade | cosy-bakery | the ten kitchen rooms; old kitchen roles folded into guild lore | |\n| The critic who doesn't leave | cosy-bakery | Le Critique Gastronomique (island guild lore) | |\n| The ration tyrant | cosy-bakery | Baker → Ration Tyrant; the Starving | |\n| The contract in the mail | noir | black-wax envelope in the mailbag | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]] |\n| The one last job / going straight | noir | Hitman: \"Burn the Letter & Keep Your Mundane Life\" | |\n| Omertà | noir | Mob Boss | |\n| The blackmail letter | noir | Postmaster → Extortionist | |\n| The paper prints the dirt | noir | HollowMere Gazette | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |\n| The widow with secrets (femme fatale, subverted) | noir | Widow Vane | |\n| The fence | noir | Baker → Fence | |\n| Robbing the express safe | railroad | Bandit's fourth score | |\n| The Baron's private arrival | railroad | Cornelius Thorne with Pinkertons | |\n| The stowaway in the freight | railroad | Stowaway reading the Baron's manifest | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]] |\n| End of the line | railroad | opening narration; overworld platform | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |\n| The train as the clock | railroad | Daily Train; BlackPine Payroll Train | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]]; [[06_Songs/06_Ballad_of_the_Iron_Beast|Ballad of the Iron Beast]] |\n| The cargo that is a person | railroad | the Baron's manifest; freight crate | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]] |\n| The fog-bound island | island / sea | Port-au-Levain; the Morning Ferry | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]] |\n| The lighthouse keeper | island / sea | island lighthouse; Old Fennick's marsh light | |\n| The smugglers' wharf | island / sea | Smuggler's Wharf; Smuggler-Blackguard | |\n| The drowned who walk | island / sea | Salt-Flat Drowners; Tide-Ghouls | |\n| Pay the ferryman | island / sea | Tuck the ferry boy; Harbourmaster Pell | |\n| The closed council | island / sea | Sovereign Sourdough Council; High Chancellor | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]] |\n| The sea exit | island / sea | Thief (later release) | |\n| The mine that should stay shut | industrial horror | the Flooded Gallery; Tinner | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |\n| The name chalked out | industrial horror | tally board, Blackpine Workings | |\n| The dead man's lamp | industrial horror | BlackPine prop | |\n| The air is killing us | industrial horror | mere-rot / miasma; soot and Lung-Rot | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |\n| The machine that eats men | industrial horror | head saw; the Great Sawmill Blade | |\n| Masks and searchlights | industrial horror | OEAs | |\n| Dug too deep | industrial horror | coal under the tin; the Deep Level | |\n| The poisoned lunchbox | industrial horror | Pit-Poisoner | |\n| Three verdicts | courtroom | Tribunal: Acquittal, Heavy Fine, Death | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |\n| The trapdoor | courtroom | the gallows; Judge | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |\n| Rumour hardens into indictment | courtroom | Dirty Deed Ledger Slips | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |\n| Trial by fire | courtroom | Great Hearth, Port-au-Levain | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]] |\n| The redemption vote | courtroom | Activist | |\n| Fined into ruin | courtroom | Scrip Forfeiture; Guild Fine | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |\n| The vault job | heist | Company Bank and Vault | |\n| Lifting the chapel plate | heist | Bandit at St Brannock's | |\n| The calling-card tip | heist | Bandit's gold coin at the bakery | [[05_Worldbuilding/10_The_HollowMere_Gazette_Morning_Edition|The HollowMere Gazette]]; [[07_Poems_and_Prose/22_The_Daybook_of_Crumb_s_Ovens|The Daybook of Crumb's Ovens]] |\n| The swap | heist | loaf swaps (Smuggler-Blackguard); log swaps (Company Enforcer) | |\n| Heirloom theft | heist | Thief | |\n| Vengeance tenfold | revenge | the Ascended Vicar | |\n| The prayed-for who snaps | revenge | the Apostate, rusted pitchfork | |\n| The starving rise | revenge | the Starving | |\n| The vendetta pair | revenge | Zealot/Vicar; Activist/Baron; Timber-Wolf/Chaplain; Slate-Breaker/Inspector; Pyre-Master/Inspector-General | |\n| The priest who vanished | religious horror | Father Bray | [[05_Worldbuilding/04_The_Canon_and_Trope_Ledger_of_Who_Did_It|Canon and Trope Ledger]] |\n| The desecrated chapel | religious horror | St Brannock's, the rope and the torn glove | |\n| Indulgences for sale | religious horror | Faith economy; Parish Seals | |\n| The martyr returns wrong | religious horror | Ascended Vicar's pillar of light and iron crosier | |\n| The altar below | religious horror | Deep Cave Altar, Flooded Gallery | |\n| The body in the lead coffin | religious horror | Undertaker → Grave Robber | |\n| Wolves that fear the light | creature feature | mere-wolves; Lamplighter | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]] |\n| Will-o'-the-wisp | creature feature | bog-wisps | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]] |\n| The Beast in the cave | creature feature | the Beast, woken by mere-rot | |\n| The werewolf pack | creature feature | Timber-Wolf; Timber-Stalker, Pit-Fiend, Den-Keeper, Alpha-Born; the Blood-Moon Howl | |\n| Things in the tunnels | creature feature | Tunnel Crawlers | |\n| The pelt on the door | creature feature | Hale Barn | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]]; [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |\n| The butler did it (tired, to subvert) | tired / subverted | Butler: \"You know every door in Hollowmere.\" | [[03_Stories/11_Eleven_Forty_Seven|Eleven Forty-Seven]] |\n| It was all a dream (tired) | tired / subverted | the gravestone with tomorrow's date; the bell tolling backward | |\n| The chosen one (tired) | tired / subverted | the will's \"whoever remains\" | |\n| The last-minute confession (tired) | tired / subverted | Vicar: \"Everyone ... confesses to you\" | |\n| The evil twin (tired) | tired / subverted | the cross-map mirroring | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |\n| The detective did it (tired) | tired / subverted | Detective; Camp Investigator; Inquisitor | [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |\n| The dog that didn't bark (tired) | tired / subverted | guard dogs; the goat in Hale Barn | |\n| The narrator did it (tired) | tired / subverted | this ledger's clerk | [[05_Worldbuilding/04_The_Canon_and_Trope_Ledger_of_Who_Did_It|Canon and Trope Ledger]] |\n| The dying message (tired) | tired / subverted | the Vicar's last words | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]] |\n| The red herring (tired) | tired / subverted | Fisher; the Rusty/Drowned Lantern name | [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |\n| The cavalry arrives (deus ex machina, tired) | tired / subverted | the Baron by train | |\n| The doctor who poisons (tired) | tired / subverted | Doc Mallory; Company Doctor | |",
      "tagged": false,
      "tags": {
       "plot_tags": [],
@@ -10385,6 +11053,1852 @@
      ],
      "words": 188,
      "text": "*[— in another hand: I have stood confessed before no one but this page, and that is not enough, and it is all the Council will allow. So I am giving it away.]*\n\n*[Whoever holds this when the last lamp in the Hall goes out: the Vane platter is yours. It is empty and nearest the fire. Every dusk they set a loaf on it for a man who did not live to burn, and every night here begins with that loaf. You know now who opened the door. You know the cup came back lighter. You do not know where the rest of it went, and neither do I, but it went inland, and the rumours come back on the sour nights, and the fog is coming in now under the Counting-House door. I can hear the Aboyeur in the Hall. He is carrying the loaf. He is not calling a name. He is walking toward the platter, and when he sets it down the night will begin, and the first thing that happens in it is always a death, and tonight I think it will be]*",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    }
+   ]
+  },
+  {
+   "slug": "a-lamplighter-s-round-of-hollowmere",
+   "path": "05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere.md",
+   "title": "A Lamplighter's Round of HollowMere",
+   "folder": "05_Worldbuilding",
+   "type": "worldbuilding",
+   "mode": "epic-fantasy",
+   "genre": [
+    "frontier-gothic",
+    "gazetteer",
+    "world-bible"
+   ],
+   "status": "draft",
+   "pov": "third-person close (the Lamplighter)",
+   "tense": "past",
+   "themes": [
+    "light-and-dark",
+    "company-power",
+    "rumour",
+    "the-will",
+    "labour"
+   ],
+   "words": 4755,
+   "blurb": "the gazetteer of HollowMere walked as the Lamplighter's dusk round, in three rings: every scene, the four back rooms of Crumb's Ovens and every Bible building, each given its light, what stands there and what the town says, ending as she raises the pole to the last lantern.",
+   "scene": null,
+   "passages": [
+    {
+     "n": 1,
+     "heading": "Kept at dusk, Coldwater Territory, 1893.",
+     "lines": [
+      20,
+      30
+     ],
+     "words": 219,
+     "text": "> \"You light the lanterns that keep the wolves off the square.\"\n> — the Lamplighter's card\n\n> \"Only the Lamplighter's lanterns may be lit.\"\n> — Articles of the Line, Schedule B: Curfew Hours\n\nThe Saloon bell went at dusk the way it always went, flat and quick, a bell that wanted to be done. The train stood at the platform with steam up and its doors still open. She took the can from its hook, the wick-pole from behind the door and the short ladder from the wall, and went out by the back way, because the round began where the oil was.\n\nCurfew in HollowMere does not fall at an hour. It falls when the train leaves. After that, by the Company's own paper, the only lawful light in the town is hers.\n\nShe had kept the round long enough to know it was a list, and every list in HollowMere is a list of what the Company owns. She kept this one anyway, lantern by lantern, in her head and under her breath. A number, said low. A hand on the post to light it. A hand on the post again to leave it. Two touches, every post, every night. She could not have said where she learned that. She had never once skipped it.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 2,
+     "heading": "Kept at dusk, Coldwater Territory, 1893.",
+     "lines": [
+      32,
+      34
+     ],
+     "words": 37,
+     "text": "The Company paid her in scrip, by the lantern lit. A lantern left dark was docked. That was the whole of her contract, and she understood it better than most people in the town understood theirs.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 3,
+     "heading": "The Drowned Lantern, back room — tavern_back",
+     "lines": [
+      48,
+      48
+     ],
+     "words": 52,
+     "text": "She filled the can to the seam and no further. A full can slopped on the ladder, and slopped oil was docked like any other. Through the wall the saloon was getting louder. She did not hum. She had never hummed at this barrel, and she had never asked herself why not.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 5,
+     "heading": "The Drowned Lantern — tavern_bar",
+     "lines": [
+      58,
+      58
+     ],
+     "words": 80,
+     "text": "She read the circle on the chart the way she read it every dusk, with her thumb under it. Low water early tonight. The Fenwood path held at low water and did not hold otherwise, and that one circle of ink decided how far her round went. A man at the bar said the wolves were bad this week. She said they were at the fence already, which was true, and went out the front to see the train go.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 6,
+     "heading": "The platform — overworld.platform",
+     "lines": [
+      68,
+      68
+     ],
+     "words": 76,
+     "text": "The train went at dusk and did not wait; it had never waited for anyone. She stood with the pole up and watched the back car pass, the car the coffins ride out in, the conductor's lamp swinging at its rail. Then there was only the sound of it going into the pines toward the Gallows Wood siding, and then not that. *One.* Touch. Light. Touch. Behind the train the town closed, without anyone closing it.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 7,
+     "heading": "The platform — overworld.platform",
+     "lines": [
+      70,
+      80
+     ],
+     "words": 201,
+     "text": "**The railyard and its workbench — no id (not a scene)**\n\n**Light:** None. A Company padlock on the gate, and a second Company padlock on the first one's chain.\n\n**What stands:** A workbench under a tin roof, a vise, a rack of files. Lead and gunpowder off the morning train, stacked by weight. Freight crates stencilled for return to Thorne Junction.\n\n**What the town says:** That some crates come in heavier than they go out. That some go out with a person in them. That a person in a crate can read the Baron's manifest through the slats, if the platform lantern is lit.\n\nShe had heard that one. It was not why she lit the platform first. She lit it first because it was first. But she had heard it.\n\nFour lanterns stand on the square, one at each corner of what the town calls a square and what is really the place where four roads give up. She lit them in her own order, counting on from the platform. *Two.* *Three.* *Four.* The fourth lantern of the square, the one over the chalk by the well, she left. She always left it. She always came back to it last.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 9,
+     "heading": "Hollowmere, the square — overworld",
+     "lines": [
+      90,
+      98
+     ],
+     "words": 162,
+     "text": "The wolves were at the fence. She did not look at them, and they did not come closer than the light, which was the arrangement. Across the square, under the bell, the Tribunal's bench stood out in the open with a tarpaulin over it against the fog.\n\n**The Tribunal and the gallows at the Bell — no id (not a scene)**\n\n**Light:** None. Nothing here is lit at night.\n\n**What stands:** The Tribunal's bench under the bell. Three verdicts painted on a board for those who cannot read: Acquittal. A Heavy Fine. Death. Behind the bench, the gallows, its trapdoor bolted, its rope taken in at dusk. Crows along the beam.\n\n**What the town says:** That the last man through the trap went unnamed in the Gazette, because his name could not be verified. That some evenings a stranger off the train comes and stands under the beam as if waiting to be chosen. That the crows know a day before anyone.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 10,
+     "heading": "Hollowmere, the square — overworld",
+     "lines": [
+      100,
+      108
+     ],
+     "words": 161,
+     "text": "She had known the last man only by his whistle. He had whistled at her ladder most evenings that autumn, two notes, up and down, the way you whistle at a dog you are fond of. He had the hands of a man who mended boots, or who once had. He had never said his name and she had never asked it, and now nobody would print it. She went past the beam without looking up. The crows walked along it to keep her in sight.\n\n**The Well Ladder — no id (not a scene)**\n\n**Light:** The square's fourth lantern stands over it, unlit.\n\n**What stands:** The well: a stone lip, a windlass, a bucket. Below where the bucket stops, iron rungs set into the shaft, going down to the Undercroft under St Brannock's.\n\n**What the town says:** That whoever does it washes at the well afterwards. That the rungs were the Company's idea, or Father Bray's, or older than both.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 11,
+     "heading": "Hollowmere, the square — overworld",
+     "lines": [
+      110,
+      118
+     ],
+     "words": 155,
+     "text": "She did not look down the well. That was another habit. Across the lane the Post Office window was lit.\n\n**The Post Office & Telegraph Room — no id (not a scene)**\n\n**Light:** A window, past curfew. Not hers. Against Schedule B.\n\n**What stands:** Mailbags, emptied and hung on pegs. The sorting frame. The telegraph key on a table of its own, behind a rail. A kettle on the stove. The Gazette is opened here every morning, and read here first.\n\n**What the town says:** That envelopes are steamed over that kettle before they are sorted. That some mornings there is black wax in a bag, and that the man it is meant for has a choice between burning it and keeping his life the size it was. That word of Vane's death came over that key before any ferry could have carried it; or that it came by rumour, which keeps its own timetable.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 12,
+     "heading": "Hollowmere, the square — overworld",
+     "lines": [
+      120,
+      130
+     ],
+     "words": 145,
+     "text": "She did not report the window. She did not report lights. Nobody had ever asked her to in so many words, and she had decided long ago not to hear it asked in fewer.\n\n**The Constable's Office & Morgue — no id (not a scene)**\n\n**Light:** None.\n\n**What stands:** A desk. Iron cuffs and a riot whistle on nails. Through the back, a slab, empty and scrubbed, and a trestle beside it waiting for whatever rides out next in the back car.\n\n**What the town says:** That an empty slab in HollowMere is a forecast and not a mercy. That the one who opens the dead here can tell the hour a man died, and that it is the hour, more than the knife, that hangs people.\n\nThe lane narrowed toward the apothecary. Doc Mallory's shutters were across. Above them, the loft window was green.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 14,
+     "heading": "The apothecary loft — apoth_loft",
+     "lines": [
+      148,
+      148
+     ],
+     "words": 32,
+     "text": "She noted the green the way she noted all of them, and walked on to the Widow's house, where the crepe on the knocker had gone grey with three nights of fog.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 16,
+     "heading": "Widow Vane's bedroom — widow_bedroom",
+     "lines": [
+      166,
+      166
+     ],
+     "words": 46,
+     "text": "She stood under the window a moment. She had passed it every round since the will was read, and the town said that was three nights, and she had passed it more often than three times. The candle did not move. She did not report it.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 17,
+     "heading": "Crumb's Ovens — bakery",
+     "lines": [
+      176,
+      176
+     ],
+     "words": 27,
+     "text": "Down the bakery yard the four back rooms each had a window on her side, and the round had never found a reason to skip a window.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 18,
+     "heading": "Crumb's Ovens — bakery",
+     "lines": [
+      178,
+      192
+     ],
+     "words": 183,
+     "text": "**The cold room — no id frozen (round 7 room)**\n\n**Light:** None.\n\n**What stands:** A door to the bakery. The station: butter and lard on blocks of ice cut from the mere, under sacking. A hiding spot behind the sacking, deep enough for a child or a thin man. A clue spot at the sill, where flour lies thin enough to take a handprint.\n\n**What the town says:** That the mere's ice keeps too long. That things put down on it come up looking exactly as they went down.\n\n**The mixing room — no id frozen (round 7 room)**\n\n**Light:** None.\n\n**What stands:** A door to the bakery. The station: the dough trough, scraped clean. A hiding spot under the trough board. A clue spot at the flour sacks, where the dust takes a print of whatever leans on them.\n\n**What the town says:** That Rumour Loaves are mixed here, with a slip inside, and that a slip baked into bread is harder to call a lie than one pinned to a board. That whatever is written on it hardens in a day.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 19,
+     "heading": "Crumb's Ovens — bakery",
+     "lines": [
+      194,
+      206
+     ],
+     "words": 165,
+     "text": "**The oven room — no id frozen (round 7 room)**\n\n**Light:** The oven mouth, banked.\n\n**What stands:** A door to the bakery. The station: the clay oven Vane's men built behind the tents before there was a town, which the bakery was raised around afterwards. A hiding spot in the wood bay. A clue spot at the ash pit, raked each dawn.\n\n**What the town says:** That a gold coin was once left on the peel as a tip, and nothing taken but bread. That the oven is older than the town and will be warm after it.\n\n**The proofing room — no id frozen (round 7 room)**\n\n**Light:** None.\n\n**What stands:** A door to the bakery. The station: slatted shelves under linen, and on the top shelf Tamsin's crock, fed one spoon at a time on the island's hour. A hiding spot behind the linen racks. A clue spot at the crock's lid, where a seal of wax would show who had lifted it.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 20,
+     "heading": "Crumb's Ovens — bakery",
+     "lines": [
+      210,
+      210
+     ],
+     "words": 28,
+     "text": "Past the bakery the lane gave out into planks, and the planks gave out into pines. She lit the post at the wood's edge. *Five.* Touch. Light. Touch.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 21,
+     "heading": "Gallows Wood — forest",
+     "lines": [
+      220,
+      220
+     ],
+     "words": 76,
+     "text": "From the end of the planks she could see the marsh. Fennick's light stood at the marsh edge, low and steady. Further out were other lights, which were not steady. Harbourmaster Pell's skiff was pulled up at the dock with a stone in it, and Tuck's ferry pole lay along the boards. Some nights she had stood here and not known which light was Fennick's. Tonight she knew, because one of the others was coming nearer.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 22,
+     "heading": "The Tin Gallery mouth — cave_entry",
+     "lines": [
+      230,
+      232
+     ],
+     "words": 55,
+     "text": "She did not light the dark places. That was not a habit; that was the contract. But she stood at the mouth for the space of a breath, because Jory Kitto had paid for his own oil, and someone should.\n\nOn the way back up the lane she met the Watchman at the Constable's corner.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 23,
+     "heading": "The Tin Gallery mouth — cave_entry",
+     "lines": [
+      234,
+      234
+     ],
+     "words": 3,
+     "text": "\"Quiet,\" he said.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 24,
+     "heading": "So far.",
+     "lines": [
+      238,
+      250
+     ],
+     "words": 157,
+     "text": "He had chosen his door for the night. She could see it in how he stood, already leaning toward it. She did not ask which. He did not say. It was not a thing people said in HollowMere after the train had gone.\n\n---\n\n## Ring Two: Mill & Bank, and Manor Rise\n\n*On nights when there are fewer of us, these doors are boarded. Tonight they are open.*\n\nThe Rise went up from the square past the bank, and the channel ran down from it past the mill. The town did not know why the boards went up some nights and not others. It knew only that when there were fewer people at the wake table, there were more boards, and it had stopped asking which came first.\n\n**The Company Bank & Vault — no id (not a scene)**\n\n**Light:** None. A Company padlock. A guard's stool at the door, empty, with a cushion on it.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 25,
+     "heading": "So far.",
+     "lines": [
+      256,
+      262
+     ],
+     "words": 89,
+     "text": "**The Baron's study — no id (not a scene)**\n\n**Light:** None. Kept dark for a man who comes only by train.\n\n**What stands:** Above the bank, up a stair with its own lock. A desk nobody sits at. A chair turned to the window that faces the line.\n\n**What the town says:** That Cornelius Thorne comes when the town riots, with Pinkertons and their dogs. That the room is aired the day before he comes, so that somebody always knows first; and that whoever airs it is not saying.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 26,
+     "heading": "So far.",
+     "lines": [
+      264,
+      272
+     ],
+     "words": 119,
+     "text": "**The Waterwheel Lumber Mill & loft — no id (not a scene)**\n\n**Light:** None.\n\n**What stands:** The waterwheel on the drained-lake channel. The saw floor. The plank stack. Above, the loft, with straw pallets in rows.\n\n**What the town says:** That debt walks to the mill. That the Indebted sleep in the loft and are counted in the morning. That the wheel turns a little when the mere's tide runs, with no hand on it. That a fire has been promised here, by someone, for a long time.\n\nShe heard the wheel go over once as she passed, a slow wet turn, and stop. The circle on the chart had said low water. She went faster up the Rise.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 29,
+     "heading": "Hale Barn — barn",
+     "lines": [
+      298,
+      298
+     ],
+     "words": 64,
+     "text": "Behind the barn the Rise fell away to the marsh, and the marsh path went into the Fenwood on the mud the low water had left. She took it as far as the circle allowed and not a step further. She had no post to light there. She went because the round was the round, and because a list kept is a list complete.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 30,
+     "heading": "The Fenwood — forest_deep",
+     "lines": [
+      308,
+      308
+     ],
+     "words": 68,
+     "text": "She stood at the end of the dry mud and looked at it the way she looked at the others, as a light she had not lit. She thought, as she thought here every night, that a lantern that wanted no oil and no hand would never be docked. She did not envy it. Then the water began to come back over her boot soles, and she turned.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 32,
+     "heading": "Tonight these doors are boarded.",
+     "lines": [
+      324,
+      324
+     ],
+     "words": 44,
+     "text": "She came home by St Brannock's, because St Brannock's was on the way home. Company men had nailed the boards up in the afternoon; the nail heads were still bright. There was nothing for her to light here. She came anyway, for the list.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 33,
+     "heading": "St Brannock's — chapel",
+     "lines": [
+      334,
+      334
+     ],
+     "words": 55,
+     "text": "She lifted the pole until its flame was level with the stone. Then she looked at the bell instead, and lowered it. There are two kinds of knowing in HollowMere, and only one of them can be put off by not looking. She did not know which kind this was. She did not find out.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 34,
+     "heading": "The Undercroft — cellar",
+     "lines": [
+      344,
+      344
+     ],
+     "words": 61,
+     "text": "She crossed back to the square. At the well she heard feet on the rungs below: one, and then another, slow, the way someone climbs who does not want to be heard climbing. Mere-rot makes false footsteps. Everyone knows that. She did not go to the lip, and she did not call down. The steps stopped. They did not start again.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 36,
+     "heading": "The Fourth Lantern",
+     "lines": [
+      350,
+      350
+     ],
+     "words": 84,
+     "text": "The wolves were at the fence. Three lanterns burned on the square, and the platform behind her, and the post at the wood's edge, and the gatepost on the Rise. Six. She shook the can and heard the last of the oil move in it. If this post stayed dark, the scrip for it would be docked. The will was in her head, as it was in everyone's. The chalk was under her boots. She put her hand on the post: the first touch.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 37,
+     "heading": "Light:",
+     "lines": [
+      360,
+      360
+     ],
+     "words": 4,
+     "text": "She raised the pole.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    }
+   ]
+  },
+  {
+   "slug": "the-hollowmere-gazette-morning-edition",
+   "path": "05_Worldbuilding/10_The_HollowMere_Gazette_Morning_Edition.md",
+   "title": "The HollowMere Gazette, Morning Edition",
+   "folder": "05_Worldbuilding",
+   "type": "worldbuilding",
+   "mode": "horror-prose",
+   "genre": [
+    "frontier-gothic",
+    "found-document",
+    "horror"
+   ],
+   "status": "draft",
+   "pov": "first-person (marginalia)",
+   "tense": "present",
+   "themes": [
+    "rumour",
+    "complicity",
+    "verification",
+    "debt",
+    "the-press"
+   ],
+   "words": 1190,
+   "blurb": "the front-page proof of Thursday 7 December 1893, on which the compositor's pencil traces the gravestone's name, Ada Brook, through the lost-and-found, the rent arrears, the wake order and the Bandit's wanted notice, and strikes and restores her.",
+   "scene": null,
+   "passages": [
+    {
+     "n": 1,
+     "heading": "The HollowMere Gazette, Morning Edition",
+     "lines": [
+      18,
+      20
+     ],
+     "words": 11,
+     "text": "*Proof, front page, forme one. The pencil is the compositor's.*\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 2,
+     "heading": "THE HOLLOWMERE GAZETTE",
+     "lines": [
+      24,
+      30
+     ],
+     "words": 70,
+     "text": "**MORNING EDITION.** Thursday, 7 December 1893.\n\nPrinted at the Eastern Office for the Thorne & Expanse Line. Carried by the Daily Train. Delivered sealed. The property of the Company until read.\n\n**THE GAZETTE PRINTS THE SECRETS OF THE PREVIOUS DAY, AS ARE FOUND OUT. IT PRINTS NO NAME THAT HAS NOT BEEN VERIFIED. WHERE A NAME IS NOT VERIFIED, A BLANK IS LEFT, AND THE TOWN MAY SUPPLY IT.**\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 3,
+     "heading": "I. THE STONE",
+     "lines": [
+      34,
+      34
+     ],
+     "words": 8,
+     "text": "The stone with tomorrow's date reads, as wired:",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 4,
+     "heading": "~~ADA BROOK~~",
+     "lines": [
+      38,
+      42
+     ],
+     "words": 27,
+     "text": "The Gazette reports the stone. It does not account for it.\n\n> *9.40. Stet, wire copy. Two words and a disclaimer. Easiest inch on the page.*\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 5,
+     "heading": "II. LOST & FOUND",
+     "lines": [
+      46,
+      55
+     ],
+     "words": 116,
+     "text": "FOUND, on the platform, at the Station Rush: a child's tin whistle, dented. Apply at the Post Office.\n\nFOUND, by the workbench in the railyard: a ticket-punch die, star pattern. It is not the Conductor's. Apply at the Post Office.\n\n~~LOST, between the pump and the platform, Monday, at the Station Rush: a scarf, grey wool, darned in red at one end where the moth had it. It was her mother's. The finder may have a loaf a week from her until Christmas. Ada Brook, Mill Row, third door. She will pay in bread.~~\n\n> *10.05. Brook. Same name as col. I.*\n> *A common name. There are two of everything in a mill town.*\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 6,
+     "heading": "III. COMPANY RENT RATES",
+     "lines": [
+      59,
+      65
+     ],
+     "words": 41,
+     "text": "Schedule A, as posted. The Clerk collects at the Midday Shift.\n\n| Row | Per bed, per week |\n|---|---|\n| Mill Row | 1.10 scrip |\n| Pump Row | 1.25 scrip |\n| Railyard bunks | 0.90 scrip |",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 7,
+     "heading": "Entered as Indebted, as of Wednesday's Midday:",
+     "lines": [
+      69,
+      78
+     ],
+     "words": 78,
+     "text": "- BROOK, A. Mill Row, third door. Two weeks. To the Mill at Midday.\n- COTTER, I. Settled. Departed by the Line.\n- HADDON, B. Pump Row. One week. Warned.\n- PIKE, S. (deceased). The account passes to the household.\n\n> *10.20. Mill Row, third door. Col. II says third door.*\n> *One woman.*\n> *Wired the night desk at H.M.: IS ADA BROOK LIVING. Thirty cents, out of my own pocket. My own rent is Friday.*\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 8,
+     "heading": "IV. NOTICES",
+     "lines": [
+      82,
+      90
+     ],
+     "words": 155,
+     "text": "**The Company.** Curfew runs from the departure of the Daily Train at Dusk until the Station Rush. The Midday Rent is collected at the Shift, in person, and in scrip. Coin is scrip until proven otherwise.\n\n**The Apothecary.** Doc Mallory gives notice that the fen-cough is in the Rows again. It is not catching. Keep the windows shut against the mere. The Company asks that the word be *miasma*.\n\n**St Brannock's.** The Vicar preaches at dusk. Enquiries regarding Father Bray: none answered.\n\n**The Lamplighter.** The light in the Fenwood was seen again on Tuesday. The Company has not lit it. Do not follow it.\n\n**The Vane Holdings.** The Company gives notice that no claim under the will of the late Lord Aldous Vane will be heard from any person who believes himself to be among those who remain, until the question of the last lantern is settled. The lanterns within the Grant are the Company's.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 9,
+     "heading": "IV. NOTICES",
+     "lines": [
+      92,
+      98
+     ],
+     "words": 62,
+     "text": "**STOP-PRESS.** *Received by wire, H.M. night desk:* ADA BROOK LIVING STOP AT MILL STOP STONE IS RUMOUR STOP GAZETTE PRINTS NOTHING UNVERIFIED\n\n> *12.15. Living. Then the stone isn't verified, and the Rule is the Rule.*\n> *Struck her from col. I. Set a blank in her place. — 7.*\n> *There. Now she's only a woman who lost a scarf.*\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 10,
+     "heading": "V. THE DAILY TRAIN",
+     "lines": [
+      102,
+      119
+     ],
+     "words": 112,
+     "text": "Conductor of record: A. Pruett, No. 14.\n\n| Station | Down | Up |\n|---|---|---|\n| Thorne Junction | Day | Dusk |\n| Widow's Cut | Day | Dusk |\n| Gallows Wood Siding | on signal | on signal |\n| HollowMere | Day | Dusk |\n\n**Inbound, Car 2.** Flour, Crumb's Ovens. Whiskey, the Drowned Lantern. Tonics, the Morgue. Lead and powder, the railyard. Mail, one bag. Gazette, one bundle, sealed.\n\n**Outbound at Dusk, Car 3.** Coffin, one. Consigned from Mill Row. Name not entered.\n\n> *12.40. Not entered.*\n> *A blank. Not mine, though. Theirs.*\n> *They book ahead in winter. A Company booking. Set as wired.*\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 11,
+     "heading": "VI. CLASSIFIED",
+     "lines": [
+      123,
+      131
+     ],
+     "words": 112,
+     "text": "**CRUMB'S OVENS.** Wake loaves for Mill Row, after the island custom: one for each mourner and three for the dead, each with its crumb token under wax. Ten ordered. Paid in full, in scrip, on Tuesday by A. Brook, who asks that the Row not be charged.\n\n**WANTED,** at Hale Barn: a girl to mind a goat. Must not be afraid of the pelt on the door.\n\n> *1.05. Paid Tuesday. That was before the stone.*\n> *She has the cough, then. See col. IV. A woman with the cough looks at Christmas and pays ahead. People do.*\n> *Box it in mourning rule, house style for a death already notified.*\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 12,
+     "heading": "THE BANDIT",
+     "lines": [
+      137,
+      153
+     ],
+     "words": 109,
+     "text": "For the score at Crumb's Ovens, Monday night. The till was emptied. One gold coin was left on the counter, as a tip.\n\nThe Company's three particulars:\n\n- **Height:** short, by the bootprint in the spilt flour.\n- **Scarf:** grey wool. Thread found caught on the till.\n- **Hat:** none recovered.\n\n**Name:** ____________. Unverified. The Town may supply it.\n\n> *1.30. Grey wool. → col. II.*\n> *Not the cough. Not settled at all. The Bell, then the trap.*\n\n> *1.32. Pull col. II. Refund her the scrip.*\n> *Kill the inch with a rule. If her scarf isn't on the page they can't lay it beside this.*\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 13,
+     "heading": "VIII. YESTERDAY'S SECRETS",
+     "lines": [
+      157,
+      167
+     ],
+     "words": 109,
+     "text": "As found out, Wednesday:\n\n- ______ of Pump Row struck ______ at the Drowned Lantern over a hand of cards, and paid for neither the glass nor the eye.\n- ______ owes the Company Store eleven scrip and has stopped buying salt.\n- ______ has been seen at the fence after curfew, feeding something through it.\n- A woman of Mill Row, name withheld, asked at the Post Office after a grey scarf darned in red. She was told nothing had been handed in. She asked twice. ______.\n\n> *1.50. Verified copy. Can't pull it. It's what we're for.*\n> *The town was there. They heard her ask.*\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 14,
+     "heading": "IX. FROM THE LINE",
+     "lines": [
+      171,
+      177
+     ],
+     "words": 27,
+     "text": "*Received on the up-train's wire, and printed without comment.*\n\nBlackPine: a name chalked out on the tally board, shift unknown.\n\nPort-au-Levain: the ferry did not cross.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 15,
+     "heading": "X. TOWN MOODS",
+     "lines": [
+      181,
+      192
+     ],
+     "words": 92,
+     "text": "Square: Calm. The Drowned Lantern: Calm. Pump Row: Panicked. Mill Row: Entranced.\n\n---\n\n> *3.55. Col. I. Stet. Dots under.*\n> *A blank is a blank they fill. Better mine than theirs.*\n> *Col. I standing. Tomorrow's wire at nine.*\n> *— 7. Forme to the train.*\n\nNext edition: tomorrow, by the Daily Train.\n\n**THE GAZETTE PRINTS THE SECRETS OF THE PREVIOUS DAY, AS ARE FOUND OUT. IT PRINTS NO NAME THAT HAS NOT BEEN VERIFIED. WHERE A NAME IS NOT VERIFIED, A BLANK IS LEFT, AND THE TOWN MAY SUPPLY IT.**",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    }
+   ]
+  },
+  {
+   "slug": "mrs-grieves-s-tab-book",
+   "path": "05_Worldbuilding/11_Mrs_Grieves_s_Tab_Book.md",
+   "title": "Mrs Grieves's Tab Book",
+   "folder": "05_Worldbuilding",
+   "type": "worldbuilding",
+   "mode": "epic-fantasy",
+   "genre": [
+    "frontier-gothic",
+    "found-document",
+    "ledger"
+   ],
+   "status": "draft",
+   "pov": "first-person (document voice)",
+   "tense": "present",
+   "themes": [
+    "debt",
+    "memory",
+    "grief",
+    "the-tavern",
+    "rumour"
+   ],
+   "words": 2858,
+   "blurb": "the Drowned Lantern's fourth tab book, 16 October to 20 November 1893: house rules, the three pours, dated pages headed by the scrip rate, the low water and the gravestone's name, the back pages on the photographs, the oil barrel and the drowned barman's line she will not close.",
+   "scene": null,
+   "passages": [
+    {
+     "n": 2,
+     "heading": "Flyleaf",
+     "lines": [
+      22,
+      32
+     ],
+     "words": 48,
+     "text": "**THORNE & EXPANSE LINE**\n**~~RUSTY~~ LANTERN SALOON**, *with* DROWNED *written over the strike in ink*\n**ACCOUNTS RECEIVABLE**\n*All accounts in Company Scrip, at the morning rate.*\n\nUnder the print, in her hand:\n\n> Not all accounts.\n> Fourth book. Opened Monday, 16 October 1893. Kept by me.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 3,
+     "heading": "House Rules",
+     "lines": [
+      36,
+      44
+     ],
+     "words": 121,
+     "text": "1. I open a tab. Nobody opens one by asking.\n2. No tab for anyone the Clerk has entered Indebted. That holds after noon. Before noon I have not heard.\n3. A tab closes three ways: paid, the back car, or me.\n4. A closed tab stays closed. It does not pass to the wife, the lodger or the Company. The Company says an account survives a man. A tab is not an account.\n5. Nobody drinks on the barman's line.\n6. Nobody leaves after the whistle who has far to go. There are rooms upstairs. The Company sets the price of them.\n7. What is said over Loose Lips stays in this book. The Gazette can find its own.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 4,
+     "heading": "The Pours",
+     "lines": [
+      48,
+      60
+     ],
+     "words": 159,
+     "text": "**Rotgut: ¼ a pour.**\nThe cheapest thing on the train and the commonest thing in the glass. Four cases a day, when the train is honest. Men drink it after the Shift and do not talk.\n*What a day costs.*\n\n**Liquid Courage: ¾ a pour.**\nDrunk before something: before the Clerk, before the Bell, before the ticket window. Nobody drinks a second one. A second one is Rotgut, whatever the bottle says.\n*What a door costs.*\n\n**Loose Lips Lager: ½ a pour.**\nIt comes up in the same car as the whiskey and tastes of the trip. What is said over it is said to me, then to the room, and by morning it has a man's name on it and a price somebody would pay. I don't buy it. I don't sell it. I write down that it was said.\n*What a name costs.*\n\nThe price of a pour does not move. The rate on the board does.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 5,
+     "heading": "The Pours",
+     "lines": [
+      64,
+      77
+     ],
+     "words": 126,
+     "text": "## Brought Forward\n*from the third book*\n\n| Line | Owing | |\n|---|---|---|\n| *[a small lantern, drawn in ink]* | ¾ | Carried. See the back. |\n| BRAY, Fr. | 2¼ | Open. |\n| ARTHUR | — | Closed. Back car. Last winter. |\n\n> Father Bray. Died or ran. They say both in here, and they say it louder after the second pour. I will not close a tab on a guess.\n\n> Arthur. His brother puts a Rotgut on the closed line every week, in Arthur's name, and drinks it himself. I take the scrip. Some weeks he writes a letter to his Ma at the end of my bar. I don't look to see whose name he signs.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 6,
+     "heading": "Monday, 16 October 1893",
+     "lines": [
+      83,
+      95
+     ],
+     "words": 140,
+     "text": "| Name | Pours | Owing | |\n|---|---|---|---|\n| *[the lantern]* | — | ¾ | Carried. |\n| LEN | Rotgut ×2 | ½ | Pays Fridays. |\n| RUDD, JACK | Rotgut ×3 | — | Settled in kind. |\n| CLEM | Loose Lips ×2 | 1 | |\n| ERNIE | Pump water | — | No charge. |\n| PIKE, STAN | Liquid Courage | ¾ | For the cough. |\n| COTTER, IVY | Liquid Courage | — | Against the house. |\n| MAUD | Rotgut | — | Paid in darning. |\n| ARTHUR | Rotgut | — | Paid. |\n\n> Jack Rudd brought me a bottle off the whiskey and called it a tariff. The train will have a case down as short today. I know which case. Settled.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 7,
+     "heading": "Monday, 16 October 1893",
+     "lines": [
+      97,
+      105
+     ],
+     "words": 173,
+     "text": "> Stan calls it a cold. It has been a cold since the thaw. Liquid Courage is not for a cough, and he knows it. He says it works on the part of him that minds.\n\n> Ivy Cotter sat over her glass and did not touch it till near the whistle. Her fare was in a twist of paper, and she counted it out on my bar twice and would not spend a coin of it. She sews for the mill. Evenings she sits in the dark to save the wick. I put her pour against the house. Don't tell them.\n\n> Maud darned Bar's cuff and the pocket of my apron. She will not take a pour as a gift. She takes it as a wage. Paid.\n\n> Ernie asked Clem where the train goes after us. Clem reads everything and did not know.\n\n> Wilf played for his pour tonight like any night, key of G. If he'd been up the hill to look, he did not say. Nobody says.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 9,
+     "heading": "Wednesday, 18 October 1893",
+     "lines": [
+      113,
+      124
+     ],
+     "words": 173,
+     "text": "| Name | Pours | Owing | |\n|---|---|---|---|\n| *[the lantern]* | — | ¾ | Carried. |\n| COTTER, IVY | — | — | Gone east. Owes nothing. |\n| THE VICAR | Liquid Courage ×3, for others | — | Paid. |\n| LEN | Rotgut ×3 | ~~¾~~ ½ | Dora's sum. |\n| FINCH, DORA | Loose Lips | — | Paid. |\n| FRANK | Rotgut ×2 | ½ | Barred. |\n\n> The new Vicar came off yesterday's train and was in here by tonight. He drinks nothing. He bought three Liquid Courage for three men who each wanted one and could not run to it, and he sat a while with each. Everyone confesses to him sooner or later. At my bar, sooner.\n\n> Dora Finch read my sums upside down across the bar, the way she does, through her spectacles mended with thread. She found a quarter too much on Len's line and made me strike it. Len owes less because of her.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 10,
+     "heading": "Wednesday, 18 October 1893",
+     "lines": [
+      126,
+      128
+     ],
+     "words": 55,
+     "text": "> Frank said a thing about the girl Nell's fever. I will not write it in my own book. Bar had him out the door before I had my hand off the tap. A stool went, and so did one of Frank's teeth. Frank's line stays open. He owes me ½ and a stool.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 11,
+     "heading": "Saturday, 21 October 1893",
+     "lines": [
+      134,
+      146
+     ],
+     "words": 144,
+     "text": "| Name | Pours | Owing | |\n|---|---|---|---|\n| *[the lantern]* | — | ¾ | Carried. |\n| WILF | — | — | Closed. Back car. |\n| FINCH, DORA | — | — | Closed. Back car. |\n| FRANK | — | ½ | Open. Not in since. |\n| CLEM | Loose Lips ×3 | 1½ | |\n\n> Wilf. Played for his pours, key of G, and never once asked the house to sing along. The mouth-organ went in with him.\n\n> Dora Finch. The last sum she did in this house was in Len's favour. Len stood at the window when the back car went and did not drink after.\n\n> Percy had no line. Children don't have one. He came in on Tuesdays for Ernie, with three marbles, and he would not play for keeps.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 12,
+     "heading": "Saturday, 21 October 1893",
+     "lines": [
+      148,
+      152
+     ],
+     "words": 60,
+     "text": "> Mr Thorne came in on Friday's train, with the town rioting and the dogs first off. He did not come in here. The dogs came as far as the shutters.\n\n> Clem read us yesterday's Gazette. It has the fight at the Lantern, and it has it wrong. It does not say what Frank said. Neither do I.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 13,
+     "heading": "Monday, 13 November 1893",
+     "lines": [
+      158,
+      171
+     ],
+     "words": 173,
+     "text": "| Name | Pours | Owing | |\n|---|---|---|---|\n| *[the lantern]* | — | ¾ | Carried. |\n| PIKE, STAN | Rotgut ×4, Liquid Courage | — | Paid all. |\n| LEN | Rotgut ×2 | ½ | |\n| ERNIE | Pump water | — | Paid, by Stan. |\n| RUDD, JACK | Rotgut | — | In kind. |\n| MAUD | Rotgut | — | In darning. |\n| ARTHUR | Rotgut | — | Paid. |\n| FRANK | — | ½ | Open. |\n\n> Stan paid all, which he never does. He paid the ¾ from the sixteenth of October as well. He stood Len a round. He paid a quarter for Ernie's water, which is no charge, and I let him.\n\n> He coughed less tonight than at any time since the thaw, and he laughed at that. He said the cold was going. He said he'd been up the hill this morning, and then he said he hadn't. Then Len sang.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 14,
+     "heading": "Monday, 13 November 1893",
+     "lines": [
+      173,
+      175
+     ],
+     "words": 37,
+     "text": "> They say a box went down the line in the back car, a Monday in October, with a thimble on a string in it. I wrote Gone east against Ivy Cotter. I leave it written.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 15,
+     "heading": "Wednesday, 15 November 1893",
+     "lines": [
+      181,
+      191
+     ],
+     "words": 145,
+     "text": "| Name | Pours | Owing | |\n|---|---|---|---|\n| *[the lantern]* | — | ¾ | Carried. |\n| PIKE, STAN | — | — | Closed. Back car, Tuesday, Dusk. |\n| BAR | Rotgut ×9, Tuesday, \"for the strike\" | 2¼ | His own line. |\n| BAR | Shells, two, off the train | ½ | His own line. |\n| FRANK | — | ½ | Open. |\n\n> Stan. Len sang him spike-time at the back car. Ernie held his cap. The cough had stopped Monday night. I don't know what time.\n\n> Tuesday was not kept. Shutters up by four, square full, Bell going. Bar stood the platform crew nine Rotgut \"for the strike\". I asked him whose strike. He said the one we're having. He told me to put it on his own line, and I did.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 16,
+     "heading": "Wednesday, 15 November 1893",
+     "lines": [
+      193,
+      197
+     ],
+     "words": 50,
+     "text": "> Tuesday night the back room was let to \"the Burial Club\". Twelve came. Nobody was buried.\n\n> Wednesday, Mr Thorne again, dogs first again. Bar cleaned the sawed-off on the counter while the dogs went past the shutters. He did not look at them. They looked at him.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 17,
+     "heading": "Saturday, 18 November 1893",
+     "lines": [
+      203,
+      216
+     ],
+     "words": 204,
+     "text": "| Name | Pours | Owing | |\n|---|---|---|---|\n| *[the lantern]* | — | ¾ | Carried. |\n| MAUD | Rotgut | — | Paid in darning. |\n| THE VICAR | — | — | Sat with Maud. |\n| A DRUMMER, off the train | Loose Lips ×2 | — | Paid in coin. Scrip till proven. |\n| LEN | Rotgut | ¼ | |\n| FRANK | — | ½ | Open. |\n\n> Maud came in at dusk the same as any night. She darned Bar's other cuff to match the first and asked for her Rotgut as a wage. She said we were square. We are.\n\n> The Vicar sat with her a while. I did not hear what she told him. She did not drink to it.\n\n> A drummer off the train, selling buttons and thread, told me the island tavern pours our three under other names. He said up at BlackPine they keep a man's worth on a log the way I keep it on a line. He said every town at the end of a line drowns its barman sooner or later. I do not believe him. I have written it down.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 19,
+     "heading": "Behind the Bar",
+     "lines": [
+      224,
+      231
+     ],
+     "words": 201,
+     "text": "Six frames. My pencil goes under each one, where the glass stops.\n\n1. A man in an island jersey with a round loaf under his arm. *Sailor. Port-au-Levain. He came over with Mr Vane's people, and drowned at sea back there before any of them came. Mrs Crumb hung him.*\n2. Four men in a flat boat on the lake. *Not sailors. Lake men, from before the drain. They called themselves sailors and I let them. Two went into the mere after it was a mere.*\n3. An empty frame. *Jory Kitto. Tinner. Nobody ever took his likeness. He drowned under a lake that was there and then was not.*\n4. A young man in a stiff collar. *Not a sailor. Nobody. The face came in the frame from back east. People leave sprigs under it all the same.*\n5. The barman, with the sign lantern on its hook beside him. *Never saw a sea. Drowned all the same.*\n6. A face I don't know, water-stained at the corner. *I did not hang this one. Nobody owns to it. It was on the wall one morning, square, with no nail I had put there. It looks like nobody I know yet.*",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 20,
+     "heading": "Behind the Bar",
+     "lines": [
+      234,
+      234
+     ],
+     "words": 18,
+     "text": "*I'm not sure of the one. I count the sixth as drowned because it is on that wall.*",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 21,
+     "heading": "The Back Room",
+     "lines": [
+      238,
+      246
+     ],
+     "words": 109,
+     "text": "The oil barrel. A filling is ½, at the posted rate.\n\n| Who | Fillings | |\n|---|---|---|\n| The Lamplighter | One each dusk | For the square. Hers, then the wolves'. |\n| Old Fennick | One on Saturdays | For his light at the marsh edge. That light. Not the other. |\n| Sundry | By the book | |\n\n> Dip, Monday 13th: 31 gallons. Sold by the book since then: six fillings, which is a gallon and a half. Dip, Wednesday 15th: 28½. A gallon short. Nobody owns to it. I have written it as spill. I will go on writing it as spill.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 22,
+     "heading": "[a small lantern, drawn in ink]",
+     "lines": [
+      252,
+      260
+     ],
+     "words": 158,
+     "text": "He opened the line himself, in his own hand, the first winter the house was a house. He paid it every week. There was only ever one thing on it he did not pay: on the night he went into the mere with the sign lantern in his arms, one Liquid Courage, on the slate. It was the only Liquid Courage he ever put on his own line.\n\nIt is not closed. A tab closes three ways. He did not pay it. The back car did not take him, because there was nothing to send. And I have not closed it. I carry it to the top of every page. Nobody drinks on it.\n\nAt dusk, when he trimmed the sign wick, he hummed the same hymn, and never all the way through.\n\n> Carried forward: one pour, and half a hymn.\n\n> Tuck says the lantern in the Fenwood is lit again. I do not ask who.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 23,
+     "heading": "Bar's Line",
+     "lines": [
+      264,
+      266
+     ],
+     "words": 87,
+     "text": "Bar keeps the sawed-off under the counter and his own line in my book, like anybody. This book has him two ways. In October he had Frank out the door. On the Tuesday he stood the crew a round for the strike and let the back room to men who bury nobody. On the Wednesday he took two shells off the train and cleaned the gun while the dogs went by. He has not told me which way he is going. I have written both down.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 24,
+     "heading": "Monday, 20 November 1893",
+     "lines": [
+      272,
+      287
+     ],
+     "words": 151,
+     "text": "| Name | Pours | Owing | |\n|---|---|---|---|\n| *[the lantern]* | — | ¾ | Carried. |\n| MAUD | — | — | Closed. Back car. Square. |\n| BRAY, Fr. | — | 2¼ | Open. |\n| FRANK | — | ½ | Open. |\n| LEN | Rotgut | ¼ | |\n| RUDD, JACK | Rotgut | — | In kind. |\n| CLEM | Loose Lips | ½ | |\n| ERNIE | Pump water | — | No charge. |\n| ARTHUR | Rotgut | — | Paid. |\n| THE VICAR | Liquid Courage, for Len | — | Paid. |\n| BAR | — | 2¾ | Open. |\n| ________ | Liquid Courage | ¾ | On the slate. |\n\n> Maud went out in the back car at Dusk. The Vicar walked behind it. Bar carried one end.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 25,
+     "heading": "Monday, 20 November 1893",
+     "lines": [
+      289,
+      297
+     ],
+     "words": 134,
+     "text": "> The Company filed its Articles on Friday, at a quarter to twelve or near it. Clem read me the part where an account survives a man: it goes to the household, then to the lodgers, then to them. Maud had no household and lodged with nobody. She was square with me, and I have written her closed. That is the end of what anybody gets of Maud from this book.\n\n> Bar has the sawed-off under the counter. He has not said which way. Nor have I.\n\n> Low water at two minutes past nine. It wants a quarter to it now.\n\n> Somebody has come in off the square after the whistle, from far enough away. New line. Name to follow.\n\n*The line against your name at closing is who you are.*",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    }
+   ]
+  },
+  {
+   "slug": "fourteen-things-left-lying-around",
+   "path": "05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around.md",
+   "title": "Fourteen Things Left Lying Around",
+   "folder": "05_Worldbuilding",
+   "type": "worldbuilding",
+   "mode": "horror-prose",
+   "genre": [
+    "frontier-gothic",
+    "found-document",
+    "horror"
+   ],
+   "status": "draft",
+   "pov": "first-person (the Detective)",
+   "tense": "past",
+   "themes": [
+    "complicity",
+    "the-law",
+    "identity",
+    "cyclical-time",
+    "company-power"
+   ],
+   "words": 4575,
+   "blurb": "a deputised Detective's case file of HollowMere's fourteen standing props, each stamped NO CASE for the Baron's train, whose every entry breaks the rule he used to shelve the last, until the fourteenth thing turns out to be his own bootprints.",
+   "scene": null,
+   "passages": [
+    {
+     "n": 1,
+     "heading": "Fourteen Things Left Lying Around",
+     "lines": [
+      18,
+      30
+     ],
+     "words": 246,
+     "text": "Fourteen things. The Constable wrote them out himself.\n\nHe wrote them on Company paper in a round, slow hand, the hand of a man taught late, and he numbered them down the margin. Then he blotted the list and turned it round on the desk so I could read it.\n\nThe crepe. The clock. The tide chart. The chalk. The photographs. The shelf. The pelt. The rope. The portrait. The crate. The scarecrow. The stone. The lantern. The boots.\n\n\"Things left lying around,\" he said. \"People talk about them. Talk's the trouble.\"\n\nBeside the list he set a magnifier, a case file with nothing in it, and a rubber stamp still smelling of its box. He inked it on his own pad and pressed it once on the blotter so I could see what it said.\n\nNO CASE.\n\nThe riot was behind us. The Baron had come up the Line once already, with his Pinkertons, looked at the square, and gone back down. Now he was coming again on Saturday's train to see whether it had held. And the town was still talking. Lord Aldous Vane was three nights dead, the way he has been three nights dead for as long as anyone here can reckon, and the will read in the manor named *whoever remains when the last lantern goes out*. That had got out of the manor and into the Drowned Lantern, and from there into every chest in HollowMere along with the cough.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 2,
+     "heading": "Fourteen Things Left Lying Around",
+     "lines": [
+      32,
+      38
+     ],
+     "words": 102,
+     "text": "\"He steps off,\" the Constable said, \"and I hand him a file, and every line in it says that. Nothing happened. Nobody did anything. Saturday.\"\n\nI said yes. Article IX. He swore me in over the blotter. I had kept time at the railyard for two years. I had a clean hand and a good watch, and I believed (I wrote it down that first night, so I can't pretend otherwise) that a thing left lying around was left by a hand, and a hand, if you looked, had left a receipt.\n\nCollect. Inspect. Cross-reference. That was all the job was.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 3,
+     "heading": "No. 1. Black crepe. Manor door.",
+     "lines": [
+      42,
+      53
+     ],
+     "words": 158,
+     "text": "Collected: one strip, cut from the lower edge with my penknife. Two inches.\nInspected: Company crepe, the cheap weave, badly dyed. The black comes off on the fingers.\nCross-referenced: Company Store ledger, the morning the wire came. *Widow Vane, crepe, 4 yds, scrip.* Her mark beside it.\nStamped.\n\nIt took an hour, most of it waiting for the storekeeper to find the right ledger. I stood in the Store with black on my fingers and watched him run his thumb down the page, and when he found the line I nearly laughed.\n\nA widow hangs crepe. The Company sells it. Here is where it was sold.\n\nI pressed the stamp down and held it, the way the Constable had, and lifted it clean. Under the stamp, small, as a note to myself, I wrote: every hand has a receipt. I underlined it.\n\nIt was the first thing on the list that made sense. It was also the last.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 5,
+     "heading": "No. 2. The clock. Vane Manor, the hall.",
+     "lines": [
+      59,
+      66
+     ],
+     "words": 65,
+     "text": "Collected: nothing. It stands eight feet and is bolted to the wall.\nInspected: hands at 11:47. Case unlocked. Pendulum hanging still. Weights wound up.\nCross-referenced: nothing found.\nStamped.\n\nThe Butler let me in. People say he knows every door in HollowMere. He walked me to this one as if it were the only one.\n\n\"You stopped it,\" I said. \"For the death. That's the custom.\"",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 6,
+     "heading": "It was stopped when I came into service.",
+     "lines": [
+      74,
+      80
+     ],
+     "words": 155,
+     "text": "I opened the case. The weights were up. The pendulum hung plumb and did not swing when I nudged it. I put a finger to the minute hand to set it on, gently, the way you free a railyard clock stuck in frost. It did not move. I pushed. It wasn't stiff and it wasn't rusted. It simply would not go.\n\nThe Butler watched me take my hand back.\n\nThere was no receipt. Nobody had bought the stopping of it. The Store had no line and the Butler had no memory. When I asked at the pump, the town said it stopped the hour the lake drained, and said it the way you say the weather. Said it. Nobody saw it.\n\nSo I wrote a second rule under the first: what is older than the books is history, not evidence. A clock that stopped before anyone kept ledgers is not a clue. It is furniture.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 7,
+     "heading": "It was stopped when I came into service.",
+     "lines": [
+      82,
+      86
+     ],
+     "words": 15,
+     "text": "NO CASE.\n\nI wiped that finger on my coat for a long time afterwards.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 8,
+     "heading": "No. 3. The tide chart. The Drowned Lantern.",
+     "lines": [
+      90,
+      101
+     ],
+     "words": 103,
+     "text": "Collected: nothing. Mrs Grieves would not have it off the wall.\nInspected: an old harbour chart, island print, the paper brown as toast. The next low tide circled.\nCross-referenced: my watch. The marsh dock. The channel post.\nStamped.\n\nIt was older than any book in town, so by my second rule it was history. I had the stamp out before I had my coat off.\n\nThen I saw the ink. The circle round the next low tide was wet. It shone. When I touched its edge it came away blue on my thumb.\n\n\"Who marks it?\" I said.\n\n\"Not me,\" said Mrs Grieves.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 9,
+     "heading": "Somebody always has.",
+     "lines": [
+      107,
+      115
+     ],
+     "words": 150,
+     "text": "Her man Bar went on wiping the same glass and did not look up.\n\nA fen with no sea for three hundred miles. I took down the circled hour and went to the marsh dock with my watch open in my hand, and stood by the post where Tuck ties the ferry. There is a tar line on that post. I set my thumbnail on it at the water's edge.\n\nAt the circled minute the water went down a hand's breadth. Not a ripple, not the wind. Down, the way a chest goes down.\n\nPeople say it's the lake's old channels, running under the stone to water nobody has mapped. People say the chart is the island's, and the island keeps its tides wherever its paper goes. I wrote down both and did not pick one.\n\nBut somebody had circled it that morning. This was not history. It was today.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 10,
+     "heading": "Somebody always has.",
+     "lines": [
+      117,
+      132
+     ],
+     "words": 209,
+     "text": "So I made a third rule: the town keeps its old things current out of habit, the way a widow winds a dead man's watch. Habit is not a crime.\n\nNO CASE. My thumb stayed blue for two days.\n\n---\n\n**No. 4. Chalk hopscotch. The square, under the fourth lantern.**\n\nCollected: a pinch of chalk dust, in a paper.\nInspected: ten squares, numbered, in a careful hand. Fresh.\nCross-referenced: the night. Myself.\nStamped.\n\nA habit has a keeper. That was the trouble with my third rule, and I knew it when I wrote it. If the town keeps its old things current, somebody in the town gets up and does it, and somebody can be seen.\n\nSo I sat the whole night under the fourth lantern, the one over the chalk and the well. I sat on the well's edge with my coat buttoned and my watch on my knee where the light fell on it. The Lamplighter came to this lantern last, as she always does, and lit it and looked at me and said nothing. Curfew rang. The wolves came to the fence, went along it, and went away. Something in the fog walked behind the pump in short steps and was not there when I looked.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 11,
+     "heading": "Somebody always has.",
+     "lines": [
+      134,
+      144
+     ],
+     "words": 154,
+     "text": "I wound my watch at midnight. I remember that. I remember the click.\n\nAt dawn the hopscotch was fresh: ten squares redrawn in clean white chalk, sharp-edged, not a smudge, not a footprint through them. The old lines were gone under the new.\n\nNo chalk on the stones round it. No one.\n\nI did not remember sleeping. I did not remember not sleeping. When the train came in at Station Rush I held my watch up to the station clock, and my watch was an hour behind.\n\nI have kept time for two years. I have never lost an hour.\n\nI wrote it in the margin in the Company's word, because it was the only one I had: miasma. Mere-rot in the chest and the eye. A man sits all night in the fog, and the fog takes an hour off him and does his chalk for him. That is what miasma is for.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 12,
+     "heading": "Somebody always has.",
+     "lines": [
+      146,
+      148
+     ],
+     "words": 3,
+     "text": "NO CASE.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 13,
+     "heading": "No. 5. The drowned-sailor photographs. The Drowned Lantern.",
+     "lines": [
+      152,
+      167
+     ],
+     "words": 169,
+     "text": "Collected: nothing.\nInspected: frames behind the bar, black wood and glass. Men in oilskins. Men in water.\nCross-referenced: Mrs Grieves. My note of the day before.\nStamped.\n\nMiasma lives in the eye. If my eye was the trouble, my eye could not be the witness. So from here on I would log nothing I had not counted with someone else.\n\nI asked Mrs Grieves to count the frames with me, aloud.\n\nShe didn't want to. She dried her hands and stood beside me behind the bar, and we went along the wall frame by frame, out loud, like children doing sums.\n\nOne. Two. Three. The third held no picture at all. \"That's Jory's,\" she said, and went on. She has a heavy way of saying numbers, as if each one costs her.\n\nFive. Six. Seven.\n\nI had been in the day before, for the chart. I had counted then out of habit and put it in the file. I took out the file and showed her the page. Six.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 14,
+     "heading": "No. 5. The drowned-sailor photographs. The Drowned Lantern.",
+     "lines": [
+      169,
+      177
+     ],
+     "words": 153,
+     "text": "She looked at the page, and at the wall. She did not say I was wrong.\n\nThe seventh hung at the end of the row, by the shutters, on a nail I would swear had not been there. It showed a man in a thin coat, standing in water to the waist and turned away toward more water. You could not see his face. You could see his hands, and that he had no hat.\n\n\"Who's he?\" I said.\n\n\"I don't know him,\" she said, and went back to her end of the bar.\n\nA picture goes up in the night between one count and the next. Somebody had a nail and a hammer and a reason, and I happened to count either side of it. I wrote down the word *coincidence* and looked at it, and it looked back at me like a word in a language I had only just learned.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 15,
+     "heading": "No. 5. The drowned-sailor photographs. The Drowned Lantern.",
+     "lines": [
+      179,
+      192
+     ],
+     "words": 107,
+     "text": "NO CASE.\n\n---\n\n**No. 6. The NOT FOR SALE shelf. Mallory Apothecary.**\n\nCollected: nothing. There is nothing to collect. That is the item.\nInspected: six slots, five bottles of brown glass, wax-sealed. One slot empty, and no dust in it.\nCross-referenced: Doc Mallory's stock book.\nStamped.\n\nMallory let me see the book because the Constable had sent me, and for no other reason. Every bottle on that shelf has a line in it, and every line has a name and a date. Five of them are filled.\n\nThe sixth line is headed in ink gone brown, and nothing is written under it. It has never been filled.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 16,
+     "heading": "Reserved: Det.",
+     "lines": [
+      196,
+      210
+     ],
+     "words": 140,
+     "text": "\"What goes in it?\" I said.\n\nMallory took the book back and closed it.\n\nA coincidence does not get a line in a book. A coincidence is what happens between people who have never met. Somebody had sat at that counter with a pen and laid a place for me.\n\nNot me, I told myself. The office. The Company reserves things for its offices. An office is a chair, and I happen to be sitting in it.\n\nI stamped it NO CASE. Then, because I wanted the office to be only an office, I walked to the Constable's and asked him who had held it before me.\n\n\"Nobody,\" he said. He did not look up from his desk. \"It's new. Made under Article IX. For this list.\"\n\nI thanked him. I believed him for the length of the street.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 17,
+     "heading": "No. 7. The wolf pelt. Hale Barn door.",
+     "lines": [
+      214,
+      223
+     ],
+     "words": 68,
+     "text": "Collected: one tuft of grey hair.\nInspected: a whole pelt, nailed through the forelegs. Old nails. The pelt not old.\nCross-referenced: the Gamekeeper.\nStamped.\n\nThe Gamekeeper was in the barn with the goat, oiling a rifle. Vane paid him to keep the wood. Vane is dead, and he keeps it anyway.\n\n\"When did you nail it up?\" I said.\n\n\"The week the last one went into the Fenwood.\"",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 18,
+     "heading": "The last what?",
+     "lines": [
+      227,
+      237
+     ],
+     "words": 117,
+     "text": "He looked at my case file, and at my stamp. \"Detective,\" he said. \"After the lantern. Went in at dusk with a book like that under his arm and didn't come out the side he went in.\"\n\nThe office is new, the Constable said. Made for this list.\n\nThe office had had a man in it before me.\n\nI didn't go back to the Constable's. It was the first thing I did not do. Instead I wrote that the last one had been careless: a man who walked into a fen at dusk after a light everybody knows not to walk after. Careless men go into the Fenwood. I am not a careless man.\n\nNO CASE.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 19,
+     "heading": "No. 8. The rope. St Brannock's.",
+     "lines": [
+      241,
+      248
+     ],
+     "words": 116,
+     "text": "Collected: nothing. The glove is twisted into the rope.\nInspected: the bell rope, hemp, gone black at hand height. Caught in its lay, the cuff and half the palm of a left glove, plain brown kid. The palm worn through by rope and darned over in red wool, badly.\nCross-referenced: the new Vicar. My coat.\nStamped.\n\nThe new Vicar came up the Line after the old priest had gone. He stood under the bell with me and looked at the glove the way you look at a dog that might bite.\n\n\"They say Father Bray rang it till his palms burned through his gloves,\" he said. \"The day the first train came. They say a lot.\"",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 20,
+     "heading": "I don't know whose it is.",
+     "lines": [
+      254,
+      262
+     ],
+     "words": 159,
+     "text": "The red wool was coarse, and the stitches went every way, as if whoever darned it did it in poor light or in a hurry or did not know how. I had no way to read that, and I did not try.\n\nI reached into my coat for my own gloves, to put them on before I touched the rope. They are plain brown kid too, worn thin at the palm from two years of railyard levers. The right one was there. The left was not.\n\nI turned the pocket out. Lint. A pencil end. Blue on the lining from the tide chart.\n\nHalf the men in this town wear plain brown kid. Every man who works with his hands wears it through at the palm. Mine fell in the mud somewhere between the barn and here. I wrote that down, pressing hard to keep the hand steady.\n\nA careful man would have noticed when he lost a glove.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 21,
+     "heading": "I don't know whose it is.",
+     "lines": [
+      264,
+      266
+     ],
+     "words": 3,
+     "text": "NO CASE.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 22,
+     "heading": "No. 9. The portrait. Widow Vane's parlour.",
+     "lines": [
+      270,
+      284
+     ],
+     "words": 164,
+     "text": "Collected: nothing.\nCross-referenced: the back of the frame. Wire, nail, an inch of dust along the top edge.\nStamped.\n\nWidow Vane had me shown into the parlour and did not stand up. The portrait hangs over the letter box, turned to the wall. What the room sees is brown backing board and a maker's label too faded to read.\n\n\"You may turn it,\" she said, \"if it's your work.\"\n\nI stood in front of it with my hands at my sides.\n\nEverything I had turned over that week had given me something back: a wet circle, an hour, a seventh face, a line in a book with my office on it, a glove gone from my own pocket.\n\nI logged the back of the frame, the wire, the nail and the dust. I did not lift it off the nail.\n\nShe watched me not turn it. When I was done she rang for the Butler to see me out, and said nothing at all.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 23,
+     "heading": "No. 9. The portrait. Widow Vane's parlour.",
+     "lines": [
+      286,
+      302
+     ],
+     "words": 153,
+     "text": "It was the first thing I stamped without looking at it.\n\n---\n\n**No. 10. The VANE TIN CO crate. The Flooded Gallery.**\n\nCollected: everything in it.\nCross-referenced: everything in it.\nStamped.\n\nPast its mouth the Tin Gallery is dark and wet. I borrowed a lantern from the Drowned Lantern. Mrs Grieves gave it to me without asking where I was going. There was water to the ankle at the pump beam, and the ore cart lay on its side.\n\nThe crate sits on two planks above the water, with VANE TIN CO stencilled on the lid. The lid is half-pried, the nails bent up on one side and not the other, as if whoever was prying it stopped.\n\nI finished it. It was the last thing I pushed.\n\nStraw. Under the straw, a case file. Under the file, a magnifier and a rubber stamp. I knew the stamp before I turned it over.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 24,
+     "heading": "No. 9. The portrait. Widow Vane's parlour.",
+     "lines": [
+      304,
+      312
+     ],
+     "words": 160,
+     "text": "The list at the front of the file was on Company paper, in a round, slow hand, numbered down the margin. It held the same fourteen things, but not in my order. His went the crepe, the boots, the clock, the stone, and so on, with the drowned lantern last.\n\nThirteen of them were stamped NO CASE. The entries under them were neat and the cross-references sound. He had found the crepe in the Store ledger, the same as I had. He had counted the photographs with somebody. He had measured the boots. He had a good hand.\n\nThe fourteenth line, the drowned lantern, was blank.\n\nHe was not careless. He had walked into the Fenwood at dusk to finish, with this file under his arm or one like it. And the file was here, dry, under straw, in a crate somebody had half-pried and left.\n\nI held the lantern over the water a long time before I came up.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 25,
+     "heading": "No. 9. The portrait. Widow Vane's parlour.",
+     "lines": [
+      314,
+      332
+     ],
+     "words": 155,
+     "text": "NO CASE.\n\n---\n\n**No. 11. The scarecrow in the trench coat. The square.**\n\nCollected: one ticket.\nCross-referenced: his entry for it.\nStamped.\n\nHis entry read: *Scarecrow. Square. Coat, trench, Company cloth. Pockets not examined.*\n\nPockets not examined was the only lazy line in his file. I went to the square at noon, while the Clerk was taking the rent and nobody looks at anything but their scrip, and examined the pockets.\n\nThere was stamp ink on the right cuff, old, the purple-black of the Constable's pad, worked into the weave where a wrist would rest on a desk.\n\nIn the left pocket was a ticket: one-way, HollowMere to back east, all the way down the Line. Paid. Never punched. Conductor Pruett, No. 14, punches every fare with his crescent, and there was no crescent in this one. It had gone nowhere.\n\nThe way out had been in the coat, and he had not taken it.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 26,
+     "heading": "No. 9. The portrait. Widow Vane's parlour.",
+     "lines": [
+      334,
+      347
+     ],
+     "words": 171,
+     "text": "I took it. I put it in my own pocket, the one with the blue lining, and kept my hand on it.\n\nThen I made the plan he hadn't. Three things were left after this one. I would finish the list and hand the Constable the file on Saturday. The Baron would step off and read it, the train would turn round at dusk, and I would be on it with this in my hand. The list is the only thing here that ends. I'd finish it and use the ticket.\n\nI went to the churchyard at first light for the next one.\n\n---\n\n**No. 12. The stone with tomorrow's date. St Brannock's churchyard.**\n\nCollected: the name.\nStamped.\n\nIt stands alone at the end of the row: grey slate, new-cut, and the date on it tomorrow's. It is always tomorrow's. People say the name on it is new every morning, and that whoever it names is the next to die. Nobody says who cuts it. Nobody has ever seen it cut.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 27,
+     "heading": "No. 9. The portrait. Widow Vane's parlour.",
+     "lines": [
+      349,
+      359
+     ],
+     "words": 110,
+     "text": "I had meant to log it, stamp it and go. It was a stone, and stones end.\n\nBut it carried a name today, and it would carry a different one tomorrow, and another the day after, for as long as there were mornings. A thing that renews itself cannot be finished. You could stamp it every day for the rest of your life. You could stamp it on the train.\n\nThe name was Edith.\n\nNo surname. The town knew which Edith.\n\nI didn't cross-reference it. I put the file under my arm and went to find her door, because she was still alive, and I could still tell her.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 28,
+     "heading": "Not on the list.",
+     "lines": [
+      363,
+      365
+     ],
+     "words": 52,
+     "text": "She lives at the far end of Pump Row, in one room behind a door with the Company's number painted on it. She had the door half shut before I finished saying who I was.\n\n\"I know what it says,\" she said. \"Half the Row's been by to tell me. Go home.\"",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 29,
+     "heading": "Then let me sit here.",
+     "lines": [
+      369,
+      379
+     ],
+     "words": 176,
+     "text": "She looked at the stamp in my hand, and shut the door.\n\nI sat on the step with my back against it. There is no lantern on Pump Row; the Lamplighter's round does not come this way. Curfew rang.\n\nAfter a while someone sat down on the other side. I heard her slide down the wood and settle there, by the bottom hinge.\n\n\"You're not here about the rent,\" Edith said. It was not a question.\n\nShe told me about the rent anyway. She was two weeks behind. She did washing for the manor and the mill office, and they paid her in scrip, and every noon the scrip went back to the Clerk. She had a way of saying \"two weeks\" as if it might, said carefully enough, come to one.\n\nShe had a sister, younger, who had gone back east on the train before the riot, to a city whose name Edith said the way you say a name you have only ever seen written. The sister had written twice. Edith was writing back.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 30,
+     "heading": "Then let me sit here.",
+     "lines": [
+      381,
+      381
+     ],
+     "words": 6,
+     "text": "\"I haven't finished it,\" she said.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 31,
+     "heading": "Why not?",
+     "lines": [
+      385,
+      393
+     ],
+     "words": 182,
+     "text": "\"I don't know how to say the town's all right.\"\n\nI didn't know either. I said she could tell her about the train. She said her sister knew about the train.\n\nShe coughed now and then and said it was the fog. She asked if they had wolves in the city. I said I didn't think so. She asked what I was writing. I said a list. She asked what number she was. I said she wasn't on it.\n\n\"Good,\" she said.\n\nShe told me her sister's name. She told me she had bought a postage stamp for the letter at the Post Office, a real one, two cents in money she had kept back from the scrip, and had not stuck it down yet, because once it was stuck down the letter had to go. Then she stopped talking. I heard her breathing on the other side of the wood, slow, and I sat there with my hand on the ticket in my pocket and watched the dark lane until the fog came white and the whistle went for Station Rush.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 32,
+     "heading": "Why not?",
+     "lines": [
+      395,
+      407
+     ],
+     "words": 172,
+     "text": "I did not sleep. I am certain of that. I checked my watch every hour by the chapel bell, and all night it kept good time.\n\nAt first light Doc Mallory came with the Constable, because the Clerk had sent them about the rent. I stood up out of the way. The Constable knocked, and called, and put his shoulder to the door, and the bolt gave. It had been shot from the inside all night, with my back against the wood.\n\nEdith was in her bed. The blanket was straight.\n\nMallory looked at her a long time and wrote something, then crossed it out and put the pen away.\n\nOn the table there was a letter, folded once and not finished, with the stamp lying loose on top.\n\nNobody had come in.\n\nI went up to the churchyard. I don't know why. The stone at the end of the row already had a name on it, a new one, with tomorrow's date. I did not go near enough to read it.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 33,
+     "heading": "Why not?",
+     "lines": [
+      409,
+      411
+     ],
+     "words": 3,
+     "text": "Two left.\n\n---",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 34,
+     "heading": "No. 13. The drowned lantern. The Fenwood.",
+     "lines": [
+      415,
+      426
+     ],
+     "words": 172,
+     "text": "Collected: nothing.\nStamped.\n\nHis blank line. I went out to Gallows Wood and through it to where the planks stop and the fen starts and the black pines stand in water. I stopped at the last dry plank and went no nearer.\n\nIt was there in the fog, out past the hanging oak: a lantern, low to the water, glowing. Steady. Not like a wisp. Like a lamp somebody keeps.\n\nI did not see who keeps it, and I did not look. I wrote down that it was there and that it was lit, stamped the page on my knee, and turned round.\n\nOn the planks going back, in the fog, there were footsteps behind me. Mine, and a half-beat after mine, the same weight and the same stride. When I stopped they stopped. When I went on they went on.\n\nMere-rot: the fen in the ear, the false footsteps everybody in HollowMere has heard. I said it out loud, mere-rot, and kept saying it the whole way back to the square.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 35,
+     "heading": "No. 13. The drowned lantern. The Fenwood.",
+     "lines": [
+      428,
+      447
+     ],
+     "words": 150,
+     "text": "When I reached the pump my boots were black with Fenwood mud to the shin. I don't remember stepping off the planks.\n\n---\n\n**No. 14. The bootprints. Vane Manor, the hall carpet.**\n\nCollected.\nStamped.\n\nThey have been there as long as anyone can say: a track of muddy bootprints across the hall carpet from the door to the foot of the stair, and none coming back. The Company calls them nothing. Whoever logs them never matches them.\n\nHis file had them, second on his list, measured with care: length heel to toe, breadth at the ball, the depth of the heel.\n\nI put my own boot down beside the first print.\n\nHeel to toe. The breadth. The heel.\n\nA hundred men in this town wear the Company boot. I have written it. Height is a trait, and a hundred men share it.\n\nBut the mud in the prints was wet.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 36,
+     "heading": "No. 13. The drowned lantern. The Fenwood.",
+     "lines": [
+      449,
+      463
+     ],
+     "words": 189,
+     "text": "I knelt and put a finger in the third print, and it came up black and cold and smelling of the fen. Fenwood mud, the same as on my boots, to the shin.\n\nThe prints go to the stair and stop. They do not come back. Mine go to the door, and I can see them now, crossing the others.\n\nI cannot rule myself out, so I ruled nothing.\n\nThe fourteenth thing was mine.\n\n---\n\nI stamped it NO CASE. I held the stamp down the way the Constable had shown me, and lifted it clean.\n\nI went down into the Flooded Gallery again with Mrs Grieves's lantern and laid my file in the crate beside his, with the ticket on top of both, unpunched. I put the straw back. I left the lid half-pried, the nails up on one side, the way I had found it.\n\nOn Saturday the Baron's train came in at Station Rush with its Pinkertons and stood at the platform all day, breathing. The Baron went up to the Constable's and came out again, and at dusk the train went back down the Line.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 37,
+     "heading": "No. 13. The drowned lantern. The Fenwood.",
+     "lines": [
+      465,
+      469
+     ],
+     "words": 60,
+     "text": "I watched it go from the square. It doesn't wait. It never has.\n\nOn Monday I went past the Constable's window. He was at his desk, with Company paper in front of him and a new stamp still in its box, writing in a round, slow hand and numbering down the margin.\n\nFourteen things. The Constable wrote them out himself.",
      "tagged": false,
      "tags": {
       "plot_tags": [],
@@ -12725,6 +15239,300 @@
        "melancholy",
        "hope"
       ],
+      "motif_tags": []
+     }
+    }
+   ]
+  },
+  {
+   "slug": "the-daybook-of-crumb-s-ovens",
+   "path": "07_Poems_and_Prose/22_The_Daybook_of_Crumb_s_Ovens.md",
+   "title": "The Daybook of Crumb's Ovens",
+   "folder": "07_Poems_and_Prose",
+   "type": "prose-poem",
+   "mode": "confessional-poetry",
+   "genre": [
+    "prose-poem",
+    "confessional",
+    "frontier-gothic"
+   ],
+   "status": "draft",
+   "pov": "first-person (Tamsin Crumb)",
+   "tense": "present",
+   "themes": [
+    "bread-as-law",
+    "scarcity",
+    "grief",
+    "rumour",
+    "inheritance"
+   ],
+   "words": 1307,
+   "blurb": "Tamsin Crumb's daybook for Saturday 21 October 1893, room by room through the four back rooms of Crumb's Ovens, with one sack and the sweepings, three dead, the island's arithmetic of loaves and the unsigned papers she folds into the bread.",
+   "scene": null,
+   "passages": [
+    {
+     "n": 1,
+     "heading": "I. The cold room. The island's hour.",
+     "lines": [
+      22,
+      30
+     ],
+     "words": 167,
+     "text": "Up before anyone.\n\nThe cold room has a door to the shop, a shelf for the crock, a gap behind the crock where a hand can go, and a place where I am found out. This morning that place is the flour bin. One sack and the sweepings. No flour came Friday. None will come today.\n\nRecipe: one spoon of yesterday, one cup of flour, water to the second knuckle. Stir on the island's hour, not the mainland's. The clock on the wall is the Company's. The crock keeps the other one.\n\nI feed the crock. I feed the town. I feed the dead.\n\nThree nights now, they say, since Aldous Vane. The wire said it, or the square did. I could not tell you which, and nobody in this town would think to ask me. I did not cry. I fed the crock at the hour, and the crock rose, and I took that for an answer, because it was the only one I was given.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 2,
+     "heading": "I. The cold room. The island's hour.",
+     "lines": [
+      32,
+      34
+     ],
+     "words": 56,
+     "text": "People used to ask whether I came inland for him or for the cup. I still do not know. I know the spoon. I know the hour. I know that what rises in this crock is the cup's life and not the cup, and that the cup went where he went.\n\nWho feeds the cup now?",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 3,
+     "heading": "II. The mixing room. Four.",
+     "lines": [
+      38,
+      46
+     ],
+     "words": 159,
+     "text": "I don't know. That is the first thing I knead into the dough every morning: I don't know.\n\nRecipe for a Rumour Loaf: flour, water, salt, a fist of the daughter, and one folded paper. Fold the paper twice. Lay it flat under the fold of the dough. Shape it tight so nothing shows at the seam.\n\nThe papers come to me unsigned. Under a coin on the counter. Under the door before light. Once, inside a glove someone handed back across the counter. I have never written one. I have folded every one.\n\nI do not read them. I read them. I bake them anyway.\n\nThis week the slips go to the Tribunal, and a day is all it takes to harden a rumour into an indictment, and the gallows stands at the Bell. I cannot tell you whether any paper that passed through my hands ever reached the trapdoor. I can tell you I did not ask.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 4,
+     "heading": "II. The mixing room. Four.",
+     "lines": [
+      48,
+      50
+     ],
+     "words": 87,
+     "text": "This morning I cut into a loaf I shaped last night, to test the crumb, and there was a paper in it already. Folded twice. Laid flat. Not mine. It could have been a customer's hand reaching over the bench while my back was turned. It could have been the boy who carries the baskets. It could have been my own hands, tired past remembering. I write all three down and I choose none.\n\nIf I do not know what I carry, am I innocent of it?",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 5,
+     "heading": "III. The oven room. Five.",
+     "lines": [
+      54,
+      62
+     ],
+     "words": 153,
+     "text": "The oven answers that, the way it answers everything: no.\n\nThe oven is clay. Vane's men built it behind the tents before there was a town to put it in, and the town grew up around it like a crust. Recipe: fire it till the walls go white. Rake it. Swab it. Bake out yesterday's proof. Do not open the door to look.\n\nOn Thursday night, or Wednesday (the week runs together now), someone emptied the till. They left a gold coin on the hearth-lip, the way you tip for good bread. They left a boot in the flour dust, long in the stride, the toe toward the back door.\n\nI swept it.\n\nI sweep every night. That is my alibi, and it is theirs. The Detective came with his case file the next noon and asked whether anything was out of place. I said the floor was clean, and that was true.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 6,
+     "heading": "III. The oven room. Five.",
+     "lines": [
+      64,
+      68
+     ],
+     "words": 52,
+     "text": "I cannot spend the coin. Gold asks where it came from. So it sits behind the crock, in the place a hand can go.\n\nUp before anyone, and still somebody was here first.\n\nWhat is a gold coin worth in a town where flour comes by train, and the train brought none?",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 7,
+     "heading": "IV. The proofing room. Before the train.",
+     "lines": [
+      72,
+      82
+     ],
+     "words": 191,
+     "text": "Less than a sack of flour. Exactly what I did next.\n\nThe proofing room is the only room in this house that belongs to tomorrow. Recipe: shape, cover, set in the cold, and leave it alone to become what it is going to be.\n\nThree dead. Dora Finch. Wilf. Percy. One loaf to every mourner and three to each of the dead. That is the island's arithmetic, four hundred years old, and I have one sack and the sweepings.\n\nThe Company recognises no custom of mourning, the Articles say, and then they tolerate my table and write: \"No rent shall be assessed on the three loaves set for the dead\". The bread of the dead is the only bread in HollowMere the Company takes no cut of.\n\nBut who is the bread for?\n\nThis part is mine, and nobody else's. I cut the mourners' loaves to halves. Every living mouth at that table will get half, so that every dead one keeps three. Nobody ordered it. Nobody will thank me for it. I did it with the scraper in one stroke, the way you do a thing you have already decided.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 8,
+     "heading": "IV. The proofing room. Before the train.",
+     "lines": [
+      84,
+      90
+     ],
+     "words": 115,
+     "text": "And there is more. On my way in, before the crock, I went to the stone with tomorrow's date, as I have gone every morning this week, and read the new name on it. I have not written that name in this book. I will not write it here.\n\nBut three more loaves are proving under the cloth at the end of the bench, made from the living's flour, and they are not for Dora, or Wilf, or Percy.\n\nDid I bake for a death, or does a death come to be baked for? Nobody has seen the name cut. Nobody has seen me shape these.\n\nIs it grief, done early, or an order filled?",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 9,
+     "heading": "V. The wake table. Station Rush.",
+     "lines": [
+      94,
+      102
+     ],
+     "words": 165,
+     "text": "I do not answer. I set the table.\n\nTen plates. Three for the dead, three loaves to each. Six for the halves, heaped. The tenth I set for whoever remains, and leave.\n\nI know who bought which loaf. That is the whole of my office.\n\nDora Finch bought the end of the rye and held the seal up close to read it, through spectacles mended with thread, as if a crumb could have writing on it. Wilf paid for a heel once in the key of G, on my step, because he had no scrip and I had no mind to refuse a tune. Percy came in with three marbles and his bootlace undone and asked every time whether the dead ones were for eating, and every time I said, not by you.\n\nI press a crumb into each loaf and seal it in candle wax, white on the dark crust. Every mouth that eats carries off a small hard piece of who is gone.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 10,
+     "heading": "V. The wake table. Station Rush.",
+     "lines": [
+      104,
+      110
+     ],
+     "words": 117,
+     "text": "At the rush the Undertaker's boy comes in with his cap in his hands. Four, he says. Make it four. I ask him four for whom. He looks at his paper and says the paper says four. I count the dead I know of and get three, and the numbers will not lie down together. I do not bake it. I do not refuse it. I look at the tenth plate, already set.\n\nThe mourners sit. They eat the halves. Nobody says the loaves are small. Nobody has to.\n\nUp before anyone, flour to the elbows, and the dead fed first.\n\nThe island taught me to feed the dead. HollowMere taught me who goes hungry for it.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    }
+   ]
+  },
+  {
+   "slug": "hopscotch",
+   "path": "07_Poems_and_Prose/23_Hopscotch.md",
+   "title": "Hopscotch",
+   "folder": "07_Poems_and_Prose",
+   "type": "poem",
+   "mode": "confessional-poetry",
+   "genre": [
+    "children's-rhyme",
+    "folk-horror",
+    "counting-rhyme"
+   ],
+   "status": "draft",
+   "pov": "first-person plural (the children)",
+   "tense": "present",
+   "themes": [
+    "childhood",
+    "death",
+    "the-town",
+    "rumour",
+    "the-train"
+   ],
+   "words": 583,
+   "blurb": "the counting rhyme chalked under the lantern on the square: ten squares, ten children with grown-up names, a stanza each for a landmark of HollowMere, and a refrain about hopping the stone and not looking down.",
+   "scene": null,
+   "passages": [
+    {
+     "n": 1,
+     "heading": "chalked under the lantern on the square",
+     "lines": [
+      20,
+      50
+     ],
+     "words": 190,
+     "text": "One for the bell, and the bell brings the town.\nAlfie counted the gallows stairs: thirteen up, and none come down.\nAlfie climbed in a crate on the morning train.\nThe crate went east. It never wrote.\n\n*Ten chalk squares and ten of us.*\n  *Hop the stone and don't look down.*\n\nTwo for the pump, two hands on the iron.\nNell pumped first and Nell drank first.\nFever by Friday. Ribbons, blue.\nNell rode the back car east.\n\n*Ten chalk squares and ten of us.*\n  *Hop the stone and don't look down.*\n\nThree for the lantern we chalk it under.\nIt keeps the wolves off. It keeps us in.\nSid chased his shadow to where the light stops.\nWhere does the light stop?\nSid knew. His cap's on the fence.\n\n*Ten chalk squares and ten of us.*\n  *Hop the stone and don't look down.*\n\nFour for the Lantern, sign and all.\nThe barman carried it into the mere.\nFlo swept the floor for a penny a night\nand finished the cups when Mrs Grieves wasn't looking.\nSomething in a cup was not sugar.\nFlo's broom is still by the door.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 2,
+     "heading": "chalked under the lantern on the square",
+     "lines": [
+      52,
+      81
+     ],
+     "words": 177,
+     "text": "*Ten chalk squares and ten of us.*\n  *Hop the stone and don't look down.*\n\nFive for the oven, up before light,\nten plates on the wake table, laid out right.\nPeg stole the heel off every loaf.\nOne for each mourner and three for the dead:\nthree on Peg's plate,\nand nobody took the heel.\n\n*Ten chalk squares and ten of us.*\n  *Hop the stone and don't look down.*\n\nSix for the manor, where the clock stopped\nat eleven forty-seven and stayed.\nTed wound his gran's clock every night\nand told the time by the train.\nRent comes due when the sun's straight up.\nTed went to the mill to pay it with his hands.\nHe's at the loft window. He doesn't wave.\n\n*Ten chalk squares and ten of us.*\n  *Hop the stone and don't look down.*\n\nSeven for the well, and the ladder down.\nWinnie dropped pebbles and counted the splash.\nWinnie threw her stone and the stone went in.\nWinnie went down the ladder to fetch it.\nWe counted for her.\nWe are counting still.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 3,
+     "heading": "chalked under the lantern on the square",
+     "lines": [
+      83,
+      116
+     ],
+     "words": 187,
+     "text": "*Ten chalk squares and ten of us.*\n  *Hop the stone and don't look down.*\n\nEight for the chapel and the Company bell.\nLil sang loudest, always a beat ahead.\nLil went up to the rope to ring it in.\nThe hymn came out one voice short.\nThere's a glove in the rope.\nNobody says whose.\n\n*Ten chalk squares and ten of us.*\n  *Hop the stone and don't look down.*\n\nNine for the pines, and the pines aren't empty.\nMay was scared of the dark,\nso May walked toward every light.\nThere was a light in the fen. May walked.\nWho's holding the lantern out there in the fen?\n\n*Ten chalk squares and ten of us.*\n  *Hop the stone and don't look down.*\n\nWho chalks it fresh when we're all in bed?\n\nBut the tenth square isn't chalk.\n\nTen for the stone with tomorrow's name.\nI hopped every one of them. That's the rule:\nyou never land where the stone is lying.\nAlfie. Nell. Sid. Flo. Peg.\nTed. Winnie. Lil. May.\nI hid. I watched. I remember.\nI can read. I read it.\nI won't read it out.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
+      "motif_tags": []
+     }
+    },
+    {
+     "n": 4,
+     "heading": "chalked under the lantern on the square",
+     "lines": [
+      118,
+      122
+     ],
+     "words": 20,
+     "text": "*Ten chalk squares and one of me.*\n  *Throw your stone. It's your turn now.*\n\nNobody's out in HollowMere.\nEverybody's next.",
+     "tagged": false,
+     "tags": {
+      "plot_tags": [],
+      "context_tags": [],
+      "mood_tags": [],
       "motif_tags": []
      }
     }
