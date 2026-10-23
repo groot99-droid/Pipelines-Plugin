@@ -64,13 +64,13 @@ project that needs it; this folder is not versioned and is never added to git.
    `--category` overrides it. Folders inside the zip and macOS `__MACOSX`
    entries are fine.
 2. Attach the zips to a release of this repo (GitHub → Releases → *Draft a new
-   release*, tag for instance `sfx-2026-10`, drag the zips in, publish). The
+   release*, tag for instance `SFX_2026_01`, drag the zips in, publish). The
    same zips, byte for byte, that are ingested; if a zip is rebuilt, `fetch`
    still finds each file by its hash.
 3. Ingest, with that tag:
 
    ```
-   python sound-library/library.py ingest Boats_Pt1.zip Boats_Pt2.zip --release sfx-2026-10
+   python sound-library/library.py ingest Boats_Pt1.zip Boats_Pt2.zip --release SFX_2026_01
    python sound-library/library.py verify
    python -m unittest discover -s sound-library/tests
    ```
@@ -78,7 +78,7 @@ project that needs it; this folder is not versioned and is never added to git.
    Or, once the release is published, from anywhere with no copy of the zips:
 
    ```
-   python sound-library/library.py ingest --from-release sfx-2026-10
+   python sound-library/library.py ingest --from-release SFX_2026_01
    ```
 
    `ingest` prints `N new, N already there, N replaced, N refused`. A file whose
