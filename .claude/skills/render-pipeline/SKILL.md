@@ -9,6 +9,9 @@ Paths starting `studio/` are relative to this repo's root (the ROSW checkout).
 Paths starting `tools/`, `apps/` and `assets/` are relative to the **Who Did It checkout**
 (`groot99-droid/Who-Did-It`), which must be cloned beside this one; call it `$WDI`.
 
+The game's teardown is `teardowns/who-did-it/` here (the `udgt-consult` skill of the `udgt` plugin):
+look up why a look, an atlas key or an art rule is the way it is before changing it.
+
 This skill is a recipe. It adds no script and no dependency, and it is not a studio run: it
 writes nothing into `studio/vault/`. Making or changing a master (a concept, a model, a rig
 cleanup) is a studio pipeline run (`studio-pipeline` skill); this skill starts once a master

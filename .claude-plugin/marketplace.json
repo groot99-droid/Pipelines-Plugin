@@ -19,6 +19,11 @@
       "name": "blender",
       "source": "./plugins/blender",
       "description": "Drive a live Blender through the MCP for Blender server: scene inspection, bpy scripting with screenshot verification, asset sourcing (Poly Haven, Sketchfab, Poly Pizza, Rodin, Hunyuan3D) and a Poly Haven Asset Browser guide."
+    },
+    {
+      "name": "udgt",
+      "source": "./plugins/udgt",
+      "description": "UI, Dataset & Gameplay Teardown: pull a game's repository apart into a cross-linked dataset, Describe/Compare/Critique chapters written with the owner through creative briefs, and an explorer page dressed in the game's own look."
     }
   ]
 }

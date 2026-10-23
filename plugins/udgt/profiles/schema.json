@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UDGT game profile",
+  "description": "What udgt.py reads in one game's repository and how. Kept as profile.json in the teardown folder. Every path is relative to the game checkout; every pattern is a Python regular expression.",
+  "type": "object",
+  "required": ["udgt", "name", "slug", "docs", "stages"],
+  "properties": {
+    "udgt": {"const": 1, "description": "Profile format version."},
+    "name": {"type": "string"},
+    "slug": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "about": {"type": "string"},
+    "game": {
+      "type": "object",
+      "properties": {
+        "repo": {"type": "string", "description": "owner/name, for display."},
+        "browse": {"type": "string", "description": "URL prefix that turns path#Lline into a link to the source."},
+        "paths": {"type": "array", "items": {"type": "string"}, "description": "Where to look for the checkout, relative to the profile, after --game and UDGT_GAME."}
+      }
+    },
+    "docs": {
+      "type": "array",
+      "description": "Documents to split into sections. Either one file with an id, or globs whose ids come from the path.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"}, "path": {"type": "string"},
+          "glob": {"type": "array", "items": {"type": "string"}}, "exclude": {"type": "array", "items": {"type": "string"}},
+          "strip": {"type": "array", "items": {"type": "string"}}, "prefix": {"type": "string"},
+          "area": {"type": "string"}, "role": {"type": "string"}
+        }
+      }
+    },
+    "era_tags": {"type": "array", "items": {"type": "string"}, "description": "Patterns for the era a heading or its first lines name, e.g. (round 7)."},
+    "decisions": {
+      "type": "object",
+      "description": "The decision log: a table row per decision.",
+      "required": ["path", "row"],
+      "properties": {
+        "path": {"type": "string"}, "area": {"type": "string"},
+        "row": {"type": "string", "description": "Matches a decision row; group 1 is the id."},
+        "number": {"type": "string", "description": "Group 1 is the id's number."},
+        "layouts": {"type": "array", "items": {"type": "object", "properties": {"from": {"type": "integer"}, "to": {"type": "integer"}, "cols": {"type": "array", "items": {"enum": ["topic", "decision", "open"]}}}}},
+        "session": {"type": "string"}, "reserved": {"type": "array", "items": {"type": "string"}},
+        "open_marker": {"type": "string"}, "owner_words": {"type": "array", "items": {"type": "string"}},
+        "open_questions": {"type": "object", "properties": {"heading": {"type": "string"}, "resolved": {"type": "string"}}}
+      }
+    },
+    "refs": {
+      "type": "array",
+      "description": "Citation patterns. target is a node id template: {1} {2}... are the groups, a named group `to` with range:true expands A52 to A64.",
+      "items": {"type": "object", "required": ["id", "pattern", "target"], "properties": {"id": {"type": "string"}, "pattern": {"type": "string"}, "target": {"type": "string"}, "range": {"type": "boolean"}, "strict": {"type": "boolean"}, "doc": {"type": "string"}}}
+    },
+    "tables": {
+      "type": "array",
+      "description": "Markdown tables to read row by row into nodes <kind>:<key>.",
+      "items": {"type": "object", "required": ["id", "path", "under", "kind"], "properties": {"id": {"type": "string"}, "path": {"type": "string"}, "under": {"type": "string"}, "kind": {"type": "string"}, "area": {"type": "string"}, "key": {"type": "integer"}, "title": {"type": "integer"}, "key_pattern": {"type": "string"}}}
+    },
+    "datasets": {
+      "type": "object",
+      "properties": {"globs": {"type": "array", "items": {"type": "string"}}, "exclude": {"type": "array", "items": {"type": "string"}}, "strip": {"type": "array", "items": {"type": "string"}}, "area": {"type": "string"}, "ref_field": {"type": "string"}, "ref_doc": {"type": "string"}, "record_cap": {"type": "integer"}}
+    },
+    "code": {
+      "type": "object",
+      "properties": {
+        "areas": {"type": "array", "items": {"type": "object", "required": ["id", "globs"], "properties": {"id": {"type": "string"}, "title": {"type": "string"}, "area": {"type": "string"}, "about": {"type": "string"}, "globs": {"type": "array", "items": {"type": "string"}}, "exclude": {"type": "array", "items": {"type": "string"}}, "tests": {"type": "array", "items": {"type": "string"}}, "modules": {"type": "array", "items": {"type": "string"}}}}},
+        "anchors": {"type": "array", "items": {"type": "object", "required": ["id", "file", "kind"], "properties": {"id": {"type": "string"}, "title": {"type": "string"}, "area": {"type": "string"}, "about": {"type": "string"}, "file": {"type": "string"}, "kind": {"enum": ["object-keys", "calls", "matches"]}, "start": {"type": "string"}, "pattern": {"type": "string"}}}}
+      }
+    },
+    "ui": {
+      "type": "object",
+      "properties": {
+        "token_files": {"type": "array", "items": {"type": "string"}}, "token_prefix": {"type": "string"},
+        "palettes": {"type": "array", "items": {"type": "string"}},
+        "copy": {"type": "array", "items": {"type": "string"}}, "copy_exclude": {"type": "array", "items": {"type": "string"}},
+        "screens": {"type": "array", "items": {"type": "object", "properties": {"id": {"type": "string"}, "globs": {"type": "array", "items": {"type": "string"}}, "exclude": {"type": "array", "items": {"type": "string"}}}}},
+        "screenshots": {"type": "array", "items": {"type": "string"}},
+        "fonts": {"type": "array", "description": "Font files build copies next to the explorer.", "items": {"type": "object", "required": ["family", "file"], "properties": {"family": {"type": "string"}, "file": {"type": "string"}, "weight": {"type": "string"}}}}
+      }
+    },
+    "history": {"type": "object", "properties": {"pr": {"type": "string"}, "cites": {"type": "string"}, "round": {"type": "array", "items": {"type": "string"}}}},
+    "future": {"type": "object", "properties": {"horizons": {"type": "array", "items": {"type": "object", "required": ["id", "label", "pattern"]}}, "withdrawn": {"type": "string"}}},
+    "stages": {
+      "type": "array",
+      "items": {"type": "object", "required": ["id", "slug", "title", "areas", "prompts"], "properties": {"id": {"type": "string"}, "slug": {"type": "string"}, "title": {"type": "string"}, "areas": {"type": "array", "items": {"type": "string"}}, "keywords": {"type": "array", "items": {"type": "string"}}, "prompts": {"type": "array", "items": {"type": "string"}}}}
+    },
+    "compare": {"type": "array", "items": {"type": "object", "properties": {"name": {"type": "string"}, "why": {"type": "string"}}}},
+    "lore": {
+      "type": "array",
+      "description": "Lore kept outside the game: Markdown works under a folder relative to this profile (not the game), taken when their frontmatter matches. Each becomes a `lore` node, each `##` heading a `lore-section`.",
+      "items": {
+        "type": "object",
+        "required": ["id", "root"],
+        "properties": {
+          "id": {"type": "string", "description": "Short name; source paths read <id>:<path>."},
+          "root": {"type": "string", "description": "Folder relative to the profile. Folders starting with _ or . are skipped."},
+          "match": {"type": "object", "description": "Frontmatter key/value pairs every work must carry; a list field matches when it contains the value."},
+          "area": {"type": "string", "default": "world"},
+          "browse": {"type": "string", "description": "URL prefix that turns a path under the root into a link."}
+        }
+      }
+    },
+    "explorer": {
+      "type": "object",
+      "properties": {
+        "title": {"type": "string"}, "subtitle": {"type": "string"}, "tagline": {"type": "string"},
+        "logo": {"type": "array", "items": {"type": "string"}, "description": "Logo lines on the title view; the last is drawn in the accent."},
+        "menu_small": {"type": "array", "items": {"type": "string"}, "description": "View ids shown as small buttons under the menu."},
+        "theme": {"type": "object", "description": "--x-<role> to a CSS value, usually var(--<game-token>).", "additionalProperties": {"type": "string"}},
+        "views": {"type": "array", "items": {"type": "object", "required": ["id", "label"], "properties": {"id": {"type": "string"}, "label": {"type": "string"}, "about": {"type": "string"}, "special": {"enum": ["title", "chapters", "history"]}, "kinds": {"type": "array", "items": {"type": "string"}}, "areas": {"type": "array", "items": {"type": "string"}}, "cards": {"type": "string"}}}},
+        "cards": {"type": "object", "description": "Which template deals each collection's records, and which fields fill its slots.", "properties": {"faction_field": {"type": "string"}, "factions": {"type": "object"}, "collections": {"type": "object"}, "templates": {"type": "object"}}}
+      }
+    }
+  }
+}

@@ -1,0 +1,1040 @@
+{
+  "udgt": 1,
+  "name": "Who Did It",
+  "slug": "who-did-it",
+  "about": "A browser multiplayer hidden-role game for 4 to 10 players: a static Phaser client and an authoritative Colyseus server, isometric 2.5D in V1, first-person 3D planned for V2, set in the harbour hamlet of HollowMere in autumn 1931.",
+  "game": {
+    "repo": "groot99-droid/Who-Did-It",
+    "browse": "https://github.com/groot99-droid/Who-Did-It/blob/HEAD/",
+    "paths": [
+      "../../../Who-Did-It",
+      "../../../who-did-it",
+      "../../../../Who-Did-It"
+    ]
+  },
+  "docs": [
+    {
+      "id": "GDD",
+      "path": "docs/GDD.md",
+      "area": "gameplay",
+      "role": "Game design: the only source of rules and numbers, with balance.json"
+    },
+    {
+      "id": "WORLD",
+      "path": "docs/WORLD.md",
+      "area": "world",
+      "role": "World bible: HollowMere, the scene graph, portals, bestiary, lighting, Blackpine"
+    },
+    {
+      "id": "UI",
+      "path": "docs/UI.md",
+      "area": "ui",
+      "role": "DOM design system, mockups and the copy deck"
+    },
+    {
+      "id": "ARCHITECTURE",
+      "path": "docs/ARCHITECTURE.md",
+      "area": "backend",
+      "role": "Stack, schema, role secrecy, protocol, netcode, deployment"
+    },
+    {
+      "id": "PROTOCOL",
+      "path": "docs/PROTOCOL.md",
+      "area": "backend",
+      "role": "Generated wire protocol"
+    },
+    {
+      "id": "ASSETS",
+      "path": "docs/ASSETS.md",
+      "area": "art",
+      "role": "Palette, Blender rig, asset pipelines, licensing"
+    },
+    {
+      "id": "SPRITES",
+      "path": "docs/SPRITES.md",
+      "area": "art",
+      "role": "Sprites, isometric projection, atlases"
+    },
+    {
+      "id": "ROADMAP",
+      "path": "docs/ROADMAP.md",
+      "area": "future",
+      "role": "Milestones, risks, playtests, V2 outline"
+    },
+    {
+      "id": "DECISIONS",
+      "path": "docs/DECISIONS.md",
+      "area": "decisions",
+      "role": "Every decision with the owner, review changes and open questions"
+    },
+    {
+      "id": "SESSIONS",
+      "path": "docs/SESSIONS.md",
+      "area": "history",
+      "role": "The parallel build sessions, round by round, and their integration logs"
+    },
+    {
+      "id": "MASTER_PLAN",
+      "path": "docs/MASTER_PLAN.md",
+      "area": "history",
+      "role": "The frozen v0.1 plan of 2026-10-10: the 'before' baseline"
+    },
+    {
+      "id": "RESEARCH",
+      "path": "docs/RESEARCH.md",
+      "area": "backend",
+      "role": "Sourced facts behind the pins, hosting and licensing"
+    },
+    {
+      "id": "README",
+      "path": "README.md",
+      "area": "overview",
+      "role": "The repo's front page"
+    },
+    {
+      "id": "CLAUDE",
+      "path": "CLAUDE.md",
+      "area": "overview",
+      "role": "Conventions that must not drift"
+    },
+    {
+      "id": "CREDITS",
+      "path": "CREDITS.md",
+      "area": "art",
+      "role": "Asset credits"
+    },
+    {
+      "id": "THEME",
+      "path": "apps/client/src/ui/theme/README.md",
+      "area": "ui",
+      "role": "How the tokens and component classes are used"
+    },
+    {
+      "id": "CONTENT",
+      "path": "packages/content/README.md",
+      "area": "data",
+      "role": "The content package"
+    },
+    {
+      "glob": [
+        "docs/round*/*.md"
+      ],
+      "strip": [
+        "docs/"
+      ],
+      "area": "rounds",
+      "role": "Round contract documents"
+    },
+    {
+      "glob": [
+        "docs/guides/*.md",
+        "docs/PLAYTESTS/*.md"
+      ],
+      "strip": [
+        "docs/"
+      ],
+      "area": "guides",
+      "role": "Player manuals and the playtest kit"
+    }
+  ],
+  "era_tags": [
+    "\\((?:[Rr]ound \\d+[^)]{0,40})\\)",
+    "\\((?:M\\d[a-d]?|R\\d+b?)\\)",
+    "\\(V1\\.5\\)|\\(V2\\)",
+    "\\(\\d[A-Z]\\)"
+  ],
+  "decisions": {
+    "path": "docs/DECISIONS.md",
+    "area": "decisions",
+    "row": "^\\|\\s*(A\\d+)\\s*\\|",
+    "number": "A(\\d+)",
+    "layouts": [
+      {
+        "from": 1,
+        "to": 85,
+        "cols": [
+          "topic",
+          "decision"
+        ]
+      },
+      {
+        "from": 86,
+        "cols": [
+          "decision",
+          "open"
+        ]
+      }
+    ],
+    "session": "\\b([5-9][A-Z]|[A-Y])\\b(?=[,;)])",
+    "reserved": [
+      "Reserved for"
+    ],
+    "open_marker": "Open:",
+    "owner_words": [
+      "owner"
+    ],
+    "open_questions": {
+      "heading": "Open questions",
+      "resolved": "Resolved|Confirmed|Answered"
+    }
+  },
+  "refs": [
+    {
+      "id": "gdd",
+      "pattern": "\\bGDD(?:\\.md`?)?(?:,? section| §)?\\s+(\\d+(?:\\.\\d+)*)",
+      "target": "sec:GDD:{1}",
+      "strict": true
+    },
+    {
+      "id": "world",
+      "pattern": "\\bWORLD(?:\\.md`?)?(?:,? section| §)?\\s+(\\d+(?:\\.\\d+)*)",
+      "target": "sec:WORLD:{1}",
+      "strict": true
+    },
+    {
+      "id": "ui",
+      "pattern": "\\bUI(?:\\.md`?)?(?:,? section| §)?\\s+(\\d+(?:\\.\\d+)*)",
+      "target": "sec:UI:{1}",
+      "strict": true
+    },
+    {
+      "id": "architecture",
+      "pattern": "\\bARCHITECTURE(?:\\.md`?)?(?:,? section| §)?\\s+(\\d+(?:\\.\\d+)*)",
+      "target": "sec:ARCHITECTURE:{1}",
+      "strict": true
+    },
+    {
+      "id": "assets",
+      "pattern": "\\bASSETS(?:\\.md`?)?(?:,? section| §)?\\s+(\\d+(?:\\.\\d+)*)",
+      "target": "sec:ASSETS:{1}",
+      "strict": true
+    },
+    {
+      "id": "sprites",
+      "pattern": "\\bSPRITES(?:\\.md`?)?(?:,? section| §)?\\s+(\\d+(?:\\.\\d+)*)",
+      "target": "sec:SPRITES:{1}",
+      "strict": true
+    },
+    {
+      "id": "roadmap",
+      "pattern": "\\bROADMAP(?:\\.md`?)?(?:,? section| §)?\\s+(\\d+\\.\\d+)",
+      "target": "sec:ROADMAP:{1}",
+      "strict": true
+    },
+    {
+      "id": "decisions",
+      "pattern": "\\bDECISIONS(?:\\.md`?)?\\s+(A\\d{1,3})(?:\\s*(?:to|-|–)\\s*A(?P<to>\\d{1,3}))?",
+      "target": "dec:{1}",
+      "range": true,
+      "strict": true
+    },
+    {
+      "id": "decision-id",
+      "pattern": "(?<![\\w/.#-])(A\\d{1,3})(?:\\s*(?:to|-|–)\\s*A(?P<to>\\d{1,3}))?(?![\\w.])",
+      "target": "dec:{1}",
+      "range": true
+    },
+    {
+      "id": "bible",
+      "pattern": "\\bBook\\s+([IVX]+)(?:\\.(\\d+))?\\b",
+      "target": "sec:round6/owner-brief:BOOK {1}.{2}"
+    },
+    {
+      "id": "milestone",
+      "pattern": "\\b(M\\d[a-d]?|R[789]b?)\\b",
+      "target": "milestone:{1}"
+    },
+    {
+      "id": "open-question",
+      "pattern": "\\bopen question (\\d+)",
+      "target": "oq:{1}"
+    }
+  ],
+  "tables": [
+    {
+      "id": "c2s",
+      "path": "docs/PROTOCOL.md",
+      "under": "^Client to server$",
+      "kind": "message",
+      "area": "backend",
+      "key": 0,
+      "key_pattern": "([\\w.]+)"
+    },
+    {
+      "id": "s2c",
+      "path": "docs/PROTOCOL.md",
+      "under": "^Server to client$",
+      "kind": "message",
+      "area": "backend",
+      "key": 0,
+      "key_pattern": "([\\w.]+)"
+    },
+    {
+      "id": "errors",
+      "path": "docs/PROTOCOL.md",
+      "under": "^(Error codes|Join errors)$",
+      "kind": "error",
+      "area": "backend",
+      "key": 0,
+      "key_pattern": "([\\w.]+)"
+    },
+    {
+      "id": "milestones",
+      "path": "docs/ROADMAP.md",
+      "under": "^7\\.1 ",
+      "kind": "milestone",
+      "area": "future",
+      "key": 0,
+      "title": 0,
+      "key_pattern": "(M\\d+[a-d]?|R\\d+b?|ONUB v2)"
+    },
+    {
+      "id": "scenes",
+      "path": "docs/WORLD.md",
+      "under": "^4\\.(3|10) ",
+      "kind": "scene",
+      "area": "world",
+      "key": 0,
+      "title": 1,
+      "key_pattern": "^([a-z][a-z0-9_]+)"
+    },
+    {
+      "id": "bestiary",
+      "path": "docs/WORLD.md",
+      "under": "^4\\.6 ",
+      "kind": "creature",
+      "area": "world",
+      "key": 0
+    },
+    {
+      "id": "bible-seams",
+      "path": "docs/round6/bible-seams.md",
+      "under": "^1\\. What round 6",
+      "kind": "seam",
+      "area": "future",
+      "key": 0
+    }
+  ],
+  "datasets": {
+    "globs": [
+      "packages/content/data/*.json",
+      "packages/content/data/*/*.json"
+    ],
+    "exclude": [
+      "*.nav.json"
+    ],
+    "strip": [
+      "packages/content/data/"
+    ],
+    "area": "data",
+    "ref_field": "gddRef",
+    "ref_doc": "GDD",
+    "record_cap": 400
+  },
+  "code": {
+    "areas": [
+      {
+        "id": "client",
+        "title": "Client (Phaser + Vite, DOM overlay)",
+        "area": "frontend",
+        "globs": [
+          "apps/client/src/**/*.ts",
+          "apps/client/src/**/*.css",
+          "apps/client/e2e/*.ts"
+        ],
+        "tests": [
+          "apps/client/src/**/*.test.ts",
+          "apps/client/e2e/*.spec.ts"
+        ],
+        "modules": [
+          "apps/client/src/scenes/*.ts",
+          "apps/client/src/view/*.ts",
+          "apps/client/src/net/*.ts"
+        ]
+      },
+      {
+        "id": "server",
+        "title": "Server (Colyseus, the authoritative sim)",
+        "area": "backend",
+        "globs": [
+          "apps/server/src/**/*.ts",
+          "apps/server/test/**/*.ts"
+        ],
+        "tests": [
+          "apps/server/test/**/*.test.ts"
+        ],
+        "modules": [
+          "apps/server/src/sim/*.ts",
+          "apps/server/src/rooms/*.ts",
+          "apps/server/src/services/*.ts"
+        ]
+      },
+      {
+        "id": "shared",
+        "title": "@wdi/shared: schema, protocol, pure rules",
+        "area": "backend",
+        "globs": [
+          "packages/shared/src/**/*.ts",
+          "packages/shared/test/**/*.ts",
+          "packages/shared/scripts/*.ts"
+        ],
+        "tests": [
+          "packages/shared/test/**/*.test.ts"
+        ],
+        "modules": [
+          "packages/shared/src/rules/*.ts",
+          "packages/shared/src/protocol/*.ts",
+          "packages/shared/src/schema/*.ts"
+        ]
+      },
+      {
+        "id": "content",
+        "title": "@wdi/content: data schemas and validation",
+        "area": "data",
+        "globs": [
+          "packages/content/src/**/*.ts",
+          "packages/content/test/**/*.ts",
+          "packages/content/scripts/*"
+        ],
+        "tests": [
+          "packages/content/test/**/*.test.ts"
+        ],
+        "modules": [
+          "packages/content/src/schemas/*.ts"
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "Tools: grid export, sprites, Blender rig, bots, auto-runner",
+        "area": "art",
+        "globs": [
+          "tools/**/*.ts",
+          "tools/**/*.py",
+          "tools/**/*.mjs"
+        ],
+        "tests": [
+          "tools/**/*.test.ts",
+          "tools/**/test_*.py"
+        ],
+        "exclude": [
+          "*/node_modules/*"
+        ]
+      }
+    ],
+    "anchors": [
+      {
+        "id": "phases",
+        "title": "Match phases",
+        "area": "gameplay",
+        "file": "packages/shared/src/schema/index.ts",
+        "kind": "object-keys",
+        "start": "export const Phase = {",
+        "about": "The phase machine every match walks through."
+      },
+      {
+        "id": "modes",
+        "title": "Game modes",
+        "area": "gameplay",
+        "file": "packages/shared/src/schema/index.ts",
+        "kind": "object-keys",
+        "start": "export const GameMode = {"
+      },
+      {
+        "id": "tick-order",
+        "title": "Server tick order",
+        "area": "backend",
+        "file": "apps/server/src/sim/Step.ts",
+        "kind": "calls",
+        "start": "export function step(",
+        "pattern": "^\\s*(\\w+)\\(room",
+        "about": "The fixed order of the stages inside one 20 Hz server step."
+      },
+      {
+        "id": "seed-streams",
+        "title": "Random streams",
+        "area": "backend",
+        "file": "apps/server/src/sim/seeds.ts",
+        "kind": "matches",
+        "pattern": "^\\s*\\|\\s*'(\\w+)'",
+        "about": "The named sfc32 streams: nothing secret shares a stream with anything public."
+      }
+    ]
+  },
+  "ui": {
+    "token_files": [
+      "apps/client/src/ui/theme/tokens.css"
+    ],
+    "token_prefix": "--wdi-",
+    "palettes": [
+      "packages/content/data/palette.json"
+    ],
+    "copy": [
+      "apps/client/src/ui/copy/*.ts"
+    ],
+    "copy_exclude": [
+      "*.test.ts",
+      "index.ts"
+    ],
+    "screens": [
+      {
+        "id": "phaser",
+        "globs": [
+          "apps/client/src/scenes/*.ts"
+        ],
+        "exclude": [
+          "*.test.ts",
+          "registry.ts",
+          "introPolicy.ts"
+        ]
+      },
+      {
+        "id": "dom",
+        "globs": [
+          "apps/client/src/ui/*.ts",
+          "apps/client/src/ui/main/*.ts",
+          "apps/client/src/ui/menu/*.ts",
+          "apps/client/src/ui/lobby/*.ts"
+        ],
+        "exclude": [
+          "*.test.ts",
+          "dom.ts"
+        ]
+      },
+      {
+        "id": "hud",
+        "globs": [
+          "apps/client/src/view/Hud.ts",
+          "apps/client/src/view/cutscene/*.ts"
+        ],
+        "exclude": [
+          "*.test.ts"
+        ]
+      }
+    ],
+    "screenshots": [
+      "docs/ui/*.png",
+      "assets/source/review/*.png"
+    ],
+    "fonts": [
+      {
+        "family": "Press Start 2P",
+        "file": "apps/client/src/assets/fonts/press-start-2p-latin-400-normal.woff2",
+        "weight": "400"
+      },
+      {
+        "family": "Pixelify Sans",
+        "file": "apps/client/src/assets/fonts/pixelify-sans-latin-wght-normal.woff2",
+        "weight": "400 700"
+      },
+      {
+        "family": "Inter",
+        "file": "apps/client/src/assets/fonts/inter-latin-wght-normal.woff2",
+        "weight": "100 900"
+      },
+      {
+        "family": "Oswald",
+        "file": "apps/client/src/assets/fonts/oswald-latin-wght-normal.woff2",
+        "weight": "200 700"
+      }
+    ]
+  },
+  "history": {
+    "pr": "Merge pull request #(\\d+) from \\S+?/(\\S+)",
+    "cites": "\\b(A\\d{1,3})\\b",
+    "round": [
+      "\\br(\\d+)[-b]",
+      "\\bRound (\\d+)\\b"
+    ]
+  },
+  "future": {
+    "horizons": [
+      {
+        "id": "r8",
+        "label": "Round 8",
+        "pattern": "\\b[Rr]ound 8\\b|\\bR8\\b"
+      },
+      {
+        "id": "r9",
+        "label": "Round 9",
+        "pattern": "\\b[Rr]ound 9\\b|\\bR9\\b"
+      },
+      {
+        "id": "v15",
+        "label": "V1.5",
+        "pattern": "\\bV1\\.5\\b"
+      },
+      {
+        "id": "v2",
+        "label": "V2 (first-person 3D)",
+        "pattern": "\\bV2\\b"
+      },
+      {
+        "id": "later",
+        "label": "Planned, unscheduled",
+        "pattern": "\\b(planned|not yet built|later round|to come|future work|someday)\\b"
+      }
+    ],
+    "withdrawn": "\\b(removed|dropped|withdrawn|superseded|cut in|no longer)\\b"
+  },
+  "stages": [
+    {
+      "id": "0",
+      "slug": "overview",
+      "title": "Overview and pillars",
+      "areas": [
+        "overview",
+        "gameplay"
+      ],
+      "keywords": [
+        "pillar",
+        "vision",
+        "fun or stop",
+        "first ten minutes"
+      ],
+      "prompts": [
+        "In one sentence, what should a table of friends feel at the moment a body is found?",
+        "Which pillar would you defend if you had to cut everything else?",
+        "Who is the game for first: your friends on a Friday night, strangers online, or yourself as a designer?",
+        "What should this teardown help you decide next?"
+      ]
+    },
+    {
+      "id": "1",
+      "slug": "ui",
+      "title": "UI and frontend",
+      "areas": [
+        "ui",
+        "frontend"
+      ],
+      "keywords": [
+        "mockup",
+        "glass",
+        "night palette",
+        "HUD",
+        "lobby",
+        "menu",
+        "copy deck",
+        "contrast"
+      ],
+      "prompts": [
+        "The round-7 re-skin moved every screen to night glass and pixel type: what was wrong with the look before?",
+        "Which screen do you consider finished, and which embarrasses you?",
+        "Should a hidden-role game's UI ever hint at secrets through motion or sound, or stay strictly neutral?",
+        "Phone first or desktop first for the next round?"
+      ]
+    },
+    {
+      "id": "2",
+      "slug": "datasets",
+      "title": "Datasets and content",
+      "areas": [
+        "data"
+      ],
+      "keywords": [
+        "balance",
+        "roles.json",
+        "deck",
+        "zod",
+        "content"
+      ],
+      "prompts": [
+        "Which numbers in balance.json were chosen by feel and which by testing?",
+        "Who will author content later: only you, friends, or players (mods)?",
+        "Is a role defined by its card text or by its data? When they disagree, which wins?"
+      ]
+    },
+    {
+      "id": "3",
+      "slug": "gameplay",
+      "title": "Gameplay and mechanics",
+      "areas": [
+        "gameplay"
+      ],
+      "keywords": [
+        "kill",
+        "meeting",
+        "vote",
+        "clue",
+        "cover",
+        "vendetta",
+        "final night",
+        "stealth",
+        "faction"
+      ],
+      "prompts": [
+        "Public looks (A49) made roles visible by sight except for the covers: is that the heart of the deduction now?",
+        "What is a good match length for you, and what should the last two minutes feel like?",
+        "Which mechanic do you suspect players will ignore?",
+        "How much should the world (mobs, quests, crafting) compete with the deduction for attention?"
+      ]
+    },
+    {
+      "id": "4",
+      "slug": "backend",
+      "title": "Backend, netcode and protocol",
+      "areas": [
+        "backend"
+      ],
+      "keywords": [
+        "server",
+        "tick",
+        "step",
+        "protocol",
+        "secrecy",
+        "seed",
+        "hosting",
+        "Railway"
+      ],
+      "prompts": [
+        "How many concurrent matches should the first public host carry?",
+        "Is cheating a concern for the first audience, or only bugs?",
+        "Should the admin auto-mode grow into a balance lab (thousands of NPC matches) or stay a bug finder?"
+      ]
+    },
+    {
+      "id": "5",
+      "slug": "world",
+      "title": "World and the Bible",
+      "areas": [
+        "world"
+      ],
+      "keywords": [
+        "HollowMere",
+        "Blackpine",
+        "Port-au-Levain",
+        "Bible",
+        "Book",
+        "bestiary",
+        "1931"
+      ],
+      "prompts": [
+        "What is HollowMere's mood in three words?",
+        "Which Book of the Bible matters most to you, and which could wait forever?",
+        "Is the 1931 setting a costume or does history (the company town, the law) carry the theme?",
+        "Should each map play differently, or feel different around the same rules?"
+      ]
+    },
+    {
+      "id": "6",
+      "slug": "art-audio",
+      "title": "Art, audio and the asset pipeline",
+      "areas": [
+        "art"
+      ],
+      "keywords": [
+        "Blender",
+        "sprite",
+        "atlas",
+        "Higgsfield",
+        "pixel",
+        "music",
+        "cutscene",
+        "CC0"
+      ],
+      "prompts": [
+        "Pixel art, rendered isometric, or both: which is the game's real face?",
+        "Which generated asset are you proudest of, and which would you redo by hand?",
+        "What should the game sound like when nothing is happening?"
+      ]
+    },
+    {
+      "id": "7",
+      "slug": "history",
+      "title": "How it was made: history and reversals",
+      "areas": [
+        "history",
+        "decisions",
+        "rounds"
+      ],
+      "keywords": [
+        "round",
+        "session",
+        "removed",
+        "reversed",
+        "changed in review"
+      ],
+      "prompts": [
+        "Removing the quick mode (A115) was the largest reversal: what made you decide it?",
+        "Was building in parallel AI sessions faster, or did the seams cost more than they saved?",
+        "Which decision would you make differently with what you know now?"
+      ]
+    },
+    {
+      "id": "8",
+      "slug": "future",
+      "title": "Future: rounds 8 and 9, V2",
+      "areas": [
+        "future"
+      ],
+      "keywords": [
+        "round 8",
+        "round 9",
+        "V2",
+        "evolution",
+        "law",
+        "economy",
+        "story mode",
+        "Port-au-Levain"
+      ],
+      "prompts": [
+        "Rounds 8 and 9 add evolutions, the law, an economy and story mode: which one is the game, and which are features?",
+        "When should friends first play a full match?",
+        "Is V2 (first person) still the goal, or has the isometric game become the game?",
+        "What would make you stop working on it?"
+      ]
+    }
+  ],
+  "compare": [
+    {
+      "name": "Among Us",
+      "why": "real-time movement, tasks, bodies and emergency meetings"
+    },
+    {
+      "name": "Town of Salem",
+      "why": "many asymmetric roles, night actions, a trial"
+    },
+    {
+      "name": "One Night Ultimate Werewolf",
+      "why": "the quick mode's ancestor: one night, card swaps"
+    },
+    {
+      "name": "Mafia / Werewolf",
+      "why": "the parlour-game root: day talk, night kills, votes"
+    },
+    {
+      "name": "Secret Hitler",
+      "why": "hidden factions, policy as evidence, a timed endgame"
+    },
+    {
+      "name": "Dread Hunger",
+      "why": "a survival world that competes with the deduction"
+    },
+    {
+      "name": "Project Winter",
+      "why": "traitors inside a resource and crafting game"
+    }
+  ],
+  "lore": [
+    {
+      "id": "vault",
+      "root": "../../creative-writing/vault",
+      "match": {
+        "project": "who-did-it"
+      },
+      "area": "world",
+      "browse": "https://github.com/groot99-droid/Pipelines-Plugin/blob/main/creative-writing/vault/"
+    }
+  ],
+  "explorer": {
+    "title": "Who Did It — Teardown",
+    "tagline": "Every choice, how it was made, and where it is going.",
+    "theme": {
+      "bg": "var(--wdi-night-bg)",
+      "text": "var(--wdi-night-text)",
+      "muted": "var(--wdi-night-text-muted)",
+      "label": "var(--wdi-night-label)",
+      "accent": "var(--wdi-night-accent)",
+      "on-accent": "var(--wdi-on-night-accent)",
+      "glass": "var(--wdi-glass-fill)",
+      "sheen": "var(--wdi-glass-sheen)",
+      "wash": "var(--wdi-glass-wash)",
+      "rim": "var(--wdi-glass-rim)",
+      "rim-top": "var(--wdi-glass-rim-top)",
+      "bevel": "var(--wdi-glass-bevel)",
+      "sunken": "var(--wdi-glass-sunken)",
+      "blur": "var(--wdi-glass-blur)",
+      "step": "var(--wdi-step)",
+      "font-display": "var(--wdi-font-pixel-display)",
+      "font-label": "var(--wdi-font-pixel-text)",
+      "font-text": "var(--wdi-font-text)",
+      "village": "var(--wdi-faction-village)",
+      "cabal": "var(--wdi-faction-cabal)",
+      "neutral": "var(--wdi-faction-neutral)",
+      "danger": "var(--wdi-danger)",
+      "space-1": "var(--wdi-space-1)",
+      "space-2": "var(--wdi-space-2)",
+      "space-3": "var(--wdi-space-3)",
+      "space-4": "var(--wdi-space-4)",
+      "space-5": "var(--wdi-space-5)",
+      "radius": "var(--wdi-radius-md)",
+      "sky-top": "var(--wdi-night)",
+      "sky-mid": "var(--wdi-indigo)",
+      "sky-low": "var(--wdi-violet)",
+      "star": "var(--wdi-snow)",
+      "logo": "var(--wdi-lilac)",
+      "logo-accent": "var(--wdi-lantern)",
+      "paper": "var(--wdi-paper)",
+      "paper-grain": "var(--wdi-paper-grain)",
+      "ink": "var(--wdi-text-on-paper)",
+      "ink-muted": "var(--wdi-text-on-paper-muted)",
+      "stroke": "var(--wdi-stroke)",
+      "warm": "var(--wdi-warm)",
+      "font-card": "var(--wdi-font-display)",
+      "on-village": "var(--wdi-on-village)",
+      "on-cabal": "var(--wdi-on-cabal)",
+      "on-neutral": "var(--wdi-on-neutral)",
+      "frame-village": "var(--wdi-frame-village)",
+      "frame-cabal": "var(--wdi-frame-cabal)",
+      "frame-neutral": "var(--wdi-frame-neutral)",
+      "frame-plain": "var(--wdi-frame-plain)",
+      "frame-margin": "var(--wdi-frame-margin)"
+    },
+    "views": [
+      {
+        "id": "title",
+        "label": "Title",
+        "about": "The title screen: what the game is and where the teardown stands.",
+        "special": "title"
+      },
+      {
+        "id": "case-file",
+        "label": "Case file",
+        "about": "The teardown chapters: describe, compare, critique.",
+        "special": "chapters"
+      },
+      {
+        "id": "lobby",
+        "label": "Lobby",
+        "about": "The datasets, dealt like the lobby deals cards.",
+        "kinds": [
+          "dataset",
+          "collection",
+          "record"
+        ],
+        "cards": "record"
+      },
+      {
+        "id": "match",
+        "label": "Match",
+        "about": "Gameplay: the phase loop, the mechanics and their rules.",
+        "kinds": [
+          "anchor",
+          "section"
+        ],
+        "areas": [
+          "gameplay"
+        ]
+      },
+      {
+        "id": "meeting",
+        "label": "Meeting",
+        "about": "Every decision on the table, and the open questions.",
+        "kinds": [
+          "decision",
+          "question",
+          "open"
+        ]
+      },
+      {
+        "id": "map",
+        "label": "Map",
+        "about": "The world bible: scenes, creatures, the Bible's Books.",
+        "kinds": [
+          "scene",
+          "creature",
+          "section",
+          "lore",
+          "lore-section"
+        ],
+        "areas": [
+          "world"
+        ]
+      },
+      {
+        "id": "backstage",
+        "label": "Backstage",
+        "about": "Frontend and backend: code areas, protocol, tokens, copy, screens.",
+        "kinds": [
+          "codearea",
+          "anchor",
+          "module",
+          "message",
+          "error",
+          "token",
+          "colour",
+          "copy",
+          "screen",
+          "screenshot"
+        ]
+      },
+      {
+        "id": "notebook",
+        "label": "Notebook",
+        "about": "How it was made: rounds, pull requests, commits.",
+        "special": "history"
+      },
+      {
+        "id": "next-round",
+        "label": "Next round",
+        "about": "Rounds 8 and 9, V2, and everything still open.",
+        "kinds": [
+          "plan",
+          "milestone",
+          "seam",
+          "open",
+          "question"
+        ]
+      },
+      {
+        "id": "owner",
+        "label": "Owner's word",
+        "about": "Your answers to the briefs, verbatim.",
+        "kinds": [
+          "answer"
+        ]
+      }
+    ],
+    "logo": [
+      "WHO DID",
+      "IT?"
+    ],
+    "menu_small": [
+      "notebook",
+      "owner"
+    ],
+    "cards": {
+      "faction_field": "faction",
+      "factions": {
+        "village": "village",
+        "cabal": "cabal",
+        "neutral": "neutral"
+      },
+      "collections": {
+        "data:roles/roles": "role",
+        "data:roles.onub/roles": "role"
+      },
+      "templates": {
+        "role": {
+          "stripe": [
+            "faction"
+          ],
+          "title": "name",
+          "sub": [
+            "look"
+          ],
+          "goal": "goal",
+          "list": [
+            "abilities",
+            "startKit"
+          ],
+          "text": "cardText",
+          "beware": "beware"
+        },
+        "tip": {
+          "title": "name",
+          "text": [
+            "tooltip",
+            "cardText",
+            "effect",
+            "reveals",
+            "description",
+            "goal"
+          ],
+          "list": [
+            "tags"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -40,6 +40,8 @@ plugins/ui-design/     the ui-design plugin: self-contained
   maintenance/         validators, relevance gate, refresh scripts, verify.py
   references/          prose the ui-design-catalog skill reads on demand
   README.md, LICENSE, NOTICE, CHANGELOG.md
+plugins/udgt/          the udgt plugin: UI, Dataset & Gameplay Teardown of a game repo
+teardowns/             one folder per torn-down game (today: who-did-it)
 plugins/blender/       the blender plugin: self-contained
   .mcp.json            launches `uvx mcp-for-blender` with telemetry off
   skills/, agents/     blender-{mcp,assets,polyhaven-library}, blender-scene-reviewer
@@ -422,3 +424,12 @@ Poly Haven, Sketchfab, Poly Pizza, Hyper3D Rodin and Hunyuan3D) and documents th
 Assets Asset Browser add-on. Install with `/plugin install blender@rosw`. The server's
 telemetry is disabled in `.mcp.json`; the GPL Poly Haven add-on is not bundled. See
 `plugins/blender/README.md`.
+
+## Teardowns (UDGT)
+
+`plugins/udgt/` takes a game's repository apart. It reads the documents, the decision log, the data,
+the code, the design tokens, the UI copy, the git history and the stated plans, and from them makes a
+cross-linked dataset, chapters (Describe, Compare, Critique) and an explorer page dressed in the
+game's own look. The owner answers a short creative brief before each chapter, and the answers are
+kept verbatim. The first teardown is `teardowns/who-did-it/`; see its README and
+[`docs/udgt.html`](docs/udgt.html).

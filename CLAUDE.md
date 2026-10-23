@@ -67,6 +67,11 @@ plugins/ui-design/   the ui-design plugin: the plugin root, and the whole of wha
   maintenance/       validators, relevance gate, refresh scripts, verify.py
   references/        prose the ui-design-catalog skill reads on demand
   README.md, LICENSE, NOTICE, CHANGELOG.md, .gitignore, .gitattributes
+plugins/udgt/        the udgt plugin (UI, Dataset & Gameplay Teardown): engine/udgt.py (stdlib),
+                     explorer/ (the page template), profiles/schema.json, skills udgt-{teardown,consult},
+                     agent udgt-chapter-analyst, tests/
+teardowns/           one folder per torn-down game: profile.json, teardown.json (generated), answers.json
+                     (the owner's words), chapters/; explorer/ is built and not versioned
 plugins/blender/     the blender plugin: .mcp.json (uvx mcp-for-blender, telemetry off), skills
                      blender-{mcp,assets,polyhaven-library}, agent blender-scene-reviewer
 .github/workflows/   verify.yml: CI for the whole repo (see "Working on the ui-design plugin");
@@ -260,6 +265,27 @@ Assets add-on (GPL-3.0) is only described, never copied. Keep `DISABLE_TELEMETRY
 `.mcp.json`, and never write an API key anywhere in the plugin (names of the
 `BLENDERMCP_*` variables only). Tool names in the skills must match the server's; check them
 against `server.py` of the version you document.
+
+## Working on the udgt plugin and the teardowns
+
+`plugins/udgt/` is a plugin like ui-design: paths in its skills and agent start from
+`${CLAUDE_PLUGIN_ROOT}`, and nothing in it names this repo or a particular game (its tests check). A
+game's specifics live in that game's `teardowns/<slug>/profile.json`, never in the engine.
+
+- `udgt.py scan` reads the game checkout (a sibling clone, `--game`, or `UDGT_GAME`) and its git log,
+  and writes only `teardown.json`. It never writes into the game, and it runs none of its code.
+- The Who Did It profile's `lore` also reads the works in `creative-writing/vault/` whose frontmatter says
+  `project: who-did-it` (the owner named them the game's upcoming lore). It only reads them; the 63 originals
+  and every work stay as they are.
+- `answers.json` is the owner's word: only `udgt.py record` appends to it, verbatim, after the owner
+  answered a brief. Never edit an answer, and never write one the owner did not give.
+- Chapters are Claude's: each design choice is written in three parts. *Describe* cites `[[node-id]]`
+  and `path:line`. *Compare* and *Critique* are labelled as analysis. `udgt.py check` must show no
+  `chapter-link` findings before `build`.
+- Ask the stage's brief (`udgt.py brief <stage>`) before writing its chapter: the owner wants to take
+  part.
+- Tests: `python -m unittest discover -s plugins/udgt/tests` (a fake game in a temp folder, plus one
+  test that runs only when the real Who Did It checkout sits beside this repo).
 
 ## Working on blender-gemini
 
