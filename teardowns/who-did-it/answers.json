@@ -18,7 +18,11 @@
   {"stage":"2","question":"Which numbers in balance.json were chosen by feel and which by testing?","answer":"All by feel so far (Recommended)","date":"2026-10-23","asked_as":"chat"},
   {"stage":"2","question":"Who will author content later: roles, items, scenes, the round-8 evolutions, laws and events?","answer":"Me and friends (Recommended)","date":"2026-10-23","asked_as":"chat"},
   {"stage":"2","question":"A role exists twice: as card text the player reads, and as data the server runs. When they disagree, which wins?","answer":"Data wins, card generated (Recommended)","date":"2026-10-23","asked_as":"chat"},
-  {"stage":"2","question":"evolutions.json, laws.json and events.json are empty stubs waiting for round 8. What should they be?","answer":"Fill them in round 8","date":"2026-10-23","asked_as":"chat"}
+  {"stage":"2","question":"evolutions.json, laws.json and events.json are empty stubs waiting for round 8. What should they be?","answer":"Fill them in round 8","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"3","question":"Since A49 every seat walks as its card's character, except the three cover roles. So the deduction is mostly 'which of the people who look like X is really X, and who was where'. Is that the heart of the game now?","answer":"I am for it to be a mixture of all of those, so no matter how you choose to play there is a way","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"3","question":"On paper a match is grace with the opening cutscene (up to 150 s), then 4 cycles of 170 s, meetings of about 2 minutes, and a 90 s Final Night. That adds up to about 22 to 25 minutes, against the GDD's 12 to 18. What should happen?","answer":"20–25 is fine","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"3","question":"What should the last two minutes of a match feel like?","answer":"Both, short hunt then trial","date":"2026-10-23","asked_as":"chat"},
+  {"stage":"3","question":"How much should the world (mobs, crafting, quests, the Train, hunger) compete with the deduction for attention?","answer":"A second layer","date":"2026-10-23","asked_as":"chat"}
  ],
  "about": "The owner's answers to the teardown briefs, verbatim, in the order given. Appended by `udgt.py record`; never generated or edited."
 }
