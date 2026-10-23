@@ -153,6 +153,21 @@ def _mode_cfg(spec: dict, mode: str) -> dict:
     return cfg
 
 
+def _target(spec: dict, mode: str, work_type: str = "") -> tuple[str, str]:
+    """(target_folder, file_type) for a run: its mode's own, unless the author
+    chose a work type at intake, which files the work under that type's folder."""
+    cfg = _mode_cfg(spec, mode)
+    if not work_type:
+        return cfg["target_folder"], cfg["file_type"]
+    folders = spec.get("work_types", {})
+    if work_type not in folders:
+        raise SystemExit(
+            f"Work type '{work_type}' is not in spec.yaml work_types "
+            f"(known: {', '.join(sorted(folders))})."
+        )
+    return folders[work_type], work_type
+
+
 def handle_intake(run_id, spec, mode, idea_seed, registers=()):
     mode_cfg = _mode_cfg(spec, mode)
     stage = stage_by_id(spec, "intake")
@@ -432,8 +447,8 @@ def handle_self_revision(run_id, spec, mode, vault_root):
 _INTEGRATION_JSON_RE = re.compile(r"```json\s*(.*?)\s*```", re.DOTALL)
 
 
-def handle_vault_integration(run_id, spec, mode, vault_root, confirm: bool, registers=()):
-    mode_cfg = _mode_cfg(spec, mode)
+def handle_vault_integration(run_id, spec, mode, vault_root, confirm: bool, registers=(), work_type=""):
+    target_folder, file_type = _target(spec, mode, work_type)
     stage = stage_by_id(spec, "vault_integration")
     schema = spec["frontmatter_schema"]
 
@@ -462,14 +477,14 @@ def handle_vault_integration(run_id, spec, mode, vault_root, confirm: bool, regi
     meta = json.loads(m.group(1))
 
     title = meta["title"]
-    tags = [f"type/{mode_cfg['file_type']}", f"mode/{mode}"]
+    tags = [f"type/{file_type}", f"mode/{mode}"]
     tags += [f"theme/{t}" for t in meta.get("themes", [])]
     tags += [f"status/{meta.get('status', 'draft')}"]
     tags += [f"register/{r}" for r in registers]
 
     frontmatter = {
         "title": title,
-        "type": mode_cfg["file_type"],
+        "type": file_type,
         "mode": mode,
         "genre": meta.get("genre", []),
         "status": meta.get("status", "draft"),
@@ -489,7 +504,7 @@ def handle_vault_integration(run_id, spec, mode, vault_root, confirm: bool, regi
     annotation_frontmatter = {
         "title": f"Annotation — {title}",
         "type": "annotation",
-        "annotates": f"[[{mode_cfg['target_folder']}/PLACEHOLDER]]",  # filled below once filename is known
+        "annotates": f"[[{target_folder}/PLACEHOLDER]]",  # filled below once filename is known
         "mode": mode,
         "patterns": meta.get("annotation_patterns", []),
         "tags": ["annotation", f"mode/{mode}"] + [f"register/{r}" for r in registers],
@@ -502,8 +517,8 @@ def handle_vault_integration(run_id, spec, mode, vault_root, confirm: bool, regi
 
     work = vi.NewWork(
         mode=mode,
-        target_folder=mode_cfg["target_folder"],
-        file_type=mode_cfg["file_type"],
+        target_folder=target_folder,
+        file_type=file_type,
         title=title,
         body_markdown=draft_body,
         frontmatter=frontmatter,
@@ -512,7 +527,7 @@ def handle_vault_integration(run_id, spec, mode, vault_root, confirm: bool, regi
         annotation_body=meta.get("annotation_body", ""),
     )
     plan = vi.plan_integration(vault_root, work)
-    annotation_frontmatter["annotates"] = f"[[{mode_cfg['target_folder']}/{plan['work_path'].stem}]]"
+    annotation_frontmatter["annotates"] = f"[[{target_folder}/{plan['work_path'].stem}]]"
     plan = vi.plan_integration(vault_root, work)  # recompute with corrected annotates line
 
     preview_lines = [f"## Vault integration plan for '{title}'", ""]
@@ -528,7 +543,7 @@ def handle_vault_integration(run_id, spec, mode, vault_root, confirm: bool, regi
     log = vi.apply_integration(vault_root, plan, dry_run=not confirm)
     if confirm:
         log.append(vi.reindex(vault_root, dry_run=False))
-        if mode_cfg.get("target_folder") or frontmatter.get("project"):
+        if target_folder or frontmatter.get("project"):
             log.append(vi.rebuild_canvas(vault_root, dry_run=False))
     else:
         log.append(vi.reindex(vault_root, dry_run=True))
@@ -561,7 +576,8 @@ def run_stage(stage_id: str, run_id: str, spec: dict, state: dict, vault_root: P
     if stage_id == "self_revision":
         return handle_self_revision(run_id, spec, mode, vault_root)
     if stage_id == "vault_integration":
-        return handle_vault_integration(run_id, spec, mode, vault_root, confirm=confirm, registers=registers)
+        return handle_vault_integration(run_id, spec, mode, vault_root, confirm=confirm, registers=registers,
+                                        work_type=state.get("work_type", ""))
     raise SystemExit(f"Unknown stage '{stage_id}'")
 
 
@@ -592,7 +608,7 @@ def _run_and_advance(run_id: str, spec: dict, state: dict, stage_id: str, confir
 
 def cmd_new(args):
     spec = load_spec()
-    _mode_cfg(spec, args.mode)  # validates mode is implemented
+    _target(spec, args.mode, args.type)  # validates the mode is implemented and the type is known
     try:
         plot_logic.register_cfgs(spec, args.register)  # validates every register name
     except plot_logic.ConfigError as exc:
@@ -607,6 +623,7 @@ def cmd_new(args):
     state = {
         "run_id": run_id, "mode": args.mode, "idea_seed": args.idea,
         "registers": list(dict.fromkeys(args.register)),
+        "work_type": args.type,
         "created": datetime.now(timezone.utc).isoformat(),
         "completed_stages": [], "next_stage_index": 0,
     }
@@ -647,6 +664,10 @@ def build_arg_parser():
     p_new.add_argument("--register", action="append", default=[],
                        help="Overlay on the mode (liminal, psychedelic, cosmic); repeatable. "
                             "See spec.yaml registers:.")
+    p_new.add_argument("--type", default="",
+                       help="Work type when it is not the mode's own (e.g. worldbuilding, "
+                            "character-profile, letter); files the work under that type's "
+                            "folder. See spec.yaml work_types:.")
     p_new.set_defaults(func=cmd_new)
 
     p_continue = sub.add_parser("continue", help="Run the next stage of an existing run.")
