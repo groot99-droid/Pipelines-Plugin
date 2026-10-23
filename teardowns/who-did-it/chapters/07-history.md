@@ -9,8 +9,7 @@ You answered two of the three questions:
 - the quick mode was removed because **the directions were misunderstood**;
 - the decision you would make differently is **A105, the round-6 scope**.
 
-You did not answer the third question, on whether parallel sessions were worth it. This chapter does not
-answer it for you.
+In the final brief you answered the third question too: parallel building was **worth it, keep going**.
 
 ## Seven rounds
 
@@ -132,7 +131,7 @@ your own words, to rows that create a feature.
   flat tile and card based deduction game, super boring and not at all how I saw it going or specified but some
   context gets lost I guess"
 - 2026-10-23, *Which decision would you make differently with what you know now?* "A105/round-6 scope"
-- *Was parallel building worth its coordination cost?* Not answered.
+- 2026-10-23 (final brief), *Was parallel building worth its coordination cost?* "Worth it, keep going"
 
 ## Open threads
 
@@ -141,4 +140,3 @@ your own words, to rows that create a feature.
 - Make the M3 gate a write-up gate: the last playtest's form is in `docs/PLAYTESTS/` before a round starts.
 - An intent column in DECISIONS for rows that create a feature.
 - Round 8 opens with a pre-production pass over the Bible: core, round 8, later, never.
-- Parallel sessions: keep, shrink, or pause? This is still open.

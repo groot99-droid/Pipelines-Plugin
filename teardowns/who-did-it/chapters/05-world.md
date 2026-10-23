@@ -51,9 +51,11 @@ and "what the town says". It is the only one of the three documents that settles
 
 **Critique** (Claude's analysis). Your answer gives an order: the Bible now, the lore next. Make it a rule
 before the next art or copy round, so no session builds a harbour again:
-- **One canon line in WORLD.md 4.1.** For example: "Canon order: the lore in the ROSW vault, then the
-  Bible, then this section. Where they differ, this section is out of date." Then mark §4.1's harbour
-  sentences as superseded, rather than deleting them.
+- **One canon line in WORLD.md 4.1.** In the final brief you made this a rule: whatever the Narrative
+  Worldbuilding lore says is canon, "as long as it doesn’t break features without creating a good working
+  solution". So the line reads: "Canon: the lore in the ROSW vault, then the Bible, then this section. A lore
+  change that would break a feature lands together with a working fix." Then mark §4.1's harbour sentences
+  as superseded, rather than deleting them.
 - **A small data pass.** It is mostly renames, not new systems:
   - `maps/hollowmere.json` blurb and theme;
   - Pell moves to the marsh dock (the lore keeps him there, Ledger:291-293);
@@ -62,9 +64,10 @@ before the next art or copy round, so no session builds a harbour again:
     (`05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere.md:182`-`206`).
 
   Frozen ids stay frozen ([[sec:GDD:3.13]]), so only names and text change.
-- **1893 or 1931?** The art prompts in `docs/round5/art-plan.md` all end in "1931". The year changes the
-  silhouettes: trench coats and wool caps in 1931, frock coats and bowlers in 1893. If the lore wins, the
-  next art round needs the date first.
+- **The year follows the lore** (final brief: "That’s up to the Narrative WorldBuilding Sessions data").
+  The lore says 1893 today. The art prompts in `docs/round5/art-plan.md` all end in "1931", and the year
+  changes the silhouettes (frock coats and bowlers in 1893, trench coats and wool caps in 1931). So the next
+  art round reads the year from the lore before it starts.
 
 ## Book V: killer dilemmas, state-aware NPCs, the environment
 
@@ -203,11 +206,14 @@ each map separately. This is the lore's "same column totals" made into a rule.
 - 2026-10-23, *Is the 1931 setting a costume, or should history carry the theme?* "It’s a combination of all of
   those that make the game"
 - 2026-10-23, *Should each map play differently, or feel different around the same rules?* "Play differently"
+- 2026-10-23 (final brief), *What year is Hollowmere?* "That’s up to the Narrative WorldBuilding Sessions data"
+- 2026-10-23 (final brief), on the lore: "absolutely whatever it says is canon as long as it doesn’t break features
+  without creating a good working solution."
 
 ## Open threads
 
-- Write a canon order into WORLD.md 4.1 (lore, then Bible, then WORLD), and mark the harbour text superseded.
-- 1893 or 1931? It decides the next art round's silhouettes and the bakery kit.
+- Write the canon rule into WORLD.md 4.1 (lore, then Bible, then WORLD; a lore change that breaks a feature lands with its fix), and mark the harbour text superseded.
+- The year follows the Narrative Worldbuilding lore (1893 today). Read it from the lore before the next art round.
 - The data pass: Hollowmere's blurb and theme, Pell's dock, the Thief's exit. Names only; ids stay frozen.
 - Vendettas as dilemmas: two `fires` per vendetta (clean and bloody). Settle the three lore/data disagreements
   (who draws the Hitman, where the Bandit robs, what the Zealot does).
