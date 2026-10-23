@@ -1,0 +1,12 @@
+---
+title: Annotation — The People against ______
+type: annotation
+annotates: [[03_Stories/13_The_People_against]]
+mode: horror-prose
+patterns: [transcript-as-plot, bracketed-recorder-notes, the-blank-as-character, rule-of-the-form, cyclical-repeat-opening]
+tags: [annotation, mode/horror-prose, project/who-did-it]
+---
+
+Wikilink back to [[03_Stories/13_The_People_against|The People against ______]].
+
+A courtroom story told by the paperwork, with the law ladder of GDD §3 (Detective, Police Officer, Judge, three verdicts) sitting in its real order. The transcript is flat Company form, and the story lives in the Recorder's bracketed notes, signed "R.", which grow shorter as his part in it grows. The causal ledger (15 rows, PASS, complicit) runs on rules he shelves his fear behind. The slip names a trade and not a man, so the name is wired east and set as a blank (*therefore*). The square supplies words for the blank (*but*), and he shelves them: voices are not evidence. The Detective's nineteen men break that comfort (*but*): the arrest stands on the slip alone. The cobbler's tools prove only a trade, so the case turns to the hour (*therefore*). Gert covers the hour (*but*), and he writes her down in his best hand: "The alibi will hold." The Midday Shift breaks it (*but*). He carries the rent roll, Gert is under the bell where the Judge told her to stand, and he writes her Indebted in his own ink. Article V strikes her testimony (*therefore*), and he draws the line himself, legibly, as the Company likes. Two *buts* come after the verdict. The Mill's invoice charges the pine to her household, and a voice in the square is still asking who did it. The last *therefore* is the wire's REPEAT NAME. He can recall the two whistled notes but not the name, and he heads a fresh sheet against a new blank. The owner's rulings are kept as hints, never statements. The hanged man whistles the Lamplighter's two notes and mends every boot on Mill Row, and the second slip names Gert without a name. Restraint: Mabel exists through her button tin, her hymn-sheet insoles and her half-beat-late alto. Mallory gives "a cold edge, once" and nothing more. The execution is one sentence long, because "the form does not ask for more". The Recorder owes the dead man eleven cents for a heel, and that debt is the piece's last line of feeling. The title's blank is the defendant's name, which the record never fills.
