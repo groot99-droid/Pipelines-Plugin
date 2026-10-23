@@ -274,6 +274,9 @@ game's specifics live in that game's `teardowns/<slug>/profile.json`, never in t
 
 - `udgt.py scan` reads the game checkout (a sibling clone, `--game`, or `UDGT_GAME`) and its git log,
   and writes only `teardown.json`. It never writes into the game, and it runs none of its code.
+- The Who Did It profile's `lore` also reads the works in `creative-writing/vault/` whose frontmatter says
+  `project: who-did-it` (the owner named them the game's upcoming lore). It only reads them; the 63 originals
+  and every work stay as they are.
 - `answers.json` is the owner's word: only `udgt.py record` appends to it, verbatim, after the owner
   answered a brief. Never edit an answer, and never write one the owner did not give.
 - Chapters are Claude's: each design choice is written in three parts. *Describe* cites `[[node-id]]`

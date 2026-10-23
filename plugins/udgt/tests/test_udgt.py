@@ -280,6 +280,37 @@ class Scan(FakeGame):
         self.assertIn("plan:r8:WORLD:4.1", nodes)
         self.assertIn("plan:v2:WORLD:4.1", nodes)
 
+    def test_lore_outside_the_game_is_read_by_its_frontmatter(self):
+        vault = self.home.parent / "vault"
+        works = {
+            "05_World/01_Ledger.md": "---\ntitle: The Ledger\ntype: worldbuilding\nproject: fake-game\n"
+                                     "themes: [rumour, record]\n---\n\n# The Ledger\n\n## Entry I\n\nAs GDD 3.1 says.\n\n"
+                                     "## Entry I\n\nAgain.\n",
+            "05_World/02_Other.md": "---\ntitle: Other\nproject: another-game\n---\n\n## Entry\n",
+            "_Annotations/05_World/01_Ledger.md": "---\nproject: fake-game\n---\n",
+        }
+        for rel, text in works.items():
+            path = vault / rel
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(text, encoding="utf-8")
+        prof = dict(PROFILE, lore=[{"id": "vault", "root": "../vault", "match": {"project": "fake-game"}}])
+        self.profile.write_text(json.dumps(prof), encoding="utf-8")
+        data, nodes = self.scan()
+        lore = sorted(i for i, n in nodes.items() if n["kind"] == "lore")
+        self.assertEqual(lore, ["lore:vault/05_World/01_Ledger"])
+        work = nodes["lore:vault/05_World/01_Ledger"]
+        self.assertEqual((work["title"], work["source"]["path"]), ("The Ledger", "vault:05_World/01_Ledger.md"))
+        self.assertEqual(work["meta"]["themes"], ["rumour", "record"])
+        first, second = "lore:vault/05_World/01_Ledger#entry-i", "lore:vault/05_World/01_Ledger#entry-i-2"
+        self.assertEqual(nodes[first]["source"]["line"], 10)
+        self.assertIn(second, nodes)
+        self.assertIn("sec:GDD:3.1", self.edges(data, first))
+        prof["lore"][0]["root"] = "../nowhere"
+        self.profile.write_text(json.dumps(prof), encoding="utf-8")
+        data, nodes = self.scan()
+        self.assertFalse(any(n["kind"] == "lore" for n in nodes.values()))
+        self.assertTrue(any(note.startswith("lore vault:") for note in data["notes"]))
+
     def test_scan_never_writes_the_game(self):
         before = subprocess.run(["git", "-C", str(self.game), "status", "--porcelain"], capture_output=True, text=True).stdout
         self.scan()

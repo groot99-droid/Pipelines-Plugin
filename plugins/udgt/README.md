@@ -31,8 +31,9 @@ something up while working on the game). The agent is `udgt:udgt-chapter-analyst
 A game gets a **teardown folder**, kept wherever the owner wants it, never inside the plugin. It holds:
 
 - a `profile.json` (see `profiles/schema.json`) naming the documents, the citation patterns, the decision
-  log's layout, the data folders, the code areas and anchors, the token and font files, the stages and
-  their prompts, the reference games and the explorer's views;
+  log's layout, the data folders, the code areas and anchors, the token and font files, any lore kept
+  outside the game (a folder of Markdown works, taken by their frontmatter), the stages and their
+  prompts, the reference games and the explorer's views;
 - the files the engine and Claude write there.
 
 ```

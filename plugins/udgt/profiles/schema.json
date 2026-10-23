@@ -84,6 +84,21 @@
       "items": {"type": "object", "required": ["id", "slug", "title", "areas", "prompts"], "properties": {"id": {"type": "string"}, "slug": {"type": "string"}, "title": {"type": "string"}, "areas": {"type": "array", "items": {"type": "string"}}, "keywords": {"type": "array", "items": {"type": "string"}}, "prompts": {"type": "array", "items": {"type": "string"}}}}
     },
     "compare": {"type": "array", "items": {"type": "object", "properties": {"name": {"type": "string"}, "why": {"type": "string"}}}},
+    "lore": {
+      "type": "array",
+      "description": "Lore kept outside the game: Markdown works under a folder relative to this profile (not the game), taken when their frontmatter matches. Each becomes a `lore` node, each `##` heading a `lore-section`.",
+      "items": {
+        "type": "object",
+        "required": ["id", "root"],
+        "properties": {
+          "id": {"type": "string", "description": "Short name; source paths read <id>:<path>."},
+          "root": {"type": "string", "description": "Folder relative to the profile. Folders starting with _ or . are skipped."},
+          "match": {"type": "object", "description": "Frontmatter key/value pairs every work must carry; a list field matches when it contains the value."},
+          "area": {"type": "string", "default": "world"},
+          "browse": {"type": "string", "description": "URL prefix that turns a path under the root into a link."}
+        }
+      }
+    },
     "explorer": {
       "type": "object",
       "properties": {

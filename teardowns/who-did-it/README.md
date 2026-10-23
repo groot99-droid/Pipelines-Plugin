@@ -16,7 +16,9 @@ the world bible, the art and audio pipeline, the history, and the future plans.
 ## Use it
 
 The game is read from a sibling checkout (`../Who-Did-It` beside this repo, or `--game <path>`, or
-`UDGT_GAME`). Nothing is written into the game.
+`UDGT_GAME`). Nothing is written into the game. The game's lore is also read from this repo's
+creative-writing vault: every work whose frontmatter says `project: who-did-it` (the profile's `lore`).
+The owner named those works as the game's upcoming lore (stage 5 brief). The vault is only read.
 
 ```
 U="python plugins/udgt/engine/udgt.py"; P=teardowns/who-did-it/profile.json

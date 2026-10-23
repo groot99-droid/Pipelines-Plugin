@@ -814,6 +814,17 @@
       "why": "traitors inside a resource and crafting game"
     }
   ],
+  "lore": [
+    {
+      "id": "vault",
+      "root": "../../creative-writing/vault",
+      "match": {
+        "project": "who-did-it"
+      },
+      "area": "world",
+      "browse": "https://github.com/groot99-droid/Pipelines-Plugin/blob/main/creative-writing/vault/"
+    }
+  ],
   "explorer": {
     "title": "Who Did It — Teardown",
     "tagline": "Every choice, how it was made, and where it is going.",
@@ -921,7 +932,9 @@
         "kinds": [
           "scene",
           "creature",
-          "section"
+          "section",
+          "lore",
+          "lore-section"
         ],
         "areas": [
           "world"

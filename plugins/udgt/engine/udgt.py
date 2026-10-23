@@ -37,7 +37,7 @@ HERE = Path(__file__).resolve().parent
 PLUGIN = HERE.parent
 sys.path.insert(0, str(HERE))
 
-from extract import code, datasets, decisions, docs, future, history, refs, tables, ui  # noqa: E402
+from extract import code, datasets, decisions, docs, future, history, lore, refs, tables, ui  # noqa: E402
 from extract.common import rel  # noqa: E402
 import profile as profiles  # noqa: E402
 
@@ -65,6 +65,7 @@ def extract_all(prof, game):
             n.setdefault("meta", {})["history"] = hist.get("docs", {}).get(n["source"]["path"])
     sections = [n for n in part.nodes if n["kind"] == "section"]
     part.extend(future.extract(sections, part.bodies, prof))
+    part.extend(lore.extract(prof))
     part.extend(load_answers(prof))
     ids = {n["id"] for n in part.nodes}
     # citations in text, then the structural edges' targets resolved the same way
@@ -121,6 +122,7 @@ def compose(prof, game):
         "game": {"repo": prof.get("game", {}).get("repo"), "browse": prof.get("game", {}).get("browse"),
                  "head": hist.get("head"),
                  "shallow": hist.get("shallow")},
+        "lore": {spec["id"]: {"browse": spec.get("browse")} for spec in prof.get("lore", [])},
         "stages": [{k: s[k] for k in ("id", "slug", "title", "areas") if k in s} for s in prof["stages"]],
         "explorer": prof.get("explorer", {}),
         "compare": prof.get("compare", []),

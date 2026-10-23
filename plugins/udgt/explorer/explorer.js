@@ -169,7 +169,11 @@
   function sourceLink(n) {
     if (!n.source) return '';
     const where = `${n.source.path}:${n.source.line}`;
-    const url = (state.data.game && state.data.game.browse) ? state.data.game.browse + n.source.path + '#L' + n.source.line : null;
+    // A lore work's path reads `<root id>:<path>` and links through that root's own browse prefix.
+    const lore = /^([\w.-]+):(.+)$/.exec(n.source.path);
+    const root = lore && state.data.lore ? state.data.lore[lore[1]] : null;
+    const browse = root ? root.browse : (state.data.game && state.data.game.browse);
+    const url = browse ? browse + (root ? lore[2] : n.source.path) + '#L' + n.source.line : null;
     return `<p class="x-mono">${url ? `<a href="${esc(url)}" rel="noopener">${esc(where)}</a>` : esc(where)}</p>`;
   }
 
