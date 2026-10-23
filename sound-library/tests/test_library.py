@@ -30,6 +30,22 @@ def make_wav(seconds=0.5, rate=8000, channels=1, width=2, fill=0x11):
     return buf.getvalue()
 
 
+def make_mp3(frames=100, info_frames=None, id3=b""):
+    """MPEG-1 Layer III, 128 kbit/s, 44.1 kHz, joint stereo: 417-byte frames. With info_frames, the
+    first frame carries an Info header naming that many frames."""
+    header = struct.pack(">I", 0xFFFB9044)
+    frame = header + b"\x00" * 413
+    body = frame * frames
+    if info_frames is not None:
+        first = bytearray(frame)
+        first[4 + 32:4 + 32 + 12] = b"Info" + struct.pack(">II", 1, info_frames)
+        body = bytes(first) + body
+    if id3:
+        size = len(id3)
+        body = b"ID3\x04\x00\x00" + bytes([size >> 21 & 127, size >> 14 & 127, size >> 7 & 127, size & 127]) + id3 + body
+    return body
+
+
 def make_m4a(seconds=2.5, rate=44100, channels=2):
     """The smallest MP4 that carries a duration and an mp4a sample entry."""
     def box(kind, payload):
@@ -138,6 +154,27 @@ class LibraryTest(unittest.TestCase):
         self.assertEqual(self.ingest(clip), (1, 0, 0, 0))
         entry = library.by_id(library.load(self.catalog))["combat/the-battle-begins"]
         self.assertEqual((entry["format"], entry["file"], entry["duration_s"]), ("m4a", "combat/the-battle-begins.m4a", 2.5))
+
+    def test_mp3_is_read_too(self):
+        self.assertIsNone(library.mp3_info(b"\x00" * 400))
+        cbr = library.mp3_info(make_mp3(frames=1000))
+        self.assertEqual((cbr["channels"], cbr["sample_rate"]), (2, 44100))
+        self.assertAlmostEqual(cbr["duration_s"], 1000 * 417 * 8 / 128000, places=2)
+        tagged = library.mp3_info(make_mp3(frames=10, info_frames=2000, id3=b"\x00" * 300))
+        self.assertEqual(tagged["duration_s"], round(2000 * 1152 / 44100, 3))
+        clip = make_zip(self.tmp / "Music.zip", {"Road Theme (Take 2).mp3": make_mp3(info_frames=500)})
+        self.assertEqual(self.ingest(clip), (1, 0, 0, 0))
+        entry = library.by_id(library.load(self.catalog))["music/road-theme-take-2"]
+        self.assertEqual((entry["format"], entry["duration_s"]), ("mp3", round(500 * 1152 / 44100, 3)))
+
+    def test_a_second_ingest_fills_a_duration_the_first_could_not_read(self):
+        clip = make_zip(self.tmp / "Music.zip", {"Road Theme.mp3": make_mp3(info_frames=500)})
+        self.ingest(clip)
+        data = library.load(self.catalog)
+        data["items"][0]["duration_s"] = None
+        library.save(data, self.catalog)
+        self.assertEqual(self.ingest(clip), (0, 1, 0, 0))
+        self.assertIsNotNone(library.load(self.catalog)["items"][0]["duration_s"])
 
     def test_search_ranks_and_filters(self):
         self.ingest(self.zip)
@@ -280,7 +317,7 @@ class RealCatalogTest(unittest.TestCase):
             self.assertTrue(entry["source"]["release"], entry["id"])
             self.assertTrue(entry["source"]["asset"].endswith(".zip"), entry["id"])
             self.assertIsNotNone(entry["duration_s"], entry["id"])
-            self.assertIn(entry["format"], ("wav", "m4a"), entry["id"])
+            self.assertIn(entry["format"], ("wav", "m4a", "mp3"), entry["id"])
 
     def test_files_folder_is_ignored_by_git(self):
         ignore = (LIB.parent / ".gitignore").read_text(encoding="utf-8").splitlines()
