@@ -408,4 +408,8 @@ Then the train.
 
 *Pasted to the last page, typed: 1952. An old grade south of the trestle, owner of record none. A camp redesignated GROUNDS 99. PRODUCTION IS OBLIGATION, new paint on old. Then the Payroll Train.*
 
+*Pasted under it, the same type: SITE ███, N. DAK. SEALED CAR ONLY. NO RETURN WORKING.*
+
+*Pasted half over both, a slip of some other stuff, not paper, one corner gone: 2626. The same place. No train.*
+
 *Pasted inside the back board, typed, older paper than the 1952 slip: 1787. A rock beyond the reef, under Letters Patent. A loaf at dusk on the empty platter, for a name under seal. Then the Morning Ferry.*

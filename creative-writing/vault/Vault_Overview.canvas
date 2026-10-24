@@ -6,7 +6,7 @@
       "x": 0,
       "y": 0,
       "width": 1908,
-      "height": 1280,
+      "height": 1396,
       "label": "Horror-Prose Mode",
       "color": "#2db7d2"
     },
@@ -16,8 +16,8 @@
       "x": 30,
       "y": 70,
       "width": 1440,
-      "height": 640,
-      "label": "Story (20)",
+      "height": 756,
+      "label": "Story (23)",
       "color": "#d28989"
     },
     {
@@ -93,10 +93,19 @@
       "height": 100
     },
     {
+      "id": "n_03_Stories_28_The_Cave_Gate_md",
+      "type": "file",
+      "file": "03_Stories/28_The_Cave_Gate.md",
+      "x": 46,
+      "y": 346,
+      "width": 340,
+      "height": 100
+    },
+    {
       "id": "n_03_Stories_15_The_Dead_Man_s_Lamp_md",
       "type": "file",
       "file": "03_Stories/15_The_Dead_Man_s_Lamp.md",
-      "x": 46,
+      "x": 402,
       "y": 346,
       "width": 340,
       "height": 100
@@ -105,7 +114,7 @@
       "id": "n_03_Stories_23_The_Express_Safe_md",
       "type": "file",
       "file": "03_Stories/23_The_Express_Safe.md",
-      "x": 402,
+      "x": 758,
       "y": 346,
       "width": 340,
       "height": 100
@@ -114,7 +123,7 @@
       "id": "n_03_Stories_26_The_Last_Dance_at_the_Hall_md",
       "type": "file",
       "file": "03_Stories/26_The_Last_Dance_at_the_Hall.md",
-      "x": 758,
+      "x": 1114,
       "y": 346,
       "width": 340,
       "height": 100
@@ -123,8 +132,8 @@
       "id": "n_03_Stories_14_The_Loudest_Voice_md",
       "type": "file",
       "file": "03_Stories/14_The_Loudest_Voice.md",
-      "x": 1114,
-      "y": 346,
+      "x": 46,
+      "y": 462,
       "width": 340,
       "height": 100
     },
@@ -132,7 +141,7 @@
       "id": "n_03_Stories_13_The_People_against_md",
       "type": "file",
       "file": "03_Stories/13_The_People_against.md",
-      "x": 46,
+      "x": 402,
       "y": 462,
       "width": 340,
       "height": 100
@@ -141,7 +150,7 @@
       "id": "n_03_Stories_22_The_Redemption_Vote_md",
       "type": "file",
       "file": "03_Stories/22_The_Redemption_Vote.md",
-      "x": 402,
+      "x": 758,
       "y": 462,
       "width": 340,
       "height": 100
@@ -150,7 +159,7 @@
       "id": "n_03_Stories_25_The_Road_Is_Closed_md",
       "type": "file",
       "file": "03_Stories/25_The_Road_Is_Closed.md",
-      "x": 758,
+      "x": 1114,
       "y": 462,
       "width": 340,
       "height": 100
@@ -159,8 +168,8 @@
       "id": "n_03_Stories_20_The_Tin_Gallery_md",
       "type": "file",
       "file": "03_Stories/20_The_Tin_Gallery.md",
-      "x": 1114,
-      "y": 462,
+      "x": 46,
+      "y": 578,
       "width": 340,
       "height": 100
     },
@@ -168,7 +177,25 @@
       "id": "n_03_Stories_18_Three_Fires_and_a_Ferry_md",
       "type": "file",
       "file": "03_Stories/18_Three_Fires_and_a_Ferry.md",
-      "x": 46,
+      "x": 402,
+      "y": 578,
+      "width": 340,
+      "height": 100
+    },
+    {
+      "id": "n_03_Stories_27_Three_Heirlooms_Low_Tide_md",
+      "type": "file",
+      "file": "03_Stories/27_Three_Heirlooms_Low_Tide.md",
+      "x": 758,
+      "y": 578,
+      "width": 340,
+      "height": 100
+    },
+    {
+      "id": "n_03_Stories_29_What_the_Lab_Made_md",
+      "type": "file",
+      "file": "03_Stories/29_What_the_Lab_Made.md",
+      "x": 1114,
       "y": 578,
       "width": 340,
       "height": 100
@@ -177,8 +204,8 @@
       "id": "n_03_Stories_12_What_the_Well_Remembers_md",
       "type": "file",
       "file": "03_Stories/12_What_the_Well_Remembers.md",
-      "x": 402,
-      "y": 578,
+      "x": 46,
+      "y": 694,
       "width": 340,
       "height": 100
     },
@@ -186,8 +213,8 @@
       "id": "n_03_Stories_19_What_the_Wolves_Were_Blamed_For_md",
       "type": "file",
       "file": "03_Stories/19_What_the_Wolves_Were_Blamed_For.md",
-      "x": 758,
-      "y": 578,
+      "x": 402,
+      "y": 694,
       "width": 340,
       "height": 100
     },
@@ -195,8 +222,8 @@
       "id": "n_03_Stories_24_Whoever_Is_Here_md",
       "type": "file",
       "file": "03_Stories/24_Whoever_Is_Here.md",
-      "x": 1114,
-      "y": 578,
+      "x": 758,
+      "y": 694,
       "width": 340,
       "height": 100
     },
@@ -204,7 +231,7 @@
       "id": "sgrp_horror_prose_worldbuilding",
       "type": "group",
       "x": 30,
-      "y": 746,
+      "y": 862,
       "width": 1084,
       "height": 292,
       "label": "Worldbuilding (6)",
@@ -215,7 +242,7 @@
       "type": "file",
       "file": "05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around.md",
       "x": 46,
-      "y": 790,
+      "y": 906,
       "width": 340,
       "height": 100
     },
@@ -224,7 +251,7 @@
       "type": "file",
       "file": "05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage.md",
       "x": 402,
-      "y": 790,
+      "y": 906,
       "width": 340,
       "height": 100
     },
@@ -233,7 +260,7 @@
       "type": "file",
       "file": "05_Worldbuilding/21_The_Dawn_Judgment.md",
       "x": 758,
-      "y": 790,
+      "y": 906,
       "width": 340,
       "height": 100
     },
@@ -242,7 +269,7 @@
       "type": "file",
       "file": "05_Worldbuilding/10_The_HollowMere_Gazette_Morning_Edition.md",
       "x": 46,
-      "y": 906,
+      "y": 1022,
       "width": 340,
       "height": 100
     },
@@ -251,7 +278,7 @@
       "type": "file",
       "file": "05_Worldbuilding/16_The_Last_Shift_s_Tally_Board.md",
       "x": 402,
-      "y": 906,
+      "y": 1022,
       "width": 340,
       "height": 100
     },
@@ -260,7 +287,7 @@
       "type": "file",
       "file": "05_Worldbuilding/13_The_Undertaker_s_Register.md",
       "x": 758,
-      "y": 906,
+      "y": 1022,
       "width": 340,
       "height": 100
     },
@@ -268,7 +295,7 @@
       "id": "sgrp_horror_prose_book_concept",
       "type": "group",
       "x": 1150,
-      "y": 746,
+      "y": 862,
       "width": 728,
       "height": 292,
       "label": "Book Concept (4)",
@@ -279,7 +306,7 @@
       "type": "file",
       "file": "04_Book_Concepts/03_Beetles_for_Brains.md",
       "x": 1166,
-      "y": 790,
+      "y": 906,
       "width": 340,
       "height": 100
     },
@@ -288,7 +315,7 @@
       "type": "file",
       "file": "04_Book_Concepts/01_Behind_the_Peephole.md",
       "x": 1522,
-      "y": 790,
+      "y": 906,
       "width": 340,
       "height": 100
     },
@@ -297,7 +324,7 @@
       "type": "file",
       "file": "04_Book_Concepts/02_Missing_Campsites.md",
       "x": 1166,
-      "y": 906,
+      "y": 1022,
       "width": 340,
       "height": 100
     },
@@ -306,7 +333,7 @@
       "type": "file",
       "file": "04_Book_Concepts/04_The_Bloody_Alarm_Clock.md",
       "x": 1522,
-      "y": 906,
+      "y": 1022,
       "width": 340,
       "height": 100
     },
@@ -314,7 +341,7 @@
       "id": "sgrp_horror_prose_novel",
       "type": "group",
       "x": 30,
-      "y": 1074,
+      "y": 1190,
       "width": 372,
       "height": 176,
       "label": "Novel (1)",
@@ -325,7 +352,7 @@
       "type": "file",
       "file": "02_Novels/01_The_Stuffed_Ones.md",
       "x": 46,
-      "y": 1118,
+      "y": 1234,
       "width": 340,
       "height": 100
     },
@@ -333,9 +360,9 @@
       "id": "grp_epic_fantasy",
       "type": "group",
       "x": 0,
-      "y": 1500,
+      "y": 1616,
       "width": 1908,
-      "height": 1396,
+      "height": 1512,
       "label": "Epic-Fantasy Mode",
       "color": "#2dd294"
     },
@@ -343,10 +370,10 @@
       "id": "sgrp_epic_fantasy_worldbuilding",
       "type": "group",
       "x": 30,
-      "y": 1570,
+      "y": 1686,
       "width": 1440,
-      "height": 640,
-      "label": "Worldbuilding (17)",
+      "height": 756,
+      "label": "Worldbuilding (21)",
       "color": "#d289b0"
     },
     {
@@ -354,7 +381,7 @@
       "type": "file",
       "file": "05_Worldbuilding/22_A_Field_Guide_to_the_Things_That_Walk_at_Night.md",
       "x": 46,
-      "y": 1614,
+      "y": 1730,
       "width": 340,
       "height": 100
     },
@@ -363,7 +390,7 @@
       "type": "file",
       "file": "05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere.md",
       "x": 402,
-      "y": 1614,
+      "y": 1730,
       "width": 340,
       "height": 100
     },
@@ -372,7 +399,7 @@
       "type": "file",
       "file": "05_Worldbuilding/24_Arrivals.md",
       "x": 758,
-      "y": 1614,
+      "y": 1730,
       "width": 340,
       "height": 100
     },
@@ -381,7 +408,7 @@
       "type": "file",
       "file": "05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line.md",
       "x": 1114,
-      "y": 1614,
+      "y": 1730,
       "width": 340,
       "height": 100
     },
@@ -390,7 +417,7 @@
       "type": "file",
       "file": "05_Worldbuilding/17_Cables.md",
       "x": 46,
-      "y": 1730,
+      "y": 1846,
       "width": 340,
       "height": 100
     },
@@ -399,7 +426,7 @@
       "type": "file",
       "file": "05_Worldbuilding/05_Codex_of_the_End_of_the_Line.md",
       "x": 402,
-      "y": 1730,
+      "y": 1846,
       "width": 340,
       "height": 100
     },
@@ -408,7 +435,16 @@
       "type": "file",
       "file": "05_Worldbuilding/23_Exhibits_A_to_R.md",
       "x": 758,
-      "y": 1730,
+      "y": 1846,
+      "width": 340,
+      "height": 100
+    },
+    {
+      "id": "n_05_Worldbuilding_27_Grounds_99_Survey_of_2626_md",
+      "type": "file",
+      "file": "05_Worldbuilding/27_Grounds_99_Survey_of_2626.md",
+      "x": 1114,
+      "y": 1846,
       "width": 340,
       "height": 100
     },
@@ -416,8 +452,8 @@
       "id": "n_05_Worldbuilding_15_Intake_md",
       "type": "file",
       "file": "05_Worldbuilding/15_Intake.md",
-      "x": 1114,
-      "y": 1730,
+      "x": 46,
+      "y": 1962,
       "width": 340,
       "height": 100
     },
@@ -425,8 +461,8 @@
       "id": "n_05_Worldbuilding_11_Mrs_Grieves_s_Tab_Book_md",
       "type": "file",
       "file": "05_Worldbuilding/11_Mrs_Grieves_s_Tab_Book.md",
-      "x": 46,
-      "y": 1846,
+      "x": 402,
+      "y": 1962,
       "width": 340,
       "height": 100
     },
@@ -434,8 +470,17 @@
       "id": "n_05_Worldbuilding_18_Ordinances_of_the_Sovereign_Sourdough_Council_md",
       "type": "file",
       "file": "05_Worldbuilding/18_Ordinances_of_the_Sovereign_Sourdough_Council.md",
-      "x": 402,
-      "y": 1846,
+      "x": 758,
+      "y": 1962,
+      "width": 340,
+      "height": 100
+    },
+    {
+      "id": "n_05_Worldbuilding_26_Standing_Orders_md",
+      "type": "file",
+      "file": "05_Worldbuilding/26_Standing_Orders.md",
+      "x": 1114,
+      "y": 1962,
       "width": 340,
       "height": 100
     },
@@ -443,8 +488,8 @@
       "id": "n_05_Worldbuilding_04_The_Canon_and_Trope_Ledger_of_Who_Did_It_md",
       "type": "file",
       "file": "05_Worldbuilding/04_The_Canon_and_Trope_Ledger_of_Who_Did_It.md",
-      "x": 758,
-      "y": 1846,
+      "x": 46,
+      "y": 2078,
       "width": 340,
       "height": 100
     },
@@ -452,8 +497,8 @@
       "id": "n_05_Worldbuilding_14_The_Holy_War_md",
       "type": "file",
       "file": "05_Worldbuilding/14_The_Holy_War.md",
-      "x": 1114,
-      "y": 1846,
+      "x": 402,
+      "y": 2078,
       "width": 340,
       "height": 100
     },
@@ -461,8 +506,8 @@
       "id": "n_05_Worldbuilding_19_The_Lighthouse_Sweep_md",
       "type": "file",
       "file": "05_Worldbuilding/19_The_Lighthouse_Sweep.md",
-      "x": 46,
-      "y": 1962,
+      "x": 758,
+      "y": 2078,
       "width": 340,
       "height": 100
     },
@@ -470,8 +515,8 @@
       "id": "n_05_Worldbuilding_20_The_Recipe_Book_of_the_Great_Hearth_md",
       "type": "file",
       "file": "05_Worldbuilding/20_The_Recipe_Book_of_the_Great_Hearth.md",
-      "x": 402,
-      "y": 1962,
+      "x": 1114,
+      "y": 2078,
       "width": 340,
       "height": 100
     },
@@ -479,8 +524,17 @@
       "id": "n_05_Worldbuilding_02_The_Redacted_Testament_of_Lira_Calyx_md",
       "type": "file",
       "file": "05_Worldbuilding/02_The_Redacted_Testament_of_Lira_Calyx.md",
-      "x": 758,
-      "y": 1962,
+      "x": 46,
+      "y": 2194,
+      "width": 340,
+      "height": 100
+    },
+    {
+      "id": "n_05_Worldbuilding_25_The_South_East_Light_md",
+      "type": "file",
+      "file": "05_Worldbuilding/25_The_South_East_Light.md",
+      "x": 402,
+      "y": 2194,
       "width": 340,
       "height": 100
     },
@@ -488,8 +542,17 @@
       "id": "n_05_Worldbuilding_08_The_Testament_of_the_Mother_of_Mothers_md",
       "type": "file",
       "file": "05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers.md",
+      "x": 758,
+      "y": 2194,
+      "width": 340,
+      "height": 100
+    },
+    {
+      "id": "n_05_Worldbuilding_28_Timetable_of_Stations_Not_Yet_Built_md",
+      "type": "file",
+      "file": "05_Worldbuilding/28_Timetable_of_Stations_Not_Yet_Built.md",
       "x": 1114,
-      "y": 1962,
+      "y": 2194,
       "width": 340,
       "height": 100
     },
@@ -498,7 +561,7 @@
       "type": "file",
       "file": "05_Worldbuilding/03_World_Codex_of_Wyrmreach.md",
       "x": 46,
-      "y": 2078,
+      "y": 2310,
       "width": 340,
       "height": 100
     },
@@ -506,10 +569,10 @@
       "id": "sgrp_epic_fantasy_character_profile",
       "type": "group",
       "x": 30,
-      "y": 2246,
+      "y": 2478,
       "width": 1084,
       "height": 408,
-      "label": "Character Profile (8)",
+      "label": "Character Profile (9)",
       "color": "#9bd289"
     },
     {
@@ -517,7 +580,7 @@
       "type": "file",
       "file": "10_Characters/07_Four_Notices.md",
       "x": 46,
-      "y": 2290,
+      "y": 2522,
       "width": 340,
       "height": 100
     },
@@ -526,7 +589,7 @@
       "type": "file",
       "file": "10_Characters/01_Graknox_the_Ironbound_Raider.md",
       "x": 402,
-      "y": 2290,
+      "y": 2522,
       "width": 340,
       "height": 100
     },
@@ -535,7 +598,7 @@
       "type": "file",
       "file": "10_Characters/08_Persons_of_Note.md",
       "x": 758,
-      "y": 2290,
+      "y": 2522,
       "width": 340,
       "height": 100
     },
@@ -544,7 +607,7 @@
       "type": "file",
       "file": "10_Characters/12_Pledged_and_Unredeemed.md",
       "x": 46,
-      "y": 2406,
+      "y": 2638,
       "width": 340,
       "height": 100
     },
@@ -553,7 +616,7 @@
       "type": "file",
       "file": "10_Characters/10_Subject_Files.md",
       "x": 402,
-      "y": 2406,
+      "y": 2638,
       "width": 340,
       "height": 100
     },
@@ -562,7 +625,7 @@
       "type": "file",
       "file": "10_Characters/06_The_Confession_Book_of_St_Brannock_s.md",
       "x": 758,
-      "y": 2406,
+      "y": 2638,
       "width": 340,
       "height": 100
     },
@@ -571,7 +634,7 @@
       "type": "file",
       "file": "10_Characters/11_The_Density_Audit.md",
       "x": 46,
-      "y": 2522,
+      "y": 2754,
       "width": 340,
       "height": 100
     },
@@ -580,7 +643,16 @@
       "type": "file",
       "file": "10_Characters/09_The_Tally_Rack.md",
       "x": 402,
-      "y": 2522,
+      "y": 2754,
+      "width": 340,
+      "height": 100
+    },
+    {
+      "id": "n_10_Characters_13_The_Two_Roads_md",
+      "type": "file",
+      "file": "10_Characters/13_The_Two_Roads.md",
+      "x": 758,
+      "y": 2754,
       "width": 340,
       "height": 100
     },
@@ -588,7 +660,7 @@
       "id": "sgrp_epic_fantasy_novel",
       "type": "group",
       "x": 1150,
-      "y": 2246,
+      "y": 2478,
       "width": 728,
       "height": 176,
       "label": "Novel (2)",
@@ -599,7 +671,7 @@
       "type": "file",
       "file": "02_Novels/05_The_Endless_Temple_-_Elaris_Sel_Marden.md",
       "x": 1166,
-      "y": 2290,
+      "y": 2522,
       "width": 340,
       "height": 100
     },
@@ -608,7 +680,7 @@
       "type": "file",
       "file": "02_Novels/02_WrymWretch.md",
       "x": 1522,
-      "y": 2290,
+      "y": 2522,
       "width": 340,
       "height": 100
     },
@@ -616,7 +688,7 @@
       "id": "sgrp_epic_fantasy_story",
       "type": "group",
       "x": 30,
-      "y": 2690,
+      "y": 2922,
       "width": 728,
       "height": 176,
       "label": "Story (2)",
@@ -627,7 +699,7 @@
       "type": "file",
       "file": "03_Stories/02_A_Journey_Into_the_Heartstream_-_The_Rite_of_the_Blue-Born.md",
       "x": 46,
-      "y": 2734,
+      "y": 2966,
       "width": 340,
       "height": 100
     },
@@ -636,7 +708,7 @@
       "type": "file",
       "file": "03_Stories/10_Tie_by_Tie.md",
       "x": 402,
-      "y": 2734,
+      "y": 2966,
       "width": 340,
       "height": 100
     },
@@ -644,7 +716,7 @@
       "id": "grp_essay_self_help",
       "type": "group",
       "x": 0,
-      "y": 3116,
+      "y": 3348,
       "width": 1908,
       "height": 604,
       "label": "Essay / Self-Help Mode",
@@ -654,7 +726,7 @@
       "id": "sgrp_essay_self_help_essay",
       "type": "group",
       "x": 30,
-      "y": 3186,
+      "y": 3418,
       "width": 1084,
       "height": 292,
       "label": "Essay (6)",
@@ -665,7 +737,7 @@
       "type": "file",
       "file": "11_Essays/06_Building_Dreams_From_the_Top_Down.md",
       "x": 46,
-      "y": 3230,
+      "y": 3462,
       "width": 340,
       "height": 100
     },
@@ -674,7 +746,7 @@
       "type": "file",
       "file": "11_Essays/05_How_to_Help_People.md",
       "x": 402,
-      "y": 3230,
+      "y": 3462,
       "width": 340,
       "height": 100
     },
@@ -683,7 +755,7 @@
       "type": "file",
       "file": "11_Essays/07_Shoot_for_the_Moon.md",
       "x": 758,
-      "y": 3230,
+      "y": 3462,
       "width": 340,
       "height": 100
     },
@@ -692,7 +764,7 @@
       "type": "file",
       "file": "11_Essays/02_The_Architecture_of_Being.md",
       "x": 46,
-      "y": 3346,
+      "y": 3578,
       "width": 340,
       "height": 100
     },
@@ -701,7 +773,7 @@
       "type": "file",
       "file": "11_Essays/04_The_Creative_Codex_of_the_Mythic_Architect.md",
       "x": 402,
-      "y": 3346,
+      "y": 3578,
       "width": 340,
       "height": 100
     },
@@ -710,7 +782,7 @@
       "type": "file",
       "file": "11_Essays/03_What_is_The_Power_of_Art.md",
       "x": 758,
-      "y": 3346,
+      "y": 3578,
       "width": 340,
       "height": 100
     },
@@ -718,7 +790,7 @@
       "id": "sgrp_essay_self_help_character_profile",
       "type": "group",
       "x": 1150,
-      "y": 3186,
+      "y": 3418,
       "width": 728,
       "height": 292,
       "label": "Character Profile (4)",
@@ -729,7 +801,7 @@
       "type": "file",
       "file": "10_Characters/02_The_Bottonian_Philosopher.md",
       "x": 1166,
-      "y": 3230,
+      "y": 3462,
       "width": 340,
       "height": 100
     },
@@ -738,7 +810,7 @@
       "type": "file",
       "file": "10_Characters/04_The_Darwishan_Exile.md",
       "x": 1522,
-      "y": 3230,
+      "y": 3462,
       "width": 340,
       "height": 100
     },
@@ -747,7 +819,7 @@
       "type": "file",
       "file": "10_Characters/03_The_Kafkan_Seer.md",
       "x": 1166,
-      "y": 3346,
+      "y": 3578,
       "width": 340,
       "height": 100
     },
@@ -756,7 +828,7 @@
       "type": "file",
       "file": "10_Characters/05_The_Rossettian_Oracle.md",
       "x": 1522,
-      "y": 3346,
+      "y": 3578,
       "width": 340,
       "height": 100
     },
@@ -764,7 +836,7 @@
       "id": "sgrp_essay_self_help_book",
       "type": "group",
       "x": 30,
-      "y": 3514,
+      "y": 3746,
       "width": 372,
       "height": 176,
       "label": "Book (1)",
@@ -775,7 +847,7 @@
       "type": "file",
       "file": "01_Books/01_The_First_Friend.md",
       "x": 46,
-      "y": 3558,
+      "y": 3790,
       "width": 340,
       "height": 100
     },
@@ -783,7 +855,7 @@
       "id": "grp_confessional_poetry",
       "type": "group",
       "x": 0,
-      "y": 3940,
+      "y": 4172,
       "width": 1500,
       "height": 1840,
       "label": "Confessional-Poetry Mode",
@@ -793,7 +865,7 @@
       "id": "sgrp_confessional_poetry_poem",
       "type": "group",
       "x": 30,
-      "y": 4010,
+      "y": 4242,
       "width": 1440,
       "height": 524,
       "label": "Poem (16)",
@@ -804,7 +876,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/03_Am_I_Me_Enough.md",
       "x": 46,
-      "y": 4054,
+      "y": 4286,
       "width": 340,
       "height": 100
     },
@@ -813,7 +885,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/12_Darkness.md",
       "x": 402,
-      "y": 4054,
+      "y": 4286,
       "width": 340,
       "height": 100
     },
@@ -822,7 +894,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/11_For_My_Papa.md",
       "x": 758,
-      "y": 4054,
+      "y": 4286,
       "width": 340,
       "height": 100
     },
@@ -831,7 +903,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/15_From_Ashes_to_Ascendancy.md",
       "x": 1114,
-      "y": 4054,
+      "y": 4286,
       "width": 340,
       "height": 100
     },
@@ -840,7 +912,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/02_Growing_Up.md",
       "x": 46,
-      "y": 4170,
+      "y": 4402,
       "width": 340,
       "height": 100
     },
@@ -849,7 +921,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/23_Hopscotch.md",
       "x": 402,
-      "y": 4170,
+      "y": 4402,
       "width": 340,
       "height": 100
     },
@@ -858,7 +930,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/17_How_It_Is.md",
       "x": 758,
-      "y": 4170,
+      "y": 4402,
       "width": 340,
       "height": 100
     },
@@ -867,7 +939,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/05_Inherited.md",
       "x": 1114,
-      "y": 4170,
+      "y": 4402,
       "width": 340,
       "height": 100
     },
@@ -876,7 +948,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/14_Love.md",
       "x": 46,
-      "y": 4286,
+      "y": 4518,
       "width": 340,
       "height": 100
     },
@@ -885,7 +957,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/18_My_Wish.md",
       "x": 402,
-      "y": 4286,
+      "y": 4518,
       "width": 340,
       "height": 100
     },
@@ -894,7 +966,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/13_Past_Present_and_Future.md",
       "x": 758,
-      "y": 4286,
+      "y": 4518,
       "width": 340,
       "height": 100
     },
@@ -903,7 +975,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/09_The_Knife_I_Chose.md",
       "x": 1114,
-      "y": 4286,
+      "y": 4518,
       "width": 340,
       "height": 100
     },
@@ -912,7 +984,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/10_The_Stripes_Remain.md",
       "x": 46,
-      "y": 4402,
+      "y": 4634,
       "width": 340,
       "height": 100
     },
@@ -921,7 +993,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/19_The_Suns_Bright_Light.md",
       "x": 402,
-      "y": 4402,
+      "y": 4634,
       "width": 340,
       "height": 100
     },
@@ -930,7 +1002,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/08_The_Unfamiliar.md",
       "x": 758,
-      "y": 4402,
+      "y": 4634,
       "width": 340,
       "height": 100
     },
@@ -939,7 +1011,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/06_Was_I_Good_Enough.md",
       "x": 1114,
-      "y": 4402,
+      "y": 4634,
       "width": 340,
       "height": 100
     },
@@ -947,18 +1019,27 @@
       "id": "sgrp_confessional_poetry_prose_poem",
       "type": "group",
       "x": 30,
-      "y": 4570,
+      "y": 4802,
       "width": 1440,
       "height": 408,
-      "label": "Prose Poem (10)",
+      "label": "Prose Poem (12)",
       "color": "#a489d2"
+    },
+    {
+      "id": "n_07_Poems_and_Prose_30_Eight_Phrases_md",
+      "type": "file",
+      "file": "07_Poems_and_Prose/30_Eight_Phrases.md",
+      "x": 46,
+      "y": 4846,
+      "width": 340,
+      "height": 100
     },
     {
       "id": "n_07_Poems_and_Prose_07_In_Search_Of_Truth_md",
       "type": "file",
       "file": "07_Poems_and_Prose/07_In_Search_Of_Truth.md",
-      "x": 46,
-      "y": 4614,
+      "x": 402,
+      "y": 4846,
       "width": 340,
       "height": 100
     },
@@ -966,8 +1047,8 @@
       "id": "n_07_Poems_and_Prose_25_Resin_Seal_md",
       "type": "file",
       "file": "07_Poems_and_Prose/25_Resin_Seal.md",
-      "x": 402,
-      "y": 4614,
+      "x": 758,
+      "y": 4846,
       "width": 340,
       "height": 100
     },
@@ -975,8 +1056,8 @@
       "id": "n_07_Poems_and_Prose_27_Sayings_of_the_Fork_md",
       "type": "file",
       "file": "07_Poems_and_Prose/27_Sayings_of_the_Fork.md",
-      "x": 758,
-      "y": 4614,
+      "x": 1114,
+      "y": 4846,
       "width": 340,
       "height": 100
     },
@@ -984,8 +1065,8 @@
       "id": "n_07_Poems_and_Prose_24_The_Apostate_the_Stowaway_the_Starving_md",
       "type": "file",
       "file": "07_Poems_and_Prose/24_The_Apostate_the_Stowaway_the_Starving.md",
-      "x": 1114,
-      "y": 4614,
+      "x": 46,
+      "y": 4962,
       "width": 340,
       "height": 100
     },
@@ -993,8 +1074,17 @@
       "id": "n_07_Poems_and_Prose_22_The_Daybook_of_Crumb_s_Ovens_md",
       "type": "file",
       "file": "07_Poems_and_Prose/22_The_Daybook_of_Crumb_s_Ovens.md",
-      "x": 46,
-      "y": 4730,
+      "x": 402,
+      "y": 4962,
+      "width": 340,
+      "height": 100
+    },
+    {
+      "id": "n_07_Poems_and_Prose_31_The_Dream_Book_md",
+      "type": "file",
+      "file": "07_Poems_and_Prose/31_The_Dream_Book.md",
+      "x": 758,
+      "y": 4962,
       "width": 340,
       "height": 100
     },
@@ -1002,8 +1092,8 @@
       "id": "n_07_Poems_and_Prose_29_The_Lavender_Field_md",
       "type": "file",
       "file": "07_Poems_and_Prose/29_The_Lavender_Field.md",
-      "x": 402,
-      "y": 4730,
+      "x": 1114,
+      "y": 4962,
       "width": 340,
       "height": 100
     },
@@ -1011,8 +1101,8 @@
       "id": "n_07_Poems_and_Prose_01_Trips_Are_Like_Exes_md",
       "type": "file",
       "file": "07_Poems_and_Prose/01_Trips_Are_Like_Exes.md",
-      "x": 758,
-      "y": 4730,
+      "x": 46,
+      "y": 5078,
       "width": 340,
       "height": 100
     },
@@ -1020,8 +1110,8 @@
       "id": "n_07_Poems_and_Prose_26_What_the_Dish_Pit_Knows_md",
       "type": "file",
       "file": "07_Poems_and_Prose/26_What_the_Dish_Pit_Knows.md",
-      "x": 1114,
-      "y": 4730,
+      "x": 402,
+      "y": 5078,
       "width": 340,
       "height": 100
     },
@@ -1029,8 +1119,8 @@
       "id": "n_07_Poems_and_Prose_04_When_You_Know_to_Much_md",
       "type": "file",
       "file": "07_Poems_and_Prose/04_When_You_Know_to_Much.md",
-      "x": 46,
-      "y": 4846,
+      "x": 758,
+      "y": 5078,
       "width": 340,
       "height": 100
     },
@@ -1038,8 +1128,8 @@
       "id": "n_07_Poems_and_Prose_28_Will_o_md",
       "type": "file",
       "file": "07_Poems_and_Prose/28_Will_o.md",
-      "x": 402,
-      "y": 4846,
+      "x": 1114,
+      "y": 5078,
       "width": 340,
       "height": 100
     },
@@ -1047,7 +1137,7 @@
       "id": "sgrp_confessional_poetry_song",
       "type": "group",
       "x": 30,
-      "y": 5014,
+      "y": 5246,
       "width": 1084,
       "height": 408,
       "label": "Song (7)",
@@ -1058,7 +1148,7 @@
       "type": "file",
       "file": "06_Songs/06_Ballad_of_the_Iron_Beast.md",
       "x": 46,
-      "y": 5058,
+      "y": 5290,
       "width": 340,
       "height": 100
     },
@@ -1067,7 +1157,7 @@
       "type": "file",
       "file": "06_Songs/12_Don_t_Miss_the_Train.md",
       "x": 402,
-      "y": 5058,
+      "y": 5290,
       "width": 340,
       "height": 100
     },
@@ -1076,7 +1166,7 @@
       "type": "file",
       "file": "06_Songs/08_I_Want_to_Hang.md",
       "x": 758,
-      "y": 5058,
+      "y": 5290,
       "width": 340,
       "height": 100
     },
@@ -1085,7 +1175,7 @@
       "type": "file",
       "file": "06_Songs/10_Shanty_for_the_Morning_Ferry.md",
       "x": 46,
-      "y": 5174,
+      "y": 5406,
       "width": 340,
       "height": 100
     },
@@ -1094,7 +1184,7 @@
       "type": "file",
       "file": "06_Songs/11_Six_Things_a_Hand_Can_Make.md",
       "x": 402,
-      "y": 5174,
+      "y": 5406,
       "width": 340,
       "height": 100
     },
@@ -1103,7 +1193,7 @@
       "type": "file",
       "file": "06_Songs/07_Tenfold.md",
       "x": 758,
-      "y": 5174,
+      "y": 5406,
       "width": 340,
       "height": 100
     },
@@ -1112,7 +1202,7 @@
       "type": "file",
       "file": "06_Songs/09_The_Blade_Sings_at_Dawn.md",
       "x": 46,
-      "y": 5290,
+      "y": 5522,
       "width": 340,
       "height": 100
     },
@@ -1120,7 +1210,7 @@
       "id": "sgrp_confessional_poetry_letter",
       "type": "group",
       "x": 30,
-      "y": 5458,
+      "y": 5690,
       "width": 1084,
       "height": 292,
       "label": "Letter (5)",
@@ -1131,7 +1221,7 @@
       "type": "file",
       "file": "08_Letters/04_Black_Wax.md",
       "x": 46,
-      "y": 5502,
+      "y": 5734,
       "width": 340,
       "height": 100
     },
@@ -1140,7 +1230,7 @@
       "type": "file",
       "file": "08_Letters/03_Censored.md",
       "x": 402,
-      "y": 5502,
+      "y": 5734,
       "width": 340,
       "height": 100
     },
@@ -1149,7 +1239,7 @@
       "type": "file",
       "file": "08_Letters/02_Five_Letters_at_the_Fork.md",
       "x": 758,
-      "y": 5502,
+      "y": 5734,
       "width": 340,
       "height": 100
     },
@@ -1158,7 +1248,7 @@
       "type": "file",
       "file": "08_Letters/05_One_Shot.md",
       "x": 46,
-      "y": 5618,
+      "y": 5850,
       "width": 340,
       "height": 100
     },
@@ -1167,7 +1257,7 @@
       "type": "file",
       "file": "08_Letters/06_The_Red_Crust.md",
       "x": 402,
-      "y": 5618,
+      "y": 5850,
       "width": 340,
       "height": 100
     },
@@ -1175,7 +1265,7 @@
       "id": "grp_unclassified",
       "type": "group",
       "x": 0,
-      "y": 6000,
+      "y": 6232,
       "width": 1960,
       "height": 1028,
       "label": "Unclassified / Mixed",
@@ -1185,7 +1275,7 @@
       "id": "sgrp_unclassified_book_concept",
       "type": "group",
       "x": 30,
-      "y": 6070,
+      "y": 6302,
       "width": 728,
       "height": 292,
       "label": "Book Concept (4)",
@@ -1196,7 +1286,7 @@
       "type": "file",
       "file": "04_Book_Concepts/06_A_9-5_Could_Kill_You.md",
       "x": 46,
-      "y": 6114,
+      "y": 6346,
       "width": 340,
       "height": 100
     },
@@ -1205,7 +1295,7 @@
       "type": "file",
       "file": "04_Book_Concepts/05_Chasing_Cold_Clues.md",
       "x": 402,
-      "y": 6114,
+      "y": 6346,
       "width": 340,
       "height": 100
     },
@@ -1214,7 +1304,7 @@
       "type": "file",
       "file": "04_Book_Concepts/07_Narrative_Voice.md",
       "x": 46,
-      "y": 6230,
+      "y": 6462,
       "width": 340,
       "height": 100
     },
@@ -1223,7 +1313,7 @@
       "type": "file",
       "file": "04_Book_Concepts/08_The_Show_Must_Go_On.md",
       "x": 402,
-      "y": 6230,
+      "y": 6462,
       "width": 340,
       "height": 100
     },
@@ -1231,7 +1321,7 @@
       "id": "sgrp_unclassified_story",
       "type": "group",
       "x": 794,
-      "y": 6070,
+      "y": 6302,
       "width": 728,
       "height": 292,
       "label": "Story (4)",
@@ -1242,7 +1332,7 @@
       "type": "file",
       "file": "03_Stories/01_A_Journey_Into_the_Soul.md",
       "x": 810,
-      "y": 6114,
+      "y": 6346,
       "width": 340,
       "height": 100
     },
@@ -1251,7 +1341,7 @@
       "type": "file",
       "file": "03_Stories/04_Internal_Affairs_-_The_Body_Has_Notes.md",
       "x": 1166,
-      "y": 6114,
+      "y": 6346,
       "width": 340,
       "height": 100
     },
@@ -1260,7 +1350,7 @@
       "type": "file",
       "file": "03_Stories/03_The_Yellow_Drop_and_The_Plain_Before_Sound.md",
       "x": 810,
-      "y": 6230,
+      "y": 6462,
       "width": 340,
       "height": 100
     },
@@ -1269,7 +1359,7 @@
       "type": "file",
       "file": "03_Stories/05_Two_Takes_-_Stage_Left_Stage_Right.md",
       "x": 1166,
-      "y": 6230,
+      "y": 6462,
       "width": 340,
       "height": 100
     },
@@ -1277,7 +1367,7 @@
       "id": "sgrp_unclassified_dream_journal",
       "type": "group",
       "x": 30,
-      "y": 6398,
+      "y": 6630,
       "width": 728,
       "height": 176,
       "label": "Dream Journal (2)",
@@ -1288,7 +1378,7 @@
       "type": "file",
       "file": "09_Dream_Journal/01_Dream_Journal.md",
       "x": 46,
-      "y": 6442,
+      "y": 6674,
       "width": 340,
       "height": 100
     },
@@ -1297,7 +1387,7 @@
       "type": "file",
       "file": "09_Dream_Journal/02_Trip_Tracker_-_July_Fourteenth_2023.md",
       "x": 402,
-      "y": 6442,
+      "y": 6674,
       "width": 340,
       "height": 100
     },
@@ -1305,7 +1395,7 @@
       "id": "sgrp_unclassified_novel",
       "type": "group",
       "x": 794,
-      "y": 6398,
+      "y": 6630,
       "width": 728,
       "height": 176,
       "label": "Novel (2)",
@@ -1316,7 +1406,7 @@
       "type": "file",
       "file": "02_Novels/04_The_Cycle_of_Us.md",
       "x": 810,
-      "y": 6442,
+      "y": 6674,
       "width": 340,
       "height": 100
     },
@@ -1325,7 +1415,7 @@
       "type": "file",
       "file": "02_Novels/03_Through_the_Eyes_of_Wolf_and_Lamb.md",
       "x": 1166,
-      "y": 6442,
+      "y": 6674,
       "width": 340,
       "height": 100
     },
@@ -1333,7 +1423,7 @@
       "id": "sgrp_unclassified_poem",
       "type": "group",
       "x": 30,
-      "y": 6610,
+      "y": 6842,
       "width": 728,
       "height": 176,
       "label": "Poem (2)",
@@ -1344,7 +1434,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/20_Taking_All_From_the_Rich.md",
       "x": 46,
-      "y": 6654,
+      "y": 6886,
       "width": 340,
       "height": 100
     },
@@ -1353,7 +1443,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/21_Todays_Wine.md",
       "x": 402,
-      "y": 6654,
+      "y": 6886,
       "width": 340,
       "height": 100
     },
@@ -1361,7 +1451,7 @@
       "id": "sgrp_unclassified_song",
       "type": "group",
       "x": 794,
-      "y": 6610,
+      "y": 6842,
       "width": 728,
       "height": 176,
       "label": "Song (2)",
@@ -1372,7 +1462,7 @@
       "type": "file",
       "file": "06_Songs/04_Cable_Construction_Circus.md",
       "x": 810,
-      "y": 6654,
+      "y": 6886,
       "width": 340,
       "height": 100
     },
@@ -1381,7 +1471,7 @@
       "type": "file",
       "file": "06_Songs/05_How_i_feel.md",
       "x": 1166,
-      "y": 6654,
+      "y": 6886,
       "width": 340,
       "height": 100
     },
@@ -1389,7 +1479,7 @@
       "id": "sgrp_unclassified_letter",
       "type": "group",
       "x": 1558,
-      "y": 6610,
+      "y": 6842,
       "width": 372,
       "height": 176,
       "label": "Letter (1)",
@@ -1400,7 +1490,7 @@
       "type": "file",
       "file": "08_Letters/01_Dear_Katie.md",
       "x": 1574,
-      "y": 6654,
+      "y": 6886,
       "width": 340,
       "height": 100
     },
@@ -1408,7 +1498,7 @@
       "id": "sgrp_unclassified_prose_poem",
       "type": "group",
       "x": 30,
-      "y": 6822,
+      "y": 7054,
       "width": 372,
       "height": 176,
       "label": "Prose Poem (1)",
@@ -1419,7 +1509,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/16_A_Crown_Without_a_Kingdom.md",
       "x": 46,
-      "y": 6866,
+      "y": 7098,
       "width": 340,
       "height": 100
     },
@@ -1427,7 +1517,7 @@
       "id": "sgrp_unclassified_worldbuilding",
       "type": "group",
       "x": 438,
-      "y": 6822,
+      "y": 7054,
       "width": 372,
       "height": 176,
       "label": "Worldbuilding (1)",
@@ -1438,7 +1528,7 @@
       "type": "file",
       "file": "05_Worldbuilding/01_People_of_the_Bark.md",
       "x": 454,
-      "y": 6866,
+      "y": 7098,
       "width": 340,
       "height": 100
     }
@@ -1555,293 +1645,353 @@
     {
       "id": "e_19",
       "fromNode": "n_03_Stories_26_The_Last_Dance_at_the_Hall_md",
-      "toNode": "n_05_Worldbuilding_04_The_Canon_and_Trope_Ledger_of_Who_Did_It_md",
+      "toNode": "n_03_Stories_27_Three_Heirlooms_Low_Tide_md",
       "label": "who-did-it"
     },
     {
       "id": "e_20",
+      "fromNode": "n_03_Stories_27_Three_Heirlooms_Low_Tide_md",
+      "toNode": "n_03_Stories_28_The_Cave_Gate_md",
+      "label": "who-did-it"
+    },
+    {
+      "id": "e_21",
+      "fromNode": "n_03_Stories_28_The_Cave_Gate_md",
+      "toNode": "n_03_Stories_29_What_the_Lab_Made_md",
+      "label": "who-did-it"
+    },
+    {
+      "id": "e_22",
+      "fromNode": "n_03_Stories_29_What_the_Lab_Made_md",
+      "toNode": "n_05_Worldbuilding_04_The_Canon_and_Trope_Ledger_of_Who_Did_It_md",
+      "label": "who-did-it"
+    },
+    {
+      "id": "e_23",
       "fromNode": "n_05_Worldbuilding_04_The_Canon_and_Trope_Ledger_of_Who_Did_It_md",
       "toNode": "n_05_Worldbuilding_05_Codex_of_the_End_of_the_Line_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_21",
+      "id": "e_24",
       "fromNode": "n_05_Worldbuilding_05_Codex_of_the_End_of_the_Line_md",
       "toNode": "n_05_Worldbuilding_06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_22",
+      "id": "e_25",
       "fromNode": "n_05_Worldbuilding_06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line_md",
       "toNode": "n_05_Worldbuilding_07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_23",
+      "id": "e_26",
       "fromNode": "n_05_Worldbuilding_07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage_md",
       "toNode": "n_05_Worldbuilding_08_The_Testament_of_the_Mother_of_Mothers_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_24",
+      "id": "e_27",
       "fromNode": "n_05_Worldbuilding_08_The_Testament_of_the_Mother_of_Mothers_md",
       "toNode": "n_05_Worldbuilding_09_A_Lamplighter_s_Round_of_HollowMere_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_25",
+      "id": "e_28",
       "fromNode": "n_05_Worldbuilding_09_A_Lamplighter_s_Round_of_HollowMere_md",
       "toNode": "n_05_Worldbuilding_10_The_HollowMere_Gazette_Morning_Edition_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_26",
+      "id": "e_29",
       "fromNode": "n_05_Worldbuilding_10_The_HollowMere_Gazette_Morning_Edition_md",
       "toNode": "n_05_Worldbuilding_11_Mrs_Grieves_s_Tab_Book_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_27",
+      "id": "e_30",
       "fromNode": "n_05_Worldbuilding_11_Mrs_Grieves_s_Tab_Book_md",
       "toNode": "n_05_Worldbuilding_12_Fourteen_Things_Left_Lying_Around_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_28",
+      "id": "e_31",
       "fromNode": "n_05_Worldbuilding_12_Fourteen_Things_Left_Lying_Around_md",
       "toNode": "n_05_Worldbuilding_13_The_Undertaker_s_Register_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_29",
+      "id": "e_32",
       "fromNode": "n_05_Worldbuilding_13_The_Undertaker_s_Register_md",
       "toNode": "n_05_Worldbuilding_14_The_Holy_War_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_30",
+      "id": "e_33",
       "fromNode": "n_05_Worldbuilding_14_The_Holy_War_md",
       "toNode": "n_05_Worldbuilding_15_Intake_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_31",
+      "id": "e_34",
       "fromNode": "n_05_Worldbuilding_15_Intake_md",
       "toNode": "n_05_Worldbuilding_16_The_Last_Shift_s_Tally_Board_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_32",
+      "id": "e_35",
       "fromNode": "n_05_Worldbuilding_16_The_Last_Shift_s_Tally_Board_md",
       "toNode": "n_05_Worldbuilding_17_Cables_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_33",
+      "id": "e_36",
       "fromNode": "n_05_Worldbuilding_17_Cables_md",
       "toNode": "n_05_Worldbuilding_18_Ordinances_of_the_Sovereign_Sourdough_Council_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_34",
+      "id": "e_37",
       "fromNode": "n_05_Worldbuilding_18_Ordinances_of_the_Sovereign_Sourdough_Council_md",
       "toNode": "n_05_Worldbuilding_19_The_Lighthouse_Sweep_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_35",
+      "id": "e_38",
       "fromNode": "n_05_Worldbuilding_19_The_Lighthouse_Sweep_md",
       "toNode": "n_05_Worldbuilding_20_The_Recipe_Book_of_the_Great_Hearth_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_36",
+      "id": "e_39",
       "fromNode": "n_05_Worldbuilding_20_The_Recipe_Book_of_the_Great_Hearth_md",
       "toNode": "n_05_Worldbuilding_21_The_Dawn_Judgment_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_37",
+      "id": "e_40",
       "fromNode": "n_05_Worldbuilding_21_The_Dawn_Judgment_md",
       "toNode": "n_05_Worldbuilding_22_A_Field_Guide_to_the_Things_That_Walk_at_Night_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_38",
+      "id": "e_41",
       "fromNode": "n_05_Worldbuilding_22_A_Field_Guide_to_the_Things_That_Walk_at_Night_md",
       "toNode": "n_05_Worldbuilding_23_Exhibits_A_to_R_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_39",
+      "id": "e_42",
       "fromNode": "n_05_Worldbuilding_23_Exhibits_A_to_R_md",
       "toNode": "n_05_Worldbuilding_24_Arrivals_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_40",
+      "id": "e_43",
       "fromNode": "n_05_Worldbuilding_24_Arrivals_md",
+      "toNode": "n_05_Worldbuilding_25_The_South_East_Light_md",
+      "label": "who-did-it"
+    },
+    {
+      "id": "e_44",
+      "fromNode": "n_05_Worldbuilding_25_The_South_East_Light_md",
+      "toNode": "n_05_Worldbuilding_26_Standing_Orders_md",
+      "label": "who-did-it"
+    },
+    {
+      "id": "e_45",
+      "fromNode": "n_05_Worldbuilding_26_Standing_Orders_md",
+      "toNode": "n_05_Worldbuilding_27_Grounds_99_Survey_of_2626_md",
+      "label": "who-did-it"
+    },
+    {
+      "id": "e_46",
+      "fromNode": "n_05_Worldbuilding_27_Grounds_99_Survey_of_2626_md",
+      "toNode": "n_05_Worldbuilding_28_Timetable_of_Stations_Not_Yet_Built_md",
+      "label": "who-did-it"
+    },
+    {
+      "id": "e_47",
+      "fromNode": "n_05_Worldbuilding_28_Timetable_of_Stations_Not_Yet_Built_md",
       "toNode": "n_06_Songs_06_Ballad_of_the_Iron_Beast_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_41",
+      "id": "e_48",
       "fromNode": "n_06_Songs_06_Ballad_of_the_Iron_Beast_md",
       "toNode": "n_06_Songs_07_Tenfold_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_42",
+      "id": "e_49",
       "fromNode": "n_06_Songs_07_Tenfold_md",
       "toNode": "n_06_Songs_08_I_Want_to_Hang_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_43",
+      "id": "e_50",
       "fromNode": "n_06_Songs_08_I_Want_to_Hang_md",
       "toNode": "n_06_Songs_09_The_Blade_Sings_at_Dawn_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_44",
+      "id": "e_51",
       "fromNode": "n_06_Songs_09_The_Blade_Sings_at_Dawn_md",
       "toNode": "n_06_Songs_10_Shanty_for_the_Morning_Ferry_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_45",
+      "id": "e_52",
       "fromNode": "n_06_Songs_10_Shanty_for_the_Morning_Ferry_md",
       "toNode": "n_06_Songs_11_Six_Things_a_Hand_Can_Make_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_46",
+      "id": "e_53",
       "fromNode": "n_06_Songs_11_Six_Things_a_Hand_Can_Make_md",
       "toNode": "n_06_Songs_12_Don_t_Miss_the_Train_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_47",
+      "id": "e_54",
       "fromNode": "n_06_Songs_12_Don_t_Miss_the_Train_md",
       "toNode": "n_07_Poems_and_Prose_22_The_Daybook_of_Crumb_s_Ovens_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_48",
+      "id": "e_55",
       "fromNode": "n_07_Poems_and_Prose_22_The_Daybook_of_Crumb_s_Ovens_md",
       "toNode": "n_07_Poems_and_Prose_23_Hopscotch_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_49",
+      "id": "e_56",
       "fromNode": "n_07_Poems_and_Prose_23_Hopscotch_md",
       "toNode": "n_07_Poems_and_Prose_24_The_Apostate_the_Stowaway_the_Starving_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_50",
+      "id": "e_57",
       "fromNode": "n_07_Poems_and_Prose_24_The_Apostate_the_Stowaway_the_Starving_md",
       "toNode": "n_07_Poems_and_Prose_25_Resin_Seal_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_51",
+      "id": "e_58",
       "fromNode": "n_07_Poems_and_Prose_25_Resin_Seal_md",
       "toNode": "n_07_Poems_and_Prose_26_What_the_Dish_Pit_Knows_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_52",
+      "id": "e_59",
       "fromNode": "n_07_Poems_and_Prose_26_What_the_Dish_Pit_Knows_md",
       "toNode": "n_07_Poems_and_Prose_27_Sayings_of_the_Fork_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_53",
+      "id": "e_60",
       "fromNode": "n_07_Poems_and_Prose_27_Sayings_of_the_Fork_md",
       "toNode": "n_07_Poems_and_Prose_28_Will_o_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_54",
+      "id": "e_61",
       "fromNode": "n_07_Poems_and_Prose_28_Will_o_md",
       "toNode": "n_07_Poems_and_Prose_29_The_Lavender_Field_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_55",
+      "id": "e_62",
       "fromNode": "n_07_Poems_and_Prose_29_The_Lavender_Field_md",
+      "toNode": "n_07_Poems_and_Prose_30_Eight_Phrases_md",
+      "label": "who-did-it"
+    },
+    {
+      "id": "e_63",
+      "fromNode": "n_07_Poems_and_Prose_30_Eight_Phrases_md",
+      "toNode": "n_07_Poems_and_Prose_31_The_Dream_Book_md",
+      "label": "who-did-it"
+    },
+    {
+      "id": "e_64",
+      "fromNode": "n_07_Poems_and_Prose_31_The_Dream_Book_md",
       "toNode": "n_08_Letters_02_Five_Letters_at_the_Fork_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_56",
+      "id": "e_65",
       "fromNode": "n_08_Letters_02_Five_Letters_at_the_Fork_md",
       "toNode": "n_08_Letters_03_Censored_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_57",
+      "id": "e_66",
       "fromNode": "n_08_Letters_03_Censored_md",
       "toNode": "n_08_Letters_04_Black_Wax_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_58",
+      "id": "e_67",
       "fromNode": "n_08_Letters_04_Black_Wax_md",
       "toNode": "n_08_Letters_05_One_Shot_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_59",
+      "id": "e_68",
       "fromNode": "n_08_Letters_05_One_Shot_md",
       "toNode": "n_08_Letters_06_The_Red_Crust_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_60",
+      "id": "e_69",
       "fromNode": "n_08_Letters_06_The_Red_Crust_md",
       "toNode": "n_10_Characters_06_The_Confession_Book_of_St_Brannock_s_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_61",
+      "id": "e_70",
       "fromNode": "n_10_Characters_06_The_Confession_Book_of_St_Brannock_s_md",
       "toNode": "n_10_Characters_07_Four_Notices_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_62",
+      "id": "e_71",
       "fromNode": "n_10_Characters_07_Four_Notices_md",
       "toNode": "n_10_Characters_08_Persons_of_Note_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_63",
+      "id": "e_72",
       "fromNode": "n_10_Characters_08_Persons_of_Note_md",
       "toNode": "n_10_Characters_09_The_Tally_Rack_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_64",
+      "id": "e_73",
       "fromNode": "n_10_Characters_09_The_Tally_Rack_md",
       "toNode": "n_10_Characters_10_Subject_Files_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_65",
+      "id": "e_74",
       "fromNode": "n_10_Characters_10_Subject_Files_md",
       "toNode": "n_10_Characters_11_The_Density_Audit_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_66",
+      "id": "e_75",
       "fromNode": "n_10_Characters_11_The_Density_Audit_md",
       "toNode": "n_10_Characters_12_Pledged_and_Unredeemed_md",
       "label": "who-did-it"
     },
     {
-      "id": "e_67",
+      "id": "e_76",
+      "fromNode": "n_10_Characters_12_Pledged_and_Unredeemed_md",
+      "toNode": "n_10_Characters_13_The_Two_Roads_md",
+      "label": "who-did-it"
+    },
+    {
+      "id": "e_77",
       "fromNode": "n_09_Dream_Journal_02_Trip_Tracker_July_Fourteenth_2023_md",
       "toNode": "n_11_Essays_04_The_Creative_Codex_of_the_Mythic_Architect_md",
       "label": "creative-codex"
