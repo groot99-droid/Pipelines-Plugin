@@ -87,6 +87,7 @@ Motto: Bread is law, lineage and life.
 Law: Inquisitor → Guild Bailiff → High Chancellor.
 Places: the Great Hearth; the Windmill Cliffs; the Subterranean Yeast Vault; the Salt-Flats and Smuggler's Wharf; the Apothecary; Gallows Square; the lighthouse; the Counting-House; the Port Tavern.
 Dread: when the ferry casts off and the fog swallows the lamps, "the fermentation turns sour."
+Earlier, typed in a margin: 1787, LETTERS PATENT OF THE CROWN. THE HEARTH FOR THE POOR TO 1789. THE TURN. 1793, THE COMMONS IN THE HALL AND A BLADE OFF THE FERRY.
 
 Train. Ferry. Whistle.
 
@@ -339,6 +340,10 @@ They are sent out when the Roll Call finds empty bunks or a steam main ruptures.
 It wants every loaf registered. It enforces through the tariff, the Counting-House and the Hearth. It fears the sour turn.
 *Colours: the guild seal.*
 
+**The four of the Hall — Port-au-Levain, 1787–1793**
+The Gallery wants rank and the Patent; the Guild wants whoever pays; the Commons want bread, then the Hall; the Abbey wants the Mother pure and the keys kept. They enforce through the Hearth, the scale, the Square and the sacrament, in that order, and then in the other order.
+*Colours: gold leaf, flour-white, a red crust, burlap.*
+
 **The Iron-Wardens — Port-au-Levain**
 The Council's hand. They come when the yeast-tax goes unpaid across the island, or when the Grand Inspector is threatened. Brass-plated leather and shock-staves; they haul suspects to Gallows Square.
 *Colours: the shock-staff.*
@@ -402,3 +407,5 @@ To the Company, miasma. To the town, mere-rot.
 Then the train.
 
 *Pasted to the last page, typed: 1952. An old grade south of the trestle, owner of record none. A camp redesignated GROUNDS 99. PRODUCTION IS OBLIGATION, new paint on old. Then the Payroll Train.*
+
+*Pasted inside the back board, typed, older paper than the 1952 slip: 1787. A rock beyond the reef, under Letters Patent. A loaf at dusk on the empty platter, for a name under seal. Then the Morning Ferry.*

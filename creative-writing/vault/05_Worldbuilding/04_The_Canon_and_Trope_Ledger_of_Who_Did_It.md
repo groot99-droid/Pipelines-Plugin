@@ -90,6 +90,8 @@ His widow, Widow Vane, keeps the parlour in HollowMere. His portrait hangs there
 
 *Margin: Wire or rumour. The telegraph room has no slip for it. "Three nights" dead has been three nights dead for as long as I have kept this book.*
 
+*Margin, typed, on a slip pasted to the page: PORT-AU-LEVAIN, 1787–1793. LETTERS PATENT OF THE CROWN; THE TURN. THIS ENTRY'S YEAR IS THE ISLAND'S AFTER. HOUSE OF VANE HELD LE LEVAIN THEN AS NOW. SEE ENTRY XVIII.*
+
 Entered. Ruled. Not believed.
 
 ---
@@ -392,6 +394,28 @@ Entered. Not ruled. Not the clerk's.
 
 ---
 
+## Entry XVIII. Port-au-Levain, under the Patent
+
+*Not in the clerk's hand. Typed on three slips and pasted in behind Entry XVII. The type is French in its spelling of the island and English in everything else. The slips are later than the book, and they speak of a century before it.*
+
+**Record.** A rock in the North Atlantic, off New France, beyond the reef. It is held by a Guild chartered under Letters Patent of the Crown in 1787. Its clock is the Morning Ferry. Every soul there has a Wake Loaf under a cloche on a silver platter in the Hall of Platters, and the platter nearest the Hearth is gilded. The Hall's great south doors open onto Gallows Square.
+
+**Canon.** Four keep the Hall, by colour:
+- **the Gallery**, the Council houses, in gold leaf: order, rank, the Patent;
+- **the Guild**, the trades, in flour-white: whoever pays;
+- **the Commons**, the dish pit, the dockhands and the unregistered, in a red crust: bread, then the Hall;
+- **the Abbey of the Crust**, in burlap: the Mother's purity, and the keys.
+
+From 1787 to 1789 the Gallery tries the poor at dawn, for bread, and gives them to the Great Hearth at supper, with music, a bell and silver cloches. In September 1789 the ferry brings the news. The Gallery's own Chancellor gives a gilded platter to the fire to keep the rest, and the Commons eat the Gallery's supper. By 1793 the Commons sit in the Hall under the same ordinances in red ink, and a blade has come off the ferry to stand beside the Hearth.
+
+**Ruling.** The slips do not say how the island came from this to the Testament's year. They say that at dusk, in 1787 as in this book's year, a loaf is set on the empty platter nearest the Hearth, for a name under seal, and that no one calls the name. The clerk enters the loaf as older than the death in Entry III. No cause is given.
+
+*Margin, typed: THE LAST JUDGMENT OF 1793 IS ENTERED WITHOUT AN HOUR.*
+
+Entered. Not ruled. Not the clerk's.
+
+---
+
 ## Trope Ledger (accounts)
 
 *Accounts owed by the project. Each is to be marked settled when a later work pays it.*
@@ -404,15 +428,15 @@ Entered. Not ruled. Not the clerk's.
 | The thread on the nail | whodunit / locked-room | forensics: Scarf (thread), Hat (felt) | [[05_Worldbuilding/10_The_HollowMere_Gazette_Morning_Edition|The HollowMere Gazette]]; [[03_Stories/14_The_Loudest_Voice|The Loudest Voice]]; [[03_Stories/13_The_People_against|The People against ______]] |
 | The cleaned-up crime scene | whodunit / locked-room | Killer card: "clean one clue, wash at the well" | [[03_Stories/12_What_the_Well_Remembers|What the Well Remembers]]; [[07_Poems_and_Prose/22_The_Daybook_of_Crumb_s_Ovens|The Daybook of Crumb's Ovens]]; [[03_Stories/14_The_Loudest_Voice|The Loudest Voice]]; [[10_Characters/10_Subject_Files|Subject Files]]; [[05_Worldbuilding/17_Cables|Cables]] |
 | The reading of the will | whodunit / locked-room | Vane's will: "whoever remains when the last lantern goes out" | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]]; [[05_Worldbuilding/04_The_Canon_and_Trope_Ledger_of_Who_Did_It|Canon and Trope Ledger]] |
-| The poisoned cup | whodunit / locked-room | caption "Something in the cup was not sugar"; Herbalist | |
+| The poisoned cup | whodunit / locked-room | caption "Something in the cup was not sugar"; Herbalist | [[08_Letters/04_Black_Wax|Black Wax]]; [[05_Worldbuilding/20_The_Recipe_Book_of_the_Great_Hearth|The Recipe Book of the Great Hearth]] |
 | The empty slot on the shelf | whodunit / locked-room | Mallory Apothecary, "NOT FOR SALE" shelf | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]]; [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |
 | Gathering the suspects | whodunit / locked-room | the Town Bell; the Tribunal | [[03_Stories/13_The_People_against|The People against ______]]; [[03_Stories/14_The_Loudest_Voice|The Loudest Voice]] |
 | The case file and the stamp | whodunit / locked-room | Detective: "Collect, inspect, cross-reference." | [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]]; [[03_Stories/13_The_People_against|The People against ______]]; [[10_Characters/06_The_Confession_Book_of_St_Brannock_s|The Confession Book of St Brannock's]]; [[10_Characters/10_Subject_Files|Subject Files]]; [[05_Worldbuilding/15_Intake|Intake]]; [[10_Characters/09_The_Tally_Rack|The Tally Rack]] |
 | The alibi witness | whodunit / locked-room | Accomplice: "You never hold the knife, only the alibi." | [[03_Stories/13_The_People_against|The People against ______]]; [[03_Stories/14_The_Loudest_Voice|The Loudest Voice]]; [[10_Characters/06_The_Confession_Book_of_St_Brannock_s|The Confession Book of St Brannock's]] |
-| Murder at the dinner table | whodunit / locked-room | Crumb's Ovens wake table, ten plates | |
+| Murder at the dinner table | whodunit / locked-room | Crumb's Ovens wake table, ten plates | [[05_Worldbuilding/20_The_Recipe_Book_of_the_Great_Hearth|The Recipe Book of the Great Hearth]]; [[05_Worldbuilding/21_The_Dawn_Judgment|The Dawn Judgment]] |
 | The loudest accuser | hidden-role / social-deduction | Killer: "be the loudest voice asking who did it" | [[03_Stories/14_The_Loudest_Voice|The Loudest Voice]]; [[06_Songs/08_I_Want_to_Hang|I Want to Hang]] |
 | The borrowed face | hidden-role / social-deduction | Killer in a borrowed character; the cover roles | [[03_Stories/14_The_Loudest_Voice|The Loudest Voice]]; [[10_Characters/06_The_Confession_Book_of_St_Brannock_s|The Confession Book of St Brannock's]]; [[05_Worldbuilding/14_The_Holy_War|The Holy War]] |
-| Skin-walking the victim | hidden-role / social-deduction | Zealot in the Vicar's robes; Timber-Wolf against the Forest Chaplain | [[05_Worldbuilding/14_The_Holy_War|The Holy War]]; [[06_Songs/07_Tenfold|Tenfold]]; [[10_Characters/07_Four_Notices|Four Notices]]; [[07_Poems_and_Prose/25_Resin_Seal|Resin-Seal]] |
+| Skin-walking the victim | hidden-role / social-deduction | Zealot in the Vicar's robes; Timber-Wolf against the Forest Chaplain | [[05_Worldbuilding/14_The_Holy_War|The Holy War]]; [[06_Songs/07_Tenfold|Tenfold]]; [[10_Characters/07_Four_Notices|Four Notices]]; [[07_Poems_and_Prose/25_Resin_Seal|Resin-Seal]]; [[03_Stories/17_The_Burlap_Cowl|The Burlap Cowl]] |
 | The jester who wants to hang | hidden-role / social-deduction | Drifter: "You want to hang." | [[06_Songs/08_I_Want_to_Hang|I Want to Hang]]; [[10_Characters/06_The_Confession_Book_of_St_Brannock_s|The Confession Book of St Brannock's]] |
 | The bodyguard at one door | hidden-role / social-deduction | Watchman | [[10_Characters/06_The_Confession_Book_of_St_Brannock_s|The Confession Book of St Brannock's]]; [[03_Stories/14_The_Loudest_Voice|The Loudest Voice]] |
 | One bottle saves, one ends | hidden-role / social-deduction | Herbalist | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]] |
@@ -422,7 +446,7 @@ Entered. Not ruled. Not the clerk's.
 | The innocent who sees everything | hidden-role / social-deduction | Child: "Hide, watch, remember." | [[03_Stories/12_What_the_Well_Remembers|What the Well Remembers]]; [[03_Stories/14_The_Loudest_Voice|The Loudest Voice]]; [[10_Characters/06_The_Confession_Book_of_St_Brannock_s|The Confession Book of St Brannock's]] |
 | The town vote | hidden-role / social-deduction | caption "The town has spoken." | [[03_Stories/13_The_People_against|The People against ______]]; [[03_Stories/14_The_Loudest_Voice|The Loudest Voice]]; [[06_Songs/08_I_Want_to_Hang|I Want to Hang]] |
 | Secret recruitment | hidden-role / social-deduction | the Vicar's conversions; Zealot's Dark Positions | [[05_Worldbuilding/14_The_Holy_War|The Holy War]]; [[06_Songs/07_Tenfold|Tenfold]] |
-| Identity at dawn | hidden-role / social-deduction | role card / Wake Loaf platter / tally log | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]]; [[10_Characters/06_The_Confession_Book_of_St_Brannock_s|The Confession Book of St Brannock's]]; [[05_Worldbuilding/13_The_Undertaker_s_Register|The Undertaker's Register]]; [[10_Characters/07_Four_Notices|Four Notices]]; [[10_Characters/08_Persons_of_Note|Persons of Note]]; [[05_Worldbuilding/14_The_Holy_War|The Holy War]]; [[07_Poems_and_Prose/24_The_Apostate_the_Stowaway_the_Starving|The Apostate, the Stowaway, the Starving]]; [[05_Worldbuilding/15_Intake|Intake]]; [[10_Characters/09_The_Tally_Rack|The Tally Rack]]; [[06_Songs/09_The_Blade_Sings_at_Dawn|The Blade Sings at Dawn]]; [[07_Poems_and_Prose/25_Resin_Seal|Resin-Seal]] |
+| Identity at dawn | hidden-role / social-deduction | role card / Wake Loaf platter / tally log | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]]; [[10_Characters/06_The_Confession_Book_of_St_Brannock_s|The Confession Book of St Brannock's]]; [[05_Worldbuilding/13_The_Undertaker_s_Register|The Undertaker's Register]]; [[10_Characters/07_Four_Notices|Four Notices]]; [[10_Characters/08_Persons_of_Note|Persons of Note]]; [[05_Worldbuilding/14_The_Holy_War|The Holy War]]; [[07_Poems_and_Prose/24_The_Apostate_the_Stowaway_the_Starving|The Apostate, the Stowaway, the Starving]]; [[05_Worldbuilding/15_Intake|Intake]]; [[10_Characters/09_The_Tally_Rack|The Tally Rack]]; [[06_Songs/09_The_Blade_Sings_at_Dawn|The Blade Sings at Dawn]]; [[07_Poems_and_Prose/25_Resin_Seal|Resin-Seal]]; [[10_Characters/11_The_Density_Audit|The Density Audit]]; [[05_Worldbuilding/18_Ordinances_of_the_Sovereign_Sourdough_Council|Ordinances of the Sovereign Sourdough Council]] |
 | The outlaw in a bandana | frontier western | Bandit | [[10_Characters/07_Four_Notices|Four Notices]] |
 | The stranger off the train | frontier western | the Daily Train; Stowaway | [[06_Songs/06_Ballad_of_the_Iron_Beast|Ballad of the Iron Beast]]; [[03_Stories/10_Tie_by_Tie|Tie by Tie]]; [[06_Songs/08_I_Want_to_Hang|I Want to Hang]]; [[05_Worldbuilding/17_Cables|Cables]]; [[05_Worldbuilding/16_The_Last_Shift_s_Tally_Board|The Last Shift's Tally Board]] |
 | The hanging tree | frontier western | Fenwood hanging oak; Gallows Wood | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |
@@ -457,33 +481,33 @@ Entered. Not ruled. Not the clerk's.
 | The wise woman in the woods | folk-horror / cult | Mother Moll's charcoal hut | [[10_Characters/06_The_Confession_Book_of_St_Brannock_s|The Confession Book of St Brannock's]]; [[10_Characters/08_Persons_of_Note|Persons of Note]] |
 | The scarecrow that is watching | folk-horror / cult | scarecrow in a trench coat, the square | [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]]; [[05_Worldbuilding/12_Fourteen_Things_Left_Lying_Around|Fourteen Things Left Lying Around]] |
 | Bread for the dead | folk-horror / cult | wake loaves, three for the dead, wax-sealed tokens | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |
-| The heretic sect | folk-horror / cult | Port-au-Levain Leaven-Rot; Spore-Caller, Groat-Master, Cellar-Ghoul, Arch-Fermenter | [[05_Worldbuilding/14_The_Holy_War|The Holy War]] |
+| The heretic sect | folk-horror / cult | Port-au-Levain Leaven-Rot; Spore-Caller, Groat-Master, Cellar-Ghoul, Arch-Fermenter | [[05_Worldbuilding/14_The_Holy_War|The Holy War]]; [[03_Stories/17_The_Burlap_Cowl|The Burlap Cowl]] |
 | The baker up before dawn | cosy-bakery | Baker: "Up before anyone, flour to the elbows." | [[07_Poems_and_Prose/22_The_Daybook_of_Crumb_s_Ovens|The Daybook of Crumb's Ovens]] |
 | The bakery as rumour mill | cosy-bakery | Rumor Loaves | [[07_Poems_and_Prose/22_The_Daybook_of_Crumb_s_Ovens|The Daybook of Crumb's Ovens]]; [[05_Worldbuilding/09_A_Lamplighter_s_Round_of_HollowMere|A Lamplighter's Round]] |
-| The sweet that hides poison | cosy-bakery | Black-Crust Contract, nightshade glaze | |
-| The heirloom starter | cosy-bakery | the Mother of Mothers, Subterranean Yeast Vault | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]] |
-| The kitchen brigade | cosy-bakery | the ten kitchen rooms; old kitchen roles folded into guild lore | |
-| The critic who doesn't leave | cosy-bakery | Le Critique Gastronomique (island guild lore) | |
+| The sweet that hides poison | cosy-bakery | Black-Crust Contract, nightshade glaze | [[05_Worldbuilding/20_The_Recipe_Book_of_the_Great_Hearth|The Recipe Book of the Great Hearth]]; [[08_Letters/04_Black_Wax|Black Wax]] |
+| The heirloom starter | cosy-bakery | the Mother of Mothers, Subterranean Yeast Vault | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]]; [[05_Worldbuilding/21_The_Dawn_Judgment|The Dawn Judgment]]; [[05_Worldbuilding/18_Ordinances_of_the_Sovereign_Sourdough_Council|Ordinances of the Sovereign Sourdough Council]] |
+| The kitchen brigade | cosy-bakery | the ten kitchen rooms; old kitchen roles folded into guild lore | [[07_Poems_and_Prose/26_What_the_Dish_Pit_Knows|What the Dish Pit Knows]]; [[05_Worldbuilding/19_The_Lighthouse_Sweep|The Lighthouse Sweep]] |
+| The critic who doesn't leave | cosy-bakery | Le Critique Gastronomique (island guild lore) | [[07_Poems_and_Prose/26_What_the_Dish_Pit_Knows|What the Dish Pit Knows]]; [[05_Worldbuilding/20_The_Recipe_Book_of_the_Great_Hearth|The Recipe Book of the Great Hearth]] |
 | The ration tyrant | cosy-bakery | Baker → Ration Tyrant; the Starving | [[08_Letters/02_Five_Letters_at_the_Fork|Five Letters at the Fork]] |
-| The contract in the mail | noir | black-wax envelope in the mailbag | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]]; [[10_Characters/07_Four_Notices|Four Notices]]; [[08_Letters/02_Five_Letters_at_the_Fork|Five Letters at the Fork]]; [[03_Stories/16_Fifteen_Seconds|Fifteen Seconds]]; [[10_Characters/09_The_Tally_Rack|The Tally Rack]]; [[05_Worldbuilding/17_Cables|Cables]] |
+| The contract in the mail | noir | black-wax envelope in the mailbag | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]]; [[10_Characters/07_Four_Notices|Four Notices]]; [[08_Letters/02_Five_Letters_at_the_Fork|Five Letters at the Fork]]; [[03_Stories/16_Fifteen_Seconds|Fifteen Seconds]]; [[10_Characters/09_The_Tally_Rack|The Tally Rack]]; [[05_Worldbuilding/17_Cables|Cables]]; [[08_Letters/04_Black_Wax|Black Wax]] |
 | The one last job / going straight | noir | Hitman: "Burn the Letter & Keep Your Mundane Life" | [[10_Characters/07_Four_Notices|Four Notices]] |
 | Omertà | noir | Mob Boss | [[05_Worldbuilding/14_The_Holy_War|The Holy War]]; [[10_Characters/07_Four_Notices|Four Notices]] |
 | The blackmail letter | noir | Postmaster → Extortionist | [[08_Letters/02_Five_Letters_at_the_Fork|Five Letters at the Fork]] |
 | The paper prints the dirt | noir | HollowMere Gazette | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]] |
 | The widow with secrets (femme fatale, subverted) | noir | Widow Vane | [[10_Characters/08_Persons_of_Note|Persons of Note]] |
 | The fence | noir | Baker → Fence | [[08_Letters/02_Five_Letters_at_the_Fork|Five Letters at the Fork]] |
-| Robbing the express safe | railroad | Bandit's fourth score | |
+| Robbing the express safe | railroad | Bandit's fourth score | [[06_Songs/10_Shanty_for_the_Morning_Ferry|Shanty for the Morning Ferry]] |
 | The Baron's private arrival | railroad | Cornelius Thorne with Pinkertons | [[05_Worldbuilding/14_The_Holy_War|The Holy War]]; [[10_Characters/07_Four_Notices|Four Notices]] |
 | The stowaway in the freight | railroad | Stowaway reading the Baron's manifest | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]]; [[07_Poems_and_Prose/24_The_Apostate_the_Stowaway_the_Starving|The Apostate, the Stowaway, the Starving]] |
 | End of the line | railroad | opening narration; overworld platform | [[03_Stories/10_Tie_by_Tie|Tie by Tie]] |
 | The train as the clock | railroad | Daily Train; BlackPine Payroll Train | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]]; [[06_Songs/06_Ballad_of_the_Iron_Beast|Ballad of the Iron Beast]]; [[05_Worldbuilding/17_Cables|Cables]]; [[05_Worldbuilding/15_Intake|Intake]] |
 | The cargo that is a person | railroad | the Baron's manifest; freight crate | [[05_Worldbuilding/07_The_Daily_Train_Timetable_Manifest_and_Rules_of_Carriage|The Daily Train]]; [[07_Poems_and_Prose/24_The_Apostate_the_Stowaway_the_Starving|The Apostate, the Stowaway, the Starving]] |
-| The fog-bound island | island / sea | Port-au-Levain; the Morning Ferry | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]] |
-| The lighthouse keeper | island / sea | island lighthouse; Old Fennick's marsh light | [[10_Characters/08_Persons_of_Note|Persons of Note]] |
-| The smugglers' wharf | island / sea | Smuggler's Wharf; Smuggler-Blackguard | |
-| The drowned who walk | island / sea | Salt-Flat Drowners; Tide-Ghouls | |
+| The fog-bound island | island / sea | Port-au-Levain; the Morning Ferry | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]]; [[05_Worldbuilding/19_The_Lighthouse_Sweep|The Lighthouse Sweep]]; [[06_Songs/10_Shanty_for_the_Morning_Ferry|Shanty for the Morning Ferry]] |
+| The lighthouse keeper | island / sea | island lighthouse; Old Fennick's marsh light | [[10_Characters/08_Persons_of_Note|Persons of Note]]; [[05_Worldbuilding/19_The_Lighthouse_Sweep|The Lighthouse Sweep]] |
+| The smugglers' wharf | island / sea | Smuggler's Wharf; Smuggler-Blackguard | [[06_Songs/10_Shanty_for_the_Morning_Ferry|Shanty for the Morning Ferry]]; [[05_Worldbuilding/19_The_Lighthouse_Sweep|The Lighthouse Sweep]] |
+| The drowned who walk | island / sea | Salt-Flat Drowners; Tide-Ghouls | [[05_Worldbuilding/19_The_Lighthouse_Sweep|The Lighthouse Sweep]] |
 | Pay the ferryman | island / sea | Tuck the ferry boy; Harbourmaster Pell | [[10_Characters/08_Persons_of_Note|Persons of Note]] |
-| The closed council | island / sea | Sovereign Sourdough Council; High Chancellor | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]] |
+| The closed council | island / sea | Sovereign Sourdough Council; High Chancellor | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]]; [[05_Worldbuilding/18_Ordinances_of_the_Sovereign_Sourdough_Council|Ordinances of the Sovereign Sourdough Council]]; [[10_Characters/11_The_Density_Audit|The Density Audit]] |
 | The sea exit | island / sea | Thief (later release) | [[10_Characters/06_The_Confession_Book_of_St_Brannock_s|The Confession Book of St Brannock's]] |
 | The mine that should stay shut | industrial horror | the Flooded Gallery; Tinner | [[03_Stories/10_Tie_by_Tie|Tie by Tie]]; [[03_Stories/15_The_Dead_Man_s_Lamp|The Dead Man's Lamp]]; [[05_Worldbuilding/16_The_Last_Shift_s_Tally_Board|The Last Shift's Tally Board]]; [[08_Letters/03_Censored|Censored]] |
 | The name chalked out | industrial horror | tally board, Blackpine Workings | [[05_Worldbuilding/16_The_Last_Shift_s_Tally_Board|The Last Shift's Tally Board]]; [[05_Worldbuilding/17_Cables|Cables]]; [[08_Letters/03_Censored|Censored]] |
@@ -493,16 +517,21 @@ Entered. Not ruled. Not the clerk's.
 | Masks and searchlights | industrial horror | OEAs | [[05_Worldbuilding/15_Intake|Intake]]; [[03_Stories/16_Fifteen_Seconds|Fifteen Seconds]]; [[05_Worldbuilding/17_Cables|Cables]] |
 | Dug too deep | industrial horror | coal under the tin; the Deep Level | [[03_Stories/15_The_Dead_Man_s_Lamp|The Dead Man's Lamp]]; [[05_Worldbuilding/16_The_Last_Shift_s_Tally_Board|The Last Shift's Tally Board]] |
 | The poisoned lunchbox | industrial horror | Pit-Poisoner | [[03_Stories/16_Fifteen_Seconds|Fifteen Seconds]]; [[10_Characters/09_The_Tally_Rack|The Tally Rack]]; [[05_Worldbuilding/17_Cables|Cables]] |
-| Three verdicts | courtroom | Tribunal: Acquittal, Heavy Fine, Death | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]]; [[03_Stories/13_The_People_against|The People against ______]]; [[06_Songs/08_I_Want_to_Hang|I Want to Hang]]; [[03_Stories/14_The_Loudest_Voice|The Loudest Voice]]; [[10_Characters/09_The_Tally_Rack|The Tally Rack]]; [[06_Songs/09_The_Blade_Sings_at_Dawn|The Blade Sings at Dawn]] |
+| Three verdicts | courtroom | Tribunal: Acquittal, Heavy Fine, Death | [[05_Worldbuilding/05_Codex_of_the_End_of_the_Line|Codex of the End of the Line]]; [[03_Stories/13_The_People_against|The People against ______]]; [[06_Songs/08_I_Want_to_Hang|I Want to Hang]]; [[03_Stories/14_The_Loudest_Voice|The Loudest Voice]]; [[10_Characters/09_The_Tally_Rack|The Tally Rack]]; [[06_Songs/09_The_Blade_Sings_at_Dawn|The Blade Sings at Dawn]]; [[05_Worldbuilding/18_Ordinances_of_the_Sovereign_Sourdough_Council|Ordinances of the Sovereign Sourdough Council]]; [[05_Worldbuilding/21_The_Dawn_Judgment|The Dawn Judgment]] |
 | The trapdoor | courtroom | the gallows; Judge | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]]; [[03_Stories/13_The_People_against|The People against ______]]; [[06_Songs/08_I_Want_to_Hang|I Want to Hang]] |
 | Rumour hardens into indictment | courtroom | Dirty Deed Ledger Slips | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]]; [[03_Stories/13_The_People_against|The People against ______]] |
-| Trial by fire | courtroom | Great Hearth, Port-au-Levain | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]] |
+| Trial by fire | courtroom | Great Hearth, Port-au-Levain | [[05_Worldbuilding/08_The_Testament_of_the_Mother_of_Mothers|Testament of the Mother of Mothers]]; [[05_Worldbuilding/21_The_Dawn_Judgment|The Dawn Judgment]]; [[03_Stories/18_Three_Fires_and_a_Ferry|Three Fires and a Ferry]]; [[05_Worldbuilding/20_The_Recipe_Book_of_the_Great_Hearth|The Recipe Book of the Great Hearth]] |
 | The redemption vote | courtroom | Activist | [[10_Characters/07_Four_Notices|Four Notices]] |
-| Fined into ruin | courtroom | Scrip Forfeiture; Guild Fine | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]]; [[03_Stories/13_The_People_against|The People against ______]]; [[03_Stories/14_The_Loudest_Voice|The Loudest Voice]] |
-| The vault job | heist | Company Bank and Vault | |
+| Fined into ruin | courtroom | Scrip Forfeiture; Guild Fine | [[05_Worldbuilding/06_Articles_of_Incorporation_and_Bylaws_of_the_Thorne_Expanse_Line|Articles of the Line]]; [[03_Stories/13_The_People_against|The People against ______]]; [[03_Stories/14_The_Loudest_Voice|The Loudest Voice]]; [[10_Characters/11_The_Density_Audit|The Density Audit]]; [[06_Songs/10_Shanty_for_the_Morning_Ferry|Shanty for the Morning Ferry]] |
+| The mob at the gate | revolution / terror | Gallows Square; the Commons at the Hall's south doors | [[03_Stories/18_Three_Fires_and_a_Ferry|Three Fires and a Ferry]]; [[03_Stories/17_The_Burlap_Cowl|The Burlap Cowl]] |
+| Let them eat cake (subverted) | revolution / terror | the gilded brioche of the execution supper | [[05_Worldbuilding/20_The_Recipe_Book_of_the_Great_Hearth|The Recipe Book of the Great Hearth]]; [[05_Worldbuilding/21_The_Dawn_Judgment|The Dawn Judgment]] |
+| The aristocrat's last dance | revolution / terror | the Gallery's supper music; the Hall in 1793 | |
+| The tumbril | revolution / terror | the cart from the Hall to the Square | [[05_Worldbuilding/20_The_Recipe_Book_of_the_Great_Hearth|The Recipe Book of the Great Hearth]] |
+| The turncoat noble | revolution / terror | a Gallery house that takes the red crust | |
+| The vault job | heist | Company Bank and Vault | [[06_Songs/10_Shanty_for_the_Morning_Ferry|Shanty for the Morning Ferry]] |
 | Lifting the chapel plate | heist | Bandit at St Brannock's | [[10_Characters/07_Four_Notices|Four Notices]] |
 | The calling-card tip | heist | Bandit's gold coin at the bakery | [[05_Worldbuilding/10_The_HollowMere_Gazette_Morning_Edition|The HollowMere Gazette]]; [[07_Poems_and_Prose/22_The_Daybook_of_Crumb_s_Ovens|The Daybook of Crumb's Ovens]]; [[10_Characters/07_Four_Notices|Four Notices]]; [[08_Letters/02_Five_Letters_at_the_Fork|Five Letters at the Fork]] |
-| The swap | heist | loaf swaps (Smuggler-Blackguard); log swaps (Company Enforcer) | [[10_Characters/09_The_Tally_Rack|The Tally Rack]]; [[03_Stories/16_Fifteen_Seconds|Fifteen Seconds]] |
+| The swap | heist | loaf swaps (Smuggler-Blackguard); log swaps (Company Enforcer) | [[10_Characters/09_The_Tally_Rack|The Tally Rack]]; [[03_Stories/16_Fifteen_Seconds|Fifteen Seconds]]; [[10_Characters/11_The_Density_Audit|The Density Audit]]; [[03_Stories/18_Three_Fires_and_a_Ferry|Three Fires and a Ferry]] |
 | Heirloom theft | heist | Thief | [[10_Characters/06_The_Confession_Book_of_St_Brannock_s|The Confession Book of St Brannock's]] |
 | Vengeance tenfold | revenge | the Ascended Vicar | [[06_Songs/07_Tenfold|Tenfold]]; [[05_Worldbuilding/14_The_Holy_War|The Holy War]] |
 | The prayed-for who snaps | revenge | the Apostate, rusted pitchfork | [[07_Poems_and_Prose/24_The_Apostate_the_Stowaway_the_Starving|The Apostate, the Stowaway, the Starving]]; [[05_Worldbuilding/14_The_Holy_War|The Holy War]] |
