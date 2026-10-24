@@ -186,6 +186,23 @@ librarian:
     drafter -- an unverified quote is flagged inline, never silently
     trusted or silently dropped.
 
+# A work whose type is not its mode's own (a codex written in epic-fantasy,
+# a hymn in confessional-poetry) files under its type's folder rather than
+# the mode's target_folder. The type is chosen by the author at intake
+# (`run_pipeline.py new --type <type>`), never inferred; without it a work
+# keeps its mode's file_type and target_folder.
+work_types:
+  story: "03_Stories"
+  book-concept: "04_Book_Concepts"
+  worldbuilding: "05_Worldbuilding"
+  song: "06_Songs"
+  poem: "07_Poems_and_Prose"
+  prose-poem: "07_Poems_and_Prose"
+  letter: "08_Letters"
+  dream-journal: "09_Dream_Journal"
+  character-profile: "10_Characters"
+  essay: "11_Essays"
+
 # Vault-wide rules that apply regardless of mode (from CLAUDE.md
 # "Anti-Style / do-not list" and "Reading a file's frontmatter").
 vault_wide_rules:
@@ -548,7 +565,9 @@ stages:
       Automates CLAUDE.md's existing 5-step Maintenance procedure
       exactly as written -- this stage does not invent a new process.
     prompt: |
-      Only after the author approves draft_revised.md as final:
+      Only after the author approves draft_revised.md as final. If the run
+      was given a work type (work_types: above), that type's folder and
+      type replace {mode.target_folder} and {mode.file_type} below.
         1. Create the file under {mode.target_folder}/ with a filename
            matching the vault's existing numbering/naming convention in
            that folder.
