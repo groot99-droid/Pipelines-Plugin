@@ -433,4 +433,4 @@ cross-linked dataset, chapters (Describe, Compare, Critique) and an explorer pag
 game's own look. The owner answers a short creative brief before each chapter, and the answers are
 kept verbatim. The first teardown is `teardowns/who-did-it/`; see its README and
 [`docs/udgt.html`](docs/udgt.html). `teardowns/ninety-nine/` (The-Intern) and
-`teardowns/right-door-wrong-exit/` have profiles and a first scan, and wait on the owner's briefs.
+`teardowns/right-door-wrong-exit/` followed: Right Door has all seven chapters, Ninety-Nine waits on its briefs.

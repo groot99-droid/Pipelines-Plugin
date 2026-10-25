@@ -18,7 +18,10 @@
   {"stage":"4","question":"Each room's track plays on under the walk, and the walk adds small synthesized sounds (hum, buzz, drip, groan, chime). What should a room sound like when nothing is happening?","answer":"The track alone","date":"2026-10-25","asked_as":"chat"},
   {"stage":"5","question":"What is the slowest phone it must run on?","answer":"My own phone","date":"2026-10-25","asked_as":"chat"},
   {"stage":"5","question":"The walk test (Playwright, headless Chromium, desktop and --mobile) runs only by hand: the repo has no CI. Should it run on every push?","answer":"Yes, on every push","date":"2026-10-25","asked_as":"chat"},
-  {"stage":"5","question":"The loading clips and room videos differ only by case (a.MP4 / A.mp4), which collides on macOS and Windows checkouts. Rename them, or keep the pairs?","answer":"Rename them","date":"2026-10-25","asked_as":"chat"}
+  {"stage":"5","question":"The loading clips and room videos differ only by case (a.MP4 / A.mp4), which collides on macOS and Windows checkouts. Rename them, or keep the pairs?","answer":"Rename them","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"6","question":"It began on 2026-08-22 as a scroll reel of videos, became a click-through loop two days later, and grew a 3D walk five weeks after that. Was the 3D walk always the plan?","answer":"No, it grew","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"6","question":"Ninety-Nine names this game as its structural reference. What did you carry over into it?","answer":"The descent,Liminal rooms,The workflow,The trap","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"6","question":"What would make Right Door, Wrong Exit finished?","answer":"Never: it keeps growing","date":"2026-10-25","asked_as":"chat"}
  ],
  "about": "The owner's answers to the teardown briefs, verbatim, in the order given. Appended by `udgt.py record`; never generated or edited."
 }
