@@ -1,0 +1,235 @@
+{
+  "udgt": 1,
+  "name": "Ninety-Nine",
+  "slug": "ninety-nine",
+  "about": "The New Intern, NINETY-NINE: a static-web narrative game, one continuous first-person walk down through a real (photoreal) building that houses a fake (low-poly PS1) company. Eight scenes, two choices each, walked rather than clicked; the score picks each room's compliant or hostile render and one of four endings.",
+  "game": {
+    "repo": "groot99-droid/The-Intern",
+    "browse": "https://github.com/groot99-droid/The-Intern/blob/HEAD/",
+    "paths": [
+      "../../../The-Intern",
+      "../../../the-intern",
+      "../../../../The-Intern"
+    ]
+  },
+  "docs": [
+    {"id": "DOC1", "path": "docs/01_GAME_LOGIC.md", "area": "gameplay", "role": "Doc 1, the master source of truth: premise, spine and render, state model, canon C1 to C8, scene breakdowns, text library, combinatorics, open questions"},
+    {"id": "DOC2", "path": "docs/02_GENERATION_HIGGSFIELD.md", "area": "art", "role": "Doc 2, the generation pipeline (Higgsfield stills, Kling motion and audio); its stills and clips were removed when the game became 3D-only"},
+    {"id": "DOC3", "path": "docs/03_MINIGAME_UX.md", "area": "history", "role": "Doc 3, the mini-game UX spec: retired 2026-10-03, kept as the record of what was built and replaced"},
+    {"id": "DOC4", "path": "docs/04_TECHNICAL_BUILD.md", "area": "backend", "role": "Doc 4, the technical build: stack, state module, manifest, renderer, audio, preloading, bail-out, tests, budgets"},
+    {"id": "DESIGN_DOCS", "path": "docs/Design Docs.md", "area": "overview", "role": "The index of the four specs and their amendments"},
+    {"id": "README", "path": "README.md", "area": "overview", "role": "The repo's front page and map"},
+    {"id": "CLAUDE", "path": "CLAUDE.md", "area": "overview", "role": "Conventions, the naming scheme, the canon and what not to touch"},
+    {"id": "APP", "path": "ninety-nine/App Overview.md", "area": "frontend", "role": "The app: entry points, data, text, tools"},
+    {"id": "SCENE_FLOW", "path": "ninety-nine/assets/Scene Flow.md", "area": "gameplay", "role": "The game as it is walked now, scene by scene and ending by ending"},
+    {"id": "SOURCE", "path": "ninety-nine/src/Source Code.md", "area": "frontend", "role": "The source modules"},
+    {"id": "WALK", "path": "ninety-nine/src/walk/Walk Mode.md", "area": "frontend", "role": "Walk mode: rooms, doors, props, materials, controls"},
+    {"id": "WORLD", "path": "ninety-nine/src/world/World.md", "area": "world", "role": "The continuous building: one world space, connectors, anchors"},
+    {"id": "TESTS", "path": "ninety-nine/test/Tests.md", "area": "backend", "role": "The browser test suite"},
+    {"id": "ASSETS", "path": "ninety-nine/assets/README.md", "area": "art", "role": "The asset folder"},
+    {"id": "GENERATED", "path": "ninety-nine/assets/Generated Assets.md", "area": "art", "role": "What was generated, and what is left"},
+    {"id": "REVISIONS", "path": "ninety-nine/assets/Asset Revisions.md", "area": "art", "role": "Asset revisions: done, still to regenerate, audio"},
+    {"id": "GLB", "path": "ninety-nine/assets/glb/README.md", "area": "art", "role": "The prop library GLB"},
+    {"id": "BLENDER", "path": "blender/Blender Pipeline.md", "area": "art", "role": "The parallel Blender pipeline"},
+    {"id": "BLENDER_PLAN", "path": "blender/PLAN_remaining_scenes.md", "area": "art", "role": "The plan for the remaining 3D environments"},
+    {"id": "HIGGSFIELD", "path": "blender/higgsfield/README.md", "area": "art", "role": "The Higgsfield 3D scene-builder projects"},
+    {"id": "REBUILD", "path": "blender/higgsfield/REBUILD_NOTE.md", "area": "future", "role": "What the scene-builder projects need before they match the continuous building"},
+    {"id": "REFS", "path": "blender/refs/Reference Images.md", "area": "art", "role": "The last copies of the AI reference stills"},
+    {"id": "RENDERS", "path": "blender/renders/Scene Renders.md", "area": "art", "role": "The per-scene renders"},
+    {"id": "SFX_RAW", "path": "sfx-raw/Raw SFX Library.md", "area": "art", "role": "The raw sound-effect library"}
+  ],
+  "era_tags": [
+    "Amendment, (20\\d\\d-\\d\\d-\\d\\d)",
+    "[Rr]etired,? (20\\d\\d-\\d\\d-\\d\\d)"
+  ],
+  "refs": [
+    {"id": "doc1", "pattern": "\\bDoc(?:ument)? 1,? ?§ ?(\\d+(?:\\.\\d+)*)", "target": "sec:DOC1:{1}", "strict": true},
+    {"id": "doc2", "pattern": "\\bDoc(?:ument)? 2,? ?§ ?(\\d+(?:\\.\\d+)*)", "target": "sec:DOC2:{1}", "strict": true},
+    {"id": "doc3", "pattern": "\\bDoc(?:ument)? 3,? ?§ ?(\\d+(?:\\.\\d+)*)", "target": "sec:DOC3:{1}", "strict": true},
+    {"id": "doc4", "pattern": "\\bDoc(?:ument)? 4,? ?§ ?(\\d+(?:\\.\\d+)*)", "target": "sec:DOC4:{1}", "strict": true},
+    {"id": "canon", "pattern": "(?<![\\w-])(C[1-8])(?![\\w.])", "target": "sec:DOC1:3"},
+    {"id": "minigame", "pattern": "\\b(MG-0[1-7])\\b", "target": "minigame:{1}"},
+    {"id": "scene", "pattern": "(?<![\\w-])(S[0-8])(?![\\w-])", "target": "scene:{1}"},
+    {"id": "room", "pattern": "\\b(S[0-8]_[CHX]|SE_(?:ASSIM|EXPUL|PEND|RETAINED)|SET_(?:STREET|DIVE)|CN_[A-Z_]+[A-Z])\\b", "target": "rec:data/rooms/rooms/{1}"}
+  ],
+  "tables": [
+    {"id": "spine", "path": "docs/01_GAME_LOGIC.md", "under": "^4\\. THE SPINE", "kind": "scene", "area": "gameplay", "key": 0, "title": 1, "key_pattern": "^(S\\d|E)$"},
+    {"id": "minigames", "path": "docs/03_MINIGAME_UX.md", "under": "^2\\. COMPONENT INDEX", "kind": "minigame", "area": "history", "key": 0, "title": 2, "key_pattern": "^(MG-\\d\\d)$"}
+  ],
+  "datasets": {
+    "globs": ["ninety-nine/data/*.json", "ninety-nine/text/form.json", "ninety-nine/text/manifest.json", "ninety-nine/assets/MANIFEST.json"],
+    "strip": ["ninety-nine/"],
+    "area": "data",
+    "record_cap": 400
+  },
+  "code": {
+    "areas": [
+      {"id": "game", "title": "The game: director, state, spine, audio, captions", "area": "frontend",
+       "globs": ["ninety-nine/src/*.js", "ninety-nine/src/dev/*.js", "ninety-nine/index.html", "ninety-nine/style.css"],
+       "modules": ["ninety-nine/src/*.js"]},
+      {"id": "building", "title": "The building: world, walk mode, stage (three.js)", "area": "frontend",
+       "globs": ["ninety-nine/src/world/*.js", "ninety-nine/src/walk/*.js", "ninety-nine/src/stage/*.js"],
+       "modules": ["ninety-nine/src/world/*.js", "ninety-nine/src/walk/*.js", "ninety-nine/src/stage/*.js"]},
+      {"id": "tests", "title": "The browser test suite", "area": "backend",
+       "globs": ["ninety-nine/test/*.js", "ninety-nine/test/*.html", "ninety-nine/test/cases/*.js"],
+       "tests": ["ninety-nine/test/cases/*.js"]},
+      {"id": "tools", "title": "Tools: the room builder, dev server, test runner, autopilot walkthrough, scene builder", "area": "backend",
+       "globs": ["ninety-nine/tools/*.py", "ninety-nine/tools/*.cjs", "ninety-nine/tools/lib/*.cjs"]},
+      {"id": "blender", "title": "The Blender pipeline (mirrors of the .blend's Text datablocks)", "area": "art",
+       "globs": ["blender/*.py"]}
+    ],
+    "anchors": [
+      {"id": "beats", "title": "The beat vocabulary", "area": "gameplay", "file": "ninety-nine/src/director.js", "kind": "matches",
+       "pattern": "^\\s*if \\(b\\.(\\w+)", "about": "Every beat key runBeats() reads, in the order it applies them."},
+      {"id": "constants", "title": "The game's constants", "area": "gameplay", "file": "ninety-nine/src/state.js", "kind": "matches",
+       "pattern": "^export const ([A-Z_]+) =", "about": "The company, the role, the address, the drone's 48 Hz and its detune."},
+      {"id": "sfx-cues", "title": "Synthesized sound cues", "area": "art", "file": "ninety-nine/src/sfx.js", "kind": "matches",
+       "pattern": "^\\s*'([\\w-]+)':\\s*\\(ctx", "about": "The cues sfx.js synthesizes rather than plays from a file."},
+      {"id": "builders", "title": "Set builders", "area": "world", "file": "ninety-nine/tools/build_rooms.py", "kind": "matches",
+       "pattern": "^def ((?!_|prop\\b|glb\\b|r3\\b|pose\\b|shots_for\\b|door\\b|zone\\b|anchor\\b|drop_props\\b|check_room\\b|build\\b)\\w+)\\(", "about": "The functions that build each set and connector into data/rooms.json, in file order."}
+    ]
+  },
+  "ui": {
+    "token_files": ["ninety-nine/style.css"],
+    "token_prefix": "--company-",
+    "copy": ["ninety-nine/text/system.json", "ninety-nine/text/endings.json"],
+    "screens": [
+      {"id": "dom", "globs": ["ninety-nine/src/application.js", "ninety-nine/src/captions.js", "ninety-nine/src/labels.js", "ninety-nine/src/bail.js", "ninety-nine/src/soundToggle.js", "ninety-nine/src/screens.js", "ninety-nine/src/fracture.js"]}
+    ],
+    "screenshots": ["blender/higgsfield/*/*.png", "blender/renders/*/*.png", "blender/renders/_proof/*.png"]
+  },
+  "history": {
+    "pr": "Merge pull request #(\\d+) from \\S+?/(\\S+)"
+  },
+  "future": {
+    "horizons": [
+      {"id": "rebuild", "label": "Scene-builder rebuild", "pattern": "\\b(stale|rebuil[dt]|REBUILD_NOTE)\\b"},
+      {"id": "regenerate", "label": "Still to regenerate", "pattern": "\\b(still to regenerate|regenerat\\w+)\\b"},
+      {"id": "open", "label": "Open conceptual questions", "pattern": "\\b(worth deciding|is it|should the|does \\w+ deserve)\\b"},
+      {"id": "later", "label": "Planned, unscheduled", "pattern": "\\b(planned|not yet|later|to come|future work|until then|what's left|still needs)\\b"}
+    ],
+    "withdrawn": "\\b(retired|removed|gone|no longer|replaced|went with)\\b"
+  },
+  "stages": [
+    {"id": "0", "slug": "overview", "title": "Overview and the argument", "areas": ["overview", "gameplay"],
+     "keywords": ["premise", "spine", "render", "canon", "Following The Sheep", "argument"],
+     "prompts": [
+       "In one sentence, what should the player feel at the final card, when the word \"you\" appears for the only time?",
+       "Doc 1 §9.1 argues that the absence of a good ending is the argument. Do you still stand by it?",
+       "Who is it for first: you, a few friends, or strangers who find it on GitHub Pages?",
+       "What should this teardown help you decide next?"
+     ]},
+    {"id": "1", "slug": "ui", "title": "The interface that is not there", "areas": ["ui", "frontend"],
+     "keywords": ["diegetic", "label", "caption", "EXIT", "bail", "touch", "joystick", "hint", "form"],
+     "prompts": [
+       "Doc 4 §14 bans non-diegetic buttons: EXIT and the sound toggle are all that is left. Is even EXIT one too many?",
+       "Threshold labels stand over the place to walk to. Should they ever lie, or stay strictly truthful?",
+       "Phone or desktop first: which one do you play it on yourself?"
+     ]},
+    {"id": "2", "slug": "datasets", "title": "Sets, scenes and endings as data", "areas": ["data"],
+     "keywords": ["rooms.json", "scenes.json", "endings.json", "build_rooms", "manifest", "beat", "threshold", "zone"],
+     "prompts": [
+       "rooms.json is built by build_rooms.py and scenes.json is hand-edited. Is that split the right one, or should scenes be built too?",
+       "Who should author a new scene later: only you, or someone else working from the data alone?",
+       "The beat vocabulary keeps growing. Where would you stop it?"
+     ]},
+    {"id": "3", "slug": "gameplay", "title": "Spine, render and the walked choice", "areas": ["gameplay"],
+     "keywords": ["conformance", "dissonance", "friction", "fracture", "threshold", "succumb", "resist", "ending", "S0", "S8"],
+     "prompts": [
+       "Retiring the mini-games for walked thresholds was the largest change. What made you decide it?",
+       "Friction now comes from hesitation and doubling back. Should the player ever be told that it counts?",
+       "Which scene do you consider finished, and which still feels like a placeholder?",
+       "How long should one run take, and should a second run feel different?"
+     ]},
+    {"id": "4", "slug": "engine", "title": "Engine, audio and tests", "areas": ["backend"],
+     "keywords": ["stage", "director", "drone", "audio", "bus", "preload", "test", "autopilot", "budget", "dev server"],
+     "prompts": [
+       "The test suite runs in a browser by hand, with an optional headless runner. Should it become CI?",
+       "The 48 Hz drone (C7) is one oscillator that never restarts. Is it the game's most important system, or one among several?",
+       "What is the slowest device it must run on?"
+     ]},
+    {"id": "5", "slug": "world", "title": "The building and the canon", "areas": ["world"],
+     "keywords": ["building", "connector", "CN_", "descent", "Vellum", "Hallam", "canon", "Harlowe", "Shaun"],
+     "prompts": [
+       "The building's mood in three words?",
+       "Which canon rule (C1 to C8) would you defend if you had to break all the others?",
+       "Doc 1 §9.3 asks whether Harlowe deserves more. What is your answer now?"
+     ]},
+    {"id": "6", "slug": "art-audio", "title": "Art, audio and the asset pipelines", "areas": ["art"],
+     "keywords": ["PS1", "photoreal", "Blender", "Higgsfield", "Kling", "props", "GLB", "music", "sfx", "ambience"],
+     "prompts": [
+       "Hand-built Blender sets, Higgsfield scene-builder projects, or the live three.js rooms: which is the game's real face now?",
+       "The generated stills and clips were removed. Is there anything from that era you miss?",
+       "What should the building sound like when nothing is happening?"
+     ]},
+    {"id": "7", "slug": "history", "title": "How it was made: history and reversals", "areas": ["history"],
+     "keywords": ["amendment", "retired", "removed", "replaced", "pull request", "video era"],
+     "prompts": [
+       "The game went from generated video to a continuous 3D walk. Was the video era a detour, or a necessary sketch?",
+       "Which decision would you make differently with what you know now?",
+       "Was building it in AI sessions faster, or did the reviews cost more than they saved?"
+     ]},
+    {"id": "8", "slug": "future", "title": "Future: what is stale and what is next", "areas": ["future"],
+     "keywords": ["stale", "rebuild", "regenerate", "open question", "next"],
+     "prompts": [
+       "The Blender and Higgsfield sets are stale since the continuous building. Rebuild them, or let them go?",
+       "What is the one thing that would make it finished?",
+       "What would make you stop working on it?"
+     ]}
+  ],
+  "compare": [
+    {"name": "The Stanley Parable", "why": "an office, a narrator, choices walked through doors, and endings that comment on choosing"},
+    {"name": "P.T.", "why": "one looping corridor that changes behind the player's back"},
+    {"name": "Severance", "why": "the company that owns the worker's body and renames him"},
+    {"name": "Control", "why": "a brutalist building that is more real than the bureaucracy inside it"},
+    {"name": "Right Door, Wrong Exit", "why": "Doc 1's own structural reference: a liminal walk, room by room, to the exit"},
+    {"name": "Papers, Please", "why": "compliance as the mechanic, and paperwork as the horror"}
+  ],
+  "explorer": {
+    "title": "NINETY-NINE — Teardown",
+    "tagline": "THE CANDIDATE'S FILE: every choice, how it was made, and where it is going.",
+    "theme": {
+      "bg": "#000",
+      "text": "var(--company-ink)",
+      "muted": "#888",
+      "label": "var(--company-ink)",
+      "accent": "#7ec98f",
+      "on-accent": "#0a2e12",
+      "glass": "rgba(26, 26, 26, .82)",
+      "wash": "rgba(126, 201, 143, .10)",
+      "rim": "rgba(232, 226, 208, .22)",
+      "rim-top": "rgba(232, 226, 208, .4)",
+      "bevel": "#000",
+      "sunken": "rgba(0, 0, 0, .55)",
+      "font-display": "var(--company-face)",
+      "font-label": "var(--company-face)",
+      "font-text": "'Times New Roman', Times, serif",
+      "font-card": "var(--company-face)",
+      "danger": "#c97e7e",
+      "sky-top": "#000",
+      "sky-mid": "#0a0a0a",
+      "sky-low": "#1a1a1a",
+      "star": "transparent",
+      "logo": "var(--company-ink)",
+      "logo-accent": "#7ec98f",
+      "paper": "#cfc9b8",
+      "ink": "#1a1a1a",
+      "ink-muted": "#808080",
+      "stroke": "#1a1a1a",
+      "warm": "#e8e2d0"
+    },
+    "logo": ["NINETY-", "NINE"],
+    "views": [
+      {"id": "title", "label": "Title", "about": "What the game is and where the teardown stands.", "special": "title"},
+      {"id": "file", "label": "The file", "about": "The teardown chapters: describe, compare, critique.", "special": "chapters"},
+      {"id": "spine", "label": "Spine", "about": "The eight scenes, their renders, the beats and the rules of the walk.", "kinds": ["scene", "anchor", "section"], "areas": ["gameplay"]},
+      {"id": "building", "label": "Building", "about": "The rooms and connectors, as data.", "kinds": ["dataset", "collection", "record"]},
+      {"id": "canon", "label": "Canon", "about": "The world and the rules that never break.", "kinds": ["section", "anchor"], "areas": ["world", "overview"]},
+      {"id": "plant", "label": "Plant room", "about": "The code, the tests, the tokens, the copy and the screens.", "kinds": ["codearea", "anchor", "module", "token", "copy", "screen", "screenshot"]},
+      {"id": "archive", "label": "Archive", "about": "How it was made: the video era, the mini-games, the pull requests.", "special": "history"},
+      {"id": "pending", "label": "Pending review", "about": "What is stale, still to regenerate, or open.", "kinds": ["plan", "minigame"]},
+      {"id": "owner", "label": "Owner's word", "about": "Your answers to the briefs, verbatim.", "kinds": ["answer"]}
+    ],
+    "menu_small": ["archive", "owner"]
+  }
+}

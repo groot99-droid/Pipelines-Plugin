@@ -1,0 +1,184 @@
+{
+  "udgt": 1,
+  "name": "Right Door, Wrong Exit",
+  "slug": "right-door-wrong-exit",
+  "about": "A single-page, click-through liminal-space walkthrough in the backrooms genre: an arcade-cabinet title card, then seven rooms, each a loading clip that glitches into a looping room video under a typewritten caption, then a first-person three.js walk to the room's exit. Plain HTML, CSS and JavaScript, no build step.",
+  "game": {
+    "repo": "groot99-droid/Right-Door-Wrong-Exit",
+    "browse": "https://github.com/groot99-droid/Right-Door-Wrong-Exit/blob/HEAD/",
+    "paths": [
+      "../../../Right-Door-Wrong-Exit",
+      "../../../right-door-wrong-exit",
+      "../../../../Right-Door-Wrong-Exit"
+    ]
+  },
+  "docs": [
+    {"id": "README", "path": "README.md", "area": "overview", "role": "The only document: the loop, the 3D walk, the scenes, the mini games, the piles, what moves, phones, testing, structure and notes"}
+  ],
+  "refs": [
+    {"id": "scene", "pattern": "`(dining|hallway|teal2|teal|flooded|trampoline|grocery)`", "target": "room:{1}"},
+    {"id": "scene-file", "pattern": "scenes/(dining|hallway|teal2|teal|flooded|trampoline|grocery)\\.js", "target": "room:{1}"},
+    {"id": "minigame", "pattern": "\\*\\*(Lights Out|Fill the Frames|Shopping List)\\*\\*", "target": "sec:README:mini-games"}
+  ],
+  "tables": [
+    {"id": "loop", "path": "README.md", "under": "^The loop$", "kind": "room", "area": "world", "key": 4, "title": 0, "key_pattern": "^(\\w+)"},
+    {"id": "inputs", "path": "README.md", "under": "^The 3D walk$", "kind": "input", "area": "ui", "key": 0, "title": 0},
+    {"id": "minigames", "path": "README.md", "under": "^Mini games$", "kind": "minigame", "area": "gameplay", "key": 0},
+    {"id": "motion", "path": "README.md", "under": "^What moves$", "kind": "motion", "area": "art", "key": 0}
+  ],
+  "code": {
+    "areas": [
+      {"id": "shell", "title": "The shell: screens, the chapter list and the state machine", "area": "frontend",
+       "globs": ["index.html", "script.js", "styles.css"]},
+      {"id": "walk", "title": "The walk runtime: renderer, controls, building, mini games, piles, textures, sound", "area": "backend",
+       "globs": ["walk/*.js"], "modules": ["walk/*.js"]},
+      {"id": "scenes", "title": "The seven rooms, built in code", "area": "world",
+       "globs": ["walk/scenes/*.js"], "modules": ["walk/scenes/*.js"]},
+      {"id": "tools", "title": "Tools: the browser walk test and the scene viewer", "area": "backend",
+       "globs": ["tools/*.mjs", "tools/*.html"]}
+    ],
+    "anchors": [
+      {"id": "chapters", "title": "The chapters, in order", "area": "world", "file": "script.js", "kind": "matches",
+       "pattern": "^\\s*room: '([^']+)'", "about": "The CHAPTERS array: one room per chapter, A to G."},
+      {"id": "epithets", "title": "The chapters' epithets", "area": "world", "file": "script.js", "kind": "matches",
+       "pattern": "^\\s*epithet: '([^']+)'"},
+      {"id": "captions", "title": "The typewritten captions", "area": "world", "file": "script.js", "kind": "matches",
+       "pattern": "^\\s*caption: '(.+)',?$", "about": "What the paper card types out over each room video."},
+      {"id": "logs", "title": "The log entries", "area": "world", "file": "script.js", "kind": "matches",
+       "pattern": "^\\s*log: '(.+)',?$", "about": "The in-world log behind the LOG tab, one per room."},
+      {"id": "stamps", "title": "The clock stamps", "area": "world", "file": "script.js", "kind": "matches",
+       "pattern": "^\\s*stamp: '([^']+)'", "about": "Each room's time stamp, failing as the walk goes on."},
+      {"id": "timings", "title": "The loop's timings", "area": "frontend", "file": "script.js", "kind": "matches",
+       "pattern": "^\\s*const ([A-Z][A-Z_]+) = [\\d'\"]", "about": "Load, stall, glitch and caption timings of the state machine."},
+      {"id": "scene-registry", "title": "The walk's scene registry", "area": "gameplay", "file": "walk/walk.js", "kind": "object-keys",
+       "start": "const SCENES = {", "about": "The 3D scenes the walk can load, by id."},
+      {"id": "sounds", "title": "Synthesized sounds", "area": "art", "file": "walk/sound.js", "kind": "matches",
+       "pattern": "^export function (\\w+)\\(", "about": "Every sound the walk makes in Web Audio, with no file."},
+      {"id": "piles", "title": "The pile generators", "area": "art", "file": "walk/piles.js", "kind": "matches",
+       "pattern": "^export function (\\w+)\\(", "about": "The seeded generators that stack the rooms' clutter."},
+      {"id": "objectives", "title": "Objectives", "area": "gameplay", "file": "walk/scenes/dining.js", "kind": "matches",
+       "pattern": "^\\s*(?:objective|arrive): '([^']+)'", "about": "The dining room's objective and arrival prompt; every scene module carries a pair."}
+    ]
+  },
+  "ui": {
+    "screens": [
+      {"id": "shell", "globs": ["index.html", "script.js"]},
+      {"id": "walk", "globs": ["walk/walk.js", "walk/play.js", "walk/controls.js"]}
+    ],
+    "screenshots": ["0.PNG"]
+  },
+  "history": {
+    "pr": "Merge pull request #(\\d+) from \\S+?/(\\S+)"
+  },
+  "future": {
+    "horizons": [
+      {"id": "later", "label": "Planned, unscheduled", "pattern": "\\b(planned|not yet|later|to come|future|someday|would like)\\b"}
+    ],
+    "withdrawn": "\\b(removed|dropped|no longer|replaced|instead)\\b"
+  },
+  "stages": [
+    {"id": "0", "slug": "overview", "title": "Overview and the loop", "areas": ["overview"],
+     "keywords": ["loop", "backrooms", "liminal", "title card", "START", "NEXT"],
+     "prompts": [
+       "In one sentence, what should the player feel when the loop returns them to the title card?",
+       "Is it a game, a walkthrough, or a piece to watch? Which word do you use for it?",
+       "Who is it for first: you, friends you send the link to, or strangers in the backrooms community?",
+       "What should this teardown help you decide next?"
+     ]},
+    {"id": "1", "slug": "ui", "title": "Screens, glitches and the paper card", "areas": ["ui", "frontend"],
+     "keywords": ["glitch", "typewriter", "caption", "loading", "LOG", "SKIP", "scanline", "HUD", "prompt"],
+     "prompts": [
+       "A loading screen is the clip and nothing else, for exactly five seconds. Why five, and why nothing over it?",
+       "The SKIP tab means no room is a dead end. Do you want people to use it?",
+       "Phone or desktop first: which one do you play it on yourself?"
+     ]},
+    {"id": "2", "slug": "walk", "title": "The walk, the exits and the mini games", "areas": ["gameplay"],
+     "keywords": ["walk", "objective", "exit", "mini game", "Lights Out", "Fill the Frames", "Shopping List", "target"],
+     "prompts": [
+       "The mini games are bonuses: the exit is open from the start. Should any of them ever gate the exit?",
+       "Only three of the seven rooms have a mini game. Should the other four get one, or is the walk enough?",
+       "Which room is the best to walk, and which feels unfinished?"
+     ]},
+    {"id": "3", "slug": "rooms", "title": "The seven rooms and the story they tell", "areas": ["world"],
+     "keywords": ["Dining Room", "Hallway", "Teal", "Flooded", "Trampoline", "Grocery", "caption", "log", "phase", "stamp"],
+     "prompts": [
+       "The captions and the logs tell a story of someone going deeper. Who is the narrator to you?",
+       "The four phases run from the Departure from Reality to the Empty Expanse. Is there a room missing between them?",
+       "Do the clock stamps (14:32 to ERR_CLOCK_NOT_FOUND) carry the story, or are they texture?"
+     ]},
+    {"id": "4", "slug": "art-audio", "title": "Video, procedural rooms and sound", "areas": ["art"],
+     "keywords": ["video", "clip", "texture", "pile", "procedural", "sound", "hum", "mp3", "what moves"],
+     "prompts": [
+       "The room videos came first and the 3D rooms were built to match them. Which is the real room to you?",
+       "Every 3D sound is synthesized. Should the walk use the rooms' own audio tracks instead?",
+       "What should a room sound like when nothing is happening?"
+     ]},
+    {"id": "5", "slug": "engine", "title": "Engine, phones and tests", "areas": ["backend"],
+     "keywords": ["three.js", "renderer", "quality", "adaptive", "touch", "joystick", "test", "Playwright", "case-sensitive"],
+     "prompts": [
+       "What is the slowest phone it must run on?",
+       "The walk test runs in a browser with Playwright. Should it run on every push?",
+       "The case-sensitive file names collide on macOS and Windows. Rename them, or keep the pairs?"
+     ]},
+    {"id": "6", "slug": "history", "title": "How it was made, and what is next", "areas": ["history", "future"],
+     "keywords": ["pull request", "interactive loading screens", "walk", "piles", "review"],
+     "prompts": [
+       "It began as a click-through of videos and grew a 3D walk. Was that always the plan?",
+       "Ninety-Nine took this game as its structural reference. What did you carry over, and what did you leave behind?",
+       "What would make it finished, and what would make you stop?"
+     ]}
+  ],
+  "compare": [
+    {"name": "The Backrooms (Kane Pixels)", "why": "the found-footage liminal series the genre is named for"},
+    {"name": "The Exit 8", "why": "walk a corridor to the exit, and notice what changed"},
+    {"name": "Pools", "why": "a walking game of empty liminal spaces with no enemies"},
+    {"name": "P.T.", "why": "a looping space that changes behind the player's back"},
+    {"name": "Ninety-Nine", "why": "the author's other game, which names this one as its structural reference"}
+  ],
+  "explorer": {
+    "title": "Right Door, Wrong Exit — Teardown",
+    "tagline": "Every room, every choice, and the way out.",
+    "theme": {
+      "bg": "#000",
+      "text": "#ffb703",
+      "muted": "rgba(255, 183, 3, .6)",
+      "label": "#ffb703",
+      "accent": "#ffb703",
+      "on-accent": "#000",
+      "glass": "rgba(0, 0, 0, .85)",
+      "wash": "rgba(255, 183, 3, .12)",
+      "rim": "rgba(255, 183, 3, .35)",
+      "rim-top": "rgba(255, 183, 3, .5)",
+      "bevel": "#000",
+      "sunken": "rgba(0, 0, 0, .55)",
+      "font-display": "'Oswald', 'Arial Narrow', Impact, sans-serif",
+      "font-label": "'Share Tech Mono', 'Courier New', monospace",
+      "font-text": "'Share Tech Mono', 'Courier New', monospace",
+      "font-card": "'American Typewriter', 'Courier New', Courier, monospace",
+      "sky-top": "#000",
+      "sky-mid": "#1a1712",
+      "sky-low": "#1b1b1b",
+      "star": "rgba(255, 241, 196, .85)",
+      "logo": "#ffb703",
+      "logo-accent": "#fff",
+      "paper": "rgba(255, 241, 196, .85)",
+      "ink": "#1a1712",
+      "ink-muted": "rgba(110, 105, 95, .9)",
+      "stroke": "#1a1712",
+      "warm": "#ffb703"
+    },
+    "logo": ["RIGHT DOOR,", "WRONG EXIT"],
+    "views": [
+      {"id": "title", "label": "Start", "about": "What the game is and where the teardown stands.", "special": "title"},
+      {"id": "log", "label": "Log", "about": "The teardown chapters: describe, compare, critique.", "special": "chapters"},
+      {"id": "rooms", "label": "Rooms", "about": "The seven rooms: their clips, walks, what moves, captions and logs.", "kinds": ["room", "motion", "anchor", "codearea", "module"], "areas": ["world"]},
+      {"id": "walk", "label": "Walk", "about": "The walk: objectives, inputs, mini games.", "kinds": ["minigame", "input", "anchor"], "areas": ["gameplay", "ui"]},
+      {"id": "readme", "label": "Readme", "about": "The README, section by section.", "kinds": ["section", "doc"]},
+      {"id": "backstage", "label": "Backstage", "about": "The shell, the runtime, sounds, piles, tests and screens.", "kinds": ["codearea", "anchor", "module", "screen", "screenshot", "motion"]},
+      {"id": "history", "label": "History", "about": "How it was made: pull requests and commits.", "special": "history"},
+      {"id": "next", "label": "Next", "about": "What is planned or still open.", "kinds": ["plan"]},
+      {"id": "owner", "label": "Owner's word", "about": "Your answers to the briefs, verbatim.", "kinds": ["answer"]}
+    ],
+    "menu_small": ["history", "owner"]
+  }
+}

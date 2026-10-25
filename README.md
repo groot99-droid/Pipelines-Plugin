@@ -41,7 +41,7 @@ plugins/ui-design/     the ui-design plugin: self-contained
   references/          prose the ui-design-catalog skill reads on demand
   README.md, LICENSE, NOTICE, CHANGELOG.md
 plugins/udgt/          the udgt plugin: UI, Dataset & Gameplay Teardown of a game repo
-teardowns/             one folder per torn-down game (today: who-did-it)
+teardowns/             one folder per torn-down game: who-did-it, ninety-nine, right-door-wrong-exit
 plugins/blender/       the blender plugin: self-contained
   .mcp.json            launches `uvx mcp-for-blender` with telemetry off
   skills/, agents/     blender-{mcp,assets,polyhaven-library}, blender-scene-reviewer
@@ -432,4 +432,5 @@ the code, the design tokens, the UI copy, the git history and the stated plans, 
 cross-linked dataset, chapters (Describe, Compare, Critique) and an explorer page dressed in the
 game's own look. The owner answers a short creative brief before each chapter, and the answers are
 kept verbatim. The first teardown is `teardowns/who-did-it/`; see its README and
-[`docs/udgt.html`](docs/udgt.html).
+[`docs/udgt.html`](docs/udgt.html). `teardowns/ninety-nine/` (The-Intern) and
+`teardowns/right-door-wrong-exit/` have profiles and a first scan, and wait on the owner's briefs.
