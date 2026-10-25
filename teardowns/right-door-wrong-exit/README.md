@@ -9,8 +9,8 @@ sound, the engine on phones, and the history.
 |---|---|---|
 | `profile.json` | What to read in the game and how: the README (its only document) and its tables (the loop, inputs, mini games, what moves), the scene ids it cites, the code anchors (the chapters, captions, logs and clock stamps in `script.js`, the scene registry, the synthesized sounds, the pile generators), the seven stages and their prompts, the reference games, the explorer's views | by hand, with the owner |
 | `teardown.json` | The extracted graph | `udgt.py scan` |
-| `answers.json` | The owner's answers to the briefs, verbatim (none yet) | `udgt.py record` |
-| `chapters/NN-<slug>.md` | One chapter per stage (none yet) | Claude, after each brief |
+| `answers.json` | The owner's answers to the briefs, verbatim | `udgt.py record` |
+| `chapters/NN-<slug>.md` | One chapter per stage | Claude, after each brief |
 | `explorer/` | The page, in the game's amber on black (not versioned) | `udgt.py build` |
 
 ## Use it
