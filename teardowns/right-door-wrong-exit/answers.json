@@ -6,7 +6,10 @@
   {"stage":"0","question":"What should this teardown help you decide next?","answer":"whether to grow it and make merge it with the intern in some fashion","date":"2026-10-25","asked_as":"chat"},
   {"stage":"1","question":"Each loading screen is the clip and nothing else: no overlay, no LOG, no sound toggle, exactly 5.0 seconds. What is a loading screen to you?","answer":"A room of its own","date":"2026-10-25","asked_as":"chat"},
   {"stage":"1","question":"SKIP is offered during every loading clip and every walk, so no room is a dead end. Do you want people to use it?","answer":"Only if something breaks","date":"2026-10-25","asked_as":"chat"},
-  {"stage":"1","question":"Phone or desktop first: which one do you play it on yourself?","answer":"Phone","date":"2026-10-25","asked_as":"chat"}
+  {"stage":"1","question":"Phone or desktop first: which one do you play it on yourself?","answer":"Phone","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"2","question":"The three mini games (Lights Out, Fill the Frames, Shopping List) are bonuses: the exit is open from the start. Should any of them ever gate the exit?","answer":"Yes, all three","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"2","question":"Only three of the seven rooms have a mini game. What about the other four (hallway, both teal rooms, trampoline park)?","answer":"Give each one a game","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"2","question":"Which room is the best to walk, and which feels unfinished?","answer":"Best: dining · Unfinished: trampoline","date":"2026-10-25","asked_as":"chat"}
  ],
  "about": "The owner's answers to the teardown briefs, verbatim, in the order given. Appended by `udgt.py record`; never generated or edited."
 }
