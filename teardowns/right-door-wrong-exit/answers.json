@@ -12,7 +12,10 @@
   {"stage":"2","question":"Which room is the best to walk, and which feels unfinished?","answer":"Best: dining · Unfinished: trampoline","date":"2026-10-25","asked_as":"chat"},
   {"stage":"3","question":"The captions and logs follow one first-person voice going deeper: \"They said to wait in the dining room\", \"I have to keep moving\". Who is the narrator to you?","answer":"The player","date":"2026-10-25","asked_as":"chat"},
   {"stage":"3","question":"The four phases run Departure from Reality → Holding Cells → System Breakdown → Empty Expanse. Is a room missing?","answer":"Open-ended: keep adding","date":"2026-10-25","asked_as":"chat"},
-  {"stage":"3","question":"Do the clock stamps (14:32 → 27:81 → SysTime: 88:88 → ERR_CLOCK_NOT_FOUND → DISTANCE: NaN → PING_DETECTED_0x8F) carry the story, or are they texture?","answer":"They carry it","date":"2026-10-25","asked_as":"chat"}
+  {"stage":"3","question":"Do the clock stamps (14:32 → 27:81 → SysTime: 88:88 → ERR_CLOCK_NOT_FOUND → DISTANCE: NaN → PING_DETECTED_0x8F) carry the story, or are they texture?","answer":"They carry it","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"4","question":"The room videos came first, and the 3D rooms were built afterwards to match them, beat for beat. Which is the real room to you?","answer":"Neither alone","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"4","question":"How were the room videos, loading clips and section tracks made?","answer":"Mixed","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"4","question":"Each room's track plays on under the walk, and the walk adds small synthesized sounds (hum, buzz, drip, groan, chime). What should a room sound like when nothing is happening?","answer":"The track alone","date":"2026-10-25","asked_as":"chat"}
  ],
  "about": "The owner's answers to the teardown briefs, verbatim, in the order given. Appended by `udgt.py record`; never generated or edited."
 }
