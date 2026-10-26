@@ -9,8 +9,8 @@ pipelines, the history (the video era, the retired mini-games) and what is stale
 |---|---|---|
 | `profile.json` | What to read in the game and how: the four specs and the vault notes beside the code, the `Doc N §x` citations, canon `C1`–`C8`, scene and room keys, the spine and mini-game tables, the data files, the code anchors (the beat vocabulary, the set builders, the synthesized cues), the nine stages and their prompts, the reference games, the explorer's views | by hand, with the owner |
 | `teardown.json` | The extracted graph | `udgt.py scan` |
-| `answers.json` | The owner's answers to the briefs, verbatim (none yet) | `udgt.py record` |
-| `chapters/NN-<slug>.md` | One chapter per stage (none yet) | Claude, after each brief |
+| `answers.json` | The owner's answers to the briefs, verbatim | `udgt.py record` |
+| `chapters/NN-<slug>.md` | One chapter per stage | Claude, after each brief |
 | `explorer/` | The page, in the company's Courier and the building's black (not versioned) | `udgt.py build` |
 
 ## Use it
