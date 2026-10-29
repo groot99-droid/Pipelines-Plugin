@@ -57,7 +57,7 @@ class ServerTests(unittest.TestCase):
         self.assertEqual(code, 200)
         self.assertEqual(json.loads(raw)["keys"],
                          {"GEMINI_API_KEY": False, "ANTHROPIC_API_KEY": False,
-                          "GOOGLE_FONTS_API_KEY": False})
+                          "GOOGLE_FONTS_API_KEY": False, "MESHY_API_KEY": False})
 
     def test_save_needs_the_token(self):
         body = {"set": {"GEMINI_API_KEY": SECRET}}

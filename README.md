@@ -290,14 +290,17 @@ a checkpoint. Execute and record each need an explicit go-ahead as well. Nothing
 is made before every constraint it needs has been resolved and its source shown;
 a constraint that cannot be sourced is asked for, never guessed.
 
-Nine pipelines are declared in
-[`studio/pipeline/spec.yaml`](studio/pipeline/spec.yaml) and eight are
+Twelve pipelines are declared in
+[`studio/pipeline/spec.yaml`](studio/pipeline/spec.yaml) and ten are
 implemented: `ui-direction`, which runs the ui-design catalog under the studio's
 brand gates; `brand-gate`, which writes a brand gate from an interview with the
 author; `still-image`, `video-shot` and `music-cue`, through the Higgsfield
 connector; `edit-2d`, through the Adobe connector; `scene-3d`, which builds one room of the
-Writing Museum for a work the author names; and `scene-blender`, through the
-Blender scene connector. Each names the connector tools it may call, spends
+Writing Museum for a work the author names; `scene-blender`, through the
+Blender scene connector; `asset-3d`, which makes 3D models from a prompt or a
+reference image through the Meshy API (`studio/pipeline/meshy_client.py`, its key
+in `~/.rosw/keys.env`); and `assemble-3d`, which assembles those models in Blender,
+headless or in the author's live Blender through the Blender MCP server. Each names the connector tools it may call, spends
 nothing before the execute go-ahead, and keeps what the author keeps under
 `studio/assets/`. `ui-build` and `brush` are entries that say what each needs;
 `brush` has its packer (`studio/pipeline/brush_pack.py`) and waits for the
@@ -329,6 +332,8 @@ session.
 python -m unittest discover -s studio/pipeline/tests     # the studio's own check
 python studio/pipeline/studio_run.py status              # every run
 python studio/pipeline/content_md.py lint --all          # every note in the vault
+python studio/pipeline/meshy_client.py balance           # Meshy credits (free; needs MESHY_API_KEY)
+python studio/pipeline/glb_inspect.py <file.glb>         # triangles, textures, size of a model
 ```
 
 ## Writing Museum

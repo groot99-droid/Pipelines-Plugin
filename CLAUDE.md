@@ -192,6 +192,16 @@ the author names at a `scene-3d` intake, through `writing-museum/build/`.
   history (no generate tool), and `library.py` writes `catalog.json`, `thumbs/` and the
   git-ignored `files/`, nothing else. Never commit an original, and never keep a link
   to an uploaded input. Tests: `python -m unittest discover -s studio/library/tests`.
+- **3D assets** are two pipelines run in order: `asset-3d` (Meshy, `class: spend`) and
+  `assemble-3d` (Blender, `local-compute`, `render_3d_cpu`). `studio/pipeline/meshy_client.py`
+  is a dry run unless given `--confirm`, posts only at a run's execute stage after its go-ahead,
+  records every task in the run's `meshy_tasks.json` (and never a signed link), and reuses a
+  recorded task rather than paying twice. Its key is `MESHY_API_KEY` in `~/.rosw/keys.env`;
+  the same key rules as above apply. `studio/pipeline/bpy/assemble_plan.py` turns a layout
+  into one bpy snippet per step; `bpy/assemble.py` runs them headless, and the live branch
+  sends the same snippets through the Blender MCP server (they pass its safe mode).
+  `glb_inspect.py` checks a model against a budget. Tests use a fake Meshy and skip the
+  Blender run unless `blender` is on PATH or `ROSW_BPY_PYTHON` names a Python with `bpy`.
 - `studio/pipeline/brush_pack.py` packs a designer bundle into a Procreate file
   with `plistlib`. A Procreate-written `.brush` under
   `studio/pipeline/tests/fixtures/procreate/` turns its format test on.

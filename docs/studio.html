@@ -82,7 +82,7 @@
   Parking is a correct result, not a failure.</p>
 
   <h2 id="pipelines">Pipelines</h2>
-  <p>Ten are declared in <code>studio/pipeline/spec.yaml</code>, and eight are implemented. A pipeline
+  <p>Twelve are declared in <code>studio/pipeline/spec.yaml</code>, and ten are implemented. A pipeline
   that is not implemented is a real entry, saying what it needs and what is open, but it does not start.</p>
   <div class="table-wrap"><table>
     <thead><tr><th>Pipeline</th><th>Makes</th><th>Status</th></tr></thead>
@@ -95,6 +95,8 @@
       <tr><td><code>edit-2d</code></td><td>Copies of existing images, through the Adobe connector</td><td>implemented</td></tr>
       <tr><td><code>scene-3d</code></td><td>One walkable room of the <a href="writing-museum.html">Writing Museum</a> for a work the author names: its passages hung as verbatim panels, built and walked in a headless browser</td><td><strong>implemented</strong></td></tr>
       <tr><td><code>scene-blender</code></td><td>Through the Blender scene connector; a local Blender when the compute gate allows it</td><td>implemented (cloud branch)</td></tr>
+      <tr><td><code>asset-3d</code></td><td>3D models from a prompt or a reference image, through the Meshy API: text or image to 3D, then remesh, retexture, rig or animate. Each create is a dry run until the go-ahead, and a re-run never pays twice</td><td><strong>implemented</strong></td></tr>
+      <tr><td><code>assemble-3d</code></td><td>Those models assembled in Blender: real heights, on the ground, LODs, lights and a camera, saved as .blend, .glb and a preview. Headless, or in the author's own Blender through the Blender MCP server</td><td><strong>implemented</strong></td></tr>
     </tbody>
   </table></div>
 
