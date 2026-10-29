@@ -20,7 +20,10 @@
   {"stage":"4","question":"You play on desktop. What is the slowest machine it must run well on?","answer":"Phones too","date":"2026-10-29","asked_as":"chat"},
   {"stage":"5","question":"The building's mood in three words?","answer":"Real, wrong, downward","date":"2026-10-29","asked_as":"chat"},
   {"stage":"5","question":"Which canon rule (C1 to C8) would you defend if you had to break all the others? (C7, the drone, is already on the table.)","answer":"C1, C4. i like the low poly look but its more ps1, I'm looking to up it to a ps2 scale or even a higher quality modern \"low to mid poly\"","date":"2026-10-29","asked_as":"chat"},
-  {"stage":"5","question":"Doc 1 §9.3 asks whether Harlowe deserves more: today SAW_HARLOWE adds a desktop, a manifest row and one extra lowercase line on the ending card, \"a haunting instead of an easter egg\". What is your answer now?","answer":"Harlowe is the previous 99","date":"2026-10-29","asked_as":"chat"}
+  {"stage":"5","question":"Doc 1 §9.3 asks whether Harlowe deserves more: today SAW_HARLOWE adds a desktop, a manifest row and one extra lowercase line on the ending card, \"a haunting instead of an easter egg\". What is your answer now?","answer":"Harlowe is the previous 99","date":"2026-10-29","asked_as":"chat"},
+  {"stage":"6","question":"With C1 moving to low-to-mid poly, where should the company's new props come from?","answer":"A mix","date":"2026-10-29","asked_as":"chat"},
+  {"stage":"6","question":"The generated stills and clips of the video era were removed when the game became 3D-only. Is there anything from that era you miss?","answer":"the look of the stills, the transitions, the endings as films. id like to take a much more hands on editing approach when adding them back","date":"2026-10-29","asked_as":"chat"},
+  {"stage":"6","question":"If the drone goes, what should the building sound like when nothing is happening?","answer":"music, sfx, and the rooms tone, utilized to create different moments and envelop the player in the environments","date":"2026-10-29","asked_as":"chat"}
  ],
  "about": "The owner's answers to the teardown briefs, verbatim, in the order given. Appended by `udgt.py record`; never generated or edited."
 }
