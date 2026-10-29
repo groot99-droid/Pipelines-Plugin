@@ -1,12 +1,21 @@
 {
   "name": "reach",
-  "version": "0.1.0",
-  "description": "Read access to the internet for Claude: set up and health-check Agent Reach, and route research across 15 platforms (web, search, YouTube, Reddit, GitHub, Bilibili, RSS and more) through each platform's own upstream tool.",
+  "version": "0.2.0",
+  "description": "Read access to the internet for Claude: set up and health-check Agent Reach, route research across 15 platforms (web, search, YouTube, Reddit, GitHub, Bilibili, RSS and more) through each platform's own upstream tool, and wire other skills to it.",
   "author": {
     "name": "groot99-droid"
   },
   "homepage": "https://github.com/groot99-droid/Pipelines-Plugin/tree/main/plugins/reach",
   "repository": "https://github.com/groot99-droid/Pipelines-Plugin",
   "license": "MIT",
-  "keywords": ["research", "web", "search", "youtube", "reddit", "rss", "agent-reach", "mcp"]
+  "keywords": [
+    "research",
+    "web",
+    "search",
+    "youtube",
+    "reddit",
+    "rss",
+    "agent-reach",
+    "mcp"
+  ]
 }

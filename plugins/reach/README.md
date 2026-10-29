@@ -8,6 +8,7 @@ routes each to the platform's own upstream tool.
 | Skill | What it is |
 |---|---|
 | `reach-setup` | Is `agent-reach` installed and healthy; how to install it; what each platform still needs |
+| `reach-connect` | Wire another skill to Agent Reach: channel map, a Reach block, a new-toolset template, and a checker |
 | `agent-reach` | The router: which tool for which platform, with the retry chains in `references/` |
 
 ## Install

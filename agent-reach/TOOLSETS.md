@@ -48,9 +48,12 @@ This file is the contract a toolset follows. It adds no code to the engine.
 | `reach-research` | `.claude/skills/reach-research` | web, exa_search, rss, youtube, reddit, github | a scratch `external_references.md` for the creative-writing pipeline; never the vault |
 | `reach-references` | `.claude/skills/reach-references` | web, exa_search, youtube, reddit, rss | a file in a studio run folder, kept only with `studio_run.py keep --role reference` |
 | `udgt-field-research` | `plugins/udgt/skills/udgt-field-research` | web, exa_search, youtube, reddit, bilibili, rss, github | `research/` inside a teardown folder |
-| `reach-setup`, `agent-reach` | `plugins/reach` | all | nothing; install guidance and routing (the engine's own skill, copied verbatim) |
+| `reach-setup`, `reach-connect`, `agent-reach` | `plugins/reach` | all | nothing; install guidance, wiring other skills, and routing (the engine's own skill, copied verbatim) |
 
 ## Adding a toolset
+
+The `reach-connect` skill in `plugins/reach` does these steps for a skill you name (this repo's or
+anyone's) and runs its `check_toolset.py`. By hand:
 
 1. Write the skill with `metadata.reach` and the rules above.
 2. Add a row to the table here.
