@@ -56,6 +56,8 @@ jobs:
         run: python writing-museum/build/build_museum.py build --lint
       - name: udgt tests
         run: python -m unittest discover -s plugins/udgt/tests
+      - name: blender plugin tests
+        run: python -m unittest discover -s plugins/blender/tests
       # Upstream tests Linux and Windows only; macOS is added once it is known green.
       - name: agent-reach tests
         if: runner.os != 'macOS'

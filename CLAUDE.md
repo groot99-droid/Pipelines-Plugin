@@ -75,8 +75,9 @@ plugins/udgt/        the udgt plugin (UI, Dataset & Gameplay Teardown): engine/u
                      agent udgt-chapter-analyst, tests/
 teardowns/           one folder per torn-down game: profile.json, teardown.json (generated), answers.json
                      (the owner's words), chapters/; explorer/ is built and not versioned
-plugins/blender/     the blender plugin: .mcp.json (uvx mcp-for-blender, telemetry off), skills
-                     blender-{mcp,assets,polyhaven-library}, agent blender-scene-reviewer
+plugins/blender/     the blender plugin: .mcp.json (uvx mcp-for-blender, telemetry off, and the
+                     blender-addons server in addon-tools/), skills
+                     blender-{mcp,assets,polyhaven-library,addon-tools}, agent blender-scene-reviewer
 .github/workflows/   verify.yml: CI for the whole repo (see "Working on the ui-design plugin");
                      pages.yml: publishes docs/ and the Writing Museum to GitHub Pages from main
 ```
@@ -277,7 +278,17 @@ third-party code: `mcp-for-blender` (MIT) is fetched by `uvx` at run time, and t
 Assets add-on (GPL-3.0) is only described, never copied. Keep `DISABLE_TELEMETRY=true` in
 `.mcp.json`, and never write an API key anywhere in the plugin (names of the
 `BLENDERMCP_*` variables only). Tool names in the skills must match the server's; check them
-against `server.py` of the version you document.
+against `server.py` of the version you document, and update `SERVER_TOOLS` in
+`plugins/blender/tests/test_tool_names.py` with them.
+
+- `addon-tools/server.py` (stdlib) is the `blender-addons` MCP server: named tools for the author's
+  own add-ons, from one manifest per add-on in `BLENDER_ADDON_TOOLS_DIR` (default
+  `~/.blender-addon-tools/`, outside this repo). Arguments are type-checked and reach Blender as a
+  JSON literal, never as code. `discover` drafts a manifest with every tool off and never
+  overwrites; only the author enables a tool, after seeing it. Do not write a manifest unasked.
+- Discovery needs the author's Blender, which this repo's cloud sessions cannot see unless the
+  author connects their clone through Remote Control.
+- Tests: `python -m unittest discover -s plugins/blender/tests` (a fake add-on socket, no Blender).
 
 ## Working on the udgt plugin and the teardowns
 

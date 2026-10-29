@@ -47,8 +47,9 @@ agent-reach/          the reach base: Agent Reach (imported with git subtree). C
                        toolsets follow agent-reach/TOOLSETS.md
 plugins/reach/         the reach plugin: reach-setup, reach-connect, and the engine's agent-reach skill (a copy)
 plugins/blender/       the blender plugin: self-contained
-  .mcp.json            launches `uvx mcp-for-blender` with telemetry off
-  skills/, agents/     blender-{mcp,assets,polyhaven-library}, blender-scene-reviewer
+  .mcp.json            launches `uvx mcp-for-blender` with telemetry off, and blender-addons
+  addon-tools/         server.py: named tools for the user's own add-ons, from manifests
+  skills/, agents/     blender-{mcp,assets,polyhaven-library,addon-tools}, blender-scene-reviewer
 ```
 
 Paths in the creative-writing and studio skills and agents are relative to this
@@ -428,11 +429,21 @@ Install it from this repo in Claude Code with
 ## Blender plugin
 
 `plugins/blender/` lets Claude drive a live Blender through the MCP for Blender server
-(scene inspection, bpy scripting checked by viewport screenshots, asset sourcing from
-Poly Haven, Sketchfab, Poly Pizza, Hyper3D Rodin and Hunyuan3D) and documents the Poly Haven
-Assets Asset Browser add-on. Install with `/plugin install blender@rosw`. The server's
-telemetry is disabled in `.mcp.json`; the GPL Poly Haven add-on is not bundled. See
-`plugins/blender/README.md`.
+(scene inspection, bpy scripting checked by looking at the result, asset sourcing from
+Poly Haven, Sketchfab and Poly Pizza, and generation with Tripo, Hunyuan3D, Hyper3D Rodin or
+Meshy) and documents the Poly Haven Assets Asset Browser add-on. Its second server,
+`blender-addons` (`addon-tools/server.py`), turns the operators of the author's own add-ons
+into named, typed tools from a manifest per add-on that `server.py discover` drafts, and reads
+any asset library on disk, the Poly Haven one included. Install with
+`/plugin install blender@rosw`. The server's telemetry is disabled in `.mcp.json`; the GPL Poly
+Haven add-on is not bundled. See `plugins/blender/README.md`.
+
+```
+python plugins/blender/addon-tools/server.py list                 # add-ons in the open Blender
+python plugins/blender/addon-tools/server.py discover <module>    # draft a manifest, all tools off
+python plugins/blender/addon-tools/server.py check                # validate the manifests
+python -m unittest discover -s plugins/blender/tests
+```
 
 ## Teardowns (UDGT)
 

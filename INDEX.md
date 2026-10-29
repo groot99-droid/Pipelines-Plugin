@@ -19,7 +19,7 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | `teardowns/` | Game teardowns made with the udgt plugin, one folder per game: its profile, the extracted dataset, the owner's answers to the briefs, and the chapters. | - |
 | `writing-museum/` | A walkable 3D museum of the creative-writing vault, one room per work, built through the studio's scene-3d pipeline. | - |
 
-## Skills (21)
+## Skills (22)
 
 | Skill | What it does |
 |---|---|
@@ -32,8 +32,9 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | [render-pipeline](.claude/skills/render-pipeline/SKILL.md) | Move a Who Did It master (a character .blend kept under studio/assets/who-did-it/) through the game repo's Blender rig and sprite packer into the committed atlases under apps/client/public/assets/. Use when the author wants to render, re-render, pack or ship a who-did-it chara... |
 | [sound-library](.claude/skills/sound-library/SKILL.md) | Find and retrieve the author's own sound effects from sound-library/ for a project, or add a new batch of sounds to its catalog. |
 | [studio-pipeline](.claude/skills/studio-pipeline/SKILL.md) | Walk one made thing through the studio's checkpointed pipeline (intake, context, recipe, execute, review, record), resolving and attesting its brand context before anything is run and leaving a Content MD in the studio vault. |
-| [blender-assets](plugins/blender/skills/blender-assets/SKILL.md) | Choose and bring in 3D assets for a Blender scene through the MCP for Blender integrations -- Poly Haven models, textures and HDRIs, Sketchfab, Poly Pizza low-poly models, and AI generation with Hyper3D Rodin or Hunyuan3D -- then scale, place and credit them. |
-| [blender-mcp](plugins/blender/skills/blender-mcp/SKILL.md) | Drive a live Blender session from Claude through the MCP for Blender server -- connect, inspect the scene, build or change objects, materials and lighting with bpy, and verify every step with viewport screenshots. |
+| [blender-addon-tools](plugins/blender/skills/blender-addon-tools/SKILL.md) | Give the user's own Blender add-ons named, typed MCP tools through this plugin's blender-addons server -- list the installed add-ons, inspect an add-on's operators, draft a manifest, review and enable its tools, and use the built-in asset-library tools (the Poly Haven add-on's... |
+| [blender-assets](plugins/blender/skills/blender-assets/SKILL.md) | Choose and bring in 3D assets for a Blender scene through the MCP for Blender integrations -- Poly Haven models, textures and HDRIs, Sketchfab, Poly Pizza low-poly models, and AI generation with Tripo, Hunyuan3D, Hyper3D Rodin or Meshy -- then scale, place and credit them. |
+| [blender-mcp](plugins/blender/skills/blender-mcp/SKILL.md) | Drive a live Blender session from Claude through the MCP for Blender server -- connect, inspect the scene, build or change objects, materials and lighting with bpy, and verify every step by looking at it. |
 | [blender-polyhaven-library](plugins/blender/skills/blender-polyhaven-library/SKILL.md) | Guide for using the Poly Haven Assets add-on in Blender, which mirrors polyhaven.com HDRIs, materials and models into the Asset Browser as a local asset library -- first-time setup, catalogs, downloading, resolution and LOD switching, displacement and texture scale, and script... |
 | [agent-reach](plugins/reach/skills/agent-reach/SKILL.md) | MUST USE when user wants to research/search/look up/find anything on the internet — e.g. |
 | [reach-connect](plugins/reach/skills/reach-connect/SKILL.md) | Connect Agent Reach to another skill so it can read the internet - add a checked "Reach" block and a metadata.reach channel list to an existing skill, or start a new toolset skill from a template. |
