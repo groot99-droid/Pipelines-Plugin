@@ -93,6 +93,12 @@ embeddings/
 *.faiss
 *.ann
 
+# ── Agent Reach ──────────────────────────────────────────────────────────────
+# The engine keeps its config, cookies and tokens in ~/.agent-reach/, outside the repo.
+# A stray copy in a checkout is ignored, never committed.
+.agent-reach/
+agent-reach/dist/
+
 # ── Studio outputs ───────────────────────────────────────────────────────────
 # What a studio run made and the author kept. The note in studio/vault/ is the
 # record of how; the files themselves are large and are not versioned here.
