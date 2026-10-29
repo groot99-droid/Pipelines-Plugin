@@ -1,0 +1,33 @@
+[project]
+name = "videoeditor"
+version = "0.1.0"
+description = "Questionnaire-driven video editing recipes (clips, long-form, action montage, explainer) on ffmpeg + local Whisper"
+license = { file = "LICENSES/video-use.LICENSE" }
+requires-python = ">=3.10"
+dependencies = ["numpy", "pillow"]
+
+[project.optional-dependencies]
+speech = ["faster-whisper"]
+speech-plus = ["faster-whisper", "whisperx"]   # tighter word timing + optional speaker labels (several GB: torch)
+stems = ["demucs>=4.1"]                        # Demucs stem separation (torch)
+animations = ["manim"]
+publish = ["requests", "keyring"]                # ve publish: HTTP client + OS keyring for tokens
+dev = ["pytest", "requests"]
+
+[project.scripts]
+ve = "videoeditor.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"videoeditor.recipes" = ["playbooks/*.md"]
+"videoeditor.templates" = ["remotion_overlay/*", "remotion_overlay/src/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]

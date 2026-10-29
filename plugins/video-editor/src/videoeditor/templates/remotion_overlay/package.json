@@ -1,0 +1,23 @@
+{
+  "name": "videoeditor-remotion-overlay",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Overlay slot template for videoeditor: renders title cards and caption pages from overlay.json",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts Overlay render.mp4 --props=overlay.json"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.539",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.539"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  }
+}
