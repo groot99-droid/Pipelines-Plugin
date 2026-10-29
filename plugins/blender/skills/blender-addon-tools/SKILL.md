@@ -32,7 +32,8 @@ Blender as a JSON literal, never as code.
 
 1. `addons_list` (or `python ${CLAUDE_PLUGIN_ROOT}/addon-tools/server.py list` in a terminal)
    to get its module name. Add-ons from Blender's extension platform have names like
-   `bl_ext.user_default.<name>`.
+   `bl_ext.blender_org.<name>` or `bl_ext.user_default.<name>`. A manifest that names one also
+   matches the same extension installed from another repository.
 2. Draft the manifest:
    `python ${CLAUDE_PLUGIN_ROOT}/addon-tools/server.py discover <module>`
    (add `--headless --blender <path>` when Blender is not open). It writes `<name>.json`, or

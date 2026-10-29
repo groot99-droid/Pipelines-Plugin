@@ -17,6 +17,7 @@ INDEX.md               generated index of the tools, skills and agents
 .claude/agents/        creative-writing-{chunk-tagger,drafter,librarian-native}
 .mcp.json              the gemini MCP server Claude calls (see blender-gemini)
 CLAUDE.md              repo conventions; points at each vault's own CLAUDE.md
+blender-addons/        tool manifests for the author's own Blender add-ons (see Blender plugin)
 blender-gemini/        installer and tests that register the Blender MCP server
                        with the Gemini CLI; its skill is blender-gemini
 creative-writing/
@@ -448,6 +449,16 @@ python plugins/blender/addon-tools/server.py list                 # add-ons in t
 python plugins/blender/addon-tools/server.py discover <module>    # draft a manifest, all tools off
 python plugins/blender/addon-tools/server.py check                # validate the manifests
 python -m unittest discover -s plugins/blender/tests
+```
+
+`blender-addons/manifests/` already holds tools for 23 of the author's add-ons, among them ACT,
+PROTO, Super Duper Batch Exporter, Terrain Mixer, Texture Pipeline Studio and the Unreal PSK/PSA
+importer. They were drafted from each add-on's published source; the
+[README](blender-addons/README.md) lists every tool, what was left out and why, and how to rebuild them.
+To use them, set `BLENDER_ADDON_TOOLS_DIR` to that folder.
+
+```
+python -m unittest discover -s blender-addons/tests
 ```
 
 ## Teardowns (UDGT)

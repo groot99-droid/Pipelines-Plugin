@@ -1,0 +1,470 @@
+{
+ "SuperDuperBatchExporter": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "sdbe.json",
+  "name": "Super Duper Batch Exporter",
+  "operators": [
+   "batch_export.clear_list",
+   "batch_export.cycle_preview",
+   "batch_export.insert_token",
+   "batch_export.list_add",
+   "batch_export.list_add_collection",
+   "batch_export.list_remove",
+   "batch_export.list_remove_invalid",
+   "batch_export.open_directory",
+   "export_mesh.batch"
+  ],
+  "page": "https://extensions.blender.org/add-ons/superduperbatchexporter/",
+  "sha256": "7400d093c1c8e55c9a300b99187d7a31bf9456f9cb079ef0345baad5f994c889",
+  "version": "2.9.3"
+ },
+ "act_game_asset_creation_toolset": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "act.json",
+  "name": "ACT: Game Asset Creation Toolset",
+  "operators": [
+   "object.act_align",
+   "object.act_apply_defaults_to_props",
+   "object.act_assign_multi_edit_materials",
+   "object.act_calc_normals",
+   "object.act_call_select_texture_menu",
+   "object.act_cleanup_empties",
+   "object.act_clear_normals",
+   "object.act_clear_vc",
+   "object.act_clear_viewport_color",
+   "object.act_collapse_checker_edges",
+   "object.act_collection_name_to_obj_name",
+   "object.act_create_palette",
+   "object.act_delete_duplicated_materials",
+   "object.act_delete_unused_materials",
+   "object.act_dissolve_checker_loops",
+   "object.act_export",
+   "object.act_lod_to_objname",
+   "object.act_mark_seams_from_uv",
+   "object.act_material_to_viewport",
+   "object.act_merge_bones",
+   "object.act_numbering",
+   "object.act_obj_name_to_mesh_name",
+   "object.act_open_export_dir",
+   "object.act_open_palette_save_dir",
+   "object.act_open_url",
+   "object.act_random_viewport_color",
+   "object.act_remove_lod_from_objname",
+   "object.act_rename_bones",
+   "object.act_reset_preferences",
+   "object.act_select_negative_scaled_objects",
+   "object.act_set_origin_to_select",
+   "object.act_show_addon_prefs",
+   "object.act_texture_from_material",
+   "object.act_uv_add",
+   "object.act_uv_clear",
+   "object.act_uv_remove",
+   "object.act_uv_rename",
+   "object.act_uv_select",
+   "object.act_weight_paint_brush_invert",
+   "uv.act_uv_mover"
+  ],
+  "page": "https://extensions.blender.org/add-ons/act-game-asset-creation-toolset/",
+  "sha256": "e733197281ff010e1b5fd4ddc9c17249becc7a14c759ae87e82fa1bed9deb284",
+  "version": "2025.2.1"
+ },
+ "asset_optimizer": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "optimizer.json",
+  "name": "Game Asset Optimizer",
+  "operators": [
+   "mesh.auto_decimate",
+   "mesh.batch_optimize",
+   "mesh.dual_uv_unwrap",
+   "mesh.generate_lods",
+   "mesh.smart_vertex_merge"
+  ],
+  "page": "https://extensions.blender.org/add-ons/asset-optimizer/",
+  "sha256": "909b4c1e85e93f5c4aefbdd519d14e05a6435dbd5361301373c84c64c3f7fc2b",
+  "version": "1.0.2"
+ },
+ "auto_scale_fps": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "fps.json",
+  "name": "Auto-Scale FPS",
+  "operators": [
+   "anim.disable_auto_fps_scale",
+   "anim.enable_auto_fps_scale"
+  ],
+  "page": "https://extensions.blender.org/add-ons/auto-scale-fps/",
+  "sha256": "5a46fc5cdc86fa362e7fd843e7940a031162b5e7b9625fd6b3a60414eddfe33a",
+  "version": "1.3.2"
+ },
+ "bake_to_single_material": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "bake.json",
+  "name": "Bake To Single Material",
+  "operators": [
+   "object.bake_to_single_material"
+  ],
+  "page": "https://extensions.blender.org/add-ons/bake-to-single-material/",
+  "sha256": "e72cd6700eff356845f2c6d59e01279d8b6be5e621c6c4ed6b5915792463bcc9",
+  "version": "1.0.2"
+ },
+ "cad2cube": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "cad2cube.json",
+  "name": "CAD2Cube \u2014 DXF Importer",
+  "operators": [
+   "import_scene.cad2cube_dxf"
+  ],
+  "page": "https://extensions.blender.org/add-ons/cad2cube/",
+  "sha256": "b2f2cb3105da5f8eab9f98707446eded6e0c2058fb117d0947754604fd321b72",
+  "version": "1.5.1"
+ },
+ "easy_arrangement": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "arrange.json",
+  "name": "Easy Arrangement",
+  "operators": [
+   "object.easy_arrangement_apply",
+   "object.easy_arrangement_reset"
+  ],
+  "page": "https://extensions.blender.org/add-ons/easy-arrangement/",
+  "sha256": "e576a758a39b09dbc2e613d2494dd58058b0325b20f5e3cbf76e21772cdc80b8",
+  "version": "0.2.2"
+ },
+ "easy_clouds": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "clouds.json",
+  "name": "Easy Clouds",
+  "operators": [
+   "easyclouds.create_cloud",
+   "easyclouds.create_layer",
+   "easyclouds.create_sphere"
+  ],
+  "page": "https://extensions.blender.org/add-ons/easy-clouds/",
+  "sha256": "98f8d4ca22c8e8a0ec85e0ad98f0d681fedd8c7f346766a8fb53aa69207eb2fd",
+  "version": "2.2.0"
+ },
+ "easy_pivot": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "pivot.json",
+  "name": "Easy Pivot",
+  "operators": [
+   "msp.bake_pivot",
+   "msp.edit_pivot",
+   "msp.pivot_to_active",
+   "msp.reset_pivot"
+  ],
+  "page": "https://extensions.blender.org/add-ons/easy-pivot/",
+  "sha256": "2e18d9f125ae4688dbd9951a715294a584e4051c71811e92d4f613e22be89ff8",
+  "version": "1.0.2"
+ },
+ "easy_tree": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "tree.json",
+  "name": "Easy Tree",
+  "operators": [
+   "object.add_tree_tool",
+   "object.hide_tree_leaves",
+   "object.show_tree_leaves"
+  ],
+  "page": "https://extensions.blender.org/add-ons/easy-tree/",
+  "sha256": "9ba32029650173c303037155c629dd85953699dbd8e62bd5e71da6927c84a4ff",
+  "version": "1.0.1"
+ },
+ "easymesh_batch_exporter": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "easymesh.json",
+  "name": "EasyMesh Batch Exporter",
+  "operators": [
+   "mesh.batch_export",
+   "mesh.clear_export_indicators",
+   "mesh.debug_update_indicators",
+   "mesh.delete_export_preset",
+   "mesh.load_export_preset",
+   "mesh.rename_preset",
+   "mesh.reset_preset_to_default",
+   "mesh.save_export_preset",
+   "mesh.update_current_preset",
+   "object.select_by_name"
+  ],
+  "page": "https://extensions.blender.org/add-ons/easymesh-batch-exporter/",
+  "sha256": "874bb4a47f6664fd1a77a3ea9fc887d3907d7a662cc85342a299e0fbad4cf9b2",
+  "version": "1.6.2"
+ },
+ "formula_to_nodes": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "formula.json",
+  "name": "Formula to Nodes",
+  "operators": [
+   "node.formula_ai_cancel",
+   "node.formula_ai_copy_prompt",
+   "node.formula_ai_generate",
+   "node.formula_check",
+   "node.formula_generate",
+   "node.formula_generate_script",
+   "node.formula_load_active",
+   "node.formula_load_example",
+   "node.formula_mcp_connect_claude",
+   "node.formula_mcp_copy",
+   "node.formula_mcp_disconnect_claude",
+   "node.formula_mcp_start_bridge",
+   "node.formula_open_prefs",
+   "node.formula_script_add_line",
+   "node.formula_script_clear",
+   "node.formula_script_copy",
+   "node.formula_script_paste",
+   "node.formula_script_remove_line"
+  ],
+  "page": "https://extensions.blender.org/add-ons/formula-to-nodes/",
+  "sha256": "f65d1d677d339abfe01657f2ed3effbff6364ab75f548678356766e2c7d6ed2b",
+  "version": "2.1.0"
+ },
+ "io_scene_psk_psa": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "unreal.json",
+  "name": "Unreal PSK/PSA (.psk/.psa)",
+  "operators": [
+   "psa.export",
+   "psa.export_actions_select_all",
+   "psa.export_bone_collections_deselect_all",
+   "psa.export_bone_collections_select_all",
+   "psa.export_collection",
+   "psa.export_collection_populate_sequences",
+   "psa.export_collection_sequences_deselect_all",
+   "psa.export_collection_sequences_select_all",
+   "psa.export_sequences_deselect_all",
+   "psa.import_all",
+   "psa.import_drag_and_drop",
+   "psa.import_file",
+   "psa.import_sequences_deselect_all",
+   "psa.import_sequences_select_all",
+   "psa.import_sequences_select_from_text",
+   "psk.bone_collection_list_populate",
+   "psk.bone_collection_list_select_all",
+   "psk.export",
+   "psk.export_collection",
+   "psk.export_material_list_item_move_down",
+   "psk.export_material_list_item_move_up",
+   "psk.export_material_name_list_item_add",
+   "psk.export_material_name_list_item_move_down",
+   "psk.export_material_name_list_item_move_up",
+   "psk.export_populate_material_name_list",
+   "psk.import_drag_and_drop",
+   "psk.import_file"
+  ],
+  "page": "https://extensions.blender.org/add-ons/io-scene-psk-psa/",
+  "sha256": "3eb152a3e88028d8d9abb61a1c599b10729501ca7484d935d1ffd5b11bcd8eb4",
+  "version": "9.1.3"
+ },
+ "marchingcube": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "marching.json",
+  "name": "Marching Cube",
+  "operators": [
+   "mesh.primitive_marching_cube_add"
+  ],
+  "page": "https://extensions.blender.org/add-ons/marchingcube/",
+  "sha256": "c1e60ac1b651dd8cbee93b0a781fa620274814caadd0a5693e3a47e01d44be12",
+  "version": "0.5.0"
+ },
+ "ns_toolkit_mesh_cleanup_pro": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "cleanup.json",
+  "name": "NS Toolkit - Mesh Cleanup Pro",
+  "operators": [
+   "ns_toolkit.clear_highlight",
+   "ns_toolkit.highlight_topology",
+   "object.tris_to_quads_merge"
+  ],
+  "page": "https://extensions.blender.org/add-ons/ns-toolkit-mesh-cleanup-pro/",
+  "sha256": "0d7fa13aae7b308929ffd16d4bfc84a9a8dce03fecfd7df152f4ee434646792e",
+  "version": "1.0.1"
+ },
+ "omi_physics_body_gltf_extension": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "omi.json",
+  "name": "OMI Physics Body glTF Extension",
+  "operators": [
+   "object.omi_physics_auto_fit",
+   "object.omi_physics_bake_scale",
+   "object.omi_physics_reset_defaults",
+   "object.omi_physics_validate_scene"
+  ],
+  "page": "https://extensions.blender.org/add-ons/omi-physics-body-gltf-extension/",
+  "sha256": "6e343473b15e4b9d32f53cad59ffa42ca2347a8dfdc457da2cd94112acf1527b",
+  "version": "1.6.5"
+ },
+ "photo_relief": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "relief.json",
+  "name": "Photo Relief",
+  "operators": [
+   "photo_relief.create"
+  ],
+  "page": "https://extensions.blender.org/add-ons/photo-relief/",
+  "sha256": "83b91a8f11ba2fb2ec5e0e6778c1f3654780bdd0f27c2722e411789cd77c0af0",
+  "version": "1.0.1"
+ },
+ "proto_game_asset_tools": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "proto.json",
+  "name": "PROTO Game Asset Tools",
+  "operators": [
+   "export_scene.fbx",
+   "import_scene.fbx",
+   "proto_export_scene.fbx",
+   "proto_export_scene.refresh_actionlist",
+   "prototools.action_slot_delete",
+   "prototools.actiondelete",
+   "prototools.actionnew",
+   "prototools.actionunlink",
+   "prototools.add_batch_export_item",
+   "prototools.add_export_object",
+   "prototools.apply_active_modifier_keep_shape_keys",
+   "prototools.apply_all_modifiers_keep_shape_keys",
+   "prototools.batch_export",
+   "prototools.copy_quickexport_options",
+   "prototools.create_object_name_slot",
+   "prototools.delete_legacy_slot",
+   "prototools.delete_mesh_animation_data",
+   "prototools.deselect_export_objects",
+   "prototools.duplicate_batch_export_item",
+   "prototools.fill_vertex_color",
+   "prototools.infopopup",
+   "prototools.infopopuparray",
+   "prototools.makeanimdata",
+   "prototools.move_batch_export_item",
+   "prototools.move_export_object",
+   "prototools.paste_quickexport_options",
+   "prototools.quick_export_allactions",
+   "prototools.quick_export_curaction",
+   "prototools.quick_export_mesh",
+   "prototools.quick_export_mesh_and_animations",
+   "prototools.quick_export_set_options_preset",
+   "prototools.refresh_quick_export_actionlist",
+   "prototools.remove_batch_export_item",
+   "prototools.remove_export_object",
+   "prototools.rename_current_slot_to_object_name",
+   "prototools.select_export_objects",
+   "prototools.set_all_quick_export_actionlist",
+   "prototools.switch_to_object_name_slot",
+   "prototools.timelinetoaction",
+   "prototools.update_legacy_slot",
+   "prototools.vertex_group_to_vertex_color"
+  ],
+  "page": "https://extensions.blender.org/add-ons/proto-game-asset-tools/",
+  "sha256": "81e87d147a01eabcc591491570c5da52fb9db8083efb29efc5b3ca794dff82bb",
+  "version": "2.5.0"
+ },
+ "step_importer": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "step.json",
+  "name": "STEP Importer",
+  "operators": [
+   "import_scene.step",
+   "step.cleanup_selected",
+   "step.regenerate_part"
+  ],
+  "page": "https://extensions.blender.org/add-ons/step-importer/",
+  "sha256": "9db6fa4a7f11c9cd1e43c061a4cdb3b1d4a376847991d60c94e80c9fb075c2ef",
+  "version": "1.2.1"
+ },
+ "terrainmixer": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "terrain.json",
+  "name": "Terrain Mixer",
+  "operators": [
+   "object.add_tm_workspaces",
+   "object.add_tm_world",
+   "object.fix_clipping_distance",
+   "object.replace_with_terrain",
+   "terrainmixer.pack_unpack_resources",
+   "terrainmixer.render_with_baking_settings",
+   "terrainmixer.setup_asset_library",
+   "terrainmixer.toggle_baking_camera"
+  ],
+  "page": "https://extensions.blender.org/add-ons/terrainmixer/",
+  "sha256": "802d22cc5d7dbce0221d3399bc23b8f96799ba5c66421d7261016bd64d5800ac",
+  "version": "3.1.3"
+ },
+ "texture_pipeline_studio": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "tps.json",
+  "name": "Texture Pipeline Studio",
+  "operators": [
+   "tps.convert_to_udim",
+   "tps.lod_swap",
+   "tps.run"
+  ],
+  "page": "https://extensions.blender.org/add-ons/texture-pipeline-studio/",
+  "sha256": "c7abbaca62008937992ff078943973450173e9137651a5662933d68a1f6c4471",
+  "version": "8.10.1"
+ },
+ "topology_doctor": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "topo.json",
+  "name": "Topology Doctor",
+  "operators": [
+   "mesh.analyze_topo_ultimate",
+   "mesh.focus_issue_element"
+  ],
+  "page": "https://extensions.blender.org/add-ons/topology-doctor/",
+  "sha256": "79c03ca9c72968c3badfb6ecd2e4aba1fbc6fd8818681c453ddc95ad1f4ad3dd",
+  "version": "1.0.0"
+ },
+ "ue_groom_importer": {
+  "license": [
+   "SPDX:GPL-3.0-or-later"
+  ],
+  "manifest": "groom.json",
+  "name": "Unreal Groom Importer",
+  "operators": [
+   "import_scene.unreal_groom"
+  ],
+  "page": "https://extensions.blender.org/add-ons/ue-groom-importer/",
+  "sha256": "a0cce6008e3564f3328b96ac8a8ebc5381eb244b0b68f1808fecd4784e5e0359",
+  "version": "1.0.1"
+ }
+}

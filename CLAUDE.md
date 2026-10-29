@@ -25,6 +25,8 @@ INDEX.md             generated index of the tools, skills and agents
                      higgsfield-library-sync, blender-gemini
 .claude/agents/      creative-writing-{chunk-tagger,drafter,librarian-native}
 .mcp.json            the gemini MCP server Claude calls to reach Blender (blender-gemini)
+blender-addons/      manifests/ (tools for the author's own Blender add-ons, read by the blender
+                     plugin's addon-tools server), sources.json, build_manifests.py, tests/
 blender-gemini/      install.py (registers the Blender MCP server with the Gemini CLI,
                      and checks the chain), tests/, README.md
 creative-writing/    the creative-writing tool
@@ -291,6 +293,13 @@ against `server.py` of the version you document, and update `SERVER_TOOLS` in
 - Discovery needs the author's Blender, which this repo's cloud sessions cannot see unless the
   author connects their clone through Remote Control.
 - Tests: `python -m unittest discover -s plugins/blender/tests` (a fake add-on socket, no Blender).
+- `blender-addons/` (repo root, not in the plugin) holds the manifests for the add-ons the author
+  listed on 2026-10-29, with their tools switched on at the author's request. They were drafted with
+  `build_manifests.py` from each add-on's zip on extensions.blender.org, which is read with `ast` and
+  never run. They are unverified against the author's install until a tool has been called there.
+  Change a tool through `CURATED`, `NAMES` or `OVERRIDES` in that script and rebuild, not by editing
+  the JSON. Nothing in the plugin may name this folder. Tests:
+  `python -m unittest discover -s blender-addons/tests`.
 
 ## Working on the udgt plugin and the teardowns
 

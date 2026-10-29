@@ -8,6 +8,7 @@
 - `blender-addons` server (`addon-tools/server.py`): named, typed tools for the user's own
   add-ons from a manifest per add-on, `discover` to draft one, and built-in asset-library tools
   (`library_list`, `library_import`) that read the Poly Haven add-on's local library.
+  A tool for an extension accepts it from any extension repository (`bl_ext.<repo>.<id>`).
 - Skill: blender-addon-tools.
 
 ## 0.1.0

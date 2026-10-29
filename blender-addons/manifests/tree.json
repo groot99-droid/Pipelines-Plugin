@@ -1,0 +1,30 @@
+{
+  "addon": "bl_ext.blender_org.easy_tree",
+  "seen_version": "1.0.1",
+  "tools": [
+    {
+      "name": "tree_add",
+      "description": "Easy Tree Tool. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.add_tree_tool",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "tree_hide_leaves",
+      "description": "Hide Leaves: Hides all of the leaves in the viewport. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.hide_tree_leaves",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "tree_show_leaves",
+      "description": "Show Leaves: Shows all of the leaves in the viewport. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.show_tree_leaves",
+      "params": {},
+      "context": "VIEW_3D"
+    }
+  ]
+}

@@ -10,6 +10,7 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | Folder | Purpose | Index |
 |---|---|---|
 | `agent-reach/` | The reach base: a CLI that installs, checks and configures read access to 15 internet platforms, and the contract the toolsets built on it follow. | - |
+| `blender-addons/` | Tool manifests for the author's own Blender add-ons, read for the blender plugin's add-on tools server, with the script that drafts them from the add-ons' source. | - |
 | `blender-gemini/` | Registers the Blender MCP server with the Gemini CLI, and the skill that lets Claude call Gemini to inspect or change an open Blender scene. | - |
 | `creative-writing/` | The Obsidian vault of 63 works plus the checkpointed pipeline that writes into it. | - |
 | `docs/` | Browsable HTML pages describing each tool, and a local helper for setting API keys. | - |

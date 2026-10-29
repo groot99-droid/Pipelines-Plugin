@@ -1,0 +1,14 @@
+{
+  "addon": "bl_ext.blender_org.topology_doctor",
+  "seen_version": "1.0.0",
+  "tools": [
+    {
+      "name": "topo_analyze",
+      "description": "Run Full Analysis: Analyzes the mesh and populates the report. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "mesh.analyze_topo_ultimate",
+      "params": {},
+      "context": "VIEW_3D"
+    }
+  ]
+}

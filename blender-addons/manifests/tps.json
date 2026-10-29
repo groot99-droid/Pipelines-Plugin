@@ -1,0 +1,32 @@
+{
+  "addon": "bl_ext.blender_org.texture_pipeline_studio",
+  "seen_version": "8.10.1",
+  "tools": [
+    {
+      "name": "tps_assign_textures",
+      "description": "Assign Textures: Find and assign textures as single images. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "tps.run",
+      "params": {}
+    },
+    {
+      "name": "tps_convert_to_udim",
+      "description": "Convert Textures to UDIM: Convert Image Texture nodes from Single Image to UDIM tiles. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "tps.convert_to_udim",
+      "params": {}
+    },
+    {
+      "name": "tps_lod_swap",
+      "description": "Swap Resolution: Swap image paths to another resolution folder. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "tps.lod_swap",
+      "params": {
+        "resolution": {
+          "description": "Resolution (items depend on the scene)",
+          "type": "string"
+        }
+      }
+    }
+  ]
+}

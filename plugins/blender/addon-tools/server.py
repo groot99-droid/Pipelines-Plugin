@@ -241,8 +241,15 @@ def area_override(space):
 
 
 def addon_enabled(module):
-    if module in bpy.context.preferences.addons:
+    enabled = bpy.context.preferences.addons.keys()
+    if module in enabled:
         return True
+    if module.startswith("bl_ext."):
+        # An extension's module names the repository it came from
+        # (bl_ext.blender_org.<id>, bl_ext.user_default.<id>); any of them will do.
+        tail = module.rsplit(".", 1)[1]
+        if any(k.startswith("bl_ext.") and k.rsplit(".", 1)[1] == tail for k in enabled):
+            return True
     return bool(addon_utils.check(module)[1])
 
 '''

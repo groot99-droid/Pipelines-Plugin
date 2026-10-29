@@ -313,6 +313,37 @@ class Stdio(Case):
         self.assertEqual(replies[3]["error"]["code"], -32700)
 
 
+class AddonEnabled(unittest.TestCase):
+    """The prelude's check, run against stand-ins for bpy and addon_utils."""
+
+    def enabled(self, module, installed):
+        import types
+        bpy = types.SimpleNamespace(context=types.SimpleNamespace(
+            preferences=types.SimpleNamespace(addons={name: None for name in installed})))
+        addon_utils = types.SimpleNamespace(check=lambda name: (False, False))
+        saved = {k: sys.modules.get(k) for k in ("bpy", "addon_utils")}
+        sys.modules.update(bpy=bpy, addon_utils=addon_utils)
+        try:
+            scope = {}
+            exec(server.PRELUDE.format(args="{}"), scope)
+            return scope["addon_enabled"](module)
+        finally:
+            for k, v in saved.items():
+                if v is None:
+                    sys.modules.pop(k, None)
+                else:
+                    sys.modules[k] = v
+
+    def test_an_extension_from_any_repository(self):
+        self.assertTrue(self.enabled("bl_ext.blender_org.easy_pivot", ["bl_ext.user_default.easy_pivot"]))
+        self.assertTrue(self.enabled("bl_ext.blender_org.easy_pivot", ["bl_ext.blender_org.easy_pivot"]))
+
+    def test_only_the_same_extension(self):
+        self.assertFalse(self.enabled("bl_ext.blender_org.easy_pivot", ["bl_ext.user_default.easy_tree"]))
+        self.assertFalse(self.enabled("bl_ext.blender_org.easy_pivot", ["easy_pivot"]))
+        self.assertFalse(self.enabled("legacy_addon", ["bl_ext.user_default.legacy_addon"]))
+
+
 class contextlib_quiet:
     """Swallow what main() prints."""
 
