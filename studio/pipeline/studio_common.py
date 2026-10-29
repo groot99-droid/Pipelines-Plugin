@@ -191,7 +191,8 @@ class Env:
     the tests never touch the real vault or the real run folder.
     """
 
-    def __init__(self, spec_path=SPEC_PATH, runs_dir=None, vault_dir=None, context_dir=None):
+    def __init__(self, spec_path=SPEC_PATH, runs_dir=None, vault_dir=None, context_dir=None,
+                 assets_dir=None):
         self.spec_path = Path(spec_path)
         self.spec = load_spec(self.spec_path)
         base = self.spec_path.parent
@@ -203,6 +204,7 @@ class Env:
         self.runs = pick(runs_dir, "STUDIO_RUNS_DIR", self.spec["runs_root"])
         self.vault = pick(vault_dir, "STUDIO_VAULT_DIR", self.spec["vault_root"])
         self.context = pick(context_dir, "STUDIO_CONTEXT_DIR", self.spec["context_root"])
+        self.assets = pick(assets_dir, "STUDIO_ASSETS_DIR", self.spec.get("assets_root", "../assets"))
 
     @property
     def stages(self):
@@ -291,6 +293,27 @@ def gap_topic(lines):
 
 def reserved_names(env):
     return {name.casefold() for name in env.spec["content_md"].get("reserved_names", [])}
+
+
+def artifact_roles(env):
+    return list(env.spec["content_md"].get("artifact_roles", []))
+
+
+def artifact_path(env, relative):
+    """The file an artifact's path names, under the assets folder, or a
+    sentence saying why the path is not one. A path is relative to the assets
+    folder, forward slashes, no `..`, no scheme, no drive."""
+    if not isinstance(relative, str) or not relative.strip():
+        return None, "an artifact's `path` is text"
+    text = relative.strip().replace("\\", "/")
+    if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", text) or text.startswith("//"):
+        return None, f"`{relative}` is a link. An artifact is a file under the assets folder, never a link"
+    if text.startswith("/") or ".." in text.split("/"):
+        return None, f"`{relative}` leaves the assets folder"
+    parts = [part for part in text.split("/") if part]
+    if not parts or any(not PATH_PART_RE.fullmatch(part) for part in parts):
+        return None, f"`{relative}` is not a path of plain names (letters, digits, space, dot, _ and -)"
+    return env.assets.joinpath(*parts), None
 
 
 def windows_reserved(part):

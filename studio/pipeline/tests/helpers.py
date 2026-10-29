@@ -159,17 +159,20 @@ class StudioCase(unittest.TestCase):
         self.context = self.vault / "_Context" / "brand"
         self.context.mkdir(parents=True)
         self.runs.mkdir()
+        self.assets = self.root / "assets"
+        self.assets.mkdir()
         self.spec_path = self.root / "spec.yaml"
         self.spec_path.write_text(yaml.safe_dump(fixture_spec(), sort_keys=False, allow_unicode=True),
                                   encoding="utf-8")
         self.env = studio_common.Env(self.spec_path, runs_dir=self.runs, vault_dir=self.vault,
-                                     context_dir=self.context)
+                                     context_dir=self.context, assets_dir=self.assets)
         for name, text in FIXTURE_FILES.items():
             (self.context / FIXTURE_GATES[name]["file"]).write_text(text, encoding="utf-8")
 
     def folders(self):
         return ["--spec", str(self.spec_path), "--runs-dir", str(self.runs),
-                "--vault-dir", str(self.vault), "--context-dir", str(self.context)]
+                "--vault-dir", str(self.vault), "--context-dir", str(self.context),
+                "--assets-dir", str(self.assets)]
 
     def call(self, module, *arguments):
         """(exit code, stdout, stderr) of one command, run in this process."""

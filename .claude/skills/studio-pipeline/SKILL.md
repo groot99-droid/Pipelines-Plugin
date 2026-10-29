@@ -1,6 +1,6 @@
 ---
 name: studio-pipeline
-description: Walk one made thing through the studio's checkpointed pipeline (intake, context, recipe, execute, review, record), resolving and attesting its brand context before anything is run and leaving a Content MD in the studio vault. Use when the author wants a design system, palette, font pairing, style direction, UX review or accessibility audit made through the studio, or asks to start, resume or park a studio run. Not for the creative-writing vault, which has its own pipeline.
+description: Walk one made thing through the studio's checkpointed pipeline (intake, context, recipe, execute, review, record), resolving and attesting its brand context before anything is run and leaving a Content MD in the studio vault. Use when the author wants a design system, palette, font pairing, style direction, UX review or accessibility audit made through the studio, a walkable 3D scene of the Writing Museum for a work they name, or asks to start, resume or park a studio run. Not for the creative-writing vault, which has its own pipeline.
 ---
 
 # Studio pipeline
@@ -102,7 +102,8 @@ edit `state.json` by hand, and never work around a refusal.
    python studio/pipeline/studio_run.py facts <run-id>
    ```
 
-   Read every gate file it lists, in full. Resolve each needed constraint on the
+   Read every gate file it lists, in full. For a `who-did-it` run, the game's teardown
+   (`teardowns/who-did-it/`, queried with the `udgt-consult` skill) is context to read, never a gate. Resolve each needed constraint on the
    ladder in `studio/vault/CLAUDE.md` and write `attestation.md` in the shape the
    stage instructions give: one row for each constraint `facts` lists, in its
    words.
@@ -137,7 +138,18 @@ edit `state.json` by hand, and never work around a refusal.
    what came back, not what was planned.
 
    Call no tool whose name contains a word listed under `connectors: never` in
-   the spec.
+   the spec, and, for a pipeline that runs through a connector, no tool its
+   entry does not list under `connector: tools`. A connector hands back a
+   short-lived link: download the file into the run folder now and log the
+   file name, never the link. What the author keeps is copied out of the run
+   folder, after the execute go-ahead:
+
+   ```
+   python studio/pipeline/studio_run.py keep <run-id> <file> --role final|variant|reference|export|concept-frame
+   ```
+
+   It lands under `studio/assets/<project>/<kind>/<slug>/`, and the record
+   stage must list it.
 
 8. **Review.** One line for each output against each attested constraint, and
    how it was checked. A failed output is a finding. A retry is a new execute
@@ -156,6 +168,9 @@ edit `state.json` by hand, and never work around a refusal.
      `context_brand`. Leave a `PROVISIONAL` decision already in the note as it
      is, unless the author has now stated it. The writer refuses the note
      otherwise.
+   - List under `artifacts` every file the run kept, by the path and role
+     `keep` printed, and nothing else. The writer refuses a record that leaves
+     a kept file out, or lists a file that is not there.
    - Preview it. This writes nothing to the vault:
 
      ```
@@ -249,6 +264,9 @@ the run folder behind, and the note says nothing of it.
 - It does not read, search or write anything under `creative-writing/vault/`.
   If the author wants a made thing to draw on one of those works, they name the
   work at a checkpoint and you read that work only.
+  The `scene-3d` pipeline is that case: the work is named at intake, and only
+  that work, its `_ChunkTags` sidecar and its chunks are read, through
+  `writing-museum/build/build_museum.py` (see `writing-museum/README.md`).
 - It does not write or edit a file under `studio/vault/_Context/brand/`, except
   a gate a `brand-gate` run writes through `gate_md.py` after the author's yes.
   A change to `tokens.json` is proposed as a diff and left for the author.

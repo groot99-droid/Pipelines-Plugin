@@ -13,9 +13,12 @@ its skills and agents live inside it, under `plugins/ui-design/`.
 ```
 INDEX.md               generated index of the tools, skills and agents
 .claude/skills/        creative-writing-pipeline, chunk-tag-backfill,
-                       studio-pipeline
+                       studio-pipeline, blender-gemini
 .claude/agents/        creative-writing-{chunk-tagger,drafter,librarian-native}
+.mcp.json              the gemini MCP server Claude calls (see blender-gemini)
 CLAUDE.md              repo conventions; points at each vault's own CLAUDE.md
+blender-gemini/        installer and tests that register the Blender MCP server
+                       with the Gemini CLI; its skill is blender-gemini
 creative-writing/
   vault/               the Obsidian vault: 63 works, _Annotations/,
                        _ChunkTags/, _Idea_Library/, tools/, CLAUDE.md
@@ -37,6 +40,20 @@ plugins/ui-design/     the ui-design plugin: self-contained
   maintenance/         validators, relevance gate, refresh scripts, verify.py
   references/          prose the ui-design-catalog skill reads on demand
   README.md, LICENSE, NOTICE, CHANGELOG.md
+plugins/udgt/          the udgt plugin: UI, Dataset & Gameplay Teardown of a game repo
+teardowns/             one folder per torn-down game (today: who-did-it)
+agent-reach/          the reach base: Agent Reach (imported with git subtree). CLI `agent-reach`
+                       installs, checks and configures read access to 15 internet platforms;
+                       toolsets follow agent-reach/TOOLSETS.md
+plugins/reach/         the reach plugin: reach-setup, reach-connect, and the engine's agent-reach skill (a copy)
+plugins/blender/       the blender plugin: self-contained
+  .mcp.json            launches `uvx mcp-for-blender` with telemetry off
+  skills/, agents/     blender-{mcp,assets,polyhaven-library}, blender-scene-reviewer
+plugins/video-editor/  the video-editor plugin: self-contained
+  bin/ve.py            launcher: runs the CLI from the plugin folder or install cache, no pip install
+  src/videoeditor/     the `ve` CLI: questionnaire, recipes and playbooks, ffmpeg render, captions, publish
+  skills/              video-editor, manim-video
+  tests/, UNVERIFIED.md  unittest suite; what is not verified and what is deferred
 ```
 
 Paths in the creative-writing and studio skills and agents are relative to this
@@ -279,10 +296,30 @@ is made before every constraint it needs has been resolved and its source shown;
 a constraint that cannot be sourced is asked for, never guessed.
 
 Nine pipelines are declared in
-[`studio/pipeline/spec.yaml`](studio/pipeline/spec.yaml) and two are implemented:
-`ui-direction`, which runs the ui-design catalog under the studio's brand gates,
-and `brand-gate`, which writes a brand gate from an interview with the author.
-The rest are entries that say what each needs and do not start.
+[`studio/pipeline/spec.yaml`](studio/pipeline/spec.yaml) and eight are
+implemented: `ui-direction`, which runs the ui-design catalog under the studio's
+brand gates; `brand-gate`, which writes a brand gate from an interview with the
+author; `still-image`, `video-shot` and `music-cue`, through the Higgsfield
+connector; `edit-2d`, through the Adobe connector; `scene-3d`, which builds one room of the
+Writing Museum for a work the author names; and `scene-blender`, through the
+Blender scene connector. Each names the connector tools it may call, spends
+nothing before the execute go-ahead, and keeps what the author keeps under
+`studio/assets/`. `ui-build` and `brush` are entries that say what each needs;
+`brush` has its packer (`studio/pipeline/brush_pack.py`) and waits for the
+designer app.
+
+The generations library, [`studio/library`](studio/library), catalogues every
+image, video, audio clip and 3D model the author has made on Higgsfield, with
+thumbnails and a page to look through them. The `higgsfield-library-sync` skill
+brings it up to date; originals are downloaded on request and are not versioned.
+
+The hub, [`studio/hub`](studio/hub), is a local page over the vault's notes, the
+runs and the gates: `python studio/hub/serve.py`, then open
+`http://127.0.0.1:8765/`. Its Writing tab links to the Writing Museum's library
+and viewer on their own server (`--museum-port`, default 8768) and says whether
+that server is up; the hub serves none of the museum itself. On Windows,
+`studio/hub/launcher/Install-Shortcut.ps1` puts a shortcut on the Desktop and in
+the Start Menu, and `Start-Hub.ps1 -Museum` starts both servers.
 
 It carries the ideas of Creative-Headquarters into this repo.
 [`studio/docs/INVENTORY.md`](studio/docs/INVENTORY.md) is what that repo
@@ -297,6 +334,72 @@ session.
 python -m unittest discover -s studio/pipeline/tests     # the studio's own check
 python studio/pipeline/studio_run.py status              # every run
 python studio/pipeline/content_md.py lint --all          # every note in the vault
+```
+
+## Writing Museum
+
+A walkable 3D museum of the creative-writing vault, fashioned after the Chronicle
+Museum of `Earth_Worldbuild`: a hall with a door to every scene, and one room per
+work whose passages hang on the walls as verbatim text panels, cited to their vault
+path and lines. The room's door, walls, floor, frames and light follow the work's
+own mode, moods and motifs through one reference table. The engine and the data
+live in [`writing-museum/`](writing-museum) (its [README](writing-museum/README.md)
+says how to view and build it); every scene is made through the studio's
+`scene-3d` pipeline and has a note in `studio/vault/writing-museum/3d/`. Beside the
+3D viewer is **the library** (`web/explore.html`): a flat page to read every work of
+the vault, passage by passage, and look through the rooms, each with its colours,
+its door and where every value came from.
+
+Both are published on GitHub Pages, with the docs pages, on every push to `main`
+(`.github/workflows/pages.yml`): the library at
+<https://groot99-droid.github.io/Pipelines-Plugin/museum/web/explore.html> and the
+museum at <https://groot99-droid.github.io/Pipelines-Plugin/museum/web/index.html>.
+The deploy rebuilds the museum from the vault, so a merged `scene-3d` run's room is
+on the site a few minutes later. The workflow is the site's only publisher: its first
+step sets the repository's Pages source to GitHub Actions, because a "deploy from a
+branch" source publishes `docs/` alone on the same push, after it, and drops `museum/`.
+
+```powershell
+python -m http.server 8768 --directory writing-museum          # then open /web/index.html, or /web/explore.html to read
+python writing-museum/build/build_museum.py build --lint        # the layout lint
+python -m unittest discover -s writing-museum/build/tests       # the builder's tests
+node writing-museum/tools/walk_test.mjs                         # the browser walk-through
+```
+
+## Sound library
+
+The author's own sound effects, catalogued in [`sound-library`](sound-library):
+one entry per recording with its name, category, length, format and hash, and a
+stdlib script that searches the catalog and puts a file on disk. The WAVs are not
+in git: a batch is hundreds of megabytes, so they are attached as zips to GitHub
+Releases of this repo and `fetch` brings one down, checks its hash and places it.
+The `sound-library` skill does the searching, fetching and ingesting from a
+session; its [README](sound-library/README.md) says how to add a batch.
+
+```powershell
+python sound-library/library.py search "boat horn"                          # rank the catalog
+python sound-library/library.py fetch --id boats/deep-boat-horn             # from the release
+python sound-library/library.py ingest Boats_Pt1.zip --release SFX_2026_01  # a new batch
+python -m unittest discover -s sound-library/tests
+```
+
+## Blender through Gemini
+
+Lets Claude drive an open Blender by calling Gemini. Claude calls the `gemini` MCP server
+(`.mcp.json`), which runs the Gemini CLI, which has the Blender MCP server
+(`mcp-for-blender`) registered in its settings; that talks to an add-on inside Blender.
+`blender-gemini/install.py` writes that one settings entry and checks the whole chain;
+the `blender-gemini` skill tells Claude how to use it. The default profile lets Gemini
+only inspect the scene; running code in Blender is a separate, explicit choice. It runs
+on your machine, not in a cloud session, and it has not been run end to end: the
+[README](blender-gemini/README.md) lists what was and was not verified.
+
+```powershell
+python blender-gemini/install.py install --dry-run              # show the Gemini CLI entry, write nothing
+python blender-gemini/install.py install                        # read-only profile (add --profile full for code)
+python blender-gemini/install.py check                          # read-only preflight of the whole chain
+python blender-gemini/install.py sync-key --dry-run             # copy GEMINI_API_KEY from keys.env to ~/.gemini/.env
+python -m unittest discover -s blender-gemini/tests             # the installer's tests
 ```
 
 ## UI design plugin
@@ -321,3 +424,33 @@ Install it from this repo in Claude Code with
 `/plugin marketplace add groot99-droid/Pipelines-Plugin`, then
 `/plugin install ui-design@rosw`. Release steps are in [`CLAUDE.md`](CLAUDE.md), under
 "Publishing".
+
+## Blender plugin
+
+`plugins/blender/` lets Claude drive a live Blender through the MCP for Blender server
+(scene inspection, bpy scripting checked by viewport screenshots, asset sourcing from
+Poly Haven, Sketchfab, Poly Pizza, Hyper3D Rodin and Hunyuan3D) and documents the Poly Haven
+Assets Asset Browser add-on. Install with `/plugin install blender@rosw`. The server's
+telemetry is disabled in `.mcp.json`; the GPL Poly Haven add-on is not bundled. See
+`plugins/blender/README.md`.
+
+## Teardowns (UDGT)
+
+`plugins/udgt/` takes a game's repository apart. It reads the documents, the decision log, the data,
+the code, the design tokens, the UI copy, the git history and the stated plans, and from them makes a
+cross-linked dataset, chapters (Describe, Compare, Critique) and an explorer page dressed in the
+game's own look. The owner answers a short creative brief before each chapter, and the answers are
+kept verbatim. The first teardown is `teardowns/who-did-it/`; see its README and
+[`docs/udgt.html`](docs/udgt.html).
+
+## Video editor
+
+`plugins/video-editor/` edits video by conversation. A short questionnaire picks one recipe (highlight
+clips, long-form edit, action montage, with an animated-overlay add-on), so vertical vs landscape and
+dialogue vs action work never compete. It runs locally on ffmpeg and local Whisper, with no API keys, and
+adds optional extras for word alignment and speaker turns (whisperX), stem separation (Demucs) and a Remotion
+overlay template. `ve publish` sends the result through official platform APIs only: dry run by default,
+private or draft by default, nothing sent without `--yes`, credentials in the OS keyring or environment
+variables and never in a file. Install with `/plugin install video-editor@rosw`. `ve publish` has never been
+run against a live account; `plugins/video-editor/UNVERIFIED.md` lists what to check first. See
+`plugins/video-editor/README.md` and [`docs/video-editor.html`](docs/video-editor.html).

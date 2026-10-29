@@ -1,0 +1,12 @@
+---
+title: "Annotation — The Confession Book of St Brannock's"
+type: annotation
+annotates: [[10_Characters/06_The_Confession_Book_of_St_Brannock_s]]
+mode: epic-fantasy
+patterns: [fixed-form-entries, card-text-as-voice, the-cut-leaf, margin-hand-as-chorus, withheld-final-entry]
+tags: [annotation, mode/epic-fantasy, project/who-did-it]
+---
+
+Wikilink back to [[10_Characters/06_The_Confession_Book_of_St_Brannock_s|The Confession Book of St Brannock's]].
+
+The role deck as a register of souls. Every card in `roles.json`, the V1.5 and V2 cards included, comes to the Vicar once, and the fixed form (look, name as given, carries, wants, confessed, where this soul stands, said, seal) keeps the codex's reference value. Each **Carries** line is the card's start kit seen as objects (Len's slow watch, Mallory's worn medkit, Moll's two bottles on two shelves), and each **Wants** line is the card's goal said in the person's own mouth. The cover roles confess in borrowed voices. No. 5 wears a doctor's words badly and owns the Drifter's tin knife. No. 8 reads the Tinner's goal aloud "the way a man reads a sign" over a struck-out dead man's name. No. 15 wears Len's lantern without Len's watch and gives only the alibi. The Vicar card's own power is the form's spine. He spends one night per soul and keeps three words for where a soul stands (*With the parish*, *With no one*, *With the other*), and the third is never defined. The two cabal pages are the book's restraint. No. 8's lower third is cut away "clean and straight; no scissor cut it", and No. 19 (the Heir) gives only "someone is gone, and the town does not know it yet". Neither is ever named, as the owner ruled. A small pencil hand answers in the margins ("Not by me", "Who asked you to?", "Count the pages"), with ash thumbprints on three converts' pages, so the Zealot's work runs alongside without a face. The Vicar's own No. 20 reckons the town's dead and his three failures of the seal, and ends without a seal. No. 21 is ruled and blank, waiting for whoever comes next. Owner rulings held: Doc Mallory is the Doctor, Mother Moll the Herbalist, Wenna the Medium. Cyril is the Fisher and Norman the Tinner, and the Ranger stays unnamed. The Parish Seal "costs nothing… that is why nobody trusts it" settles indulgences by inversion. The closing line turns the game's dawn reveal into the book's verdict: "The page that bears your number at dawn is who you are." Plot logic: not applicable, codex form.

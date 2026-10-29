@@ -1,0 +1,31 @@
+{
+  "id": "architecture-of-being",
+  "order": 10,
+  "work": "11_Essays/02_The_Architecture_of_Being.md",
+  "name": "The Architecture of Being",
+  "hub_side": "N",
+  "panels": "all",
+  "min_w": 10,
+  "min_d": 8,
+  "style": {
+    "theme": "doric-pediment",
+    "frame": "dark-wood",
+    "frame_small": "dark-wood",
+    "wall": "#e6dfd2",
+    "light": {
+      "color": "#fff8ec",
+      "intensity": 230
+    },
+    "floor": "stone",
+    "trim": "stone"
+  },
+  "sources": {
+    "theme": "mapping.json mode.essay-self-help (frontmatter mode: essay-self-help)",
+    "frame": "mapping.json mode.essay-self-help (frontmatter mode: essay-self-help)",
+    "frame_small": "mapping.json mode.essay-self-help (frontmatter mode: essay-self-help)",
+    "wall": "mapping.json mood.clarity (mood_tag in 3 of 4 chunks)",
+    "light": "mapping.json mood.clarity (mood_tag in 3 of 4 chunks)",
+    "floor": "mapping.json motif.threshold (motif_tag in 2 of 4 chunks)",
+    "trim": "mapping.json motif.threshold (motif_tag in 2 of 4 chunks)"
+  }
+}

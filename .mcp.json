@@ -1,8 +1,21 @@
 {
   "mcpServers": {
+    "gemini": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "gemini-mcp-tool"
+      ],
+      "env": {
+        "GEMINI_MCP_BACKEND": "gemini"
+      }
+    },
     "brushes": {
       "command": "python",
-      "args": ["-I", "brushes/pipeline/mcp_server.py"]
+      "args": [
+        "-I",
+        "brushes/pipeline/mcp_server.py"
+      ]
     }
   }
 }

@@ -78,22 +78,28 @@ class Context(unittest.TestCase):
     # ── tokens ────────────────────────────────────────────────────────────
 
     def test_the_tokens_and_the_colour_gate_state_the_same_palette(self):
+        """Every colour in tokens.json is in the colour gate's palette section,
+        and every colour that section states is a token. Neither the section's
+        number nor the token names are assumed: both come from the files, so
+        replacing the gate and the tokens together does not touch this test."""
         tokens = json.loads(read(GATES / self.spec["tokens"]["file"]))
-        flat = {}
-        for group, values in tokens["color"].items():
-            for name, value in values.items():
-                flat[f"{group}.{name}"] = value.upper()
-        stated = {name: value.upper() for name, value in re.findall(
-            r"^\| `([a-z-]+)` \| `(#[0-9A-Fa-f]{6})` \|", read(GATES / "color_science.context.md"), re.M)}
-        names = {"bg.base": "bg", "bg.raise": "bg-raise", "bg.panel": "bg-panel",
-                 "line.base": "line", "ink.base": "ink", "ink.dim": "ink-dim",
-                 "accent.cyan": "cyan", "accent.amber": "amber", "accent.alert": "alert",
-                 "accent.queued": "queued"}
-        self.assertEqual(set(flat), set(names))
-        self.assertEqual(len(stated), 10)
-        for token, gate_name in names.items():
-            with self.subTest(token=token):
-                self.assertEqual(flat[token], stated[gate_name])
+
+        def hexes(value):
+            if isinstance(value, dict):
+                return [h for v in value.values() for h in hexes(v)]
+            if isinstance(value, str) and re.fullmatch(r"#[0-9A-Fa-f]{6}", value):
+                return [value.upper()]
+            return []
+
+        in_tokens = hexes(tokens["color"])
+        gate = read(GATES / self.spec["gates"]["color_science"]["file"])
+        palette = [body for title, body in studio_common.sections(gate)
+                   if "palette" in title.casefold()]
+        self.assertEqual(len(palette), 1, "the colour gate has one section whose title says palette")
+        stated = [value.upper() for value in re.findall(r"`(#[0-9A-Fa-f]{6})`", palette[0])]
+        self.assertTrue(stated, "the palette section states its colours as `#RRGGBB`")
+        self.assertEqual(sorted(set(in_tokens)), sorted(set(stated)))
+        self.assertEqual(len(in_tokens), len(set(in_tokens)), "a token colour is stated once")
 
     def test_the_tokens_say_who_may_change_them(self):
         tokens = json.loads(read(GATES / self.spec["tokens"]["file"]))

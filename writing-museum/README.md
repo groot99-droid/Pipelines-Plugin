@@ -1,0 +1,118 @@
+# The Writing Museum
+
+A walkable 3D museum of the creative-writing vault, generated in the browser from data and
+fashioned after the Chronicle Museum (`Earth_Worldbuild/_Museum`, the same author's). A **Hall**
+has a door to every scene; each scene is one room for one work of `creative-writing/vault/`,
+whose passages hang on the walls as text panels, verbatim, at a size that follows the text. The
+room's door theme, wall paint, trim, floor, frames and light come from the work's own labels (its
+`mode` and its chunk-level `mood_tags` and `motif_tags`), resolved through one legible table
+(`build/mapping.json`) inside a studio run that records where every value came from.
+
+Every scene is a made thing of the studio: it is built only through the `scene-3d` pipeline
+(`studio/pipeline/spec.yaml`), and its Content MD lives in `studio/vault/writing-museum/3d/<id>.md`.
+This folder holds the engine and the data; the studio vault holds the record.
+
+## How to view it
+
+On the web: the library at <https://groot99-droid.github.io/Pipelines-Plugin/museum/web/explore.html>
+and the museum at <https://groot99-droid.github.io/Pipelines-Plugin/museum/web/index.html>, published
+from `main` by `.github/workflows/pages.yml` (this folder under `museum/`, rebuilt from the vault at
+deploy time, beside the `docs/` pages at the site root). The workflow is the site's only
+publisher: its first step sets the repository's Pages source to GitHub Actions, since a "deploy
+from a branch" source publishes `docs/` alone after it and drops `museum/`. Locally:
+
+```
+python -m http.server 8768 --directory writing-museum
+```
+
+Open `http://localhost:8768/web/index.html`. **Explore** (walk yourself), **Start guided tour**
+(be walked from passage to passage, through the doors) or **Resume last visit**. The controls
+are the Chronicle Museum's (`?` or `H` in the viewer lists them): WASD or arrows walk, the mouse
+looks, click or `E` reads a panel or goes through a door, `M` is the floor plan, `Tab` the go-to
+panel, `Space` `N` `P` drive the tour, `Esc` closes things; touch and a standard gamepad work too.
+
+`?room=<id>`, `?work=<panel-id>`, `?resume=1`, `?classic`, `?view=<name>`, `?debug` and `?test` are
+the Chronicle Museum's URL flags and mean the same here.
+
+## The library
+
+`web/explore.html` is the flat side of the museum: a page to read through the works and look
+through the scenes without walking. The **Works** view is a shelf of all 63 works, in the vault's
+own folders, with a search over titles, themes and the text, a mode and folder filter, and a
+reader that shows the chosen work's frontmatter, the blurb its folder's `_index.md` gives it, and
+its passages, verbatim, cut as the vault's search tool cuts them, each cited to its file lines and
+carrying its chunk tags. A work with a room links to it (`index.html?room=<id>`); one without says
+so. The **Scenes** view is the hall as a plan with a door for every room, and one card per room:
+its wall, light, floor, trim, frames and door theme, the room's size and passage count, where
+each value came from (the scene spec's `sources`), the note that records it, and a door into the
+3D room. `←` `→` move along the shelf; `/` searches.
+
+It reads one file, `data/library.json`, which `build_museum.py build` writes beside the manifest
+(`build/library.py`): every work of the vault, with a room or without, and every scene spec with
+the panel count and room size the build gave it. `explore.html?work=<slug>` opens a work;
+`explore.html?view=scenes&scene=<id>` finds a room. The page remembers the last work read.
+
+Three.js r160 is vendored in `web/vendor/three/` (MIT). The textures and the sky are CC0
+(`assets/CREDITS.md`). There are no sculptures: `assets/models.json` is an empty catalog.
+
+## Pipeline
+
+```
+creative-writing/vault/<work>.md  +  _ChunkTags/<work>.md.tags.json       (read only; never written)
+        │  build/works.py            one entry per work; its works are PASSAGES (the vault's own
+        │                            chunks, transcription header left off, sized as panels)
+        │  build/mapping.json        mode / mood / motif  ->  theme, wall, light, floor, trim, frames
+        ▼
+data/scenes/<id>.json               one scene spec per work, written by a studio run at execute
+        │  build/build_museum.py build   (--lint checks and writes nothing)
+        │    └─ build/layout.py          hall + one room per scene, salon-grid packer, lint
+        ▼
+data/museum-manifest.json           everything textual: rooms, the wing, works, passages, credits
+data/museum-layout.json             everything spatial: boxes, mouldings, doors, hangs, frames, fixtures, views
+data/library.json                   every work of the vault and every scene, for web/explore.html (build/library.py)
+        ▼
+web/js/*                            the Chronicle Museum viewer; procroom.js draws a text panel
+                                    into a CanvasTexture when a hang's work carries `text`
+```
+
+```
+python writing-museum/build/build_museum.py propose <vault-path> [--id ID] [--order N] [--json]
+python writing-museum/build/build_museum.py check data/scenes/<id>.json
+python writing-museum/build/build_museum.py build [--lint]
+python -m unittest discover -s writing-museum/build/tests
+node writing-museum/tools/walk_test.mjs [--grep name] [--no-shots] [--out DIR] [--list]
+```
+
+`propose` prints the scene spec the mapping table suggests for a work, with the source of every
+value, and the work's passages with their panel sizes. It is a reference for the recipe stage of
+a `scene-3d` run, never binding: the run decides, and records what it decided and why.
+
+The scene spec (`data/scenes/<id>.json`) is documented at the top of `build/build_museum.py`. Its
+`id` is the scene, the door, the room and the note's slug; `order` places its door in the hall;
+`panels` is `"all"` or a list of chunk numbers; `style` holds the resolved look; `sources` is the
+run's own record of where each value came from (the builder ignores it).
+
+## What was copied, and what changed
+
+`web/` is the Chronicle Museum viewer, copied on 2026-09-30, with these changes: `procroom.js`
+draws text panels; `interactions.js` shows a passage and its citation on the placard, has no
+rewrite layer and no image paths; `index.html` and `ui.js` say passage where they said painting;
+`index.html` links the library from the entry overlay, and `main.js` lets a click on that link
+through instead of entering the museum (2026-10-01). `explore.html`, `css/explore.css` and
+`js/explore.js` are this museum's own, not copied.
+`build/layout.py` is that museum's `build_layout.py` with the per-room style read from the scene
+spec, no props or models, and a hall whose length follows its door count. `build/works.py` plays
+the part `people_entries.py` plays there. `tools/walk_test.mjs` is that harness, driven by the
+manifest instead of fixed room ids, with two fixes of its own (2026-10-01): the map-click test
+enters the museum before opening the map, since the entry overlay sits above the map, and clicks
+the centre of a door's hit area rather than its first scanned edge point, which the mouse rounds
+off; the placard test ignores the `*` of italics. Both are worth carrying back to that repo.
+
+## What it does not do
+
+- It never writes into `creative-writing/vault/`. The 63 works stay verbatim; a panel shows a
+  passage and cites its path and lines.
+- It never writes into `studio/vault/`. The note is written by the run, through `content_md.py`.
+- `data/scenes/` is not edited by hand. A scene spec is written by a `scene-3d` run at execute,
+  after the author's go-ahead, and re-made by a new run.
+- `tools/out/` (screenshots, `report.json`) is git-ignored.

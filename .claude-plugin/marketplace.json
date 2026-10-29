@@ -14,6 +14,26 @@
       "name": "ui-design",
       "source": "./plugins/ui-design",
       "description": "Searchable UI styles, palettes, fonts, UX rules, icons, motion and stacks; a contrast-checked design-system generator; a brief router; multipart search and page-review agents."
+    },
+    {
+      "name": "blender",
+      "source": "./plugins/blender",
+      "description": "Drive a live Blender through the MCP for Blender server: scene inspection, bpy scripting with screenshot verification, asset sourcing (Poly Haven, Sketchfab, Poly Pizza, Rodin, Hunyuan3D) and a Poly Haven Asset Browser guide."
+    },
+    {
+      "name": "reach",
+      "source": "./plugins/reach",
+      "description": "Read access to the internet for Claude through Agent Reach: set up and health-check it, and route research across 15 platforms (web, search, YouTube, Reddit, GitHub, Bilibili, RSS and more) through each platform's own upstream tool."
+    },
+    {
+      "name": "udgt",
+      "source": "./plugins/udgt",
+      "description": "UI, Dataset & Gameplay Teardown: pull a game's repository apart into a cross-linked dataset, Describe/Compare/Critique chapters written with the owner through creative briefs, and an explorer page dressed in the game's own look."
+    },
+    {
+      "name": "video-editor",
+      "source": "./plugins/video-editor",
+      "description": "Edit video by conversation: a questionnaire picks one recipe (highlight clips, long-form edit, action montage, animated overlays); local Whisper, speaker-aware reframing, captions, stems; and a dry-run, private-by-default publisher built on official platform APIs only."
     }
   ]
 }

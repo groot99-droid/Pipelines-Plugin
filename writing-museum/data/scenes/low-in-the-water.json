@@ -1,0 +1,31 @@
+{
+  "id": "low-in-the-water",
+  "order": 5,
+  "work": "03_Stories/09_Low_In_The_Water.md",
+  "name": "Low In The Water",
+  "hub_side": "S",
+  "panels": "all",
+  "min_w": 10,
+  "min_d": 8,
+  "style": {
+    "theme": "cast-iron-glass",
+    "frame": "black-lacquer",
+    "frame_small": "thin-metal",
+    "wall": "#2f2224",
+    "light": {
+      "color": "#ffb070",
+      "intensity": 110
+    },
+    "floor": "stone",
+    "trim": "stone"
+  },
+  "sources": {
+    "theme": "mapping.json mode.horror-prose (frontmatter mode: horror-prose)",
+    "frame": "mapping.json mode.horror-prose (frontmatter mode: horror-prose)",
+    "frame_small": "mapping.json mode.horror-prose (frontmatter mode: horror-prose)",
+    "wall": "mapping.json mood.dread (mood_tag in 1 of 1 chunks)",
+    "light": "mapping.json mood.dread (mood_tag in 1 of 1 chunks)",
+    "floor": "mapping.json motif.threshold (motif_tag in 1 of 1 chunks)",
+    "trim": "mapping.json motif.threshold (motif_tag in 1 of 1 chunks)"
+  }
+}

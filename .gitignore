@@ -78,6 +78,9 @@ captures/
 *.zip
 dist/
 build/
+# Not artifacts: the Writing Museum's builder and the vendored three.js build.
+!writing-museum/build/
+!writing-museum/web/vendor/three/build/
 
 # ── Local AI / embedding caches ──────────────────────────────────────────────
 # rag_index/index.json is a TF-IDF index of the whole vault, rebuilt with
@@ -93,11 +96,31 @@ embeddings/
 *.faiss
 *.ann
 
+# ── Agent Reach ──────────────────────────────────────────────────────────────
+# The engine keeps its config, cookies and tokens in ~/.agent-reach/, outside the repo.
+# A stray copy in a checkout is ignored, never committed.
+.agent-reach/
+agent-reach/dist/
+
 # ── Studio outputs ───────────────────────────────────────────────────────────
 # What a studio run made and the author kept. The note in studio/vault/ is the
 # record of how; the files themselves are large and are not versioned here.
 # studio/pipeline/runs/ is already covered by `runs/` above.
 studio/assets/
+# The originals the generations library downloads (studio/library/library.py fetch).
+# A 3D model alone is ~70 MB; catalog.json and thumbs/ are what is versioned.
+studio/library/files/
+
+# ── GitHub Pages staging ─────────────────────────────────────────────────────
+# .github/workflows/pages.yml assembles the site under _site/ on the runner; a
+# local dry run of the same steps lands here too. Remove it before verify.py: the
+# index generator treats every top-level folder as a tool.
+_site/
+
+# ── Writing Museum test output ───────────────────────────────────────────────
+# Screenshots, the contact sheet and report.json of the browser walk-through
+# (node writing-museum/tools/walk_test.mjs). Regenerated on every run.
+writing-museum/tools/out/
 
 # ── Brush library ────────────────────────────────────────────────────────────
 # brushes/library/ holds the original .brush and .brushset files. They ARE
@@ -146,3 +169,13 @@ brushes/device-tests/*/*
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# ── Sound library originals ──────────────────────────────────────────────────
+# sound-library/catalog.json (names, durations, hashes, where each file is kept)
+# is versioned. The WAVs themselves are not: a batch is hundreds of MB. They
+# live on GitHub Releases of this repo and `library.py fetch` brings them down.
+sound-library/files/
+
+# ── Teardowns (udgt) ─────────────────────────────────────────────────────────
+# `udgt.py build` regenerates a teardown's explorer/ (page, theme, copied fonts).
+teardowns/*/explorer/

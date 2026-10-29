@@ -1,0 +1,21 @@
+blender
+=======
+
+This plugin is released under the MIT License (see LICENSE). It bundles no third-party
+code and no Blender files. It documents, in its own words, how to use the works below.
+
+mcp-for-blender (formerly blender-mcp)
+  https://github.com/ahujasid/blender-mcp
+  Copyright (c) Siddharth Ahuja. MIT License.
+  The tool names, parameters and the asset-source priority described in the skills follow
+  this server. The plugin's .mcp.json launches it with `uvx mcp-for-blender`; it is
+  downloaded from PyPI at run time, not shipped here. Its telemetry is on by default and
+  its terms allow use of collected data for research and AI training, so .mcp.json sets
+  DISABLE_TELEMETRY=true.
+
+Poly Haven Assets add-on (Blender Market, v1.2.3)
+  https://docs.polyhaven.com/en/guides/blender-addon
+  GNU GPL v3. Not bundled and not copied: blender-polyhaven-library describes its
+  workflow from its documented behaviour. Poly Haven asset data is CC0 (polyhaven.com).
+
+Poly Pizza models are CC0 or CC-BY; CC-BY models must be credited (see blender-assets).

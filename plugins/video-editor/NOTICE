@@ -1,0 +1,28 @@
+video-editor
+============
+
+This plugin is released under the MIT License (see LICENSE). It contains code adapted from two
+MIT-licensed projects, whose licence texts are in LICENSES/:
+
+- video-use (c) 2026 Browser Use, https://github.com/browser-use/video-use
+  -> src/videoeditor/core/{render,pack,grade,timeline}.py, skills/manim-video/,
+     tests/test_render_*.py
+- clipify (c) 2026 Louise de Sadeleer, https://github.com/louisedesadeleer/clipify
+  -> src/videoeditor/core/{moments,reframe}.py and the opus/karaoke/minimal caption styles
+     in src/videoeditor/core/captions.py
+
+Changes: ElevenLabs transcription replaced by local Whisper emitting the same JSON shape; macOS-only
+flags and font paths removed; captions merged into one engine; the scripts became a package behind one
+questionnaire-driven CLI.
+
+`ve publish` is a from-scratch design that replaces the browser-automation approach of
+profullstack/social-poster (MIT) with official platform APIs; none of its code is used.
+
+Optional dependencies (installed by the user, never bundled; no source from them is in this plugin):
+
+- whisperX (BSD-2-Clause), https://github.com/m-bain/whisperX            extra `speech-plus`
+- Demucs (MIT, maintained fork), https://github.com/adefossez/demucs      extra `stems`
+- Remotion (custom licence, https://www.remotion.pro/license)             npm packages used by
+  src/videoeditor/templates/remotion_overlay, which is this plugin's own code and contains no Remotion
+  source. Free for individuals, for-profit organisations of up to 3 people and non-profits; others need
+  a company licence.

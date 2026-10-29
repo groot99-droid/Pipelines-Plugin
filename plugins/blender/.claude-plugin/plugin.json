@@ -1,0 +1,12 @@
+{
+  "name": "blender",
+  "version": "0.1.0",
+  "description": "Drive a live Blender from Claude through the MCP for Blender server: scene inspection, viewport verification, bpy scripting, and asset sourcing from Poly Haven, Sketchfab, Poly Pizza, Hyper3D Rodin and Hunyuan3D, plus a guide to the Poly Haven Asset Browser addon.",
+  "author": {
+    "name": "groot99-droid"
+  },
+  "homepage": "https://github.com/groot99-droid/Pipelines-Plugin/tree/main/plugins/blender",
+  "repository": "https://github.com/groot99-droid/Pipelines-Plugin",
+  "license": "MIT",
+  "keywords": ["blender", "3d", "mcp", "bpy", "polyhaven", "assets", "modeling"]
+}

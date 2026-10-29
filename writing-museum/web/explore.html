@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Library · The Writing Museum</title>
+<meta name="description" content="Read every work of the creative-writing vault, passage by passage, and look through the rooms the museum has made for them." />
+<link rel="stylesheet" href="css/explore.css" />
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <a class="home" href="index.html">The Writing Museum</a>
+    <span class="sep">·</span>
+    <span class="here">The Library</span>
+  </div>
+  <nav class="views" aria-label="Views">
+    <button type="button" class="view-tab" data-view="works" aria-pressed="true">Works</button>
+    <button type="button" class="view-tab" data-view="scenes" aria-pressed="false">Scenes</button>
+    <a class="walk" href="index.html">Walk the museum →</a>
+  </nav>
+  <p id="summary" class="summary" aria-live="polite">loading the library…</p>
+</header>
+
+<main id="main">
+  <!-- Works: a shelf on the left, the reader on the right -->
+  <section id="view-works" class="view works">
+    <aside class="shelf" aria-label="The works">
+      <div class="filters">
+        <input id="q" type="search" placeholder="search titles, themes, passages" aria-label="Search the works" autocomplete="off" />
+        <div class="selects">
+          <select id="mode" aria-label="Mode"><option value="">any mode</option></select>
+          <select id="folder" aria-label="Folder"><option value="">any folder</option></select>
+          <label class="check"><input id="withRoom" type="checkbox" /> with a room</label>
+        </div>
+        <p id="shelfCount" class="count"></p>
+      </div>
+      <div id="shelf" class="shelf-list"></div>
+    </aside>
+
+    <article id="reader" class="reader" aria-live="polite">
+      <p class="empty">Pick a work from the shelf.</p>
+    </article>
+  </section>
+
+  <!-- Scenes: the hall and one card per room -->
+  <section id="view-scenes" class="view scenes" hidden>
+    <div class="scenes-intro">
+      <h1>The rooms</h1>
+      <p id="scenesLede" class="lede"></p>
+      <svg id="hall" class="hall" viewBox="0 0 1000 220" role="img" aria-label="The hall: a door for every room, south side below, north side above"></svg>
+      <p class="hint">Each room is a made thing of the studio: its scene spec was written by a <code>scene-3d</code> run, and the note that records how lives in the studio vault. Click a door to find its room.</p>
+    </div>
+    <div id="sceneGrid" class="scene-grid"></div>
+    <p id="scenesEmpty" class="empty" hidden>No rooms yet. A <code>scene-3d</code> run makes the first one.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>Every passage is the author's own text, verbatim, cited to its vault path and lines. The blurbs come from each folder's own index.</span>
+  <span><kbd>←</kbd> <kbd>→</kbd> previous / next work · <kbd>/</kbd> search</span>
+</footer>
+
+<script src="js/explore.js"></script>
+</body>
+</html>

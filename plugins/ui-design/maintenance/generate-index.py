@@ -83,14 +83,28 @@ DATA_PURPOSE = {
 
 # What each top-level tool folder is for. Hidden folders (.claude, .obsidian) are skipped.
 TOOL_PURPOSE = {
+    "agent-reach": "The reach base: a CLI that installs, checks and configures read access to 15 "
+                   "internet platforms, and the contract the toolsets built on it follow.",
+    "blender-gemini": "Registers the Blender MCP server with the Gemini CLI, and the skill that lets "
+                      "Claude call Gemini to inspect or change an open Blender scene.",
     "brushes": "A Procreate brush library with tag-based search, and a brush designer for the brush "
                "file format. Under construction.",
     "creative-writing": "The Obsidian vault of 63 works plus the checkpointed pipeline that writes into it.",
     "docs": "Browsable HTML pages describing each tool, and a local helper for setting API keys.",
     "plugins": "Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, "
                "a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, "
-               "with a design-system generator.",
+               "with a design-system generator; blender, skills for driving a live Blender through MCP; "
+               "udgt, a teardown engine that pulls a game's repository apart into a dataset, "
+               "chapters and an explorer page; reach, setup and routing skills for reading the "
+               "internet through Agent Reach; and video-editor, video editing by conversation with a "
+               "questionnaire-driven set of recipes and a dry-run publisher.",
+    "sound-library": "The author's own sound effects, catalogued by name, category, duration and hash; "
+                     "the files live on GitHub Releases and are fetched on request.",
     "studio": "Checkpointed production pipelines and the notes they leave behind.",
+    "teardowns": "Game teardowns made with the udgt plugin, one folder per game: its profile, the "
+                 "extracted dataset, the owner's answers to the briefs, and the chapters.",
+    "writing-museum": "A walkable 3D museum of the creative-writing vault, one room per work, built "
+                      "through the studio's scene-3d pipeline.",
 }
 
 REFERENCE_PURPOSE = {

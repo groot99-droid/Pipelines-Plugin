@@ -1,0 +1,17 @@
+# video-editor -- ignore rules that travel with the plugin.
+# Credentials: ve publish stores tokens in the OS keyring or VE_* environment variables, never in a file.
+.env
+.env.*
+*.key
+*.pem
+*_token
+*.token
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+# Session output: ve writes into <videos_dir>/edit/, and a checkout used as a working folder may hold one
+edit/
+node_modules/

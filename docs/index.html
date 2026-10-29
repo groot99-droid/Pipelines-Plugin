@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ROSW Docs</title>
-<meta name="description" content="What ROSW is, the three tools in it, and how to get started.">
+<meta name="description" content="What ROSW is, the four tools in it, and how to get started.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,6 +15,10 @@
     <li><a href="creative-writing.html">Creative writing</a></li>
     <li><a href="studio.html">Studio</a></li>
     <li><a href="ui-design.html">UI design</a></li>
+    <li><a href="writing-museum.html">Writing museum</a></li>
+    <li><a href="udgt.html">Teardowns</a></li>
+    <li><a href="reach.html">Reach</a></li>
+    <li><a href="video-editor.html">Video editor</a></li>
     <li><a href="keys.html">Keys</a></li>
   </ul></nav>
 </div></header>
@@ -22,7 +26,7 @@
 <main>
   <section class="hero">
     <p class="eyebrow">Start here</p>
-    <h1>One repo, three tools for making things with Claude Code</h1>
+    <h1>One repo, four tools for making things with Claude Code</h1>
     <p class="lede">ROSW keeps each tool in its own folder: its code, its data and its docs
     together. Every tool works in checkpoints. It stops, shows you what it did, and waits for
     you before going on. Nothing lands in a vault without a preview and an explicit yes.</p>
@@ -52,6 +56,40 @@
       icons, motion and stacks, and a generator that turns a query into a contrast-checked
       design system.</p>
       <a class="go" href="ui-design.html">What it does →</a>
+    </article>
+    <article class="card">
+      <span class="tag">writing-museum/</span>
+      <h3>Writing museum</h3>
+      <p>A walkable 3D museum of the creative-writing vault: a hall with a door to every work,
+      and one room per work whose passages hang on the walls as verbatim text panels. Each
+      room is made through the studio's <code>scene-3d</code> pipeline and has a note.</p>
+      <a class="go" href="writing-museum.html">What it does →</a>
+      <a class="go" href="museum/web/explore.html">Read the library →</a>
+      <a class="go" href="museum/web/index.html">Walk the museum →</a>
+    </article>
+    <article class="card">
+      <span class="tag">plugins/udgt/</span>
+      <h3>Teardowns (UDGT)</h3>
+      <p>Pulls a game's repository apart into a cross-linked dataset, chapters written with
+      the owner through short creative briefs, and an explorer page in the game's own look.
+      The first teardown is Who Did It.</p>
+      <a class="go" href="udgt.html">What it does →</a>
+    </article>
+    <article class="card">
+      <span class="tag">agent-reach/ · plugins/reach/</span>
+      <h3>Reach (internet access)</h3>
+      <p>The shared base for reading the internet: it checks which of 15 platforms are reachable
+      on your machine and routes each to its own upstream tool. Research for stories, references
+      for the studio and sources for teardowns are small skills built on it.</p>
+      <a class="go" href="reach.html">What it does →</a>
+    </article>
+    <article class="card">
+      <span class="tag">plugins/video-editor/</span>
+      <h3>Video editor</h3>
+      <p>Edits video by conversation: a short questionnaire picks one recipe (highlight clips, long-form
+      edit, action montage, animated overlays), all local. A dry-run, private-by-default publisher sends the
+      result through official platform APIs only.</p>
+      <a class="go" href="video-editor.html">What it does →</a>
     </article>
   </div>
 
@@ -103,6 +141,8 @@ pip install -r studio/pipeline/requirements.txt</pre></li>
       <tr><td><code>studio/vault/</code></td><td>A second vault: one note per made thing, and the brand gates</td></tr>
       <tr><td><code>studio/pipeline/</code></td><td>The studio's spec, bookkeeper and note writer</td></tr>
       <tr><td><code>plugins/ui-design/</code></td><td>The UI design plugin, complete and self-contained</td></tr>
+      <tr><td><code>agent-reach/</code>, <code>plugins/reach/</code></td><td>The reach base (Agent Reach, imported whole) that installs and checks read access to the internet, and the plugin that carries its skill</td></tr>
+      <tr><td><code>plugins/udgt/</code>, <code>teardowns/</code></td><td>The teardown plugin, and one folder per torn-down game: its profile, dataset, the owner's answers and the chapters</td></tr>
       <tr><td><code>.claude/skills/</code>, <code>.claude/agents/</code></td><td>The creative-writing and studio skills and agents. They load when this repo is your working folder</td></tr>
       <tr><td><code>docs/</code></td><td>These pages, and the key setup helper</td></tr>
       <tr><td><code>CLAUDE.md</code>, <code>INDEX.md</code></td><td>The repo's conventions, and a generated index of every tool, skill and agent</td></tr>

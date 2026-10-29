@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teardown Explorer</title>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="explorer.css">
+</head>
+<body>
+  <a class="x-skip" href="#x-main">Skip to the content</a>
+  <header class="x-top">
+    <div class="x-brand">
+      <p class="x-eyebrow">UDGT · UI, Dataset &amp; Gameplay Teardown</p>
+      <h1 id="x-title">Teardown</h1>
+      <p class="x-tagline" id="x-tagline"></p>
+    </div>
+    <nav class="x-views" id="x-views" aria-label="Views"></nav>
+  </header>
+  <main id="x-main" class="x-main">
+    <section class="x-shelf x-glass" id="x-shelf" aria-label="Browse">
+      <p class="x-about" id="x-about"></p>
+      <div class="x-filters" id="x-filters">
+        <label class="x-field"><span>Search</span><input id="x-q" type="search" autocomplete="off" placeholder="words, ids (A115, GDD 3.11)"></label>
+        <label class="x-field"><span>Kind</span><select id="x-kind"></select></label>
+        <label class="x-field"><span>Area</span><select id="x-area"></select></label>
+      </div>
+      <p class="x-count" id="x-count" aria-live="polite"></p>
+      <ol class="x-list" id="x-list"></ol>
+    </section>
+    <article class="x-reader x-glass" id="x-reader" aria-live="polite" tabindex="-1"></article>
+  </main>
+  <footer class="x-foot">
+    <p id="x-foot">Read-only. Generated from the game's repository by udgt.py; chapters are Claude's analysis unless marked as the owner's word.</p>
+  </footer>
+  <script src="explorer.js"></script>
+</body>
+</html>

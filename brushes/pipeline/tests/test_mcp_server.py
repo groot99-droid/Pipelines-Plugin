@@ -1031,9 +1031,11 @@ class Registration(unittest.TestCase):
         cls.raw = cls.path.read_bytes()
         cls.declared = json.loads(cls.raw.decode("utf-8"))
 
-    def test_it_declares_one_server_named_brushes(self):
+    def test_it_declares_a_server_named_brushes(self):
+        """The root .mcp.json is shared with other tools (blender-gemini declares
+        `gemini` there), so this checks only that `brushes` is one of its servers."""
         self.assertEqual(list(self.declared), ["mcpServers"])
-        self.assertEqual(list(self.declared["mcpServers"]), ["brushes"])
+        self.assertIn("brushes", self.declared["mcpServers"])
 
     def test_the_command_is_python_isolated_and_the_argument_is_the_script(self):
         """`-I` comes first: the full server opens library originals, and a brush

@@ -29,11 +29,11 @@ Provenance, names the author, the date and the run.
 | `visual_identity` | **authored**, with a declared gap | What does work from this studio look like? Motifs, framing, texture, what is off-limits. | ui-direction, ui-build, brush, still-image, video-shot |
 | `typography_system` | **authored** | Typefaces, scale, tracking, hierarchy, licensing. | ui-direction, ui-build |
 | `color_science` | **authored**, with a declared gap | Working space, LUTs, palette with hex values, grading rules. | ui-direction, still-image, edit-2d |
-| `motion_language` | not authored | Camera grammar, easing, shot lengths, transitions to avoid. | video-shot, scene-3d |
+| `motion_language` | not authored | Camera grammar, easing, shot lengths, transitions to avoid. | video-shot, scene-3d, scene-blender |
 | `sound_identity` | not authored | Instrumentation, tempo range, mix targets, sonic signature. | music-cue |
 | `brand_voice` | not authored | Diction, register, person, banned phrasings. | ui-build, music-cue |
 | `narrative_continuity` | not authored | Canon rules, character and environment persistence, what may not be retconned. | video-shot |
-| `render_philosophy` | not authored | Quality bar, when to re-render and when to accept, output specs. | edit-2d, scene-3d |
+| `render_philosophy` | not authored | Quality bar, when to re-render and when to accept, output specs. | edit-2d, scene-3d, scene-blender |
 | `pipeline_ethics` | not authored | Disclosure, provenance, sourcing rules, what is never generated. | none yet |
 | `memory_discipline` | not authored | Quotable against summarizable, retention, what leaves the machine. | none yet |
 

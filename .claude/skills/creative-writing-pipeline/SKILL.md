@@ -46,6 +46,13 @@ references it, it doesn't replace it.
    would not ask for it (an essay or a poem). Keep the chosen registers for
    every stage below.
 
+   **And the work type, if it is not the mode's own.** A codex written in
+   epic-fantasy is `worldbuilding`, a character sheet is
+   `character-profile`, a hymn is `song`, a letter is `letter`
+   (spec.yaml `work_types:`). The type decides the folder the work files
+   under and its `type` field; without one, the mode's own apply. Ask —
+   never infer it — and pass it as `run_pipeline.py new --type <type>`.
+
 2. **Walk the stages in spec.yaml's `stages:` list, in order, one at a
    time:** intake → reference_pull → outline → draft → self_revision →
    vault_integration. For each stage:

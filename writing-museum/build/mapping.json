@@ -1,0 +1,51 @@
+{
+ "_doc": [
+  "How a work's own labels suggest a room's look. A reference table, never binding: a studio run reads it",
+  "at the recipe stage (`build_museum.py propose`), records the values it takes from it with their source,",
+  "and the author approves the recipe. Values here are the Chronicle Museum's own door themes, frame",
+  "styles, floor and trim slots and light colours (web/js/doors.js THEMES, web/js/matlib.js SLOTS).",
+  "`mode` is the work's frontmatter `mode`; `mood` and `motif` are the closed vocabulary of",
+  "creative-writing/vault/_ChunkTags/vocabulary.yaml, tallied over the work's chunks."
+ ],
+ "rule": {
+  "theme, frame, frame_small": "from `mode` (unclassified when the mode has no row)",
+  "wall, light": "from the dominant `mood_tag` across the work's chunks; ties go to the tag listed first here",
+  "floor, trim": "from the dominant `motif_tag` that has a row here; parquet and painted_trim when none has",
+  "hub_side": "odd scene numbers on the south wall, even on the north",
+  "min_w, min_d": "10 by 8 metres; the packer grows a room whose panels need more wall"
+ },
+ "mode": {
+  "horror-prose":        {"theme": "cast-iron-glass",     "frame": "black-lacquer", "frame_small": "thin-metal"},
+  "epic-fantasy":        {"theme": "pointed-arch",        "frame": "gilt-ornate",   "frame_small": "gilt-simple"},
+  "essay-self-help":     {"theme": "doric-pediment",      "frame": "dark-wood",     "frame_small": "dark-wood"},
+  "confessional-poetry": {"theme": "round-arch-keystone", "frame": "gilt-simple",   "frame_small": "dark-wood"},
+  "unclassified":        {"theme": "post-lintel-timber",  "frame": "dark-wood",     "frame_small": "thin-metal"}
+ },
+ "mood": {
+  "dread":       {"wall": "#2f2224", "light": {"color": "#ffb070", "intensity": 110}},
+  "despair":     {"wall": "#221d1f", "light": {"color": "#e9a56a", "intensity": 90}},
+  "unease":      {"wall": "#4a4340", "light": {"color": "#ffc98a", "intensity": 140}},
+  "complicity":  {"wall": "#3d2f2a", "light": {"color": "#ffbd7a", "intensity": 120}},
+  "grief":       {"wall": "#3b3f48", "light": {"color": "#ffe3c0", "intensity": 130}},
+  "melancholy":  {"wall": "#4d5a5e", "light": {"color": "#fff0dc", "intensity": 150}},
+  "resignation": {"wall": "#5a534a", "light": {"color": "#ffd9a8", "intensity": 140}},
+  "longing":     {"wall": "#5b4a5e", "light": {"color": "#ffd2b0", "intensity": 160}},
+  "tenderness":  {"wall": "#8a6a5a", "light": {"color": "#ffe0c0", "intensity": 180}},
+  "wonder":      {"wall": "#34486a", "light": {"color": "#fff1dc", "intensity": 210}},
+  "hope":        {"wall": "#7a8a6a", "light": {"color": "#fff6e8", "intensity": 220}},
+  "clarity":     {"wall": "#e6dfd2", "light": {"color": "#fff8ec", "intensity": 230}},
+  "defiance":    {"wall": "#7a2f2a", "light": {"color": "#ffd0a0", "intensity": 190}}
+ },
+ "motif": {
+  "architecture":          {"floor": "marble_white", "trim": "marble_white"},
+  "threshold":             {"floor": "stone",        "trim": "stone"},
+  "tide-and-water":        {"floor": "marble_dark",  "trim": "painted_trim"},
+  "mirror-and-reflection": {"floor": "marble_dark",  "trim": "marble_dark"},
+  "fire":                  {"floor": "dark_wood",    "trim": "iron"},
+  "descent-and-depth":     {"floor": "stone",        "trim": "iron"},
+  "cursed-object":         {"floor": "dark_wood",    "trim": "dark_wood"},
+  "twin-souls-bond":       {"floor": "parquet",      "trim": "brass"},
+  "clock-and-hour":        {"floor": "parquet",      "trim": "brass"},
+  "hands-and-grip":        {"floor": "dark_wood",    "trim": "painted_trim"}
+ }
+}

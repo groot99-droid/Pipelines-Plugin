@@ -13,6 +13,7 @@ session, and reports here.
     python studio/pipeline/studio_run.py confirm <run-id> <stage|flush|park|gate> --words "..."
     python studio/pipeline/studio_run.py advance <run-id>
     python studio/pipeline/studio_run.py back    <run-id> --why "..."
+    python studio/pipeline/studio_run.py keep    <run-id> <file in the run folder> --role final|variant|reference|export|concept-frame
     python studio/pipeline/studio_run.py park    <run-id> --constraint NAME --needs "..."
     python studio/pipeline/studio_run.py unpark  <run-id>
     python studio/pipeline/studio_run.py status  [<run-id>] [--json]
@@ -42,7 +43,7 @@ from datetime import date, timedelta
 
 from studio_common import (
     EXIT_OK, EXIT_REFUSED, EXIT_USAGE, SPEC_PATH, Env, Refused, Usage,
-    all_states, attestation_rows, attesting_stage, cited_notes, current_stage, decisions,
+    all_states, artifact_roles, attestation_rows, attesting_stage, cited_notes, current_stage, decisions,
     find_note, gate_path, gate_sections, latest_confirmation, level_of, load_state, log_event,
     normalize, note_index, now, open_console, parse_stamp, read_text, resolve_note, save_state,
     slugify, squeeze, stage_checks, stage_outputs, stamp, unstruck, write_text,
@@ -406,6 +407,31 @@ def confirmed_before_output(env, state, stage, run_dir):
                           "The work ran ahead of the go-ahead.")
 
 
+@check("token_held")
+def token_held(env, state, stage, run_dir):
+    """A local-compute pipeline runs nothing until this run holds a live PASS
+    token for its workload class. Any other class of pipeline passes."""
+    import compute_gate  # beside this file
+
+    cfg = env.pipeline(state["pipeline"])
+    if cfg.get("class") != "local-compute":
+        return
+    workload = cfg.get("workload")
+    if not workload:
+        raise Usage(f"`{state['pipeline']}` is local-compute and names no `workload:` class")
+    machine = compute_gate.load_machine()
+    token = compute_gate.load_token(env, machine)
+    if not compute_gate.token_live(token):
+        raise Refused(f"no live compute token. A local-compute run holds one first: "
+                      f"compute_gate.py mint {workload}, then compute_gate.py consume {state['run_id']}")
+    if token["workload"] != workload:
+        raise Refused(f"the live token is for `{token['workload']}`, and this run needs `{workload}`")
+    if token.get("consumed_by") != state["run_id"]:
+        raise Refused("the token is not consumed by this run"
+                      + (f" (held by `{token['consumed_by']}`)" if token.get("consumed_by") else "")
+                      + f". Consume it: compute_gate.py consume {state['run_id']}")
+
+
 @check("note_written")
 def note_written(env, state, stage, run_dir):
     """The last write of this run's note is a record write, made after the
@@ -550,6 +576,7 @@ def cmd_new(env, args):
         "gate": None,
         "gate_plan": None,
         "gate_written": None,
+        "kept": [],
         "events": [],
     }
     others = set_note(env, state, args.note) if args.note else []
@@ -819,6 +846,58 @@ def cmd_back(env, args):
     return EXIT_OK
 
 
+def cmd_keep(env, args):
+    """Copy a file the run made into the assets folder, and remember it: the
+    record stage must list every kept file under `artifacts`. Nothing is
+    written outside the run folder before the execute go-ahead, so a keep
+    needs one too. The note decides the place: <project>/<kind>/<slug>/."""
+    import hashlib
+    import shutil
+
+    state = load_state(env, args.run_id)
+    if state["status"] != "active":
+        raise Refused(f"the run is {state['status']}")
+    if not state.get("note_path"):
+        raise Refused("this run has no note, so there is nowhere to keep a file. Set it with: "
+                      f"studio_run.py note {state['run_id']} <project>/<kind>/<slug>.md")
+    if not latest_confirmation(state, "execute"):
+        raise Refused("nothing is kept before the execute go-ahead. A file made before it was made "
+                      "outside the run.")
+    roles = artifact_roles(env)
+    if args.role not in roles:
+        raise Usage(f"--role is one of: {', '.join(roles)}")
+    run_dir = env.run_dir(state["run_id"])
+    source = (run_dir / args.file).resolve()
+    try:
+        inside = source.relative_to(run_dir.resolve())
+    except ValueError:
+        raise Refused(f"{args.file} is not in the run folder. Only what the run made is kept.")
+    if not source.is_file():
+        raise Refused(f"{inside.as_posix()} is not in the run folder")
+    if inside.name == "state.json" or inside.suffix == ".md":
+        raise Refused("the run's bookkeeping and stage outputs are not artifacts")
+    project, kind, slug = state["note_path"].rsplit(".", 1)[0].split("/")
+    relative = f"{project}/{kind}/{slug}/{inside.name}"
+    target = env.assets / project / kind / slug / inside.name
+    sha = hashlib.sha256(source.read_bytes()).hexdigest()
+    if target.is_file() and hashlib.sha256(target.read_bytes()).hexdigest() != sha:
+        raise Refused(f"{relative} exists in the assets folder and holds a different file. "
+                      "Rename this one; an artifact is never written over.")
+    target.parent.mkdir(parents=True, exist_ok=True)
+    if not target.is_file():
+        shutil.copy2(source, target)
+    kept = [k for k in state.get("kept", []) if k["path"] != relative]
+    kept.append({"path": relative, "role": args.role, "sha": sha, "at": stamp(now())})
+    state["kept"] = kept
+    log_event(state, "keep", f"{relative} as {args.role}")
+    save_state(env, state)
+    print(f"kept      {target}")
+    print("artifacts entry for the note:")
+    print(f"  - path: {relative}")
+    print(f"    role: {args.role}")
+    return EXIT_OK
+
+
 def cmd_park(env, args):
     state = load_state(env, args.run_id)
     if state["status"] != "active":
@@ -927,6 +1006,7 @@ def build_parser():
     parser.add_argument("--runs-dir", help="where runs are kept (default: from the spec)")
     parser.add_argument("--vault-dir", help="the vault (default: from the spec)")
     parser.add_argument("--context-dir", help="the brand gates (default: from the spec)")
+    parser.add_argument("--assets-dir", help="where kept artifacts go (default: from the spec)")
     commands = parser.add_subparsers(dest="command", required=True)
 
     new = commands.add_parser("new", help="start a run")
@@ -971,6 +1051,12 @@ def build_parser():
     back.add_argument("--why", required=True, help="what is being redone, and why")
     back.set_defaults(run=cmd_back)
 
+    keep = commands.add_parser("keep", help="copy a file the run made into the assets folder")
+    keep.add_argument("run_id")
+    keep.add_argument("file", help="a file in the run folder")
+    keep.add_argument("--role", required=True)
+    keep.set_defaults(run=cmd_keep)
+
     park = commands.add_parser("park", help="stop a run on a constraint that cannot be resolved")
     park.add_argument("run_id")
     park.add_argument("--constraint", required=True)
@@ -992,7 +1078,7 @@ def main(argv=None):
     open_console()
     args = build_parser().parse_args(argv)
     try:
-        env = Env(args.spec, args.runs_dir, args.vault_dir, args.context_dir)
+        env = Env(args.spec, args.runs_dir, args.vault_dir, args.context_dir, args.assets_dir)
         return args.run(env, args)
     except Refused as refusal:
         print(f"REFUSED   {refusal}", file=sys.stderr)

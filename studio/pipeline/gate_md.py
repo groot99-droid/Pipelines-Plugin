@@ -290,6 +290,7 @@ def build_parser():
     parser.add_argument("--runs-dir", help="where runs are kept (default: from the spec)")
     parser.add_argument("--vault-dir", help="the vault (default: from the spec)")
     parser.add_argument("--context-dir", help="the brand gates (default: from the spec)")
+    parser.add_argument("--assets-dir", help="where kept artifacts go (default: from the spec)")
     commands = parser.add_subparsers(dest="command", required=True)
 
     lint = commands.add_parser("lint", help="check gate files for their shape")
@@ -316,7 +317,7 @@ def main(argv=None):
         print("error     give a gate, or --all", file=sys.stderr)
         return EXIT_USAGE
     try:
-        env = Env(args.spec, args.runs_dir, args.vault_dir, args.context_dir)
+        env = Env(args.spec, args.runs_dir, args.vault_dir, args.context_dir, args.assets_dir)
         return args.run(env, args)
     except Refused as refusal:
         print(f"REFUSED   {refusal}", file=sys.stderr)

@@ -9,30 +9,54 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 
 | Folder | Purpose | Index |
 |---|---|---|
+| `agent-reach/` | The reach base: a CLI that installs, checks and configures read access to 15 internet platforms, and the contract the toolsets built on it follow. | - |
+| `blender-gemini/` | Registers the Blender MCP server with the Gemini CLI, and the skill that lets Claude call Gemini to inspect or change an open Blender scene. | - |
 | `brushes/` | A Procreate brush library with tag-based search, and a brush designer for the brush file format. Under construction. | - |
 | `creative-writing/` | The Obsidian vault of 63 works plus the checkpointed pipeline that writes into it. | - |
 | `docs/` | Browsable HTML pages describing each tool, and a local helper for setting API keys. | - |
-| `plugins/` | Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, with a design-system generator. | [plugins/ui-design/INDEX.md](plugins/ui-design/INDEX.md) |
+| `plugins/` | Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, with a design-system generator; blender, skills for driving a live Blender through MCP; udgt, a teardown engine that pulls a game's repository apart into a dataset, chapters and an explorer page; reach, setup and routing skills for reading the internet through Agent Reach; and video-editor, video editing by conversation with a questionnaire-driven set of recipes and a dry-run publisher. | [plugins/ui-design/INDEX.md](plugins/ui-design/INDEX.md) |
+| `sound-library/` | The author's own sound effects, catalogued by name, category, duration and hash; the files live on GitHub Releases and are fetched on request. | - |
 | `studio/` | Checkpointed production pipelines and the notes they leave behind. | - |
+| `teardowns/` | Game teardowns made with the udgt plugin, one folder per game: its profile, the extracted dataset, the owner's answers to the briefs, and the chapters. | - |
+| `writing-museum/` | A walkable 3D museum of the creative-writing vault, one room per work, built through the studio's scene-3d pipeline. | - |
 
-## Skills (6)
+## Skills (23)
 
 | Skill | What it does |
 |---|---|
+| [blender-gemini](.claude/skills/blender-gemini/SKILL.md) | Drive the author's open Blender through the Gemini CLI by calling the gemini MCP server (ask-gemini), which has the Blender MCP server registered. |
 | [chunk-tag-backfill](.claude/skills/chunk-tag-backfill/SKILL.md) | Runs (or re-runs) the creative-writing-chunk-tagger subagent over the vault's work files, writing/updating each one's creative-writing/vault/_ChunkTags/ sidecar. |
 | [creative-writing-pipeline](.claude/skills/creative-writing-pipeline/SKILL.md) | Walk a new idea for this vault through the checkpointed multi-stage pipeline (intake, reference pull, outline, draft, self-revision, vault integration) instead of writing a finished piece in one shot. |
+| [higgsfield-library-sync](.claude/skills/higgsfield-library-sync/SKILL.md) | Import the author's Higgsfield generations (images, videos, audio, 3D models) into the studio's generations library at studio/library/, or bring it up to date. |
+| [reach-references](.claude/skills/reach-references/SKILL.md) | Gather outside reference material for a studio piece - pages, threads, videos and articles that show what a category looks like or how people talk about it - as a cited reference note the author can keep with a studio run. |
+| [reach-research](.claude/skills/reach-research/SKILL.md) | Gather real-world facts from the internet for a creative-writing idea, as cited notes in a scratch file, before the outline stage - a place, a period, a trade, a science, a folk tradition, how people actually talk about something. |
+| [render-pipeline](.claude/skills/render-pipeline/SKILL.md) | Move a Who Did It master (a character .blend kept under studio/assets/who-did-it/) through the game repo's Blender rig and sprite packer into the committed atlases under apps/client/public/assets/. Use when the author wants to render, re-render, pack or ship a who-did-it chara... |
+| [sound-library](.claude/skills/sound-library/SKILL.md) | Find and retrieve the author's own sound effects from sound-library/ for a project, or add a new batch of sounds to its catalog. |
 | [studio-pipeline](.claude/skills/studio-pipeline/SKILL.md) | Walk one made thing through the studio's checkpointed pipeline (intake, context, recipe, execute, review, record), resolving and attesting its brand context before anything is run and leaving a Content MD in the studio vault. |
+| [blender-assets](plugins/blender/skills/blender-assets/SKILL.md) | Choose and bring in 3D assets for a Blender scene through the MCP for Blender integrations -- Poly Haven models, textures and HDRIs, Sketchfab, Poly Pizza low-poly models, and AI generation with Hyper3D Rodin or Hunyuan3D -- then scale, place and credit them. |
+| [blender-mcp](plugins/blender/skills/blender-mcp/SKILL.md) | Drive a live Blender session from Claude through the MCP for Blender server -- connect, inspect the scene, build or change objects, materials and lighting with bpy, and verify every step with viewport screenshots. |
+| [blender-polyhaven-library](plugins/blender/skills/blender-polyhaven-library/SKILL.md) | Guide for using the Poly Haven Assets add-on in Blender, which mirrors polyhaven.com HDRIs, materials and models into the Asset Browser as a local asset library -- first-time setup, catalogs, downloading, resolution and LOD switching, displacement and texture scale, and script... |
+| [agent-reach](plugins/reach/skills/agent-reach/SKILL.md) | MUST USE when user wants to research/search/look up/find anything on the internet — e.g. |
+| [reach-connect](plugins/reach/skills/reach-connect/SKILL.md) | Connect Agent Reach to another skill so it can read the internet - add a checked "Reach" block and a metadata.reach channel list to an existing skill, or start a new toolset skill from a template. |
+| [reach-setup](plugins/reach/skills/reach-setup/SKILL.md) | Check whether Agent Reach is installed and healthy, show which internet platforms are reachable, and explain exactly what each missing one needs. |
+| [udgt-consult](plugins/udgt/skills/udgt-consult/SKILL.md) | Look things up in an existing UDGT teardown of a game while working on that game - why a decision was made, what a section of the design doc says, which data records and code a mechanic touches, what the owner said in a brief, what is planned next. |
+| [udgt-field-research](plugins/udgt/skills/udgt-field-research/SKILL.md) | Collect outside sources about a game while tearing it down - how players discuss a mechanic, what a genre reference looks like in practice, videos and posts about a comparable game - as cited research notes inside the teardown folder, for the Compare and Critique parts of a ch... |
+| [udgt-teardown](plugins/udgt/skills/udgt-teardown/SKILL.md) | Tear a game's repository apart stage by stage (UI and frontend, datasets, gameplay and mechanics, backend, world bible, art pipeline, history, future plans) into a dataset, written chapters and an explorer page that wears the game's own look, asking the owner a short creative... |
 | [ui-design-catalog](plugins/ui-design/skills/ui-design-catalog/SKILL.md) | Searches a local BM25 catalog of UI styles, product palettes, font pairings, UX guidelines, icons, motion presets, chart types, and 22 stacks, and generates a contrast-checked design system from it -- instead of inventing visual decisions from memory. |
 | [ui-design-catalog-refresh](plugins/ui-design/skills/ui-design-catalog-refresh/SKILL.md) | Refreshes the ui-design catalog's upstream-derived data -- the Google Fonts and Phosphor icon catalogs -- by fetching the upstream sources, generating review-only candidates under the plugin's maintenance/candidates/, diffing them against the live rows, and stopping for human... |
 | [ui-design-multipart](plugins/ui-design/skills/ui-design-multipart/SKILL.md) | Orchestrates the two multipart ui-design workflows -- a search fan-out for a wide product brief, and a four-area review of a built page -- by splitting the work with a script, giving each part to one subagent, and merging and cross-checking the answers with merge_parts.py. |
+| [manim-video](plugins/video-editor/skills/manim-video/SKILL.md) | Production pipeline for mathematical and technical animations using Manim Community Edition. |
+| [video-editor](plugins/video-editor/skills/video-editor/SKILL.md) | Edit video by conversation, with local tools. |
 
-## Agents (6)
+## Agents (8)
 
 | Agent | What it does |
 |---|---|
 | [creative-writing-chunk-tagger](.claude/agents/creative-writing-chunk-tagger.md) | Tags ONE vault work's chunks with plot_tags/context_tags/mood_tags/motif_tags from the closed vocabulary in creative-writing/vault/_ChunkTags/vocabulary.yaml, so creative-writing/vault/tools/vault_search.py can surface per-chunk (not just per-file) matches. |
 | [creative-writing-drafter](.claude/agents/creative-writing-drafter.md) | Generates the heavy-lift artifact for one stage of the creative-writing pipeline (outline, draft, or self-revision) from context the caller provides. |
 | [creative-writing-librarian-native](.claude/agents/creative-writing-librarian-native.md) | Native (Claude-only, no-Ollama) equivalent of creative-writing/pipeline/librarian.py's condense_file/digest_files for the creative-writing-pipeline skill. |
+| [blender-scene-reviewer](plugins/blender/agents/blender-scene-reviewer.md) | Reviews the current Blender scene through the MCP for Blender connection and reports problems -- clipping, floating objects, wrong scale, missing materials, flat or blown-out lighting -- without changing anything. |
+| [udgt-chapter-analyst](plugins/udgt/agents/udgt-chapter-analyst.md) | Drafts ONE chapter of a UDGT game teardown from the node ids, game files and owner's answers the caller gives it, in the Describe / Compare / Critique shape, citing teardown nodes as [[id]] and game files as path:line. |
 | [ui-design-catalog-reviewer](plugins/ui-design/agents/ui-design-catalog-reviewer.md) | Reviews one machine-generated catalog refresh diff -- Google Fonts or Phosphor icon candidates staged under the plugin's maintenance/candidates/ -- against the live rows in the plugin's catalog/data, checking license fields, required columns, and count deltas. |
 | [ui-design-page-reviewer](plugins/ui-design/agents/ui-design-page-reviewer.md) | Reviews ONE area of ONE already-built page against the ui-design rule set in the plugin's references/quick-reference.md -- a11y+touch, layout, type-color-style, or motion -- and returns findings that each cite a real rule-id with the page line as evidence. |
 | [ui-design-search-part](plugins/ui-design/agents/ui-design-search-part.md) | Runs exactly ONE part of a ui-design search manifest -- one query against one catalog domain or one stack, as emitted by the plugin's route.py -- and returns a fixed PART / QUERY / RETRIED / VERDICT / ROWS block. |

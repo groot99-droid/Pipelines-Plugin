@@ -1,0 +1,5 @@
+{
+ "_schema": "models v1",
+ "_doc": "No third-party models are placed in the Writing Museum. web/js/models.js reads this file and finds nothing to load; the layout builder places no props and no chandelier models (fixtures use the viewer's procedural bulbs).",
+ "models": {}
+}
