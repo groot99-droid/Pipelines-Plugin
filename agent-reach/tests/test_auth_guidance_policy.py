@@ -76,8 +76,6 @@ def test_twitter_operational_docs_explain_the_environment_boundary():
     operational_docs = (
         ROOT / "README.md",
         ROOT / "docs" / "README_en.md",
-        ROOT / "docs" / "README_ja.md",
-        ROOT / "docs" / "README_ko.md",
         ROOT / "docs" / "cookie-export.md",
         ROOT / "docs" / "install.md",
         ROOT / "docs" / "troubleshooting.md",
@@ -127,8 +125,6 @@ def test_localized_readmes_keep_current_bilibili_and_xhs_routes():
     readmes = (
         ROOT / "README.md",
         ROOT / "docs" / "README_en.md",
-        ROOT / "docs" / "README_ja.md",
-        ROOT / "docs" / "README_ko.md",
     )
 
     for path in readmes:
@@ -140,14 +136,6 @@ def test_localized_readmes_keep_current_bilibili_and_xhs_routes():
             "xiaohongshu.py  → OpenCLI ▸ xiaohongshu-mcp ▸ xhs-cli"
             in text
         ), path.relative_to(ROOT)
-
-
-def test_localized_readmes_do_not_advertise_retired_channels():
-    """Japanese and Korean docs must match the channels shipped by the CLI."""
-    for path in (ROOT / "docs" / "README_ja.md", ROOT / "docs" / "README_ko.md"):
-        text = path.read_text(encoding="utf-8").lower()
-        assert "douyin" not in text, path.relative_to(ROOT)
-        assert "weibo" not in text, path.relative_to(ROOT)
 
 
 def test_public_guidance_never_installs_the_unrelated_pypi_package():
