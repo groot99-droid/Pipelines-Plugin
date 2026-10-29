@@ -19,7 +19,7 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | `teardowns/` | Game teardowns made with the udgt plugin, one folder per game: its profile, the extracted dataset, the owner's answers to the briefs, and the chapters. | - |
 | `writing-museum/` | A walkable 3D museum of the creative-writing vault, one room per work, built through the studio's scene-3d pipeline. | - |
 
-## Skills (20)
+## Skills (21)
 
 | Skill | What it does |
 |---|---|
@@ -36,6 +36,7 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | [blender-mcp](plugins/blender/skills/blender-mcp/SKILL.md) | Drive a live Blender session from Claude through the MCP for Blender server -- connect, inspect the scene, build or change objects, materials and lighting with bpy, and verify every step with viewport screenshots. |
 | [blender-polyhaven-library](plugins/blender/skills/blender-polyhaven-library/SKILL.md) | Guide for using the Poly Haven Assets add-on in Blender, which mirrors polyhaven.com HDRIs, materials and models into the Asset Browser as a local asset library -- first-time setup, catalogs, downloading, resolution and LOD switching, displacement and texture scale, and script... |
 | [agent-reach](plugins/reach/skills/agent-reach/SKILL.md) | MUST USE when user wants to research/search/look up/find anything on the internet — e.g. |
+| [reach-connect](plugins/reach/skills/reach-connect/SKILL.md) | Connect Agent Reach to another skill so it can read the internet - add a checked "Reach" block and a metadata.reach channel list to an existing skill, or start a new toolset skill from a template. |
 | [reach-setup](plugins/reach/skills/reach-setup/SKILL.md) | Check whether Agent Reach is installed and healthy, show which internet platforms are reachable, and explain exactly what each missing one needs. |
 | [udgt-consult](plugins/udgt/skills/udgt-consult/SKILL.md) | Look things up in an existing UDGT teardown of a game while working on that game - why a decision was made, what a section of the design doc says, which data records and code a mechanic touches, what the owner said in a brief, what is planned next. |
 | [udgt-field-research](plugins/udgt/skills/udgt-field-research/SKILL.md) | Collect outside sources about a game while tearing it down - how players discuss a mechanic, what a genre reference looks like in practice, videos and posts about a comparable game - as cited research notes inside the teardown folder, for the Compare and Critique parts of a ch... |

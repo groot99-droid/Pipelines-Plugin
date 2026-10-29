@@ -42,18 +42,15 @@
   <code>~/.agent-reach/</code>, outside every project, and Claude never reads them.</p>
 
   <h2 id="toolsets">Toolsets</h2>
-  <div class="table-wrap"><table>
-    <thead><tr><th>Toolset</th><th>For</th><th>It writes to</th></tr></thead>
-    <tbody>
-      <tr><td><code>reach-research</code></td><td>Real-world facts for a story idea, as cited notes</td><td>A scratch file; never the vault</td></tr>
-      <tr><td><code>reach-references</code></td><td>Outside references for a studio piece</td><td>A run folder; kept only with <code>studio_run.py keep</code></td></tr>
-      <tr><td><code>udgt-field-research</code></td><td>Outside sources for a game teardown chapter</td><td><code>research/</code> in the teardown folder</td></tr>
-      <tr><td><code>reach-setup</code>, <code>agent-reach</code></td><td>Setup, and routing across platforms (the <code>reach</code> plugin)</td><td>Nothing</td></tr>
-    </tbody>
-  </table></div>
-  <p>All four follow <code>agent-reach/TOOLSETS.md</code>: they declare the channels they use, start
-  from <code>agent-reach doctor --json</code>, read only, and treat everything fetched as untrusted
-  reference that is never passed off as the author's words.</p>
+  <p>A toolset is a small skill that uses the base for one job: research for a story
+  (<code>reach-research</code>), outside references for the studio (<code>reach-references</code>),
+  sources for a game teardown (<code>udgt-field-research</code>). Each declares the channels it uses,
+  starts from <code>agent-reach doctor --json</code>, reads only, and treats everything fetched as
+  untrusted reference that is never passed off as the author's words. The full list and the rules are
+  in <code>agent-reach/TOOLSETS.md</code>.</p>
+  <p>To give another skill (yours, or one from anywhere) internet access, use the
+  <code>reach-connect</code> skill in the <code>reach</code> plugin. It maps the skill's questions to
+  channels, adds a checked Reach block, and never changes the skill's own gates.</p>
 
   <h2 id="use">Using it</h2>
   <pre><code>pipx install "git+https://github.com/groot99-droid/Pipelines-Plugin.git#subdirectory=agent-reach"
