@@ -56,3 +56,12 @@ jobs:
         run: python writing-museum/build/build_museum.py build --lint
       - name: udgt tests
         run: python -m unittest discover -s plugins/udgt/tests
+      # Upstream tests Linux and Windows only; macOS is added once it is known green.
+      - name: agent-reach tests
+        if: runner.os != 'macOS'
+        working-directory: agent-reach
+        shell: bash
+        run: |
+          export PATH="/c/Program Files/Git/bin:/c/Program Files/Git/usr/bin:$PATH"
+          python -m pip install -c constraints.txt -e ".[dev]"
+          python -m pytest tests -q
