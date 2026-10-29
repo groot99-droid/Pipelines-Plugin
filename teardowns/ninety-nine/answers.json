@@ -17,7 +17,10 @@
   {"stage":"3","question":"Friction now comes from how he moves (hesitating, doubling back between thresholds) and feeds only fracture. Should the player ever be told that it counts?","answer":"Once, obliquely","date":"2026-10-29","asked_as":"chat"},
   {"stage":"4","question":"Ninety-Nine's tests run in a browser page opened by hand (12 case files), with an optional headless runner and an autopilot that plays whole games. For Right Door you chose CI on every push. Same here?","answer":"Yes, on every push","date":"2026-10-29","asked_as":"chat"},
   {"stage":"4","question":"The 48 Hz drone (C7) is one oscillator from the lobby doors to the final card, never restarted, detuning ~4 cents per scene. Is it the game's most important system?","answer":"It could go","date":"2026-10-29","asked_as":"chat"},
-  {"stage":"4","question":"You play on desktop. What is the slowest machine it must run well on?","answer":"Phones too","date":"2026-10-29","asked_as":"chat"}
+  {"stage":"4","question":"You play on desktop. What is the slowest machine it must run well on?","answer":"Phones too","date":"2026-10-29","asked_as":"chat"},
+  {"stage":"5","question":"The building's mood in three words?","answer":"Real, wrong, downward","date":"2026-10-29","asked_as":"chat"},
+  {"stage":"5","question":"Which canon rule (C1 to C8) would you defend if you had to break all the others? (C7, the drone, is already on the table.)","answer":"C1, C4. i like the low poly look but its more ps1, I'm looking to up it to a ps2 scale or even a higher quality modern \"low to mid poly\"","date":"2026-10-29","asked_as":"chat"},
+  {"stage":"5","question":"Doc 1 §9.3 asks whether Harlowe deserves more: today SAW_HARLOWE adds a desktop, a manifest row and one extra lowercase line on the ending card, \"a haunting instead of an easter egg\". What is your answer now?","answer":"Harlowe is the previous 99","date":"2026-10-29","asked_as":"chat"}
  ],
  "about": "The owner's answers to the teardown briefs, verbatim, in the order given. Appended by `udgt.py record`; never generated or edited."
 }

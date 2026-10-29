@@ -25,7 +25,7 @@
   {"name":"Right Door, Wrong Exit","why":"Doc 1's own structural reference: a liminal walk, room by room, to the exit"},
   {"name":"Papers, Please","why":"compliance as the mechanic, and paperwork as the horror"}
  ],
- "counts": {"anchor": 4, "answer": 18, "codearea": 5, "collection": 5, "copy": 51, "dataset": 6, "doc": 24, "history": 1, "minigame": 7, "module": 28, "plan": 40, "pr": 6, "record": 116, "scene": 10, "screen": 7, "screenshot": 77, "section": 271, "token": 2},
+ "counts": {"anchor": 4, "answer": 21, "codearea": 5, "collection": 5, "copy": 51, "dataset": 6, "doc": 24, "history": 1, "minigame": 7, "module": 28, "plan": 40, "pr": 6, "record": 116, "scene": 10, "screen": 7, "screenshot": 77, "section": 271, "token": 2},
  "nodes": [
   {"id":"doc:DOC1","kind":"doc","area":"gameplay","title":"DOC1","source":{"path":"docs/01_GAME_LOGIC.md","line":1},"meta":{"lines":493,"role":"Doc 1, the master source of truth: premise, spine and render, state model, canon C1 to C8, scene breakdowns, text library, combinatorics, open questions","history":{"changes":2,"first":"2026-09-30","last":"2026-10-04"}}},
   {"id":"sec:DOC1:ninety-nine","kind":"section","area":"gameplay","title":"DOC1 NINETY-NINE","source":{"path":"docs/01_GAME_LOGIC.md","line":1},"meta":{"doc":"DOC1","number":null,"level":1,"words":0,"eras":[]}},
@@ -704,7 +704,10 @@
   {"id":"answer:15","kind":"answer","area":"owner","title":"3: Friction now comes from how he moves (hesitating, doubling back between thresholds) and fe","text":"Q: Friction now comes from how he moves (hesitating, doubling back between thresholds) and feeds only fracture. Should the player ever be told that it counts? A: Once, obliquely","meta":{"stage":"3","date":"2026-10-29","question":"Friction now comes from how he moves (hesitating, doubling back between thresholds) and feeds only fracture. Should the player ever be told that it counts?","answer":"Once, obliquely","asked_as":"chat"}},
   {"id":"answer:16","kind":"answer","area":"owner","title":"4: Ninety-Nine's tests run in a browser page opened by hand (12 case files), with an optional","text":"Q: Ninety-Nine's tests run in a browser page opened by hand (12 case files), with an optional headless runner and an autopilot that plays whole games. For Right Door you chose CI on every push. Same here? A: Yes, on every push","meta":{"stage":"4","date":"2026-10-29","question":"Ninety-Nine's tests run in a browser page opened by hand (12 case files), with an optional headless runner and an autopilot that plays whole games. For Right Door you chose CI on every push. Same here?","answer":"Yes, on every push","asked_as":"chat"}},
   {"id":"answer:17","kind":"answer","area":"owner","title":"4: The 48 Hz drone (C7) is one oscillator from the lobby doors to the final card, never resta","text":"Q: The 48 Hz drone (C7) is one oscillator from the lobby doors to the final card, never restarted, detuning ~4 cents per scene. Is it the game's most important system? A: It could go","meta":{"stage":"4","date":"2026-10-29","question":"The 48 Hz drone (C7) is one oscillator from the lobby doors to the final card, never restarted, detuning ~4 cents per scene. Is it the game's most important system?","answer":"It could go","asked_as":"chat"}},
-  {"id":"answer:18","kind":"answer","area":"owner","title":"4: You play on desktop. What is the slowest machine it must run well on?","text":"Q: You play on desktop. What is the slowest machine it must run well on? A: Phones too","meta":{"stage":"4","date":"2026-10-29","question":"You play on desktop. What is the slowest machine it must run well on?","answer":"Phones too","asked_as":"chat"}}
+  {"id":"answer:18","kind":"answer","area":"owner","title":"4: You play on desktop. What is the slowest machine it must run well on?","text":"Q: You play on desktop. What is the slowest machine it must run well on? A: Phones too","meta":{"stage":"4","date":"2026-10-29","question":"You play on desktop. What is the slowest machine it must run well on?","answer":"Phones too","asked_as":"chat"}},
+  {"id":"answer:19","kind":"answer","area":"owner","title":"5: The building's mood in three words?","text":"Q: The building's mood in three words? A: Real, wrong, downward","meta":{"stage":"5","date":"2026-10-29","question":"The building's mood in three words?","answer":"Real, wrong, downward","asked_as":"chat"}},
+  {"id":"answer:20","kind":"answer","area":"owner","title":"5: Which canon rule (C1 to C8) would you defend if you had to break all the others? (C7, the ","text":"Q: Which canon rule (C1 to C8) would you defend if you had to break all the others? (C7, the drone, is already on the table.) A: C1, C4. i like the low poly look but its more ps1, I'm looking to up it to a ps2 scale or even a higher quality modern \"low to mid poly\"","meta":{"stage":"5","date":"2026-10-29","question":"Which canon rule (C1 to C8) would you defend if you had to break all the others? (C7, the drone, is already on the table.)","answer":"C1, C4. i like the low poly look but its more ps1, I'm looking to up it to a ps2 scale or even a higher quality modern \"low to mid poly\"","asked_as":"chat"}},
+  {"id":"answer:21","kind":"answer","area":"owner","title":"5: Doc 1 §9.3 asks whether Harlowe deserves more: today SAW_HARLOWE adds a desktop, a manifes","text":"Q: Doc 1 §9.3 asks whether Harlowe deserves more: today SAW_HARLOWE adds a desktop, a manifest row and one extra lowercase line on the ending card, \"a haunting instead of an easter egg\". What is your answer now? A: Harlowe is the previous 99","meta":{"stage":"5","date":"2026-10-29","question":"Doc 1 §9.3 asks whether Harlowe deserves more: today SAW_HARLOWE adds a desktop, a manifest row and one extra lowercase line on the ending card, \"a haunting instead of an easter egg\". What is your answer now?","answer":"Harlowe is the previous 99","asked_as":"chat"}}
  ],
  "edges": [
   {"from":"sec:DOC1:ninety-nine","to":"doc:DOC1","kind":"in"},
@@ -1952,7 +1955,8 @@
   {"from":"plan:later:REBUILD:3","to":"scene:S4","kind":"cites"},
   {"from":"plan:later:REBUILD:3","to":"rec:data/rooms/rooms/SET_DIVE","kind":"cites"},
   {"from":"answer:5","to":"sec:DOC4:14","kind":"cites"},
-  {"from":"answer:17","to":"sec:DOC1:3","kind":"cites"}
+  {"from":"answer:17","to":"sec:DOC1:3","kind":"cites"},
+  {"from":"answer:20","to":"sec:DOC1:3","kind":"cites"}
  ],
  "commits": [
   {"h":"9f93ef5","d":"2026-10-16","s":"Merge pull request #6 from groot99-droid/claude/blissful-faraday-bdt4c6","m":true,"ids":[]},
@@ -2070,6 +2074,7 @@
   {"from":"sec:DOC1:6","target":"sec:DOC4:4.3","ref":"doc4"},
   {"from":"sec:DOC4:5.2","target":"sec:DOC1:9.2","ref":"doc1"},
   {"from":"sec:DOC4:14","target":"sec:DOC1:9.1","ref":"doc1"},
-  {"from":"copy:_note","target":"sec:DOC1:9.1","ref":"doc1"}
+  {"from":"copy:_note","target":"sec:DOC1:9.1","ref":"doc1"},
+  {"from":"answer:21","target":"sec:DOC1:9.3","ref":"doc1"}
  ]
 }
