@@ -150,7 +150,13 @@ class Steps(PlanCase):
                         self.assertFalse(node.attr.startswith("__"), node.attr)
                 self.assertLessEqual(imported, ALLOWED_IMPORTS)
                 self.assertIn('print("ROSW "', code)
-                self.assertIn(str((self.root / "meshy" / "box.glb").resolve()), code)
+                # The plan rides in as a JSON string literal; read it back
+                # rather than search the text, which escapes a Windows path twice.
+                literal = next(node.value.args[0] for node in tree.body
+                               if isinstance(node, ast.Assign) and getattr(node.targets[0], "id", "") == "PLAN")
+                carried = json.loads(ast.literal_eval(literal))
+                self.assertEqual(carried["assets"][0]["glb"], str((self.root / "meshy" / "box.glb").resolve()))
+                self.assertEqual(carried, plan)
 
     def test_the_shared_math_goes_into_the_steps_that_use_it(self):
         plan = plan_module.load(self.layout(), self.root / "blender")
