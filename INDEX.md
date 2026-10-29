@@ -13,13 +13,13 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | `blender-gemini/` | Registers the Blender MCP server with the Gemini CLI, and the skill that lets Claude call Gemini to inspect or change an open Blender scene. | - |
 | `creative-writing/` | The Obsidian vault of 63 works plus the checkpointed pipeline that writes into it. | - |
 | `docs/` | Browsable HTML pages describing each tool, and a local helper for setting API keys. | - |
-| `plugins/` | Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, with a design-system generator; blender, skills for driving a live Blender through MCP; udgt, a teardown engine that pulls a game's repository apart into a dataset, chapters and an explorer page; and reach, setup and routing skills for reading the internet through Agent Reach. | [plugins/ui-design/INDEX.md](plugins/ui-design/INDEX.md) |
+| `plugins/` | Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, with a design-system generator; blender, skills for driving a live Blender through MCP; udgt, a teardown engine that pulls a game's repository apart into a dataset, chapters and an explorer page; reach, setup and routing skills for reading the internet through Agent Reach; and video-editor, video editing by conversation with a questionnaire-driven set of recipes and a dry-run publisher. | [plugins/ui-design/INDEX.md](plugins/ui-design/INDEX.md) |
 | `sound-library/` | The author's own sound effects, catalogued by name, category, duration and hash; the files live on GitHub Releases and are fetched on request. | - |
 | `studio/` | Checkpointed production pipelines and the notes they leave behind. | - |
 | `teardowns/` | Game teardowns made with the udgt plugin, one folder per game: its profile, the extracted dataset, the owner's answers to the briefs, and the chapters. | - |
 | `writing-museum/` | A walkable 3D museum of the creative-writing vault, one room per work, built through the studio's scene-3d pipeline. | - |
 
-## Skills (21)
+## Skills (23)
 
 | Skill | What it does |
 |---|---|
@@ -44,6 +44,8 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | [ui-design-catalog](plugins/ui-design/skills/ui-design-catalog/SKILL.md) | Searches a local BM25 catalog of UI styles, product palettes, font pairings, UX guidelines, icons, motion presets, chart types, and 22 stacks, and generates a contrast-checked design system from it -- instead of inventing visual decisions from memory. |
 | [ui-design-catalog-refresh](plugins/ui-design/skills/ui-design-catalog-refresh/SKILL.md) | Refreshes the ui-design catalog's upstream-derived data -- the Google Fonts and Phosphor icon catalogs -- by fetching the upstream sources, generating review-only candidates under the plugin's maintenance/candidates/, diffing them against the live rows, and stopping for human... |
 | [ui-design-multipart](plugins/ui-design/skills/ui-design-multipart/SKILL.md) | Orchestrates the two multipart ui-design workflows -- a search fan-out for a wide product brief, and a four-area review of a built page -- by splitting the work with a script, giving each part to one subagent, and merging and cross-checking the answers with merge_parts.py. |
+| [manim-video](plugins/video-editor/skills/manim-video/SKILL.md) | Production pipeline for mathematical and technical animations using Manim Community Edition. |
+| [video-editor](plugins/video-editor/skills/video-editor/SKILL.md) | Edit video by conversation, with local tools. |
 
 ## Agents (8)
 

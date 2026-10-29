@@ -93,8 +93,9 @@ TOOL_PURPOSE = {
                "a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, "
                "with a design-system generator; blender, skills for driving a live Blender through MCP; "
                "udgt, a teardown engine that pulls a game's repository apart into a dataset, "
-               "chapters and an explorer page; and reach, setup and routing skills for reading the "
-               "internet through Agent Reach.",
+               "chapters and an explorer page; reach, setup and routing skills for reading the "
+               "internet through Agent Reach; and video-editor, video editing by conversation with a "
+               "questionnaire-driven set of recipes and a dry-run publisher.",
     "sound-library": "The author's own sound effects, catalogued by name, category, duration and hash; "
                      "the files live on GitHub Releases and are fetched on request.",
     "studio": "Checkpointed production pipelines and the notes they leave behind.",
