@@ -1,0 +1,12 @@
+{
+  "name": "video-editor",
+  "version": "0.1.0",
+  "description": "Edit video by conversation. A short questionnaire picks one recipe (highlight clips, long-form edit, action montage, animated overlays) so vertical, landscape, dialogue and action work never compete; local Whisper transcription, speaker-aware reframing, captions, stems and overlays; and a dry-run, private-by-default publisher that uses official platform APIs only.",
+  "author": {
+    "name": "groot99-droid"
+  },
+  "homepage": "https://github.com/groot99-droid/Pipelines-Plugin/tree/main/plugins/video-editor",
+  "repository": "https://github.com/groot99-droid/Pipelines-Plugin",
+  "license": "MIT",
+  "keywords": ["video", "editing", "ffmpeg", "whisper", "captions", "shorts", "reframe", "publish"]
+}

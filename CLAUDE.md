@@ -78,6 +78,8 @@ teardowns/           one folder per torn-down game: profile.json, teardown.json 
 plugins/blender/     the blender plugin: .mcp.json (uvx mcp-for-blender, telemetry off, and the
                      blender-addons server in addon-tools/), skills
                      blender-{mcp,assets,polyhaven-library,addon-tools}, agent blender-scene-reviewer
+plugins/video-editor/ the video-editor plugin: bin/ve.py (launcher), src/videoeditor/ (the `ve` CLI),
+                     skills video-editor and manim-video, tests/, UNVERIFIED.md
 .github/workflows/   verify.yml: CI for the whole repo (see "Working on the ui-design plugin");
                      pages.yml: publishes docs/ and the Writing Museum to GitHub Pages from main
 ```
@@ -335,6 +337,35 @@ that agents call those tools directly. **`agent-reach/CLAUDE.md` is authoritativ
   `reach` plugin carries `reach-setup`, `reach-connect` (wires a skill to the base), and a verbatim copy
   of the engine's skill (`agent-reach/scripts/sync_reach_plugin.py`, checked by a test).
   A test fails on a `reach:` channel the engine does not have.
+
+## Working on the video-editor plugin
+
+`plugins/video-editor/` is a plugin like ui-design: paths in its skills start from `${CLAUDE_PLUGIN_ROOT}`, and
+nothing in it names this repo or `.claude/`. Everything runs through `bin/ve.py` (no `pip install`); the skill
+tells the assistant that `ve <command>` means `python "${CLAUDE_PLUGIN_ROOT}/bin/ve.py" <command>`.
+
+- A **questionnaire** (`ve ask`) picks exactly one recipe; keep it that way (a new use case is a recipe module,
+  a playbook in `src/videoeditor/recipes/playbooks/` and a branch in `questionnaire.select_recipes`).
+- The editing path needs no key. Optional extras (`speech`, `speech-plus`, `stems`, `publish`) are lazy-imported
+  and fail with a one-line install hint; the base install stays numpy and Pillow only.
+- **`ve publish` is dry-run by default and private/draft by default.** Its safety rules live in
+  `src/videoeditor/publish/service.py` and are tested (`tests/test_publish.py`): nothing sends without `--yes`,
+  one platform per command, Bluesky and X refuse without `--public`, X needs `--accept-cost`, the idempotency
+  ledger blocks a repeat. Never pass `--yes`, `--public`, `--accept-cost` or `--force`, and never run
+  `ve publish init` or `revoke`, unasked. Never decide the YouTube "made for kids" declaration, `--ai-generated`
+  or `--branded` for the owner.
+- **Credentials live outside the repo**: the OS keyring, or `VE_<PLATFORM>_*` environment variables (this is
+  separate from `~/.rosw/keys.env`, which `docs/setup_keys.py` writes; `ve publish` deliberately does not use a
+  file). Never read, print, echo or ask for a value, never open the keyring or an `.env`, and never put a token
+  in a test: the publish tests use fake values and a faked network. `ve doctor` and `ve publish status` report by
+  name only.
+- Nothing in `ve publish` has been run against a live account. `plugins/video-editor/UNVERIFIED.md` is the
+  checklist; do not describe the integrations as working live.
+- Remotion is not open source. The plugin ships its own small template (`src/videoeditor/templates/remotion_overlay/`,
+  no Remotion source) that depends on the npm packages; do not copy Remotion code in. whisperX (BSD-2) and
+  Demucs (MIT) are optional dependencies, never vendored.
+- Tests: `python -m unittest discover -s plugins/video-editor/tests` (needs ffmpeg, numpy, Pillow, requests; the
+  optional backends are faked, so no extra is needed). CI runs it on Linux.
 
 ## Working on blender-gemini
 

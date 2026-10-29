@@ -3,7 +3,7 @@
 #     data, contract, indexes, unit tests, the relevance gate, and a smoke test of
 #     every domain and stack), which stops at the first failure;
 #   - the creative-writing, studio, studio library, sound library, docs, blender-gemini,
-#     writing-museum and udgt test suites, and the writing-museum layout lint.
+#     writing-museum, udgt and (Linux) video-editor test suites, and the writing-museum layout lint.
 #
 # The Windows and macOS jobs also prove the LF pin: the relevance gate fingerprints
 # raw bytes, and a Windows runner checks files out with CRLF unless .gitattributes
@@ -58,6 +58,15 @@ jobs:
         run: python -m unittest discover -s plugins/udgt/tests
       - name: blender plugin tests
         run: python -m unittest discover -s plugins/blender/tests
+      # ffmpeg (with libass) and a few packages are all the video-editor tests need; the optional
+      # backends are faked. Linux only until it is known green on the other runners.
+      - name: video-editor tests
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          python -m pip install numpy pillow requests
+          python -m unittest discover -s plugins/video-editor/tests
       # Upstream tests Linux and Windows only; macOS is added once it is known green.
       - name: agent-reach tests
         if: runner.os != 'macOS'

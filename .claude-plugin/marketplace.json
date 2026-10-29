@@ -29,6 +29,11 @@
       "name": "udgt",
       "source": "./plugins/udgt",
       "description": "UI, Dataset & Gameplay Teardown: pull a game's repository apart into a cross-linked dataset, Describe/Compare/Critique chapters written with the owner through creative briefs, and an explorer page dressed in the game's own look."
+    },
+    {
+      "name": "video-editor",
+      "source": "./plugins/video-editor",
+      "description": "Edit video by conversation: a questionnaire picks one recipe (highlight clips, long-form edit, action montage, animated overlays); local Whisper, speaker-aware reframing, captions, stems; and a dry-run, private-by-default publisher built on official platform APIs only."
     }
   ]
 }

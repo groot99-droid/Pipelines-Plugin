@@ -50,6 +50,11 @@ plugins/blender/       the blender plugin: self-contained
   .mcp.json            launches `uvx mcp-for-blender` with telemetry off, and blender-addons
   addon-tools/         server.py: named tools for the user's own add-ons, from manifests
   skills/, agents/     blender-{mcp,assets,polyhaven-library,addon-tools}, blender-scene-reviewer
+plugins/video-editor/  the video-editor plugin: self-contained
+  bin/ve.py            launcher: runs the CLI from the plugin folder or install cache, no pip install
+  src/videoeditor/     the `ve` CLI: questionnaire, recipes and playbooks, ffmpeg render, captions, publish
+  skills/              video-editor, manim-video
+  tests/, UNVERIFIED.md  unittest suite; what is not verified and what is deferred
 ```
 
 Paths in the creative-writing and studio skills and agents are relative to this
@@ -453,3 +458,15 @@ cross-linked dataset, chapters (Describe, Compare, Critique) and an explorer pag
 game's own look. The owner answers a short creative brief before each chapter, and the answers are
 kept verbatim. The first teardown is `teardowns/who-did-it/`; see its README and
 [`docs/udgt.html`](docs/udgt.html).
+
+## Video editor
+
+`plugins/video-editor/` edits video by conversation. A short questionnaire picks one recipe (highlight
+clips, long-form edit, action montage, with an animated-overlay add-on), so vertical vs landscape and
+dialogue vs action work never compete. It runs locally on ffmpeg and local Whisper, with no API keys, and
+adds optional extras for word alignment and speaker turns (whisperX), stem separation (Demucs) and a Remotion
+overlay template. `ve publish` sends the result through official platform APIs only: dry run by default,
+private or draft by default, nothing sent without `--yes`, credentials in the OS keyring or environment
+variables and never in a file. Install with `/plugin install video-editor@rosw`. `ve publish` has never been
+run against a live account; `plugins/video-editor/UNVERIFIED.md` lists what to check first. See
+`plugins/video-editor/README.md` and [`docs/video-editor.html`](docs/video-editor.html).
