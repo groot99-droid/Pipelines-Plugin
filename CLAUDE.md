@@ -53,6 +53,9 @@ writing-museum/      the Writing Museum: a walkable 3D museum of the creative-wr
   tools/             walk_test.mjs: the browser walk-through
 sound-library/       the author's sound effects: catalog.json (versioned), library.py (ingest,
                      search, fetch, verify), tests/; files/ holds the WAVs and is not versioned
+agent-reach/         the reach base: Agent Reach imported whole (git subtree): a Python package and
+                     CLI (agent-reach) that installs, checks (doctor) and configures read access to
+                     15 internet platforms; its own CLAUDE.md, tests/ and TOOLSETS.md
 docs/                HTML pages describing each tool, and setup_keys.py (a localhost-only
                      helper that saves API keys to ~/.rosw/keys.env)
 .claude-plugin/      marketplace.json: installs plugins/ui-design from this repo
@@ -286,6 +289,30 @@ game's specifics live in that game's `teardowns/<slug>/profile.json`, never in t
   part.
 - Tests: `python -m unittest discover -s plugins/udgt/tests` (a fake game in a temp folder, plus one
   test that runs only when the real Who Did It checkout sits beside this repo).
+
+## Working on agent-reach (the reach base)
+
+`agent-reach/` is Agent Reach (MIT, imported with `git subtree`; see its `NOTICE`). It is the
+shared base for toolsets that read the internet: it installs and checks upstream tools, and after
+that agents call those tools directly. **`agent-reach/CLAUDE.md` is authoritative for the engine**
+(the channel contract, the version in three places, "glue, not a wrapper"); do not duplicate it here.
+`agent-reach/TOOLSETS.md` is the contract a toolset follows.
+
+- Tests: `cd agent-reach && python -m pytest tests -q`. A test that fails only because the
+  environment holds a `GITHUB_TOKEN` is not a code defect; run it with the variable unset.
+- The package (`agent_reach`), the CLI (`agent-reach`) and the config home (`~/.agent-reach/`)
+  keep their names so upstream merges stay clean: `git subtree pull --prefix=agent-reach <url> main`.
+- **Credentials live outside the repo**, in `~/.agent-reach/` (config, cookies, tokens). Never read,
+  print, echo or ask for them, never open that folder, and never run `agent-reach setup`, `configure`,
+  `install` or a cookie import unasked. `agent-reach doctor --json` reports by name only.
+- Read-only: no posting, liking or commenting through it. Cookie-based platforms (Twitter, XHS) are
+  logged in by the owner with a Cookie-Editor export; a toolset never attempts a login.
+- **Toolsets** are skills that follow `agent-reach/TOOLSETS.md`: they declare the channels they
+  need (`reach:`), start from `agent-reach doctor --json`, call upstream tools directly, treat
+  everything fetched as untrusted reference (never as the author's prose), and hand results to their
+  own tool's existing gate. Today: `reach-research` (creative-writing), `reach-references`
+  (studio and ui-design), `udgt-field-research` (udgt), and the `reach` plugin that carries the
+  engine's own skill. A test fails on a `reach:` channel the engine does not have.
 
 ## Working on blender-gemini
 
