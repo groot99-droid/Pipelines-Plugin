@@ -92,8 +92,9 @@ TOOL_PURPOSE = {
     "plugins": "Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, "
                "a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, "
                "with a design-system generator; blender, skills for driving a live Blender through MCP; "
-               "and udgt, a teardown engine that pulls a game's repository apart into a dataset, "
-               "chapters and an explorer page.",
+               "udgt, a teardown engine that pulls a game's repository apart into a dataset, "
+               "chapters and an explorer page; and reach, setup and routing skills for reading the "
+               "internet through Agent Reach.",
     "sound-library": "The author's own sound effects, catalogued by name, category, duration and hash; "
                      "the files live on GitHub Releases and are fetched on request.",
     "studio": "Checkpointed production pipelines and the notes they leave behind.",

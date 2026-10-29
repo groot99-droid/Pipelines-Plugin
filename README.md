@@ -45,7 +45,7 @@ teardowns/             one folder per torn-down game (today: who-did-it)
 agent-reach/          the reach base: Agent Reach (imported with git subtree). CLI `agent-reach`
                        installs, checks and configures read access to 15 internet platforms;
                        toolsets follow agent-reach/TOOLSETS.md
-plugins/reach/         the reach plugin: install and fetch skills, carrying the engine's own skill
+plugins/reach/         the reach plugin: reach-setup, and the engine's own agent-reach skill (a verbatim copy)
 plugins/blender/       the blender plugin: self-contained
   .mcp.json            launches `uvx mcp-for-blender` with telemetry off
   skills/, agents/     blender-{mcp,assets,polyhaven-library}, blender-scene-reviewer

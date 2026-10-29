@@ -17,6 +17,7 @@
     <li><a href="ui-design.html">UI design</a></li>
     <li><a href="writing-museum.html">Writing museum</a></li>
     <li><a href="udgt.html">Teardowns</a></li>
+    <li><a href="reach.html">Reach</a></li>
     <li><a href="keys.html">Keys</a></li>
   </ul></nav>
 </div></header>
@@ -73,6 +74,14 @@
       The first teardown is Who Did It.</p>
       <a class="go" href="udgt.html">What it does →</a>
     </article>
+    <article class="card">
+      <span class="tag">agent-reach/ · plugins/reach/</span>
+      <h3>Reach (internet access)</h3>
+      <p>The shared base for reading the internet: it checks which of 15 platforms are reachable
+      on your machine and routes each to its own upstream tool. Research for stories, references
+      for the studio and sources for teardowns are small skills built on it.</p>
+      <a class="go" href="reach.html">What it does →</a>
+    </article>
   </div>
 
   <h2 id="quick-start">Quick start</h2>
@@ -123,6 +132,7 @@ pip install -r studio/pipeline/requirements.txt</pre></li>
       <tr><td><code>studio/vault/</code></td><td>A second vault: one note per made thing, and the brand gates</td></tr>
       <tr><td><code>studio/pipeline/</code></td><td>The studio's spec, bookkeeper and note writer</td></tr>
       <tr><td><code>plugins/ui-design/</code></td><td>The UI design plugin, complete and self-contained</td></tr>
+      <tr><td><code>agent-reach/</code>, <code>plugins/reach/</code></td><td>The reach base (Agent Reach, imported whole) that installs and checks read access to the internet, and the plugin that carries its skill</td></tr>
       <tr><td><code>plugins/udgt/</code>, <code>teardowns/</code></td><td>The teardown plugin, and one folder per torn-down game: its profile, dataset, the owner's answers and the chapters</td></tr>
       <tr><td><code>.claude/skills/</code>, <code>.claude/agents/</code></td><td>The creative-writing and studio skills and agents. They load when this repo is your working folder</td></tr>
       <tr><td><code>docs/</code></td><td>These pages, and the key setup helper</td></tr>
