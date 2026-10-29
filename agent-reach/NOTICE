@@ -1,0 +1,20 @@
+Agent Reach
+Copyright (c) Neo Reid, MIT License (see LICENSE).
+
+Imported into this repository with `git subtree add --prefix=agent-reach`, full history,
+from github.com/groot99-droid/Agent-Reach (a fork of github.com/Panniantong/Agent-Reach),
+main at da5044d.
+
+Pull upstream changes with:
+  git subtree pull --prefix=agent-reach <fork-or-upstream-url> main
+
+Trimmed from upstream because they do no work here: the sponsor blocks, badges, WeChat QR and
+friend links in README.md and docs/README_en.md; docs/assets/ (logos, sponsor images);
+docs/wechat-group-qr.jpg; docs/README_ja.md and README_ko.md (and the two tests that read them);
+.openteams/; llms.txt; scripts/sync-upstream.sh (it syncs from another project). A `git subtree
+pull` will report modify/delete conflicts on them: keep the deletion.
+
+Local changes to this folder are kept small (this file, TOOLSETS.md, the removal of the
+inert .github/ folder whose test jobs moved into the repo's .github/workflows/verify.yml).
+The engine's package name (agent_reach), CLI (agent-reach) and config home (~/.agent-reach)
+are unchanged so upstream merges stay clean.

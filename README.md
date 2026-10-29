@@ -42,6 +42,10 @@ plugins/ui-design/     the ui-design plugin: self-contained
   README.md, LICENSE, NOTICE, CHANGELOG.md
 plugins/udgt/          the udgt plugin: UI, Dataset & Gameplay Teardown of a game repo
 teardowns/             one folder per torn-down game (today: who-did-it)
+agent-reach/          the reach base: Agent Reach (imported with git subtree). CLI `agent-reach`
+                       installs, checks and configures read access to 15 internet platforms;
+                       toolsets follow agent-reach/TOOLSETS.md
+plugins/reach/         the reach plugin: reach-setup, reach-connect, and the engine's agent-reach skill (a copy)
 plugins/blender/       the blender plugin: self-contained
   .mcp.json            launches `uvx mcp-for-blender` with telemetry off
   skills/, agents/     blender-{mcp,assets,polyhaven-library}, blender-scene-reviewer

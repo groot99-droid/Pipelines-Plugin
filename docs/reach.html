@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reach · ROSW</title>
+<meta name="description" content="Reach, the shared base for reading the internet: Agent Reach installs and health-checks 15 platforms, and small toolsets for writing, the studio and teardowns are built on it.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="top-inner">
+  <a class="brand" href="index.html">RO<span>SW</span></a>
+  <nav aria-label="Pages"><ul class="nav">
+    <li><a href="index.html">Overview</a></li>
+    <li><a href="creative-writing.html">Creative writing</a></li>
+    <li><a href="studio.html">Studio</a></li>
+    <li><a href="ui-design.html">UI design</a></li>
+    <li><a href="writing-museum.html">Writing museum</a></li>
+    <li><a href="udgt.html">Teardowns</a></li>
+    <li><a href="reach.html" aria-current="page">Reach</a></li>
+    <li><a href="keys.html">Keys</a></li>
+  </ul></nav>
+</div></header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">agent-reach/ · plugins/reach/</p>
+    <h1>Reach: reading the internet</h1>
+    <p class="lede">Agent Reach is a small program that checks, for your machine, which of 15
+    platforms Claude can read (web, search, YouTube, Reddit, GitHub, Bilibili, RSS and more),
+    installs what is missing when you say so, and points each platform at its own upstream tool.
+    It is imported here whole, with its history. Other tools build small skills on top of it.</p>
+  </section>
+
+  <p class="toc">On this page: <a href="#base">The base</a> · <a href="#toolsets">Toolsets</a> ·
+  <a href="#use">Using it</a> · <a href="#limits">What it does not do</a></p>
+
+  <h2 id="base">The base</h2>
+  <p><code>agent-reach/</code> is the program: <code>agent-reach doctor</code> reports each platform,
+  and <code>agent-reach install</code> only checks unless you add <code>--system</code>. After that,
+  Claude calls the upstream tools directly. Its settings, cookies and tokens live in
+  <code>~/.agent-reach/</code>, outside every project, and Claude never reads them.</p>
+
+  <h2 id="toolsets">Toolsets</h2>
+  <p>A toolset is a small skill that uses the base for one job: research for a story
+  (<code>reach-research</code>), outside references for the studio (<code>reach-references</code>),
+  sources for a game teardown (<code>udgt-field-research</code>). Each declares the channels it uses,
+  starts from <code>agent-reach doctor --json</code>, reads only, and treats everything fetched as
+  untrusted reference that is never passed off as the author's words. The full list and the rules are
+  in <code>agent-reach/TOOLSETS.md</code>.</p>
+  <p>To give another skill (yours, or one from anywhere) internet access, use the
+  <code>reach-connect</code> skill in the <code>reach</code> plugin. It maps the skill's questions to
+  channels, adds a checked Reach block, and never changes the skill's own gates.</p>
+
+  <h2 id="use">Using it</h2>
+  <pre><code>pipx install "git+https://github.com/groot99-droid/Pipelines-Plugin.git#subdirectory=agent-reach"
+agent-reach doctor
+/plugin install reach@rosw        # optional: the setup and routing skills as a plugin
+cd agent-reach &amp;&amp; python -m pytest tests -q</code></pre>
+
+  <h2 id="limits">What it does not do</h2>
+  <ul>
+    <li>It never posts, comments or likes, and never logs in for you.</li>
+    <li>It never installs system tools without your yes.</li>
+    <li>It does not write into the vaults, the gates or the teardown answers.</li>
+  </ul>
+</main>
+
+<footer>ROSW · <a href="https://github.com/groot99-droid/Pipelines-Plugin">Source on GitHub</a></footer>
+</body>
+</html>
