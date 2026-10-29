@@ -6,7 +6,10 @@
   {"stage":"0","question":"What should this teardown help you decide next?","answer":"How to merge, and work back in the old blender and Higgsfield sets. My understanding of game design as increased since I’ve worked with “Who did it” so I’m confident those old pieces can be re used","date":"2026-10-26","asked_as":"chat"},
   {"stage":"1","question":"Doc 4 §14 bans non-diegetic UI: the only things left over the room are the EXIT sign (styled as a fire exit, it files you as PENDING REVIEW) and the sound toggle. Is even EXIT one too many?","answer":"Keep EXIT as it is","date":"2026-10-26","asked_as":"chat"},
   {"stage":"1","question":"The choice labels (TAKE A SEAT / STAY STANDING, PART THE CURTAIN / TRY THE DOOR) stand in the room over the place to walk to, in the company's typeface. Should they ever lie?","answer":"Never: always truthful","date":"2026-10-26","asked_as":"chat"},
-  {"stage":"1","question":"Phone or desktop first: which do you play Ninety-Nine on yourself?","answer":"Desktop","date":"2026-10-26","asked_as":"chat"}
+  {"stage":"1","question":"Phone or desktop first: which do you play Ninety-Nine on yourself?","answer":"Desktop","date":"2026-10-26","asked_as":"chat"},
+  {"stage":"2","question":"The sets are built: build_rooms.py writes rooms.json (367 KB, 31 rooms and connectors). The choices are hand-edited: scenes.json names each scene's rooms, thresholds and beats. Is that split the right one?","answer":"Merge them","date":"2026-10-29","asked_as":"chat"},
+  {"stage":"2","question":"Who should be able to author a new scene later?","answer":"Someone working from the data alone","date":"2026-10-29","asked_as":"chat"},
+  {"stage":"2","question":"The beat vocabulary has grown to 34 keys the director reads (caption, swing, display, breath, footfall, ride, sit, actor…). Where would you stop it?","answer":"Let it grow, but document each","date":"2026-10-29","asked_as":"chat"}
  ],
  "about": "The owner's answers to the teardown briefs, verbatim, in the order given. Appended by `udgt.py record`; never generated or edited."
 }
