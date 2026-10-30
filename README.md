@@ -42,7 +42,7 @@ plugins/ui-design/     the ui-design plugin: self-contained
   references/          prose the ui-design-catalog skill reads on demand
   README.md, LICENSE, NOTICE, CHANGELOG.md
 plugins/udgt/          the udgt plugin: UI, Dataset & Gameplay Teardown of a game repo
-teardowns/             one folder per torn-down game (today: who-did-it)
+teardowns/             one folder per torn-down game: who-did-it, ninety-nine, right-door-wrong-exit
 agent-reach/          the reach base: Agent Reach (imported with git subtree). CLI `agent-reach`
                        installs, checks and configures read access to 15 internet platforms;
                        toolsets follow agent-reach/TOOLSETS.md
@@ -468,7 +468,8 @@ the code, the design tokens, the UI copy, the git history and the stated plans, 
 cross-linked dataset, chapters (Describe, Compare, Critique) and an explorer page dressed in the
 game's own look. The owner answers a short creative brief before each chapter, and the answers are
 kept verbatim. The first teardown is `teardowns/who-did-it/`; see its README and
-[`docs/udgt.html`](docs/udgt.html).
+[`docs/udgt.html`](docs/udgt.html). `teardowns/ninety-nine/` (The-Intern) and
+`teardowns/right-door-wrong-exit/` followed: Right Door has all seven chapters and Ninety-Nine all nine.
 
 ## Video editor
 
