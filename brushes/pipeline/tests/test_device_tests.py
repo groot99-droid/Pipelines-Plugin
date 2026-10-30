@@ -13,10 +13,12 @@ against zipfile.
 """
 
 import ast
+import collections
 import contextlib
 import hashlib
 import io
 import json
+import os
 import plistlib
 import re
 import subprocess
@@ -26,18 +28,24 @@ import zipfile
 from pathlib import Path
 from unittest import mock
 
-import yaml
+try:
+    import yaml
+except ImportError:          # an isolated interpreter (-I) hides a pyyaml in the user's site-packages
+    yaml = None
 
 PIPELINE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PIPELINE))
 
 import brush_common as bc  # noqa: E402
+import brush_model  # noqa: E402
+import container  # noqa: E402
 import device_tests as dt  # noqa: E402
 import fixtures  # noqa: E402
 import zip_writer  # noqa: E402
 
 BRUSHES = PIPELINE.parent
 SCRIPT = PIPELINE / "device_tests.py"
+CORPUS = os.environ.get("ROSW_BRUSHES_CORPUS", "")    # read before any test hides the variable
 DRY_RUN = "DRY RUN   nothing is written without --confirm."
 WHEN = (2026, 10, 8, 12, 30, 44)
 PNG = fixtures.make_png(4, 4)
@@ -68,6 +76,18 @@ def shrunk(count):
 def grown(count):
     """Root keys to add to a modern fixture so that `count` are there."""
     return {f"futureSetting{n:02d}": 0.0 for n in range(count - fixtures.MODERN_KEY_COUNT)}
+
+
+SCHEMA_ERAS = {row["id"]: row for row in brush_model.load_schema()["eras"]}
+
+
+def in_era(era):
+    """make_brush options that give a modern fixture exactly the root key set
+    the schema lists for `era`: the fixture's keys that era lacks are left out,
+    and the keys it adds are put in as plain numbers."""
+    wanted, have = set(SCHEMA_ERAS[era]["key_order"]), set(fixtures.modern_keys())
+    return {"drop_keys": tuple(sorted(have - wanted)),
+            "extra_keys": {key: 0.0 for key in sorted(wanted - have)}}
 
 
 def set_with_junk(name, brushes):
@@ -108,13 +128,13 @@ class Brushes:
         self.heavy_ink = modern("Heavy Ink", 47, shape="bundled", grain="none", thumbnail=False,
                                 dual=True)
         self.signed = modern("Signed", 48, shape="bundled", grain="bundled", author=True)
-        self.candy = modern("Candy Floss", 49, dual=True, reset=True, drop_keys=shrunk(173))
+        self.candy = modern("Candy Floss", 49, dual=True, reset=True, **in_era("M173"))
         self.limestone = modern("Limestone", 50, shape="named", grain="named", thumbnail="LA",
                                 empty=("", "Reset"), overrides={"version": 4},
                                 extras=[("Extra/unknown.bin", b"\x00\x01unknown\xff")],
-                                extra_keys=grown(242))
+                                **in_era("M242"))
         self.clay = modern("Clay", 51, shape="bundled", grain="none", overrides={"version": 4},
-                           extra_keys=grown(242))
+                           **in_era("M242"))
 
         self._files = {}
 
@@ -362,6 +382,30 @@ class Scanning(LibraryCase):
         found = {c.name: (c.era, c.family) for c in self.scan().candidates}
         self.assertEqual(found, {"Odd": ("X230", "modern"), "Short": ("X100", "legacy")})
 
+    def test_each_era_is_told_by_its_exact_key_set_not_its_count(self):
+        """brush_model.detect_era, not a count: 242 keys that are not M242's are
+        X242, and 173 that are not M173's are X173, with their nearest era's family."""
+        brushes = [fixtures.make_brush(f"Legacy {era}", era=era, number=100 + n)
+                   for n, era in enumerate(fixtures.LEGACY_ERAS)]
+        brushes += [modern(f"Modern {era}", 110 + n, **in_era(era))
+                    for n, era in enumerate(("M172", "M173", "M220", "M242"))]
+        brushes += [modern("Grown 242", 120, extra_keys=grown(242)),
+                    modern("Shrunk 173", 121, drop_keys=shrunk(173))]
+        self.put("official/x/eras.brushset", fixtures.brushset_file("Eras", brushes))
+        found = {c.name: (c.era, c.era_exact, c.keys, c.family, c.nearest) for c in self.scan().candidates}
+        wanted = {f"Legacy {era}": (era, True, fixtures.LEGACY_KEY_COUNTS[era], "legacy", era)
+                  for era in fixtures.LEGACY_ERAS}
+        wanted.update({f"Modern {era}": (era, True, len(SCHEMA_ERAS[era]["key_order"]), "modern", era)
+                       for era in ("M172", "M173", "M220", "M242")})
+        grown_era = brush_model.nearest_era(fixtures.read_archive(brushes[-2].archive)["keys"])
+        shrunk_era = brush_model.nearest_era(fixtures.read_archive(brushes[-1].archive)["keys"])
+        wanted["Grown 242"] = ("X242", False, 242, "modern", grown_era)
+        wanted["Shrunk 173"] = ("X173", False, 173, "modern", shrunk_era)
+        self.assertEqual(found, wanted)
+        for brush in brushes:
+            keys = fixtures.read_archive(brush.archive)["keys"]
+            self.assertEqual(found[brush.name][0], brush_model.detect_era(keys)[0], brush.name)
+
     def test_folders_junk_and_repeated_names_are_left_out_and_empty_files_kept(self):
         self.fill()
         scan = self.scan()
@@ -401,8 +445,12 @@ class Scanning(LibraryCase):
         scan = self.scan()
         self.assertEqual(scan.brushes["user"], 12, "none of the hostile files gave a candidate")
         skipped = dict(scan.skipped)
-        self.assertEqual(set(skipped), {f"user/hostile/{name}" for name in hostile})
-        self.assertIn("..", skipped["user/hostile/traversal.brushset"])
+        # The reader refuses an entry, not the file (F3 "Reading"): the traversal
+        # file's one folder holds a refused entry, so that brush is passed over.
+        host = f"user/hostile/traversal.brushset!/{fixtures.brush_uuid(90)}"
+        self.assertEqual(set(skipped), {f"user/hostile/{name}" for name in hostile
+                                        if name != "traversal.brushset"} | {host})
+        self.assertIn("..", skipped[host])
         self.assertIn("brushset.plist", skipped["user/hostile/bare-array-plist.brushset"])
         self.assertIn("piece of text", skipped["user/hostile/string-top-archive.brush"])
         self.assertIn("binary property list", skipped["user/hostile/wrong-magic.brush"])
@@ -948,8 +996,8 @@ class Substitutes(LibraryCase):
         self.assertIn("5 of its 8 brushes are substitutes", text)
         self.assertIn("`brushes/library/official/` holds no official sets", text)
         self.assertNotIn("is empty)", text, "the folder may not exist at all")
-        self.assertIn(">     python brushes/pipeline/fetch_base_library.py fetch --confirm", text)
-        self.assertIn(">     python brushes/pipeline/device_tests.py build sitting-1 --confirm", text)
+        self.assertIn(">     python -I brushes/pipeline/fetch_base_library.py fetch --confirm", text)
+        self.assertIn(">     python -I brushes/pipeline/device_tests.py build sitting-1 --confirm", text)
         self.assertEqual(text.count(". SUBSTITUTE: stands in for the "), 5)
         self.assertEqual(text.count("Only the three plain questions apply."), 5)
         self.assertNotIn("Does Brush Studio show two brushes", text, "no dual question without a dual brush")
@@ -1479,6 +1527,8 @@ class TheCommand(LibraryCase):
         paths = bc.resolve_paths()
         self.assertEqual(dt.default_out(paths, "sitting-1"), BRUSHES / "device-tests" / "sitting-1")
         self.assertEqual(dt.resolve_out(paths, None, "sitting-1"), BRUSHES / "device-tests" / "sitting-1")
+        if yaml is None:
+            self.skipTest("pyyaml cannot be imported here (an isolated interpreter hides the user's site)")
         spec = yaml.safe_load((BRUSHES / "spec.yaml").read_text(encoding="utf-8"))
         self.assertEqual(spec["layout"]["device_tests"], dt.OUT_HOME)
         self.assertEqual(spec["device_test"]["written_to"], f"repo:brushes/{dt.OUT_HOME}/")
@@ -1550,7 +1600,7 @@ class NotTheControlSet(LibraryCase):
         self.assertNotIn(DRY_RUN, out, "a dry run of a build that would be refused is refused too")
         self.assertIn("error: this is not the control set: 5 of 8 members are substitutes.", err)
         self.assertIn("Nothing is written.", err)
-        self.assertIn("python brushes/pipeline/fetch_base_library.py fetch --confirm", err)
+        self.assertIn("python -I brushes/pipeline/fetch_base_library.py fetch --confirm", err)
         self.assertIn("--allow-substitutes", err)
         self.assertEqual(fixtures.tree_digest(self.tmp), before)
 
@@ -1642,8 +1692,753 @@ class NotTheControlSet(LibraryCase):
         self.assertEqual(dt.refusal(self.build()), "")
 
 
+# ── sitting 2: the edits and the scratch brushes ─────────────────────────────
+
+NOW = 1_700_000_000.0                       # seconds since 1970, for the new brushes' creation date
+NS_EPOCH = 978307200
+# Small images for the build tests: the real sizes are checked on their own.
+SMALL_TEXTURES = {"disc": ("a soft round dot", 16, 16), "speckle": ("a fine even speckle", 16, 16),
+                  "oval": ("a soft oval, twice as wide as tall", 12, 6),
+                  "big-speckle": ("a fine even speckle", 32, 32), "square": ("a hard square", 8, 8)}
+SMALL_MADE = {}
+TEMPLATE_FILES = {"M220": "official/procreate-2/p2-airbrushing.brushset",
+                  "E4": "user/everything-watercolour/Everything_Watercolour.brushset"}
+
+
+def byte_archive(family, name):
+    """A fixture archive rebuilt by the codec's rules, so that it decodes with
+    fidelity "byte", as a new-brush template must."""
+    plain = fixtures.make_archive(family, name)
+    return brush_model.encode(brush_model.from_json(brush_model.to_json(brush_model.decode(plain))))
+
+
+def resolved(data):
+    """{root key: value} of an archive, read here with plistlib, every
+    reference followed and every scalar tagged with its type: the test's own
+    reading, independent of device_tests' second pass."""
+    top = plistlib.loads(data)
+    objects = top["$objects"]
+
+    def follow(value, seen=()):
+        if isinstance(value, plistlib.UID):
+            if value.data in seen:
+                return ("cycle", value.data)
+            return follow(objects[value.data], seen + (value.data,))
+        if isinstance(value, dict):
+            return {key: follow(item, seen) for key, item in value.items()}
+        if isinstance(value, list):
+            return [follow(item, seen) for item in value]
+        return (type(value).__name__, value)
+
+    root = objects[top["$top"]["root"].data]
+    return {key: follow(value) for key, value in root.items()}
+
+
+def name_of(values):
+    name = values["name"]
+    return name["NS.string"][1] if isinstance(name, dict) else name[1]
+
+
+def changed_keys(before, after):
+    return sorted(key for key in set(before) | set(after) if before.get(key) != after.get(key))
+
+
+class Sitting2Brushes:
+    """The synthetic library of sitting 2: two donors of each kind, a brush
+    that names a bundled shape, and the two new-brush templates."""
+
+    def __init__(self):
+        self.steady = fixtures.make_brush("Steady", number=35)
+        self.jittery = fixtures.make_brush("Jittery", number=33, overrides={"plotJitter": 0.4})
+        self.hard = modern("Hard", 130)
+        self.curly = modern("Curly", 131, overrides={"plotJitter": 1.5})
+        self.soft = modern("Soft Brush", 132, shape="bundled", grain="bundled")
+        self.templates = {"M220": byte_archive("modern", "Template M220"),
+                          "E4": byte_archive("legacy", "Template E4")}
+        self.template_uuid = {"M220": fixtures.brush_uuid(140), "E4": fixtures.brush_uuid(141)}
+
+    def donors(self):
+        return {era: {"container": TEMPLATE_FILES[era],
+                      "entry": f"{self.template_uuid[era]}/Brush.archive",
+                      "archive_sha256": sha(self.templates[era])} for era in TEMPLATE_FILES}
+
+    def template_file(self, era):
+        folder = self.template_uuid[era]
+        return fixtures.make_zip([(f"{folder}/Brush.archive", self.templates[era]),
+                                  (fixtures.PLIST, fixtures.brushset_plist(f"Templates {era}", [folder]))])
+
+    def files(self):
+        out = {
+            "user/demo-pack/Demo_Set.brushset": fixtures.brushset_file("Demo Set ", [self.jittery, self.steady]),
+            "official/procreate-1/procreate-1.brushset": fixtures.brushset_file(
+                "Procreate 1", [self.curly, self.hard]),
+            "official/procreate-5/p5-airbrushing.brushset": fixtures.brushset_file("Airbrushing", [self.soft]),
+        }
+        out.update({TEMPLATE_FILES[era]: self.template_file(era) for era in TEMPLATE_FILES})
+        return out
+
+    _shared = None
+
+    @classmethod
+    def shared(cls):
+        if cls._shared is None:
+            cls._shared = cls()
+        return cls._shared
+
+
+class Sitting2Case(LibraryCase):
+    """A library for sitting 2, the new-brush templates pointed at it, and small images."""
+
+    def setUp(self):
+        super().setUp()
+        self.out2 = self.root / "device-tests" / "sitting-2"
+        self.b2 = Sitting2Brushes.shared()
+        for patcher in (mock.patch.dict(brush_model.NEW_BRUSH_DONORS, self.b2.donors()),
+                        mock.patch.dict(dt.TEXTURES, SMALL_TEXTURES),
+                        mock.patch.object(dt, "_MADE", SMALL_MADE)):
+            patcher.start()
+            self.addCleanup(patcher.stop)
+
+    def fill2(self, files=None):
+        for relative, data in (self.b2.files() if files is None else files).items():
+            self.put(relative, data)
+
+    def build2(self, **options):
+        options.setdefault("date_time", WHEN)
+        options.setdefault("new_uuid", uuids())
+        options.setdefault("now", NOW)
+        return dt.build_sitting_2(self.library, **options)
+
+    def edits(self, build):
+        return {edit.code: edit for edit in build.edits}
+
+    def scratch(self, build):
+        return {member.code: member for member in build.scratch}
+
+
+class TheSweeps(unittest.TestCase):
+    """The plan of F2 and F3 (critique-fidelity.md section 6) as data."""
+
+    def test_the_edits_are_the_designs_f2(self):
+        legacy, modern_ = dt.LEGACY_SWEEP, dt.MODERN_SWEEP
+        self.assertEqual([s.code for s in legacy], [f"L{n:02d}" for n in range(24)])
+        self.assertEqual([s.code for s in modern_], [f"M{n:02d}" for n in range(21)])
+        self.assertEqual([s.code for s in legacy + modern_ if s.thumbnail], ["L00", "M00"])
+        self.assertEqual([s.code for s in legacy + modern_ if not s.changes], ["L00", "L01", "M00"])
+        changed = collections.Counter(key for s in legacy for key in s.changes)
+        self.assertEqual(changed, {"plotSpacing": 4, "dynamicsRenderType": 4, "blendMode": 3, "extendedBlend": 3,
+                                   "textureMovement": 2, "textureZoom": 2, "shapeRotation": 3, "stamp": 1,
+                                   "previewSize": 2, "dynamicsPressureSizeCurve": 1})
+        self.assertEqual(sorted(s.changes["plotSpacing"] for s in legacy if "plotSpacing" in s.changes),
+                         [0.1, 0.25, 0.5, 1.0])
+        self.assertEqual([s.changes["dynamicsRenderType"] for s in legacy if "dynamicsRenderType" in s.changes],
+                         [0, 1, 2, 3])
+        self.assertEqual([(s.changes["blendMode"], s.changes["extendedBlend"]) for s in legacy
+                          if "blendMode" in s.changes], [(1, 1), (3, 3), (8, 8)])
+        self.assertEqual(len(legacy[-1].changes["dynamicsPressureSizeCurve"]["points"]), 4)
+        combos = [tuple(s.changes[key] for key in dt.RENDERING_KEYS) for s in modern_
+                  if "renderingMaxTransfer" in s.changes]
+        self.assertEqual(len(combos), 6)
+        self.assertEqual(len(set(combos)), 6, "the six observed combinations, each once")
+        self.assertEqual([(s.changes["plotSpacing"], s.changes["plotSpacingVersion"]) for s in modern_
+                          if "plotSpacingVersion" in s.changes], [(0.25, 0), (0.25, 1), (1.0, 0), (1.0, 1)])
+        self.assertEqual([s.changes["grainBlendMode"] for s in modern_ if "grainBlendMode" in s.changes],
+                         [7, 10, 27])
+        for key, values in (("textureApplication", [0, 1]), ("shapeCount", [0.0625, 0.5]),
+                            ("shapeAngle", [1.5708]), ("wetEdgesAmount", [1.0]), ("burntEdgesAmount", [1.0])):
+            self.assertEqual([s.changes[key] for s in modern_ if key in s.changes], values, key)
+
+    def test_every_key_swept_belongs_to_its_donors_era_and_every_value_to_its_enum(self):
+        schema = brush_model.load_schema()
+        rows = {row["key"]: row for row in schema["keys"]}
+        for sweeps, era in ((dt.LEGACY_SWEEP, "E4"), (dt.MODERN_SWEEP, "M220")):
+            keys = set(SCHEMA_ERAS[era]["key_order"])
+            for sweep in sweeps:
+                for key, value in sweep.changes.items():
+                    self.assertIn(key, keys, (sweep.code, era))
+                    enum = rows[key].get("enum")
+                    if enum and isinstance(value, int) and not isinstance(value, bool):
+                        self.assertIn(str(value), enum, sweep.code)
+
+    def test_the_names(self):
+        names = {s.code: s.name for s in dt.LEGACY_SWEEP + dt.MODERN_SWEEP}
+        self.assertEqual(names["L00"], "L00 name only")
+        self.assertEqual(names["L01"], "L01 name only, no thumbnail")
+        self.assertEqual(names["L02"], "L02 plotSpacing=0.1")
+        self.assertEqual(names["L05"], "L05 plotSpacing=1")
+        self.assertEqual(names["L10"], "L10 blendMode=1 extendedBlend=1")
+        self.assertEqual(names["L17"], "L17 shapeRotation=-1")
+        self.assertEqual(names["L20"], "L20 stamp=true")
+        self.assertEqual(names["L23"], "L23 dynamicsPressureSizeCurve=4 points")
+        self.assertEqual(names["M01"], "M01 rendering max=0 mod=0 rec=1")
+        self.assertEqual(names["M07"], "M07 plotSpacing=0.25 plotSpacingVersion=0")
+        self.assertEqual(names["M16"], "M16 shapeCount=0.0625")
+        self.assertEqual(names["M18"], "M18 shapeAngle=1.5708")
+        self.assertEqual(len(set(names.values())), 45)
+        for name in names.values():
+            self.assertRegex(name, r"^[LM]\d\d \S")
+
+    def test_the_scratch_brushes_are_the_designs_f3(self):
+        rows = {row[0]: row for row in dt.SCRATCH}
+        self.assertEqual(list(rows), ["S1", "S2", "S3", "S4", "S5", "S6"])
+        self.assertEqual({code: row[2] for code, row in rows.items()},
+                         {"S1": "M220", "S2": "M220", "S3": "E4", "S4": "M220", "S5": "M220", "S6": "M220"})
+        self.assertEqual(rows["S1"][3:6], ("disc", "speckle", True))
+        self.assertEqual(rows["S2"][3:6], ("disc", "speckle", False))
+        self.assertEqual(rows["S3"][3:6], ("disc", "speckle", True))
+        self.assertEqual(rows["S4"][3:5], ("oval", "big-speckle"))
+        self.assertEqual(rows["S5"][3:7], (None, None, False, False), "no PNG at all")
+        self.assertEqual([code for code, row in rows.items() if row[6]], ["S6"])
+        name = rows["S4"][1]
+        self.assertGreaterEqual(len(name), 16)
+        self.assertTrue(name.endswith(" ") and not name.isascii())
+        self.assertEqual(dt.SCRATCH_NAME, "ROSW 3 Scratch & Ünï \U0001f4a7")
+        self.assertEqual((dt.EDITS_NAME, dt.EDITS_FILE, dt.SCRATCH_FILE),
+                         ("ROSW 2 Edits", "ROSW-2-edits.brushset", "ROSW-3-scratch.brushset"))
+        self.assertEqual({kind: size for kind, (_, *size) in dt.TEXTURES.items()},
+                         {"disc": [1024, 1024], "speckle": [1024, 1024], "oval": [600, 300],
+                          "big-speckle": [2048, 2048], "square": [512, 512]})
+
+    def test_value_text(self):
+        for value, text in ((True, "true"), (False, "false"), (3, "3"), (0.25, "0.25"), (1.0, "1"),
+                            (-1.0, "-1"), (0.0625, "0.0625"), (1.5708, "1.5708"),
+                            ({"points": [[0, 0], [1, 1]]}, "2 points")):
+            self.assertEqual(dt.value_text(value), text)
+
+
+class TheImages(unittest.TestCase):
+    """The images sitting 2 makes, read back with fixtures' own PNG reader."""
+
+    def test_small_images_are_what_they_say(self):
+        with mock.patch.dict(dt.TEXTURES, SMALL_TEXTURES), mock.patch.object(dt, "_MADE", {}):
+            disc = fixtures.read_png(dt.texture("disc"))
+            oval = fixtures.read_png(dt.texture("oval"))
+            grain = fixtures.read_png(dt.texture("speckle"))
+            square = fixtures.read_png(dt.texture("square"))
+        self.assertEqual((disc["width"], disc["height"], disc["mode"]), (16, 16, "L"))
+        pixels = disc["pixels"]
+        self.assertEqual(pixels[8 * 16 + 8], 255, "white in the middle: white is paint")
+        self.assertEqual(pixels[0], 0, "black at the corner")
+        self.assertEqual((oval["width"], oval["height"]), (12, 6))
+        self.assertTrue(set(grain["pixels"]) <= set(range(110, 256)))
+        self.assertGreater(len(set(grain["pixels"])), 20)
+        self.assertEqual((square["pixels"][0], square["pixels"][4 * 8 + 4]), (0, 255))
+
+    def test_the_real_sizes_and_chunks(self):
+        import png_io
+        for kind in ("disc", "speckle", "oval", "big-speckle", "square"):
+            info = png_io.png_info(dt.texture(kind))
+            _, width, height = dt.TEXTURES[kind]
+            self.assertEqual((info["width"], info["height"], info["bit_depth"], info["color_type"]),
+                             (width, height, 8, 0), kind)
+            self.assertEqual([c for c in info["chunks"] if c != "IDAT"], ["IHDR", "IEND"], kind)
+        thumb = png_io.png_info(dt.thumbnail())
+        self.assertEqual((thumb["width"], thumb["height"], thumb["color_type"]), (1060, 324, 6))
+        self.assertEqual([c for c in thumb["chunks"] if c != "IDAT"], ["IHDR", "sRGB", "pHYs", "IEND"])
+        self.assertEqual(dt.texture("speckle"), dt.png_io.write_png(1024, 1024, "L", dt.speckle(1024, 1024, "speckle")),
+                         "the same bytes every time")
+        alpha = dt.stroke_alpha()
+        self.assertEqual(len(alpha), 1060 * 324)
+        self.assertTrue(0 < alpha.count(255) < len(alpha) // 2)
+
+
+class Building2(Sitting2Case):
+    def setUp(self):
+        super().setUp()
+        self.fill2()
+
+    def test_it_writes_nothing_and_is_complete(self):
+        before = fixtures.tree_digest(self.tmp)
+        build = self.build2()
+        self.assertEqual(fixtures.tree_digest(self.tmp), before)
+        self.assertTrue(build.complete)
+        self.assertEqual((len(build.edits), len(build.scratch), build.left_out), (45, 6, []))
+        self.assertEqual(dt.refusal_2(build), "")
+
+    def test_the_donors_are_chosen_by_kind(self):
+        build = self.build2()
+        self.assertEqual({role: (pick.candidate.name, pick.tier) for role, pick in build.picks.items()},
+                         {"L": ("Steady", 0), "M": ("Hard", 0), "S5": ("Soft Brush", 0)})
+        self.assertEqual(build.shape_name, fixtures.BUNDLED_SHAPE)
+        self.assertEqual(build.donors["M"].candidate.container, "official/procreate-1/procreate-1.brushset")
+        # Donor L is chosen by the rule of sitting 1's member 2.
+        picks, _ = dt.choose(build.scan.candidates)
+        self.assertEqual(picks[1].candidate.archive_sha256, build.donors["L"].candidate.archive_sha256)
+
+    def test_each_edit_is_its_donor_with_only_the_named_keys_and_its_name_changed(self):
+        build = self.build2()
+        donors = {"L": self.b2.steady, "M": self.b2.hard}
+        for edit in build.edits:
+            donor = donors[edit.donor]
+            before, after = resolved(donor.archive), resolved(edit.folder.archive)
+            self.assertEqual(name_of(after), edit.name, edit.code)
+            self.assertEqual(changed_keys(before, after), sorted(set(edit.changed) | {"name"}), edit.code)
+            for key in edit.unchanged:
+                self.assertEqual(before[key], after[key], edit.code)
+            # Every other file is the donor's, byte for byte; the thumbnail only on L00 and M00.
+            members = dict(edit.folder.pairs())
+            for path, data in donor.members:
+                if path == fixtures.THUMBNAIL:
+                    self.assertEqual(members.get(path), data if edit.code in ("L00", "M00") else None, edit.code)
+                elif path != fixtures.ARCHIVE:
+                    self.assertEqual(members[path], data, (edit.code, path))
+            self.assertEqual(set(members) - {p for p, _ in donor.members}, set(), edit.code)
+            states = {row["path"]: row["state"] for row in edit.plan}
+            self.assertEqual(states[fixtures.ARCHIVE], "re-encoded")
+            self.assertEqual({states[p] for p in (fixtures.SHAPE, fixtures.GRAIN)}, {"verbatim"})
+
+    def test_the_values_the_names_say(self):
+        edits = self.edits(self.build2())
+        values = resolved(edits["L02"].folder.archive)
+        self.assertEqual(struct_f32(values["plotSpacing"][1]), struct_f32(0.1))
+        self.assertEqual(resolved(edits["L09"].folder.archive)["dynamicsRenderType"], ("int", 3))
+        self.assertEqual(resolved(edits["L20"].folder.archive)["stamp"], ("bool", True))
+        blend = resolved(edits["L11"].folder.archive)
+        self.assertEqual((blend["blendMode"], blend["extendedBlend"]), (("int", 3), ("int", 3)))
+        curve = resolved(edits["L23"].folder.archive)["dynamicsPressureSizeCurve"]
+        self.assertEqual([point[1] for point in curve["points"]["NS.objects"]],
+                         ["{0.000000, 0.000000}", "{1.000000, 1.000000}", "{0.250000, 0.550000}",
+                          "{0.600000, 0.800000}"])
+        rendering = resolved(edits["M04"].folder.archive)
+        self.assertEqual([rendering[key] for key in dt.RENDERING_KEYS],
+                         [("bool", True), ("bool", True), ("bool", False)])
+        self.assertEqual(resolved(edits["M14"].folder.archive)["grainBlendMode"], ("int", 10))
+
+    def test_a_value_the_donor_already_holds_is_listed_as_unchanged(self):
+        edits = self.edits(self.build2())
+        # The fixture holds dynamicsRenderType 0 and blendMode 0: so does L06.
+        self.assertEqual((edits["L06"].changed, edits["L06"].unchanged), ([], ["dynamicsRenderType"]))
+        self.assertEqual((edits["L07"].changed, edits["L07"].unchanged), (["dynamicsRenderType"], []))
+        self.assertEqual(edits["M08"].unchanged, ["plotSpacingVersion"], "the fixture's version is 1")
+        self.assertIn("(the original's own value)", self.build2().checklist)
+
+    def test_the_edits_set_reads_back(self):
+        build = self.build2()
+        entries = entries_of(build.edits_bytes)
+        plist = plistlib.loads(entries[-1][1])
+        self.assertEqual(entries[-1][0], "brushset.plist")
+        self.assertEqual(list(plist), ["brushes", "name"])
+        self.assertEqual(plist["name"], "ROSW 2 Edits")
+        self.assertEqual(plist["brushes"], [edit.uuid for edit in build.edits])
+        for folder in plist["brushes"]:
+            self.assertRegex(folder, fixtures.UUID_PATTERN)
+        self.assertEqual(len(set(plist["brushes"])), 45)
+        for edit in build.edits:
+            self.assertEqual(folder_of(build.edits_bytes, edit.uuid),
+                             [(m.path, m.data) for m in container.canonical_order(edit.folder.members)])
+
+    def test_the_scratch_brushes(self):
+        build = self.build2()
+        members = self.scratch(build)
+        self.assertEqual(list(members), ["S1", "S2", "S3", "S4", "S5", "S6"])
+        paths = {code: member.folder.paths() for code, member in members.items()}
+        self.assertEqual(paths["S1"], ["Brush.archive", "Shape.png", "Grain.png", "QuickLook/Thumbnail.png"])
+        self.assertEqual(paths["S2"], ["Brush.archive", "Shape.png", "Grain.png"])
+        self.assertEqual(paths["S3"], paths["S1"])
+        self.assertEqual(paths["S5"], ["Brush.archive"])
+        self.assertEqual(paths["S6"], paths["S1"] + ["Sub01/Brush.archive", "Sub01/Shape.png", "Sub01/Grain.png"])
+        for code, member in members.items():
+            for path, data in member.folder.pairs():
+                if not path.endswith("Brush.archive"):
+                    continue
+                brush = brush_model.decode(data)
+                self.assertEqual(brush.fidelity, "byte", (code, path))
+                self.assertEqual(brush.era, "E4" if code == "S3" else "M220", (code, path))
+                values = resolved(data)
+                if brush.era == "M220":                 # E4 has no creation date
+                    self.assertEqual(values["creationDate"]["NS.time"], ("float", NOW - NS_EPOCH), code)
+                else:
+                    self.assertNotIn("creationDate", values)
+                self.assertEqual(name_of(values), member.name if "/" not in path else dt.SUB_NAME)
+        s4 = resolved(members["S4"].folder.archive)
+        self.assertEqual(name_of(s4), dt.S4_NAME, "a trailing space and every accent kept")
+        s5 = resolved(members["S5"].folder.archive)
+        self.assertEqual(s5["bundledShapePath"], ("str", fixtures.BUNDLED_SHAPE))
+        self.assertEqual(s5["bundledGrainPath"], ("str", "$null"), "no grain: a nil path, no image")
+        self.assertEqual(members["S1"].folder.get("Shape.png"), dt.texture("disc"))
+        self.assertEqual(members["S4"].folder.get("Grain.png"), dt.texture("big-speckle"))
+        self.assertEqual(members["S6"].folder.get("Sub01/Shape.png"), dt.texture("square"))
+
+    def test_the_scratch_set_name_is_escaped_and_kept(self):
+        build = self.build2()
+        raw = entries_of(build.scratch_bytes)[-1][1]
+        self.assertIn("<string>ROSW 3 Scratch &amp; Ünï \U0001f4a7</string>".encode("utf-8"), raw)
+        self.assertEqual(plistlib.loads(raw)["name"], dt.SCRATCH_NAME)
+
+    def test_every_member_as_a_single_file(self):
+        build = self.build2()
+        members = build.edits + build.scratch
+        self.assertEqual(sorted(build.singles), sorted(member.single for member in members))
+        self.assertIn("singles/L00-name_only.brush", build.singles)
+        self.assertIn("singles/M07-plotSpacing_0.25_plotSpacingVersion_0.brush", build.singles)
+        self.assertIn("singles/S4-Wa_rige_Tonung.brush", build.singles)
+        for member in members:
+            self.assertEqual(entries_of(build.singles[member.single]),
+                             [(m.path, m.data) for m in container.canonical_order(member.folder.members)])
+
+    def test_the_manifest(self):
+        build = self.build2()
+        manifest = build.manifest
+        self.assertEqual((manifest["schema"], manifest["sitting"], manifest["complete"]),
+                         ("rosw-brushes-device-test-2/1", "sitting-2", True))
+        self.assertEqual([d["role"] for d in manifest["donors"]], ["L", "M", "S5"])
+        self.assertEqual(manifest["donors"][0]["source"]["container"], "user/demo-pack/Demo_Set.brushset")
+        self.assertEqual(manifest["donors"][0]["files"],
+                         [{"path": p, "bytes": len(d), "sha256": sha(d)} for p, d in self.b2.steady.members])
+        edits = manifest["sets"]["edits"]["members"]
+        self.assertEqual([m["code"] for m in edits], [s.code for s in dt.LEGACY_SWEEP + dt.MODERN_SWEEP])
+        l03 = edits[3]
+        self.assertEqual((l03["donor"], l03["changes"], l03["changed"], l03["thumbnail"], l03["dropped"]),
+                         ("L", {"plotSpacing": 0.25}, ["plotSpacing"], False, ["QuickLook/Thumbnail.png"]))
+        self.assertEqual(l03["archive"]["sha256"], sha(build.edits[3].folder.archive))
+        # The fixture's spacing is 0.1 already, stored as a 64-bit real: by value, nothing changed.
+        self.assertEqual((edits[2]["changed"], edits[2]["unchanged"]), ([], ["plotSpacing"]))
+        self.assertEqual(edits[0]["dropped"], [])
+        scratch = manifest["sets"]["scratch"]["members"]
+        self.assertEqual(scratch[4]["overrides"], {"bundledShapePath": fixtures.BUNDLED_SHAPE})
+        self.assertEqual(scratch[2]["template"], TEMPLATE_FILES["E4"])
+        files = build.files()
+        self.assertEqual(manifest["file_sha256"],
+                         {path: sha(data) for path, data in files.items() if path != "manifest.json"})
+        self.assertEqual(manifest["written"], sorted(files))
+        self.assertEqual(files["manifest.json"], bc.json_text(manifest).encode("utf-8"))
+        text = json.dumps(manifest)
+        self.assertNotIn(str(self.tmp), text)
+        self.assertNotIn(str(self.tmp).replace("\\", "/"), text)
+        self.assertNotRegex(text, r"20\d\d-\d\d-\d\d")
+
+    def test_two_builds_choose_alike_and_differ_only_in_what_is_drawn_fresh(self):
+        first, second = self.build2(), self.build2()
+        self.assertEqual([e.name for e in first.edits], [e.name for e in second.edits])
+        self.assertEqual([e.folder.archive for e in first.edits], [e.folder.archive for e in second.edits])
+        self.assertEqual([m.folder.pairs() for m in first.scratch], [m.folder.pairs() for m in second.scratch])
+        other = self.build2(new_uuid=uuids(1500))
+        self.assertNotEqual([e.uuid for e in first.edits], [e.uuid for e in other.edits])
+
+
+class Substitutes2(Sitting2Case):
+    def files_without(self, *drop):
+        files = self.b2.files()
+        for name in drop:
+            del files[name]
+        return files
+
+    def test_without_an_m220_donor_the_nearest_kind_stands_in_and_says_so(self):
+        files = self.files_without("official/procreate-1/procreate-1.brushset")
+        files["official/earth/earth.brushset"] = fixtures.brushset_file(
+            "Earth", [modern("Basalt", 133, **in_era("M242"))])
+        self.fill2(files)
+        build = self.build2()
+        pick = build.donors["M"]
+        self.assertEqual((pick.candidate.name, pick.tier), ("Basalt", 1))
+        self.assertIn("It is not the 220-key format", pick.note)
+        self.assertEqual(build.substitutes, ["M"])
+        self.assertFalse(build.complete)
+        self.assertIn("M is a substitute", dt.refusal_2(build))
+        self.assertIn("SUBSTITUTE", dt.render_plan_2(build, self.library, self.out2))
+        self.assertIn("> M: SUBSTITUTE.", build.checklist)
+        self.assertEqual(build.manifest["substitutes"], ["M"])
+        self.assertIs(build.manifest["donors"][1]["as_specified"], False)
+
+    def test_a_change_the_donor_cannot_take_leaves_that_member_out(self):
+        files = self.files_without("user/demo-pack/Demo_Set.brushset")
+        files["user/a/Old.brush"] = fixtures.brush_file(fixtures.make_brush("Old", era="E3", number=134))
+        self.fill2(files)
+        build = self.build2()
+        self.assertEqual(build.donors["L"].tier, 3, "a legacy brush with its own images, not E4")
+        left = {code for code, _, _ in build.left_out}
+        self.assertEqual(left, {"L10", "L11", "L12"}, "E3 has no extendedBlend")
+        self.assertTrue(all("not_in_era" in why for _, _, why in build.left_out))
+        self.assertEqual(len(build.edits), 42)
+        self.assertIn("3 members are left out", dt.refusal_2(build))
+        self.assertEqual([item["code"] for item in build.manifest["left_out"]], ["L10", "L11", "L12"])
+
+    def test_no_brush_names_a_shape_and_s5_is_left_out(self):
+        self.fill2(self.files_without("official/procreate-5/p5-airbrushing.brushset"))
+        build = self.build2()
+        self.assertIsNone(build.shape_pick)
+        self.assertEqual(build.unfilled, ["S5"])
+        self.assertEqual([code for code, _, _ in build.left_out], ["S5"])
+        self.assertEqual([m.code for m in build.scratch], ["S1", "S2", "S3", "S4", "S6"])
+
+    def test_a_name_from_another_set_stands_in_for_the_procreate_5_one(self):
+        files = self.files_without("official/procreate-5/p5-airbrushing.brushset")
+        files["official/procreate-2/p2-misc.brushset"] = fixtures.brushset_file("Misc", [self.b2.soft])
+        self.fill2(files)
+        build = self.build2()
+        self.assertEqual(build.shape_pick.tier, 1)
+        self.assertEqual(build.substitutes, ["S5"])
+
+    def test_no_donor_at_all_is_refused_whatever_the_flags(self):
+        named = fixtures.make_brush("Named", era="E2", number=135, shape="bundled", grain="none")
+        self.fill2({"user/a/Named.brush": fixtures.brush_file(named)})
+        with self.assertRaises(dt.DeviceTestError) as caught:
+            self.build2()
+        self.assertIn("would be empty", str(caught.exception))
+
+    def test_a_missing_template_is_an_environment_problem(self):
+        self.fill2(self.files_without(TEMPLATE_FILES["E4"]))
+        with self.assertRaises(dt.EnvironmentProblem) as caught:
+            self.build2()
+        self.assertIn("E4 new-brush template", str(caught.exception))
+        self.assertEqual(caught.exception.exit_code, 2)
+
+
+class TheChecklist2(Sitting2Case):
+    def setUp(self):
+        super().setUp()
+        self.fill2()
+        self.build = self.build2()
+        self.text = self.build.checklist
+
+    def test_it_is_plain_text_that_names_both_sets(self):
+        self.assertNotIn("\r", self.text)
+        self.assertTrue(self.text.startswith("# Sitting 2: edited brushes and brushes made from nothing\n"))
+        self.assertIn("**ROSW 2 Edits** (45 brushes)", self.text)
+        self.assertIn("**ROSW 3 Scratch & Ünï \U0001f4a7** (6 brushes)", self.text)
+        self.assertIn("Tap `ROSW-2-edits.brushset`", self.text)
+        self.assertIn("Tap `ROSW-3-scratch.brushset`", self.text)
+        self.assertIn("Nothing in these two sets has been opened in\nProcreate yet.", self.text)
+        for claim in ("opens in Procreate", "Procreate accepts", "is known to work", "guaranteed", "will too"):
+            self.assertNotIn(claim, self.text)
+
+    def test_one_row_and_one_screenshot_per_edited_brush(self):
+        rows = re.findall(r"^\| (\d+) \| ([^|]+) \| ([^|]+) \|  \|  \|  \|  \|$", self.text, flags=re.M)
+        self.assertEqual([int(n) for n, _, _ in rows], list(range(1, 46)))
+        self.assertEqual([name.split(" (the")[0] for _, name, _ in rows], [e.name for e in self.build.edits])
+        places = {name.split(" ")[0]: place for _, name, place in rows}
+        self.assertEqual(places["L00"], "About this brush")
+        self.assertEqual(places["L02"], "Stroke path: Spacing")
+        self.assertEqual(places["M04"], "Rendering: Max transfer, Modulated transfer, Recursive mixing")
+        self.assertIn("One Brush Studio screenshot for each brush of ROSW 2 Edits (45 screenshots)", self.text)
+        self.assertIn("our guess at where the changed setting is", self.text)
+        self.assertIn("copies of **Steady**", self.text)
+        self.assertIn("copies of **Hard**", self.text)
+
+    def test_sitting_1_comes_first_and_the_build_command_is_isolated(self):
+        """critique-fidelity §6: without sitting 1's answer, a failed set here
+        cannot say whether our archive or our container is at fault."""
+        before = self.text.index("## Before you start: sitting 1 comes first")
+        self.assertLess(before, self.text.index("## Step 3."))
+        flat = " ".join(self.text[before:].split())
+        self.assertIn("**If ROSW 1 Control does not open, stop there**", flat)
+        self.assertIn("first its known-bad file, then the control set", flat)
+        self.assertIn("`python -I brushes/pipeline/device_tests.py build sitting-2 --confirm`", self.text)
+        self.assertNotIn("`python brushes/", self.text)
+        self.assertNotIn("Sitting 1 asked", self.text)
+
+    def test_one_loose_brush_of_ours_is_tapped_even_when_the_sets_import(self):
+        first = self.build.scratch[0]
+        self.assertEqual(first.code, "S1")
+        self.assertIn("## Step 5b (optional, one tap). A loose brush file of ours", self.text)
+        self.assertIn(f"Even if both sets imported, tap `{first.single}` once.", self.text)
+        self.assertLess(self.text.index("## Step 5b"), self.text.index("## Step 6."))
+        self.assertNotIn("Only needed if a set fails", self.text)
+
+    def test_each_scratch_brush_has_its_question(self):
+        for member in self.build.scratch:
+            self.assertIn(f"- **{member.name.strip()}.** ", self.text)
+        self.assertIn(f"`{fixtures.BUNDLED_SHAPE}`", self.text)
+        self.assertIn("ends in a space", self.text)
+        self.assertIn("Does it show two brushes?", self.text)
+
+    def test_the_return_leg(self):
+        self.assertIn("## Step 6. The return leg: share three things back", self.text)
+        self.assertIn("**a. ROSW 2 Edits.**", self.text)
+        self.assertIn("**b. ROSW 3 Scratch & Ünï \U0001f4a7.** The same.", self.text)
+        self.assertIn("**c. One brand-new, untouched brush.** In the Brush Library, tap the **+**", self.text)
+        self.assertIn("    brushes/device-tests/sitting-2/returned/\n", self.text)
+        self.assertIn("Keep the file names Procreate gives them.", self.text)
+
+
+class TheCommand2(Sitting2Case):
+    def setUp(self):
+        super().setUp()
+        self.fill2()
+
+    def run_main(self, *argv):
+        return self.main(*argv, known_bad=False)
+
+    def test_a_dry_run_prints_the_plan_and_writes_nothing(self):
+        before = fixtures.tree_digest(self.tmp)
+        code, out, err = self.run_main("build", "sitting-2")
+        self.assertEqual((code, err), (0, ""))
+        self.assertTrue(out.rstrip().endswith(DRY_RUN))
+        self.assertIn("Sitting 2: edited brushes and brushes made from nothing", out)
+        self.assertIn("L   as specified  'Steady'", out)
+        self.assertIn("ROSW-2-edits.brushset   \"ROSW 2 Edits\"   45 brushes", out)
+        self.assertEqual(fixtures.tree_digest(self.tmp), before)
+
+    def test_confirm_writes_the_sitting_and_verifies_it(self):
+        code, out, err = self.run_main("build", "sitting-2", "--confirm")
+        self.assertEqual(code, 0, out + err)
+        self.assertIn("WRITTEN   55 files in", out)
+        self.assertIn("VERIFIED   45 edited brushes", out)
+        self.assertTrue((self.out2 / "returned").is_dir())
+        self.assertEqual(list((self.out2 / "returned").iterdir()), [])
+        manifest = json.loads((self.out2 / "manifest.json").read_text(encoding="utf-8"))
+        for relative, digest in manifest["file_sha256"].items():
+            self.assertEqual(sha((self.out2 / relative).read_bytes()), digest, relative)
+        code, out, _ = self.run_main("verify", "sitting-2")
+        self.assertEqual(code, 0, out)
+        self.assertRegex(out, r"L03 plotSpacing=0\.25 +plotSpacing +ok +2 same +none +E4 \w+ +ok +ok")
+        self.assertRegex(out, r"L02 plotSpacing=0\.1 +- \(the donor's own value\) +ok")
+        self.assertRegex(out, r"S6 dual +main M220 byte; Sub01 M220 byte")
+
+    def tamper(self, set_file, change):
+        """Rewrite one built set through zip_writer with `change` applied to its entries."""
+        path = self.out2 / set_file
+        entries = [list(entry) for entry in entries_of(path.read_bytes())]
+        change(entries)
+        path.write_bytes(zip_writer.write_zip([tuple(entry) for entry in entries]))
+
+    def verify_problems(self):
+        code, out, _ = self.run_main("verify", "sitting-2")
+        self.assertEqual(code, 1, out)
+        return out
+
+    def built(self):
+        self.assertEqual(self.run_main("build", "sitting-2", "--confirm")[0], 0)
+        return json.loads((self.out2 / "manifest.json").read_text(encoding="utf-8"))
+
+    def test_verify_catches_a_second_key_changed(self):
+        manifest = self.built()
+        member = manifest["sets"]["edits"]["members"][3]           # L03 plotSpacing=0.25
+        name = f"{member['uuid']}/Brush.archive"
+
+        def change(entries):
+            for entry in entries:
+                if entry[0] == name:
+                    brush = brush_model.decode(entry[1])
+                    entry[1] = brush_model.encode(brush_model.apply_patch(brush, {"maxSize": 0.123})[0])
+        self.tamper("ROSW-2-edits.brushset", change)
+        out = self.verify_problems()
+        self.assertIn("L03: plistlib finds maxSize, name, plotSpacing changed, not plotSpacing, name", out)
+
+    def test_verify_catches_the_named_key_holding_another_value(self):
+        manifest = self.built()
+        member = manifest["sets"]["edits"]["members"][3]           # L03 plotSpacing=0.25
+        name = f"{member['uuid']}/Brush.archive"
+
+        def change(entries):
+            for entry in entries:
+                if entry[0] == name:
+                    brush = brush_model.decode(entry[1])
+                    entry[1] = brush_model.encode(brush_model.apply_patch(brush, {"plotSpacing": 0.3})[0])
+        self.tamper("ROSW-2-edits.brushset", change)
+        out = self.verify_problems()
+        self.assertIn("L03: a key does not hold the value the member's name says", out)
+        self.assertNotIn("L03: plistlib finds", out, "the same keys differ; only the value is wrong")
+
+    def test_verify_catches_a_texture_that_is_not_the_donors(self):
+        manifest = self.built()
+        member = manifest["sets"]["edits"]["members"][5]
+        name = f"{member['uuid']}/Shape.png"
+
+        def change(entries):
+            for entry in entries:
+                if entry[0] == name:
+                    entry[1] = fixtures.make_png(5, 5)
+        self.tamper("ROSW-2-edits.brushset", change)
+        self.assertIn("its files beside the archive are not the donor's", self.verify_problems())
+
+    def test_verify_catches_a_scratch_archive_that_is_not_byte_for_byte(self):
+        manifest = self.built()
+        member = manifest["sets"]["scratch"]["members"][0]
+        name = f"{member['uuid']}/Brush.archive"
+
+        def change(entries):
+            for entry in entries:
+                if entry[0] == name:
+                    entry[1] = fixtures.make_archive("modern", member["name"])
+        self.tamper("ROSW-3-scratch.brushset", change)
+        self.assertIn("decodes with fidelity table, not byte", self.verify_problems())
+
+    def test_verify_catches_a_thumbnail_put_back(self):
+        manifest = self.built()
+        member = manifest["sets"]["edits"]["members"][3]
+
+        def change(entries):
+            at = next(i for i, entry in enumerate(entries) if entry[0].startswith(member["uuid"] + "/"))
+            entries.insert(at + 1, [f"{member['uuid']}/QuickLook/Thumbnail.png", fixtures.make_png(3, 3, "RGBA")])
+        self.tamper("ROSW-2-edits.brushset", change)
+        self.assertIn("it holds a thumbnail", self.verify_problems())
+
+    def test_verify_catches_a_changed_single_and_a_changed_checklist(self):
+        manifest = self.built()
+        single = self.out2 / manifest["sets"]["scratch"]["members"][1]["single"]
+        single.write_bytes(fixtures.brush_file(self.b2.hard))
+        (self.out2 / "CHECKLIST.md").write_text("changed\n", encoding="utf-8", newline="\n")
+        out = self.verify_problems()
+        self.assertIn("does not hold the member's files at its root", out)
+        self.assertIn("CHECKLIST.md is not the file the manifest describes", out)
+
+    def test_verify_catches_a_donor_that_changed_in_the_library(self):
+        self.built()
+        files = self.b2.files()
+        steady = fixtures.make_brush("Steady", number=35, overrides={"maxSize": 2.0})
+        self.put("user/demo-pack/Demo_Set.brushset", fixtures.brushset_file("Demo Set ", [self.b2.jittery, steady]))
+        self.assertTrue(files)
+        self.assertIn("donor L: the library file is no longer what the build read", self.verify_problems())
+
+    def test_verify_with_nothing_built_and_a_sitting_1_manifest(self):
+        code, _, err = self.run_main("verify", "sitting-2")
+        self.assertEqual(code, 2)
+        self.assertIn("no built sitting", err)
+        self.out2.mkdir(parents=True)
+        (self.out2 / "manifest.json").write_text('{"schema": "rosw-brushes-device-test/1"}\n', encoding="utf-8")
+        for name in ("ROSW-2-edits.brushset", "ROSW-3-scratch.brushset"):
+            (self.out2 / name).write_bytes(b"PK")
+        code, _, err = self.run_main("verify", "sitting-2")
+        self.assertEqual(code, 2)
+        self.assertIn("is not a rosw-brushes-device-test-2/1 manifest", err)
+
+    def test_known_bad_belongs_to_sitting_1(self):
+        code, out, err = self.run_main("build", "sitting-2", "--known-bad", str(self.bad))
+        self.assertEqual(code, 2)
+        self.assertIn("--known-bad belongs to sitting-1", err)
+        self.assertEqual(out, "")
+
+    def test_it_will_not_build_over_files_that_came_back(self):
+        self.built()
+        (self.out2 / "returned" / "ROSW 2 Edits.brushset").write_bytes(b"from the iPad")
+        code, _, err = self.run_main("build", "sitting-2")
+        self.assertEqual(code, 1)
+        self.assertIn("holds files", err)
+
+    def test_an_incomplete_build_needs_allow_substitutes(self):
+        (self.library / "official/procreate-5/p5-airbrushing.brushset").unlink()
+        code, out, err = self.run_main("build", "sitting-2", "--confirm")
+        self.assertEqual(code, 1)
+        self.assertIn("sitting 2 is not complete: nothing was found for S5", err)
+        self.assertFalse(self.out2.exists())
+        code, out, err = self.run_main("build", "sitting-2", "--confirm", "--allow-substitutes")
+        self.assertEqual(code, 0, out + err)
+        self.assertIn("INCOMPLETE", out)
+        self.assertEqual(self.run_main("verify", "sitting-2")[0], 1)
+        self.assertEqual(self.run_main("verify", "sitting-2", "--allow-substitutes")[0], 0)
+
+    def test_building_again_replaces_its_own_singles_only(self):
+        first = self.built()
+        keep = self.out2 / "notes-of-mine.txt"
+        keep.write_text("mine\n", encoding="utf-8", newline="\n")
+        stale = self.out2 / "singles" / "Z99-gone.brush"
+        stale.write_bytes(b"x")
+        second = self.built()
+        self.assertNotEqual(first["sets"]["edits"]["members"][0]["uuid"],
+                            second["sets"]["edits"]["members"][0]["uuid"])
+        self.assertTrue(keep.is_file())
+        self.assertTrue(stale.is_file(), "not in the earlier manifest, so not ours to remove")
+
+
+def struct_f32(value):
+    import struct
+    return struct.pack(">f", value)
+
+
 # ── agreement with the rest of the tool ──────────────────────────────────────
 
+@unittest.skipIf(yaml is None, "pyyaml cannot be imported here (an isolated interpreter hides the user's site)")
 class Agreement(unittest.TestCase):
     def setUp(self):
         self.spec = yaml.safe_load((BRUSHES / "spec.yaml").read_text(encoding="utf-8"))
@@ -1655,16 +2450,24 @@ class Agreement(unittest.TestCase):
         for name, value in dt.CAPS.items():
             self.assertEqual(value, declared[name], name)
 
-    def test_the_eras_are_the_declared_ones(self):
+    def test_the_era_is_brush_model_s_and_the_key_count_stand_in_is_gone(self):
+        """F3 "Eras": an era matches only on its exact root key set. The count
+        of keys, which named an era here before brush_model existed, decides
+        nothing now."""
+        for gone in ("ERA_BY_KEYS", "LEGACY_MAX_KEYS"):
+            self.assertFalse(hasattr(dt, gone), gone)
+        self.assertIn("brush_model.detect_era(facts[\"key_names\"])", self.source)
         declared = self.spec["format"]["era_keys"]
-        for era, count in declared.items():
-            self.assertEqual(dt.ERA_BY_KEYS[count], era)
-        self.assertEqual(set(dt.ERA_BY_KEYS.values()), set(declared))
-        self.assertEqual({count for count, era in dt.ERA_BY_KEYS.items() if era == "M220"},
-                         {220, 221, 222, 223})
-        legacy = [count for era, count in declared.items()
-                  if self.spec["format"]["era_family"][era] == "legacy"]
-        self.assertEqual(max(legacy), dt.LEGACY_MAX_KEYS)
+        self.assertEqual({row["id"]: len(row["key_order"]) for row in SCHEMA_ERAS.values()}, declared)
+
+    def test_the_fixtures_modern_key_set_is_the_schemas_m220(self):
+        """Why the tests here may treat a plain modern fixture as an M220 brush:
+        its reconstructed key set is, name for name, the M220 key order of
+        schema/silica_keys.json, which was read off the library. It is the
+        evidence behind fixtures.MODERN_KEYS_VERIFIED being true.)"""
+        self.assertTrue(fixtures.MODERN_KEYS_VERIFIED)
+        self.assertEqual(set(fixtures.modern_keys()), set(SCHEMA_ERAS["M220"]["key_order"]))
+        self.assertEqual(brush_model.detect_era(fixtures.modern_keys())[:2], ("M220", True))
 
     def test_the_header_fields_it_checks_are_the_writers(self):
         self.assertEqual({label: wanted for label, _, wanted in dt.HEADER_FIELDS}, {
@@ -1690,6 +2493,17 @@ class Agreement(unittest.TestCase):
                       self.spec["persistence"]["writers"][f"repo:brushes/{dt.OUT_HOME}/**"])
         self.assertIn("pipeline/zip_writer.py", self.spec["cli"]["library_modules"])
 
+    def test_the_member_rules_and_caps_are_container_s_own(self):
+        """Not a copy kept equal by a test: the very objects container.py holds."""
+        for name in ("CAPS", "JUNK_NAMES", "JUNK_FOLDERS", "EMPTY", "ZIP_MAGIC", "LFS_HEADER", "ZIP_ERRORS"):
+            self.assertIs(getattr(dt, name), getattr(container, name), name)
+        for rule in ("container.list_entries(", "container.check_declared(", "container.sniff(",
+                     "container.parse_plist(", "container.hostile(", "container.read_member(",
+                     "container.read_brushset(", "container.read_brush(", "container.is_junk("):
+            self.assertIn(rule, self.source, rule)
+        for gone in ("def hostile(", "def _junk(", "def _ratio_bomb(", "plistlib.loads(raw)"):
+            self.assertNotIn(gone, self.source, gone)
+
     def test_the_junk_rule_is_the_one_ingest_uses(self):
         import ingest
         self.assertEqual(dt.JUNK_NAMES, ingest.JUNK_NAMES)
@@ -1703,7 +2517,7 @@ class Agreement(unittest.TestCase):
         self.assertIn('sys.path.insert(0, str(Path(__file__).resolve().parent))', self.source)
         self.assertTrue(self.source.rstrip().endswith('if __name__ == "__main__":\n    raise SystemExit(main())'))
         self.assertIn("bc.open_console()", self.source)
-        self.assertIn("python brushes/pipeline/device_tests.py build sitting-1 [--out DIR]", self.source)
+        self.assertIn("python -I brushes/pipeline/device_tests.py build sitting-1 [--out DIR]", self.source)
         self.assertNotIn("python3", self.source)
         self.assertNotIn(b"\r", SCRIPT.read_bytes())
         self.assertEqual(dt.DRY_RUN_LINE, DRY_RUN)
@@ -1734,6 +2548,31 @@ class Agreement(unittest.TestCase):
                          - {"replace"})
         self.assertNotIn("extractall", self.source)
         self.assertNotIn(".extract(", self.source)
+
+
+@unittest.skipUnless(CORPUS and Path(CORPUS).is_dir(),
+                     "opt-in: set ROSW_BRUSHES_CORPUS to the library folder")
+class Corpus(unittest.TestCase):
+    """Sitting 2 built from the real library, by `python -I device_tests.py
+    build sitting-2 --confirm` into a temporary folder, and verified again."""
+
+    def test_sitting_2_is_complete_and_verifies(self):
+        out = fixtures.temp_dir(self) / "sitting-2"
+        command = [sys.executable, "-I", str(SCRIPT), "build", "sitting-2", "--library", CORPUS,
+                   "--out", str(out), "--confirm"]
+        result = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", timeout=1800)
+        self.assertEqual(result.returncode, 0, result.stdout[-4000:] + result.stderr[-2000:])
+        self.assertIn("VERIFIED   45 edited brushes", result.stdout)
+        manifest = json.loads((out / "manifest.json").read_text(encoding="utf-8"))
+        self.assertIs(manifest["complete"], True)
+        self.assertEqual([(d["role"], d["era"], d["as_specified"]) for d in manifest["donors"]],
+                         [("L", "E4", True), ("M", "M220", True), ("S5", "M220", True)])
+        self.assertEqual((len(manifest["sets"]["edits"]["members"]), len(manifest["sets"]["scratch"]["members"])),
+                         (45, 6))
+        again = subprocess.run([sys.executable, "-I", str(SCRIPT), "verify", "sitting-2", "--library", CORPUS,
+                                "--out", str(out)], capture_output=True, text=True, encoding="utf-8", timeout=1800)
+        self.assertEqual(again.returncode, 0, again.stdout[-4000:])
+        print("\n" + again.stdout.strip().splitlines()[-1], file=sys.stderr)
 
 
 if __name__ == "__main__":

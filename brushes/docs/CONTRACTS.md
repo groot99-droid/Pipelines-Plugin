@@ -206,12 +206,24 @@ Other helpers: `open_console()`; `read_text(path)`; `write_text(path, text)`,
 
 Modules, all libraries with no command line of their own: `pipeline/bplist.py`,
 `keyed_archive.py`, `brush_model.py`, `container.py`, `png_io.py`, `gbr.py`, and
-`zip_writer.py`, the one zip writer, which exists today ("Writing" below). The
-one file-level command is `pipeline/brush_file.py` (F11).
+`zip_writer.py`, the one zip writer ("Writing" below). The one file-level
+command is `pipeline/brush_file.py` (F11). All of them exist.
 
 Errors: `CodecError(code, detail)` is the base; `BplistError`, `ArchiveError`,
 `BrushModelError`, `ContainerError`, `LimitExceeded(ContainerError)`,
-`PngError`, `PngUnsupported(PngError)` derive from it.
+`PngError`, `PngUnsupported(PngError)` derive from it. These are defined once,
+in `bplist.py`, and every other codec module imports them from there. Two more
+are defined where they are raised: `png_io.PngLimitExceeded(PngError,
+LimitExceeded)` (code `png_pixels`) and `gbr.GbrError(CodecError)`. The `code`
+of a `LimitExceeded` is always the cap's name in `spec.yaml` `format.caps`.
+
+**Evidence.** Every `Brush.archive` of the library (1,071 entries, 1,040
+distinct, in 112 files) is decoded with fidelity `byte` and rebuild `exact`,
+re-encoded byte for byte, rebuilt from its JSON parameters and the schema alone
+to the same bytes, and exported unchanged as its source bytes; 111 of the 112
+containers are rebuilt byte for byte ("Writing"). That is proof by byte
+identity on real files, under zlib 1.3.1. It proves nothing about what the
+drawing app opens ("Device tests").
 
 ### Model
 
@@ -219,37 +231,88 @@ Errors: `CodecError(code, detail)` is the base; `BplistError`, `ArchiveError`,
 brush_model.decode(data: bytes) -> Brush          encode(b: Brush) -> bytes
 brush_model.from_archive(a) -> Brush              to_archive(b) -> Archive
 brush_model.to_json(b) -> {"schema": "rosw-brushes-model/1", "era", "family", "profile",
-                           "top_order": [...], "root_class": [...], "key_order": [...], "params": {...}}
-brush_model.from_json(obj) -> Brush
+                           "top_order": [...], "root_class": [...], "key_order": [...], "params": {...},
+                           "shared": [[key, ...], ...]}
+brush_model.from_json(obj) -> Brush               # "shared" optional, default []
 brush_model.apply_patch(b, changes, *, mode="strict"|"clamp", allow_unknown=False) -> (Brush, PatchReport)
-brush_model.new_brush(name, *, era="M220", overrides=None, now=None) -> Brush
+brush_model.new_brush(name, *, era="M220", overrides=None, now=None, library=None) -> Brush
+brush_model.load_donor(era="M220", *, library=None) -> Brush
+brush_model.export_state(b) -> "source" | "canonical" | "valid"
+brush_model.is_modified(b) -> bool
 brush_model.detect_era(keys) -> (era_id, exact, missing, extra)
 brush_model.nearest_era(keys) -> era_id           # the era itself on an exact match
+brush_model.family_of(era_or_keys) -> "legacy" | "modern"
 brush_model.validate(b) -> [Issue]                Issue(level, code, key, message)
 brush_model.curve_points(b, key) -> [(x, y)]      set_curve(b, key, points)
-brush_model.census(archives) -> dict
+brush_model.census(source, *, top=6) -> dict      census_columns(result) -> dict
+brush_model.library_archives(library) -> [(label, bytes)]   # "<path under the library> :: <entry name>"
+brush_model.case_base(era, assign=None) -> Brush  # the base of schema/patch_cases.json
 brush_model.load_schema() -> dict                 # TOOL_ROOT/schema/silica_keys.json: never under a data root (F2)
 
 keyed_archive.decode(data, *, verify=True) -> Archive      encode(archive, *, profile=None) -> bytes
-keyed_archive.PROFILES = {"ios_legacy": ..., "ios_modern": ...}
-Archive(top_order, version, archiver, objects, profile, fidelity, source)   # fidelity "byte" | "table"
+keyed_archive.rule_encode(archive, profile) -> bytes       renumber(archive, root_child_order=None) -> Archive
+keyed_archive.PROFILES = {"ios_legacy": ..., "ios_modern": ...}     DEFAULT_PROFILE = "ios_modern"
+Archive(top_order, version, archiver, objects, profile, fidelity, source, top)   # fidelity "byte" | "table"
 
 bplist.parse_table(data, *, max_objects=100_000, max_bytes=1 << 20) -> ObjectTable
 bplist.serialize_table(table) -> bytes     bplist.loads(data)     bplist.dumps(value, *, shared)
+bplist.resolve(table, *, max_depth=64, max_objects=100_000)
 ```
+
+Every `brush_model` function that reads the schema also takes `schema=None`
+(the loaded schema by default).
+
+- `Archive.top` is `$top`: `{"root": UID(1)}` in every file seen.
+- When both profiles reproduce an archive (107 of the 1,040 distinct, all
+  legacy and without curves), `decode` records the first in `PROFILES` order,
+  `ios_legacy`. `keyed_archive.encode` of a changed archive with no profile,
+  given none, uses `DEFAULT_PROFILE`; `brush_model` always passes one (below).
+- `bplist.serialize_table` reproduces a file only when `table.contiguous` (the
+  plain layout; true for all 1,071 library archives); otherwise it writes the
+  plain layout.
+- **Shared root entries.** Two or more root keys may name one `$objects` entry:
+  the six `saved*` keys always (the shared empty NSArray, which the schema's
+  `share_empty` describes), and in three library archives `bundledShapePath`
+  with `bundledGrainPath` (one string). `keyed_archive` keeps every sharing as
+  read. `to_json` lists, in `shared`, the groups of root keys that hold one
+  entry beyond the schema's own sharing rule; `from_json` takes it (optional,
+  default `[]`), and the JSON path is byte-exact only when it is kept. A key
+  that changes gets an entry of its own and leaves its group.
+- **Hostile graphs.** Turning one archive into forms has one budget, the cap
+  `plist_objects` (100,000, `brush_model.MAX_FORM_VALUES`): every reference
+  followed, field, list item, curve point and array item costs one. A graph
+  that names one entry along many paths raises `LimitExceeded("plist_objects")`
+  in time linear in the cap; it is never made `$opaque`, which is per root key.
+  The most any library archive spends is 61.
 
 - `Brush.params` keeps insertion order, which is the root key order. `to_json`
   repeats it as `key_order`, because JSON written with sorted keys loses it.
-- `decode` re-encodes with each profile and compares with the input. A match
-  sets the profile and `fidelity="byte"`; no match sets `fidelity="table"` and
-  keeps the source bytes.
+- `keyed_archive.decode` re-encodes with each profile and compares with the
+  input. A match sets the profile and `fidelity="byte"`; no match sets
+  `fidelity="table"` and keeps the source bytes.
+- `Brush.fidelity` is `byte` only when `keyed_archive` reproduces the file and
+  the rebuild from the parameters and the schema alone is exact; `table`
+  otherwise; `built` for a brush made by `from_json`. `Brush.rebuild` says how
+  that rebuild compared with the graph read: `exact`, `renumbered` or `kept`.
 - An unmodified archive always exports as its source bytes. A modified one is
-  rule-encoded with its own profile and top order; a `table` archive that is
-  modified uses its family's default profile and raises a warning Issue. A
-  modified archive of an unknown era is rule-encoded and reported as
-  `fidelity: valid`, not canonical.
+  written into the graph that was read and renumbered in the app's encode
+  order, never rebuilt from its parameters, with its own profile and top
+  order. One whose own profile is unknown (`table`) uses its era's profile from
+  the schema (`eras[].profile`), and an `X<count>` archive its family's
+  (`brush_model.FAMILY_PROFILE`), with a warning Issue. (M172 and M173 are
+  modern and use `ios_legacy` in every file, so "the family's default" would be
+  wrong for them.)
+- `export_state(b)`: `source` when nothing changed; `canonical` when written by
+  the rules that reproduce the app's own files (a known era, a key order read
+  from a real file for exactly this key set, a base those rules reproduced or
+  none, and no changed key that now holds an entry at a place in the encode
+  order the schema only guesses, `encode_order.guessed`); `valid` otherwise,
+  with the warning Issue `fidelity_valid`. A modified archive of an unknown era
+  is `valid`, not canonical.
 - A brush is re-exported in the era it was read in. Unknown keys and unknown
-  classes are written back as read.
+  classes are written back as read. `from_json` keeps a value whose type
+  differs from its row (a file may hold one); `validate` flags it
+  `type_mismatch`.
 
 ### Eras
 
@@ -266,7 +329,7 @@ Detected from the root key set, never from the `version` key.
 | `E4` | 101 | legacy |
 | `M172` | 172 | modern |
 | `M173` | 173 | modern |
-| `M220` | 220, or 221 to 223 with optional curve keys | modern |
+| `M220` | 220, or 220 plus any of its 11 optional pressure curves (221 to 223 seen) | modern |
 | `M242` | 242 | modern |
 | `X<count>` | any other key set, named by its key count (`^X[0-9]+$`) | that of its nearest era |
 
@@ -282,9 +345,12 @@ Detected from the root key set, never from the `version` key.
 - The family of an `X<count>` archive is its nearest era's. Nothing else is
   borrowed from that era: an unmodified archive still exports its source bytes,
   and a modified one is rule-encoded and reported `fidelity: valid`.
-- Until `brush_model` exists, `device_tests.py` names an era by key count
-  alone, to choose test members. That is a stand-in, not this rule, and it
-  writes no id into any catalog.
+- `device_tests.py` names a library brush's era with `brush_model.detect_era`
+  over the root keys plistlib reads, and its family with
+  `family_of(nearest_era(keys))`.
+- M220's optional keys are its 11 optional pressure curves (`optional_keys` of
+  its schema row). A key set M220 holds with optional keys in an order never
+  read from a file appends the new key and exports `valid`, not canonical.
 
 Profiles: `ios_legacy`, `ios_modern`.
 
@@ -295,6 +361,21 @@ real donor archive of that era, read from the library when the brush is made;
 only the name, the date and the textures are replaced. A brush may gain a key
 only if the schema lists it as optional for the brush's own era; there is no
 free "add key".
+
+- The donors are `brush_model.NEW_BRUSH_DONORS = {era: {container, entry,
+  archive_sha256}}`, each pinned by the sha256 of its archive: M220 is
+  "Hard Brush" of the official Airbrushing set of Procreate 2, E4 "AN Big Ass
+  Filler & Eraser" of Everything Watercolour. They are chosen as plain brushes,
+  not the app's own untouched new brush, which a device sitting brings back
+  (`returned/`).
+- `now` is Unix seconds (the clock by default). "The textures replaced" means
+  the five `bundled…Path` keys are set to nil; `overrides` (applied by the
+  rules of `apply_patch` in strict mode) may name bundled textures.
+- Errors: `BrushModelError` with `library_missing`, `lfs_pointer`,
+  `donor_mismatch`, `donor_missing`, `bad_era`, `bad_override`.
+- `census(source)` takes a library folder (read through `container.read_any`)
+  or archive bytes. Free-text keys (`name`, `authorName`) are counted and never
+  listed. `census_columns(result)` gives the census columns of the schema (F4).
 
 ### JSON value forms
 
@@ -311,8 +392,18 @@ The catalog, HTTP and MCP all carry these forms.
 | array | a list of numbers |
 | date | `{"time": <seconds since 2001-01-01, 64-bit>}` |
 | unknown class | `{"$class", "$classes", "$fields": [[key, value], ...]}`, kept verbatim |
-| a scalar under a key the schema does not know | `{"$real32": x}`, `{"$real64": x}` or `{"$int": n}` |
+| a scalar under a key the schema does not know, or one stored with another width or type than its key's row (a 64-bit real under a real key, a real under an int key) | `{"$real32": x}`, `{"$real64": x}` or `{"$int": n}` |
+| a real JSON cannot carry: negative zero, NaN, infinity, under any key | `{"$real32": "<hex>"}` or `{"$real64": "<hex>"}`: the stored bytes, big-endian (`"80000000"` is the 32-bit negative zero) |
+| inside `$fields`: text held in place | `{"$inline": text}` |
+| inside `$fields`: a list held in place | `{"$list": [...]}` |
+| inside `$fields`: a reference to a bare number | `{"$ref": <scalar form>}` |
+| a value with no form (an entry that holds itself, one nested deeper than 16, a class entry of another shape) | `{"$opaque": why}`: read-only, written back from the decoded archive; building it from JSON raises `BrushModelError("opaque")` |
 
+- **A real key may hold a tag.** The library has one: P5 Inking `C13F610E…`
+  holds `dynamicsTiltAngle` = `{"$real32": "80000000"}`. Every reader of
+  catalog `settings`, the F5 facets, the F9 numeric filters and the app treat a
+  key's value as a number only when it is one; `brush_model.scalar(form)` opens
+  a tag (hex is turned back into its float).
 - JSON is written with `allow_nan=False`.
 - The canonical text of a real is the shortest decimal that round-trips the
   32-bit float. Equality compares 32-bit patterns.
@@ -333,6 +424,7 @@ PatchReport = {"ok": bool, "era": str,
                "unchanged": [key],
                "warnings":  [{"key", "code"}]}
 rejected codes: unknown_key | wrong_type | not_in_enum | non_finite | read_only | not_in_era | curve_invalid
+                | out_of_range   (strict mode, against a row with "limits_hard": true; no row has one today)
 warning codes:  outside_observed | stale_thumbnail
 ```
 
@@ -340,7 +432,10 @@ warning codes:  outside_observed | stale_thumbnail
   are rounded to 32 bits.
 - A key absent from `changes` is never touched.
 - A change equal to the base value at the 32-bit level is listed in `unchanged`
-  and changes nothing.
+  and changes nothing: a real key whose file stores a 64-bit real keeps it. A
+  key sent back with the value the brush holds is `unchanged` whatever its
+  key, a read-only one included (a client may echo what it read); `read_only`
+  is only for a different value.
 - A value is clamped (`mode="clamp"`) or rejected (`mode="strict"`) against
   `limits` only when the schema row says `"limits_hard": true`. Otherwise it is
   applied and the report warns `outside_observed`: observed ranges are not rules.
@@ -348,27 +443,53 @@ warning codes:  outside_observed | stale_thumbnail
   `{"schema": "rosw-brushes-patch/1", "base_id": <brush_id>|null, "summary": str, "changes": {key: value}}`.
 - Python is the authority (`POST /api/validate-patch`, MCP
   `validate_settings_patch`, both `service.validate_patch`). The app's own
-  check is advisory. Both run the cases in `schema/patch_cases.json`.
+  check is advisory. Both run the cases in `schema/patch_cases.json`: schema
+  `rosw-brushes-patch-cases/1`, cases `{id, about, era, assign, mode,
+  allow_unknown, changes, expect}`, each run against
+  `brush_model.case_base(era, assign)`; `rejected` is compared on `key`,
+  `value` and `code`.
 
 ### Containers
 
 ```
-container.read_any(data, hint="", *, limits=DEFAULT_LIMITS) -> [BrushSet | BrushFolder]
-container.read_brush(data) -> BrushFolder          read_brushset(data) -> BrushSet
-container.write_brush(folder, *, mtime=ZIP_EPOCH) -> bytes
-container.write_brushset(s, *, mtime=ZIP_EPOCH, preserve_order=False) -> bytes
-container.resolve_textures(folder, params) -> {"shape": (bytes|None, source), "grain": (bytes|None, source)}
+container.read_any(data, hint="", *, limits=DEFAULT_LIMITS) -> Found   # a list of BrushSet | BrushFolder; .skipped [(where, why)]
+container.read_brush(data, *, hint="", limits=None) -> BrushFolder
+container.read_brushset(data, *, hint="", limits=None) -> BrushSet
+container.read_path(path, *, limits=None) -> bytes  # a file on disk, refused over the upload cap before it is read
+container.write_brush(folder, *, mtime=ZIP_EPOCH, preserve_order=False, source_dates=False) -> bytes
+container.write_brushset(s, *, mtime=ZIP_EPOCH, preserve_order=False, source_dates=False) -> bytes
+container.resolve_textures(folder, params=None, *, bundled=None, limits=None)
+    -> {"shape": (bytes|None, source), "grain": (bytes|None, source)}     # params None: names read from the folder's archive
+container.identity_inputs(folder) -> (archive, shape, grain, subs)          # fed to identity.content_sha256
+container.member_plan(before, after, *, reencoded=(), drop=()) -> [{"path", "size", "state"}]
 container.new_uuid() -> str                        # upper-case version 4
 container.safe_filename(name) -> str
+container.CAPS (is DEFAULT_LIMITS), JUNK_FOLDERS, JUNK_NAMES, EMPTY, sniff, hostile, is_junk, list_entries,
+    check_declared, read_member, Budget, texture_names, archive_texture_names, parse_plist,
+    render_plist, plist_bytes
 
-BrushSet(name, brushes: [(uuid, BrushFolder)], entry_order, origin, plist_extra: dict)
-BrushFolder(archive, shape, grain, thumbnail, author_picture, signature, sub, reset, extras)
+BrushSet(name, brushes: [(uuid, BrushFolder)], entry_order, origin, plist_extra: dict, plist_order,
+         plist_source, plist_date, plist_form, prefix, warnings, skipped)
+BrushFolder(members=(), *, source_uuid=None, origin="", warnings=None, skipped=None)
+Member(path, data, date_time=None, form=None)
+BrushFolder.from_parts(archive, shape=None, grain=None, thumbnail=None, author_picture=None,
+                       signature=None, sub=None, reset=None, extras=())
 ```
 
-A `BrushFolder` is the folder's members as an ordered list of (path, bytes),
-with the typed views above over it: one `sub` (`Sub01/`), one `reset`
-(`Reset/`), and `extras` for everything else. Identity is `identity.py`'s;
-`container` has no id function.
+A `BrushFolder` is the folder's members, in source order, as `Member(path,
+data, date_time, form)`: the path inside the folder, the bytes, and the date
+and `zip_writer` form the source zip stored it with (None for a member made
+here). `(path, bytes)` pairs are taken too. Typed views read that list and hold
+no copy: `archive`, `shape`, `grain`, `thumbnail`, `author_picture`,
+`signature`, one `sub` (`Sub01/`) and one `reset` (`Reset/`) as BrushFolders,
+`extras` ([(path, bytes)] for everything else), and `secondaries()` ([(name,
+BrushFolder)] for every `SubNN/` that holds a `Brush.archive`, ascending).
+Members change through `set(path, data)`, `remove(path)` and `copy()`.
+`from_parts(...)` builds a folder from its parts in canonical order. In a
+`BrushSet`, `plist_order` is every plist key in the order read, `plist_source`
+the plist's bytes as read, `plist_date` and `plist_form` how the zip stored it,
+and `prefix` the one top folder the set sat in (or ""). Identity is
+`identity.py`'s; `container` has no id function.
 
 ```
 BrushFolder := Brush.archive [Shape.png] [Grain.png] [QuickLook/Thumbnail.png]
@@ -401,9 +522,26 @@ BrushFolder := Brush.archive [Shape.png] [Grain.png] [QuickLook/Thumbnail.png]
   reported as skipped and is not written back.
 - A duplicate entry name: the first wins, with a warning, and the later ones
   are dropped. Stored (uncompressed) entries are accepted.
-- `ingest.py` and `device_tests.py`, which read containers before
-  `container.py` exists, follow these same rules (`JUNK_FOLDERS`, `JUNK_NAMES`
-  and `EMPTY` in each; a test keeps the two spellings equal).
+- `container.py` is the one reader. `ingest.py` takes its rules from it
+  (`CAPS`, `JUNK_FOLDERS`, `JUNK_NAMES`, `EMPTY`, `sniff`, `hostile`, the entry
+  and cap checks), and so does `device_tests.py` (`CAPS`, `JUNK_*`, `EMPTY`,
+  `list_entries`, `check_declared`, `sniff`, `parse_plist`, `hostile`,
+  `read_member`, and `read_brush`/`read_brushset` for a chosen brush); a test
+  keeps their spellings equal to the codec's. `brush_model.library_archives`
+  and the new-brush donor are read through `container.read_any`. A brush folder
+  holding an entry the reader refuses is passed over by `device_tests.py`, and
+  the rest of the file read on.
+- A member the folder's own archive names by `bundledShapePath` or
+  `bundledGrainPath` raises no unknown-member warning.
+- A folder of a set that holds no `Brush.archive` is reported as skipped and
+  is not written back.
+- `brushset.plist` is read under the archive cap (XML by `plistlib`, with
+  entity declarations refused; binary by `bplist`), and must hold `name` (text)
+  and `brushes` (a list of text), else `ContainerError("bad_plist")`.
+- `ContainerError` codes: `lfs_pointer`, `not_a_zip`, `not_a_brush`,
+  `not_a_brushset`, `bad_plist`, `encrypted`, `hostile_name`, `unreadable`,
+  `bad_member`, `bad_folder`, `no_archive`, `unrequested_drop`, `write`. A zip
+  nested past the depth cap is `LimitExceeded("nesting_depth")`, like any cap.
 - The plist's `brushes` array is the only brush order. A folder the plist does
   not list is kept and flagged.
 - Extra plist keys (for example `iconName`) are kept in `plist_extra`, in
@@ -417,12 +555,16 @@ BrushFolder := Brush.archive [Shape.png] [Grain.png] [QuickLook/Thumbnail.png]
 - A secondary folder beyond `Sub01` goes to `extras` with a warning.
 
 **Texture resolution**, once, in `resolve_textures`: `Shape.png`; else the
-folder member named exactly by `bundledShapePath`; else
-`library/bundled/<that name>` (source `bundled-supplied`); else the brush only
-names an image inside the drawing app (source `bundled`). The same for grain,
-where the name `Brush-Preset-Blank.png` is source `blank` and no name and no
-image is `none`. `validate` flags only a `Shape.png` (`Grain.png`) present
-together with a bundled path.
+folder member named exactly by `bundledShapePath` (source `embedded`); else
+`library/bundled/<that name>` (source `bundled-supplied`), when the caller
+passes `bundled`; else the brush only names an image inside the drawing app
+(source `bundled`). The same for grain, where the name `Brush-Preset-Blank.png`
+is source `blank` (only when no member carries that exact name) and no name and
+no image is `none`. A name holding `/` never names a member, and
+`library/bundled/<name>` is found by listing that folder, never by joining the
+name into a path. A `Shape.png` (`Grain.png`) present together with a bundled
+path is reported as an info warning by `brush_file.py inspect` (and by the
+service when it lands); the library has no such brush today.
 
 **Caps** (`spec.yaml` `format.caps` mirrors the code constants)
 
@@ -439,30 +581,51 @@ together with a bundled path.
 | Depth of a property list | 64 |
 | Pixels in one image | 8192 x 8192 |
 
-Exceeding one raises `LimitExceeded`. A container that cannot be read is
-skipped and listed; `--strict` turns that into exit 1.
+Exceeding one raises `LimitExceeded`, whose `code` is the cap's name (the
+`spec.yaml` key). A container that cannot be read is skipped and listed;
+`--strict` turns that into exit 1. `brush_model`'s forms are held to the
+property-list cap as well (Model, "Hostile graphs"), and `png_io` to the pixel
+cap from the header alone.
 
 **Writing**
 
 - **One writer.** Every zip this tool makes is written by
   `zip_writer.write_zip(entries, *, date_time=DEFAULT_DATE_TIME) -> bytes`,
-  where `entries` is `(name, data)` or `(name, data, date_time)` in the order
-  to store them. `container.write_brush` and `write_brushset` call it and write
+  where `entries` is `(name, data)`, `(name, data, date_time)` or `(name, data,
+  date_time, form)` in the order to store them (a `date_time` of None is the
+  call's own). `container.write_brush` and `write_brushset` call it and write
   no zip of their own; nothing uses `zipfile` to write. `zip_writer.check_name`
-  says whether a name can be stored, and `ZipWriteError` is what it raises.
-- What it writes, in every entry: deflate (method 8) as a raw stream made at
-  **zlib level 1** with the default window and memory level; flag bits
-  `0x0006`; `create_system` 0, `create_version` 0, `extract_version` 20;
-  `external_attr` 0; **internal attribute bit 0 set to 1 when the entry's data
-  is text** by zlib's own rule (`zip_writer.is_text`), so `brushset.plist`
-  carries 1 and every archive and image 0; no extra fields, no comment, no
-  directory entries, no zip64, ASCII entry names.
-- These values were read from the 72 files of `library/user/`, and the writer
-  reproduced each of those files byte for byte from its entries and dates.
-  That is not yet shown for the official sets: two of them are reported to hold
-  stored (method 0) entries, which this writer re-writes as deflate. A stored
-  mode and non-ASCII entry names are added only from header values read off a
-  real file.
+  says whether a name can be stored, `form_of(method, flag_bits)` names the
+  form of an entry read from a file (None for one no file has shown), and
+  `ZipWriteError` is what it raises.
+- What it writes, in every entry: `create_system` 0, `create_version` 0,
+  `extract_version` 20; `external_attr` 0; **internal attribute bit 0 set to 1
+  when the entry's data is text** by zlib's own rule (`zip_writer.is_text`), so
+  `brushset.plist` carries 1 and every archive and image 0; no extra fields, no
+  comment, no directory entries, no data descriptor, no zip64, ASCII entry
+  names (every library entry is ASCII and none carries the UTF-8 flag).
+- **Forms** (`zip_writer.FORMS`), read off the library's 3,319 entries:
+
+  | Form | Method | Flag bits | Data | Seen |
+  |---|---|---|---|---|
+  | `fast` | 8 | `0x0006` | raw deflate at **zlib level 1**, default window and memory level | 3,003 entries in 110 files: every user file and 38 official sets |
+  | `normal` | 8 | `0x0000` | raw deflate at zlib level 6 | 216 entries of Earth and Chinese Calligraphy |
+  | `stored` | 0 | `0x0000` | the bytes themselves | 100 entries of the same two sets, every one a zero-byte `.empty` |
+
+  A member read from a file is written back in its own form; a member made
+  here, or one read in a form no file has shown, in `fast` (the default,
+  flag bits `0x0006`). That the speed hint in the flag bits matches the level
+  is inferred from every stream rebuilding byte for byte, not documented.
+- The date (1980, 1, 0, 0, 0, 0) (`zip_writer.ZERO_DATE`, the date field 32
+  and time field 0 those stored `.empty` entries carry) is written as read;
+  every other date that is not a calendar date is refused.
+- **What stands behind it.** Given each file's entry dates
+  (`source_dates=True`) and order (`preserve_order=True`), 111 of the 112
+  library files are rebuilt byte for byte (zlib 1.3.1). Chinese Calligraphy
+  holds each of its 84 `.empty` names twice, stored and then deflated; the
+  reader keeps the first, so its rebuild lacks the 84 later copies, and each of
+  its 193 kept entries has the source's local and central record byte for
+  byte (offset aside).
 - A brush folder is named by an upper-case version-4 UUID. A modified or new
   brush gets a fresh one.
 - Entry order per brush, contiguous: `Brush.archive`, `Shape.png`, `Grain.png`,
@@ -470,15 +633,21 @@ skipped and listed; `--strict` turns that into exit 1.
   `Reset/…`, then other members sorted. `brushset.plist` is last.
   `preserve_order=True` replays the source order.
 - Every source member that the caller did not replace is written back
-  byte-identical, including `.empty` members and unknown files: exactly the
-  member list "Reading" keeps. What a reader dropped (junk, a folder entry, a
-  later duplicate) was never a member, so its absence is not a `dropped` in an
-  export report.
-- The default `mtime` is a fixed constant (`zip_writer.DEFAULT_DATE_TIME`).
+  byte-identical, in the form it was read in, including `.empty` members and
+  unknown files: exactly the member list "Reading" keeps. What a reader dropped
+  (junk, a folder entry, a later duplicate) was never a member, so its absence
+  is not a `dropped` in an export report.
+- The default `mtime` is a fixed constant (`zip_writer.DEFAULT_DATE_TIME`);
+  `source_dates=True` gives each member read from a file its own date.
 - Tests never assert zip bytes: deflate output depends on the zlib build.
 
-`brushset.plist` is XML, UTF-8, LF, tab-indented, with a final newline, keys
-`brushes` then `name` (then any extra keys), and `&`, `<`, `>` escaped:
+A set whose name, folder names and plist keys are what was read writes its
+plist's source bytes. Otherwise `brushset.plist` is written by `plistlib`: XML,
+UTF-8, LF, tab-indented, with a final newline, `&`, `<`, `>` escaped, and the
+keys in the order the source plist held them (Earth and Chinese Calligraphy:
+`brushes`, `iconName`, `name`; the other 59 library plists `brushes`, `name`),
+or `brushes` then `name` for a new set. `plistlib` gives all 61 library plists
+byte for byte:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -498,17 +667,32 @@ skipped and listed; `--strict` turns that into exit 1.
 ### Images
 
 ```
-png_io.Image(width, height, mode, pixels, chunks)      # mode L | LA | RGB | RGBA
+png_io.Image(width, height, mode, pixels, chunks)      # mode L | LA | RGB | RGBA; chunks: chunk names, a run of IDAT named once
 png_io.png_info(data) -> dict                          # header and chunk list only
+png_io.get_chunks(data, *kinds) -> [(name, body)]
 png_io.read_png(data, *, max_pixels=8192 * 8192) -> Image
 png_io.write_png(width, height, mode, pixels, *, level=6, chunks=()) -> bytes
-png_io.to_gray8(img) -> Image                          # luminance x alpha over black
-png_io.write_thumbnail(alpha: bytes) -> bytes          # 1060x324 coverage in, RGBA PNG out
+png_io.to_gray8(img, *, invert=False) -> Image         # luminance x alpha over black
+png_io.write_thumbnail(alpha: bytes, width=1060, height=324) -> bytes   # coverage in, RGBA PNG out
+png_io.alpha_plane, luminance, negative, flatten(img, background), flatten_ink(ink, background=26, foreground=255),
+      crop, tile_crop, center_on, fit_factor, box_reduce, histogram, bbox, border_mean,
+      stretch(img, *, floor=16, permille=995) -> Stretched(image, hi, gain, peak, nonzero)
 png_io.HAVE_PIL: bool                                  # ROSW_BRUSHES_NO_PIL=1 forces the stdlib path
+
+gbr.write_gbr(width, height, mask, *, name="Untitled", spacing=10) -> bytes
+gbr.from_image(img, *, inverted=False, name="Untitled", spacing=10) -> bytes
+gbr.read_gbr(data) -> Gbr(width, height, depth, spacing, name, pixels)
 ```
 
-- Read: 8 and 16 bit, colour types 0, 2, 3, 4, 6, all five filters, not
-  interlaced. An interlaced image raises `PngUnsupported` unless PIL is present.
+- Read: 8 and 16 bit (and 1, 2, 4 for grey and palette), colour types 0, 2, 3,
+  4, 6, all five filters, interlaced or not. The standard library undoes Adam7
+  itself, so no result depends on PIL; `PngUnsupported` is raised only for a
+  critical chunk the reader does not know. Every one of the library's 2,003
+  PNG members is 8-bit and not interlaced; the 1,603 distinct shapes, grains
+  and thumbnails decode to PIL's pixels exactly.
+- An image over the pixel cap raises `png_io.PngLimitExceeded` (code
+  `png_pixels`) from the header alone. The image data is inflated to exactly
+  the size the header gives (`image_data_long` / `image_data_short`).
 - A shape or grain is written as 8-bit grey (colour type 0), not interlaced,
   chunks `IHDR, IDAT, IEND`, filter 0, zlib level 6. White is paint when
   `shapeInverted` is false.
@@ -520,12 +704,22 @@ png_io.HAVE_PIL: bool                                  # ROSW_BRUSHES_NO_PIL=1 f
 - A bundled name is kept verbatim through model, JSON and export. No image is
   ever made up for one.
 
-`pipeline/gbr.py` writes the GIMP `.gbr` form in Python.
+`pipeline/gbr.py` writes and reads the GIMP `.gbr` brush (version 2, 8-bit
+grey). The body is coverage: 255 is paint. Spacing is 1 to 1000, default 10
+(GIMP's export default); it is a parameter, never derived from a brush's
+settings. Errors are `GbrError`. No `.gbr` written here has been loaded in GIMP.
 
 ### Export
 
 One function builds an export for every surface (`service.build_export`); only
-`service.write_export` puts one on disk (F12).
+`service.write_export` puts one on disk (F12). **Until `service.py` exists**,
+`brush_file.py export` builds its export with `brush_file.export_brush` (the
+member plan from `container.member_plan`) and writes it with
+`brush_file.write_export`, the interim one writer of `--out`: through
+`<name>.tmp`, then linked into place, never over an existing file. When
+`service.py` lands, `build_export` reuses `container.member_plan` and
+`brush_file.export_brush`, `write_export` takes over `brush_file.write_export`,
+and MCP `export_brush` and `brush_file.py export` share them.
 
 - The base of an export is always original bytes: a library original, or the
   members the client sends back. Catalog `settings` is read-only data and is
@@ -559,23 +753,46 @@ row: {"key", "type": "real|int|bool|string_ref|data_ref|curve_ref|roll_ref|array
 ```
 
 - `group` is a tab id from F10's list of 14. `section` is the heading inside it.
-- `eras` rows carry the era id, key count, `key_order`, `top_order`, profile and
-  encode family. `classes` gives each class chain and field order.
-- `aliases` names the same setting under another era's key
-  (`dynamicsGlazeFlow` and `dynamicsGlazedFlow`). The stroke engine and the
-  facet code read aliases; neither hard-codes one era's names.
-- `preview` starts as `approx` and becomes `honoured` only with a recorded
-  measurement.
+- `eras` rows carry the era id, `family`, `encode_family`, `profile`, `count`
+  (archives of the library), `key_count`, `key_order`, `top_order`,
+  `root_class` (the root's class chain, which is not in `classes`), `versions`,
+  `optional_keys`, `variants` (`[{key_count, count, key_order}]`, the other key
+  sets of the era read from a file) and `notes`.
+- `classes` gives each class its `chain`, `form`, `fields` and
+  `fields_by_family`, and as it applies `optional`, `resolution` (per family),
+  `share_empty` and `notes`; `$class_entry` gives the field order of a class
+  entry.
+- `encode_order` gives, per family, the order in which the app numbers the
+  root's children, and `"guessed": {"modern": ["bundledHeightPath"]}`: a key
+  nil in every archive, whose place (after `bundledRoughnessPath`) is a guess.
+  An export that gives a guessed key an entry of its own is `valid`, never
+  `canonical` (F3).
+- A `real` row carries `limits` as a slider range; an `int` row carries `enum`
+  (the values the library holds, labelled `Value N`, unverified) and `limits:
+  null`.
+- `aliases` names the same setting under another era's key, of the same type,
+  from both sides (`dynamicsGlazeFlow` and `dynamicsGlazedFlow`, the one pair
+  today). A key replaced by others whose mapping is unknown names them in
+  `replaced_by` and has no alias (`dynamicsRenderType` and the three
+  `rendering*` switches). The stroke engine and the facet code read aliases;
+  neither hard-codes one era's names.
+- `preview` is `approx` or `ignored` (the preview does not model the key: 43
+  rows and 217 today); it becomes `honoured` only with a recorded measurement.
+- `confidence` is `verified` only for what was observed directly (5 rows:
+  `name`, `creationDate`, the two `bundled…Path` keys of shape and grain,
+  `shapeInverted`); labels, groups, sections, enum names and limits are
+  inferred from key names.
 - The codec fills every column. The app may later change only `group`,
   `section`, `label`, `display`, `step`, `hint`, `ai`, `preview`, `advanced`.
 - **How the file is made.** It is authored: no script writes under `schema/`
   (F12). Its census columns (`type`, `eras`, `default`, `observed`, and the
   top-level `eras`, `classes` and `encode_order`) are taken from what
-  `python -I brushes/pipeline/ingest.py census --json` prints. That command
-  writes nothing; the person running it merges its output into the file by
-  hand, and the remaining columns are written by hand. An opt-in corpus test
-  compares the census columns with a fresh census, so a copy that has gone
-  stale fails. "Generated from a census" in the plan means this. A script that
+  `python -I brushes/pipeline/ingest.py census --json` prints under `columns`
+  (`brush_model.census_columns` of `brush_model.census` of the library). That
+  command writes nothing; the person running it merges its output into the
+  file by hand, and the remaining columns are written by hand. An opt-in corpus
+  test (`test_brush_model.RealLibrary`) compares the census columns with a
+  fresh census, so a copy that has gone stale fails. "Generated from a census" in the plan means this. A script that
   wrote the file would be a new writer: it needs a row in F11 and in F12, and
   `--confirm`, before it is written.
 - Bundled texture names and their stand-ins live in
@@ -583,7 +800,8 @@ row: {"key", "type": "real|int|bool|string_ref|data_ref|curve_ref|roll_ref|array
   templates in the schema.
 
 Other files in `schema/`: `facets.json` (F5), `preview_calibration.json` (shared
-by the app and `previews.py`), `patch_cases.json` (F3).
+by the app and `previews.py`), `patch_cases.json` (F3 "Patches"). Of these,
+`silica_keys.json` and `patch_cases.json` exist today.
 
 ## F5. Catalog
 
@@ -1354,7 +1572,7 @@ holds.
 | `pipeline/ingest.py` | `where` \| `adopt <src> [--with-docs] [--confirm]` \| `build [--only S] [--strict]` \| `report` \| `census [--json]` |
 | `pipeline/previews.py` | `render [--only S] [--force] [--no-sheets] [--sheets-only] [--stdlib] [--confirm]` |
 | `pipeline/notes.py` | `write [--only S] [--diff] [--overwrite-generated] [--confirm]` \| `check` |
-| `pipeline/brush_file.py` | `inspect <file>` \| `export --from <id\|file> … --out DIR [--confirm]` \| `roundtrip <file\|dir>` |
+| `pipeline/brush_file.py` | `inspect <file> [--json]` \| `export --from <id\|file> [--brush SEL] [--set NAME] [--change K=V]… [--out DIR] [--json] [--confirm]` \| `roundtrip <file\|dir> [--allow-table]` |
 | `pipeline/device_tests.py` | `build <sitting> [--out DIR] [--known-bad FILE] [--allow-substitutes] [--confirm]` \| `verify <sitting> [--out DIR] [--allow-substitutes]` |
 | `pipeline/app_server.py` | `[--port 8719] [--no-browser] [--dev]` |
 | `pipeline/mcp_server.py` | `[--export-dir D] [--defer-to-project D] [--selftest]` |
@@ -1366,8 +1584,8 @@ Every file `pipeline/*.py` is either a row of this table or one of the library
 modules of `spec.yaml` `cli.library_modules`; a test walks the folder.
 
 This table is the full contract, not what is built. `spec.yaml`
-`build.built_verbs` lists the verbs that exist today: of `ingest.py`, `where`
-and `adopt` (so `build`, `report` and `census` exit 2 until they land).
+`build.built_verbs` lists the verbs that exist today: of `ingest.py`, `where`,
+`adopt` and `census` (so `build` and `report` exit 2 until they land).
 
 - `fetch_base_library.py fetch` is a dry run without `--confirm`. It reads
   `library/sources.json` `official.files`, saves each file as
@@ -1386,7 +1604,10 @@ and `adopt` (so `build`, `report` and `census` exit 2 until they land).
   (`--with-docs` copies documents to `library/user/<pack_id>/_docs/`, which is
   ignored). `build` needs no `--confirm`, and skips every `_docs/` folder and
   every `*.part` file when it scans the library. `where` prints the resolved
-  roots. `census` calls `brush_model.census`, prints, and writes nothing.
+  roots. `census` calls `brush_model.census` on the library (read in memory
+  through `container.read_any`), prints a summary or, with `--json`, the whole
+  census plus its schema columns under `columns` in `brush_common.json_text`,
+  and writes nothing. A missing library or a Git LFS pointer is exit 2.
 - `device_tests.py build <sitting>` chooses the members of a test set from the
   library, builds the sitting's files in memory and, with `--confirm`, writes
   them to `repo:brushes/device-tests/<sitting>/` (or `--out`) and checks them.
@@ -1395,8 +1616,32 @@ and `adopt` (so `build`, `report` and `census` exit 2 until they land).
   not, unless `--allow-substitutes` is given. `verify` reads the built files
   again with `zipfile` alone and compares every member with its library
   source; it exits 1 on any difference, and on a substitute or an empty slot
-  unless `--allow-substitutes`. Sittings today: `sitting-1`.
-- `brush_file.py roundtrip` exits 1 on any byte difference.
+  unless `--allow-substitutes`. Sittings today: `sitting-1`, `sitting-2`.
+  `--known-bad` belongs to sitting 1; given with sitting 2 it is exit 2.
+- `brush_file.py inspect` prints every set and brush a file holds, nested zips
+  included; `--json` prints the same as one object, schema
+  `rosw-brushes-inspect/1`.
+- `brush_file.py export` is a dry run without `--confirm`, and `--confirm`
+  needs `--out` (exit 2 otherwise); `--out` is refused inside `brushes/` and
+  inside the library, catalog and vault roots. `--brush SEL` picks one brush of
+  a set by folder name, 1-based position or exact name; `--change` on a set of
+  several brushes without `--brush` is exit 2. A value in `--change K=V` is
+  read as JSON, and as text when it is not JSON. `--set NAME` wraps the export
+  in a `.brushset` of that name. An unchanged brush from a set keeps its folder
+  name; a changed one, or a loose brush put into a set, gets a fresh one. The
+  file is named `safe_filename(name)` with `.brush` or `.brushset`. With
+  `--json`, stdout is one JSON object holding `dry_run` and `written` (the
+  path, or null), and the dry-run line goes to stderr.
+- `brush_file.py roundtrip` exits 1 on any difference in an archive's bytes or
+  in a member read back from the rebuilt zip: when an archive's unchanged
+  export is not its source bytes, when a byte-fidelity archive is not
+  re-encoded byte for byte, when an archive is of fidelity `table` (unless
+  `--allow-table`, which lists it), when a rebuilt container does not read back
+  as the source's entries (the first of each name, no junk), when a file cannot
+  be read, and when the run found no brush file at all (so a gate cannot pass
+  on an empty folder). A Git LFS pointer is exit 2. Whether the rebuilt zip
+  equals the source file byte for byte is reported, not required: it depends
+  on the zlib build.
 - `brush_search.py index --check` exits 0 when fresh and 1 when stale.
 
 ## F12. Who writes what
@@ -1411,7 +1656,7 @@ and `adopt` (so `build`, `report` and `census` exit 2 until they land).
 | `library/user/**` | `ingest.py adopt --confirm` |
 | `library/official/**`, `library/official/fetch_log.jsonl` | `fetch_base_library.py fetch --confirm` |
 | `repo:brushes/device-tests/<sitting>/**`, except `returned/` | `device_tests.py build --confirm` (`--out DIR` names another folder; inside `brushes/` only `device-tests/` may be written). `returned/` is created empty and is filled by hand, with what comes back from the device |
-| a file in `--export-dir` or `--out` of `brush_file.py` | `service.write_export` only, reached by MCP `export_brush` with `confirm: true` and by `brush_file.py export --confirm` |
+| a file in `--export-dir` or `--out` of `brush_file.py` | `service.write_export` only, reached by MCP `export_brush` with `confirm: true` and by `brush_file.py export --confirm`. Until `service.py` exists, `brush_file.write_export` (reached by `brush_file.py export --confirm`) is the one writer of `--out`: `<name>.tmp`, then linked into place, never over an existing file; `service.write_export` takes it over (F3 "Export") |
 | authored, never generated | `spec.yaml`, `docs/CONTRACTS.md`, `schema/*.json`, `library/sources.json`, `vault/CLAUDE.md`, `vault/_BrushTags/vocabulary.yaml`, each note's `## Notes` |
 
 Agents return text and write no file. Both servers write nothing else. No note
@@ -1525,13 +1770,36 @@ committed (F12 "What is committed"). No document may claim more than these
 results say; while a path is `untested` the wording is
 "has not been opened in Procreate".
 
-- **Only the control set goes to the device.** `ROSW-1-control.brushset` is
-  eight brushes, one per kind of file; five of the eight kinds exist only in
-  the official sets. `build` refuses a set with a stand-in or an empty slot
-  (exit 1, nothing written), and `verify` fails one, unless
-  `--allow-substitutes` is given; `manifest.json` records `complete` and
-  `substitutes`. A sitting spent on an incomplete set answers only part of
-  `container` and nothing of `thumbnail_policy`.
+- **Sitting 1: the control set.** `ROSW-1-control.brushset` is eight
+  brushes, one per kind of file; five of the eight kinds exist only in the
+  official sets. `build` refuses a set with a stand-in or an empty slot (exit
+  1, nothing written), and `verify` fails one, unless `--allow-substitutes` is
+  given; `manifest.json` records `complete` and `substitutes`. A sitting spent
+  on an incomplete set answers only part of `container` and nothing of
+  `thumbnail_policy`.
+- **Sitting 2: edits and scratch brushes**, done in the same session after
+  sitting 1, and stopped if the control set does not open (its checklist says
+  so first). It writes `ROSW-2-edits.brushset` ("ROSW 2 Edits", 45 brushes:
+  donor L, the E4 brush the rule of sitting 1's member 2 picks, and donor M, an
+  M220 brush with its own Shape.png and Grain.png; each is the donor
+  rule-encoded with one setting changed, a setting being one key or the coupled
+  keys `blendMode`/`extendedBlend`, `plotSpacing`/`plotSpacingVersion`, or the
+  three `rendering*` keys; named `NN key=value`; every other file the donor's;
+  thumbnails only on L00 and M00) and `ROSW-3-scratch.brushset` ("ROSW 3
+  Scratch & Ünï 💧", S1 to S6 made by `brush_model.new_brush` with images
+  written by `png_io`), every member also under `singles/` (S1's single is
+  worth one tap even when both sets import: a loose `.brush` we wrote is
+  otherwise untested). `manifest.json` (schema `rosw-brushes-device-test-2/1`)
+  records each member's donor, changes, keys changed by value, and the sha256
+  of every written file. `verify sitting-2` decodes every archive (a scratch
+  archive must be fidelity `byte`), requires by plistlib that each edit differs
+  from its donor only in its name and its changed keys and holds the named
+  values, requires every other file byte-identical to the donor's as the
+  library holds it now, and checks every listed sha256. A substitute donor or
+  shape name, an empty one, or a member left out makes the build incomplete:
+  refused unless `--allow-substitutes`.
+- A checklist names its build command as `python -I
+  brushes/pipeline/device_tests.py build <sitting> --confirm`.
 - The copy of the old designer's malformed file is written as
   `known-bad/KNOWN-BAD_old-designer.brush`, never under the name it came
   with: the brush that comes back from the device is called "Untitled Brush",
@@ -1553,6 +1821,26 @@ independent of the code under test: archives through `plistlib`
 - A fixture archive has the shape of a brush archive, not its exact bytes: it
   decodes as `fidelity="table"`. Byte-exact vectors live in the codec's tests.
 - The legacy key sets (E0 to E4) are the real ones by name. The modern key set
-  is reconstructed; until `fixtures.MODERN_KEYS_VERIFIED` is true, no test may
-  assert that a modern fixture is detected as `M220`.
+  was reconstructed; it equals the schema's M220 key order name for name (read
+  off 392 library archives), which a test holds, so
+  `fixtures.MODERN_KEYS_VERIFIED` is true and a test may assert that a modern
+  fixture is detected as `M220`.
 - Fixture writers refuse a target inside the real `brushes/` folder.
+
+**The real library, opt-in.** Tests that need the real library are skipped
+unless `ROSW_BRUSHES_CORPUS` names a folder (walked recursively;
+`brushes/library` covers both halves), and read it only under an isolated
+interpreter. Gate G1 is three commands from the repository root, each exit 0:
+
+```
+python -m unittest discover -s brushes/pipeline/tests
+ROSW_BRUSHES_CORPUS=brushes/library python -I -m unittest discover -s brushes/pipeline/tests -k RealLibrary -k Corpus
+python -I brushes/pipeline/brush_file.py roundtrip brushes/library
+```
+
+The second must report more than zero tests run: today six classes,
+`test_keyed_archive.RealLibrary`, `test_brush_model.RealLibrary`,
+`test_png_io.RealLibrary`, `test_container.Corpus`, `test_brush_file.Corpus`
+and `test_device_tests.Corpus`. Under `-I` a `pyyaml` installed in the user's
+site is not importable, and the tests that read `spec.yaml` skip; the first
+command runs them.

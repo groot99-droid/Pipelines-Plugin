@@ -226,12 +226,100 @@ class Dates(unittest.TestCase):
         bad = [(1979, 12, 31, 23, 59, 59), (2108, 1, 1, 0, 0, 0), (2026, 0, 1, 0, 0, 0),
                (2026, 13, 1, 0, 0, 0), (2026, 1, 0, 0, 0, 0), (2026, 1, 32, 0, 0, 0),
                (2026, 1, 1, 24, 0, 0), (2026, 1, 1, 0, 60, 0), (2026, 1, 1, 0, 0, 60),
-               (2026, 1, 1), "2026-01-01", None, (2026, 1, 1, 0, 0, "x")]
+               (2026, 1, 1), "2026-01-01", (2026, 1, 1, 0, 0, "x"), (1980, 1, 0, 0, 0, 2),
+               (1980, 2, 0, 0, 0, 0), (1981, 1, 0, 0, 0, 0)]
         for when in bad:
             with self.assertRaises(zip_writer.ZipWriteError, msg=repr(when)):
                 zip_writer.write_zip([("a", b"a")], date_time=when)
             with self.assertRaises(zip_writer.ZipWriteError, msg=repr(when)):
                 zip_writer.write_zip([("a", b"a", when)])
+        with self.assertRaises(zip_writer.ZipWriteError):
+            zip_writer.write_zip([("a", b"a")], date_time=None)
+
+    def test_an_entry_date_of_none_is_the_default(self):
+        when = (2026, 10, 8, 17, 30, 44)
+        data = zip_writer.write_zip([("a", b"a", None), ("b", b"b", None, None)], date_time=when)
+        self.assertEqual([info.date_time for info in infos(data)], [when, when])
+
+    def test_the_zero_date_the_app_writes_is_stored_as_read(self):
+        """Every stored `.empty` of two official sets carries date field 32 and
+        time field 0: day 0 of January 1980, which zipfile reads back as is."""
+        self.assertEqual(zip_writer.ZERO_DATE, (1980, 1, 0, 0, 0, 0))
+        data = zip_writer.write_zip([(".empty", b"", zip_writer.ZERO_DATE, "stored")])
+        self.assertEqual(infos(data)[0].date_time, zip_writer.ZERO_DATE)
+        _, central, local = raw_headers(data)
+        self.assertEqual((central[0]["date"], central[0]["time"]), (32, 0))
+        self.assertEqual((local[0]["date"], local[0]["time"]), (32, 0))
+
+
+class Forms(unittest.TestCase):
+    """The three forms read off the library's files: fast (the default),
+    normal, and stored. Every other header field is the same in all three."""
+
+    def setUp(self):
+        self.content = b"<plist>\n" + bytes(range(256)) * 40
+        self.entries = [("fast.bin", self.content, None, "fast"),
+                        ("normal.bin", self.content, None, "normal"),
+                        ("stored.bin", self.content, None, "stored"),
+                        (".empty", b"", zip_writer.ZERO_DATE, "stored"),
+                        ("default.bin", self.content)]
+        self.data = zip_writer.write_zip(self.entries)
+
+    def test_each_form_has_its_method_and_flag_bits(self):
+        _, central, local = raw_headers(self.data)
+        wanted = [(8, 6), (8, 0), (0, 0), (0, 0), (8, 6)]
+        self.assertEqual([(entry["method"], entry["flags"]) for entry in central], wanted)
+        self.assertEqual([(head["method"], head["flags"]) for head in local], wanted)
+        for entry, head in zip(central, local):
+            self.assertEqual((entry["made_by"], entry["needs"], head["needs"], entry["external"],
+                              entry["extra_len"], head["extra_len"], entry["comment_len"]),
+                             (0, 20, 20, 0, 0, 0, 0))
+
+    def test_each_form_stores_its_data_its_way(self):
+        _, _, local = raw_headers(self.data)
+        for level, head in ((1, local[0]), (6, local[1]), (1, local[4])):
+            maker = zlib.compressobj(level, zlib.DEFLATED, -zlib.MAX_WBITS)
+            self.assertEqual(head["data"], maker.compress(self.content) + maker.flush())
+        self.assertEqual(local[2]["data"], self.content)
+        self.assertEqual((local[2]["packed"], local[2]["size"]), (len(self.content), len(self.content)))
+        self.assertEqual((local[3]["packed"], local[3]["size"], local[3]["data"]), (0, 0, b""))
+
+    def test_zipfile_reads_every_form_back(self):
+        self.assertEqual(read_back(self.data), [entry[:2] for entry in self.entries])
+        with zipfile.ZipFile(io.BytesIO(self.data)) as archive:
+            self.assertIsNone(archive.testzip())
+            self.assertEqual([info.compress_type for info in archive.infolist()],
+                             [zipfile.ZIP_DEFLATED, zipfile.ZIP_DEFLATED, zipfile.ZIP_STORED,
+                              zipfile.ZIP_STORED, zipfile.ZIP_DEFLATED])
+
+    def test_the_text_bit_is_the_same_in_every_form(self):
+        self.assertEqual([info.internal_attr for info in infos(self.data)], [0, 0, 0, 0, 0])
+        text = zip_writer.write_zip([(f"{form}.txt", b"words\n", None, form) for form in zip_writer.FORMS])
+        self.assertEqual([info.internal_attr for info in infos(text)], [1, 1, 1])
+
+    def test_form_of_names_what_a_reader_sees(self):
+        for name in zip_writer.FORMS:
+            data = zip_writer.write_zip([("a", b"abc", None, name)])
+            info = infos(data)[0]
+            self.assertEqual(zip_writer.form_of(info.compress_type, info.flag_bits), name)
+        for method, flags in ((8, 2), (8, 4), (8, 0x0800 | 6), (8, 1 | 6), (8, 8), (12, 0), (0, 6), (14, 0)):
+            self.assertIsNone(zip_writer.form_of(method, flags), (method, flags))
+
+    def test_a_form_that_is_not_one_of_the_three_is_refused(self):
+        for form in ("deflate", "FAST", 8, b"fast", ("fast",)):
+            with self.assertRaises(zip_writer.ZipWriteError, msg=repr(form)):
+                zip_writer.write_zip([("a", b"a", None, form)])
+
+    def test_a_fixture_zip_rebuilt_in_its_own_forms_is_the_same_bytes(self):
+        """make_zip writes stored and deflated entries the way zipfile does;
+        an entry zipfile stores is one this writer can store the same way."""
+        entries = [("a.bin", b"x" * 100), ("b.bin", b"")]
+        made = fixtures.make_zip(entries, stored=True)
+        with zipfile.ZipFile(io.BytesIO(made)) as archive:
+            forms = [zip_writer.form_of(i.compress_type, i.flag_bits) for i in archive.infolist()]
+        self.assertEqual(forms, ["stored", "stored"])
+        again = zip_writer.write_zip([(n, d, fixtures.ZIP_DATE, f) for (n, d), f in zip(entries, forms)])
+        self.assertEqual(read_back(again), entries)
 
 
 class WhatItRefuses(unittest.TestCase):
@@ -340,7 +428,7 @@ class TheModule(unittest.TestCase):
         self.assertNotIn("main", functions)
         self.assertNotIn("__main__", self.source)
         public = {name for name in functions if not name.startswith("_")}
-        self.assertEqual(public, {"write_zip", "check_name", "is_text"})
+        self.assertEqual(public, {"write_zip", "check_name", "is_text", "form_of"})
 
     def test_it_opens_no_file(self):
         calls = {node.func.id for node in ast.walk(self.tree)
@@ -351,6 +439,10 @@ class TheModule(unittest.TestCase):
         self.assertEqual((zip_writer.METHOD_DEFLATE, zip_writer.FLAG_BITS, zip_writer.EXTRACT_VERSION,
                           zip_writer.CREATE_VERSION, zip_writer.CREATE_SYSTEM, zip_writer.EXTERNAL_ATTR,
                           zip_writer.DEFLATE_LEVEL), (8, 0x0006, 20, 0, 0, 0, 1))
+        self.assertEqual(zip_writer.METHOD_STORED, 0)
+        self.assertEqual(zip_writer.FORMS, {"fast": (8, 0x0006, 1), "normal": (8, 0x0000, 6),
+                                            "stored": (0, 0x0000, None)})
+        self.assertEqual(zip_writer.DEFAULT_FORM, "fast")
 
     def test_the_file_is_utf8_with_line_feeds(self):
         raw = (PIPELINE / "zip_writer.py").read_bytes()

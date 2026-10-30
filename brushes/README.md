@@ -3,12 +3,15 @@
 A library of Procreate brushes with tag-based search, and a brush designer that
 reads and writes the brush file format.
 
-**This tool is under construction.** What exists today is the foundation: the
-contract, the identity and path modules, the zip writer, the two scripts that
-fill the library, a stub of the MCP server, the builder of the first device
-test, the test fixtures, the library manifest, and the old designer copied in
-as it was received. There is no search, no catalog and no working export yet,
-and nothing here has written a file that Procreate is known to open.
+**This tool is under construction.** What exists today is the foundation and
+the file codec: the contract, the identity and path modules, the zip writer,
+the codec that reads and writes brush files byte for byte (property lists,
+archives, the brush model and its settings schema, containers, PNG and `.gbr`
+images), the two scripts that fill the library, a stub of the MCP server, the
+builder of the first two device tests, the test fixtures, the library manifest,
+and the old designer copied in as it was received. There is no search and no
+catalog yet, and nothing here has written a file that Procreate is known to
+open.
 
 ## What is here now
 
@@ -18,15 +21,24 @@ and nothing here has written a file that Procreate is known to open.
 | `docs/CONTRACTS.md` | the same contract in prose, with the exact shapes every module is written to |
 | `pipeline/identity.py` | how a brush, a texture and a brushset are named |
 | `pipeline/brush_common.py` | where the data lives, the exit codes, safe file writes |
-| `pipeline/zip_writer.py` | the one zip writer: it writes a container with the header values Procreate's own files carry |
+| `pipeline/zip_writer.py` | the one zip writer: it writes a container in the three forms Procreate's own files carry |
+| `pipeline/bplist.py` | binary property lists, read and written byte for byte; the codec's error classes |
+| `pipeline/keyed_archive.py` | the archive graph inside `Brush.archive`: decode, re-encode with either of the two profiles, renumber |
+| `pipeline/brush_model.py` | a brush as settings: eras, JSON forms, patches, new brushes from a pinned donor, the census |
+| `pipeline/container.py` | the one reader of `.brush` and `.brushset` files, under the caps; writes them back through `zip_writer.py` |
+| `pipeline/png_io.py` | PNG read and write in the standard library (PIL only makes it faster) |
+| `pipeline/gbr.py` | the GIMP `.gbr` brush, read and write |
+| `pipeline/brush_file.py` | `inspect`, `export` and `roundtrip` of one brush file or a folder of them. `export` writes only with `--confirm` and `--out` |
 | `pipeline/fetch_base_library.py` | `list`, `fetch` and `verify` for the 40 official sets. `fetch` downloads only with `--confirm`, and only from the one host |
-| `pipeline/ingest.py` | `where`, and `adopt`, which copies a folder of brush files into `library/user/`. The catalog verbs (`build`, `report`, `census`) are not built yet |
+| `pipeline/ingest.py` | `where`; `adopt`, which copies a folder of brush files into `library/user/`; and `census`, which counts what the library's archives hold and writes nothing. The catalog verbs (`build`, `report`) are not built yet |
 | `pipeline/mcp_server.py` | a stub of the MCP server: the protocol and one tool, `library_status`. Registered in the repository's `.mcp.json` |
-| `pipeline/device_tests.py` | `build` and `verify` for the first sitting with the iPad: a control set of eight library brushes in a container of ours |
+| `pipeline/device_tests.py` | `build` and `verify` for the two sittings with the iPad: sitting 1, a control set of eight library brushes in a container of ours; sitting 2, brushes we edited and brushes we made from nothing |
 | `pipeline/tests/` | the tests, and `fixtures.py`, which builds synthetic brush files for them |
+| `schema/silica_keys.json` | every archive key once: its type, eras, defaults, observed values, and the inferred labels (F4) |
+| `schema/patch_cases.json` | the settings-patch cases Python and the app both run |
 | `library/sources.json` | which packs the library holds and where the 40 official sets come from |
 | `library/user/` | the author's 19 packs, adopted: 72 brush files |
-| `library/official/` | not there until the official sets are fetched (below) |
+| `library/official/` | the 40 official sets, fetched by `fetch_base_library.py fetch --confirm` (below) |
 | `device-tests/` | one folder per sitting, written by `device_tests.py build --confirm` |
 | `app/` | the earlier designer, unchanged, byte for byte as it was received (nine of its files have CRLF line endings, and `.gitattributes` keeps them so). It cannot import a brush file, and what it exports is not in the real brush format |
 
@@ -63,7 +75,7 @@ in code first, then declared there, and the tests fail when the two disagree.
 - What the drawing app accepts is recorded in `spec.yaml` under `device_test`,
   one answer per kind of file. Every answer is `untested` today.
 
-## Filling the library, and the first device test
+## Filling the library, and the device tests
 
 ```
 python -I brushes/pipeline/fetch_base_library.py list
@@ -72,6 +84,8 @@ python -I brushes/pipeline/fetch_base_library.py fetch --confirm    # downloads 
 python -I brushes/pipeline/fetch_base_library.py verify
 python -I brushes/pipeline/device_tests.py build sitting-1 --confirm
 python -I brushes/pipeline/device_tests.py verify sitting-1
+python -I brushes/pipeline/device_tests.py build sitting-2 --confirm
+python -I brushes/pipeline/device_tests.py verify sitting-2
 ```
 
 The official sets are not on disk until `fetch --confirm` has run. Five of the
@@ -88,3 +102,12 @@ python -m unittest discover -s brushes/pipeline/tests
 
 The tests build their data in temporary folders. They never read the real
 library, and they need neither the network nor Git LFS content.
+
+Tests that need the real library are opt-in, and run under an isolated
+interpreter. With the round trip of every library file, they make gate G1
+(`docs/CONTRACTS.md`, "Test fixtures"):
+
+```
+ROSW_BRUSHES_CORPUS=brushes/library python -I -m unittest discover -s brushes/pipeline/tests -k RealLibrary -k Corpus
+python -I brushes/pipeline/brush_file.py roundtrip brushes/library
+```

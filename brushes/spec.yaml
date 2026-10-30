@@ -41,12 +41,21 @@ build:
     - "docs/CONTRACTS.md"
     - "pipeline/identity.py"
     - "pipeline/brush_common.py"
-    - "pipeline/zip_writer.py"              # the one zip writer; container.py will call it
+    - "pipeline/zip_writer.py"              # the one zip writer, in three forms; container.py calls it
+    - "pipeline/bplist.py"                  # binary property lists; the codec's error classes
+    - "pipeline/keyed_archive.py"           # NSKeyedArchiver graphs: decode, the two profiles, renumber
+    - "pipeline/brush_model.py"             # Brush: eras, JSON forms, patches, new brushes, census
+    - "pipeline/container.py"               # the one reader of .brush and .brushset; writes through zip_writer
+    - "pipeline/png_io.py"                  # PNG read and write, standard library (PIL optional, never required)
+    - "pipeline/gbr.py"                     # the GIMP .gbr brush, read and write
+    - "pipeline/brush_file.py"              # inspect, export, roundtrip
     - "pipeline/fetch_base_library.py"      # list, fetch, verify
-    - "pipeline/ingest.py"                  # where and adopt only; build, report and census are not built
+    - "pipeline/ingest.py"                  # where, adopt and census; build and report are not built
     - "pipeline/mcp_server.py"              # a stub: the protocol and one tool, library_status
-    - "pipeline/device_tests.py"            # build and verify for sitting 1
+    - "pipeline/device_tests.py"            # build and verify for sittings 1 and 2
     - "pipeline/tests/fixtures.py"
+    - "schema/silica_keys.json"             # every archive key, its eras and classes (F4)
+    - "schema/patch_cases.json"             # the patch cases Python and the app both run (F3)
     - "library/sources.json"
     - "library/README.md"
     - "app/index.html"                      # the designer as received; not yet rebuilt
@@ -54,8 +63,9 @@ build:
   # existing script may be planned too: cli.scripts lists the full contract.
   built_verbs:                              # checked against each script's own parser
     "pipeline/fetch_base_library.py": [list, fetch, verify]
-    "pipeline/ingest.py": [where, adopt]
+    "pipeline/ingest.py": [where, adopt, census]
     "pipeline/device_tests.py": [build, verify]
+    "pipeline/brush_file.py": [inspect, export, roundtrip]
   note: "Nothing here has written a file the drawing app is known to open. See device_test."
 
 # ── rules every script follows ───────────────────────────────────────────────
@@ -210,7 +220,7 @@ format:
   era_keys: {E0: 52, E1: 61, E1b: 62, E1c: 63, E2: 67, E3: 88, E4: 101, M172: 172, M173: 173, M220: 220, M242: 242}   # root keys, $class included
   era_family: {E0: legacy, E1: legacy, E1b: legacy, E1c: legacy, E2: legacy, E3: legacy, E4: legacy,
                M172: modern, M173: modern, M220: modern, M242: modern}
-  era_variants: "an M220 archive may carry one to three optional curve keys (221 to 223 keys) and is still M220"
+  era_variants: "an M220 archive may carry any of its 11 optional pressure curves (schema optional_keys; 221 to 223 keys seen) and is still M220"
   unknown_era: {id: "X<count>", pattern: "^X[0-9]+$", note: "a key set no era matches, named by its key count"}
   era_match: "exact root key set only (M220: its 220 keys plus any of its optional curve keys). Anything else is X<count>; its family, and the missing and extra keys reported, are those against the nearest era (smallest symmetric difference; the earlier era on a tie)"
   profiles: [ios_legacy, ios_modern]        # the two string-sharing rules of the one encoder
@@ -234,6 +244,12 @@ format:
     plist_depth: 64
     png_pixels: 67108864                    # 8192 x 8192
   untrusted: "a zip is opened in memory and never extracted by entry name"
+  zip_forms:                                # == zip_writer.FORMS: (method, flag bits, zlib level), read off the library's 3,319 entries
+    fast: {method: 8, flag_bits: 6, level: 1}       # 3,003 entries in 110 files; the form of every member made here
+    normal: {method: 8, flag_bits: 0, level: 6}     # 216 entries of Earth and Chinese Calligraphy
+    stored: {method: 0, flag_bits: 0, level: null}  # their 100 zero-byte .empty entries
+  zip_default_form: fast                    # == zip_writer.DEFAULT_FORM; a member read from a file keeps its own form
+  zip_zero_date: [1980, 1, 0, 0, 0, 0]      # == zip_writer.ZERO_DATE: written as read; any other non-calendar date is refused
 
 device_test:
   procreate_version: null
@@ -443,7 +459,9 @@ cli:
     "pipeline/brush_file.py":
       verbs: [inspect, export, roundtrip]
       confirm: [export]
-      flags: {export: ["--from", "--out", "--confirm"]}
+      flags: {inspect: ["--json"],
+              export: ["--from", "--brush", "--set", "--change", "--out", "--json", "--confirm"],
+              roundtrip: ["--allow-table"]}   # export --confirm needs --out (exit 2 without it)
     "pipeline/device_tests.py":
       verbs: [build, verify]
       confirm: [build]
@@ -484,11 +502,12 @@ persistence:
     "library/user/**": ["pipeline/ingest.py adopt --confirm"]
     "library/official/** and library/official/fetch_log.jsonl": ["pipeline/fetch_base_library.py fetch --confirm"]
     "repo:brushes/device-tests/**": ["pipeline/device_tests.py build --confirm"]   # returned/ is filled by hand
-    "a file in --export-dir or --out": ["service.write_export, reached by `brush_file.py export --confirm` and MCP `export_brush` with confirm true"]
+    "a file in --export-dir or --out": ["service.write_export, reached by `brush_file.py export --confirm` and MCP `export_brush` with confirm true",
+                                        "brush_file.write_export until service.py exists: the one writer of --out, reached by `brush_file.py export --confirm`; <name>.tmp then linked into place, never over an existing file"]
   no_confirm: ["pipeline/ingest.py build", "vault/tools/brush_search.py index"]   # generated and rebuildable
   authored: ["spec.yaml", "docs/CONTRACTS.md", "schema/*.json", "library/sources.json", "vault/CLAUDE.md",
              "vault/_BrushTags/vocabulary.yaml", "the `## Notes` section of each note"]
-  schema_files: "authored. No script writes under schema/. The census columns of silica_keys.json are merged in by hand from the printed output of `ingest.py census --json`; an opt-in corpus test compares them with a fresh census"
+  schema_files: "authored. No script writes under schema/. The census columns of silica_keys.json are merged in by hand from the printed output of `ingest.py census --json` (its `columns`: brush_model.census_columns); an opt-in corpus test compares them with a fresh census"
   # The fields of catalog/brushes/<brush_id>.json that depend on what
   # previews.py measured. `previews.py render --confirm` changes these three
   # and no other, through one function in ingest.py, which then reassembles

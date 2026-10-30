@@ -1,12 +1,17 @@
 """Bring brush files into the library.
 
-    python brushes/pipeline/ingest.py where
-    python brushes/pipeline/ingest.py adopt <src> [--with-docs] [--confirm]
+    python -I brushes/pipeline/ingest.py where
+    python -I brushes/pipeline/ingest.py adopt <src> [--with-docs] [--confirm]
+    python -I brushes/pipeline/ingest.py census [--json]
 
 `where` prints the folders every brushes script works on, and whether each
 exists. `adopt` copies the brush files found in a folder (or in one file) into
-library/user/<pack_id>/, one copy of each (docs/CONTRACTS.md, F11 and F12). The
-catalog verbs (`build`, `report`, `census`) are not part of this module yet.
+library/user/<pack_id>/, one copy of each (docs/CONTRACTS.md, F11 and F12).
+`census` counts what the library's archives hold (brush_model.census) and
+prints it, a summary or with --json the whole census and its schema columns
+(brush_model.census_columns), which is what the census columns of
+schema/silica_keys.json are merged from by hand (F4). It writes nothing. The
+catalog verbs (`build`, `report`) are not part of this module yet.
 
 How `adopt` decides what a file is:
 
@@ -38,8 +43,10 @@ file already in the library is left alone; a different file under the same
 name stops the run before anything is written.
 
 Brush files are data from strangers. The size caps of docs/CONTRACTS.md (F3)
-apply to everything read here, and CAPS below repeats them until the file
-codec owns them. Run this as `python -I brushes/pipeline/ingest.py ...`.
+apply to everything read here. The caps, the sniffing and the rules of what is
+a member and what is junk are the file codec's (container.py): this module
+takes them from there and keeps no copy of its own. Run this as
+`python -I brushes/pipeline/ingest.py ...`.
 
 Exit codes: 0 ok, 1 refused or failed, 2 usage or environment.
 Standard library only.
@@ -59,14 +66,16 @@ import shutil
 import sys
 import unicodedata
 import zipfile
-import zlib
 from dataclasses import dataclass, field
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import brush_common as bc  # noqa: E402
+import brush_model  # noqa: E402
+import container  # noqa: E402
 import identity  # noqa: E402
+from bplist import BrushModelError, CodecError, ContainerError  # noqa: E402
 
 SOURCES_NAME = "sources.json"
 SOURCES_SCHEMA = "rosw-brushes-sources/1"
@@ -76,37 +85,29 @@ UNSORTED = "unsorted"
 PART_SUFFIX = ".part"
 SET_SUFFIX = ".brushset"
 BRUSH_SUFFIX = ".brush"
-SET_PLIST = "brushset.plist"
-BRUSH_ARCHIVE = "Brush.archive"
+SET_PLIST = container.SET_PLIST
+BRUSH_ARCHIVE = container.ARCHIVE
 
 MIB = 1024 * 1024
-# The reader's caps (docs/CONTRACTS.md F3; spec.yaml format.caps), by the same names.
-CAPS = {
-    "zip_entries": 5000,                 # entries in one container
-    "archive_bytes": MIB,                # one Brush.archive
-    "entry_bytes": 64 * MIB,             # one inflated entry
-    "total_bytes": 2048 * MIB,           # one container, inflated
-    "ratio": 200,                        # an entry inflating more than 200:1 ...
-    "ratio_min_bytes": 16 * MIB,         # ... and larger than this is refused
-    "nesting_depth": 3,
-    "upload_bytes": 512 * MIB,           # one container file, on disk or nested
-}
+# The reader's caps (docs/CONTRACTS.md F3; spec.yaml format.caps): the codec's
+# own dict, so that the reader and ingest cannot drift apart.
+CAPS = container.CAPS
 
-NESTED_SUFFIXES = (".brush", ".brushset", ".zip")          # `.brushset.zip` ends in `.zip`
+NESTED_SUFFIXES = container.NESTED_SUFFIXES        # `.brushset.zip` ends in `.zip`
 STRIPPED_SUFFIXES = (".brushset.zip", ".brush.zip", ".brushset", ".brush", ".zip")
-ZIP_MAGIC = (b"PK\x03\x04", b"PK\x05\x06")
-LFS_HEADER = b"version https://git-lfs.github.com/spec/v1"
+ZIP_MAGIC = container.ZIP_MAGIC
+LFS_HEADER = container.LFS_HEADER
 LFS_POINTER_MAX = 1024
 # Junk: part of no brush folder, in a zip or on disk (docs/CONTRACTS.md, F3
-# "Reading"). device_tests.py spells the same two sets.
-JUNK_FOLDERS = frozenset({"__macosx"})
-JUNK_NAMES = frozenset({".ds_store", "thumbs.db", "desktop.ini"})
+# "Reading"). The codec's sets; device_tests.py spells the same two.
+JUNK_FOLDERS = container.JUNK_FOLDERS
+JUNK_NAMES = container.JUNK_NAMES
 # A zero-byte placeholder some official sets carry. Inside a zip it is a member
 # of the brush folder it sits in, and is listed like any other entry: only the
 # file codec decides what a member is, and it keeps this one. It never decides
 # what a container is (`sniff`), and a loose one on disk is not a brush file or
 # a document.
-EMPTY = ".empty"
+EMPTY = container.EMPTY
 ARTWORK_SUFFIXES = (".procreate",)
 DOCUMENT_KINDS = (
     ("artwork", ARTWORK_SUFFIXES + (".psd", ".swatches")),
@@ -122,8 +123,7 @@ PLAIN_BLOB_LIMIT = 95 * 1000 * 1000
 DRY_RUN_LINE = "DRY RUN   nothing is written without --confirm."
 
 # What zipfile and zlib raise on a file that is not what it claims to be.
-ZIP_ERRORS = (zipfile.BadZipFile, zipfile.LargeZipFile, zlib.error, EOFError, OSError,
-              RuntimeError, NotImplementedError, ValueError, OverflowError, MemoryError)
+ZIP_ERRORS = container.ZIP_ERRORS
 
 
 class IngestError(Exception):
@@ -261,30 +261,16 @@ def file_sha256(path):
     return digest.hexdigest()
 
 
-def shown_name(info):
-    """An entry's name for people. A zip made on a Mac may hold UTF-8 names
-    without saying so; zipfile then reads them as code page 437."""
-    name = info.orig_filename
-    if not info.flag_bits & 0x800:
-        try:
-            return name.encode("cp437").decode("utf-8")
-        except (UnicodeEncodeError, UnicodeDecodeError):
-            pass
-    return name
+# The reading rules are container.py's. What they raise is turned into Skip
+# here: one file or entry that is not read, with the codec's sentence as why.
+
+shown_name = container.shown_name
+hostile = container.hostile
+sniff = container.sniff
 
 
-def hostile(name):
-    """Why an entry name is refused, or an empty string. The test is made on the
-    name as stored (`orig_filename`): on Windows zipfile rewrites a backslash."""
-    if not name or "\x00" in name:
-        return "an empty or NUL-holding entry name"
-    if "\\" in name:
-        return "an entry name with a backslash"
-    if name.startswith("/") or re.match(r"[A-Za-z]:", name):
-        return "an absolute entry name"
-    if ".." in name.split("/"):
-        return "an entry name with `..`"
-    return ""
+def _skip(exc):
+    return Skip(exc.detail or exc.code)
 
 
 def list_entries(archive):
@@ -292,93 +278,40 @@ def list_entries(archive):
     repeated name, and no junk (nothing from `__MACOSX/`, no `.DS_Store`,
     `Thumbs.db` or `desktop.ini`). A `.empty` placeholder is an entry like any
     other: inside a brush folder it is a member (docs/CONTRACTS.md, F3)."""
-    infos = archive.infolist()
-    if len(infos) > CAPS["zip_entries"]:
-        raise Skip(f"{len(infos):,} entries; the cap is {CAPS['zip_entries']:,}")
-    kept, seen = [], set()
-    for info in infos:
-        name = info.orig_filename
-        if name.endswith("/") or name in seen:
-            continue
-        parts = name.lower().split("/")
-        if parts[-1] in JUNK_NAMES or any(part in JUNK_FOLDERS for part in parts[:-1]):
-            continue
-        seen.add(name)
-        kept.append(info)
-    return kept
-
-
-def sniff(names):
-    """("set" | "brush" | "other", prefix) from a zip's entry names alone. A
-    `.empty` placeholder never decides: it is left out of the one-top-folder test."""
-    if SET_PLIST in names:
-        return "set", ""
-    if BRUSH_ARCHIVE in names:
-        return "brush", ""
-    real = [name for name in names if name.rsplit("/", 1)[-1].lower() != EMPTY]
-    tops = {name.split("/", 1)[0] for name in real}
-    if len(tops) == 1 and all("/" in name for name in real):
-        prefix = next(iter(tops)) + "/"
-        if prefix + SET_PLIST in names:
-            return "set", prefix
-    return "other", ""
-
-
-def _ratio_bomb(info):
-    return (info.file_size > CAPS["ratio_min_bytes"]
-            and info.file_size > info.compress_size * CAPS["ratio"])
+    try:
+        return container.list_entries(archive.infolist()).kept
+    except ContainerError as exc:
+        raise _skip(exc) from None
 
 
 def check_declared(infos):
     """Refuse a container whose own directory already breaks the reader's caps."""
-    total = 0
-    for info in infos:
-        size = info.file_size
-        if info.orig_filename.rsplit("/", 1)[-1] == BRUSH_ARCHIVE and size > CAPS["archive_bytes"]:
-            raise Skip(f"a Brush.archive of {size:,} bytes; the cap is {CAPS['archive_bytes']:,}")
-        if size > CAPS["entry_bytes"]:
-            raise Skip(f"an entry of {size:,} bytes; the cap is {CAPS['entry_bytes']:,}")
-        if _ratio_bomb(info):
-            raise Skip(f"an entry that inflates more than {CAPS['ratio']}:1")
-        total += size
-    if total > CAPS["total_bytes"]:
-        raise Skip(f"{total:,} bytes inflated; the cap is {CAPS['total_bytes']:,}")
+    try:
+        container.check_declared(infos)
+    except ContainerError as exc:
+        raise _skip(exc) from None
 
 
 def _too_deep():
     return f"nested more than {CAPS['nesting_depth']} zips deep; not opened"
 
 
-class Budget:
+class Budget(container.Budget):
     """How many bytes may still be inflated out of one file on disk."""
 
-    def __init__(self, limit=None):
-        self.left = CAPS["total_bytes"] if limit is None else limit
-
     def spend(self, size):
-        if size > self.left:
-            raise Skip(f"more than {CAPS['total_bytes']:,} bytes would be inflated from one file")
-        self.left -= size
+        try:
+            super().spend(size)
+        except ContainerError as exc:
+            raise _skip(exc) from None
 
 
 def read_entry(archive, info, cap, budget=None):
     """One entry's bytes, in memory, or Skip. Never more than `cap` bytes."""
-    if info.flag_bits & 0x1:
-        raise Skip("an encrypted entry")
-    if info.file_size > cap:
-        raise Skip(f"{info.file_size:,} bytes inflated; the cap is {cap:,}")
-    if _ratio_bomb(info):
-        raise Skip(f"it inflates more than {CAPS['ratio']}:1")
-    if budget is not None:
-        budget.spend(info.file_size)
     try:
-        with archive.open(info) as handle:
-            data = handle.read(cap + 1)
-    except ZIP_ERRORS as exc:
-        raise Skip(f"it cannot be read ({type(exc).__name__}: {exc})") from None
-    if len(data) > cap:
-        raise Skip(f"more than {cap:,} bytes inflated")
-    return data
+        return container.read_member(archive, info, cap, budget)
+    except ContainerError as exc:
+        raise _skip(exc) from None
 
 
 def plist_set_name(data):
@@ -989,6 +922,36 @@ def run_adopt(paths, src, *, with_docs=False, confirm=False, disk_free=None):
     return bc.EXIT_OK
 
 
+def run_census(paths, *, as_json=False):
+    """Count what every archive of the library holds and print it. Reads the
+    library in memory through container.py; writes nothing."""
+    library = paths.library
+    if not library.is_dir():
+        raise EnvironmentProblem(f"there is no library folder at {library}")
+    try:
+        result = brush_model.census(library)
+    except BrushModelError as exc:
+        if exc.code in ("lfs_pointer", "library_missing"):
+            raise EnvironmentProblem(str(exc)) from None
+        raise IngestError(str(exc)) from None
+    except CodecError as exc:                  # a cap of F3 (LimitExceeded) among them
+        raise IngestError(str(exc)) from None
+    result["columns"] = brush_model.census_columns(result)
+    if as_json:
+        sys.stdout.write(bc.json_text(result))
+        return bc.EXIT_OK
+    print(f"census   {result['archives']:,} archives, {result['distinct']:,} distinct, "
+          f"{len(result['unreadable']):,} unreadable, {len(result['keys']):,} root keys")
+    print(f"{'era':<7} {'family':<7} {'count':>6} {'keys':>5}  profiles; fidelity; rebuild")
+    for row in result["eras"]:
+        counted = "; ".join(", ".join(f"{name} {count}" for name, count in row[part].items())
+                            for part in ("profiles", "fidelity", "rebuild"))
+        print(f"{show(row['id']):<7} {row['family']:<7} {row['count']:>6} {row['key_count']:>5}  {counted}")
+    for item in result["unreadable"]:
+        print(f"unreadable  {show(item['label'])}: {show(item['error'])}")
+    return bc.EXIT_OK
+
+
 # ── the command line ─────────────────────────────────────────────────────────
 
 def _add_roots(parser, default):
@@ -1001,7 +964,7 @@ def build_parser():
         prog="ingest.py",
         description="Bring brush files into the library. `adopt` is a dry run without --confirm.")
     _add_roots(parser, None)
-    verbs = parser.add_subparsers(dest="verb", metavar="{where,adopt}", required=True)
+    verbs = parser.add_subparsers(dest="verb", metavar="{where,adopt,census}", required=True)
     where = verbs.add_parser("where", help="print the folders the brushes scripts work on")
     adopt = verbs.add_parser("adopt", help="copy the brush files under SRC into library/user/ "
                                            "(a dry run without --confirm)")
@@ -1009,7 +972,10 @@ def build_parser():
     adopt.add_argument("--with-docs", action="store_true",
                        help="also copy documents, images and artwork into an ignored _docs/ folder")
     adopt.add_argument("--confirm", action="store_true", help="really copy")
-    for sub in (where, adopt):
+    census = verbs.add_parser("census", help="count what the library's archives hold; writes nothing")
+    census.add_argument("--json", action="store_true",
+                        help="print the whole census and its schema columns as JSON")
+    for sub in (where, adopt, census):
         _add_roots(sub, argparse.SUPPRESS)
     return parser
 
@@ -1022,6 +988,8 @@ def main(argv=None, *, disk_free=None):
     try:
         if args.verb == "where":
             return run_where(paths)
+        if args.verb == "census":
+            return run_census(paths, as_json=args.json)
         return run_adopt(paths, args.src, with_docs=args.with_docs, confirm=args.confirm,
                          disk_free=disk_free)
     except IngestError as exc:

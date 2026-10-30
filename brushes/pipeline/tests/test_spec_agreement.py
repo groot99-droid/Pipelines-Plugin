@@ -17,12 +17,17 @@ import tokenize
 import unittest
 from pathlib import Path
 
-import yaml
+try:
+    import yaml
+except ImportError:          # an isolated interpreter (-I) hides a pyyaml in the user's site-packages
+    yaml = None
 
 PIPELINE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PIPELINE))
 
 import brush_common as bc  # noqa: E402
+import brush_file  # noqa: E402
+import container  # noqa: E402
 import device_tests  # noqa: E402
 import fetch_base_library  # noqa: E402
 import fixtures  # noqa: E402
@@ -46,6 +51,9 @@ def read(path):
 class Loaded(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        if yaml is None:
+            raise unittest.SkipTest("pyyaml cannot be imported here (an isolated interpreter hides "
+                                    "the user's site); run without -I to check the spec")
         cls.spec_text = read(SPEC_PATH)
         cls.spec = yaml.safe_load(cls.spec_text)
         cls.contracts = read(CONTRACTS_PATH)
@@ -103,7 +111,8 @@ class TheFile(Loaded):
         built = self.spec["build"]["built_verbs"]
         parsers = {"pipeline/fetch_base_library.py": fetch_base_library.build_parser(),
                    "pipeline/ingest.py": ingest.build_parser(),
-                   "pipeline/device_tests.py": device_tests.build_parser()}
+                   "pipeline/device_tests.py": device_tests.build_parser(),
+                   "pipeline/brush_file.py": brush_file.build_parser()}
         self.assertEqual(set(built), set(parsers))
         for script, parser in parsers.items():
             verbs = next(action for action in parser._actions if isinstance(action.choices, dict))
@@ -112,7 +121,7 @@ class TheFile(Loaded):
             self.assertTrue(set(built[script]) <= set(declared), script)
             self.assertIn(script, self.spec["build"]["exists"])
         missing = set(self.spec["cli"]["scripts"]["pipeline/ingest.py"]["verbs"]) - set(built["pipeline/ingest.py"])
-        self.assertEqual(missing, {"build", "report", "census"},
+        self.assertEqual(missing, {"build", "report"},
                          "when one of these lands, add it here and switch on its row of mcp_server.NEXT_STEPS")
         for what, script, verb, is_built in mcp_server.NEXT_STEPS:
             if script in built:
@@ -359,9 +368,11 @@ class Format(Loaded):
             self.assertIn(words, section)
         for name in sorted(ingest.JUNK_NAMES):
             self.assertIn(name, section.lower())
-        self.assertEqual(ingest.JUNK_NAMES, device_tests.JUNK_NAMES)
-        self.assertEqual(ingest.JUNK_FOLDERS, device_tests.JUNK_FOLDERS)
-        self.assertEqual((ingest.EMPTY, device_tests.EMPTY), (".empty", ".empty"))
+        for reader in (ingest, device_tests):        # both take the one reader's rules
+            self.assertEqual(reader.JUNK_NAMES, container.JUNK_NAMES, reader.__name__)
+            self.assertEqual(reader.JUNK_FOLDERS, container.JUNK_FOLDERS, reader.__name__)
+            self.assertEqual(reader.EMPTY, container.EMPTY, reader.__name__)
+        self.assertEqual(container.EMPTY, ".empty")
         self.assertNotIn(".empty", ingest.JUNK_NAMES | device_tests.JUNK_NAMES)
 
     def test_the_one_zip_writer_is_named_with_what_it_writes(self):
@@ -373,6 +384,20 @@ class Format(Loaded):
         self.assertIn("internal attribute bit 0 set to 1 when the entry's data is text", section)
         self.assertIn(f"flag bits `0x{zip_writer.FLAG_BITS:04x}`", section)
         self.assertIn(f"`extract_version` {zip_writer.EXTRACT_VERSION}", section)
+        # The three forms read off the library: code, spec and document agree.
+        declared = self.spec["format"]["zip_forms"]
+        self.assertEqual(list(declared), list(zip_writer.FORMS))
+        for name, (method, flags, level) in zip_writer.FORMS.items():
+            self.assertEqual(declared[name], {"method": method, "flag_bits": flags, "level": level}, name)
+            row = re.search(rf"\| `{name}` \| ([^|]*) \| ([^|]*) \| ([^|]*) \|", section)
+            self.assertIsNotNone(row, f"the forms table has a row for {name}")
+            self.assertEqual((row.group(1), row.group(2)), (str(method), f"`0x{flags:04x}`"), name)
+            if level is not None:
+                self.assertIn(f"zlib level {level}", row.group(3), name)
+        self.assertEqual(self.spec["format"]["zip_default_form"], zip_writer.DEFAULT_FORM)
+        self.assertEqual(tuple(self.spec["format"]["zip_zero_date"]), zip_writer.ZERO_DATE)
+        self.assertIn("`zip_writer.ZERO_DATE`", section)
+        self.assertIn("form_of(method, flag_bits)", section)
         self.assertIn("pipeline/zip_writer.py", self.spec["cli"]["library_modules"])
         self.assertTrue(zip_writer.is_text(b"<plist>\n") and not zip_writer.is_text(b"\x00PNG"))
 
@@ -1133,6 +1158,7 @@ class PythonRules(unittest.TestCase):
                     imported.add((node.module or "").split(".")[0])
             self.assertEqual(imported - allowed, set(), path.relative_to(BRUSHES).as_posix())
 
+    @unittest.skipIf(yaml is None, "pyyaml cannot be imported here")
     def test_the_spec_says_the_same(self):
         runtime = yaml.safe_load(read(SPEC_PATH))["runtime"]
         self.assertEqual(runtime["python"], "3.10")

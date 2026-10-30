@@ -201,12 +201,18 @@ class KeySets(unittest.TestCase):
         common = set.intersection(*keys.values())
         self.assertEqual(len(common), 50, "the keys every legacy archive has")
 
-    def test_the_modern_set_is_220_keys_and_says_it_is_unverified(self):
+    def test_the_modern_set_is_220_keys_and_is_the_schemas_m220(self):
         keys = fx.modern_keys()
         self.assertEqual(len(keys), fx.MODERN_KEY_COUNT)
         self.assertEqual(fx.MODERN_KEY_COUNT, 220)
         self.assertEqual(len(set(keys)), 220)
-        self.assertFalse(fx.MODERN_KEYS_VERIFIED)
+        # The flag is true because the set is the schema's M220 key set, read
+        # off the library; the flag and that evidence must agree.
+        schema = json.loads((Path(__file__).resolve().parents[2] / "schema" / "silica_keys.json")
+                            .read_text(encoding="utf-8"))
+        m220 = next(row for row in schema["eras"] if row["id"] == "M220")
+        self.assertEqual(set(keys) | {fx.CLASS_KEY}, set(m220["key_order"]))
+        self.assertTrue(fx.MODERN_KEYS_VERIFIED)
         self.assertEqual(len(fx.MODERN_UNVERIFIED_KEYS), 27)
         self.assertTrue(set(fx.MODERN_UNVERIFIED_KEYS) <= set(keys))
         for gone in ("dynamicsRenderType", "dynamicsGlazeFlow", "dynamicsGlazeType",

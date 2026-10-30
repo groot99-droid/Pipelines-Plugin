@@ -1,4 +1,4 @@
-"""pipeline/ingest.py: `where` and `adopt` (docs/CONTRACTS.md, F11 and F12).
+"""pipeline/ingest.py: `where`, `adopt` and `census` (docs/CONTRACTS.md, F4, F11 and F12).
 
 Every test builds its own source folder and its own library in a temporary
 folder, from the synthetic brush files in fixtures.py. None reads the real
@@ -40,6 +40,11 @@ JPEG = b"\xff\xd8\xff\xe0\x00\x10JFIF fixture"
 
 def sha(data):
     return hashlib.sha256(data).hexdigest()
+
+
+def fixtures_pointer():
+    """What a clone without Git LFS holds where a brush file should be."""
+    return b"version https://git-lfs.github.com/spec/v1" + b"\x0a" + b"oid sha256:0" + b"\x0a"
 
 
 class AdoptCase(fixtures.BrushCase):
@@ -1071,14 +1076,14 @@ class WhereAndCommandLine(AdoptCase):
         self.assertIn(str(self.library), out)
 
     def test_only_the_verbs_that_exist_are_accepted(self):
-        for argv in ([], ["build"], ["report"], ["census"], ["scan"], ["adopt"],
+        for argv in ([], ["build"], ["report"], ["scan"], ["adopt"], ["census", "--confirm"],
                      ["adopt", str(self.src), "--force"], ["where", "extra"]):
             with self.assertRaises(SystemExit) as raised, contextlib.redirect_stderr(io.StringIO()):
                 ingest.main(argv + ["--root", str(self.root)])
             self.assertEqual(raised.exception.code, bc.EXIT_USAGE, argv)
         parser = ingest.build_parser()
         verbs = next(action for action in parser._actions if isinstance(action.choices, dict))
-        self.assertEqual(list(verbs.choices), ["where", "adopt"])
+        self.assertEqual(list(verbs.choices), ["where", "adopt", "census"])
         adopt = parser.parse_args(["adopt", "somewhere"])
         self.assertEqual((adopt.src, adopt.with_docs, adopt.confirm), ("somewhere", False, False))
 
@@ -1095,6 +1100,33 @@ class WhereAndCommandLine(AdoptCase):
         flags = {flag for action in verbs.choices["adopt"]._actions for flag in action.option_strings}
         self.assertTrue(set(declared["flags"]["adopt"]) <= flags)
         self.assertEqual(declared["confirm"], ["adopt"])
+
+    def test_census_counts_the_library_and_writes_nothing(self):
+        """`census` is brush_model.census over the library, printed: F4 merges
+        the schema's census columns from its --json output by hand."""
+        fixtures.write_library(self.library)
+        before = fixtures.tree_digest(self.root)
+        code, out, err = self.main("census", "--root", str(self.root))
+        self.assertEqual(code, bc.EXIT_OK, err)
+        self.assertRegex(out, r"^census   \d+ archives, \d+ distinct, 0 unreadable")
+        code, out, err = self.main("census", "--json", "--root", str(self.root))
+        self.assertEqual(code, bc.EXIT_OK, err)
+        result = json.loads(out)
+        self.assertEqual(result["schema"], "rosw-brushes-census/1")
+        self.assertGreater(result["archives"], 0)
+        self.assertEqual(set(result["columns"]), {"eras", "classes", "encode_order", "keys"})
+        self.assertEqual(out, bc.json_text(result), "the one JSON spelling")
+        self.assertNotIn(str(self.tmp), out, "no absolute path")
+        self.assertEqual(fixtures.tree_digest(self.root), before)
+
+    def test_census_without_a_library_or_with_a_pointer_is_exit_2(self):
+        code, _, err = self.main("census", "--root", str(self.tmp / "nowhere"))
+        self.assertEqual(code, bc.EXIT_USAGE)
+        self.assertIn("no library folder", err)
+        self.put("x.brushset", fixtures_pointer(), under=self.library / "user" / PACK)
+        code, _, err = self.main("census", "--root", str(self.root))
+        self.assertEqual(code, bc.EXIT_USAGE)
+        self.assertIn("git lfs pull", err)
 
     def test_it_runs_isolated_from_any_directory(self):
         self.small_corpus()

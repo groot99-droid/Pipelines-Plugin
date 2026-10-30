@@ -221,7 +221,7 @@ NO_ARGUMENTS = {"type": "object", "properties": {}, "additionalProperties": Fals
 # and fails when the column and the script disagree, in either direction.
 NEXT_STEPS = (
     ("official", "pipeline/fetch_base_library.py", "fetch", True),
-    ("catalog", "pipeline/ingest.py", "build", False),          # ingest.py has `where` and `adopt` today
+    ("catalog", "pipeline/ingest.py", "build", False),          # ingest.py has `where`, `adopt` and `census` today
     ("index", "vault/tools/brush_search.py", "index", False),   # the search tool is not written yet
 )
 

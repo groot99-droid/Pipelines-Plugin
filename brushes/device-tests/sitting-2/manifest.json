@@ -1,0 +1,2773 @@
+{
+  "complete": true,
+  "donors": [
+    {
+      "archive_sha256": "d74f7546e9e103ff01441a23b88725481f1d8fc730b3d4887bd3e22010bb4c20",
+      "as_specified": true,
+      "era": "E4",
+      "family": "legacy",
+      "files": [
+        {
+          "bytes": 523632,
+          "path": "Grain.png",
+          "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b"
+        },
+        {
+          "bytes": 3287,
+          "path": "Brush.archive",
+          "sha256": "d74f7546e9e103ff01441a23b88725481f1d8fc730b3d4887bd3e22010bb4c20"
+        },
+        {
+          "bytes": 167580,
+          "path": "Shape.png",
+          "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea"
+        },
+        {
+          "bytes": 56811,
+          "path": "QuickLook/Thumbnail.png",
+          "sha256": "1c01d44c1246b34e401c7245d4c56a8ffed76ebb13f386638937906c17a74560"
+        }
+      ],
+      "keys": 101,
+      "kind": "edit-legacy",
+      "name": "AN Botanicaliser",
+      "note": "",
+      "role": "L",
+      "shows": "whether the app opens a legacy archive (one-byte references) that our rules re-encoded with one setting changed, and what each value of each setting looks like",
+      "source": {
+        "container": "user/everything-watercolour/Everything_Watercolour.brushset",
+        "folder": "26BC713D-686F-4681-8AD0-0A979A7DE18F",
+        "position": 25,
+        "prefix": "26BC713D-686F-4681-8AD0-0A979A7DE18F/",
+        "set": "💧Everything Watercolour"
+      },
+      "wanted": "an E4 brush (101 keys) that carries its own Shape.png and Grain.png and has no jitter and no scatter: by the same rule, the brush sitting 1 holds as member 2"
+    },
+    {
+      "archive_sha256": "bbcefc3c20dae849cc445e2f6c745ae10bd56139c271444b4ab32d45b46a2a66",
+      "as_specified": true,
+      "era": "M220",
+      "family": "modern",
+      "files": [
+        {
+          "bytes": 16195,
+          "path": "Grain.png",
+          "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7"
+        },
+        {
+          "bytes": 8610,
+          "path": "Brush.archive",
+          "sha256": "bbcefc3c20dae849cc445e2f6c745ae10bd56139c271444b4ab32d45b46a2a66"
+        },
+        {
+          "bytes": 32339,
+          "path": "Shape.png",
+          "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a"
+        },
+        {
+          "bytes": 40249,
+          "path": "QuickLook/Thumbnail.png",
+          "sha256": "6b1820f2ede4b46d6f26125799bc7e4cdc7709243eb093568e0b97ea89b34de8"
+        }
+      ],
+      "keys": 220,
+      "kind": "edit-modern",
+      "name": "Hard",
+      "note": "",
+      "role": "M",
+      "shows": "whether the app opens a modern archive (two-byte references) that our rules re-encoded with one setting changed, and what each value of each setting looks like",
+      "source": {
+        "container": "official/procreate-1/procreate-1.brushset",
+        "folder": "FA58197A-8E51-446F-87A7-F3840CE16397",
+        "position": 3,
+        "prefix": "FA58197A-8E51-446F-87A7-F3840CE16397/",
+        "set": "Procreate 1"
+      },
+      "wanted": "an M220 brush (220 keys) that carries its own Shape.png and Grain.png and has no jitter and no scatter"
+    },
+    {
+      "archive_sha256": "3a384f1bacd2736750196c36ef6f42f22e38f41741e8fa48e410d2f9f8d8c399",
+      "as_specified": true,
+      "bundled_shape": "Brush-Preset-Soft.png",
+      "era": "M220",
+      "family": "modern",
+      "keys": 220,
+      "kind": "bundled-shape",
+      "name": "Soft Brush",
+      "note": "",
+      "role": "S5",
+      "shows": "whether a brush we made, holding no image at all, finds a shape the app ships by its name",
+      "source": {
+        "container": "official/procreate-5/p5-airbrushing.brushset",
+        "folder": "500CD70B-79A3-47B6-9F2C-FAFAE61CE846",
+        "position": 0,
+        "prefix": "500CD70B-79A3-47B6-9F2C-FAFAE61CE846/",
+        "set": "Airbrushing 1"
+      },
+      "wanted": "the name of a shape that ships inside the app, as a modern brush of an official Procreate 5 set names it without carrying the image"
+    }
+  ],
+  "file_sha256": {
+    "CHECKLIST.md": "3f5bd5d4c1de9f22fb4556b8ae0a3149d3280ee7a6d69882bcb3cf3efaa5001f",
+    "ROSW-2-edits.brushset": "2b542a3fdd95a675e35a6fb6bd90f0258adba41eef504aca013526c9c21926f6",
+    "ROSW-3-scratch.brushset": "d04ee3d802b5c001ffa71c5a6bba2ea0d3bf55e7a94bebe755d3275e0c9e2bc3",
+    "singles/L00-name_only.brush": "f8551e4422deaa913f8764f35f132f04feca0576686f018e13e3ba57630b3c3a",
+    "singles/L01-name_only_no_thumbnail.brush": "e827bd54f6701f7547fcabdd2821453f396f29025c1edf485b0faf2bbe08bdb0",
+    "singles/L02-plotSpacing_0.1.brush": "c57143467e1d911634bb4f13022eb84458ad3fbc4e351e2398fad4dd8929a45c",
+    "singles/L03-plotSpacing_0.25.brush": "58b6dc72614305f4968ae6760ef931d65a632da3accaa5c86cbf851d9e77ce70",
+    "singles/L04-plotSpacing_0.5.brush": "07dc3de5027f2f2421f8ab56ceb691a744159aca7711dd438e4088a0aa638bbd",
+    "singles/L05-plotSpacing_1.brush": "71c57dcb00aec53c16b68a4b6f14ed109927a8f99586ee1dcd1dc7cc376a340c",
+    "singles/L06-dynamicsRenderType_0.brush": "c289fca2d5b189e0b9fdb2d5922df39e7322e950688b86690c0cd5131904f7e4",
+    "singles/L07-dynamicsRenderType_1.brush": "85391374d96be1ca7fb9f9fc514dfafc270c0fe2cfe86a701a421b1186dd2f5f",
+    "singles/L08-dynamicsRenderType_2.brush": "873611cf8d8ab6ddd33f87e4369bedefb556de1e8a6a3d22f311ed34454f9ed5",
+    "singles/L09-dynamicsRenderType_3.brush": "7addf6a908be5314df145c17f1196ac4adf9b1cc957fd8567f45f516b81b6224",
+    "singles/L10-blendMode_1_extendedBlend_1.brush": "af0dde6293598c886133eec7630f102746370191fca33d7fb3c6d99657509576",
+    "singles/L11-blendMode_3_extendedBlend_3.brush": "f35c965f6824ae3aae342593fab11935021c31fa49ef0f48bf2229b34aef3318",
+    "singles/L12-blendMode_8_extendedBlend_8.brush": "fbc43c84c416a8db7995c9c269a2219fa85c9d647936328a4551f556405df0d7",
+    "singles/L13-textureMovement_0.brush": "3f35cb2cdb9b2c6bb9a5e8809e11572aca12d29e48a79111d4a545df5195f1f1",
+    "singles/L14-textureMovement_1.brush": "61cc39fdbe6383eef36c1c2e2c01521cf3555d2a4e1c840207f812ed264b0f1c",
+    "singles/L15-textureZoom_0.brush": "e55319f3bca3ba575a875de841f8390e1f2983dc270641e46e7cf480e1b53a59",
+    "singles/L16-textureZoom_1.brush": "7e0e7637e640b64c0059a7c41b1459cc71daceef53fd72f84ae50f3dced77f45",
+    "singles/L17-shapeRotation_-1.brush": "7e3d23cdb5a34a38272fb751d97cbd003620ee94621c7e03878ead65d781ba41",
+    "singles/L18-shapeRotation_0.brush": "483294487cea0eec7791643174a951cd1992cb5f1c19db1d693f86b35f86af68",
+    "singles/L19-shapeRotation_1.brush": "59315091edd475ab8c1f448de6a91643ac8147b6b32c9ddcb7547cb5d6c24982",
+    "singles/L20-stamp_true.brush": "c5bdcc8cba5420d3fbee7624369441dd31abc8d6977194bbfdbab0bed742a653",
+    "singles/L21-previewSize_0.1.brush": "c65b1b90a197dc722384f01ef0219ac51d5f50883f229012bd8d0e14c98a5f70",
+    "singles/L22-previewSize_0.6.brush": "829be3953bf9db981bf6415ced755ef63ff69dd98937be40b2fcf7cfa664330b",
+    "singles/L23-dynamicsPressureSizeCurve_4_points.brush": "e4bf216b858063d1321aa2d7d319e98d0f0c1daebcfd2edc836da71d5f83c783",
+    "singles/M00-name_only.brush": "ba8649f6d401852e710ab3e7e9f8fa15dedeff8e607e9506ee3724aa354eab71",
+    "singles/M01-rendering_max_0_mod_0_rec_1.brush": "b4bebb89fd16a50930245d49f93678b3fc083f1267dec77a0d8ed8ee45b02fc2",
+    "singles/M02-rendering_max_0_mod_0_rec_0.brush": "8b9b449846627cce1b08607c9d4792bc159f7c53537704412a5ac33629481694",
+    "singles/M03-rendering_max_1_mod_0_rec_0.brush": "03a24a71658f0f2c2d18adff1551bb2d5d484ae61fc8259622695b120804600c",
+    "singles/M04-rendering_max_1_mod_1_rec_0.brush": "c822ef2de86d4207d4b6a6e5c75cb81683a998217f86cd3004f468e3a6479264",
+    "singles/M05-rendering_max_0_mod_1_rec_1.brush": "fe1a2de8c44a93e80d952e2a64c9871f0c43a4a3da54bc55b67bbf7e388b83ec",
+    "singles/M06-rendering_max_0_mod_1_rec_0.brush": "863c8b16d8b1557732638fd6c25e43168a3ea4c43765987beb1d38e36df8b1ab",
+    "singles/M07-plotSpacing_0.25_plotSpacingVersion_0.brush": "bc808dc851f714a0f7f0fe4ae6c4655998f5e3289e5834c17f54ec3b8570cfac",
+    "singles/M08-plotSpacing_0.25_plotSpacingVersion_1.brush": "57fc9890e642fc2be07f38404c6877b14e5c6bdd0676c1e84985b2822f7fca65",
+    "singles/M09-plotSpacing_1_plotSpacingVersion_0.brush": "2259ab863d9e93f55754d0ea38b5376de95b5fc3730ad4ea06e6e91c52bf165d",
+    "singles/M10-plotSpacing_1_plotSpacingVersion_1.brush": "57148dda7e1eea0a617352d86b5c549381e6e64e2aa8b8bdc8b5ca9f0b0ace5b",
+    "singles/M11-textureApplication_0.brush": "315afbbf2e6ba54ba549ff3d80f0517b4cfea8e991892eeaf5b33a0e00a428b0",
+    "singles/M12-textureApplication_1.brush": "e1a057e80bc466b81b2e2f658ac0360d4be4a8dc891718ea4f51e35465084657",
+    "singles/M13-grainBlendMode_7.brush": "30e0414d7b90d2f7ac11ee86823e87261dc8f22d8925634d602194d6501c330a",
+    "singles/M14-grainBlendMode_10.brush": "009b92591fae44aeca0c101ba0733ec30d560801795e65602bc63bae628863e5",
+    "singles/M15-grainBlendMode_27.brush": "5089000575ee163b0b3e6c368c8b109db98c57eefcf5df9e9820108a8c2cdcdc",
+    "singles/M16-shapeCount_0.0625.brush": "d19fe78bc4e870d30aff7e3e10b27c29ca35c35064be6400da1fb6268b696e0c",
+    "singles/M17-shapeCount_0.5.brush": "af40c48e0128ee2573a8782703626e20b4c1fc9daf3b1e54519822360d75b6d5",
+    "singles/M18-shapeAngle_1.5708.brush": "c79947cff69188095e2cd3a5ebff0d63499285acf6c27569d91b965cf22a4fc2",
+    "singles/M19-wetEdgesAmount_1.brush": "9287e024e6046e669b15b642bbdc1589f1e43ecc72a1d9ef722467b0a714e90a",
+    "singles/M20-burntEdgesAmount_1.brush": "8a61ea75b3bec569a6c3cd384fd78d200fc90fe47aaa100f213b3686b6c99190",
+    "singles/S1-M220_scratch.brush": "8011e2f9a9fc8b0fc29bd54f23f6dc537b7d9f0f4e94f3f17e5bfa289147982a",
+    "singles/S2-M220_no_thumbnail.brush": "fa0c2f9e39bcfc20cede12ebfe5b947d3a07df299ea52af9243ba16af279b3da",
+    "singles/S3-E4_scratch.brush": "d4d6f52464847cf10f374d5a0a9e9d313b63082f573a114b9fa7ecce31d9e2d7",
+    "singles/S4-Wa_rige_Tonung.brush": "d90005004e4cd7d0ffe53d297aa26ac13a497c2c40b69ce8f8f33800c9884905",
+    "singles/S5-bundled_shape.brush": "7cd82f8f3932c207d13c9727e1fa98aabed7ddca6140582f2cc560d30ff182f1",
+    "singles/S6-dual.brush": "1927b6a16ae90ffb72989a07c1488de045a8740b3d77878d9af60ea85f7e8ad2"
+  },
+  "left_out": [],
+  "schema": "rosw-brushes-device-test-2/1",
+  "sets": {
+    "edits": {
+      "bytes": 17365703,
+      "file": "ROSW-2-edits.brushset",
+      "members": [
+        {
+          "applied": {},
+          "archive": {
+            "bytes": 3282,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "46e31d148a593847a3e2fad4212dd0b188a1ad551d88800c09c8fa9406e564d3"
+          },
+          "changed": [],
+          "changes": {},
+          "code": "L00",
+          "donor": "L",
+          "dropped": [],
+          "files": [
+            {
+              "bytes": 3282,
+              "path": "Brush.archive",
+              "sha256": "46e31d148a593847a3e2fad4212dd0b188a1ad551d88800c09c8fa9406e564d3",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 56811,
+              "path": "QuickLook/Thumbnail.png",
+              "sha256": "1c01d44c1246b34e401c7245d4c56a8ffed76ebb13f386638937906c17a74560",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L00 name only",
+          "single": "singles/L00-name_only.brush",
+          "single_sha256": "f8551e4422deaa913f8764f35f132f04feca0576686f018e13e3ba57630b3c3a",
+          "thumbnail": true,
+          "unchanged": [],
+          "uuid": "94184591-D096-47F2-B59C-891001E1B53F",
+          "warnings": []
+        },
+        {
+          "applied": {},
+          "archive": {
+            "bytes": 3298,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "d60d22733ffe8ed4339e1e7950d3cd40904b74790de05d999133e91b55f4305b"
+          },
+          "changed": [],
+          "changes": {},
+          "code": "L01",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3298,
+              "path": "Brush.archive",
+              "sha256": "d60d22733ffe8ed4339e1e7950d3cd40904b74790de05d999133e91b55f4305b",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L01 name only, no thumbnail",
+          "single": "singles/L01-name_only_no_thumbnail.brush",
+          "single_sha256": "e827bd54f6701f7547fcabdd2821453f396f29025c1edf485b0faf2bbe08bdb0",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "6E37006B-E869-449C-B537-11E576EAE1C0",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "plotSpacing": 0.10000000149011612
+          },
+          "archive": {
+            "bytes": 3290,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "c5a91c93d286555509a997bee65748037dddff28167c0bd9b52868da62b7b831"
+          },
+          "changed": [
+            "plotSpacing"
+          ],
+          "changes": {
+            "plotSpacing": 0.1
+          },
+          "code": "L02",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3290,
+              "path": "Brush.archive",
+              "sha256": "c5a91c93d286555509a997bee65748037dddff28167c0bd9b52868da62b7b831",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L02 plotSpacing=0.1",
+          "single": "singles/L02-plotSpacing_0.1.brush",
+          "single_sha256": "c57143467e1d911634bb4f13022eb84458ad3fbc4e351e2398fad4dd8929a45c",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "246B5F12-7732-4BBE-B2ED-B40CC943FA03",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "plotSpacing": 0.25
+          },
+          "archive": {
+            "bytes": 3291,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "d03ea500e3a32d21293aa82c91383d22f79ca84155a99648554e000901c51166"
+          },
+          "changed": [
+            "plotSpacing"
+          ],
+          "changes": {
+            "plotSpacing": 0.25
+          },
+          "code": "L03",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3291,
+              "path": "Brush.archive",
+              "sha256": "d03ea500e3a32d21293aa82c91383d22f79ca84155a99648554e000901c51166",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L03 plotSpacing=0.25",
+          "single": "singles/L03-plotSpacing_0.25.brush",
+          "single_sha256": "58b6dc72614305f4968ae6760ef931d65a632da3accaa5c86cbf851d9e77ce70",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "887C8B4A-7C8E-41A8-BB66-D822AC704F20",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "plotSpacing": 0.5
+          },
+          "archive": {
+            "bytes": 3290,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "fbd60070f85b7b513d6f8099c3a46bd3f0b912b5a134217a3216838b0be98b2e"
+          },
+          "changed": [
+            "plotSpacing"
+          ],
+          "changes": {
+            "plotSpacing": 0.5
+          },
+          "code": "L04",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3290,
+              "path": "Brush.archive",
+              "sha256": "fbd60070f85b7b513d6f8099c3a46bd3f0b912b5a134217a3216838b0be98b2e",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L04 plotSpacing=0.5",
+          "single": "singles/L04-plotSpacing_0.5.brush",
+          "single_sha256": "07dc3de5027f2f2421f8ab56ceb691a744159aca7711dd438e4088a0aa638bbd",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "C0D4CF79-8FE2-4438-8B76-505C4A79C20C",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "plotSpacing": 1.0
+          },
+          "archive": {
+            "bytes": 3281,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "893972eee9a81690843633b56004f07a04dc907511136b15b5e2dd9671d85deb"
+          },
+          "changed": [
+            "plotSpacing"
+          ],
+          "changes": {
+            "plotSpacing": 1.0
+          },
+          "code": "L05",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3281,
+              "path": "Brush.archive",
+              "sha256": "893972eee9a81690843633b56004f07a04dc907511136b15b5e2dd9671d85deb",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L05 plotSpacing=1",
+          "single": "singles/L05-plotSpacing_1.brush",
+          "single_sha256": "71c57dcb00aec53c16b68a4b6f14ed109927a8f99586ee1dcd1dc7cc376a340c",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "BB8FC2A5-551F-477A-9636-A15836A4B3CB",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "dynamicsRenderType": 0
+          },
+          "archive": {
+            "bytes": 3295,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "f396051e0d276332b1c47be04efab0b3393e52d2db8bf1eb46c44c4cb52b6697"
+          },
+          "changed": [
+            "dynamicsRenderType"
+          ],
+          "changes": {
+            "dynamicsRenderType": 0
+          },
+          "code": "L06",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3295,
+              "path": "Brush.archive",
+              "sha256": "f396051e0d276332b1c47be04efab0b3393e52d2db8bf1eb46c44c4cb52b6697",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L06 dynamicsRenderType=0",
+          "single": "singles/L06-dynamicsRenderType_0.brush",
+          "single_sha256": "c289fca2d5b189e0b9fdb2d5922df39e7322e950688b86690c0cd5131904f7e4",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "16B4CEE7-DEAE-4815-B3F7-64D8FE39C983",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "dynamicsRenderType": 1
+          },
+          "archive": {
+            "bytes": 3295,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "35dcbb75256a153239bc61a26e4b078e3c84494c64b59f3f203ca922e0f349d2"
+          },
+          "changed": [
+            "dynamicsRenderType"
+          ],
+          "changes": {
+            "dynamicsRenderType": 1
+          },
+          "code": "L07",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3295,
+              "path": "Brush.archive",
+              "sha256": "35dcbb75256a153239bc61a26e4b078e3c84494c64b59f3f203ca922e0f349d2",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L07 dynamicsRenderType=1",
+          "single": "singles/L07-dynamicsRenderType_1.brush",
+          "single_sha256": "85391374d96be1ca7fb9f9fc514dfafc270c0fe2cfe86a701a421b1186dd2f5f",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "EB6CE190-7C6B-47BF-9050-B7430149183C",
+          "warnings": []
+        },
+        {
+          "applied": {},
+          "archive": {
+            "bytes": 3295,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "338725a3b4d73db21506eeababbab9aa1c0e22bbfcc903e4e1928194cc0eeb14"
+          },
+          "changed": [],
+          "changes": {
+            "dynamicsRenderType": 2
+          },
+          "code": "L08",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3295,
+              "path": "Brush.archive",
+              "sha256": "338725a3b4d73db21506eeababbab9aa1c0e22bbfcc903e4e1928194cc0eeb14",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L08 dynamicsRenderType=2",
+          "single": "singles/L08-dynamicsRenderType_2.brush",
+          "single_sha256": "873611cf8d8ab6ddd33f87e4369bedefb556de1e8a6a3d22f311ed34454f9ed5",
+          "thumbnail": false,
+          "unchanged": [
+            "dynamicsRenderType"
+          ],
+          "uuid": "20A5B0D6-A25C-49AF-9540-53A2C71281E8",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "dynamicsRenderType": 3
+          },
+          "archive": {
+            "bytes": 3299,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "ff86cea35ea8c5f85319675d1442110cc080960ec03c5df79663ef505ece6528"
+          },
+          "changed": [
+            "dynamicsRenderType"
+          ],
+          "changes": {
+            "dynamicsRenderType": 3
+          },
+          "code": "L09",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3299,
+              "path": "Brush.archive",
+              "sha256": "ff86cea35ea8c5f85319675d1442110cc080960ec03c5df79663ef505ece6528",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L09 dynamicsRenderType=3",
+          "single": "singles/L09-dynamicsRenderType_3.brush",
+          "single_sha256": "7addf6a908be5314df145c17f1196ac4adf9b1cc957fd8567f45f516b81b6224",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "8C8BCF8F-D3A8-466C-8466-A8A8B798EFCB",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "blendMode": 1,
+            "extendedBlend": 1
+          },
+          "archive": {
+            "bytes": 3298,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "b2db7024cfe70a858740bfe2d1a78904a5cfd3d274538071b7d024e4b562987f"
+          },
+          "changed": [
+            "blendMode",
+            "extendedBlend"
+          ],
+          "changes": {
+            "blendMode": 1,
+            "extendedBlend": 1
+          },
+          "code": "L10",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3298,
+              "path": "Brush.archive",
+              "sha256": "b2db7024cfe70a858740bfe2d1a78904a5cfd3d274538071b7d024e4b562987f",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L10 blendMode=1 extendedBlend=1",
+          "single": "singles/L10-blendMode_1_extendedBlend_1.brush",
+          "single_sha256": "af0dde6293598c886133eec7630f102746370191fca33d7fb3c6d99657509576",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "6E8A0DEC-016D-4B9D-8432-F7CEC1E30A6B",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "blendMode": 3,
+            "extendedBlend": 3
+          },
+          "archive": {
+            "bytes": 3302,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "cc75e27745c7af2c5b75b5360cd93fd3cde4e7466781144d7376a2336850a786"
+          },
+          "changed": [
+            "blendMode",
+            "extendedBlend"
+          ],
+          "changes": {
+            "blendMode": 3,
+            "extendedBlend": 3
+          },
+          "code": "L11",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3302,
+              "path": "Brush.archive",
+              "sha256": "cc75e27745c7af2c5b75b5360cd93fd3cde4e7466781144d7376a2336850a786",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L11 blendMode=3 extendedBlend=3",
+          "single": "singles/L11-blendMode_3_extendedBlend_3.brush",
+          "single_sha256": "f35c965f6824ae3aae342593fab11935021c31fa49ef0f48bf2229b34aef3318",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "02AAA9FA-1CD8-4152-A3CC-ED1E6FE7370E",
+          "warnings": []
+        },
+        {
+          "applied": {},
+          "archive": {
+            "bytes": 3302,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "e18d0b5e3103944b3a9a2cab9e0afe21f88e4f0a9f60474d4a3b9ecd872e2e85"
+          },
+          "changed": [],
+          "changes": {
+            "blendMode": 8,
+            "extendedBlend": 8
+          },
+          "code": "L12",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3302,
+              "path": "Brush.archive",
+              "sha256": "e18d0b5e3103944b3a9a2cab9e0afe21f88e4f0a9f60474d4a3b9ecd872e2e85",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L12 blendMode=8 extendedBlend=8",
+          "single": "singles/L12-blendMode_8_extendedBlend_8.brush",
+          "single_sha256": "fbc43c84c416a8db7995c9c269a2219fa85c9d647936328a4551f556405df0d7",
+          "thumbnail": false,
+          "unchanged": [
+            "blendMode",
+            "extendedBlend"
+          ],
+          "uuid": "1F18D13F-2FBD-4CE3-9BA8-D5D70A9AD8ED",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "textureMovement": 0.0
+          },
+          "archive": {
+            "bytes": 3285,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "417171e8391389a51f7fd2beef9ffe9a5c25e4e3eee7487ec3b664363224d0ba"
+          },
+          "changed": [
+            "textureMovement"
+          ],
+          "changes": {
+            "textureMovement": 0.0
+          },
+          "code": "L13",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3285,
+              "path": "Brush.archive",
+              "sha256": "417171e8391389a51f7fd2beef9ffe9a5c25e4e3eee7487ec3b664363224d0ba",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L13 textureMovement=0",
+          "single": "singles/L13-textureMovement_0.brush",
+          "single_sha256": "3f35cb2cdb9b2c6bb9a5e8809e11572aca12d29e48a79111d4a545df5195f1f1",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "4D455D55-9F1E-4767-8E4B-077EE7953B6B",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "textureMovement": 1.0
+          },
+          "archive": {
+            "bytes": 3285,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "6e2d635c76b8c24d6ac9bb6be9f4f5afc3dbea4f80bec677a9081e9f260aa14e"
+          },
+          "changed": [
+            "textureMovement"
+          ],
+          "changes": {
+            "textureMovement": 1.0
+          },
+          "code": "L14",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3285,
+              "path": "Brush.archive",
+              "sha256": "6e2d635c76b8c24d6ac9bb6be9f4f5afc3dbea4f80bec677a9081e9f260aa14e",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L14 textureMovement=1",
+          "single": "singles/L14-textureMovement_1.brush",
+          "single_sha256": "61cc39fdbe6383eef36c1c2e2c01521cf3555d2a4e1c840207f812ed264b0f1c",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "E07C4027-A4EC-478A-9A0B-51FA8860E54E",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "textureZoom": 0.0
+          },
+          "archive": {
+            "bytes": 3288,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "433384b03679db6c65eaee8b140a33586a56be348eb2996044d2150184fdaaa8"
+          },
+          "changed": [
+            "textureZoom"
+          ],
+          "changes": {
+            "textureZoom": 0.0
+          },
+          "code": "L15",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3288,
+              "path": "Brush.archive",
+              "sha256": "433384b03679db6c65eaee8b140a33586a56be348eb2996044d2150184fdaaa8",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L15 textureZoom=0",
+          "single": "singles/L15-textureZoom_0.brush",
+          "single_sha256": "e55319f3bca3ba575a875de841f8390e1f2983dc270641e46e7cf480e1b53a59",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "4B29D6A3-66AB-4114-B9DA-381238C87355",
+          "warnings": []
+        },
+        {
+          "applied": {},
+          "archive": {
+            "bytes": 3288,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "cb32c1f6f722eed7ca4c479466dd3be6f6c5f7aca672c26127e12fb8980fe4ec"
+          },
+          "changed": [],
+          "changes": {
+            "textureZoom": 1.0
+          },
+          "code": "L16",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3288,
+              "path": "Brush.archive",
+              "sha256": "cb32c1f6f722eed7ca4c479466dd3be6f6c5f7aca672c26127e12fb8980fe4ec",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L16 textureZoom=1",
+          "single": "singles/L16-textureZoom_1.brush",
+          "single_sha256": "7e0e7637e640b64c0059a7c41b1459cc71daceef53fd72f84ae50f3dced77f45",
+          "thumbnail": false,
+          "unchanged": [
+            "textureZoom"
+          ],
+          "uuid": "EDE5138F-AAE5-4E04-902D-8CF8B95BC594",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "shapeRotation": -1.0
+          },
+          "archive": {
+            "bytes": 3298,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "60caee64ee4f54a83a7337540a5b113662ffd689f1f0bfcc5838bdd7cc6072e2"
+          },
+          "changed": [
+            "shapeRotation"
+          ],
+          "changes": {
+            "shapeRotation": -1.0
+          },
+          "code": "L17",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3298,
+              "path": "Brush.archive",
+              "sha256": "60caee64ee4f54a83a7337540a5b113662ffd689f1f0bfcc5838bdd7cc6072e2",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L17 shapeRotation=-1",
+          "single": "singles/L17-shapeRotation_-1.brush",
+          "single_sha256": "7e3d23cdb5a34a38272fb751d97cbd003620ee94621c7e03878ead65d781ba41",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "B224B6C7-E16C-4101-8869-98FA2B8C7876",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "shapeRotation": 0.0
+          },
+          "archive": {
+            "bytes": 3290,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "6cd5acf105744c8777f47dbc811bb27fe1a9fd9e9404822d126449cee6191053"
+          },
+          "changed": [
+            "shapeRotation"
+          ],
+          "changes": {
+            "shapeRotation": 0.0
+          },
+          "code": "L18",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3290,
+              "path": "Brush.archive",
+              "sha256": "6cd5acf105744c8777f47dbc811bb27fe1a9fd9e9404822d126449cee6191053",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L18 shapeRotation=0",
+          "single": "singles/L18-shapeRotation_0.brush",
+          "single_sha256": "483294487cea0eec7791643174a951cd1992cb5f1c19db1d693f86b35f86af68",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "DAF8A7B1-4939-4027-ADEE-FD221EF739ED",
+          "warnings": []
+        },
+        {
+          "applied": {},
+          "archive": {
+            "bytes": 3290,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "5cb69c0d1215601df72b8e990683fb269cc952d4e3b990b0fafe793bd088e857"
+          },
+          "changed": [],
+          "changes": {
+            "shapeRotation": 1.0
+          },
+          "code": "L19",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3290,
+              "path": "Brush.archive",
+              "sha256": "5cb69c0d1215601df72b8e990683fb269cc952d4e3b990b0fafe793bd088e857",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L19 shapeRotation=1",
+          "single": "singles/L19-shapeRotation_1.brush",
+          "single_sha256": "59315091edd475ab8c1f448de6a91643ac8147b6b32c9ddcb7547cb5d6c24982",
+          "thumbnail": false,
+          "unchanged": [
+            "shapeRotation"
+          ],
+          "uuid": "23F7FABE-61D1-418D-B432-9364A9DFFADC",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "stamp": true
+          },
+          "archive": {
+            "bytes": 3283,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "7fb897f4da21bc014ad57e973d1589f4071d27a9c9f2b8bdd87c1c34491ec13c"
+          },
+          "changed": [
+            "stamp"
+          ],
+          "changes": {
+            "stamp": true
+          },
+          "code": "L20",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3283,
+              "path": "Brush.archive",
+              "sha256": "7fb897f4da21bc014ad57e973d1589f4071d27a9c9f2b8bdd87c1c34491ec13c",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L20 stamp=true",
+          "single": "singles/L20-stamp_true.brush",
+          "single_sha256": "c5bdcc8cba5420d3fbee7624369441dd31abc8d6977194bbfdbab0bed742a653",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "943E81F5-427A-42A2-86BB-43026B12316E",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "previewSize": 0.10000000149011612
+          },
+          "archive": {
+            "bytes": 3290,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "4cc721eba5042f79699f379f3798ef5822bed48c48b22077fc9f132929ebeb5f"
+          },
+          "changed": [
+            "previewSize"
+          ],
+          "changes": {
+            "previewSize": 0.1
+          },
+          "code": "L21",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3290,
+              "path": "Brush.archive",
+              "sha256": "4cc721eba5042f79699f379f3798ef5822bed48c48b22077fc9f132929ebeb5f",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L21 previewSize=0.1",
+          "single": "singles/L21-previewSize_0.1.brush",
+          "single_sha256": "c65b1b90a197dc722384f01ef0219ac51d5f50883f229012bd8d0e14c98a5f70",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "FABE5C5C-A6A6-42EC-BD7C-42C36BB0FEC7",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "previewSize": 0.6000000238418579
+          },
+          "archive": {
+            "bytes": 3290,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "09d24deef235eee501c9c94187847d8e77a707c2ec450e9ea6150151bd5b63d5"
+          },
+          "changed": [
+            "previewSize"
+          ],
+          "changes": {
+            "previewSize": 0.6
+          },
+          "code": "L22",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3290,
+              "path": "Brush.archive",
+              "sha256": "09d24deef235eee501c9c94187847d8e77a707c2ec450e9ea6150151bd5b63d5",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L22 previewSize=0.6",
+          "single": "singles/L22-previewSize_0.6.brush",
+          "single_sha256": "829be3953bf9db981bf6415ced755ef63ff69dd98937be40b2fcf7cfa664330b",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "F26AB25C-C3CE-4B59-917D-8B416C7F05FB",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "dynamicsPressureSizeCurve": {
+              "points": [
+                "{0.000000, 0.000000}",
+                "{1.000000, 1.000000}",
+                "{0.250000, 0.550000}",
+                "{0.600000, 0.800000}"
+              ],
+              "resolution": 1024
+            }
+          },
+          "archive": {
+            "bytes": 3371,
+            "era": "E4",
+            "export_state": "canonical",
+            "sha256": "03650731a5239d6d08f228aaa26862d72279d3ec620bead6120089576fa3034f"
+          },
+          "changed": [
+            "dynamicsPressureSizeCurve"
+          ],
+          "changes": {
+            "dynamicsPressureSizeCurve": {
+              "points": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.25,
+                  0.55
+                ],
+                [
+                  0.6,
+                  0.8
+                ],
+                [
+                  1.0,
+                  1.0
+                ]
+              ]
+            }
+          },
+          "code": "L23",
+          "donor": "L",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 3371,
+              "path": "Brush.archive",
+              "sha256": "03650731a5239d6d08f228aaa26862d72279d3ec620bead6120089576fa3034f",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 167580,
+              "path": "Shape.png",
+              "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 523632,
+              "path": "Grain.png",
+              "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b",
+              "state": "verbatim"
+            }
+          ],
+          "name": "L23 dynamicsPressureSizeCurve=4 points",
+          "single": "singles/L23-dynamicsPressureSizeCurve_4_points.brush",
+          "single_sha256": "e4bf216b858063d1321aa2d7d319e98d0f0c1daebcfd2edc836da71d5f83c783",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "E759E026-EBCF-49AD-AF03-4F8A69D6BEC1",
+          "warnings": []
+        },
+        {
+          "applied": {},
+          "archive": {
+            "bytes": 8619,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "61fa837bbba39db8d208da09eaebbb565cdad5746a727ef3416592c7d260a89c"
+          },
+          "changed": [],
+          "changes": {},
+          "code": "M00",
+          "donor": "M",
+          "dropped": [],
+          "files": [
+            {
+              "bytes": 8619,
+              "path": "Brush.archive",
+              "sha256": "61fa837bbba39db8d208da09eaebbb565cdad5746a727ef3416592c7d260a89c",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 40249,
+              "path": "QuickLook/Thumbnail.png",
+              "sha256": "6b1820f2ede4b46d6f26125799bc7e4cdc7709243eb093568e0b97ea89b34de8",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M00 name only",
+          "single": "singles/M00-name_only.brush",
+          "single_sha256": "ba8649f6d401852e710ab3e7e9f8fa15dedeff8e607e9506ee3724aa354eab71",
+          "thumbnail": true,
+          "unchanged": [],
+          "uuid": "505A0BF1-E2C0-4263-BDA5-CEB76F6A3E7C",
+          "warnings": []
+        },
+        {
+          "applied": {},
+          "archive": {
+            "bytes": 8639,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "03e4a1dea574f31b2cd0ad8473aa356d04fe771bf136e29d8a002d7b998fe66f"
+          },
+          "changed": [],
+          "changes": {
+            "renderingMaxTransfer": false,
+            "renderingModulatedTransfer": false,
+            "renderingRecursiveMixing": true
+          },
+          "code": "M01",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8639,
+              "path": "Brush.archive",
+              "sha256": "03e4a1dea574f31b2cd0ad8473aa356d04fe771bf136e29d8a002d7b998fe66f",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M01 rendering max=0 mod=0 rec=1",
+          "single": "singles/M01-rendering_max_0_mod_0_rec_1.brush",
+          "single_sha256": "b4bebb89fd16a50930245d49f93678b3fc083f1267dec77a0d8ed8ee45b02fc2",
+          "thumbnail": false,
+          "unchanged": [
+            "renderingMaxTransfer",
+            "renderingModulatedTransfer",
+            "renderingRecursiveMixing"
+          ],
+          "uuid": "3B655DBA-9583-4548-BEB9-DB94012915DA",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "renderingRecursiveMixing": false
+          },
+          "archive": {
+            "bytes": 8639,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "7587aa09a3e532ce8dda5af2f99cae8ffaa155ba7dccccf7c1c5671f23858588"
+          },
+          "changed": [
+            "renderingRecursiveMixing"
+          ],
+          "changes": {
+            "renderingMaxTransfer": false,
+            "renderingModulatedTransfer": false,
+            "renderingRecursiveMixing": false
+          },
+          "code": "M02",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8639,
+              "path": "Brush.archive",
+              "sha256": "7587aa09a3e532ce8dda5af2f99cae8ffaa155ba7dccccf7c1c5671f23858588",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M02 rendering max=0 mod=0 rec=0",
+          "single": "singles/M02-rendering_max_0_mod_0_rec_0.brush",
+          "single_sha256": "8b9b449846627cce1b08607c9d4792bc159f7c53537704412a5ac33629481694",
+          "thumbnail": false,
+          "unchanged": [
+            "renderingMaxTransfer",
+            "renderingModulatedTransfer"
+          ],
+          "uuid": "DB0BDCDC-2CEA-4B44-AFAC-67B956E59463",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "renderingMaxTransfer": true,
+            "renderingRecursiveMixing": false
+          },
+          "archive": {
+            "bytes": 8639,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "00dd65a9ea3ef6843b0ae24adca0633cd25a5d183c7403b5a8121dc365c39110"
+          },
+          "changed": [
+            "renderingMaxTransfer",
+            "renderingRecursiveMixing"
+          ],
+          "changes": {
+            "renderingMaxTransfer": true,
+            "renderingModulatedTransfer": false,
+            "renderingRecursiveMixing": false
+          },
+          "code": "M03",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8639,
+              "path": "Brush.archive",
+              "sha256": "00dd65a9ea3ef6843b0ae24adca0633cd25a5d183c7403b5a8121dc365c39110",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M03 rendering max=1 mod=0 rec=0",
+          "single": "singles/M03-rendering_max_1_mod_0_rec_0.brush",
+          "single_sha256": "03a24a71658f0f2c2d18adff1551bb2d5d484ae61fc8259622695b120804600c",
+          "thumbnail": false,
+          "unchanged": [
+            "renderingModulatedTransfer"
+          ],
+          "uuid": "DC79C1B8-2D23-4738-91F7-27601B53D689",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "renderingMaxTransfer": true,
+            "renderingModulatedTransfer": true,
+            "renderingRecursiveMixing": false
+          },
+          "archive": {
+            "bytes": 8639,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "02fb13bfebc785cc59e834af921edfaf91b9277272fd8be83cdd685f0f50b60e"
+          },
+          "changed": [
+            "renderingMaxTransfer",
+            "renderingModulatedTransfer",
+            "renderingRecursiveMixing"
+          ],
+          "changes": {
+            "renderingMaxTransfer": true,
+            "renderingModulatedTransfer": true,
+            "renderingRecursiveMixing": false
+          },
+          "code": "M04",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8639,
+              "path": "Brush.archive",
+              "sha256": "02fb13bfebc785cc59e834af921edfaf91b9277272fd8be83cdd685f0f50b60e",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M04 rendering max=1 mod=1 rec=0",
+          "single": "singles/M04-rendering_max_1_mod_1_rec_0.brush",
+          "single_sha256": "c822ef2de86d4207d4b6a6e5c75cb81683a998217f86cd3004f468e3a6479264",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "97E8B52F-01EB-4852-844F-44389DB91788",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "renderingModulatedTransfer": true
+          },
+          "archive": {
+            "bytes": 8639,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "c18a3edaf9f22ad6b9827a0a300971d9d2073f47fe84456cd115b6d15c1d48ac"
+          },
+          "changed": [
+            "renderingModulatedTransfer"
+          ],
+          "changes": {
+            "renderingMaxTransfer": false,
+            "renderingModulatedTransfer": true,
+            "renderingRecursiveMixing": true
+          },
+          "code": "M05",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8639,
+              "path": "Brush.archive",
+              "sha256": "c18a3edaf9f22ad6b9827a0a300971d9d2073f47fe84456cd115b6d15c1d48ac",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M05 rendering max=0 mod=1 rec=1",
+          "single": "singles/M05-rendering_max_0_mod_1_rec_1.brush",
+          "single_sha256": "fe1a2de8c44a93e80d952e2a64c9871f0c43a4a3da54bc55b67bbf7e388b83ec",
+          "thumbnail": false,
+          "unchanged": [
+            "renderingMaxTransfer",
+            "renderingRecursiveMixing"
+          ],
+          "uuid": "C3E762C7-5C38-40EF-92A5-94A70C6A4B7F",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "renderingModulatedTransfer": true,
+            "renderingRecursiveMixing": false
+          },
+          "archive": {
+            "bytes": 8639,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "4112a7bb0b723f79d8df522dfc395227018b21bb873af3ed4b1ce2c8e7adc303"
+          },
+          "changed": [
+            "renderingModulatedTransfer",
+            "renderingRecursiveMixing"
+          ],
+          "changes": {
+            "renderingMaxTransfer": false,
+            "renderingModulatedTransfer": true,
+            "renderingRecursiveMixing": false
+          },
+          "code": "M06",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8639,
+              "path": "Brush.archive",
+              "sha256": "4112a7bb0b723f79d8df522dfc395227018b21bb873af3ed4b1ce2c8e7adc303",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M06 rendering max=0 mod=1 rec=0",
+          "single": "singles/M06-rendering_max_0_mod_1_rec_0.brush",
+          "single_sha256": "863c8b16d8b1557732638fd6c25e43168a3ea4c43765987beb1d38e36df8b1ab",
+          "thumbnail": false,
+          "unchanged": [
+            "renderingMaxTransfer"
+          ],
+          "uuid": "1B0D2C60-5DFA-4BF4-A268-69C5DCB4EABE",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "plotSpacing": 0.25,
+            "plotSpacingVersion": 0
+          },
+          "archive": {
+            "bytes": 8649,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "ad4d31a26c49fc4a3c073fca2dc8260267d139b5d4f0ca478ad5bae0f9ed67a4"
+          },
+          "changed": [
+            "plotSpacing",
+            "plotSpacingVersion"
+          ],
+          "changes": {
+            "plotSpacing": 0.25,
+            "plotSpacingVersion": 0
+          },
+          "code": "M07",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8649,
+              "path": "Brush.archive",
+              "sha256": "ad4d31a26c49fc4a3c073fca2dc8260267d139b5d4f0ca478ad5bae0f9ed67a4",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M07 plotSpacing=0.25 plotSpacingVersion=0",
+          "single": "singles/M07-plotSpacing_0.25_plotSpacingVersion_0.brush",
+          "single_sha256": "bc808dc851f714a0f7f0fe4ae6c4655998f5e3289e5834c17f54ec3b8570cfac",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "C35423E1-92DE-401B-A613-0A7AD1830DAE",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "plotSpacing": 0.25
+          },
+          "archive": {
+            "bytes": 8649,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "fcc5a0cb453da02e071ef71ac87996ef16da7cbad9d4a1e567b1c3bf08296063"
+          },
+          "changed": [
+            "plotSpacing"
+          ],
+          "changes": {
+            "plotSpacing": 0.25,
+            "plotSpacingVersion": 1
+          },
+          "code": "M08",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8649,
+              "path": "Brush.archive",
+              "sha256": "fcc5a0cb453da02e071ef71ac87996ef16da7cbad9d4a1e567b1c3bf08296063",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M08 plotSpacing=0.25 plotSpacingVersion=1",
+          "single": "singles/M08-plotSpacing_0.25_plotSpacingVersion_1.brush",
+          "single_sha256": "57fc9890e642fc2be07f38404c6877b14e5c6bdd0676c1e84985b2822f7fca65",
+          "thumbnail": false,
+          "unchanged": [
+            "plotSpacingVersion"
+          ],
+          "uuid": "D272336B-58EF-43C1-9A39-22B69D2BE933",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "plotSpacing": 1.0,
+            "plotSpacingVersion": 0
+          },
+          "archive": {
+            "bytes": 8639,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "e7905027458b388115aef91b83d36dc0fffd77635a0ee851f27abedd61a225fb"
+          },
+          "changed": [
+            "plotSpacing",
+            "plotSpacingVersion"
+          ],
+          "changes": {
+            "plotSpacing": 1.0,
+            "plotSpacingVersion": 0
+          },
+          "code": "M09",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8639,
+              "path": "Brush.archive",
+              "sha256": "e7905027458b388115aef91b83d36dc0fffd77635a0ee851f27abedd61a225fb",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M09 plotSpacing=1 plotSpacingVersion=0",
+          "single": "singles/M09-plotSpacing_1_plotSpacingVersion_0.brush",
+          "single_sha256": "2259ab863d9e93f55754d0ea38b5376de95b5fc3730ad4ea06e6e91c52bf165d",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "7A310CAE-DCC7-46DE-A4D2-FAAD43B8D606",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "plotSpacing": 1.0
+          },
+          "archive": {
+            "bytes": 8639,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "5fcb43dce031bfd2d62ce47099b897524db3e79ffd350d5bb2a87c8d5f6238e5"
+          },
+          "changed": [
+            "plotSpacing"
+          ],
+          "changes": {
+            "plotSpacing": 1.0,
+            "plotSpacingVersion": 1
+          },
+          "code": "M10",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8639,
+              "path": "Brush.archive",
+              "sha256": "5fcb43dce031bfd2d62ce47099b897524db3e79ffd350d5bb2a87c8d5f6238e5",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M10 plotSpacing=1 plotSpacingVersion=1",
+          "single": "singles/M10-plotSpacing_1_plotSpacingVersion_1.brush",
+          "single_sha256": "57148dda7e1eea0a617352d86b5c549381e6e64e2aa8b8bdc8b5ca9f0b0ace5b",
+          "thumbnail": false,
+          "unchanged": [
+            "plotSpacingVersion"
+          ],
+          "uuid": "376C558C-6582-4F51-985B-09BD846A7346",
+          "warnings": []
+        },
+        {
+          "applied": {},
+          "archive": {
+            "bytes": 8632,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "d18e2a2068421c8c91f2560dcef883561de4f71d5e9fd33c708199baa31c2790"
+          },
+          "changed": [],
+          "changes": {
+            "textureApplication": 0
+          },
+          "code": "M11",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8632,
+              "path": "Brush.archive",
+              "sha256": "d18e2a2068421c8c91f2560dcef883561de4f71d5e9fd33c708199baa31c2790",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M11 textureApplication=0",
+          "single": "singles/M11-textureApplication_0.brush",
+          "single_sha256": "315afbbf2e6ba54ba549ff3d80f0517b4cfea8e991892eeaf5b33a0e00a428b0",
+          "thumbnail": false,
+          "unchanged": [
+            "textureApplication"
+          ],
+          "uuid": "12A52740-EE62-4A73-BE39-C8B344038A8E",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "textureApplication": 1
+          },
+          "archive": {
+            "bytes": 8632,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "5dd04c154edba48354c097516b442d38b8c52b4158652f834dec009b58213e8b"
+          },
+          "changed": [
+            "textureApplication"
+          ],
+          "changes": {
+            "textureApplication": 1
+          },
+          "code": "M12",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8632,
+              "path": "Brush.archive",
+              "sha256": "5dd04c154edba48354c097516b442d38b8c52b4158652f834dec009b58213e8b",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M12 textureApplication=1",
+          "single": "singles/M12-textureApplication_1.brush",
+          "single_sha256": "e1a057e80bc466b81b2e2f658ac0360d4be4a8dc891718ea4f51e35465084657",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "EF30AC88-99C2-4B3F-BA1D-D641E06C88B0",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "grainBlendMode": 7
+          },
+          "archive": {
+            "bytes": 8632,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "6127c05f6ce61eb6a47be2ddad5f672c7d55acd89f46cd69d1e36b615817a3c4"
+          },
+          "changed": [
+            "grainBlendMode"
+          ],
+          "changes": {
+            "grainBlendMode": 7
+          },
+          "code": "M13",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8632,
+              "path": "Brush.archive",
+              "sha256": "6127c05f6ce61eb6a47be2ddad5f672c7d55acd89f46cd69d1e36b615817a3c4",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M13 grainBlendMode=7",
+          "single": "singles/M13-grainBlendMode_7.brush",
+          "single_sha256": "30e0414d7b90d2f7ac11ee86823e87261dc8f22d8925634d602194d6501c330a",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "0AA51592-5667-4153-AA76-B14E7B1FC20B",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "grainBlendMode": 10
+          },
+          "archive": {
+            "bytes": 8633,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "229cf358f16fd73ca72ce714f9085877649629bf0c96df71aeea79abdade0482"
+          },
+          "changed": [
+            "grainBlendMode"
+          ],
+          "changes": {
+            "grainBlendMode": 10
+          },
+          "code": "M14",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8633,
+              "path": "Brush.archive",
+              "sha256": "229cf358f16fd73ca72ce714f9085877649629bf0c96df71aeea79abdade0482",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M14 grainBlendMode=10",
+          "single": "singles/M14-grainBlendMode_10.brush",
+          "single_sha256": "009b92591fae44aeca0c101ba0733ec30d560801795e65602bc63bae628863e5",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "F62E5CD5-E94B-4862-B05E-9E3208C2DE84",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "grainBlendMode": 27
+          },
+          "archive": {
+            "bytes": 8633,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "b550efb9d2cffe44580c5325370e5eaea509e79949e5bbe9bfe108acc6461cd9"
+          },
+          "changed": [
+            "grainBlendMode"
+          ],
+          "changes": {
+            "grainBlendMode": 27
+          },
+          "code": "M15",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8633,
+              "path": "Brush.archive",
+              "sha256": "b550efb9d2cffe44580c5325370e5eaea509e79949e5bbe9bfe108acc6461cd9",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M15 grainBlendMode=27",
+          "single": "singles/M15-grainBlendMode_27.brush",
+          "single_sha256": "5089000575ee163b0b3e6c368c8b109db98c57eefcf5df9e9820108a8c2cdcdc",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "ABC16835-0A85-4357-86EB-7A2884328457",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "shapeCount": 0.0625
+          },
+          "archive": {
+            "bytes": 8636,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "4291b26790d80fce44399df6df11aa2edb5632d0f8408fcb6ce48d4e1879b584"
+          },
+          "changed": [
+            "shapeCount"
+          ],
+          "changes": {
+            "shapeCount": 0.0625
+          },
+          "code": "M16",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8636,
+              "path": "Brush.archive",
+              "sha256": "4291b26790d80fce44399df6df11aa2edb5632d0f8408fcb6ce48d4e1879b584",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M16 shapeCount=0.0625",
+          "single": "singles/M16-shapeCount_0.0625.brush",
+          "single_sha256": "d19fe78bc4e870d30aff7e3e10b27c29ca35c35064be6400da1fb6268b696e0c",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "902291B2-6AA0-4641-8720-66B5EFDAC7AF",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "shapeCount": 0.5
+          },
+          "archive": {
+            "bytes": 8633,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "a8b668ec170756ea58a6a953329d43b0c6ad43fee4ac5478382d59ffd6cab5a1"
+          },
+          "changed": [
+            "shapeCount"
+          ],
+          "changes": {
+            "shapeCount": 0.5
+          },
+          "code": "M17",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8633,
+              "path": "Brush.archive",
+              "sha256": "a8b668ec170756ea58a6a953329d43b0c6ad43fee4ac5478382d59ffd6cab5a1",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M17 shapeCount=0.5",
+          "single": "singles/M17-shapeCount_0.5.brush",
+          "single_sha256": "af40c48e0128ee2573a8782703626e20b4c1fc9daf3b1e54519822360d75b6d5",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "39D8DB0E-14CA-47BA-894F-E3D2B9B4E152",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "shapeAngle": 1.5707999467849731
+          },
+          "archive": {
+            "bytes": 8636,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "48ac9bdc72f4fb0222d118f4b82affda9fd467d00e462f607753949461843f22"
+          },
+          "changed": [
+            "shapeAngle"
+          ],
+          "changes": {
+            "shapeAngle": 1.5708
+          },
+          "code": "M18",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8636,
+              "path": "Brush.archive",
+              "sha256": "48ac9bdc72f4fb0222d118f4b82affda9fd467d00e462f607753949461843f22",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M18 shapeAngle=1.5708",
+          "single": "singles/M18-shapeAngle_1.5708.brush",
+          "single_sha256": "c79947cff69188095e2cd3a5ebff0d63499285acf6c27569d91b965cf22a4fc2",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "F0C30E92-A53A-4762-A48F-B8418C2B0808",
+          "warnings": [
+            {
+              "code": "outside_observed",
+              "key": "shapeAngle"
+            }
+          ]
+        },
+        {
+          "applied": {
+            "wetEdgesAmount": 1.0
+          },
+          "archive": {
+            "bytes": 8628,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "d0212c399242cd38e4649f17aa46aee8a29e9c065b2b301eb146482f6ebb1d8f"
+          },
+          "changed": [
+            "wetEdgesAmount"
+          ],
+          "changes": {
+            "wetEdgesAmount": 1.0
+          },
+          "code": "M19",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8628,
+              "path": "Brush.archive",
+              "sha256": "d0212c399242cd38e4649f17aa46aee8a29e9c065b2b301eb146482f6ebb1d8f",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M19 wetEdgesAmount=1",
+          "single": "singles/M19-wetEdgesAmount_1.brush",
+          "single_sha256": "9287e024e6046e669b15b642bbdc1589f1e43ecc72a1d9ef722467b0a714e90a",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "BB1CAE91-5DAF-45D4-AF1B-7210C136F1CD",
+          "warnings": []
+        },
+        {
+          "applied": {
+            "burntEdgesAmount": 1.0
+          },
+          "archive": {
+            "bytes": 8630,
+            "era": "M220",
+            "export_state": "canonical",
+            "sha256": "43947d133df0b866d16695f555859eb3aa78ef97071591319c48abee1014d266"
+          },
+          "changed": [
+            "burntEdgesAmount"
+          ],
+          "changes": {
+            "burntEdgesAmount": 1.0
+          },
+          "code": "M20",
+          "donor": "M",
+          "dropped": [
+            "QuickLook/Thumbnail.png"
+          ],
+          "files": [
+            {
+              "bytes": 8630,
+              "path": "Brush.archive",
+              "sha256": "43947d133df0b866d16695f555859eb3aa78ef97071591319c48abee1014d266",
+              "state": "re-encoded"
+            },
+            {
+              "bytes": 32339,
+              "path": "Shape.png",
+              "sha256": "2fcba99b1bf69b6bc5e9fc86c2d8e6ab60bf75de04ac1b54d90d317584aebd8a",
+              "state": "verbatim"
+            },
+            {
+              "bytes": 16195,
+              "path": "Grain.png",
+              "sha256": "584fa796a7fd86e12c87572bda46a8a1a4beead1e866019ce49aa8ae5ff98ac7",
+              "state": "verbatim"
+            }
+          ],
+          "name": "M20 burntEdgesAmount=1",
+          "single": "singles/M20-burntEdgesAmount_1.brush",
+          "single_sha256": "8a61ea75b3bec569a6c3cd384fd78d200fc90fe47aaa100f213b3686b6c99190",
+          "thumbnail": false,
+          "unchanged": [],
+          "uuid": "3F9FF99B-C3BC-497E-B774-9C2FDE512768",
+          "warnings": []
+        }
+      ],
+      "name": "ROSW 2 Edits",
+      "sha256": "2b542a3fdd95a675e35a6fb6bd90f0258adba41eef504aca013526c9c21926f6"
+    },
+    "scratch": {
+      "bytes": 8838234,
+      "file": "ROSW-3-scratch.brushset",
+      "members": [
+        {
+          "code": "S1",
+          "era": "M220",
+          "files": [
+            {
+              "bytes": 8637,
+              "made": "new M220 brush, made here",
+              "path": "Brush.archive",
+              "sha256": "42e33ea6a722fcf34a340b6ed6848afec9fae7fbee003da10307772f43fadacf"
+            },
+            {
+              "bytes": 71957,
+              "made": "a soft round dot, 1024 x 1024 grey, made here",
+              "path": "Shape.png",
+              "sha256": "ebd2a384ccd4c0a9da8dcae33f5b63a0aaa3f5e36118c56229ac2bad86ab91b4"
+            },
+            {
+              "bytes": 941002,
+              "made": "a fine even speckle, 1024 x 1024 grey, made here",
+              "path": "Grain.png",
+              "sha256": "86d29ed1a43a814f34e736e3d02fb815600896adba96e461abc172214c1597c3"
+            },
+            {
+              "bytes": 12432,
+              "made": "an S-shaped stroke, 1060 x 324, drawn here",
+              "path": "QuickLook/Thumbnail.png",
+              "sha256": "c7061147f0c6a775c767f758b4c792c46f887280f9451fec1b972726d8ca3a64"
+            }
+          ],
+          "name": "S1 M220 scratch",
+          "overrides": null,
+          "polarity": {
+            "shapeInverted": false,
+            "textureInverted": false
+          },
+          "single": "singles/S1-M220_scratch.brush",
+          "single_sha256": "8011e2f9a9fc8b0fc29bd54f23f6dc537b7d9f0f4e94f3f17e5bfa289147982a",
+          "sub": null,
+          "template": "official/procreate-2/p2-airbrushing.brushset",
+          "thumbnail": true,
+          "uuid": "BAD0E2E3-DAD8-49B4-9212-34A6C3061307"
+        },
+        {
+          "code": "S2",
+          "era": "M220",
+          "files": [
+            {
+              "bytes": 8642,
+              "made": "new M220 brush, made here",
+              "path": "Brush.archive",
+              "sha256": "f93d894b48a8927417a06c33afe4d0a5cf20accc06bcdf64bcb1595a0f74b48f"
+            },
+            {
+              "bytes": 71957,
+              "made": "a soft round dot, 1024 x 1024 grey, made here",
+              "path": "Shape.png",
+              "sha256": "ebd2a384ccd4c0a9da8dcae33f5b63a0aaa3f5e36118c56229ac2bad86ab91b4"
+            },
+            {
+              "bytes": 941002,
+              "made": "a fine even speckle, 1024 x 1024 grey, made here",
+              "path": "Grain.png",
+              "sha256": "86d29ed1a43a814f34e736e3d02fb815600896adba96e461abc172214c1597c3"
+            }
+          ],
+          "name": "S2 M220 no thumbnail",
+          "overrides": null,
+          "polarity": {
+            "shapeInverted": false,
+            "textureInverted": false
+          },
+          "single": "singles/S2-M220_no_thumbnail.brush",
+          "single_sha256": "fa0c2f9e39bcfc20cede12ebfe5b947d3a07df299ea52af9243ba16af279b3da",
+          "sub": null,
+          "template": "official/procreate-2/p2-airbrushing.brushset",
+          "thumbnail": false,
+          "uuid": "CA0063C3-6667-441D-A1E7-290F927587AE"
+        },
+        {
+          "code": "S3",
+          "era": "E4",
+          "files": [
+            {
+              "bytes": 3236,
+              "made": "new E4 brush, made here",
+              "path": "Brush.archive",
+              "sha256": "55b290deaf4fb6972ef72821e3ed730fc6ee366573d45733fc70a4fb172b77fe"
+            },
+            {
+              "bytes": 71957,
+              "made": "a soft round dot, 1024 x 1024 grey, made here",
+              "path": "Shape.png",
+              "sha256": "ebd2a384ccd4c0a9da8dcae33f5b63a0aaa3f5e36118c56229ac2bad86ab91b4"
+            },
+            {
+              "bytes": 941002,
+              "made": "a fine even speckle, 1024 x 1024 grey, made here",
+              "path": "Grain.png",
+              "sha256": "86d29ed1a43a814f34e736e3d02fb815600896adba96e461abc172214c1597c3"
+            },
+            {
+              "bytes": 12432,
+              "made": "an S-shaped stroke, 1060 x 324, drawn here",
+              "path": "QuickLook/Thumbnail.png",
+              "sha256": "c7061147f0c6a775c767f758b4c792c46f887280f9451fec1b972726d8ca3a64"
+            }
+          ],
+          "name": "S3 E4 scratch",
+          "overrides": null,
+          "polarity": {
+            "shapeInverted": false,
+            "textureInverted": false
+          },
+          "single": "singles/S3-E4_scratch.brush",
+          "single_sha256": "d4d6f52464847cf10f374d5a0a9e9d313b63082f573a114b9fa7ecce31d9e2d7",
+          "sub": null,
+          "template": "user/everything-watercolour/Everything_Watercolour.brushset",
+          "thumbnail": true,
+          "uuid": "7A5CC700-2A4A-4B9F-8619-41A6D1F0A400"
+        },
+        {
+          "code": "S4",
+          "era": "M220",
+          "files": [
+            {
+              "bytes": 8664,
+              "made": "new M220 brush, made here",
+              "path": "Brush.archive",
+              "sha256": "851d16fc107ce77d60c3b5984bd1c7c8b6adc811c7b8dce75128b08f13ded31d"
+            },
+            {
+              "bytes": 22651,
+              "made": "a soft oval, twice as wide as tall, 600 x 300 grey, made here",
+              "path": "Shape.png",
+              "sha256": "805e758e41fb4fac7ff0da8257cead8ab7624dee59491af4f28ffc6c3d40d6f1"
+            },
+            {
+              "bytes": 3761177,
+              "made": "a fine even speckle, 2048 x 2048 grey, made here",
+              "path": "Grain.png",
+              "sha256": "17ff854fcd580593fc09a04a2e6686282d26466e5e3960d63f3a12d570f2c04e"
+            },
+            {
+              "bytes": 12432,
+              "made": "an S-shaped stroke, 1060 x 324, drawn here",
+              "path": "QuickLook/Thumbnail.png",
+              "sha256": "c7061147f0c6a775c767f758b4c792c46f887280f9451fec1b972726d8ca3a64"
+            }
+          ],
+          "name": "S4 Wäßrige Tönung 水彩 ",
+          "overrides": null,
+          "polarity": {
+            "shapeInverted": false,
+            "textureInverted": false
+          },
+          "single": "singles/S4-Wa_rige_Tonung.brush",
+          "single_sha256": "d90005004e4cd7d0ffe53d297aa26ac13a497c2c40b69ce8f8f33800c9884905",
+          "sub": null,
+          "template": "official/procreate-2/p2-airbrushing.brushset",
+          "thumbnail": true,
+          "uuid": "D7343FFB-3E6F-4E77-BEDB-7F22BB9A3807"
+        },
+        {
+          "code": "S5",
+          "era": "M220",
+          "files": [
+            {
+              "bytes": 8666,
+              "made": "new M220 brush, made here",
+              "path": "Brush.archive",
+              "sha256": "ca7f86a441f8340e7188d9af6e089b1d25598554c5b406c65c56c6bb644166de"
+            }
+          ],
+          "name": "S5 bundled shape",
+          "overrides": {
+            "bundledShapePath": "Brush-Preset-Soft.png"
+          },
+          "polarity": {
+            "shapeInverted": false,
+            "textureInverted": false
+          },
+          "single": "singles/S5-bundled_shape.brush",
+          "single_sha256": "7cd82f8f3932c207d13c9727e1fa98aabed7ddca6140582f2cc560d30ff182f1",
+          "sub": null,
+          "template": "official/procreate-2/p2-airbrushing.brushset",
+          "thumbnail": false,
+          "uuid": "B179053F-9962-493F-9A04-6DFB8C75EBC0"
+        },
+        {
+          "code": "S6",
+          "era": "M220",
+          "files": [
+            {
+              "bytes": 8627,
+              "made": "new M220 brush, made here",
+              "path": "Brush.archive",
+              "sha256": "7abd0011fc07986e3acfb6775362d0e326a16579dba7200b22182a650bde589f"
+            },
+            {
+              "bytes": 71957,
+              "made": "a soft round dot, 1024 x 1024 grey, made here",
+              "path": "Shape.png",
+              "sha256": "ebd2a384ccd4c0a9da8dcae33f5b63a0aaa3f5e36118c56229ac2bad86ab91b4"
+            },
+            {
+              "bytes": 941002,
+              "made": "a fine even speckle, 1024 x 1024 grey, made here",
+              "path": "Grain.png",
+              "sha256": "86d29ed1a43a814f34e736e3d02fb815600896adba96e461abc172214c1597c3"
+            },
+            {
+              "bytes": 12432,
+              "made": "an S-shaped stroke, 1060 x 324, drawn here",
+              "path": "QuickLook/Thumbnail.png",
+              "sha256": "c7061147f0c6a775c767f758b4c792c46f887280f9451fec1b972726d8ca3a64"
+            },
+            {
+              "bytes": 8639,
+              "made": "new M220 brush, made here",
+              "path": "Sub01/Brush.archive",
+              "sha256": "969296f8542637169533a17be2fda69558b2701bb9f8a1c6aec37b9fa94f64d5"
+            },
+            {
+              "bytes": 1554,
+              "made": "a hard square, 512 x 512 grey, made here",
+              "path": "Sub01/Shape.png",
+              "sha256": "2ea6f3a9806747c0d9e0e6cae2ca1d49d85ee921ab2051818421df744eeba69e"
+            },
+            {
+              "bytes": 941002,
+              "made": "a fine even speckle, 1024 x 1024 grey, made here",
+              "path": "Sub01/Grain.png",
+              "sha256": "86d29ed1a43a814f34e736e3d02fb815600896adba96e461abc172214c1597c3"
+            }
+          ],
+          "name": "S6 dual",
+          "overrides": null,
+          "polarity": {
+            "shapeInverted": false,
+            "textureInverted": false
+          },
+          "single": "singles/S6-dual.brush",
+          "single_sha256": "1927b6a16ae90ffb72989a07c1488de045a8740b3d77878d9af60ea85f7e8ad2",
+          "sub": "S6 dual Secondary",
+          "template": "official/procreate-2/p2-airbrushing.brushset",
+          "thumbnail": true,
+          "uuid": "727124E3-E9D5-469C-B877-09376598632B"
+        }
+      ],
+      "name": "ROSW 3 Scratch & Ünï 💧",
+      "sha256": "d04ee3d802b5c001ffa71c5a6bba2ea0d3bf55e7a94bebe755d3275e0c9e2bc3"
+    }
+  },
+  "sitting": "sitting-2",
+  "substitutes": [],
+  "templates": {
+    "E4": {
+      "archive_sha256": "daf0b587dce135a078580112822332f61cb31680f2dbd5836f73d4c00a22b193",
+      "container": "user/everything-watercolour/Everything_Watercolour.brushset",
+      "entry": "ACFC6405-6E03-44AD-907F-32495FD0EE4D/Brush.archive"
+    },
+    "M220": {
+      "archive_sha256": "310d22e6896e917c5e185cfbc89e9c1cc7ce32a4c2908275a1e6a924ba27835e",
+      "container": "official/procreate-2/p2-airbrushing.brushset",
+      "entry": "E0719D60-EE29-46C8-9DC1-D7A4323E6A3B/Brush.archive"
+    }
+  },
+  "unfilled": [],
+  "written": [
+    "CHECKLIST.md",
+    "ROSW-2-edits.brushset",
+    "ROSW-3-scratch.brushset",
+    "manifest.json",
+    "singles/L00-name_only.brush",
+    "singles/L01-name_only_no_thumbnail.brush",
+    "singles/L02-plotSpacing_0.1.brush",
+    "singles/L03-plotSpacing_0.25.brush",
+    "singles/L04-plotSpacing_0.5.brush",
+    "singles/L05-plotSpacing_1.brush",
+    "singles/L06-dynamicsRenderType_0.brush",
+    "singles/L07-dynamicsRenderType_1.brush",
+    "singles/L08-dynamicsRenderType_2.brush",
+    "singles/L09-dynamicsRenderType_3.brush",
+    "singles/L10-blendMode_1_extendedBlend_1.brush",
+    "singles/L11-blendMode_3_extendedBlend_3.brush",
+    "singles/L12-blendMode_8_extendedBlend_8.brush",
+    "singles/L13-textureMovement_0.brush",
+    "singles/L14-textureMovement_1.brush",
+    "singles/L15-textureZoom_0.brush",
+    "singles/L16-textureZoom_1.brush",
+    "singles/L17-shapeRotation_-1.brush",
+    "singles/L18-shapeRotation_0.brush",
+    "singles/L19-shapeRotation_1.brush",
+    "singles/L20-stamp_true.brush",
+    "singles/L21-previewSize_0.1.brush",
+    "singles/L22-previewSize_0.6.brush",
+    "singles/L23-dynamicsPressureSizeCurve_4_points.brush",
+    "singles/M00-name_only.brush",
+    "singles/M01-rendering_max_0_mod_0_rec_1.brush",
+    "singles/M02-rendering_max_0_mod_0_rec_0.brush",
+    "singles/M03-rendering_max_1_mod_0_rec_0.brush",
+    "singles/M04-rendering_max_1_mod_1_rec_0.brush",
+    "singles/M05-rendering_max_0_mod_1_rec_1.brush",
+    "singles/M06-rendering_max_0_mod_1_rec_0.brush",
+    "singles/M07-plotSpacing_0.25_plotSpacingVersion_0.brush",
+    "singles/M08-plotSpacing_0.25_plotSpacingVersion_1.brush",
+    "singles/M09-plotSpacing_1_plotSpacingVersion_0.brush",
+    "singles/M10-plotSpacing_1_plotSpacingVersion_1.brush",
+    "singles/M11-textureApplication_0.brush",
+    "singles/M12-textureApplication_1.brush",
+    "singles/M13-grainBlendMode_7.brush",
+    "singles/M14-grainBlendMode_10.brush",
+    "singles/M15-grainBlendMode_27.brush",
+    "singles/M16-shapeCount_0.0625.brush",
+    "singles/M17-shapeCount_0.5.brush",
+    "singles/M18-shapeAngle_1.5708.brush",
+    "singles/M19-wetEdgesAmount_1.brush",
+    "singles/M20-burntEdgesAmount_1.brush",
+    "singles/S1-M220_scratch.brush",
+    "singles/S2-M220_no_thumbnail.brush",
+    "singles/S3-E4_scratch.brush",
+    "singles/S4-Wa_rige_Tonung.brush",
+    "singles/S5-bundled_shape.brush",
+    "singles/S6-dual.brush"
+  ]
+}

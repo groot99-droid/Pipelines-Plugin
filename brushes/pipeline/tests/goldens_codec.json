@@ -1,0 +1,69 @@
+{
+  "about": "The sha256 of what keyed_archive.rule_encode writes for the synthetic graphs that test_keyed_archive.build makes, under each profile. No brush file is in here.",
+  "recorded_after": {
+    "archives": 1071,
+    "byte_identical": 1071,
+    "containers": 112,
+    "distinct": 1040
+  },
+  "rule": "A vector is replaced only after the opt-in library test has passed with the changed encoder.",
+  "schema": "rosw-brushes-codec-goldens/1",
+  "vectors": {
+    "legacy-curves/ios_legacy": {
+      "bytes": 3492,
+      "objects": 223,
+      "offset_size": 2,
+      "ref_size": 1,
+      "sha256": "8c9c6938d83f43e9388333601996a0ed1656aa27f59ec560c4d0cdacd153f7e8"
+    },
+    "legacy-curves/ios_modern": {
+      "bytes": 3509,
+      "objects": 224,
+      "offset_size": 2,
+      "ref_size": 1,
+      "sha256": "eb5bd05bbc5ad3ae4f85bd0e43b70d76f104016749f5f14e2200a5b70323bf7e"
+    },
+    "legacy-plain/ios_legacy": {
+      "bytes": 1553,
+      "objects": 101,
+      "offset_size": 2,
+      "ref_size": 1,
+      "sha256": "c4923d35dc34f1e7eb2493a9e213a7484208f4394775e1034a69d7e6f5200153"
+    },
+    "legacy-plain/ios_modern": {
+      "bytes": 1553,
+      "objects": 101,
+      "offset_size": 2,
+      "ref_size": 1,
+      "sha256": "c4923d35dc34f1e7eb2493a9e213a7484208f4394775e1034a69d7e6f5200153"
+    },
+    "modern-extras/ios_legacy": {
+      "bytes": 9618,
+      "objects": 594,
+      "offset_size": 2,
+      "ref_size": 2,
+      "sha256": "d8ee956f7f7b007c7c018d3878b61440bf40f0f661cff59d3d22a09c55e6a305"
+    },
+    "modern-extras/ios_modern": {
+      "bytes": 9625,
+      "objects": 594,
+      "offset_size": 2,
+      "ref_size": 2,
+      "sha256": "c7e52fde602eb547a44e257700e2be08e5ec53eae06666666cc59fed539331cc"
+    },
+    "modern/ios_legacy": {
+      "bytes": 8903,
+      "objects": 540,
+      "offset_size": 2,
+      "ref_size": 2,
+      "sha256": "e6566e6e9a43e6653a36d9dcdb94ab620d8d12d7f9b011a75efa40ec9a7f3b98"
+    },
+    "modern/ios_modern": {
+      "bytes": 8920,
+      "objects": 541,
+      "offset_size": 2,
+      "ref_size": 2,
+      "sha256": "11ce04fcfa99e6c462d42a7e8c99b079a1f8966f7e67e7fac90b2513ba36ee10"
+    }
+  }
+}

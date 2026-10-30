@@ -20,9 +20,11 @@ What a fixture is, and is not:
     The values are made up.
   - The modern key set is reconstructed from the documented inventory of the
     220-key era. Twenty-seven of its names (the `...Tilt` and `...TiltAngle`
-    keys) are spelled from a pattern and have not been compared with a real
-    file: MODERN_KEYS_VERIFIED says so. Do not assert that a modern fixture is
-    detected as M220 until that flag is true.
+    keys) were spelled from a pattern; the whole set has since been compared
+    with the M220 key order of schema/silica_keys.json, read off 392 library
+    archives, and is equal to it name for name (test_device_tests holds
+    this): MODERN_KEYS_VERIFIED is True. A modern fixture may be asserted to
+    be detected as M220.
   - Images are a few pixels across. `make_png` writes stored (uncompressed)
     deflate blocks by default, so its bytes are the same on every platform and
     every zlib build. Zip bytes are NOT stable across platforms: never pin them.
@@ -236,7 +238,7 @@ LEGACY_ERAS = ("E0", "E1", "E1b", "E1c", "E2", "E3", "E4")
 LEGACY_KEY_COUNTS = {"E0": 52, "E1": 61, "E1b": 62, "E1c": 63, "E2": 67, "E3": 88, "E4": 101}
 MODERN_ERA = "M220"
 MODERN_KEY_COUNT = 220
-MODERN_KEYS_VERIFIED = False
+MODERN_KEYS_VERIFIED = True          # equal to the schema's M220 key order (test_device_tests)
 
 CLASS_KEY = "$class"
 BRUSH_CHAIN = ("SilicaBrush", "ValkyrieBrush", "NSObject")
