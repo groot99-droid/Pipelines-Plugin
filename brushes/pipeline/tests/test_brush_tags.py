@@ -173,6 +173,8 @@ class BlockParser(TagsCase):
         self.assertEqual(tags._parse_evidence("stroke, shape, grain"), (["stroke", "shape", "grain"], None))
         self.assertEqual(tags._parse_evidence("none"), ([], None))
         self.assertEqual(tags._parse_evidence("Sheet sheet"), (["sheet"], None))
+        self.assertEqual(tags._parse_evidence("sheet | stroke, shape, grain"),
+                         (["sheet", "stroke", "shape", "grain"], None))
         self.assertIsNone(tags._parse_evidence("card")[0])
         self.assertIsNone(tags._parse_evidence("")[0])
 

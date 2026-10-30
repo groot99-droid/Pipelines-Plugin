@@ -156,7 +156,9 @@ def parse_tagger_blocks(text):
 def _parse_evidence(value):
     """(previews list, error). `none` is the empty list."""
     text = value.strip().lower()
-    items = [i for i in re.split(r"[,\s]+", text) if i]
+    # `|` is read as a comma: the format line once read `sheet | stroke, shape, grain | none`,
+    # and a tagger that copied it literally meant the items either side of the bar.
+    items = [i for i in re.split(r"[,\s|]+", text) if i]
     if not items:
         return None, "evidence is empty (write sheet, stroke, shape, grain, or none)"
     if items == ["none"]:

@@ -22,5 +22,16 @@
     "./.claude/agents/creative-writing-librarian-native.md",
     "./.claude/agents/brush-librarian-native.md",
     "./.claude/agents/brush-tagger.md"
-  ]
+  ],
+  "mcpServers": {
+    "brushes": {
+      "command": "python",
+      "args": [
+        "-I",
+        "${CLAUDE_PLUGIN_ROOT}/brushes/pipeline/mcp_server.py",
+        "--defer-to-project",
+        "${CLAUDE_PROJECT_DIR}"
+      ]
+    }
+  }
 }

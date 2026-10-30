@@ -380,11 +380,11 @@ previews:
 # ── F10: surfaces ────────────────────────────────────────────────────────────
 surfaces:
   mcp:
-    declared_in: ["repo:.mcp.json"]         # every file that registers the server today
+    declared_in: ["repo:.mcp.json", "repo:.claude-plugin/plugin.json"]   # every file that registers the server today
     registration: {command: "python", args: ["-I", "brushes/pipeline/mcp_server.py"]}
     plugin_entry:                           # the second registration, for the copy an installed plugin starts
       file: "repo:.claude-plugin/plugin.json"
-      state: pending                        # pending | present. It is added in Phase 5; a test reads the file and holds this word to it
+      state: present                        # pending | present. A test reads the file and holds this word to it
       key: "mcpServers.brushes"
       command: "python"
       args: ["-I", "${CLAUDE_PLUGIN_ROOT}/brushes/pipeline/mcp_server.py", "--defer-to-project", "${CLAUDE_PROJECT_DIR}"]

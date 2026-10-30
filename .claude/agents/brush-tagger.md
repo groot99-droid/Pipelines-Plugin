@@ -113,13 +113,15 @@ edge_tags: <comma-separated tags, or "(none)">
 motif_tags: <comma-separated tags, or "(none)">
 use_tags: <comma-separated tags, or "(none)">
 visual: <one sentence, or "(none)" when no preview was seen>
-evidence: <sheet | stroke, shape, grain | none>
+evidence: <comma-separated items from sheet, stroke, shape, grain; or none>
 notes: <one sentence grounding the tags in this brush's preview, name or facets>
 suggestions: <comma-separated "axis:proposed-tag -- why", or "(none)">
 ```
 
-- `evidence` is `sheet` when you used the sheet row, `none` when you used
-  only name and facets. `visual` may be `(none)` only when `evidence` is `none`.
+- `evidence` lists what you actually looked at, separated by commas and with
+  nothing else on the line: `sheet`, `sheet, stroke`, `sheet, stroke, shape,
+  grain`. Never write `|` or prose. It is `none` when you used only name and
+  facets. `visual` may be `(none)` only when `evidence` is `none`.
 - A suggestion is `<axis>:<lowercase-hyphenated-word> -- <short why>` with
   the short axis name (`texture:felt-fibre -- fibres with a felted body`).
   Keep the why free of commas.

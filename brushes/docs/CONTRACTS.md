@@ -1234,10 +1234,14 @@ edge_tags: <comma-separated tags, or "(none)">
 motif_tags: <comma-separated tags, or "(none)">
 use_tags: <comma-separated tags, or "(none)">
 visual: <one sentence, or "(none)" when no preview was seen>
-evidence: <sheet | stroke, shape, grain | none>
+evidence: <comma-separated items from sheet, stroke, shape, grain; or none>
 notes: <one sentence grounding the tags in this brush's preview, name or facets>
 suggestions: <comma-separated "axis:proposed-tag -- why", or "(none)">
 ```
+`brush_tags.py` reads a `|` in `evidence` as a comma, because the format line used to
+write `sheet | stroke, shape, grain | none` and a tagger that copied it literally meant
+the items either side of the bar.
+
 
 - The tagger reads contact sheets, sliced from `sheets.json`: one sheet is 8
   brushes, at most two sheets per call. There is no per-brush card.
@@ -1540,22 +1544,19 @@ that it never overwrites. The server writes nothing unless started with
 - `repo:.mcp.json` declares the server `brushes` with command `python` and
   arguments `-I` and `brushes/pipeline/mcp_server.py`. `-I` comes first: the
   server opens library originals (section 0).
-- `repo:.claude-plugin/plugin.json` is to carry an `mcpServers.brushes` entry
+- `repo:.claude-plugin/plugin.json` carries an `mcpServers.brushes` entry
   for the copy an installed plugin starts: command `python`, arguments `-I`,
   then a script path that starts with `${CLAUDE_PLUGIN_ROOT}/`
   (`${CLAUDE_PLUGIN_ROOT}/brushes/pipeline/mcp_server.py`), then
   `--defer-to-project ${CLAUDE_PROJECT_DIR}`. Started that way inside a project
-  that has its own copy, the server stands down and lists no tools. **That
-  entry is not there yet**: it is a Phase 5 item (`spec.yaml`
-  `surfaces.mcp.plugin_entry.state` is `pending`). The stand-down itself is
-  built and tested in `mcp_server.py`; what cannot be checked by hand until the
-  entry exists is the server's behaviour outside this repository.
-- Until that entry exists, `repo:.mcp.json` must not reach the published
-  branch or an installed plugin snapshot. The repository root is itself a
-  plugin, and a plugin's root `.mcp.json` is loaded as its MCP configuration:
-  the plugin would try to start `brushes` in every project, where the relative
-  script path does not exist, and would start a second copy inside this
-  repository with nothing to make it stand down.
+  that has its own copy, the server stands down and lists no tools. The
+  stand-down is built and tested in `mcp_server.py`.
+- **Not checked outside this repository:** the repository root is itself a
+  plugin, and a plugin's root `.mcp.json` is loaded as its MCP configuration,
+  so an installed plugin sees `brushes` in both files. Whether the entry in
+  `plugin.json` takes precedence over the relative-path one in `.mcp.json`, or
+  the plugin tries to start the relative one in every project, can be settled
+  only by installing the plugin and reading `/mcp` in another project.
 
 `pipeline/tests/test_mcp_server.py` reads `plugin.json` and holds the word
 `pending` or `present` in `spec.yaml`, and this paragraph, to what the file
