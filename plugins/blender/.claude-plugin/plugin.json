@@ -1,7 +1,7 @@
 {
   "name": "blender",
-  "version": "0.1.0",
-  "description": "Drive a live Blender from Claude through the MCP for Blender server: scene inspection, viewport verification, bpy scripting, and asset sourcing from Poly Haven, Sketchfab, Poly Pizza, Hyper3D Rodin and Hunyuan3D, plus a guide to the Poly Haven Asset Browser addon.",
+  "version": "0.2.0",
+  "description": "Drive a live Blender from Claude through the MCP for Blender server: scene inspection, visual checks, bpy scripting, asset sourcing from Poly Haven, Sketchfab and Poly Pizza, 3D generation, a guide to the Poly Haven Asset Browser addon, and named tools for your own add-ons.",
   "author": {
     "name": "groot99-droid"
   },

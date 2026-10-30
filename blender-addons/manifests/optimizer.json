@@ -1,0 +1,418 @@
+{
+  "addon": "bl_ext.blender_org.asset_optimizer",
+  "seen_version": "1.0.2",
+  "tools": [
+    {
+      "name": "optimizer_batch_optimize",
+      "description": "Batch Optimize VR Assets: One-click optimization for VR - combines vertex merge, decimation, and UV unwrap. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "mesh.batch_optimize",
+      "params": {
+        "optimization_preset": {
+          "description": "Preset optimization workflow",
+          "type": "string",
+          "enum": [
+            "CAD_IMPORT",
+            "GAME_ASSET",
+            "VR_OPTIMIZED",
+            "CUSTOM"
+          ],
+          "default": "CAD_IMPORT"
+        },
+        "enable_vertex_merge": {
+          "description": "Merge vertices by distance",
+          "type": "boolean",
+          "default": true
+        },
+        "enable_decimation": {
+          "description": "Apply mesh decimation",
+          "type": "boolean",
+          "default": true
+        },
+        "enable_dual_uv": {
+          "description": "Generate UV0 and UV1",
+          "type": "boolean",
+          "default": true
+        },
+        "enable_lod_generation": {
+          "description": "Generate LOD levels",
+          "type": "boolean",
+          "default": false
+        },
+        "merge_distance": {
+          "description": "Vertex merge distance",
+          "type": "number",
+          "minimum": 1e-05,
+          "maximum": 1.0,
+          "default": 0.0001
+        },
+        "decimate_ratio": {
+          "description": "Target poly count ratio",
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 1.0,
+          "default": 0.5
+        },
+        "lod_count": {
+          "description": "Number of LOD levels",
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 8,
+          "default": 3
+        },
+        "target_engine": {
+          "description": "Target game engine",
+          "type": "string",
+          "enum": [
+            "UNITY",
+            "UNREAL"
+          ],
+          "default": "UNITY"
+        }
+      },
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "optimizer_dual_uv_unwrap",
+      "description": "Dual UV Unwrap (UV0 + UV1): Generate UV0 for textures and UV1 for lightmaps - optimized for Unity/Unreal Engine. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "mesh.dual_uv_unwrap",
+      "params": {
+        "uv0_enabled": {
+          "description": "Generate UV0 map for texturing",
+          "type": "boolean",
+          "default": true
+        },
+        "uv0_method": {
+          "description": "Unwrapping method for UV0",
+          "type": "string",
+          "enum": [
+            "SMART",
+            "LIGHTMAP",
+            "CUBE",
+            "CYLINDER",
+            "SPHERE"
+          ],
+          "default": "SMART"
+        },
+        "uv0_angle_limit": {
+          "description": "Angle limit for UV0 smart projection",
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 3.14159,
+          "default": 1.15192
+        },
+        "uv0_island_margin": {
+          "description": "Margin between UV0 islands",
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "default": 0.02
+        },
+        "uv0_pack_islands": {
+          "description": "Pack UV0 islands for optimal space usage",
+          "type": "boolean",
+          "default": true
+        },
+        "uv0_pack_margin": {
+          "description": "Margin when packing UV0 islands",
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 0.1,
+          "default": 0.001
+        },
+        "uv0_rotate": {
+          "description": "Allow rotation of UV0 islands during packing",
+          "type": "boolean",
+          "default": true
+        },
+        "uv1_enabled": {
+          "description": "Generate UV1 map for lightmapping",
+          "type": "boolean",
+          "default": true
+        },
+        "uv1_method": {
+          "description": "Unwrapping method for UV1 (lightmaps need non-overlapping UVs)",
+          "type": "string",
+          "enum": [
+            "SMART",
+            "LIGHTMAP"
+          ],
+          "default": "LIGHTMAP"
+        },
+        "uv1_margin": {
+          "description": "Margin between UV1 islands (larger for lightmaps to avoid bleeding)",
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 0.5,
+          "default": 0.05
+        },
+        "uv1_angle_limit": {
+          "description": "Angle limit for UV1 smart projection",
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 3.14159,
+          "default": 1.15192
+        },
+        "correct_aspect": {
+          "description": "Map UVs taking image aspect ratio into account",
+          "type": "boolean",
+          "default": true
+        },
+        "area_weight": {
+          "description": "Weight for area preservation",
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "default": 0.0
+        },
+        "multi_object_mode": {
+          "description": "Process multiple objects, each with its own UV space",
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "optimizer_generate_lods",
+      "description": "Generate LOD Groups: Create multiple LOD levels with progressive decimation for Unity/Unreal Engine. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "mesh.generate_lods",
+      "params": {
+        "lod_count": {
+          "description": "Number of LOD levels to generate (including LOD0)",
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 8,
+          "default": 4
+        },
+        "target_engine": {
+          "description": "Target game engine for LOD setup",
+          "type": "string",
+          "enum": [
+            "UNITY",
+            "UNREAL",
+            "COLLECTION"
+          ],
+          "default": "UNITY"
+        },
+        "lod0_ratio": {
+          "description": "LOD0 is the original mesh (1.0 = 100%)",
+          "type": "number",
+          "minimum": 0.9,
+          "maximum": 1.0,
+          "default": 1.0
+        },
+        "lod1_ratio": {
+          "description": "Ratio for LOD1",
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 1.0,
+          "default": 0.6
+        },
+        "lod2_ratio": {
+          "description": "Ratio for LOD2",
+          "type": "number",
+          "minimum": 0.05,
+          "maximum": 1.0,
+          "default": 0.3
+        },
+        "lod3_ratio": {
+          "description": "Ratio for LOD3",
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 1.0,
+          "default": 0.1
+        },
+        "lod4_ratio": {
+          "description": "Ratio for LOD4",
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 0.5,
+          "default": 0.05
+        },
+        "use_progressive": {
+          "description": "Automatically calculate progressive ratios",
+          "type": "boolean",
+          "default": true
+        },
+        "progressive_factor": {
+          "description": "Factor for automatic progression (0.5 = halve each level)",
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 0.9,
+          "default": 0.5
+        },
+        "use_weighted_normals": {
+          "description": "Add weighted normal modifier to each LOD",
+          "type": "boolean",
+          "default": true
+        },
+        "use_auto_smooth": {
+          "description": "Enable auto smooth on all LODs",
+          "type": "boolean",
+          "default": true
+        },
+        "decimate_type": {
+          "description": "Decimation algorithm to use",
+          "type": "string",
+          "enum": [
+            "COLLAPSE",
+            "UNSUBDIV",
+            "DISSOLVE"
+          ],
+          "default": "COLLAPSE"
+        },
+        "planar_angle": {
+          "description": "Angle limit for planar decimation",
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 3.14159,
+          "default": 0.0872665
+        },
+        "suffix_format": {
+          "description": "Naming convention for LOD objects",
+          "type": "string",
+          "enum": [
+            "UNDERSCORE",
+            "UNREAL",
+            "CUSTOM"
+          ],
+          "default": "UNDERSCORE"
+        },
+        "create_collection": {
+          "description": "Create a collection to organize LOD objects",
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "optimizer_auto_decimate",
+      "description": "Auto Decimate Mesh: Apply decimate modifier with weighted normal and auto smooth for optimized CAD models. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "mesh.auto_decimate",
+      "params": {
+        "ratio": {
+          "description": "Ratio of faces to keep (0.1 = 10% of original)",
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 1.0,
+          "default": 0.5
+        },
+        "decimate_type": {
+          "description": "Type of decimation algorithm",
+          "type": "string",
+          "enum": [
+            "COLLAPSE",
+            "UNSUBDIV",
+            "DISSOLVE"
+          ],
+          "default": "COLLAPSE"
+        },
+        "angle_limit": {
+          "description": "Angle limit for planar decimation",
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 3.14159,
+          "default": 0.0872665
+        },
+        "use_weighted_normals": {
+          "description": "Add weighted normal modifier for better shading",
+          "type": "boolean",
+          "default": true
+        },
+        "weighted_mode": {
+          "description": "How to weight face normals",
+          "type": "string",
+          "enum": [
+            "FACE_AREA",
+            "CORNER_ANGLE",
+            "FACE_AREA_WITH_ANGLE"
+          ],
+          "default": "FACE_AREA"
+        },
+        "use_auto_smooth": {
+          "description": "Enable auto smooth with custom angle",
+          "type": "boolean",
+          "default": true
+        },
+        "smooth_angle": {
+          "description": "Angle for auto smooth",
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 3.14159,
+          "default": 0.523599
+        },
+        "apply_modifiers": {
+          "description": "Apply all modifiers after adding them",
+          "type": "boolean",
+          "default": false
+        },
+        "triangulate": {
+          "description": "Triangulate the mesh before decimation (recommended for game engines)",
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "optimizer_smart_vertex_merge",
+      "description": "Merge Vertices by Distance: Merge vertices by distance - essential for imported CAD models. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "mesh.smart_vertex_merge",
+      "params": {
+        "merge_distance": {
+          "description": "Maximum distance between vertices to merge",
+          "type": "number",
+          "minimum": 1e-05,
+          "maximum": 1.0,
+          "default": 0.0001
+        },
+        "use_sharp_edge_from_normals": {
+          "description": "Mark edges as sharp based on angle between faces (prevents merging across hard edges)",
+          "type": "boolean",
+          "default": true
+        },
+        "sharp_edge_angle": {
+          "description": "Angle threshold for marking edges as sharp",
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 3.14159,
+          "default": 0.523599
+        },
+        "remove_doubles": {
+          "description": "Use remove doubles algorithm (legacy)",
+          "type": "boolean",
+          "default": true
+        },
+        "dissolve_degenerate": {
+          "description": "Remove degenerate geometry (zero-area faces)",
+          "type": "boolean",
+          "default": true
+        },
+        "degenerate_threshold": {
+          "description": "Threshold for degenerate faces",
+          "type": "number",
+          "minimum": 1e-05,
+          "maximum": 1.0,
+          "default": 0.0001
+        },
+        "delete_loose": {
+          "description": "Delete loose vertices and edges",
+          "type": "boolean",
+          "default": true
+        },
+        "recalculate_normals": {
+          "description": "Recalculate face normals after merging",
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "context": "VIEW_3D"
+    }
+  ]
+}

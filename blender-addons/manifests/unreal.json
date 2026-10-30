@@ -1,0 +1,215 @@
+{
+  "addon": "bl_ext.blender_org.io_scene_psk_psa",
+  "seen_version": "9.1.3",
+  "tools": [
+    {
+      "name": "unreal_psk_import",
+      "description": "Import: Import a PSK file. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "psk.import_file",
+      "params": {
+        "filepath": {
+          "type": "string",
+          "description": "The file to import (absolute path)",
+          "required": true
+        },
+        "should_import_vertex_colors": {
+          "description": "Import vertex colors, if available",
+          "type": "boolean",
+          "default": true
+        },
+        "vertex_color_space": {
+          "description": "The source vertex color space (items depend on the scene)",
+          "type": "string",
+          "default": "SRGBA"
+        },
+        "should_import_vertex_normals": {
+          "description": "Import vertex normals, if available.\n\nThis is only supported for PSKX files",
+          "type": "boolean",
+          "default": true
+        },
+        "should_import_extra_uvs": {
+          "description": "Import extra UV maps, if available",
+          "type": "boolean",
+          "default": true
+        },
+        "components": {
+          "description": "Which components to import (items depend on the scene)",
+          "type": "string",
+          "default": "ALL"
+        },
+        "should_import_mesh": {
+          "description": "Import Mesh",
+          "type": "boolean"
+        },
+        "should_import_materials": {
+          "description": "Import Materials",
+          "type": "boolean",
+          "default": true
+        },
+        "should_import_armature": {
+          "description": "Import Skeleton",
+          "type": "boolean"
+        },
+        "bone_length": {
+          "description": "Length of the bones",
+          "type": "number",
+          "default": 1.0
+        },
+        "should_import_shape_keys": {
+          "description": "Import shape keys, if available.\n\nThis is only supported for PSKX files",
+          "type": "boolean",
+          "default": true
+        },
+        "scale": {
+          "description": "Scale",
+          "type": "number",
+          "default": 1.0
+        }
+      }
+    },
+    {
+      "name": "unreal_psa_import_all",
+      "description": "Import PSA: Import all sequences from the selected PSA file. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "psa.import_all",
+      "params": {
+        "should_use_fake_user": {
+          "description": "Assign each imported action a fake user so that the data block is saved even it has no users",
+          "type": "boolean",
+          "default": true
+        },
+        "should_use_config_file": {
+          "description": "Use the .config file that is sometimes generated when the PSA file is exported from UEViewer. This file contains options that can be used to filter out certain bones tracks from the imported actions",
+          "type": "boolean",
+          "default": true
+        },
+        "should_stash": {
+          "description": "Stash each imported action as a strip on a new non-contributing NLA track",
+          "type": "boolean",
+          "default": false
+        },
+        "should_use_action_name_prefix": {
+          "description": "Prefix Action Name",
+          "type": "boolean",
+          "default": false
+        },
+        "action_name_prefix": {
+          "description": "Prefix",
+          "type": "string",
+          "default": ""
+        },
+        "should_overwrite": {
+          "description": "If an action with a matching name already exists, the existing action will have it's data overwritten instead of a new action being created",
+          "type": "boolean",
+          "default": false
+        },
+        "should_write_keyframes": {
+          "description": "Keyframes",
+          "type": "boolean",
+          "default": true
+        },
+        "should_write_metadata": {
+          "description": "Additional data will be written to the custom properties of the Action (e.g., frame rate)",
+          "type": "boolean",
+          "default": true
+        },
+        "should_write_scale_keys": {
+          "description": "Scale Keys",
+          "type": "boolean",
+          "default": true
+        },
+        "sequence_filter_name": {
+          "type": "string",
+          "default": ""
+        },
+        "sequence_filter_is_selected": {
+          "description": "Only show selected sequences",
+          "type": "boolean",
+          "default": false
+        },
+        "sequence_use_filter_invert": {
+          "type": "boolean",
+          "default": false
+        },
+        "sequence_use_filter_regex": {
+          "description": "Filter using regular expressions",
+          "type": "boolean",
+          "default": false
+        },
+        "should_convert_to_samples": {
+          "description": "Convert keyframes to read-only samples. Recommended if you do not plan on editing the actions directly",
+          "type": "boolean",
+          "default": false
+        },
+        "bone_mapping_is_case_sensitive": {
+          "description": "Case Sensitive",
+          "type": "boolean",
+          "default": false
+        },
+        "bone_mapping_should_ignore_trailing_whitespace": {
+          "description": "Ignore Trailing Whitespace",
+          "type": "boolean",
+          "default": true
+        },
+        "fps_source": {
+          "description": "FPS Source (items depend on the scene)",
+          "type": "string"
+        },
+        "fps_custom": {
+          "description": "The frame rate to which the imported sequences will be resampled to",
+          "type": "number",
+          "minimum": 1.0,
+          "default": 30.0
+        },
+        "compression_ratio_source": {
+          "description": "Compression Ratio Source (items depend on the scene)",
+          "type": "string",
+          "default": "ACTION"
+        },
+        "compression_ratio_custom": {
+          "description": "The compression ratio to apply to the imported sequences",
+          "type": "number",
+          "minimum": 0.0,
+          "default": 1.0
+        },
+        "translation_scale": {
+          "description": "Scale factor for bone translation values. Use this when the scale of the armature does not match the PSA file",
+          "type": "number",
+          "default": 1.0
+        },
+        "filepath": {
+          "description": "File path used for importing the PSA file",
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "unreal_psk_export",
+      "description": "Export: Export selected meshes to PSK. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "psk.export",
+      "params": {
+        "filepath": {
+          "type": "string",
+          "description": "The file to write (absolute path)",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "unreal_psa_export",
+      "description": "Export: Export actions to PSA. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "psa.export",
+      "params": {
+        "filepath": {
+          "type": "string",
+          "description": "The file to write (absolute path)",
+          "required": true
+        }
+      }
+    }
+  ]
+}

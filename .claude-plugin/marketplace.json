@@ -18,7 +18,7 @@
     {
       "name": "blender",
       "source": "./plugins/blender",
-      "description": "Drive a live Blender through the MCP for Blender server: scene inspection, bpy scripting with screenshot verification, asset sourcing (Poly Haven, Sketchfab, Poly Pizza, Rodin, Hunyuan3D) and a Poly Haven Asset Browser guide."
+      "description": "Drive a live Blender through the MCP for Blender server: scene inspection, bpy scripting checked by looking at the result, asset sourcing and 3D generation, a Poly Haven Asset Browser guide, and named tools for your own add-ons."
     },
     {
       "name": "reach",

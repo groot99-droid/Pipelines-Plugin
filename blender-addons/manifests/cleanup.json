@@ -1,0 +1,30 @@
+{
+  "addon": "bl_ext.blender_org.ns_toolkit_mesh_cleanup_pro",
+  "seen_version": "1.0.1",
+  "tools": [
+    {
+      "name": "cleanup_tris_to_quads_merge",
+      "description": "Clean Mesh: Convert selected meshes: Tris \u2192 Quads + Merge by Distance + Recalculate Normals + Reset Vectors. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.tris_to_quads_merge",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "cleanup_highlight_topology",
+      "description": "Highlight Topology: Highlight mesh topology for ALL objects in scene using viewport color override. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "ns_toolkit.highlight_topology",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "cleanup_clear_highlight",
+      "description": "Clear Highlight: Clear mesh topology highlighting and restore original colors for ALL objects. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "ns_toolkit.clear_highlight",
+      "params": {},
+      "context": "VIEW_3D"
+    }
+  ]
+}

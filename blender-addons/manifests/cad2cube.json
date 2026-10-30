@@ -1,0 +1,166 @@
+{
+  "addon": "bl_ext.blender_org.cad2cube",
+  "seen_version": "1.5.1",
+  "tools": [
+    {
+      "name": "cad2cube_import_dxf",
+      "description": "Import DXF (CAD2Cube): Import an AutoCAD DXF file with CAD2Cube. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "import_scene.cad2cube_dxf",
+      "params": {
+        "filepath": {
+          "type": "string",
+          "description": "The file to import (absolute path)",
+          "required": true
+        },
+        "units_mode": {
+          "description": "How to determine the scale factor",
+          "type": "string",
+          "enum": [
+            "AUTO",
+            "MANUAL",
+            "PRESET_MM",
+            "PRESET_CM",
+            "PRESET_M",
+            "PRESET_IN",
+            "PRESET_FT"
+          ],
+          "default": "AUTO"
+        },
+        "manual_scale": {
+          "description": "Multiplier applied to every coordinate. Used when Units = Manual",
+          "type": "number",
+          "minimum": 1e-06,
+          "maximum": 100000.0,
+          "default": 0.001
+        },
+        "layer_mode": {
+          "description": "How DXF layers map to Blender",
+          "type": "string",
+          "enum": [
+            "COLLECTIONS",
+            "MATERIALS",
+            "FLAT"
+          ],
+          "default": "COLLECTIONS"
+        },
+        "layer_filter": {
+          "description": "Comma-separated layer names to import (empty = all). Prefix a name with '!' to exclude it",
+          "type": "string",
+          "default": ""
+        },
+        "block_mode": {
+          "description": "How to handle INSERT entities (block references)",
+          "type": "string",
+          "enum": [
+            "INSTANCES",
+            "EXPANDED",
+            "IGNORE"
+          ],
+          "default": "INSTANCES"
+        },
+        "import_text": {
+          "description": "Import TEXT and MTEXT entities as Blender text objects",
+          "type": "boolean",
+          "default": false
+        },
+        "import_points": {
+          "description": "Import POINT entities as empty axes",
+          "type": "boolean",
+          "default": false
+        },
+        "hatch_mode": {
+          "description": "How to handle HATCH fill regions",
+          "type": "string",
+          "enum": [
+            "NONE",
+            "SOLID",
+            "ALL_AS_SOLID"
+          ],
+          "default": "ALL_AS_SOLID"
+        },
+        "merge_3d_faces": {
+          "description": "Combine all imported 3DFACE entities into one Blender mesh and weld shared vertices. Useful for terrain meshes from Civil 3D or any surface composed of many triangles. Off by default since most architectural files don't need it",
+          "type": "boolean",
+          "default": false
+        },
+        "color_by_layer": {
+          "description": "Tint objects with their CAD layer color in the viewport (object color only \u2014 no materials, does not affect render). Makes the import look like the original CAD drawing",
+          "type": "boolean",
+          "default": true
+        },
+        "skip_hidden_layers": {
+          "description": "Skip layers that are off, frozen, or locked in the source file",
+          "type": "boolean",
+          "default": true
+        },
+        "polyline_mode": {
+          "description": "How to import DXF polylines",
+          "type": "string",
+          "enum": [
+            "AUTO",
+            "BEZIER",
+            "POLY"
+          ],
+          "default": "AUTO"
+        },
+        "import_linetypes": {
+          "description": "Render non-continuous lines (Dashed, Hidden, Center, Dot) as dashed curves",
+          "type": "boolean",
+          "default": true
+        },
+        "linetype_scale": {
+          "description": "Multiplier for dash patterns (in addition to DXF $LTSCALE)",
+          "type": "number",
+          "minimum": 0.001,
+          "maximum": 1000.0,
+          "default": 1.0
+        },
+        "curve_resolution": {
+          "description": "Segments per full revolution for arcs, ellipses, splines",
+          "type": "integer",
+          "minimum": 8,
+          "maximum": 512,
+          "default": 64
+        },
+        "flatten_z": {
+          "description": "Force Z = 0 on every entity (useful for 2D drawings with Z noise)",
+          "type": "boolean",
+          "default": false
+        },
+        "auto_join_curves": {
+          "description": "Chain connected curve segments on the same layer into continuous/closed splines",
+          "type": "boolean",
+          "default": true
+        },
+        "auto_join_tolerance": {
+          "description": "Maximum distance (in meters) to weld endpoints together",
+          "type": "number",
+          "minimum": 1e-05,
+          "maximum": 1.0,
+          "default": 0.001
+        },
+        "recenter_mode": {
+          "description": "How to position imported geometry relative to Blender's origin",
+          "type": "string",
+          "enum": [
+            "NONE",
+            "BBOX",
+            "MIN_CORNER"
+          ],
+          "default": "BBOX"
+        },
+        "join_by_layer": {
+          "description": "Merge all curves on the same layer into a single object (faster scene)",
+          "type": "boolean",
+          "default": false
+        },
+        "frame_after_import": {
+          "description": "Zoom the viewport to the imported geometry and fix clipping distance",
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
+  ]
+}

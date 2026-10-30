@@ -32,6 +32,7 @@ KEYS = {
     "GEMINI_API_KEY": "creative-writing: the gemini_mcp drafting / librarian backend",
     "ANTHROPIC_API_KEY": "creative-writing: the anthropic drafting backend",
     "GOOGLE_FONTS_API_KEY": "ui-design: a live Google Fonts catalog refresh (maintainers only)",
+    "MESHY_API_KEY": "studio: the asset-3d pipeline makes 3D models through the Meshy API",
 }
 _HTML = "text/html; charset=utf-8"
 STATIC = {"/keys.html": _HTML, "/index.html": _HTML, "/creative-writing.html": _HTML,

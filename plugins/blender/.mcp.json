@@ -6,6 +6,10 @@
       "env": {
         "DISABLE_TELEMETRY": "true"
       }
+    },
+    "blender-addons": {
+      "command": "uv",
+      "args": ["run", "--no-project", "--python", ">=3.10", "${CLAUDE_PLUGIN_ROOT}/addon-tools/server.py"]
     }
   }
 }

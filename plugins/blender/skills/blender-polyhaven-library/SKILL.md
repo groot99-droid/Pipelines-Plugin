@@ -1,6 +1,6 @@
 ---
 name: blender-polyhaven-library
-description: Guide for using the Poly Haven Assets add-on in Blender, which mirrors polyhaven.com HDRIs, materials and models into the Asset Browser as a local asset library -- first-time setup, catalogs, downloading, resolution and LOD switching, displacement and texture scale, and scripting against its asset library. Use when the user works with the Poly Haven Asset Browser library or asks how to set it up or fix it. Not for the MCP download tools (blender-assets).
+description: Guide for using the Poly Haven Assets add-on in Blender, which mirrors polyhaven.com HDRIs, materials and models into the Asset Browser as a local asset library -- first-time setup, catalogs, downloading, resolution and LOD switching, displacement and texture scale, and scripting against its asset library. Use when the user works with the Poly Haven Asset Browser library or asks how to set it up or fix it. Not for the MCP download tools (blender-assets) or for making tools from the add-on (blender-addon-tools).
 ---
 
 # Poly Haven Assets add-on
@@ -52,6 +52,8 @@ into other projects.
 
 ## With the MCP tools
 
-The MCP `download_polyhaven_asset` tool is independent of this library: it fetches directly
-into the open scene. Use the Asset Browser library for browsing and repeated reuse, and the
-MCP tool when Claude should place an asset for you (see blender-assets).
+`import_asset(source="polyhaven", ...)` from MCP for Blender is independent of this library:
+it fetches directly from polyhaven.com into the open scene (see blender-assets). To use what
+this add-on has already downloaded, the `blender-addons` server's `library_list` and
+`library_import` tools read the **Poly Haven** asset library on disk, and the add-on's own
+operators can be given named tools too (see blender-addon-tools).

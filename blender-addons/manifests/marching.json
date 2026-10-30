@@ -1,0 +1,63 @@
+{
+  "addon": "bl_ext.blender_org.marchingcube",
+  "seen_version": "0.5.0",
+  "tools": [
+    {
+      "name": "marching_cube_add",
+      "description": "Marching Cube Surface: Generates a mesh from a level-set equation using the Marching Cubes algorithm. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "mesh.primitive_marching_cube_add",
+      "params": {
+        "eq": {
+          "description": "Equation for phi(x, y, z) = IsoLevel.\nAlso available: constants c0, c1, c2 and helper functions: a, b, c, f, g, h\nSupported math functions: sin, cos, tan, arcsin, arccos, arctan, arctan2, sinh, cosh, tanh, abs, sqrt, exp, log, log10, log1p, where",
+          "type": "string",
+          "default": "a+b"
+        },
+        "constants": {
+          "description": "Helper constants, used as c0, c1, c2 in functions.",
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3,
+          "default": [
+            0,
+            2.5,
+            0
+          ]
+        },
+        "a_eq": {
+          "description": "Equation for a=F(x,y,z). Also available: constants c0, c1, c2.",
+          "type": "string",
+          "default": "1 / ((x-c0)**2+(y-c1)**2+(z-c2)**2)"
+        },
+        "b_eq": {
+          "description": "Equation for b=F(x,y,z). Also available: constants c0, c1, c2. Functions: a",
+          "type": "string",
+          "default": "1 / ((x+c0)**2+(y+c1)**2+(z+c2)**2)"
+        },
+        "c_eq": {
+          "description": "Equation for c=F(x,y,z). Also available: constants c0, c1, c2. Functions: a, b",
+          "type": "string",
+          "default": "0"
+        },
+        "f_eq": {
+          "description": "Equation for f=F(x,y,z). Also available: Constants: c0, c1, c2. Functions: a, b, c",
+          "type": "string",
+          "default": "0"
+        },
+        "g_eq": {
+          "description": "Equation for g=F(x,y,z). Also available: Constants: c0, c1, c2. Functions: a, b, c, f",
+          "type": "string",
+          "default": "0"
+        },
+        "h_eq": {
+          "description": "Equation for h=F(x,y,z). Also available: Constants: c0, c1, c2. Functions: a, b, c, f, g",
+          "type": "string",
+          "default": "0"
+        }
+      }
+    }
+  ]
+}
