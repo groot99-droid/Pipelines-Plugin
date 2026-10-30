@@ -1,0 +1,42 @@
+{
+  "addon": "bl_ext.blender_org.easymesh_batch_exporter",
+  "seen_version": "1.6.2",
+  "tools": [
+    {
+      "name": "easymesh_batch_export",
+      "description": "Export Selected Meshes: Exports selected mesh objects sequentially with status bar progress. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "mesh.batch_export",
+      "params": {
+        "batch_name": {
+          "description": "Name for the combined batch export file (without extension)",
+          "type": "string",
+          "default": ""
+        }
+      },
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "easymesh_load_export_preset",
+      "description": "Load Preset: Load export settings from a saved preset. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "mesh.load_export_preset",
+      "params": {
+        "preset_name": {
+          "description": "Name of the preset to load",
+          "type": "string",
+          "default": ""
+        }
+      },
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "easymesh_clear_export_indicators",
+      "description": "Clear All Export Indicators: Clears export indicators from all mesh objects. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "mesh.clear_export_indicators",
+      "params": {},
+      "context": "VIEW_3D"
+    }
+  ]
+}

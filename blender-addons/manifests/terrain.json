@@ -1,0 +1,46 @@
+{
+  "addon": "bl_ext.blender_org.terrainmixer",
+  "seen_version": "3.1.3",
+  "tools": [
+    {
+      "name": "terrain_replace_with_terrain",
+      "description": "Terrain Mixer / Cycles Engine: Appends a new, independent, and perfectly-copied Terrain Mixer setup. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.replace_with_terrain",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "terrain_add_tm_world",
+      "description": "Add TM World Material: Appends the TMWorld environment. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.add_tm_world",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "terrain_fix_clipping_distance",
+      "description": "Fix Clipping Distance: Adjusts viewport clipping for large scenes. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.fix_clipping_distance",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "terrain_bake",
+      "description": "Bake. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "terrainmixer.render_with_baking_settings",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "terrain_setup_asset_library",
+      "description": "Setup Terrain Mixer Asset Library. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "terrainmixer.setup_asset_library",
+      "params": {},
+      "context": "VIEW_3D"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+reach plugin
+
+The agent-reach skill and its references/ are copied verbatim from Agent Reach
+(github.com/Panniantong/Agent-Reach, MIT License, Copyright (c) Neo Reid; see LICENSE).
+The copy is refreshed from the engine's agent_reach/skill/ by a sync script and checked
+for drift by a test; do not edit it here.
+
+The plugin does not bundle the agent-reach program or any upstream tool (yt-dlp, gh, ...).
+They are installed on the user's machine, only when the user approves.

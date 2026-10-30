@@ -1,0 +1,14 @@
+{
+  "addon": "bl_ext.blender_org.bake_to_single_material",
+  "seen_version": "1.0.2",
+  "tools": [
+    {
+      "name": "bake_to_single_material",
+      "description": "Bake && Export: Bake tous les mat\u00e9riaux en une seule texture. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.bake_to_single_material",
+      "params": {},
+      "context": "VIEW_3D"
+    }
+  ]
+}

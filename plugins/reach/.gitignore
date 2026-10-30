@@ -1,0 +1,8 @@
+# reach plugin -- ignore rules that travel with the plugin.
+.env
+.env.*
+*.key
+*.pem
+cookies*
+__pycache__/
+*.py[cod]

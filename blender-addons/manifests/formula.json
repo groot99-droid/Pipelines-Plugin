@@ -1,0 +1,39 @@
+{
+  "addon": "bl_ext.blender_org.formula_to_nodes",
+  "seen_version": "2.1.0",
+  "tools": [
+    {
+      "name": "formula_generate",
+      "description": "Generate from Formula: Build (or update) a node group from the one-line formula. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "node.formula_generate",
+      "params": {},
+      "context": "NODE_EDITOR"
+    },
+    {
+      "name": "formula_generate_script",
+      "description": "Generate from Script: Build (or update) a node group from the script. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "node.formula_generate_script",
+      "params": {},
+      "context": "NODE_EDITOR"
+    },
+    {
+      "name": "formula_check",
+      "description": "Check: Compile without building anything and report problems. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "node.formula_check",
+      "params": {
+        "target": {
+          "type": "string",
+          "enum": [
+            "SCRIPT",
+            "FORMULA"
+          ],
+          "default": "SCRIPT"
+        }
+      },
+      "context": "NODE_EDITOR"
+    }
+  ]
+}

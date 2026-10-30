@@ -1,0 +1,22 @@
+{
+  "addon": "bl_ext.blender_org.easy_arrangement",
+  "seen_version": "0.2.2",
+  "tools": [
+    {
+      "name": "arrange_apply",
+      "description": "Apply Arrangement. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.easy_arrangement_apply",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "arrange_reset",
+      "description": "Reset Arrangement. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.easy_arrangement_reset",
+      "params": {},
+      "context": "VIEW_3D"
+    }
+  ]
+}

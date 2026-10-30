@@ -1,0 +1,38 @@
+{
+  "addon": "bl_ext.blender_org.SuperDuperBatchExporter",
+  "seen_version": "2.9.3",
+  "tools": [
+    {
+      "name": "sdbe_export",
+      "description": "Batch Export: Export many objects to separate files all at once. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "export_mesh.batch",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "sdbe_list_add",
+      "description": "Add Selected: Add selected objects to the export list. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "batch_export.list_add",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "sdbe_list_add_collection",
+      "description": "Add Collection: Add active collection to the export list, only supports 1 active collection at a time :( sry. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "batch_export.list_add_collection",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "sdbe_clear_list",
+      "description": "Clear List: Remove all objects from the export list. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "batch_export.clear_list",
+      "params": {},
+      "context": "VIEW_3D"
+    }
+  ]
+}

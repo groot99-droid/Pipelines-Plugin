@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video editor · ROSW</title>
+<meta name="description" content="The video-editor plugin: a short questionnaire picks one recipe for editing video locally, and a dry-run, private-by-default publisher built on official platform APIs only.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="top-inner">
+  <a class="brand" href="index.html">RO<span>SW</span></a>
+  <nav aria-label="Pages"><ul class="nav">
+    <li><a href="index.html">Overview</a></li>
+    <li><a href="creative-writing.html">Creative writing</a></li>
+    <li><a href="studio.html">Studio</a></li>
+    <li><a href="ui-design.html">UI design</a></li>
+    <li><a href="writing-museum.html">Writing museum</a></li>
+    <li><a href="udgt.html">Teardowns</a></li>
+    <li><a href="reach.html">Reach</a></li>
+    <li><a href="video-editor.html" aria-current="page">Video editor</a></li>
+    <li><a href="keys.html">Keys</a></li>
+  </ul></nav>
+</div></header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">plugins/video-editor/</p>
+    <h1>Video editor</h1>
+    <p class="lede">Edit video by conversation. A short questionnaire picks <em>one</em> recipe, so vertical vs
+    landscape and dialogue vs action work never compete. It runs on your machine with ffmpeg and local Whisper,
+    and needs no API keys for any of the editing.</p>
+  </section>
+
+  <p class="toc">On this page: <a href="#recipes">Recipes</a> · <a href="#extras">Optional extras</a> ·
+  <a href="#publish">Publishing</a> · <a href="#use">Using it</a> · <a href="#limits">What is not verified</a></p>
+
+  <h2 id="recipes">Recipes</h2>
+  <ul>
+    <li><strong>Highlight clips</strong>: pull the best moments from long dialogue; optional 9:16 reframe
+      (centre crop, speaker pan, split screen) and captions.</li>
+    <li><strong>Long-form edit</strong>: one polished video: cut retakes, grade, caption, check the cuts.</li>
+    <li><strong>Action montage</strong>: cut on every strike or beat from the audio; no speech needed.</li>
+    <li><strong>Animated overlays</strong> (add-on): text cards built in, a small Remotion template, Manim on demand.</li>
+  </ul>
+
+  <h2 id="extras">Optional extras</h2>
+  <p>Each is installed only if you want it, and the base stays light. <code>speech-plus</code> (whisperX) tightens
+  word timing and can label speakers; <code>stems</code> (Demucs) separates music from speech or isolates drums;
+  <code>publish</code> adds the publisher. Remotion needs Node and is not open source: free for individuals,
+  for-profit organisations of up to three people and non-profits, otherwise a company licence.</p>
+
+  <h2 id="publish">Publishing</h2>
+  <p><code>ve publish</code> uses each platform's official API only: no passwords, no cookies, no browser
+  automation. It is a dry run until you pass <code>--yes</code>, one platform at a time, and it is private or draft
+  by default wherever a platform has one. Bluesky and X have no private mode, so they refuse without
+  <code>--public</code>, and X also needs <code>--accept-cost</code> because it charges per post. A ledger stops
+  the same post being sent twice. Credentials live in your OS keyring or in environment variables, never in a
+  file. <code>ve publish handoff</code> needs no API at all: it tells you where to upload and what caption to paste.</p>
+
+  <h2 id="use">Using it</h2>
+  <pre><code>/plugin marketplace add groot99-droid/Pipelines-Plugin
+/plugin install video-editor@rosw
+python plugins/video-editor/bin/ve.py doctor        # what is installed, by name only
+python -m unittest discover -s plugins/video-editor/tests</code></pre>
+
+  <h2 id="limits">What is not verified</h2>
+  <ul>
+    <li><code>ve publish</code> has <strong>never been run against a live account</strong>. It follows the
+      platforms' official docs and is tested against a fake network and a local server;
+      <code>plugins/video-editor/UNVERIFIED.md</code> lists what to check on first real use.</li>
+    <li>Speaker labels (whisperX diarization) need a Hugging Face token and were not run; real footage and real
+      speech were not used, only synthetic test clips.</li>
+    <li>Local Whisper normalizes fillers, so removing "um" and "uh" is best-effort.</li>
+  </ul>
+</main>
+
+<footer>ROSW · <a href="https://github.com/groot99-droid/Pipelines-Plugin">Source on GitHub</a></footer>
+</body>
+</html>

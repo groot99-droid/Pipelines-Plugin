@@ -1085,6 +1085,226 @@ pipelines:
         script as run with its parameters. The camera setup and the units are
         Decisions in Force.
 
+  asset-3d:
+    status: implemented
+    from: "the author's ask of 2026-10-29: prompt, Meshy, fetch, then Blender"
+    kind: 3d
+    makes: "One or more 3D models (GLB) from a written prompt or a reference image, through the Meshy API: text or image to 3D, then the optional remesh, retexture, rig and animate steps, each file checked against a budget. The models go on to assemble-3d."
+    intent:
+      - 3d asset
+      - 3d model
+      - meshy
+      - text to 3d
+      - image to 3d
+      - prop
+      - game asset
+      - rig a character
+    requires_context:
+      - gate: visual_identity
+        needs: ["generated imagery: motifs, framing, texture"]
+      - gate: render_philosophy
+        needs: ["quality bar"]
+    executes_through:
+      # repo-root paths. The client posts only what the confirmed recipe
+      # lists; the reference images go through the Higgsfield connector.
+      client: "studio/pipeline/meshy_client.py"
+      inspector: "studio/pipeline/glb_inspect.py"
+      connector: "Higgsfield (reference images, optional)"
+    connector:
+      tools:
+        - mcp__Higgsfield__models_explore
+        - mcp__Higgsfield__generate_image
+        - mcp__Higgsfield__generate_image_batch
+        - mcp__Higgsfield__jobs_wait
+        - mcp__Higgsfield__show_generation_by_ids
+        - mcp__Higgsfield__media_upload
+        - mcp__Higgsfield__media_upload_widget
+        - mcp__Higgsfield__media_confirm
+        - mcp__Higgsfield__remove_background
+    class: spend
+    leaves_machine: >
+      The prompt, to Meshy. A reference image, as a file sent inside the
+      request or as its link, to Meshy, and to Higgsfield when Higgsfield made
+      or cleans it. A model sent to remesh, retexture or rig. Every Meshy task
+      except balance and the animation library spends Meshy credits; every
+      Higgsfield generation spends Higgsfield credits.
+    carries:
+      - "One model per asset, never a whole scene: assembly is assemble-3d's."
+      - "The prompt is built from the attested imagery constraints and says what the thing is, its material and its silhouette. A word the brand does not use does not go in."
+      - "Dry run first: every create is shown as a dry run in the recipe, with its estimate, before the go-ahead. A re-run reuses a recorded task and never pays twice."
+      - "The key is the author's, in ~/.rosw/keys.env. Its value is never read into a brief, a log or a note."
+    open:
+      - >
+        The Meshy fields and endpoints were read from docs.meshy.ai on
+        2026-10-29 and are tested against a fake server, not yet against the
+        live service. The first real run checks them: `balance`, then one
+        preview, before a recipe spends more.
+      - >
+        A rigged model comes back only for a textured humanoid facing +Z.
+        Anything else is remeshed or retextured, not rigged.
+    stage_notes:
+      intake: |
+        List the assets: for each, a slug (lower-case, hyphens), what it is,
+        what it is for, and its real height in metres if the author knows
+        it. Say for each whether it starts from words (text to 3D) or from
+        an image: a file the author names (record its path), a Higgsfield
+        generation made in this run, or one from the generations library
+        (studio/library/catalog.json, by id). Say which later steps are
+        wanted: remesh to a polycount, retexture, rig, animate. Note whether
+        the models go on to assemble-3d. Nothing is generated now.
+      recipe: |
+        Run `python {pipeline.executes_through.client} balance` and paste
+        what it says. For each asset, in order, the chain of ops and every
+        field: the prompt word for word (at most 800 characters) with each
+        phrase's source (a row of the attestation, the brief), ai_model,
+        topology, target_polycount, texture settings, and any reference
+        image. A Higgsfield reference image is its own step before the
+        Meshy one: the model, the prompt and the count, as still-image
+        lists them. Then each Meshy create, exactly as it will run, and its
+        dry run pasted under it:
+          python {pipeline.executes_through.client} create <op> <run-id> --name <asset> [--prompt ... | --image ... | --from <asset>:<op>] [--set key=value ...]
+        The dry run prints the request and its estimate; add up the
+        estimates and say it beside the balance. Give the budget each model
+        is checked against in review (tris, mb, tex, height), with its
+        source: the quality bar as attested, or the author.
+      execute: |
+        After the go-ahead, in the recipe's order: a Higgsfield reference
+        image first, downloaded into the run folder (log the job id and the
+        file). Then each create from the recipe with --confirm added and
+        nothing else changed, then
+          python {pipeline.executes_through.client} wait <run-id>
+        and the download of what the recipe keeps:
+          python {pipeline.executes_through.client} download <run-id> --name <asset> --op <op> [--format glb] [--thumbnail]
+        Log each command, the task id, the status and the credits the task
+        reports it spent. A failed task is logged as failed and not posted
+        again with a changed request: a changed request is a new recipe,
+        through studio_run.py back. A crash is resumed by running the same
+        command again: a recorded task is reused, not paid twice.
+      review: |
+        For every downloaded model:
+          python {pipeline.executes_through.inspector} <run folder>/meshy/<file>.glb --budget <the recipe's budget>
+        and paste it. Then one line per attested constraint (motifs,
+        framing, texture, the quality bar) against the model's thumbnail
+        or a look at it in Blender, and how it was checked. The author
+        marks each model keep or discard. Keep a kept model as `final`, an
+        earlier step's model (a preview mesh) as `variant`, and the
+        reference image and the thumbnail as `reference`.
+      record: |
+        kind: 3d. context_brand lists visual_identity and render_philosophy.
+        Method: per asset, every Meshy op with its request as the ledger
+        records it (meshy_tasks.json: the task id, the endpoint, the
+        fields, the credits spent), and any Higgsfield generation with its
+        model, prompt and job id. Never a file link: the service's links
+        are signed. Artifacts: the kept files only. The prompt style and
+        the budget the author settled on are Decisions in Force.
+
+  assemble-3d:
+    status: implemented
+    from: "the author's ask of 2026-10-29: fetch and import, then assemble in Blender"
+    kind: 3d
+    makes: "One scene assembled in Blender from models a run made or kept: each brought in, scaled to its real height, set on the ground, given LODs if asked, then lit, framed and saved as a .blend, a .glb and a preview render. Headless, or in the author's live Blender."
+    intent:
+      - assemble a scene
+      - import into blender
+      - set dressing
+      - lay out props
+      - blender scene from assets
+      - lods
+    requires_context:
+      - gate: render_philosophy
+        needs: ["quality bar", "when to re-render"]
+      - gate: motion_language
+        needs: ["camera grammar"]
+    executes_through:
+      # repo-root paths. The layout file is the parameter file; the plan
+      # writes the bpy code for each step, and both branches run that code.
+      plan: "studio/pipeline/bpy/assemble_plan.py"
+      assembler: "studio/pipeline/bpy/assemble.py"
+      inspector: "studio/pipeline/glb_inspect.py"
+      guide: "plugins/blender/skills/blender-mcp/SKILL.md"
+    connector:
+      # The live branch: the Blender MCP server (mcp-for-blender), its tool
+      # names checked against server.py of version 2.2.6 on 2026-10-29.
+      tools:
+        - mcp__blender__get_addon_status
+        - mcp__blender__get_scene_info
+        - mcp__blender__execute_blender_code
+        - mcp__blender__look
+    class: local-compute
+    workload: render_3d_cpu   # studio/pipeline/machine.yaml: one headless Blender job
+    leaves_machine: "Nothing. Blender runs on this machine, headless or the author's own, and reads only files in the run folder."
+    carries:
+      - "Fixed scripts with a parameter file: the layout is the parameter file, and the bpy code each step ran is the Method, whole."
+      - "One token, one job, for either branch: a headless run or a live session holds a render_3d_cpu token first."
+      - "Silhouette, proportions, depth, contact, framing, then detail; lights move with the geometry."
+      - "In the live branch the author's scene is theirs: nothing is deleted, the .blend is saved as a copy, and the code sent is the plan's, never code that came from a model file or a tool result."
+    open:
+      - >
+        The headless branch was run on Blender 5.0.1 (the bpy module) with
+        CPU Cycles. EEVEE needs a GPU context a headless machine may lack; the
+        layout's render.engine says which. Not yet run on the author's Windows
+        machine.
+      - >
+        The live branch's code passes mcp-for-blender 2.2.6's safe mode, so it
+        runs with BLENDER_MCP_SAFE_MODE=1. The plugin's own tool list
+        (plugins/blender/skills/blender-mcp/references/tools.md) names an
+        older server's tools; the four listed here are the current ones.
+    stage_notes:
+      intake: |
+        Name the models: for each, the file in this run folder, or the
+        assets folder path a run kept it at (it is copied into this run
+        folder at execute). Record what the scene is for, which branch the
+        author wants (headless, or live in their open Blender), and what is
+        wanted out: a .blend, a .glb, a preview still.
+      recipe: |
+        Read {pipeline.executes_through.guide} for the live branch's loop.
+        Write the layout the run will use, as assembly.json in the run
+        folder, every field with its source (the brief, the camera grammar
+        and the quality bar as attested, the plan's own defaults): for each
+        model its target_height_m, location, rotation_deg, ground, decimate
+        and lods; then floor, lights, camera, render and export. Run
+          python {pipeline.executes_through.plan} check <run folder>/assembly.json
+        and paste it. List the commands, in order:
+          python studio/pipeline/compute_gate.py mint render_3d_cpu
+          python studio/pipeline/compute_gate.py consume <run-id>
+        then, headless,
+          blender -b --factory-startup --python {pipeline.executes_through.assembler} -- --layout <run folder>/assembly.json --out <run folder>/blender
+        or, live, for each step (import, normalize, lods, stage, save,
+        export, render)
+          python {pipeline.executes_through.plan} emit <run folder>/assembly.json --step <step>
+        sent whole through execute_blender_code, with a look after each.
+        What is written: <run folder>/blender/ only.
+      execute: |
+        After the go-ahead, mint and consume the compute token before
+        Blender starts, and log both. Copy any kept model the layout names
+        into the run folder first. Headless: run the one command and paste
+        what it printed. Live: get_addon_status once, then get_scene_info
+        and a look before the first change; then each step's emitted code
+        as it is, logging the ROSW line it prints, and a look after it.
+        A step that fails is logged and stops the run; it is not edited
+        and sent again. A change to the layout is a new recipe, through
+          python studio/pipeline/studio_run.py back <run-id> --why "<what failed>"
+        The code that ran is in <run folder>/blender/steps/ (headless), or
+        is the emit output logged in execute_log.md (live).
+      review: |
+        Run
+          python {pipeline.executes_through.inspector} <run folder>/blender/scene.glb --budget <the recipe's budget>
+        and paste it, with assemble_report.json's lines (each model's
+        source height, scale and base, each LOD's triangles). One line per
+        attested constraint: the quality bar against the preview and the
+        report; when to re-render, against what changed since the last
+        assembly; camera grammar, against the camera the stage step placed.
+        The author marks keep or discard. Keep scene.blend and scene.glb as
+        `final`, preview.png as `concept-frame`, and assembly.json as
+        `reference`.
+      record: |
+        kind: 3d. context_brand lists render_philosophy and motion_language.
+        Method: the layout as a fenced json block, the branch, the Blender
+        version, the commands as run, and each step's code by its file
+        under blender/steps/ or as logged. A later run must be able to
+        rebuild the scene from the note and the kept models alone. Units,
+        heights and the camera are Decisions in Force.
+
 # --------------------------------------------------------------------
 # Stages. The same six for every pipeline.
 #

@@ -17,6 +17,7 @@ INDEX.md               generated index of the tools, skills and agents
 .claude/agents/        creative-writing-{chunk-tagger,drafter,librarian-native}
 .mcp.json              the gemini MCP server Claude calls (see blender-gemini)
 CLAUDE.md              repo conventions; points at each vault's own CLAUDE.md
+blender-addons/        tool manifests for the author's own Blender add-ons (see Blender plugin)
 blender-gemini/        installer and tests that register the Blender MCP server
                        with the Gemini CLI; its skill is blender-gemini
 creative-writing/
@@ -42,9 +43,19 @@ plugins/ui-design/     the ui-design plugin: self-contained
   README.md, LICENSE, NOTICE, CHANGELOG.md
 plugins/udgt/          the udgt plugin: UI, Dataset & Gameplay Teardown of a game repo
 teardowns/             one folder per torn-down game: who-did-it, ninety-nine, right-door-wrong-exit
+agent-reach/          the reach base: Agent Reach (imported with git subtree). CLI `agent-reach`
+                       installs, checks and configures read access to 15 internet platforms;
+                       toolsets follow agent-reach/TOOLSETS.md
+plugins/reach/         the reach plugin: reach-setup, reach-connect, and the engine's agent-reach skill (a copy)
 plugins/blender/       the blender plugin: self-contained
-  .mcp.json            launches `uvx mcp-for-blender` with telemetry off
-  skills/, agents/     blender-{mcp,assets,polyhaven-library}, blender-scene-reviewer
+  .mcp.json            launches `uvx mcp-for-blender` with telemetry off, and blender-addons
+  addon-tools/         server.py: named tools for the user's own add-ons, from manifests
+  skills/, agents/     blender-{mcp,assets,polyhaven-library,addon-tools}, blender-scene-reviewer
+plugins/video-editor/  the video-editor plugin: self-contained
+  bin/ve.py            launcher: runs the CLI from the plugin folder or install cache, no pip install
+  src/videoeditor/     the `ve` CLI: questionnaire, recipes and playbooks, ffmpeg render, captions, publish
+  skills/              video-editor, manim-video
+  tests/, UNVERIFIED.md  unittest suite; what is not verified and what is deferred
 ```
 
 Paths in the creative-writing and studio skills and agents are relative to this
@@ -286,14 +297,17 @@ a checkpoint. Execute and record each need an explicit go-ahead as well. Nothing
 is made before every constraint it needs has been resolved and its source shown;
 a constraint that cannot be sourced is asked for, never guessed.
 
-Nine pipelines are declared in
-[`studio/pipeline/spec.yaml`](studio/pipeline/spec.yaml) and eight are
+Twelve pipelines are declared in
+[`studio/pipeline/spec.yaml`](studio/pipeline/spec.yaml) and ten are
 implemented: `ui-direction`, which runs the ui-design catalog under the studio's
 brand gates; `brand-gate`, which writes a brand gate from an interview with the
 author; `still-image`, `video-shot` and `music-cue`, through the Higgsfield
 connector; `edit-2d`, through the Adobe connector; `scene-3d`, which builds one room of the
-Writing Museum for a work the author names; and `scene-blender`, through the
-Blender scene connector. Each names the connector tools it may call, spends
+Writing Museum for a work the author names; `scene-blender`, through the
+Blender scene connector; `asset-3d`, which makes 3D models from a prompt or a
+reference image through the Meshy API (`studio/pipeline/meshy_client.py`, its key
+in `~/.rosw/keys.env`); and `assemble-3d`, which assembles those models in Blender,
+headless or in the author's live Blender through the Blender MCP server. Each names the connector tools it may call, spends
 nothing before the execute go-ahead, and keeps what the author keeps under
 `studio/assets/`. `ui-build` and `brush` are entries that say what each needs;
 `brush` has its packer (`studio/pipeline/brush_pack.py`) and waits for the
@@ -325,6 +339,8 @@ session.
 python -m unittest discover -s studio/pipeline/tests     # the studio's own check
 python studio/pipeline/studio_run.py status              # every run
 python studio/pipeline/content_md.py lint --all          # every note in the vault
+python studio/pipeline/meshy_client.py balance           # Meshy credits (free; needs MESHY_API_KEY)
+python studio/pipeline/glb_inspect.py <file.glb>         # triangles, textures, size of a model
 ```
 
 ## Writing Museum
@@ -419,11 +435,31 @@ Install it from this repo in Claude Code with
 ## Blender plugin
 
 `plugins/blender/` lets Claude drive a live Blender through the MCP for Blender server
-(scene inspection, bpy scripting checked by viewport screenshots, asset sourcing from
-Poly Haven, Sketchfab, Poly Pizza, Hyper3D Rodin and Hunyuan3D) and documents the Poly Haven
-Assets Asset Browser add-on. Install with `/plugin install blender@rosw`. The server's
-telemetry is disabled in `.mcp.json`; the GPL Poly Haven add-on is not bundled. See
-`plugins/blender/README.md`.
+(scene inspection, bpy scripting checked by looking at the result, asset sourcing from
+Poly Haven, Sketchfab and Poly Pizza, and generation with Tripo, Hunyuan3D, Hyper3D Rodin or
+Meshy) and documents the Poly Haven Assets Asset Browser add-on. Its second server,
+`blender-addons` (`addon-tools/server.py`), turns the operators of the author's own add-ons
+into named, typed tools from a manifest per add-on that `server.py discover` drafts, and reads
+any asset library on disk, the Poly Haven one included. Install with
+`/plugin install blender@rosw`. The server's telemetry is disabled in `.mcp.json`; the GPL Poly
+Haven add-on is not bundled. See `plugins/blender/README.md`.
+
+```
+python plugins/blender/addon-tools/server.py list                 # add-ons in the open Blender
+python plugins/blender/addon-tools/server.py discover <module>    # draft a manifest, all tools off
+python plugins/blender/addon-tools/server.py check                # validate the manifests
+python -m unittest discover -s plugins/blender/tests
+```
+
+`blender-addons/manifests/` already holds tools for 23 of the author's add-ons, among them ACT,
+PROTO, Super Duper Batch Exporter, Terrain Mixer, Texture Pipeline Studio and the Unreal PSK/PSA
+importer. They were drafted from each add-on's published source; the
+[README](blender-addons/README.md) lists every tool, what was left out and why, and how to rebuild them.
+To use them, set `BLENDER_ADDON_TOOLS_DIR` to that folder.
+
+```
+python -m unittest discover -s blender-addons/tests
+```
 
 ## Teardowns (UDGT)
 
@@ -434,3 +470,15 @@ game's own look. The owner answers a short creative brief before each chapter, a
 kept verbatim. The first teardown is `teardowns/who-did-it/`; see its README and
 [`docs/udgt.html`](docs/udgt.html). `teardowns/ninety-nine/` (The-Intern) and
 `teardowns/right-door-wrong-exit/` followed: Right Door has all seven chapters and Ninety-Nine all nine.
+
+## Video editor
+
+`plugins/video-editor/` edits video by conversation. A short questionnaire picks one recipe (highlight
+clips, long-form edit, action montage, with an animated-overlay add-on), so vertical vs landscape and
+dialogue vs action work never compete. It runs locally on ffmpeg and local Whisper, with no API keys, and
+adds optional extras for word alignment and speaker turns (whisperX), stem separation (Demucs) and a Remotion
+overlay template. `ve publish` sends the result through official platform APIs only: dry run by default,
+private or draft by default, nothing sent without `--yes`, credentials in the OS keyring or environment
+variables and never in a file. Install with `/plugin install video-editor@rosw`. `ve publish` has never been
+run against a live account; `plugins/video-editor/UNVERIFIED.md` lists what to check first. See
+`plugins/video-editor/README.md` and [`docs/video-editor.html`](docs/video-editor.html).

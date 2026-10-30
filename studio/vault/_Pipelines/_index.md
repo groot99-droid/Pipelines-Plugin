@@ -44,6 +44,8 @@ same six stages: **intake → context → recipe → execute → review → reco
 | edit-2d | [[_Pipelines/studio\|studio]] | a batch edit or a composite | in use |
 | scene-3d | [[_Pipelines/studio\|studio]] | one walkable room of the Writing Museum for a named work | in use |
 | scene-blender | [[_Pipelines/studio\|studio]] | a scene, a camera path or a render, through the Blender scene connector | in use |
+| asset-3d | [[_Pipelines/studio\|studio]] | 3D models from a prompt or a reference image, through Meshy | in use |
+| assemble-3d | [[_Pipelines/studio\|studio]] | a Blender scene assembled from models, headless or live | in use |
 
 ## Adding a pipeline
 
