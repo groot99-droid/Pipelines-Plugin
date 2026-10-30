@@ -634,8 +634,6 @@ class LibraryStatus(ServerCase):
             done = subprocess.run([sys.executable, "-I", str(REPO / script), verb, "--help"],
                                   capture_output=True, timeout=120)
             self.assertEqual(done.returncode, 0, step)
-        self.assertNotIn("python brushes/pipeline/ingest.py build", ms.next_steps(self.EVERYTHING),
-                         "ingest.py has no `build` verb yet")
 
 
 class ToolsCall(ServerCase):

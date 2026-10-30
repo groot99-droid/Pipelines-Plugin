@@ -121,8 +121,8 @@ class TheFile(Loaded):
             self.assertTrue(set(built[script]) <= set(declared), script)
             self.assertIn(script, self.spec["build"]["exists"])
         missing = set(self.spec["cli"]["scripts"]["pipeline/ingest.py"]["verbs"]) - set(built["pipeline/ingest.py"])
-        self.assertEqual(missing, {"build", "report"},
-                         "when one of these lands, add it here and switch on its row of mcp_server.NEXT_STEPS")
+        self.assertEqual(missing, set(),
+                         "when a verb lands, add it here and switch on its row of mcp_server.NEXT_STEPS")
         for what, script, verb, is_built in mcp_server.NEXT_STEPS:
             if script in built:
                 self.assertEqual(is_built, verb in built[script], (script, verb))

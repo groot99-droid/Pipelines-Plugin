@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_de1ce6984dbd",
+    "b_cef59f097872",
+    "b_cbcaf26cef96",
+    "b_79703fa49fb2",
+    "b_6cd12ff7818d",
+    "b_7277569fae08",
+    "b_9a2854cfa2ae",
+    "b_97c2fafd8fe1"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Sweet Treats",
+  "note": "01_Procreate_Defaults/sweet-treats.md",
+  "pack": "sweet-treats",
+  "pack_kind": "official",
+  "set_id": "s_2c34298795ff",
+  "set_slug": "sweet-treats",
+  "title": "Sweet Treats"
+}

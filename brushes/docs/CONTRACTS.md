@@ -813,8 +813,8 @@ in part by `previews.py render --confirm` (F12).
 | `catalog.json` | the assembled index: packs, sets, brush rows, counts |
 | `brushes/<brush_id>.json` | one full record per brush. **The one home of a brush's facets, facet words and preview object** |
 | `sets/<set_slug>.json` | one record per brushset |
-| `textures.json` | one record per `texture_id`: `{sha256, width, height, used_as, shape_tiles: {"n", "i"}, grain_tile, stats}`. The tile paths and `stats` (the pixel statistics) are filled by `previews.py` and are `null` before it has run |
-| `thumbnails.json` | per brush id: `{source_sha256, stroke, stroke_source, alpha_max, alpha_hi, gain, ink_fraction, bbox}`, written by `previews.py`. `source_sha256` is the hash of the thumbnail file the stroke was made from |
+| `textures.json` | a plain map by `texture_id` (no wrapper object) to `{sha256, width, height, used_as, shape_tiles: {"n", "i"}, grain_tile, stats}`; `stats` is `{"shape": {"n", "i"}, "grain"}` once measured. The tile paths and `stats` (the pixel statistics) are filled by `previews.py` and are `null` before it has run |
+| `thumbnails.json` | a plain map by brush id (`{}` until `previews.py` has run), each value: `{source_sha256, stroke, stroke_source, alpha_max, alpha_hi, gain, ink_fraction, bbox}`, written by `previews.py`. `source_sha256` is the hash of the thumbnail file the stroke was made from |
 | `containers.json` | container sha256 to parsed summary, so a re-ingest can skip |
 | `ingest_report.json` | counts, duplicates, skipped files, warnings, keys the schema lacks |
 
@@ -886,8 +886,8 @@ who writes them and who reads them.
  "grain": {"source": "blank", "bundled_name": "Brush-Preset-Blank.png", "texture_id": null, "inverted": false},
  "thumbnail": {"present": true, "sha256": "<64 hex>", "width": 1060, "height": 324, "color_type": 6},
  "secondary": null,
- "reset": null,
- "author": {"name": null, "has_picture": false, "has_signature": false, "creation_date": null},
+ "reset": null,                       // or {archive_sha256, same_as_live, differing_keys, differing_count, has_secondary, thumbnail_sha256}
+ "author": {"name": null, "has_picture": false, "has_signature": false, "creation_date": null},   // creation_date is an ISO UTC string, "2026-08-17T07:22:10Z"
  "settings": {"...": "to_json(brush)[\"params\"], every root key, read-only"},
  "facets": {"...": "see below"},
  "facet_words": ["stroke", "spacing-continuous"],
@@ -1585,7 +1585,12 @@ modules of `spec.yaml` `cli.library_modules`; a test walks the folder.
 
 This table is the full contract, not what is built. `spec.yaml`
 `build.built_verbs` lists the verbs that exist today: of `ingest.py`, `where`,
-`adopt` and `census` (so `build` and `report` exit 2 until they land).
+`adopt`, `build`, `report` and `census`.
+
+`ingest.py build --only S` still reads the whole library but writes only the brush
+and set records of set slug or pack id S. The shared files (`catalog.json`,
+`textures.json`, `containers.json`, `ingest_report.json`) are rewritten in full and no
+stale record is removed; a full `build` is the way to prune.
 
 - `fetch_base_library.py fetch` is a dry run without `--confirm`. It reads
   `library/sources.json` `official.files`, saves each file as

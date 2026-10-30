@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_dffd445f2343",
+    "b_f1284ca91dcf",
+    "b_bcfb78f1787a",
+    "b_32d4744497b0",
+    "b_aa7cb398de7c",
+    "b_bbe6ffcc4e9b",
+    "b_2d892cff2844",
+    "b_822fb27a69c7"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Industrial 1",
+  "note": "01_Procreate_Defaults/p5-industrial.md",
+  "pack": "procreate-5",
+  "pack_kind": "official",
+  "set_id": "s_bdd9c7cc3ddd",
+  "set_slug": "p5-industrial",
+  "title": "Industrial (Procreate 5)"
+}

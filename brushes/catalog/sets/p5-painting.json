@@ -1,0 +1,31 @@
+{
+  "brush_count": 17,
+  "brushes": [
+    "b_ce0700568096",
+    "b_b4565298058f",
+    "b_b58c165bf7cf",
+    "b_bfd876eb29ba",
+    "b_7e030495f02b",
+    "b_91409032931b",
+    "b_2fce47d7d74f",
+    "b_af1e5cfa1269",
+    "b_36a769ae5a64",
+    "b_4a7208f6b78b",
+    "b_8151a0380f79",
+    "b_3f5a7b0cc3c2",
+    "b_418b535f0469",
+    "b_041b01612dff",
+    "b_124e0d785ad9",
+    "b_ea6939e71828",
+    "b_17ba48e52936"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Painting 1",
+  "note": "01_Procreate_Defaults/p5-painting.md",
+  "pack": "procreate-5",
+  "pack_kind": "official",
+  "set_id": "s_9a9d3a6fde02",
+  "set_slug": "p5-painting",
+  "title": "Painting (Procreate 5)"
+}

@@ -50,12 +50,13 @@ build:
     - "pipeline/gbr.py"                     # the GIMP .gbr brush, read and write
     - "pipeline/brush_file.py"              # inspect, export, roundtrip
     - "pipeline/fetch_base_library.py"      # list, fetch, verify
-    - "pipeline/ingest.py"                  # where, adopt and census; build and report are not built
+    - "pipeline/ingest.py"                  # where, adopt, build, report and census
     - "pipeline/mcp_server.py"              # a stub: the protocol and one tool, library_status
     - "pipeline/device_tests.py"            # build and verify for sittings 1 and 2
     - "pipeline/tests/fixtures.py"
     - "schema/silica_keys.json"             # every archive key, its eras and classes (F4)
     - "schema/patch_cases.json"             # the patch cases Python and the app both run (F3)
+    - "schema/facets.json"                  # facet thresholds, key lists and words; ingest.py build reads it
     - "library/sources.json"
     - "library/README.md"
     - "app/index.html"                      # the designer as received; not yet rebuilt
@@ -63,7 +64,7 @@ build:
   # existing script may be planned too: cli.scripts lists the full contract.
   built_verbs:                              # checked against each script's own parser
     "pipeline/fetch_base_library.py": [list, fetch, verify]
-    "pipeline/ingest.py": [where, adopt, census]
+    "pipeline/ingest.py": [where, adopt, build, report, census]
     "pipeline/device_tests.py": [build, verify]
     "pipeline/brush_file.py": [inspect, export, roundtrip]
   note: "Nothing here has written a file the drawing app is known to open. See device_test."
@@ -289,8 +290,7 @@ tags:
 
 # Facet names. Computed from the archive by pipeline/ingest.py, with thresholds
 # in schema/facets.json; never written by an agent and never derived a second
-# time by the search tool. When schema/facets.json lands, a test binds this
-# list to it. The last six are filled once previews.py has measured the tiles.
+# time by the search tool. A test binds this list to schema/facets.json. The last six are filled once previews.py has measured the tiles.
 facets:
   - kind
   - is_stamp

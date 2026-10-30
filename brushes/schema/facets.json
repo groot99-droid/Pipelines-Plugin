@@ -1,0 +1,152 @@
+{
+  "schema": "rosw-brushes-facets/1",
+  "facet_rules_version": 1,
+  "about": "The facet rules of docs/CONTRACTS.md F5, as data. pipeline/ingest.py reads every threshold, key list and word from here and is the only code that computes a facet; the search tool and the notes read `facets` and `facet_words` from the brush record. Every threshold is a heuristic and every class name a name guess: a note shows the raw number beside each class. Raise facet_rules_version when a rule changes. Authored: no script writes this file.",
+  "round": 4,
+  "class_forms": "A `classes` list is read top to bottom; the first row whose bound holds gives the class. `upto` means value <= bound, `below` means value < bound, and a row with no bound takes everything left. A missing value has no class.",
+  "word_forms": "`template` fills {value} (the facet's value; `lower` lower-cases it) or {class} (the class of the value under this facet's own `classes`); `skip` lists values that give no word. `map` gives a word per value. `if_true` gives the word when the value is true.",
+  "word_order": [
+    "kind", "spacing_class", "shape_source", "shape_aspect", "shape_midtone", "grain_source",
+    "grain_contrast", "wet_mix", "pressure_size_class", "pressure_opacity_class", "tilt", "speed",
+    "taper", "size_class", "translucent", "dual", "blend_code", "scatter", "shape_rotation",
+    "randomised", "azimuth", "jitter_size", "jitter_opacity", "jitter_position", "streamline",
+    "color_dynamics", "wet_edges", "burnt_edges", "era", "stroke_source"
+  ],
+  "facets": {
+    "kind": {
+      "rule": "S(stamp) is true: stamp; otherwise stroke. The schema labels the key `Stamp preview`; what the app does with it is not measured",
+      "keys": ["stamp"], "when_true": "stamp", "when_false": "stroke",
+      "word": {"template": "{value}"}
+    },
+    "is_stamp": {"rule": "S(stamp) is true", "keys": ["stamp"]},
+    "spacing": {"rule": "plotSpacing, rounded", "keys": ["plotSpacing"]},
+    "spacing_class": {
+      "rule": "the class of spacing", "of": "spacing",
+      "classes": [{"upto": 0.02, "class": "continuous"}, {"upto": 0.10, "class": "tight"},
+                  {"upto": 0.50, "class": "visible"}, {"class": "dotted"}],
+      "word": {"template": "spacing-{value}"}
+    },
+    "shape_source": {
+      "rule": "container.resolve_textures: embedded, bundled, bundled-supplied or none",
+      "word": {"map": {"embedded": "shape-embedded", "bundled": "shape-bundled", "bundled-supplied": "shape-bundled"}}
+    },
+    "uses_bundled_shape": {"rule": "the shape is an image named by the archive that ships inside the drawing app", "sources": ["bundled", "bundled-supplied"]},
+    "grain_source": {
+      "rule": "container.resolve_textures: embedded, bundled, bundled-supplied, blank or none",
+      "word": {"map": {"embedded": "grain-embedded", "bundled": "grain-bundled", "bundled-supplied": "grain-bundled",
+                       "blank": "grain-blank", "none": "grain-none"}}
+    },
+    "has_grain": {
+      "rule": "an embedded grain (whose contrast, once measured, is at least embedded_min_contrast), or a bundled grain that is not the blank one",
+      "embedded": ["embedded"], "embedded_min_contrast": 0.01, "sources": ["bundled", "bundled-supplied"]
+    },
+    "uses_bundled_grain": {"rule": "the grain is an image named by the archive that ships inside the drawing app, the blank one included", "sources": ["bundled", "bundled-supplied", "blank"]},
+    "grain_movement": {
+      "rule": "textureMovement: static_at or less static; rolling_from or more rolling; else partial",
+      "keys": ["textureMovement"], "static_at": 0.0, "rolling_from": 0.999
+    },
+    "grain_application_code": {"rule": "textureApplication, the raw number", "keys": ["textureApplication"]},
+    "wet_mix": {
+      "rule": "dynamicsRenderType == 3 when the archive has that key; otherwise dynamicsMix > 0. A name guess (docs/CONTRACTS.md F5); render_code carries the raw number",
+      "render_key": "dynamicsRenderType", "render_value": 3, "mix_key": "dynamicsMix", "mix_above": 0.0,
+      "word": {"if_true": "wet-mix"}
+    },
+    "render_code": {
+      "rule": "the raw render switches: render-type-<n> from dynamicsRenderType; glaze-type-<n> from dynamicsGlazeType (E0); transfer-<max|std>.<mod|flat>.<rec|simple> from the three rendering* keys (modern)",
+      "render_key": "dynamicsRenderType", "render_template": "render-type-{n}",
+      "glaze_key": "dynamicsGlazeType", "glaze_template": "glaze-type-{n}",
+      "transfer_keys": [["renderingMaxTransfer", "max", "std"], ["renderingModulatedTransfer", "mod", "flat"],
+                        ["renderingRecursiveMixing", "rec", "simple"]],
+      "transfer_template": "transfer-{0}.{1}.{2}"
+    },
+    "taper": {
+      "rule": "none, start, end or both, from taper_start and taper_end",
+      "word": {"template": "taper-{value}", "skip": ["none"]}
+    },
+    "taper_start": {"rule": "the largest of the keys is above the bound", "keys": ["taperStartLength", "pencilTaperStartLength"], "above": 0.01},
+    "taper_end": {"rule": "the largest of the keys is above the bound", "keys": ["taperEndLength", "pencilTaperEndLength"], "above": 0.01},
+    "pressure_size": {"rule": "dynamicsPressureSize, rounded", "keys": ["dynamicsPressureSize"]},
+    "pressure_size_class": {
+      "rule": "the class of pressure_size", "of": "pressure_size",
+      "classes": [{"below": -0.02, "class": "inverse"}, {"below": 0.02, "class": "none"}, {"below": 0.35, "class": "low"},
+                  {"below": 0.70, "class": "medium"}, {"class": "high"}],
+      "word": {"template": "pressure-size-{value}", "skip": ["none"]}
+    },
+    "pressure_opacity": {"rule": "dynamicsPressureOpacity, rounded", "keys": ["dynamicsPressureOpacity"]},
+    "pressure_opacity_class": {
+      "rule": "the class of pressure_opacity", "of": "pressure_opacity",
+      "classes": [{"below": -0.02, "class": "inverse"}, {"below": 0.02, "class": "none"}, {"below": 0.35, "class": "low"},
+                  {"below": 0.70, "class": "medium"}, {"class": "high"}],
+      "word": {"template": "pressure-opacity-{value}", "skip": ["none"]}
+    },
+    "tilt": {
+      "rule": "any of the keys is above the bound",
+      "keys": ["dynamicsTiltSize", "dynamicsTiltOpacity", "dynamicsTiltGradation", "dynamicsTiltBleed"], "above": 0.02,
+      "word": {"if_true": "tilt"}
+    },
+    "speed": {
+      "rule": "the absolute value of any of the keys is above the bound",
+      "keys": ["dynamicsSpeedSize", "dynamicsSpeedOpacity"], "above": 0.02, "absolute": true,
+      "word": {"if_true": "speed"}
+    },
+    "size_min": {"rule": "minSize, rounded", "keys": ["minSize"]},
+    "size_max": {"rule": "maxSize, rounded", "keys": ["maxSize"]},
+    "size_class": {
+      "rule": "the class of size_max", "of": "size_max",
+      "classes": [{"upto": 1, "class": "fine"}, {"upto": 6, "class": "medium"}, {"upto": 12, "class": "broad"}, {"class": "max"}],
+      "word": {"template": "size-{value}"}
+    },
+    "opacity_min": {"rule": "minOpacity, rounded", "keys": ["minOpacity"]},
+    "opacity_max": {"rule": "maxOpacity, rounded", "keys": ["maxOpacity"]},
+    "translucent": {"rule": "opacity_max is below the bound", "of": "opacity_max", "below": 0.999, "word": {"if_true": "translucent"}},
+    "dual": {"rule": "the brush folder holds Sub01/Brush.archive (not the dualBlendMode key)", "member": "Sub01/Brush.archive", "word": {"if_true": "dual"}},
+    "dual_blend_code": {"rule": "dualBlendMode, the raw number", "keys": ["dualBlendMode"]},
+    "blend_code": {"rule": "blendMode, the raw number", "keys": ["blendMode"], "word": {"template": "blend-{value}", "skip": [0, null]}},
+    "blend_extended_code": {"rule": "extendedBlend, the raw number", "keys": ["extendedBlend"]},
+    "scatter": {"rule": "shapeScatter is above the bound", "keys": ["shapeScatter"], "above": 0.02, "word": {"if_true": "scatter"}},
+    "shape_rotation": {"rule": "shapeRotation is not 0", "keys": ["shapeRotation"], "not_equal": 0, "word": {"if_true": "shape-rotation"}},
+    "randomised": {"rule": "shapeRandomise is true", "keys": ["shapeRandomise"], "word": {"if_true": "randomised"}},
+    "azimuth": {"rule": "shapeAzimuth is true", "keys": ["shapeAzimuth"], "word": {"if_true": "azimuth"}},
+    "jitter_size": {"rule": "dynamicsJitterSize is above the bound", "keys": ["dynamicsJitterSize"], "above": 0.02, "word": {"if_true": "jitter-size"}},
+    "jitter_opacity": {"rule": "dynamicsJitterOpacity is above the bound", "keys": ["dynamicsJitterOpacity"], "above": 0.02, "word": {"if_true": "jitter-opacity"}},
+    "jitter_position": {"rule": "plotJitter is above the bound", "keys": ["plotJitter"], "above": 0.02, "word": {"if_true": "jitter-position"}},
+    "streamline": {"rule": "plotSmoothing is above the bound; a name guess", "keys": ["plotSmoothing"], "above": 0.02, "word": {"if_true": "streamline"}},
+    "color_dynamics": {
+      "rule": "any hue, saturation, lightness, darkness, brightness or secondary-colour dynamics key is not 0",
+      "keys": ["dynamicsJitterHue", "dynamicsJitterStrokeHue", "dynamicsJitterSaturation", "dynamicsJitterStrokeSaturation",
+               "dynamicsJitterLightness", "dynamicsJitterStrokeLightness", "dynamicsJitterDarkness", "dynamicsJitterStrokeDarkness",
+               "dynamicsPressureHue", "dynamicsPressureSaturation", "dynamicsPressureBrightness", "dynamicsPressureSecondaryColor",
+               "dynamicsTiltHue", "dynamicsTiltSaturation", "dynamicsTiltBrightness", "dynamicsTiltSecondaryColor",
+               "dynamicsRollHue", "dynamicsRollSaturation", "dynamicsRollBrightness", "dynamicsRollSecondaryColor",
+               "jitterSecondary", "jitterStrokeSecondary"],
+      "not_equal": 0, "word": {"if_true": "color-dynamics"}
+    },
+    "wet_edges": {"rule": "wetEdgesAmount is above the bound", "keys": ["wetEdgesAmount"], "above": 0.02, "word": {"if_true": "wet-edges"}},
+    "burnt_edges": {"rule": "burntEdgesAmount is above the bound", "keys": ["burntEdgesAmount"], "above": 0.02, "word": {"if_true": "burnt-edges"}},
+    "era": {"rule": "brush_model.detect_era: an era id, or X<count>", "word": {"template": "era-{value}", "lower": true}},
+    "family": {"rule": "brush_model: legacy or modern (an X<count> archive takes its nearest era's)"},
+    "stroke_source": {
+      "rule": "preview.stroke_source: at build, thumbnail, reset-thumbnail or none from which member exists; settled by apply_preview_results",
+      "word": {"map": {"none": "no-thumbnail"}}
+    },
+    "shape_coverage": {"rule": "mean of the normalised shape tile over 255", "measured": ["shape", "coverage"]},
+    "shape_aspect": {
+      "rule": "width over height of the bounding box of tile values above 16", "measured": ["shape", "aspect"],
+      "classes": [{"below": 0.8, "class": "tall"}, {"upto": 1.25, "class": "even"}, {"class": "wide"}],
+      "word": {"template": "shape-{class}"}
+    },
+    "shape_midtone": {
+      "rule": "share of tile values between 16 and 240 among values above 16", "measured": ["shape", "midtone"],
+      "classes": [{"below": 0.25, "class": "hard"}, {"below": 0.75, "class": "mixed"}, {"class": "soft"}],
+      "word": {"template": "shape-{class}"}
+    },
+    "shape_edge_touch": {"rule": "the border ring's mean over 0.05", "measured": ["shape", "edge_touch"]},
+    "grain_mean": {"rule": "mean of the grain tile over 255", "measured": ["grain", "mean"]},
+    "grain_contrast": {
+      "rule": "population standard deviation of the grain tile over 255", "measured": ["grain", "contrast"],
+      "classes": [{"below": 0.03, "class": "flat"}, {"below": 0.10, "class": "subtle"}, {"below": 0.25, "class": "medium"},
+                  {"class": "strong"}],
+      "word": {"template": "grain-{class}"}
+    }
+  }
+}

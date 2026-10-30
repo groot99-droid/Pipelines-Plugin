@@ -30,7 +30,7 @@ open.
 | `pipeline/gbr.py` | the GIMP `.gbr` brush, read and write |
 | `pipeline/brush_file.py` | `inspect`, `export` and `roundtrip` of one brush file or a folder of them. `export` writes only with `--confirm` and `--out` |
 | `pipeline/fetch_base_library.py` | `list`, `fetch` and `verify` for the 40 official sets. `fetch` downloads only with `--confirm`, and only from the one host |
-| `pipeline/ingest.py` | `where`; `adopt`, which copies a folder of brush files into `library/user/`; and `census`, which counts what the library's archives hold and writes nothing. The catalog verbs (`build`, `report`) are not built yet |
+| `pipeline/ingest.py` | `where`; `adopt`, which copies a folder of brush files into `library/user/`; `census`, which counts what the library's archives hold and writes nothing; `build`, which reads every brush file and writes `catalog/` (deterministic, nothing to confirm); and `report`, which prints what the catalog holds |
 | `pipeline/mcp_server.py` | a stub of the MCP server: the protocol and one tool, `library_status`. Registered in the repository's `.mcp.json` |
 | `pipeline/device_tests.py` | `build` and `verify` for the two sittings with the iPad: sitting 1, a control set of eight library brushes in a container of ours; sitting 2, brushes we edited and brushes we made from nothing |
 | `pipeline/tests/` | the tests, and `fixtures.py`, which builds synthetic brush files for them |

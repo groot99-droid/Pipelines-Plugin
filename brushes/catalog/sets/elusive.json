@@ -1,0 +1,25 @@
+{
+  "brush_count": 11,
+  "brushes": [
+    "b_f2ea1e790c72",
+    "b_8bd3043d611a",
+    "b_5f38735ec206",
+    "b_c54394972078",
+    "b_bbd5b3a5a27c",
+    "b_9566daceaaa1",
+    "b_cc7b50740630",
+    "b_d0bbeecda09e",
+    "b_9730fd4e3d65",
+    "b_b291a7d6f845",
+    "b_d275de07cae0"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Elusive Set",
+  "note": "01_Procreate_Defaults/elusive.md",
+  "pack": "elusive",
+  "pack_kind": "official",
+  "set_id": "s_608239c31579",
+  "set_slug": "elusive",
+  "title": "Elusive"
+}

@@ -1,0 +1,20 @@
+{
+  "brush_count": 6,
+  "brushes": [
+    "b_b7a59c5b2f37",
+    "b_ecf3d78a9b66",
+    "b_926c93d4b988",
+    "b_cae1760dedb8",
+    "b_950b71b0b006",
+    "b_66d04ec46dd3"
+  ],
+  "kind": "set",
+  "library": "user",
+  "name": "Monoliners",
+  "note": "02_Vendor_Packs/monoliners.md",
+  "pack": "monoliners",
+  "pack_kind": "vendor",
+  "set_id": "s_ea220b773264",
+  "set_slug": "monoliners",
+  "title": "Monoliners"
+}

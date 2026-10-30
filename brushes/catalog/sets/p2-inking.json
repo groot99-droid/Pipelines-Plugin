@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_e9fe9907bee5",
+    "b_71e211ae2b65",
+    "b_fed8f439cc48",
+    "b_eb1f85125e11",
+    "b_db99b919faa5",
+    "b_3ca0460baebe",
+    "b_aa1006f83ac0",
+    "b_86f707a10892"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "P2_Inking",
+  "note": "01_Procreate_Defaults/p2-inking.md",
+  "pack": "procreate-2",
+  "pack_kind": "official",
+  "set_id": "s_4a5d07207256",
+  "set_slug": "p2-inking",
+  "title": "Inking (Procreate 2)"
+}

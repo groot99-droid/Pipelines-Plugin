@@ -1,0 +1,825 @@
+{
+  "author": {
+    "creation_date": "2019-10-07T05:31:01Z",
+    "has_picture": false,
+    "has_signature": false,
+    "name": null
+  },
+  "content_sha256": "51973eb7e70bc593d08e2010e1a9278935a25b1b21bc84444327c1d6b3938f72",
+  "display_name": "Freycinet",
+  "era": "M220",
+  "facet_words": [
+    "stroke",
+    "spacing-tight",
+    "shape-bundled",
+    "grain-bundled",
+    "pressure-size-high",
+    "pressure-opacity-medium",
+    "taper-both",
+    "size-broad",
+    "dual",
+    "scatter",
+    "jitter-position",
+    "era-m220"
+  ],
+  "facets": {
+    "azimuth": false,
+    "blend_code": 0,
+    "blend_extended_code": 0,
+    "burnt_edges": false,
+    "color_dynamics": false,
+    "dual": true,
+    "dual_blend_code": 28,
+    "era": "M220",
+    "family": "modern",
+    "grain_application_code": 1,
+    "grain_contrast": null,
+    "grain_mean": null,
+    "grain_movement": "rolling",
+    "grain_source": "bundled",
+    "has_grain": true,
+    "is_stamp": false,
+    "jitter_opacity": false,
+    "jitter_position": true,
+    "jitter_size": false,
+    "kind": "stroke",
+    "opacity_max": 1.0,
+    "opacity_min": 0.0,
+    "pressure_opacity": 0.5317,
+    "pressure_opacity_class": "medium",
+    "pressure_size": 1.0,
+    "pressure_size_class": "high",
+    "randomised": false,
+    "render_code": "transfer-max.mod.simple",
+    "scatter": true,
+    "shape_aspect": null,
+    "shape_coverage": null,
+    "shape_edge_touch": null,
+    "shape_midtone": null,
+    "shape_rotation": false,
+    "shape_source": "bundled",
+    "size_class": "broad",
+    "size_max": 7.4383,
+    "size_min": 0.01,
+    "spacing": 0.0355,
+    "spacing_class": "tight",
+    "speed": false,
+    "streamline": false,
+    "stroke_source": "thumbnail",
+    "taper": "both",
+    "taper_end": true,
+    "taper_start": true,
+    "tilt": false,
+    "translucent": false,
+    "uses_bundled_grain": true,
+    "uses_bundled_shape": true,
+    "wet_edges": false,
+    "wet_mix": false
+  },
+  "family": "modern",
+  "format": {
+    "archive_bytes": 9248,
+    "archive_sha256": "f239ebc778079f129696db59178706aeaa8bfb1ddab5d6f111c7a6d59dfb9ce1",
+    "classes": [
+      "SilicaBrush",
+      "ValkyrieBrush",
+      "NSObject"
+    ],
+    "key_count": 222,
+    "ref_size": 2,
+    "version": 2
+  },
+  "grain": {
+    "bundled_name": "Pastel-Board-Fine.jpg",
+    "inverted": false,
+    "source": "bundled",
+    "texture_id": null
+  },
+  "home": {
+    "position": 3,
+    "set_slug": "p5-drawing"
+  },
+  "id": "b_51973eb7e70b",
+  "library": "official",
+  "name": "Freycinet",
+  "occurrences": [
+    {
+      "container": "official/procreate-5/p5-drawing.brushset",
+      "container_sha256": "876812d8719ba9d2b76167c73148a9593511b269ca68afc22367b97ab3222b44",
+      "entry_prefix": "D8B10B2A-8A0C-478D-B022-1748F6C38EB0/",
+      "pack": "procreate-5",
+      "position": 3,
+      "set_id": "s_4627985abbb9",
+      "set_slug": "p5-drawing"
+    }
+  ],
+  "pack": "procreate-5",
+  "preview": {
+    "grain": null,
+    "grain_source": "bundled",
+    "shape": null,
+    "shape_source": "bundled",
+    "stroke": null,
+    "stroke_source": "thumbnail"
+  },
+  "reset": null,
+  "schema": "rosw-brushes-brush/1",
+  "secondary": {
+    "component_sha256": "76387cb4c816200e52a2826a6c2900d7a5f29ea59e147ae118570c47652a13b2",
+    "era": "M220",
+    "grain": {
+      "bundled_name": null,
+      "inverted": false,
+      "source": "none",
+      "texture_id": null
+    },
+    "name": "Freycinet Secondary",
+    "settings": {
+      "attackRoll": false,
+      "attackRollParameters": {
+        "activationFalloff": 1.5707963705062866,
+        "activationOrigin": 3.1415927410125732,
+        "activationRange": 3.1415927410125732,
+        "mode": 1
+      },
+      "attackTilt": false,
+      "attackTiltAngle": 0.10000000149011612,
+      "authorName": null,
+      "bleedTiltAngle": 0.10000000149011612,
+      "blendGammaCorrect": false,
+      "blendMode": 0,
+      "brightnessTiltAngle": 0.10000000149011612,
+      "bundledGrainPath": null,
+      "bundledHeightPath": null,
+      "bundledMetallicPath": null,
+      "bundledRoughnessPath": null,
+      "bundledShapePath": "Acrylic-Stamp.png",
+      "burntEdgesAmount": 0.0,
+      "burntEdgesBlendMode": 1,
+      "color": {
+        "$data": "00000000000000000000000000000000"
+      },
+      "creationDate": {
+        "time": 592119061.906065
+      },
+      "darknessJitterTilt": false,
+      "darknessJitterTiltAngle": 0.10000000149011612,
+      "dualBlendMode": 1,
+      "dynamicsBlur": 0.0,
+      "dynamicsBlurJitter": 0.0,
+      "dynamicsFalloff": 0.0,
+      "dynamicsGlazedFlow": 1.0,
+      "dynamicsJitterDarkness": 0.0,
+      "dynamicsJitterHue": 0.0,
+      "dynamicsJitterLightness": 0.0,
+      "dynamicsJitterOpacity": 0.0,
+      "dynamicsJitterSaturation": 0.0,
+      "dynamicsJitterSize": 0.0,
+      "dynamicsJitterStrokeDarkness": 0.0,
+      "dynamicsJitterStrokeHue": 0.0,
+      "dynamicsJitterStrokeLightness": 0.0,
+      "dynamicsJitterStrokeSaturation": 0.0,
+      "dynamicsLoad": 0.009999999776482582,
+      "dynamicsMix": 0.0,
+      "dynamicsMixSoftening": 0.800000011920929,
+      "dynamicsPressureBleed": 0.0,
+      "dynamicsPressureBleedCurve": {
+        "points": [
+          "{0.000000, 0.000000}",
+          "{1.000000, 1.000000}"
+        ]
+      },
+      "dynamicsPressureBleedSpeed": 0.30000001192092896,
+      "dynamicsPressureBrightness": 0.0,
+      "dynamicsPressureBrightnessCurve": {
+        "points": [
+          "{0.000000, 0.000000}",
+          "{1.000000, 1.000000}"
+        ]
+      },
+      "dynamicsPressureHue": 0.0,
+      "dynamicsPressureHueCurve": {
+        "points": [
+          "{0.000000, 0.000000}",
+          "{1.000000, 1.000000}"
+        ]
+      },
+      "dynamicsPressureMix": 0.20000000298023224,
+      "dynamicsPressureOpacity": 0.0,
+      "dynamicsPressureOpacityCurve": {
+        "points": [
+          "{0.000000, 0.000000}",
+          "{1.000000, 1.000000}"
+        ]
+      },
+      "dynamicsPressureOpacitySpeed": 0.30000001192092896,
+      "dynamicsPressureOpacityTransfer": 0.0,
+      "dynamicsPressureResponse": 0.30000001192092896,
+      "dynamicsPressureSaturation": 0.0,
+      "dynamicsPressureSaturationCurve": {
+        "points": [
+          "{0.000000, 0.000000}",
+          "{1.000000, 1.000000}"
+        ]
+      },
+      "dynamicsPressureSecondaryColor": 0.0,
+      "dynamicsPressureSecondaryColorCurve": {
+        "points": [
+          "{0.000000, 0.000000}",
+          "{1.000000, 1.000000}"
+        ]
+      },
+      "dynamicsPressureShapeRoundness": 1.0,
+      "dynamicsPressureShapeRoundnessCurve": {
+        "points": [
+          "{0.000000, 0.000000}",
+          "{1.000000, 1.000000}"
+        ]
+      },
+      "dynamicsPressureShapeRoundnessMinimum": 1.0,
+      "dynamicsPressureSize": 1.0,
+      "dynamicsPressureSizeCurve": {
+        "points": [
+          "{0.000000, 0.000000}",
+          "{0.250000, 0.330000}",
+          "{1.000000, 1.000000}"
+        ]
+      },
+      "dynamicsPressureSizeSpeed": 0.30000001192092896,
+      "dynamicsPressureSmoothing": 0.0,
+      "dynamicsPressureTransferModulationCurve": {
+        "points": [
+          "{0.000000, 0.000000}",
+          "{1.000000, 1.000000}"
+        ]
+      },
+      "dynamicsRollBleed": 0.0,
+      "dynamicsRollBleedParameters": {
+        "activationFalloff": 1.5707963705062866,
+        "activationOrigin": 3.1415927410125732,
+        "activationRange": 3.1415927410125732,
+        "mode": 1
+      },
+      "dynamicsRollBrightness": 0.0,
+      "dynamicsRollBrightnessParameters": {
+        "activationFalloff": 1.5707963705062866,
+        "activationOrigin": 3.1415927410125732,
+        "activationRange": 3.1415927410125732,
+        "mode": 1
+      },
+      "dynamicsRollHue": 0.0,
+      "dynamicsRollHueParameters": {
+        "activationFalloff": 1.5707963705062866,
+        "activationOrigin": 3.1415927410125732,
+        "activationRange": 3.1415927410125732,
+        "mode": 1
+      },
+      "dynamicsRollOpacity": 0.0,
+      "dynamicsRollOpacityParameters": {
+        "activationFalloff": 1.5707963705062866,
+        "activationOrigin": 3.1415927410125732,
+        "activationRange": 3.1415927410125732,
+        "mode": 1
+      },
+      "dynamicsRollSaturation": 0.0,
+      "dynamicsRollSaturationParameters": {
+        "activationFalloff": 1.5707963705062866,
+        "activationOrigin": 3.1415927410125732,
+        "activationRange": 3.1415927410125732,
+        "mode": 1
+      },
+      "dynamicsRollSecondaryColor": 0.0,
+      "dynamicsRollSecondaryColorParameters": {
+        "activationFalloff": 1.5707963705062866,
+        "activationOrigin": 3.1415927410125732,
+        "activationRange": 3.1415927410125732,
+        "mode": 1
+      },
+      "dynamicsRollSize": 0.0,
+      "dynamicsRollSizeParameters": {
+        "activationFalloff": 1.5707963705062866,
+        "activationOrigin": 3.1415927410125732,
+        "activationRange": 3.1415927410125732,
+        "mode": 1
+      },
+      "dynamicsSmudgeAccumulation": 0.75,
+      "dynamicsSpeedOpacity": 0.0,
+      "dynamicsSpeedSize": 0.0,
+      "dynamicsTiltAngle": 0.17000000178813934,
+      "dynamicsTiltBleed": 0.0,
+      "dynamicsTiltBrightness": 0.0,
+      "dynamicsTiltCompression": 0.0,
+      "dynamicsTiltGradation": 0.0,
+      "dynamicsTiltHue": 0.0,
+      "dynamicsTiltOpacity": 0.0,
+      "dynamicsTiltSaturation": 0.0,
+      "dynamicsTiltSecondaryColor": 0.0,
+      "dynamicsTiltShapeRoundness": 1.0,
+      "dynamicsTiltShapeRoundnessMinimum": 1.0,
+      "dynamicsTiltSize": 0.0,
+      "dynamicsWetAccumulation": 0.10000000149011612,
+      "dynamicsWetnessJitter": 0.0,
+      "eraseOpacity": 1.0,
+      "eraseSize": 0.27096912264823914,
+      "extendedBlend": 0,
+      "gradationTiltAngle": 0.10000000149011612,
+      "grainBlendMode": 1,
+      "grainDepth": 0.0,
+      "grainDepthJitter": 0.0,
+      "grainDepthMinimum": 0.0,
+      "grainOrientation": 1,
+      "heightAmount": 0.5,
+      "heightScale": 0.1599999964237213,
+      "hoverFill": 1,
+      "hoverOutline": 1,
+      "hoverPressure": 0.10000000149011612,
+      "hueJitterTilt": false,
+      "hueJitterTiltAngle": 0.10000000149011612,
+      "hueTiltAngle": 0.10000000149011612,
+      "importedFromABR": false,
+      "jitterSecondary": 0.0,
+      "jitterStrokeSecondary": 0.0,
+      "lightnessJitterTilt": false,
+      "lightnessJitterTiltAngle": 0.10000000149011612,
+      "maxOpacity": 1.0,
+      "maxPressureSizeClamped": false,
+      "maxSize": 2.3568975925445557,
+      "metallicAmount": 0.0,
+      "metallicGrainInverted": false,
+      "metallicScale": 0.1599999964237213,
+      "minOpacity": 0.0,
+      "minSize": 0.009999999776482582,
+      "name": "Freycinet Secondary",
+      "opacityTiltAngle": 0.10000000149011612,
+      "oriented": true,
+      "paintOpacity": 1.0,
+      "paintPressure": 1.0,
+      "paintSize": 0.27096912264823914,
+      "pencilTaperEndLength": 0.0,
+      "pencilTaperOpacity": 0.0,
+      "pencilTaperShape": 0.0,
+      "pencilTaperSize": 0.0,
+      "pencilTaperSizeLinked": false,
+      "pencilTaperStartLength": 0.0,
+      "pencilTipAnimation": false,
+      "plotFFTSmoothingAmount": 0.0,
+      "plotFFTSmoothingBias": 0.0,
+      "plotJitter": 1.3687902688980103,
+      "plotJitterRoll": false,
+      "plotJitterRollParameters": {
+        "activationFalloff": 1.5707963705062866,
+        "activationOrigin": 3.1415927410125732,
+        "activationRange": 3.1415927410125732,
+        "mode": 1
+      },
+      "plotJitterTilt": false,
+      "plotJitterTiltAngle": 0.10000000149011612,
+      "plotMovingAverageStabilization": 0.0,
+      "plotSmoothing": 0.0,
+      "plotSpacing": 0.05798238143324852,
+      "plotSpacingVersion": 0,
+      "previewSize": 0.30000001192092896,
+      "renderingMaxTransfer": true,
+      "renderingModulatedTransfer": true,
+      "renderingRecursiveMixing": false,
+      "roughnessAmount": 0.5,
+      "roughnessGrainInverted": false,
+      "roughnessScale": 0.1599999964237213,
+      "saturationJitterTilt": false,
+      "saturationJitterTiltAngle": 0.10000000149011612,
+      "saturationTiltAngle": 0.10000000149011612,
+      "savedEraseOpacities": [],
+      "savedEraseSizes": [],
+      "savedPaintOpacities": [],
+      "savedPaintSizes": [],
+      "savedSmudgeOpacities": [],
+      "savedSmudgeSizes": [],
+      "secondaryColorJitterTilt": false,
+      "secondaryColorJitterTiltAngle": 0.10000000149011612,
+      "secondaryColorTiltAngle": 0.10000000149011612,
+      "shapeAngle": 0.0,
+      "shapeAzimuth": false,
+      "shapeCount": 0.0625,
+      "shapeCountJitter": 0.0,
+      "shapeCountRoll": false,
+      "shapeCountRollParameters": {
+        "activationFalloff": 1.5707963705062866,
+        "activationOrigin": 3.1415927410125732,
+        "activationRange": 3.1415927410125732,
+        "mode": 1
+      },
+      "shapeCountTilt": false,
+      "shapeCountTiltAngle": 0.10000000149011612,
+      "shapeFilter": true,
+      "shapeFilterMode": 0,
+      "shapeFlipXJitter": true,
+      "shapeFlipYJitter": true,
+      "shapeInverted": false,
+      "shapeOrientation": 1,
+      "shapeRandomise": false,
+      "shapeRoll": false,
+      "shapeRollMode": 0,
+      "shapeRotation": 0.0,
+      "shapeRoundness": 1.0,
+      "shapeRoundnessTiltAngle": 0.17000000178813934,
+      "shapeScatter": 0.25,
+      "shapeScatterRoll": false,
+      "shapeScatterRollParameters": {
+        "activationFalloff": 1.5707963705062866,
+        "activationOrigin": 3.1415927410125732,
+        "activationRange": 3.1415927410125732,
+        "mode": 1
+      },
+      "sizeTiltAngle": 0.10000000149011612,
+      "smudgeOpacity": 0.800000011920929,
+      "smudgeSize": 0.27096912264823914,
+      "stamp": false,
+      "taperEndLength": 0.0,
+      "taperOpacity": 0.0,
+      "taperPressure": 0.0,
+      "taperShape": 0.0,
+      "taperSize": 0.0,
+      "taperSizeLinked": false,
+      "taperStartLength": 0.0,
+      "taperVersion": 1,
+      "textureApplication": 0,
+      "textureBrightness": 0.0,
+      "textureContrast": 0.0,
+      "textureDepthTilt": false,
+      "textureDepthTiltAngle": 0.10000000149011612,
+      "textureFilter": true,
+      "textureFilterMode": 0,
+      "textureInverted": false,
+      "textureMovement": 1.0,
+      "textureOffsetJitter": false,
+      "textureOrientation": 1,
+      "textureRotation": 0.0,
+      "textureScale": 1.0,
+      "textureZoom": 1.0,
+      "texturizedGrainFollowsCamera": true,
+      "version": 2,
+      "wetEdgesAmount": 0.0
+    },
+    "shape": {
+      "bundled_name": "Acrylic-Stamp.png",
+      "inverted": false,
+      "source": "bundled",
+      "texture_id": null
+    }
+  },
+  "settings": {
+    "attackRoll": false,
+    "attackRollParameters": {
+      "activationFalloff": 1.5707963705062866,
+      "activationOrigin": 3.1415927410125732,
+      "activationRange": 3.1415927410125732,
+      "mode": 1
+    },
+    "attackTilt": false,
+    "attackTiltAngle": 0.10000000149011612,
+    "authorName": null,
+    "bleedTiltAngle": 0.10000000149011612,
+    "blendGammaCorrect": true,
+    "blendMode": 0,
+    "brightnessTiltAngle": 0.10000000149011612,
+    "bundledGrainPath": "Pastel-Board-Fine.jpg",
+    "bundledHeightPath": null,
+    "bundledMetallicPath": null,
+    "bundledRoughnessPath": null,
+    "bundledShapePath": "Gouache-Splash.jpg",
+    "burntEdgesAmount": 0.0,
+    "burntEdgesBlendMode": 1,
+    "color": {
+      "$data": "00000000000000000000000000000000"
+    },
+    "creationDate": {
+      "time": 592119061.868788
+    },
+    "darknessJitterTilt": false,
+    "darknessJitterTiltAngle": 0.10000000149011612,
+    "dualBlendMode": 28,
+    "dynamicsBlur": 0.0,
+    "dynamicsBlurJitter": 0.0,
+    "dynamicsFalloff": 0.0,
+    "dynamicsGlazedFlow": 1.0,
+    "dynamicsJitterDarkness": 0.0,
+    "dynamicsJitterHue": 0.0,
+    "dynamicsJitterLightness": 0.0,
+    "dynamicsJitterOpacity": 0.0,
+    "dynamicsJitterSaturation": 0.0,
+    "dynamicsJitterSize": 0.0,
+    "dynamicsJitterStrokeDarkness": 0.0,
+    "dynamicsJitterStrokeHue": 0.0,
+    "dynamicsJitterStrokeLightness": 0.0,
+    "dynamicsJitterStrokeSaturation": 0.0,
+    "dynamicsLoad": 0.009999999776482582,
+    "dynamicsMix": 0.0,
+    "dynamicsMixSoftening": 0.800000011920929,
+    "dynamicsPressureBleed": 0.0,
+    "dynamicsPressureBleedCurve": {
+      "points": [
+        "{0.000000, 0.000000}",
+        "{1.000000, 1.000000}"
+      ]
+    },
+    "dynamicsPressureBleedSpeed": 0.30000001192092896,
+    "dynamicsPressureBrightness": 0.0,
+    "dynamicsPressureBrightnessCurve": {
+      "points": [
+        "{0.000000, 0.000000}",
+        "{1.000000, 1.000000}"
+      ]
+    },
+    "dynamicsPressureHue": 0.0,
+    "dynamicsPressureHueCurve": {
+      "points": [
+        "{0.000000, 0.000000}",
+        "{1.000000, 1.000000}"
+      ]
+    },
+    "dynamicsPressureMix": 0.20000000298023224,
+    "dynamicsPressureOpacity": 0.5317085385322571,
+    "dynamicsPressureOpacityCurve": {
+      "points": [
+        "{0.000000, 0.000000}",
+        "{1.000000, 1.000000}"
+      ]
+    },
+    "dynamicsPressureOpacitySpeed": 0.30000001192092896,
+    "dynamicsPressureOpacityTransfer": 0.5099999904632568,
+    "dynamicsPressurePlotJitterCurve": {
+      "points": [
+        "{0.000000, 0.000000}",
+        "{0.250000, 0.330000}",
+        "{1.000000, 1.000000}"
+      ]
+    },
+    "dynamicsPressureResponse": 0.30000001192092896,
+    "dynamicsPressureSaturation": 0.0,
+    "dynamicsPressureSaturationCurve": {
+      "points": [
+        "{0.000000, 0.000000}",
+        "{1.000000, 1.000000}"
+      ]
+    },
+    "dynamicsPressureSecondaryColor": 0.0,
+    "dynamicsPressureSecondaryColorCurve": {
+      "points": [
+        "{0.000000, 0.000000}",
+        "{1.000000, 1.000000}"
+      ]
+    },
+    "dynamicsPressureShapeRoundness": 1.0,
+    "dynamicsPressureShapeRoundnessCurve": {
+      "points": [
+        "{0.000000, 0.000000}",
+        "{1.000000, 1.000000}"
+      ]
+    },
+    "dynamicsPressureShapeRoundnessMinimum": 1.0,
+    "dynamicsPressureSize": 1.0,
+    "dynamicsPressureSizeCurve": {
+      "points": [
+        "{0.000000, 0.000000}",
+        "{0.250000, 0.330000}",
+        "{1.000000, 1.000000}"
+      ]
+    },
+    "dynamicsPressureSizeSpeed": 0.30000001192092896,
+    "dynamicsPressureSmoothing": 0.0,
+    "dynamicsPressureStampCountJitterCurve": {
+      "points": [
+        "{0.000000, 0.000000}",
+        "{0.250000, 0.330000}",
+        "{1.000000, 1.000000}"
+      ]
+    },
+    "dynamicsPressureTransferModulationCurve": {
+      "points": [
+        "{0.000000, 0.000000}",
+        "{1.000000, 1.000000}"
+      ]
+    },
+    "dynamicsRollBleed": 0.0,
+    "dynamicsRollBleedParameters": {
+      "activationFalloff": 1.5707963705062866,
+      "activationOrigin": 3.1415927410125732,
+      "activationRange": 3.1415927410125732,
+      "mode": 1
+    },
+    "dynamicsRollBrightness": 0.0,
+    "dynamicsRollBrightnessParameters": {
+      "activationFalloff": 1.5707963705062866,
+      "activationOrigin": 3.1415927410125732,
+      "activationRange": 3.1415927410125732,
+      "mode": 1
+    },
+    "dynamicsRollHue": 0.0,
+    "dynamicsRollHueParameters": {
+      "activationFalloff": 1.5707963705062866,
+      "activationOrigin": 3.1415927410125732,
+      "activationRange": 3.1415927410125732,
+      "mode": 1
+    },
+    "dynamicsRollOpacity": 0.0,
+    "dynamicsRollOpacityParameters": {
+      "activationFalloff": 1.5707963705062866,
+      "activationOrigin": 3.1415927410125732,
+      "activationRange": 3.1415927410125732,
+      "mode": 1
+    },
+    "dynamicsRollSaturation": 0.0,
+    "dynamicsRollSaturationParameters": {
+      "activationFalloff": 1.5707963705062866,
+      "activationOrigin": 3.1415927410125732,
+      "activationRange": 3.1415927410125732,
+      "mode": 1
+    },
+    "dynamicsRollSecondaryColor": 0.0,
+    "dynamicsRollSecondaryColorParameters": {
+      "activationFalloff": 1.5707963705062866,
+      "activationOrigin": 3.1415927410125732,
+      "activationRange": 3.1415927410125732,
+      "mode": 1
+    },
+    "dynamicsRollSize": 0.0,
+    "dynamicsRollSizeParameters": {
+      "activationFalloff": 1.5707963705062866,
+      "activationOrigin": 3.1415927410125732,
+      "activationRange": 3.1415927410125732,
+      "mode": 1
+    },
+    "dynamicsSmudgeAccumulation": 0.75,
+    "dynamicsSpeedOpacity": 0.0,
+    "dynamicsSpeedSize": 0.0,
+    "dynamicsTiltAngle": 0.17000000178813934,
+    "dynamicsTiltBleed": 0.0,
+    "dynamicsTiltBrightness": 0.0,
+    "dynamicsTiltCompression": 0.0,
+    "dynamicsTiltGradation": 0.0,
+    "dynamicsTiltHue": 0.0,
+    "dynamicsTiltOpacity": 0.0,
+    "dynamicsTiltSaturation": 0.0,
+    "dynamicsTiltSecondaryColor": 0.0,
+    "dynamicsTiltShapeRoundness": 1.0,
+    "dynamicsTiltShapeRoundnessMinimum": 1.0,
+    "dynamicsTiltSize": 0.0,
+    "dynamicsWetAccumulation": 0.10000000149011612,
+    "dynamicsWetnessJitter": 0.0,
+    "eraseOpacity": 1.0,
+    "eraseSize": 0.27096912264823914,
+    "extendedBlend": 0,
+    "gradationTiltAngle": 0.10000000149011612,
+    "grainBlendMode": 27,
+    "grainDepth": 0.12468237429857254,
+    "grainDepthJitter": 0.0,
+    "grainDepthMinimum": 0.0,
+    "grainOrientation": 3,
+    "heightAmount": 0.5,
+    "heightScale": 0.1599999964237213,
+    "hoverFill": 2,
+    "hoverOutline": 2,
+    "hoverPressure": 0.09607993066310883,
+    "hueJitterTilt": false,
+    "hueJitterTiltAngle": 0.10000000149011612,
+    "hueTiltAngle": 0.10000000149011612,
+    "importedFromABR": false,
+    "jitterSecondary": 0.0,
+    "jitterStrokeSecondary": 0.0,
+    "lightnessJitterTilt": false,
+    "lightnessJitterTiltAngle": 0.10000000149011612,
+    "maxOpacity": 1.0,
+    "maxPressureSizeClamped": false,
+    "maxSize": 7.43833589553833,
+    "metallicAmount": 0.0,
+    "metallicGrainInverted": false,
+    "metallicScale": 0.1599999964237213,
+    "minOpacity": 0.0,
+    "minSize": 0.009999999776482582,
+    "name": "Freycinet",
+    "opacityTiltAngle": 0.10000000149011612,
+    "oriented": true,
+    "paintOpacity": 1.0,
+    "paintPressure": 1.0,
+    "paintSize": 0.04607902467250824,
+    "pencilTaperEndLength": 0.21375787258148193,
+    "pencilTaperOpacity": 0.0,
+    "pencilTaperShape": 0.38645806908607483,
+    "pencilTaperSize": 0.0,
+    "pencilTaperSizeLinked": true,
+    "pencilTaperStartLength": 0.21375787258148193,
+    "pencilTipAnimation": false,
+    "plotFFTSmoothingAmount": 0.0,
+    "plotFFTSmoothingBias": 0.0,
+    "plotJitter": 0.028269626200199127,
+    "plotJitterRoll": false,
+    "plotJitterRollParameters": {
+      "activationFalloff": 1.5707963705062866,
+      "activationOrigin": 3.1415927410125732,
+      "activationRange": 3.1415927410125732,
+      "mode": 1
+    },
+    "plotJitterTilt": false,
+    "plotJitterTiltAngle": 0.10000000149011612,
+    "plotMovingAverageStabilization": 0.0,
+    "plotSmoothing": 0.0,
+    "plotSpacing": 0.03548901155591011,
+    "plotSpacingVersion": 0,
+    "previewSize": 0.3111293911933899,
+    "renderingMaxTransfer": true,
+    "renderingModulatedTransfer": true,
+    "renderingRecursiveMixing": false,
+    "roughnessAmount": 0.5,
+    "roughnessGrainInverted": false,
+    "roughnessScale": 0.1599999964237213,
+    "saturationJitterTilt": false,
+    "saturationJitterTiltAngle": 0.10000000149011612,
+    "saturationTiltAngle": 0.10000000149011612,
+    "savedEraseOpacities": [],
+    "savedEraseSizes": [],
+    "savedPaintOpacities": [],
+    "savedPaintSizes": [],
+    "savedSmudgeOpacities": [],
+    "savedSmudgeSizes": [],
+    "secondaryColorJitterTilt": false,
+    "secondaryColorJitterTiltAngle": 0.10000000149011612,
+    "secondaryColorTiltAngle": 0.10000000149011612,
+    "shapeAngle": 0.0,
+    "shapeAzimuth": false,
+    "shapeCount": 0.25,
+    "shapeCountJitter": 0.0,
+    "shapeCountRoll": false,
+    "shapeCountRollParameters": {
+      "activationFalloff": 1.5707963705062866,
+      "activationOrigin": 3.1415927410125732,
+      "activationRange": 3.1415927410125732,
+      "mode": 1
+    },
+    "shapeCountTilt": false,
+    "shapeCountTiltAngle": 0.10000000149011612,
+    "shapeFilter": true,
+    "shapeFilterMode": 0,
+    "shapeFlipXJitter": true,
+    "shapeFlipYJitter": false,
+    "shapeInverted": false,
+    "shapeOrientation": 1,
+    "shapeRandomise": false,
+    "shapeRoll": false,
+    "shapeRollMode": 0,
+    "shapeRotation": 0.0,
+    "shapeRoundness": 1.0,
+    "shapeRoundnessTiltAngle": 0.17000000178813934,
+    "shapeScatter": 2.0,
+    "shapeScatterRoll": false,
+    "shapeScatterRollParameters": {
+      "activationFalloff": 1.5707963705062866,
+      "activationOrigin": 3.1415927410125732,
+      "activationRange": 3.1415927410125732,
+      "mode": 1
+    },
+    "sizeTiltAngle": 0.10000000149011612,
+    "smudgeOpacity": 0.800000011920929,
+    "smudgeSize": 0.27096912264823914,
+    "stamp": false,
+    "taperEndLength": 0.5675119161605835,
+    "taperOpacity": 0.0,
+    "taperPressure": 0.4003045856952667,
+    "taperShape": 0.31053030490875244,
+    "taperSize": 0.5999714136123657,
+    "taperSizeLinked": false,
+    "taperStartLength": 0.4786520004272461,
+    "taperVersion": 1,
+    "textureApplication": 1,
+    "textureBrightness": 0.0,
+    "textureContrast": -0.125490203499794,
+    "textureDepthTilt": false,
+    "textureDepthTiltAngle": 0.10000000149011612,
+    "textureFilter": true,
+    "textureFilterMode": 0,
+    "textureInverted": false,
+    "textureMovement": 1.0,
+    "textureOffsetJitter": false,
+    "textureOrientation": 3,
+    "textureRotation": 0.0,
+    "textureScale": 0.9621485471725464,
+    "textureZoom": 1.0,
+    "texturizedGrainFollowsCamera": true,
+    "version": 2,
+    "wetEdgesAmount": 0.0
+  },
+  "shape": {
+    "bundled_name": "Gouache-Splash.jpg",
+    "inverted": false,
+    "source": "bundled",
+    "texture_id": null
+  },
+  "slug": "freycinet",
+  "thumbnail": {
+    "color_type": 6,
+    "height": 324,
+    "present": true,
+    "sha256": "1db30e5bad865ba75347edf5a00ccdcc0a18a8fc6a167f02c7700d914975b8c5",
+    "width": 1060
+  },
+  "warnings": []
+}

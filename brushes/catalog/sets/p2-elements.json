@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_4651086c36a7",
+    "b_ba50a7b6ccd9",
+    "b_bbbed1783598",
+    "b_137c6d1735b3",
+    "b_186d187ce312",
+    "b_8e00bbcaff76",
+    "b_dc03ad908eba",
+    "b_549c1588bf4b"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "P2_Elements",
+  "note": "01_Procreate_Defaults/p2-elements.md",
+  "pack": "procreate-2",
+  "pack_kind": "official",
+  "set_id": "s_4fe63fca6f8f",
+  "set_slug": "p2-elements",
+  "title": "Elements (Procreate 2)"
+}

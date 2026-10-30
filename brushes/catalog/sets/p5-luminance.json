@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_311652229c08",
+    "b_02bf3254509f",
+    "b_3ebfb4a9404a",
+    "b_d8fa93d0eec6",
+    "b_312dc00b1fb9",
+    "b_83f7352c58cf",
+    "b_9f39bf1d54f2",
+    "b_c53bde028a66"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Luminance 1",
+  "note": "01_Procreate_Defaults/p5-luminance.md",
+  "pack": "procreate-5",
+  "pack_kind": "official",
+  "set_id": "s_b3e0bc80fe62",
+  "set_slug": "p5-luminance",
+  "title": "Luminance (Procreate 5)"
+}

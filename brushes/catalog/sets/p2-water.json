@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_465a0b6b58db",
+    "b_e6c9fdcabe42",
+    "b_0bcb2094215a",
+    "b_5b0e51f9512c",
+    "b_efa4aa693962",
+    "b_8eb2871cf8d0",
+    "b_a9945dc418d2",
+    "b_0af687019e2f"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "P2_Water",
+  "note": "01_Procreate_Defaults/p2-water.md",
+  "pack": "procreate-2",
+  "pack_kind": "official",
+  "set_id": "s_eb32e7df60c5",
+  "set_slug": "p2-water",
+  "title": "Water (Procreate 2)"
+}

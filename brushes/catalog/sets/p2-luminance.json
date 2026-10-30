@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_83dbc6ac6183",
+    "b_f15c0e79ecce",
+    "b_562db18c0979",
+    "b_26ca6301a5d0",
+    "b_f88702c4fd5c",
+    "b_200103802593",
+    "b_c8d15bd50bdd",
+    "b_38f39a3d648c"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "P2_Luminance",
+  "note": "01_Procreate_Defaults/p2-luminance.md",
+  "pack": "procreate-2",
+  "pack_kind": "official",
+  "set_id": "s_129e524a2cc7",
+  "set_slug": "p2-luminance",
+  "title": "Luminance (Procreate 2)"
+}

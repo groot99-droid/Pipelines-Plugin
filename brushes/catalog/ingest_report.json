@@ -1,0 +1,530 @@
+{
+  "bundled_textures": {
+    "grain": {
+      "Acrylic-Grit.jpg": 1,
+      "Acrylic-Mix.jpg": 1,
+      "Acrylic-Undercoat.jpg": 1,
+      "Bacteria.png": 1,
+      "Brush-Artery-70s-Fever.jpg": 2,
+      "Brush-Artery-Aggate.jpg": 6,
+      "Brush-Artery-Army.jpg": 3,
+      "Brush-Artery-Badspray.jpg": 11,
+      "Brush-Artery-Bark.jpg": 4,
+      "Brush-Artery-Blinds-Glow.jpg": 2,
+      "Brush-Artery-Cage.jpg": 2,
+      "Brush-Artery-Canvas-1.jpg": 2,
+      "Brush-Artery-Charcoal-6B.jpg": 4,
+      "Brush-Artery-Charcoal-Burnt.jpg": 5,
+      "Brush-Artery-Charcoal-Corse.jpg": 5,
+      "Brush-Artery-Charcoal-Rough.jpg": 4,
+      "Brush-Artery-Charcoal-Vine.jpg": 6,
+      "Brush-Artery-Clay.jpg": 3,
+      "Brush-Artery-Clouds-2.png": 2,
+      "Brush-Artery-Clouds.jpg": 15,
+      "Brush-Artery-Concreate.jpg": 2,
+      "Brush-Artery-Corrugated.jpg": 2,
+      "Brush-Artery-Fine-Hair.jpg": 2,
+      "Brush-Artery-Flakes.png": 2,
+      "Brush-Artery-Graphite.jpg": 3,
+      "Brush-Artery-Leather.jpg": 2,
+      "Brush-Artery-Lightpeaks.jpg": 2,
+      "Brush-Artery-Macro-Paper.jpg": 1,
+      "Brush-Artery-Noise.jpg": 3,
+      "Brush-Artery-Ocean.jpg": 2,
+      "Brush-Artery-Orange-Peal.jpg": 2,
+      "Brush-Artery-Orbs.png": 1,
+      "Brush-Artery-Recycled.jpg": 1,
+      "Brush-Artery-Reed.jpg": 1,
+      "Brush-Artery-Refract.png": 2,
+      "Brush-Artery-Rust-1.jpg": 2,
+      "Brush-Artery-Rust-3.jpg": 5,
+      "Brush-Artery-Splatters.png": 2,
+      "Brush-Artery-Sprial.jpg": 2,
+      "Brush-Artery-Stone-Wall.jpg": 2,
+      "Brush-Artery-Textured-Ink.png": 3,
+      "Brush-Artery-Wet-Paper.jpg": 4,
+      "Brush-Artery-Willow-Grain.jpg": 2,
+      "Brush-Artery-Worn-Dots.jpg": 2,
+      "Brush-Artery-Zombie.jpg": 2,
+      "Brush-Pocket-Hard-Ink.png": 2,
+      "Brush-Pocket-Munched-Paper.png": 4,
+      "Brush-Pocket-Recycled-Paper.png": 2,
+      "Brush-Pocket-Thai-Ink1.jpg": 1,
+      "Brush-Preset-Bark.png": 10,
+      "Brush-Preset-Blank.png": 324,
+      "Brush-Preset-Bonobo.png": 5,
+      "Brush-Preset-Brick.jpg": 5,
+      "Brush-Preset-Canvas.jpg": 5,
+      "Brush-Preset-Cardboard.jpg": 2,
+      "Brush-Preset-Cubes.png": 2,
+      "Brush-Preset-Diagonal.png": 2,
+      "Brush-Preset-Dirty-Paper.jpg": 3,
+      "Brush-Preset-Floral.png": 2,
+      "Brush-Preset-Grid.png": 2,
+      "Brush-Preset-Grunge.jpg": 7,
+      "Brush-Preset-Hard.png": 2,
+      "Brush-Preset-Hexagon.png": 3,
+      "Brush-Preset-Ink-Dry.png": 2,
+      "Brush-Preset-Membrane.jpg": 2,
+      "Brush-Preset-Oil-Pastel.jpg": 3,
+      "Brush-Preset-Paper-Macro.png": 9,
+      "Brush-Preset-Paper-Mush.jpg": 8,
+      "Brush-Preset-Pastel-Paper.jpg": 2,
+      "Brush-Preset-Sketch-Paper.jpg": 8,
+      "Brush-Preset-Square-Dots.jpg": 1,
+      "Brush-Preset-Stained-Paper-1.jpg": 16,
+      "Brush-Preset-Stained-Paper-2.jpg": 21,
+      "Brush-Preset-Wood.png": 2,
+      "Cicero-Tree.jpg": 1,
+      "Cliff-Face.jpg": 1,
+      "Cotton-Paper.jpg": 1,
+      "Crackle.png": 1,
+      "Crunchy-Paper.jpg": 1,
+      "DOF-Dots-Light.png": 1,
+      "DOF-Dots.jpg": 1,
+      "Distressed-Canvas-2.jpg": 1,
+      "Distressed-Canvas.jpg": 1,
+      "Dry-Acrylic-Wash": 1,
+      "European-Paper.jpg": 1,
+      "Fine-Thread.jpg": 1,
+      "GL-Earth-Grain.png": 1,
+      "GL-Marble-Grain.png": 1,
+      "GL-Sable-Grain.png": 1,
+      "GL-Sediment-Grain.png": 1,
+      "GL-Summer-Grain.png": 1,
+      "Glitch-2.jpg": 1,
+      "Glitch.png": 1,
+      "Gouache-Wash-2.jpg": 1,
+      "Gouache-Wash.jpg": 5,
+      "Kingston-Beach-2.jpg": 1,
+      "Kingston-Beach.jpg": 1,
+      "Leopard-Print.png": 1,
+      "Light-Pastel-Board.jpg": 1,
+      "Memories.png": 1,
+      "OSB.jpg": 1,
+      "Oil-Board.jpg": 2,
+      "Oil-Canvas.jpg": 2,
+      "Pastel-Board-Coarse.jpg": 2,
+      "Pastel-Board-Fine.jpg": 1,
+      "Pastel-Board-Wash.jpg": 3,
+      "Pastel-Board.jpg": 1,
+      "Procedural-Noise.jpg": 1,
+      "Quartz.png": 1,
+      "Raggedy-Gouache.jpg": 1,
+      "Raw-Canvas.jpg": 4,
+      "Stone-Wall-2.png": 1,
+      "Tessellated.png": 1,
+      "Undercoat.jpg": 1,
+      "Warby-Canvas.jpg": 1,
+      "Wax-Crayon-Paper.jpg": 3,
+      "Wood-2.png": 1,
+      "X.png": 1
+    },
+    "shape": {
+      "Acrylic-Dab-2.png": 1,
+      "Acrylic-Dab-3.jpg": 1,
+      "Acrylic-Dab-4.jpg": 1,
+      "Acrylic-Dab-5.jpg": 2,
+      "Acrylic-Dab-Rough-2.jpg": 1,
+      "Acrylic-Dab-Rough.jpg": 3,
+      "Acrylic-Dab.jpg": 5,
+      "Acrylic-Impress.png": 2,
+      "Acrylic-Square.jpg": 2,
+      "Acrylic-Stamp-2.jpg": 2,
+      "Acrylic-Stamp-3.png": 1,
+      "Acrylic-Stamp-4.png": 2,
+      "Acrylic-Stamp-5.png": 1,
+      "Acrylic-Stamp-6.jpg": 1,
+      "Acrylic-Stamp.png": 4,
+      "Brush-Artery-Blotch-1.jpg": 16,
+      "Brush-Artery-Blotch-2.jpg": 2,
+      "Brush-Artery-Bokeh.png": 2,
+      "Brush-Artery-Brush-Glow.jpg": 2,
+      "Brush-Artery-Burst.jpg": 4,
+      "Brush-Artery-Charcoal-Block.jpg": 4,
+      "Brush-Artery-Charcoal-Macro.jpg": 6,
+      "Brush-Artery-Charcoal-Shards.jpg": 2,
+      "Brush-Artery-Charcoal-Soft.jpg": 5,
+      "Brush-Artery-Charcoal-Whisp.jpg": 3,
+      "Brush-Artery-Cloud-Shape.jpg": 2,
+      "Brush-Artery-Crusty.jpg": 2,
+      "Brush-Artery-Crystal-Shape.jpg": 2,
+      "Brush-Artery-Directional-Rain.jpg": 2,
+      "Brush-Artery-Disco-Ball.png": 2,
+      "Brush-Artery-Drip-2.jpg": 2,
+      "Brush-Artery-Drip.jpg": 2,
+      "Brush-Artery-Fat.jpg": 2,
+      "Brush-Artery-Fine-Spray.jpg": 2,
+      "Brush-Artery-Flare.jpg": 2,
+      "Brush-Artery-Flicks.jpg": 3,
+      "Brush-Artery-Flower.jpg": 2,
+      "Brush-Artery-Flowing.jpg": 2,
+      "Brush-Artery-Gloop.jpg": 2,
+      "Brush-Artery-Hessian.png": 2,
+      "Brush-Artery-Lattice.jpg": 2,
+      "Brush-Artery-Lightning.jpg": 2,
+      "Brush-Artery-Mess.png": 2,
+      "Brush-Artery-Neblua.jpg": 2,
+      "Brush-Artery-Orbs.png": 3,
+      "Brush-Artery-Pen-Glow.jpg": 2,
+      "Brush-Artery-Rust-2.jpg": 2,
+      "Brush-Artery-Short-Hair.jpg": 2,
+      "Brush-Artery-Splash-1.jpg": 3,
+      "Brush-Artery-Splash-2.jpg": 3,
+      "Brush-Artery-Spray2.jpg": 1,
+      "Brush-Artery-Star.jpg": 2,
+      "Brush-Artery-Stubble.jpg": 3,
+      "Brush-Artery-Tendril.jpg": 2,
+      "Brush-Artery-Tentacle.jpg": 2,
+      "Brush-Artery-Torn.jpg": 2,
+      "Brush-Artery-Ultra-Soft.jpg": 2,
+      "Brush-Artery-Water-Bleed.jpg": 6,
+      "Brush-Artery-Water-Blotch-1.jpg": 5,
+      "Brush-Artery-Water-Blotch-2.jpg": 4,
+      "Brush-Artery-Water-Flicks.jpg": 2,
+      "Brush-Artery-Willow.jpg": 2,
+      "Brush-Calligraphy-1.png": 1,
+      "Brush-Pocket-Brick.png": 7,
+      "Brush-Pocket-Hard-Ink.png": 1,
+      "Brush-Pocket-Intense-Water.jpg": 3,
+      "Brush-Pocket-Oval.jpg": 1,
+      "Brush-Pocket-Paint-Mess.png": 1,
+      "Brush-Pocket-Scribble.jpg": 3,
+      "Brush-Pocket-Soft-Wax.jpg": 1,
+      "Brush-Pocket-Thai-Ink2.jpg": 1,
+      "Brush-Pocket-Water-Bleed.png": 3,
+      "Brush-Preset-Blank.png": 1,
+      "Brush-Preset-Bleed.jpg": 2,
+      "Brush-Preset-Blotch.jpg": 5,
+      "Brush-Preset-Crayon.jpg": 4,
+      "Brush-Preset-Cube.jpg": 2,
+      "Brush-Preset-Flat-Brush.jpg": 7,
+      "Brush-Preset-Flat-Brush2.jpg": 3,
+      "Brush-Preset-Flat-Ink.jpg": 3,
+      "Brush-Preset-Flat-Marker.jpg": 2,
+      "Brush-Preset-Halftone.png": 2,
+      "Brush-Preset-Hard.png": 15,
+      "Brush-Preset-Hex.png": 2,
+      "Brush-Preset-Hexagon.png": 2,
+      "Brush-Preset-Ink-Dry.png": 3,
+      "Brush-Preset-Ink-Mess.jpg": 1,
+      "Brush-Preset-Ink-Sponge.png": 6,
+      "Brush-Preset-Ink-Sponge2.jpg": 1,
+      "Brush-Preset-Ink.jpg": 8,
+      "Brush-Preset-Ink2.jpg": 6,
+      "Brush-Preset-Medium-Hard.png": 28,
+      "Brush-Preset-Medium.png": 27,
+      "Brush-Preset-Mess.jpg": 18,
+      "Brush-Preset-Oval.png": 4,
+      "Brush-Preset-Paint-Dab-1.jpg": 2,
+      "Brush-Preset-Paint-Dab-2.jpg": 1,
+      "Brush-Preset-Reticles.jpg": 2,
+      "Brush-Preset-Scribble.jpg": 2,
+      "Brush-Preset-Shade.jpg": 1,
+      "Brush-Preset-Slim-Oval.png": 1,
+      "Brush-Preset-Soft.png": 45,
+      "Brush-Preset-Spike.png": 2,
+      "Brush-Preset-Square-Dots.jpg": 3,
+      "Brush-Preset-Streaky.jpg": 1,
+      "Brush-Preset-Synthetic-Round.jpg": 4,
+      "Brush-Preset-Triangulum.png": 2,
+      "Brush-Preset-Ultra-Soft.jpg": 3,
+      "Brush-Preset-Waveform.png": 2,
+      "Brush-Refined-Round-Dots.png": 3,
+      "Brush-Small-Point.png": 2,
+      "Distressed-Stamp.jpg": 2,
+      "GL-Earth-Shape.png": 1,
+      "GL-Marble-Shape.png": 1,
+      "GL-Sable-Shape.png": 1,
+      "GL-Sediment-Shape.png": 1,
+      "GL-Summer-Shape.png": 1,
+      "Garden-Bush.jpg": 1,
+      "Garden-Grass.png": 1,
+      "Garden-Gum.png": 1,
+      "Garden-Leaf.png": 1,
+      "Garden-Rocks.jpg": 1,
+      "Gouache-Drop-2.jpg": 1,
+      "Gouache-Drop.jpg": 3,
+      "Gouache-Splash.jpg": 1,
+      "Gouache-Streak.jpg": 1,
+      "Haggard-Oval.png": 2,
+      "Infrared-Oil.jpg": 1,
+      "Liquid-Lines.png": 1,
+      "Oil-Dab.png": 1,
+      "Oil-Dash-3.png": 2,
+      "Oil-Dash.png": 1,
+      "Seashell.jpg": 1,
+      "Simple-Blotch.jpg": 1,
+      "Simple-Leaf.png": 2,
+      "Solid-Rectangles.png": 1,
+      "Stack.png": 1,
+      "Weary-Dots.jpg": 1,
+      "Wildgrass.jpg": 1,
+      "Wind.png": 1
+    }
+  },
+  "counts": {
+    "brushes": 990,
+    "bundled_only": {
+      "grain": 649,
+      "shape": 447
+    },
+    "by_library": {
+      "official": 393,
+      "user": 597
+    },
+    "container_copies": 0,
+    "containers": 112,
+    "dual": 34,
+    "duplicates": 18,
+    "files_read": 112,
+    "loose_sets": 4,
+    "no_thumbnail": 18,
+    "notes": 64,
+    "occurrences": 1008,
+    "sets": 65,
+    "skipped": 0,
+    "textures": 618,
+    "warnings": 2,
+    "with_reset": 18
+  },
+  "duplicates": [
+    {
+      "home": "rsco-dry-brush-pack",
+      "id": "b_07838dbcf52e",
+      "name": "RSCo Dry Wood",
+      "occurrences": [
+        "rsco-dry-brush-pack#13",
+        "rsco-dry-brush-pack-loose#5"
+      ]
+    },
+    {
+      "home": "rsco-dry-brush-pack",
+      "id": "b_085ba342a7fd",
+      "name": "RSCo Dusty’s Grit Liner",
+      "occurrences": [
+        "rsco-dry-brush-pack#5",
+        "rsco-dry-brush-pack-loose#7"
+      ]
+    },
+    {
+      "home": "rsco-dry-brush-pack",
+      "id": "b_0c6448476315",
+      "name": "RSCo Dry Brush Shader",
+      "occurrences": [
+        "rsco-dry-brush-pack#14",
+        "rsco-dry-brush-pack-loose#4"
+      ]
+    },
+    {
+      "home": "rsco-dry-brush-pack",
+      "id": "b_2c2204eaa53e",
+      "name": "RSCo Badlands Brayer",
+      "occurrences": [
+        "rsco-dry-brush-pack#6",
+        "rsco-dry-brush-pack-loose#1"
+      ]
+    },
+    {
+      "home": "rsco-dry-brush-pack",
+      "id": "b_3464fab85b56",
+      "name": "RSCo Blunted Pencil",
+      "occurrences": [
+        "rsco-dry-brush-pack#3",
+        "rsco-dry-brush-pack-loose#2"
+      ]
+    },
+    {
+      "home": "rsco-dry-brush-pack",
+      "id": "b_3ea39401c12c",
+      "name": "RSCo Toothy Filler",
+      "occurrences": [
+        "rsco-dry-brush-pack#12",
+        "rsco-dry-brush-pack-loose#15"
+      ]
+    },
+    {
+      "home": "rsco-dry-brush-pack",
+      "id": "b_4f09745d11cd",
+      "name": "RSCo Soft Pencil Shader",
+      "occurrences": [
+        "rsco-dry-brush-pack#15",
+        "rsco-dry-brush-pack-loose#12"
+      ]
+    },
+    {
+      "home": "rsco-dry-brush-pack",
+      "id": "b_5dabd6e09ea5",
+      "name": "RSCo Sun Baked Freckles",
+      "occurrences": [
+        "rsco-dry-brush-pack#11",
+        "rsco-dry-brush-pack-loose#13"
+      ]
+    },
+    {
+      "home": "rsco-dry-brush-pack",
+      "id": "b_80c6622286c5",
+      "name": "RSCo Dry Wrangler",
+      "occurrences": [
+        "rsco-dry-brush-pack#8",
+        "rsco-dry-brush-pack-loose#6"
+      ]
+    },
+    {
+      "home": "rsco-dry-brush-pack",
+      "id": "b_85490da0d218",
+      "name": "RSCo Gringo Grit",
+      "occurrences": [
+        "rsco-dry-brush-pack#2",
+        "rsco-dry-brush-pack-loose#8"
+      ]
+    },
+    {
+      "home": "monoliners",
+      "id": "b_950b71b0b006",
+      "name": "Blocky Smooth",
+      "occurrences": [
+        "monoliners#5",
+        "monoliners-loose#3"
+      ]
+    },
+    {
+      "home": "rsco-dry-brush-pack",
+      "id": "b_a1abcec7ed02",
+      "name": "RSCo Sand Stripe",
+      "occurrences": [
+        "rsco-dry-brush-pack#7",
+        "rsco-dry-brush-pack-loose#10"
+      ]
+    },
+    {
+      "home": "rsco-dry-brush-pack",
+      "id": "b_a43abefa675a",
+      "name": "RSCo Thin Crayon",
+      "occurrences": [
+        "rsco-dry-brush-pack#9",
+        "rsco-dry-brush-pack-loose#14"
+      ]
+    },
+    {
+      "home": "monoliners",
+      "id": "b_b7a59c5b2f37",
+      "name": "Bobble Smooth",
+      "occurrences": [
+        "monoliners#1",
+        "monoliners-loose#5"
+      ]
+    },
+    {
+      "home": "rsco-dry-brush-pack",
+      "id": "b_c8ca575d2ad9",
+      "name": "RSCo Sketcher Pencil",
+      "occurrences": [
+        "rsco-dry-brush-pack#4",
+        "rsco-dry-brush-pack-loose#11"
+      ]
+    },
+    {
+      "home": "rsco-dry-brush-pack",
+      "id": "b_c9cbccd7c784",
+      "name": "RSCo Magic Wash",
+      "occurrences": [
+        "rsco-dry-brush-pack#10",
+        "rsco-dry-brush-pack-loose#9"
+      ]
+    },
+    {
+      "home": "rsco-dry-brush-pack",
+      "id": "b_e005da2f38eb",
+      "name": "RSCo Classic Dry Brush",
+      "occurrences": [
+        "rsco-dry-brush-pack#1",
+        "rsco-dry-brush-pack-loose#3"
+      ]
+    },
+    {
+      "home": "monoliners",
+      "id": "b_ecf3d78a9b66",
+      "name": "Bobble Texture",
+      "occurrences": [
+        "monoliners#2",
+        "monoliners-loose#6"
+      ]
+    }
+  ],
+  "facet_rules_version": 1,
+  "ingest_version": 1,
+  "name_collisions": [
+    {
+      "ids": [
+        "b_e10e3fd3ebd6",
+        "b_bc756b04c931"
+      ],
+      "name": "Diagonal hatches",
+      "set_slug": "pattern"
+    },
+    {
+      "ids": [
+        "b_3569d8734375",
+        "b_638bb17ff180"
+      ],
+      "name": "Diagonal lines",
+      "set_slug": "pattern"
+    },
+    {
+      "ids": [
+        "b_0038196c4327",
+        "b_a870dfb2bf1f"
+      ],
+      "name": "Diagonal lines 2",
+      "set_slug": "pattern"
+    },
+    {
+      "ids": [
+        "b_f7b0d76c9d8b",
+        "b_9914805d43c6"
+      ],
+      "name": "Hatches 1",
+      "set_slug": "pattern"
+    },
+    {
+      "ids": [
+        "b_f29138f508db",
+        "b_7be177e18223"
+      ],
+      "name": "Hatches 2",
+      "set_slug": "pattern"
+    },
+    {
+      "ids": [
+        "b_3174316ce93a",
+        "b_479405190186"
+      ],
+      "name": "Straight lines",
+      "set_slug": "pattern"
+    },
+    {
+      "ids": [
+        "b_74b093e5a746",
+        "b_439237ac463e"
+      ],
+      "name": "Stroke 5",
+      "set_slug": "pd-watercolor-strokes"
+    }
+  ],
+  "other_files": [],
+  "schema": "rosw-brushes-ingest-report/1",
+  "skipped": [],
+  "unknown_eras": [],
+  "unknown_keys": {},
+  "warnings": [
+    {
+      "message": "84 later entries with a name already met were dropped; the first wins: E59EC327-B94E-41AB-A9AE-2328BCE7E3A8/Reset/AuthorPicture/.empty, E59EC327-B94E-41AB-A9AE-2328BCE7E3A8/Reset/Sub01/.empty, E59EC327-B94E-41AB-A9AE-2328BCE7E3A8/Reset/Sub01/QuickLook/.empty ...",
+      "where": "official/chinese-calligraphy/chinese-calligraphy.brushset"
+    },
+    {
+      "message": "an unknown member, kept as it is: GL-Volcanic-Shape.png",
+      "where": "b_a48f7abfb899"
+    }
+  ]
+}

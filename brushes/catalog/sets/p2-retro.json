@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_b8919e8eeb5c",
+    "b_915d2a52dea6",
+    "b_8a972eb23249",
+    "b_42d34b6bd9bf",
+    "b_e6498e527bd5",
+    "b_ccfb05c7b5e1",
+    "b_b2619d7ed9c4",
+    "b_86d830072260"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "P2_Retro",
+  "note": "01_Procreate_Defaults/p2-retro.md",
+  "pack": "procreate-2",
+  "pack_kind": "official",
+  "set_id": "s_47d9c7da68d9",
+  "set_slug": "p2-retro",
+  "title": "Retro (Procreate 2)"
+}

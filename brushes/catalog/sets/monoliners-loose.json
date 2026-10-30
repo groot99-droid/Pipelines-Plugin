@@ -1,0 +1,20 @@
+{
+  "brush_count": 6,
+  "brushes": [
+    "b_20add76197af",
+    "b_fd4a49584502",
+    "b_950b71b0b006",
+    "b_7b8d317ecdbb",
+    "b_b7a59c5b2f37",
+    "b_ecf3d78a9b66"
+  ],
+  "kind": "loose",
+  "library": "user",
+  "name": "monoliners-loose",
+  "note": "03_Loose/monoliners-loose.md",
+  "pack": "monoliners",
+  "pack_kind": "vendor",
+  "set_id": "s_b80e9ab07a0e",
+  "set_slug": "monoliners-loose",
+  "title": "Monoliners Procreate Brush Set (loose brushes)"
+}

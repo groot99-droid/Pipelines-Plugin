@@ -1076,14 +1076,14 @@ class WhereAndCommandLine(AdoptCase):
         self.assertIn(str(self.library), out)
 
     def test_only_the_verbs_that_exist_are_accepted(self):
-        for argv in ([], ["build"], ["report"], ["scan"], ["adopt"], ["census", "--confirm"],
+        for argv in ([], ["scan"], ["adopt"], ["census", "--confirm"],
                      ["adopt", str(self.src), "--force"], ["where", "extra"]):
             with self.assertRaises(SystemExit) as raised, contextlib.redirect_stderr(io.StringIO()):
                 ingest.main(argv + ["--root", str(self.root)])
             self.assertEqual(raised.exception.code, bc.EXIT_USAGE, argv)
         parser = ingest.build_parser()
         verbs = next(action for action in parser._actions if isinstance(action.choices, dict))
-        self.assertEqual(list(verbs.choices), ["where", "adopt", "census"])
+        self.assertEqual(list(verbs.choices), ["where", "adopt", "build", "report", "census"])
         adopt = parser.parse_args(["adopt", "somewhere"])
         self.assertEqual((adopt.src, adopt.with_docs, adopt.confirm), ("somewhere", False, False))
 

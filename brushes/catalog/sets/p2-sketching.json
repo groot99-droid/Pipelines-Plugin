@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_d0eb2131c621",
+    "b_f294da395a33",
+    "b_2f3d8ea1989c",
+    "b_b7f543a61e6b",
+    "b_b6dcda8905d5",
+    "b_3624d791e352",
+    "b_f90af41229ac",
+    "b_d885480715c6"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "P2_Sketching",
+  "note": "01_Procreate_Defaults/p2-sketching.md",
+  "pack": "procreate-2",
+  "pack_kind": "official",
+  "set_id": "s_47b502366f51",
+  "set_slug": "p2-sketching",
+  "title": "Sketching (Procreate 2)"
+}

@@ -1,0 +1,31 @@
+{
+  "brush_count": 17,
+  "brushes": [
+    "b_20f3dedd097c",
+    "b_e76056e33bb8",
+    "b_244e4953c986",
+    "b_df2d2eaf0ead",
+    "b_1825b3d418c7",
+    "b_d6b3dc470563",
+    "b_f818e38c5663",
+    "b_8a2b11f98759",
+    "b_987eac56f283",
+    "b_e701806c0d46",
+    "b_331ce7d350dd",
+    "b_94001fb51897",
+    "b_a9db2c14d214",
+    "b_39c23f1142ce",
+    "b_02cc3fc86e19",
+    "b_9d235fadc0e4",
+    "b_9256d017866e"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Materials 1",
+  "note": "01_Procreate_Defaults/p5-materials.md",
+  "pack": "procreate-5",
+  "pack_kind": "official",
+  "set_id": "s_968bcdca1f80",
+  "set_slug": "p5-materials",
+  "title": "Materials (Procreate 5)"
+}

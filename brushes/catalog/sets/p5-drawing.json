@@ -1,0 +1,24 @@
+{
+  "brush_count": 10,
+  "brushes": [
+    "b_9c165844bc80",
+    "b_bc6f9d24c596",
+    "b_51973eb7e70b",
+    "b_85f7b3b60061",
+    "b_18e53c03bddb",
+    "b_d85191236445",
+    "b_76876e3628b5",
+    "b_aec2191809f8",
+    "b_1fada7471920",
+    "b_330884bffd9c"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Drawing 1",
+  "note": "01_Procreate_Defaults/p5-drawing.md",
+  "pack": "procreate-5",
+  "pack_kind": "official",
+  "set_id": "s_4627985abbb9",
+  "set_slug": "p5-drawing",
+  "title": "Drawing (Procreate 5)"
+}

@@ -1,0 +1,31 @@
+{
+  "brush_count": 17,
+  "brushes": [
+    "b_d64c969bb9bf",
+    "b_15784214d2d0",
+    "b_0fac4c081b1a",
+    "b_d9f96133c24e",
+    "b_7f9c65aa1ec7",
+    "b_b7110d3ab034",
+    "b_a8ac5b423aab",
+    "b_bdadafb75c6f",
+    "b_cd50f2c95efd",
+    "b_6cd0b40db79a",
+    "b_3d07786bc570",
+    "b_4b7eeb31be79",
+    "b_89a8c822242a",
+    "b_b4a271e33677",
+    "b_c5b4ae361b10",
+    "b_c10030bd84b1",
+    "b_e30805e89e0c"
+  ],
+  "kind": "set",
+  "library": "user",
+  "name": "Urban Sketching",
+  "note": "02_Vendor_Packs/urban-sketching.md",
+  "pack": "urban-sketching",
+  "pack_kind": "vendor",
+  "set_id": "s_7346e6a5cb46",
+  "set_slug": "urban-sketching",
+  "title": "Urban Sketching"
+}

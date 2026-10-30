@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_8e83afee98b3",
+    "b_c36cbdb0ce87",
+    "b_57b2c7e1dfda",
+    "b_8e2a273a9d85",
+    "b_b250390a992c",
+    "b_a485c6c203eb",
+    "b_f9b37bde4ed7",
+    "b_8df26b96182e"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "P2_Textures",
+  "note": "01_Procreate_Defaults/p2-textures.md",
+  "pack": "procreate-2",
+  "pack_kind": "official",
+  "set_id": "s_2d0552884ee0",
+  "set_slug": "p2-textures",
+  "title": "Textures (Procreate 2)"
+}
