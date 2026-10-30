@@ -53,7 +53,6 @@
       tab.setAttribute("aria-selected", on ? "true" : "false");
     }
     try { localStorage.setItem("hub:tab", name); } catch (_) { /* private mode */ }
-    if (name === "brushes") mountBrushes();
     if (name === "writing") probeMuseum();
   }
 
@@ -213,20 +212,6 @@
       ? `museum server up at <a href="${esc(museum.url)}">${esc(museum.url)}</a>.${built}`
       : `museum server not running at ${esc(museum.url)}. Start it from the repo folder: <code>${esc(museum.command)}</code>${built}`;
     for (const id of ["libraryLink", "walkLink", "libraryTab"]) $(id).classList.toggle("off", !up);
-  }
-
-  // ── brushes ──────────────────────────────────────────────────────────
-  let brushesMounted = false;
-  async function mountBrushes() {
-    if (brushesMounted) return;
-    brushesMounted = true;
-    const response = await fetch("brush/index.html", { method: "HEAD" }).catch(() => null);
-    if (response && response.ok) {
-      $("brushFrame").src = "brush/index.html";
-    } else {
-      $("brushFrame").hidden = true;
-      $("brushEmpty").hidden = false;
-    }
   }
 
   // ── boot ─────────────────────────────────────────────────────────────

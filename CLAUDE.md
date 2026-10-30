@@ -37,7 +37,7 @@ studio/              the studio tool
   pipeline/          spec.yaml, the bookkeeper, the note and gate writers, the brush
                      packer, the compute gate, and their tests
   hub/               the desk: a loopback server and page over the vault and the runs,
-                     the Windows launcher, and (once copied in) the brush designer
+                     and the Windows launcher
   assets/            what runs keep, by project, kind and slug. Not versioned
   library/           the generations library: every Higgsfield generation in catalog.json,
                      thumbnails, a page over them, and library.py; originals under files/
@@ -194,9 +194,8 @@ the author names at a `scene-3d` intake, through `writing-museum/build/`.
   history (no generate tool), and `library.py` writes `catalog.json`, `thumbs/` and the
   git-ignored `files/`, nothing else. Never commit an original, and never keep a link
   to an uploaded input. Tests: `python -m unittest discover -s studio/library/tests`.
-- `studio/pipeline/brush_pack.py` packs a designer bundle into a Procreate file
-  with `plistlib`. A Procreate-written `.brush` under
-  `studio/pipeline/tests/fixtures/procreate/` turns its format test on.
+- The studio makes no brush file itself. Its `brush` pipeline (not yet
+  implemented) will run through `brushes/`, the brush tool at the repo root.
 - Run the tests after touching the spec, a gate, `tokens.json`, `SCHEMA.md`, the
   vault's `CLAUDE.md`, the skill or either script:
   `python -m unittest discover -s studio/pipeline/tests`. They run against

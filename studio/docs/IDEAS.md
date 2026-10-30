@@ -104,7 +104,7 @@ Source: `DECISIONS.md`.
 | Decision | What it said | Here | Status |
 |---|---|---|---|
 | D1 | The memory layer is local-first: no seven-service cloud stack | the vault is plain files; `studio/vault/tools/vault_index.py` indexes it without note bodies | carried |
-| D2 | The brush designer becomes a capability the system can call, not a panel it links to | a `brush` pipeline: the designer exports a bundle, `studio/pipeline/brush_pack.py` packs it. It starts once the app is under `studio/hub/brush/` | planned |
+| D2 | The brush designer becomes a capability the system can call, not a panel it links to | a `brush` pipeline that runs through `brushes/`, the brush tool at the repo root, which replaces the bundle and packer first planned here. It starts once `brushes/` is finished | planned |
 | D3 | The archive's canonical source is crispy-engine | the archive is not carried | dropped |
 | D4 | The archive's directory structure was derived from its imports | the archive is not carried | dropped |
 | D5 | A third-party key was scrubbed from the archive's docs | nothing from `archive/` is copied, its documents included | carried |
@@ -147,7 +147,7 @@ stage list, and real files.
 | Tool | Here | Status |
 |---|---|---|
 | `tools/ui-ux-pro-max/` | already `plugins/ui-design/`, with more than was vendored | carried |
-| `tools/brush-designer/` | the Procreate export written again in Python: `studio/pipeline/brush_pack.py`. The app itself is copied in from the laptop when the author has it; its bplist encoder and its Ollama tab are left behind | changed |
+| `tools/brush-designer/` | `brushes/`, a tool of its own at the repo root: the app moved whole into `brushes/app/`, and the Procreate format written again in Python under `brushes/pipeline/`, checked byte for byte against real brush files | changed |
 | `hub/`, `tools/launcher/` | `studio/hub/`: a page over the vault's notes, the runs and the gates, served by `studio/hub/serve.py` from its own folder only; the launcher and shortcut scripts under `studio/hub/launcher/`. No browser-side Ask, no Ollama | rebuilt |
 | `tools/vault_manifest.py` | `studio/vault/tools/vault_index.py`: one row per note without its body, and a search by section | rebuilt |
 | `tools/vault_rag.py` | not carried. Its index was built from a folder that no longer exists, and its generation step duplicates the executor | dropped |

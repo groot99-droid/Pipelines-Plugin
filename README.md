@@ -305,8 +305,8 @@ Writing Museum for a work the author names; and `scene-blender`, through the
 Blender scene connector. Each names the connector tools it may call, spends
 nothing before the execute go-ahead, and keeps what the author keeps under
 `studio/assets/`. `ui-build` and `brush` are entries that say what each needs;
-`brush` has its packer (`studio/pipeline/brush_pack.py`) and waits for the
-designer app.
+`brush` will run through the brush tool, [`brushes/`](brushes), once it is
+finished.
 
 The generations library, [`studio/library`](studio/library), catalogues every
 image, video, audio clip and 3D model the author has made on Higgsfield, with

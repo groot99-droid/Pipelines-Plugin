@@ -16,7 +16,6 @@ studio/
     studio_run.py      the bookkeeper: keeps a run's state, refuses what the spec refuses
     content_md.py      lints a note, previews a write, writes after a go-ahead
     gate_md.py         the same, for a brand gate
-    brush_pack.py      a designer bundle -> a Procreate .brush or .brushset
     compute_gate.py    one token, one heavy local job; machine.yaml and probe.py beside it
     studio_common.py   what those share
     tests/
@@ -28,7 +27,7 @@ studio/
     _Pipelines/        a map of the pipelines
     _templates/
     tools/vault_index.py   one row per note, and a search by section
-  hub/                 the desk: serve.py, the page, launcher/ for Windows, brush/ for the designer
+  hub/                 the desk: serve.py, the page, launcher/ for Windows
   assets/              what runs keep. Ignored by git
   docs/
 ```
@@ -79,7 +78,7 @@ Ten are declared in `spec.yaml`. Eight are implemented.
 | `ui-direction` | a design direction for a surface or a product, through `plugins/ui-design` | implemented |
 | `ui-build` | markup and CSS in which every value is a token | not yet |
 | `brand-gate` | one brand gate, transcribed from an interview with the author, through `gate_md.py` | implemented |
-| `brush` | a brush and a Procreate file, through the designer and `brush_pack.py` | packer built; the app is still to be copied in |
+| `brush` | a brush and a Procreate file, through the brush tool in `brushes/` | not yet; waits for `brushes/` |
 | `still-image`, `video-shot`, `music-cue` | through the Higgsfield connector; each spends credits after the execute go-ahead | implemented |
 | `edit-2d` | copies of existing images, through the Adobe connector | implemented |
 | `scene-3d` | one walkable room of the Writing Museum (`writing-museum/`) for a work the author names, built and walked locally; execute holds a `museum_walk` compute token | implemented |
@@ -114,7 +113,6 @@ python studio/pipeline/content_md.py apply <run-id> --confirm
 
 python studio/pipeline/compute_gate.py evaluate --all     # what this machine may run locally, now
 python studio/pipeline/compute_gate.py mint render_3d_cpu # a token for one job
-python studio/pipeline/brush_pack.py pack <bundle> --out <dir>
 
 python studio/vault/tools/vault_index.py index            # the search the hub uses
 ```
