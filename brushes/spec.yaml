@@ -56,7 +56,9 @@ build:
     - "vault/tools/brush_search.py"         # the search engine and its CLI (F9)
     - "vault/tools/brush_tags.py"           # tag sidecars: plan, apply, check, suggestions (F8)
     - "vault/_BrushTags/vocabulary.yaml"    # the closed tag vocabulary, six axes
-    - "pipeline/mcp_server.py"              # a stub: the protocol and one tool, library_status
+    - "pipeline/mcp_server.py"              # the stdio server: nine read-only tools, export_brush behind --export-dir (F10)
+    - "pipeline/service.py"                 # BrushService, the layer both servers call (F10)
+    - "pipeline/app_server.py"              # loopback HTTP API and the designer app's files (F10)
     - "pipeline/device_tests.py"            # build and verify for sittings 1 and 2
     - "pipeline/tests/fixtures.py"
     - "schema/silica_keys.json"             # every archive key, its eras and classes (F4)
@@ -396,7 +398,6 @@ surfaces:
       index_states: [fresh, stale, memory, not_ingested]
       counts: "the counts object of catalog/catalog.json; null when there is no catalog"
       library_files: "per half of the library: files, brushset, brush, counted by name"
-      stub_key: stub                        # a stub build adds this one key and nothing else
     tools:
       - library_status
       - search_brushes

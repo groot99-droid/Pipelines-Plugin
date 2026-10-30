@@ -1,10 +1,20 @@
 """pipeline/mcp_server.py: the JSON-RPC dispatcher, the line codec, the tool
-table and the one tool of this build (docs/CONTRACTS.md, F10 "MCP").
+table and library_status (docs/CONTRACTS.md, F10 "MCP"). The other tools, over
+a synthetic library, are in test_mcp_server_full.py.
 
 Everything runs in this process. `dispatch` is called with decoded messages,
 `handle_line` with bytes, `serve` and `main` with in-memory streams; no test
-starts the server as a program. The one tool is pointed at a temporary data
+here starts the server as a program. The tools are pointed at a temporary data
 root, so nothing here reads the real library, catalog or vault.
+
+When the stub became the full server, these pins changed, and only these (the
+contract demands each): the tool list is the nine read-only tools of F10 and
+`export_brush` behind --export-dir (it was one tool and an ignored flag); the
+instructions no longer say "stub"; the `library_status` payload loses its
+`stub` key and reads the catalog's counts, the vocabulary and the index file
+(F10: "The key goes when the stub does"), so an index file is `fresh`, `stale`
+or, when unreadable, `memory`; the status opens the catalog and the vocabulary,
+no brush file.
 
     python -m unittest discover -s brushes/pipeline/tests
 """
@@ -35,8 +45,11 @@ except ImportError:                                 # the agreement checks need 
 BRUSHES = PIPELINE.parent
 REPO = BRUSHES.parent
 
-# The tools this build registers. A later build that adds a row extends this.
-REGISTERED = ["library_status"]
+# The tools this build lists without --export-dir, in the order of spec.yaml
+# `surfaces.mcp.tools`; `export_brush` is gated behind --export-dir.
+REGISTERED = ["library_status", "search_brushes", "get_brush", "similar_brushes", "list_sets",
+              "list_vocabulary", "get_preview", "get_brush_settings_schema", "validate_settings_patch"]
+GATED = ["export_brush"]
 
 NAME = "Cont\u00e9 \U0001f4a7 6B \u6d53\u58a8"      # accents, an astral character, CJK
 MACHINE_PATH = re.compile(r"[A-Za-z]:[\\/](?:Users|Windows|Program)|/Users/|/home/")
@@ -128,7 +141,9 @@ class Handshake(ServerCase):
                                                 "version": ms.SERVER_VERSION})
         self.assertRegex(ms.SERVER_VERSION, r"^\d+\.\d+\.\d+$")
         self.assertIn("library_status", result["instructions"])
-        self.assertIn("stub", result["instructions"])
+        self.assertNotIn("stub", result["instructions"])
+        for name in REGISTERED:
+            self.assertIn(name, result["instructions"])
 
     def test_ping(self):
         self.assertEqual(self.ask(request("ping", request_id="p-1")),
@@ -336,13 +351,14 @@ class ToolsList(ServerCase):
         self.assertEqual(set(reply["result"]), {"tools"})
         return reply["result"]["tools"]
 
-    def test_this_build_registers_exactly_one_tool(self):
-        self.assertEqual(list(ms.TOOLS), REGISTERED)
+    def test_this_build_registers_the_nine_read_only_tools_and_gates_export(self):
+        self.assertEqual(list(ms.TOOLS), REGISTERED + GATED)
         self.assertEqual([tool["name"] for tool in self.tools()], REGISTERED)
 
     def test_the_shape_of_an_entry(self):
         for tool in self.tools():
-            self.assertEqual(set(tool), {"name", "title", "description", "inputSchema", "annotations"})
+            self.assertEqual(set(tool) - {"_meta"}, {"name", "title", "description", "inputSchema",
+                                                      "annotations"})
             self.assertRegex(tool["name"], r"^[a-z][a-z0-9_]{0,63}$")
             self.assertTrue(tool["title"].strip())
             self.assertGreater(len(tool["description"]), 40)
@@ -373,21 +389,27 @@ class ToolsList(ServerCase):
             ms.tool_table(echo_tool(), echo_tool())
 
     def test_a_writing_tool_is_listed_only_with_an_export_folder(self):
-        writer = echo_tool(name="export_brush", read_only=False, needs_export_dir=True)
+        writer = echo_tool(name="export_probe", read_only=False, needs_export_dir=True)
         table = ms.tool_table(*ms.TOOLS.values(), writer)
         self.assertEqual([tool["name"] for tool in self.tools(tools=table)], REGISTERED)
-        self.assertError(self.ask(request("tools/call", {"name": "export_brush"}), tools=table),
+        self.assertError(self.ask(request("tools/call", {"name": "export_probe"}), tools=table),
                          ms.INVALID_PARAMS, 1)
+        self.assertError(self.ask(request("tools/call", {"name": "export_brush", "arguments": {
+            "base_id": "b_0123456789ab"}}), tools=table), ms.INVALID_PARAMS, 1)
         listed = self.tools(tools=table, export_dir=self.tmp / "out")
-        self.assertEqual([tool["name"] for tool in listed], REGISTERED + ["export_brush"])
-        self.assertEqual(listed[-1]["annotations"], {"readOnlyHint": False, "destructiveHint": False,
-                                                     "idempotentHint": False, "openWorldHint": False})
+        self.assertEqual([tool["name"] for tool in listed], REGISTERED + GATED + ["export_probe"])
+        for tool in listed[-2:]:
+            self.assertEqual(tool["annotations"], {"readOnlyHint": False, "destructiveHint": False,
+                                                   "idempotentHint": False, "openWorldHint": False})
         self.assertFalse((self.tmp / "out").exists(), "listing a tool creates nothing")
 
-    def test_the_export_folder_changes_nothing_in_this_build(self):
-        self.assertEqual(self.tools(export_dir=self.tmp / "out"), self.tools())
-        self.assertFalse(any(tool.needs_export_dir for tool in ms.TOOLS.values()))
-        self.assertTrue(all(tool.read_only for tool in ms.TOOLS.values()))
+    def test_the_export_folder_adds_export_brush_and_nothing_else(self):
+        listed = self.tools(export_dir=self.tmp / "out")
+        self.assertEqual([tool["name"] for tool in listed], REGISTERED + GATED)
+        self.assertEqual(listed[:-1], self.tools())
+        self.assertEqual([name for name, tool in ms.TOOLS.items() if tool.needs_export_dir], GATED)
+        self.assertEqual([name for name, tool in ms.TOOLS.items() if not tool.read_only], GATED)
+        self.assertFalse((self.tmp / "out").exists(), "listing creates nothing")
 
     def test_a_server_that_stood_down_lists_nothing(self):
         self.assertEqual(self.tools(stand_down=True), [])
@@ -414,20 +436,10 @@ class LibraryStatus(ServerCase):
 
     def test_an_empty_root(self):
         status = self.status()
-        self.assertEqual(list(status), self.FROZEN + ["stub"],
-                         "the frozen keys, and one more that holds everything only the stub says")
+        self.assertEqual(list(status), self.FROZEN, "the frozen keys, in order, and no `stub`")
         self.assertEqual((status["server"], status["version"], status["mode"]),
                          ("rosw-brushes", ms.SERVER_VERSION, "project"))
         self.assertEqual(status["root"], "brushes")
-        stub = status["stub"]
-        self.assertEqual(set(stub), {"stage", "roots", "exists", "not_read"})
-        self.assertEqual(stub["stage"], "stub")
-        self.assertEqual(stub["roots"], {
-            "root": "brushes", "library": "brushes/library", "catalog": "brushes/catalog",
-            "vault": "brushes/vault", "index": "brushes/vault/tools/rag_index/index.json"})
-        self.assertEqual(stub["exists"], {"root": False, "library": False, "catalog": False,
-                                          "vault": False, "index": False})
-        self.assertEqual(stub["not_read"], ["counts", "vocabulary_axes"])
         empty = {"files": 0, "brushset": 0, "brush": 0}
         self.assertEqual(status["library_files"], {"user": empty, "official": empty})
         self.assertIsNone(status["counts"], "the catalog's counts; there is no catalog")
@@ -437,6 +449,7 @@ class LibraryStatus(ServerCase):
         self.assertIn("brushes/catalog/catalog.json", status["index"]["reason"])
         self.assertEqual(status["export"], {"enabled": False, "dir": None})
         self.assertIsInstance(status["next_steps"], list)
+        self.assertNotIn("stub", status)
 
     @unittest.skipIf(yaml is None, "pyyaml is not installed")
     def test_the_payload_is_the_documents(self):
@@ -465,29 +478,25 @@ class LibraryStatus(ServerCase):
             "official": {"files": 2, "brushset": 1, "brush": 0}})
         self.assertIsNone(status["counts"], "file counts are not the catalog's counts")
         self.assertIs(status["library_present"], True)
-        self.assertEqual(status["stub"]["exists"], {"root": True, "library": True, "catalog": False,
-                                                    "vault": False, "index": False})
         self.assertEqual(status["index"]["state"], "not_ingested")
 
     def test_a_catalog_and_an_index_on_disk_are_seen(self):
         (self.root / "catalog").mkdir(parents=True)
-        self.assertIs(self.status()["stub"]["exists"]["catalog"], False, "a folder is not a catalog")
+        self.assertEqual(self.status()["index"]["state"], "not_ingested", "a folder is not a catalog")
         (self.root / "catalog" / "catalog.json").write_bytes(b'{"counts": {"brushes": 3}}\n')
         status = self.status()
-        self.assertEqual(status["stub"]["exists"], {"root": True, "library": False, "catalog": True,
-                                                    "vault": False, "index": False})
         self.assertEqual(status["index"]["state"], "memory", "a catalog and no index file")
         self.assertIn("is missing", status["index"]["reason"])
-        self.assertIsNone(status["counts"], "this build opens no file, the catalog included")
+        self.assertEqual(status["counts"], {"brushes": 3}, "the catalog's own counts, unchanged")
         index = self.root / "vault" / "tools" / "rag_index" / "index.json"
         index.parent.mkdir(parents=True)
         index.write_bytes(b"{}\n")
         status = self.status()
-        self.assertEqual(status["stub"]["exists"], {"root": True, "library": False, "catalog": True,
-                                                    "vault": True, "index": True})
-        self.assertEqual(status["index"]["state"], "stale",
-                         "this build cannot tell fresh from stale, and never says fresh")
-        self.assertIn("brushes/vault/tools/rag_index/index.json is on disk", status["index"]["reason"])
+        self.assertEqual(status["index"]["state"], "memory", "an index file that cannot be read is no index")
+        self.assertIn("unreadable", status["index"]["reason"])
+        (self.root / "catalog" / "catalog.json").write_bytes(b"{not json")
+        self.assertEqual(self.status()["index"]["state"], "not_ingested")
+        self.assertIsNone(self.status()["counts"])
 
     def test_the_index_state_is_always_one_of_the_four(self):
         seen = set()
@@ -504,7 +513,8 @@ class LibraryStatus(ServerCase):
             self.assertIn(state, ms.INDEX_STATES, (make_catalog, make_index))
             self.assertIsInstance(self.status()["index"]["reason"], str)
             seen.add(state)
-        self.assertEqual(seen, {"not_ingested", "memory", "stale"})
+        self.assertEqual(seen, {"not_ingested", "memory"},
+                         "fresh and stale need a real index: test_service.StatusStates builds one")
 
     def test_it_reads_listings_and_writes_nothing(self):
         fixtures.write_library(self.root / "library")
@@ -519,7 +529,8 @@ class LibraryStatus(ServerCase):
         with mock.patch("builtins.open", spy), mock.patch("io.open", spy):
             self.status()
             self.status(export_dir=self.tmp / "out")
-        self.assertEqual(opened, [], "no file is opened, a brush file least of all")
+        self.assertEqual([path for path in opened if "library" in Path(path).parts], [],
+                         "a brush file is never opened by the status")
         self.assertEqual(fixtures.tree_digest(self.tmp), before)
         self.assertFalse((self.tmp / "out").exists())
         self.assertFalse((self.root / "catalog").exists())
@@ -541,10 +552,10 @@ class LibraryStatus(ServerCase):
         (self.tmp / "elsewhere" / "originals" / "user" / "p" / "One.brush").write_bytes(b"x")
         reply = ms.dispatch(request("tools/call", {"name": "library_status"}), ms.make_context(paths))
         status = payload_of(reply)
-        self.assertEqual(status["stub"]["roots"], {
-            "root": "brushes", "library": "elsewhere/originals", "catalog": "brushes/catalog",
-            "vault": "brushes/data/vault", "index": "brushes/data/vault/tools/rag_index/index.json"})
+        self.assertEqual(status["root"], "brushes")
+        self.assertIn("brushes/catalog/catalog.json", status["index"]["reason"])
         self.assertEqual(status["library_files"]["user"], {"files": 1, "brushset": 0, "brush": 1})
+        self.assertEqual(status["library_files"]["official"], {"files": 0, "brushset": 0, "brush": 0})
 
     def test_a_path_outside_the_base_gets_dot_dot_segments(self):
         base = self.tmp / "repo"
@@ -868,19 +879,33 @@ class Starting(ServerCase):
         self.assertTrue(redirected, "after the wire is taken, sys.stdout is stderr")
         replies = [json.loads(line) for line in out.splitlines()]
         self.assertEqual([reply["id"] for reply in replies], [1, 2, 3])
-        self.assertEqual(payload_of(replies[2])["stub"]["roots"]["library"], "brushes/library")
+        status = payload_of(replies[2])
+        self.assertEqual((status["root"], status["index"]["state"]), ("brushes", "not_ingested"))
+        self.assertNotIn("stub", status)
         self.assertIn("rosw-brushes", err)
         self.assertEqual(len(err.splitlines()), 1, "one line at start, nothing per request")
         self.assertEqual(list(self.tmp.iterdir()), [], "serving created nothing")
 
-    def test_the_export_folder_is_parsed_and_not_used(self):
+    def test_the_export_folder_lists_export_brush_and_creates_nothing_until_a_confirmed_export(self):
         target = self.tmp / "exports"
         data = json.dumps(request("tools/list")).encode("utf-8") + b"\n"
         code, out, err, _ = self.run_main(["--root", str(self.root), "--export-dir", str(target)], data)
         self.assertEqual(code, 0)
-        self.assertEqual([tool["name"] for tool in json.loads(out)["result"]["tools"]], REGISTERED)
+        self.assertEqual([tool["name"] for tool in json.loads(out)["result"]["tools"]], REGISTERED + GATED)
         self.assertFalse(target.exists())
-        self.assertIn("--export-dir is accepted and not used", err)
+        self.assertNotIn("not used", err)
+        self.assertEqual(len(err.splitlines()), 1)
+
+    def test_an_export_folder_inside_the_data_is_a_usage_error(self):
+        for inside in (self.root / "library" / "out", self.root / "catalog", self.root / "vault" / "x",
+                       bc.TOOL_ROOT / "exports"):
+            out, err = FakeStream(), io.StringIO()
+            with mock.patch.object(sys, "stdin", FakeStream(b"")), mock.patch.object(sys, "stdout", out), \
+                    mock.patch.object(sys, "stderr", err):
+                code = ms.main(["--root", str(self.root), "--export-dir", str(inside)])
+            self.assertEqual(code, bc.EXIT_USAGE, inside)
+            self.assertIn("--export-dir", err.getvalue())
+            self.assertFalse(inside.exists())
 
     def test_the_flags_of_the_contract_are_accepted(self):
         args = ms.build_parser().parse_args(["--export-dir", "out", "--defer-to-project", "proj", "--selftest",

@@ -3,15 +3,14 @@
 A library of Procreate brushes with tag-based search, and a brush designer that
 reads and writes the brush file format.
 
-**This tool is under construction.** What exists today is the foundation and
-the file codec: the contract, the identity and path modules, the zip writer,
-the codec that reads and writes brush files byte for byte (property lists,
-archives, the brush model and its settings schema, containers, PNG and `.gbr`
-images), the two scripts that fill the library, a stub of the MCP server, the
-builder of the first two device tests, the test fixtures, the library manifest,
-and the old designer copied in as it was received. There is no search and no
-catalog yet, and nothing here has written a file that Procreate is known to
-open.
+**This tool is under construction.** What exists today is the foundation, the
+file codec, the library and its search: the contract, the identity and path
+modules, the codec that reads and writes brush files byte for byte, the scripts
+that fill the library and build the catalog, previews and notes, the search and
+tag tools, the MCP server and the loopback app server, the builder of the first
+two device tests, and the test fixtures. The designer app in `app/` is still the
+old one, copied in as it was received. Nothing here has written a file that
+Procreate is known to open.
 
 ## What is here now
 
@@ -33,7 +32,9 @@ open.
 | `pipeline/ingest.py` | `where`; `adopt`, which copies a folder of brush files into `library/user/`; `census`, which counts what the library's archives hold and writes nothing; `build`, which reads every brush file and writes `catalog/` (deterministic, nothing to confirm); and `report`, which prints what the catalog holds |
 | `pipeline/previews.py` | `render`, which makes the stroke, shape and grain previews and the contact sheets, and writes `vault/_Previews/`, `catalog/thumbnails.json` and the texture statistics (a dry run without `--confirm`) |
 | `pipeline/notes.py` | `write`, which renders one note per brushset, the folder indexes and `00_INDEX.md` from `catalog/` (a dry run without `--confirm`; only the generated part of a note is rewritten), and `check`, which exits 1 when any note differs from the catalog |
-| `pipeline/mcp_server.py` | a stub of the MCP server: the protocol and one tool, `library_status`. Registered in the repository's `.mcp.json` |
+| `pipeline/mcp_server.py` | the MCP server over stdio: nine read-only tools (search, similar, get_brush, get_set, list_sets, facets, get_preview, vocabulary and `library_status`), and `export_brush` only when started with `--export-dir`. Registered in the repository's `.mcp.json` |
+| `pipeline/service.py` | `BrushService`, the one layer both servers call: search, brush and set records, previews, patch validation, and the export builder |
+| `pipeline/app_server.py` | the loopback HTTP server (127.0.0.1:8719, a token per run) that serves `app/` and the JSON API; it writes nothing |
 | `pipeline/device_tests.py` | `build` and `verify` for the two sittings with the iPad: sitting 1, a control set of eight library brushes in a container of ours; sitting 2, brushes we edited and brushes we made from nothing |
 | `pipeline/tests/` | the tests, and `fixtures.py`, which builds synthetic brush files for them |
 | `schema/silica_keys.json` | every archive key once: its type, eras, defaults, observed values, and the inferred labels (F4) |

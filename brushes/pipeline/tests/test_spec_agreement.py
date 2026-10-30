@@ -519,10 +519,9 @@ class Surfaces(Loaded):
         status = self.spec["surfaces"]["mcp"]["status"]
         self.assertEqual(tuple(status["modes"]), mcp_server.MODES)
         self.assertEqual(tuple(status["index_states"]), mcp_server.INDEX_STATES)
-        self.assertEqual(status["stub_key"], "stub")
         context = mcp_server.make_context(bc.resolve_paths(root=fixtures.temp_dir(self) / "brushes"))
         payload = mcp_server.library_status({}, context)
-        self.assertEqual(list(payload), status["keys"] + [status["stub_key"]])
+        self.assertEqual(list(payload), status["keys"])
         self.assertIn(payload["index"]["state"], status["index_states"])
         self.assertIn(payload["mode"], status["modes"])
         section = self.section("F10.")

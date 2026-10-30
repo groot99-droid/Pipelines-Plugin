@@ -712,14 +712,10 @@ settings. Errors are `GbrError`. No `.gbr` written here has been loaded in GIMP.
 ### Export
 
 One function builds an export for every surface (`service.build_export`); only
-`service.write_export` puts one on disk (F12). **Until `service.py` exists**,
-`brush_file.py export` builds its export with `brush_file.export_brush` (the
-member plan from `container.member_plan`) and writes it with
-`brush_file.write_export`, the interim one writer of `--out`: through
-`<name>.tmp`, then linked into place, never over an existing file. When
-`service.py` lands, `build_export` reuses `container.member_plan` and
-`brush_file.export_brush`, `write_export` takes over `brush_file.write_export`,
-and MCP `export_brush` and `brush_file.py export` share them.
+`service.write_export` puts one on disk (F12). `service.build_export` and `service.write_export` now exist. `brush_file.py
+export` still builds with its own `brush_file.export_brush` and writes with
+`brush_file.write_export`; the two copies are to be merged so that MCP
+`export_brush`, the HTTP export and `brush_file.py export` share one.
 
 - The base of an export is always original bytes: a library original, or the
   members the client sends back. Catalog `settings` is read-only data and is
@@ -1506,7 +1502,7 @@ Tools (`ID` is a string matching the brush id pattern of F1):
 
 | Tool | Arguments | Payload |
 |---|---|---|
-| `library_status` | none | `{"server", "version", "mode", "root", "index": {"state", "reason"}, "counts", "library_present", "library_files", "vocabulary_axes", "export": {"enabled", "dir"}, "next_steps": [...]}`; a stub build adds one key, `stub` (below) |
+| `library_status` | none | `{"server", "version", "mode", "root", "index": {"state", "reason"}, "counts", "library_present", "library_files", "vocabulary_axes", "export": {"enabled", "dir"}, "next_steps": [...]}` |
 | `search_brushes` | `query` (max 500), `tags` (max 12, the tag pattern of F9), `where`, `where_not` (max 12 each), `top` (1 to 25, default 8); at least one of `query`, `tags`, `where` | the F9 envelope |
 | `get_brush` | `id: ID`, `include` (of `settings, tags, facets, visual, textures, note`) | the brush: names, sets, `library`, `era`, `family`, facets, tags, `visual`, `visual_basis`, `settings`, textures, `dual: {"name", "era", "blend_code"} \| null`, preview, note location, duplicates |
 | `similar_brushes` | `id: ID`, `top` (1 to 25, default 8), `where`, `where_not` | the similar envelope |
@@ -1531,11 +1527,6 @@ same object, plus `caps` and the new-brush era):
 | `vocabulary_axes` | the tag axes the vocabulary defines, in order; `[]` when there is no vocabulary |
 | `export` | `{"enabled", "dir"}` |
 | `next_steps` | the commands that would make what is missing, in the order to run them. A command is listed only when its script is on disk **and** its verb is built; never with `--confirm` |
-
-The stub build that exists today returns exactly these keys and one more,
-`stub`: `{"stage": "stub", "roots", "exists", "not_read"}`. It opens no file,
-so it reports `counts: null` and `vocabulary_axes: []` and lists both under
-`stub.not_read`. The key goes when the stub does.
 
 Every tool above is read-only (`readOnlyHint: true`). One more, `export_brush`
 (`base_id: ID`, `changes`, `name`, `confirm`), is listed only when the server
@@ -1569,6 +1560,31 @@ that it never overwrites. The server writes nothing unless started with
 `pipeline/tests/test_mcp_server.py` reads `plugin.json` and holds the word
 `pending` or `present` in `spec.yaml`, and this paragraph, to what the file
 holds.
+
+### What the code settled where F10 was silent
+
+- `app_server.make_server(service, token, port=bc.APP_PORT, *, max_upload, dev, paths, log)`;
+  `port=0` picks a free port, which is how tests run. `--dev` walks `app/` again
+  on every request and logs each request to stderr.
+- Export `format: "kit"` is a zip named `<slug>-kit.zip` whose entries are
+  limited to `gimp/*.gbr`, `ink/*.png`, `mask/*.png`, `stroke-preview.png` and
+  `brush-recipe.md`, plus an optional single brush added as `<slug>.brush`.
+  An export request may carry a top-level `spacing` (gbr, 1 to 1000, default 10)
+  and an `era` on a brush spec whose `base` is null. A supplied thumbnail must be
+  1060x324; a replaced texture is kept as given when it is 8-bit grey and not
+  interlaced, otherwise converted and reported as `converted`.
+- `GET /api/brush/<id>/open?textures=...`: `preview` is a 256-fit grey PNG made
+  from the original; a bundled texture has `standin_png_b64: null` because no
+  image is made up for it; import `member` keys are opaque (`s<k>/<folder>`,
+  `b<k>`).
+- `validate_patch` returns `base: {kind, ...}` and, when something applied,
+  `patch_text` (the compact F3 envelope). With no donor in the library it falls
+  back to schema defaults and says so (`kind: "schema_defaults"`).
+- Search over MCP and HTTP returns brush chunks only. `list_sets` rows carry
+  `title`, `kind` and `pack`. `get_brush` defaults to every part except
+  `settings`. MCP `export_brush` names its file `<slug>-<first 8 hex of id>.brush`
+  and adds the error codes `exists` (409) and `export_disabled` (403);
+  `--export-dir` inside the tool, library, catalog or vault is exit 2.
 
 ## F11. Command lines
 
@@ -1667,7 +1683,7 @@ stale record is removed; a full `build` is the way to prune.
 | `library/user/**` | `ingest.py adopt --confirm` |
 | `library/official/**`, `library/official/fetch_log.jsonl` | `fetch_base_library.py fetch --confirm` |
 | `repo:brushes/device-tests/<sitting>/**`, except `returned/` | `device_tests.py build --confirm` (`--out DIR` names another folder; inside `brushes/` only `device-tests/` may be written). `returned/` is created empty and is filled by hand, with what comes back from the device |
-| a file in `--export-dir` or `--out` of `brush_file.py` | `service.write_export` only, reached by MCP `export_brush` with `confirm: true` and by `brush_file.py export --confirm`. Until `service.py` exists, `brush_file.write_export` (reached by `brush_file.py export --confirm`) is the one writer of `--out`: `<name>.tmp`, then linked into place, never over an existing file; `service.write_export` takes it over (F3 "Export") |
+| a file in `--export-dir` or `--out` of `brush_file.py` | `service.write_export` only, reached by MCP `export_brush` with `confirm: true` and by `brush_file.py export --confirm`. `service.write_export` writes `<name>.tmp`, then links it into place, never over an existing file. `brush_file.py export` still carries its own copy of the writer; the two are to be merged |
 | authored, never generated | `spec.yaml`, `docs/CONTRACTS.md`, `schema/*.json`, `library/sources.json`, `vault/CLAUDE.md`, `vault/_BrushTags/vocabulary.yaml`, each note's `## Notes` |
 
 Agents return text and write no file. Both servers write nothing else. No note

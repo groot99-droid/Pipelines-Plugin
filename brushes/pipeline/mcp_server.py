@@ -1,13 +1,19 @@
 """The brushes MCP server: JSON-RPC 2.0 over stdio (brushes/docs/CONTRACTS.md,
 F10 "MCP").
 
-    python brushes/pipeline/mcp_server.py [--export-dir D] [--defer-to-project D] [--selftest]
+    python -I brushes/pipeline/mcp_server.py [--export-dir D] [--defer-to-project D] [--selftest]
 
-This build is a stub. It speaks the protocol and registers one tool,
-library_status, so that the wiring (the repository's .mcp.json, the client's
-spawn directory, the `python` command) can be checked by hand before anything
-is built behind it. Search, previews and the settings tools arrive as rows of
-the TOOLS table; the dispatcher does not change when they do.
+Nine read-only tools, one row each of the TOOLS table, over pipeline/service.py:
+library_status, search_brushes, get_brush, similar_brushes, list_sets,
+list_vocabulary, get_preview, get_brush_settings_schema and
+validate_settings_patch. A tenth, export_brush, is listed only when the server
+is started with --export-dir DIR, and then it is the one way this server
+writes: `confirm: false` is a dry run, `confirm: true` writes
+`<ascii-slug>-<id8>.brush` inside DIR and never over a file (service.write_export,
+F12). Without --export-dir the server writes nothing.
+
+Run it with `python -I`: it opens library originals, and a brush file is data
+from a stranger (docs/CONTRACTS.md, section 0).
 
 The wire
     One JSON value per line in each direction, both streams used in binary.
@@ -46,8 +52,9 @@ the model on the other end correct itself.
 arguments: it reads no stream and keeps no state, so the tests call it
 directly. `handle_line` adds the bytes on either side, `serve` the loop.
 
-The server writes nothing. --export-dir is accepted and not used: no export
-tool is registered in this build. It never exits because data is missing.
+This file opens no file and writes none: everything that touches the disk is in
+service.py. It never exits because data is missing: library_status says what is
+absent and which commands would make it.
 
 Standard library only.
 """
@@ -74,12 +81,14 @@ from typing import NamedTuple
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import brush_common as bc  # noqa: E402
+import service  # noqa: E402
+from service import (  # noqa: E402,F401  (re-exported: the tests and the spec test read them here)
+    INDEX_STATES, LIBRARY_HALVES, MCP_TOP_MAX, MODES, NEXT_STEPS, ApiError, count_files, next_steps,
+    repo_relative)
 
-SERVER_NAME = "rosw-brushes"
+SERVER_NAME = service.SERVER_NAME
 SERVER_TITLE = "ROSW Brushes"
-SERVER_VERSION = "0.1.0"
-# What stands behind the protocol today. A later build drops the word.
-STAGE = "stub"
+SERVER_VERSION = service.SERVER_VERSION
 
 # The revisions the initialize handshake can settle on, oldest first, and the
 # one offered to a client that asks for anything else. These are the handshake
@@ -100,11 +109,20 @@ MAX_LINE = 64 * 1024 * 1024
 
 INSTRUCTIONS = (
     "The ROSW brush library: Procreate brush sets kept under brushes/ in the ROSW "
-    "repository. This build of the server is a stub with one read-only tool, "
-    "library_status, which reports where the data folders are, whether the library of "
-    "original files, the catalog and the search index exist, how many files the "
-    "library holds, and which commands would make what is missing. Search, previews and "
-    "the settings tools are not built yet."
+    "repository, with a catalog, a note per set, previews and a search index. Start with "
+    "library_status: it says whether the library, the catalog and the index exist and which "
+    "commands would make what is missing. search_brushes finds brushes by words, tags "
+    "(axis=value) and facet filters (key=value); similar_brushes finds brushes with alike "
+    "settings; get_brush, list_sets, list_vocabulary and get_preview read what is stored; "
+    "get_brush_settings_schema describes every setting; validate_settings_patch checks a "
+    "change and returns a patch to paste into the designer app. These tools are read-only. "
+    "Tag words and `visual` sentences are descriptions of previews, not measurements."
+)
+EXPORT_INSTRUCTIONS = (
+    " This server was started with an export folder, so export_brush is listed too: it writes a "
+    "changed library brush as a .brush file into that folder (a dry run unless confirm is true) and "
+    "never over an existing file. It is the only tool that writes. Nothing it writes is known to "
+    "open in Procreate."
 )
 STAND_DOWN_INSTRUCTIONS = (
     "This copy of the brushes server was started by an installed plugin and has stood "
@@ -158,10 +176,11 @@ class Context(NamedTuple):
 
     paths: bc.Paths
     tools: dict
-    export_dir: object = None           # parsed and carried; nothing reads it yet
+    export_dir: object = None           # the one folder export_brush writes into, or None
     stand_down: bool = False
     mode: str = "project"               # "project" | "snapshot"
     log: object = None                  # log(text) for diagnostics, or None
+    service: object = None              # the BrushService the tools read through
 
 
 def tool_table(*tools):
@@ -176,9 +195,18 @@ def tool_table(*tools):
 
 def make_context(paths=None, *, tools=None, export_dir=None, stand_down=False, mode="project",
                  log=None):
-    return Context(paths=paths if paths is not None else bc.resolve_paths(),
-                   tools=TOOLS if tools is None else tools, export_dir=export_dir,
-                   stand_down=stand_down, mode=mode, log=log)
+    paths = paths if paths is not None else bc.resolve_paths()
+    return Context(paths=paths, tools=TOOLS if tools is None else tools, export_dir=export_dir,
+                   stand_down=stand_down, mode=mode, log=log,
+                   service=service.BrushService(paths, mode=mode, export_dir=export_dir, log=log))
+
+
+def service_of(context):
+    """The context's service; one is made when a context was built by hand."""
+    if context.service is not None:
+        return context.service
+    return service.BrushService(context.paths, mode=context.mode, export_dir=context.export_dir,
+                                log=context.log)
 
 
 def listed_tools(context):
@@ -203,133 +231,66 @@ def describe_tool(tool):
     return entry
 
 
-# ── library_status ───────────────────────────────────────────────────────────
+# ── the tools ────────────────────────────────────────────────────────────────
+# Each handler is a few lines over service.py; the payloads are the service's.
 
-LIBRARY_HALVES = ("user", "official")
-STATUS_ROOTS = ("root", "library", "catalog", "vault", "index")
-INDEX_STATES = ("fresh", "stale", "memory", "not_ingested")     # docs/CONTRACTS.md, F10
-MODES = ("project", "snapshot")
 NO_ARGUMENTS = {"type": "object", "properties": {}, "additionalProperties": False}
-# (what is missing, the script that makes it, the verb, whether that verb is
-# built). The path is under the brushes/ folder that holds this code. A writer
-# is named in its dry-run form: the status never tells anyone to pass --confirm.
-#
-# A command is advertised only when the last column says its verb exists: a
-# status that names a command which then exits 2 sends its reader nowhere. The
-# column is not looked up at run time, because this server opens no file and
-# imports no other script; test_mcp_server.py runs every row's `<verb> --help`
-# and fails when the column and the script disagree, in either direction.
-NEXT_STEPS = (
-    ("official", "pipeline/fetch_base_library.py", "fetch", True),
-    ("catalog", "pipeline/ingest.py", "build", True),
-    ("index", "vault/tools/brush_search.py", "index", True),
-)
-
-
-def repo_relative(path, base):
-    """A path as the status reports it: POSIX and relative to `base`, the folder
-    that holds the data root (in a checkout, the repository root).
-
-    A folder that a flag or a variable moved outside `base` is shown with
-    leading `..` segments. On another drive there is no relative form, and only
-    then is the absolute path given.
-    """
-    path, base = Path(path), Path(base)
-    try:
-        return path.relative_to(base).as_posix()
-    except ValueError:
-        pass
-    try:
-        return Path(os.path.relpath(path, base)).as_posix()
-    except ValueError:
-        return path.as_posix()
-
-
-def count_files(folder):
-    """How many files sit under a folder, at any depth, and how many of them are
-    named as brush sets and as single brushes. By name only: no file is opened,
-    so a Git LFS pointer counts like the file it stands for. A missing folder
-    counts as empty."""
-    counts = {"files": 0, "brushset": 0, "brush": 0}
-    for _folder, _subfolders, names in os.walk(folder):
-        for name in names:
-            counts["files"] += 1
-            lowered = name.lower()
-            if lowered.endswith(".brushset"):
-                counts["brushset"] += 1
-            elif lowered.endswith(".brush"):
-                counts["brush"] += 1
-    return counts
-
-
-def next_steps(missing, tool_root=None, steps=NEXT_STEPS):
-    """The commands that would make what is missing, in the order to run them.
-    A command is listed only when its verb is built and its script is on disk:
-    a status never points at a file that is not there, nor at a verb the script
-    does not have."""
-    tool_root = Path(tool_root) if tool_root is not None else bc.TOOL_ROOT
-    listed = []
-    for what, script, verb, built in steps:
-        if built and what in missing and (tool_root / script).is_file():
-            listed.append(f"python {tool_root.name}/{script} {verb}")
-    return listed
+BRUSH_ID = {"type": "string", "pattern": "^b_[0-9a-f]{12}$"}
+TAG_ITEM = {"type": "string", "maxLength": 80, "pattern": "^[a-z][a-z_]*=[a-z0-9][a-z0-9,-]*$"}
+FILTER_ITEM = {"type": "string", "maxLength": 120}
+RESULT_SIZE = {"anthropic/maxResultSizeChars": 120000}
 
 
 def library_status(arguments, context):
-    """Where the server reads from and what is there. Reads folder listings and
-    nothing else.
+    """Where the server reads from and what is there: the payload of F10, from
+    service.BrushService.status. It reads folder listings, the catalog's counts,
+    the vocabulary and the index state, and opens no brush file."""
+    return service_of(context).status()
 
-    The keys are the frozen ones of docs/CONTRACTS.md, F10. What only this stub
-    build reports (its stage, every resolved folder, what exists) sits under
-    the one extra key `stub`, which goes when the stub does. Two frozen values
-    are placeholders here, because this build opens no file: `counts` (the
-    catalog's own counts) is null, and `vocabulary_axes` is empty.
-    """
-    paths = context.paths
-    base = paths.root.parent
 
-    def shown(path):
-        return repo_relative(path, base)
+def search_brushes(arguments, context):
+    return service_of(context).search(
+        arguments.get("query", ""), arguments.get("tags"), arguments.get("where"),
+        arguments.get("where_not"), arguments.get("top", 8), 0, top_max=MCP_TOP_MAX, require_filter=True)
 
-    catalog_file = paths.catalog / "catalog.json"
-    exists = {"root": paths.root.is_dir(), "library": paths.library.is_dir(),
-              "catalog": catalog_file.is_file(), "vault": paths.vault.is_dir(),
-              "index": paths.index.is_file()}
-    library_files = {half: count_files(paths.library / half) for half in LIBRARY_HALVES}
-    brush_files = {half: library_files[half]["brushset"] + library_files[half]["brush"]
-                   for half in LIBRARY_HALVES}
-    # One of INDEX_STATES, always. This build cannot tell fresh from stale, so
-    # an index file it has not checked is reported as stale, never as fresh.
-    if not exists["catalog"]:
-        index = {"state": "not_ingested", "reason": f"no catalog: {shown(catalog_file)} is missing"}
-    elif not exists["index"]:
-        index = {"state": "memory", "reason": f"no index file: {shown(paths.index)} is missing"}
-    else:
-        index = {"state": "stale",
-                 "reason": f"not checked: this build does not load the index ({shown(paths.index)} "
-                           "is on disk); it is reported stale until a build can check it"}
-    missing = [what for what, absent in (("official", not brush_files["official"]),
-                                         ("catalog", not exists["catalog"]),
-                                         ("index", not exists["index"])) if absent]
-    return {
-        "server": SERVER_NAME,
-        "version": SERVER_VERSION,
-        "mode": context.mode,
-        "root": shown(paths.root),
-        "index": index,
-        "counts": None,
-        "library_present": sum(brush_files.values()) > 0,
-        "library_files": library_files,
-        "vocabulary_axes": [],
-        "export": {"enabled": False, "dir": None},
-        "next_steps": next_steps(missing),
-        "stub": {
-            "stage": STAGE,
-            "roots": {name: shown(getattr(paths, name)) for name in STATUS_ROOTS},
-            "exists": exists,
-            "not_read": ["counts", "vocabulary_axes"],
-        },
-    }
+
+def get_brush(arguments, context):
+    return service_of(context).get_brush(arguments["id"], arguments.get("include"))
+
+
+def similar_brushes(arguments, context):
+    return service_of(context).similar(arguments["id"], arguments.get("top", 8), arguments.get("where"),
+                                       arguments.get("where_not"), top_max=MCP_TOP_MAX)
+
+
+def list_sets(arguments, context):
+    return service_of(context).list_sets(arguments.get("library"))
+
+
+def list_vocabulary(arguments, context):
+    return service_of(context).vocabulary(arguments.get("axis"))
+
+
+def get_preview(arguments, context):
+    payload, files = service_of(context).preview_set(arguments["id"], arguments.get("kinds") or ["stroke"])
+    blocks = tuple({"type": "image", "data": service.b64(data), "mimeType": "image/png"}
+                   for _, data in files)
+    return ToolOutput(payload, blocks)
+
+
+def get_brush_settings_schema(arguments, context):
+    return service_of(context).settings_schema(arguments.get("group"), arguments.get("keys"),
+                                               arguments.get("detail", "compact"))
+
+
+def validate_settings_patch(arguments, context):
+    return service_of(context).validate_patch(arguments["changes"], arguments.get("base_id"),
+                                               arguments.get("base"), arguments.get("era"))
+
+
+def export_brush(arguments, context):
+    return service_of(context).export_brush(arguments["base_id"], arguments.get("changes"),
+                                            arguments.get("name"), arguments.get("confirm", False))
 
 
 TOOLS = tool_table(
@@ -338,16 +299,156 @@ TOOLS = tool_table(
         title="Brush library status",
         description=(
             "Where this server reads the brush library from, and what is there. Returns the "
-            "data root as a path relative to the repository root (the folder that holds "
-            "brushes/), the state of the search index (not_ingested when there is no catalog), "
-            "how many files sit under library/user and library/official, counted by name "
-            "(`library_files`), and the commands that would make what is missing. This stub "
-            "build also reports, under `stub`, every data folder and whether the library, the "
-            "generated catalog (catalog/catalog.json), the vault and the index exist; it does "
-            "not read the catalog, so `counts` is null. Takes no arguments and reads folder "
-            "listings only."),
+            "data root as a path relative to the repository root, the state of the search index "
+            "(fresh, stale, memory when it is built in RAM, or not_ingested when there is no "
+            "catalog), the catalog's own counts, how many files sit under library/user and "
+            "library/official (counted by name), the tag axes of the vocabulary, whether export "
+            "is enabled, and the commands that would make what is missing. Call it first. Takes "
+            "no arguments and opens no brush file."),
         input_schema=NO_ARGUMENTS,
         handler=library_status,
+    ),
+    Tool(
+        name="search_brushes",
+        title="Search brushes",
+        description=(
+            "Find brushes by words, tags and facet filters. `query` is free words, ranked by TF-IDF "
+            "cosine over each brush's name, set, tags, visual sentence and facet words. `tags` are "
+            "axis=value filters (axes medium, mark, texture, edge, motif, use; a comma list is OR; "
+            "several filters are AND), for example medium=charcoal,graphite-pencil. `where` and "
+            "`where_not` are facet or setting filters: key=value, key=v1,v2 or key=MIN..MAX, for "
+            "example kind=stamp or spacing=..0.05. Give at least one of query, tags, where. Returns "
+            "ranked rows with brush id, set, tags, the visual sentence and where its note is; no match "
+            "is an empty list, not an error. Tags and `visual` describe previews, they are not "
+            "measurements; the numbers are in the settings."),
+        input_schema={"type": "object", "additionalProperties": False, "properties": {
+            "query": {"type": "string", "maxLength": 500},
+            "tags": {"type": "array", "maxItems": 12, "items": TAG_ITEM},
+            "where": {"type": "array", "maxItems": 12, "items": FILTER_ITEM},
+            "where_not": {"type": "array", "maxItems": 12, "items": FILTER_ITEM},
+            "top": {"type": "integer", "minimum": 1, "maximum": MCP_TOP_MAX, "default": 8}}},
+        handler=search_brushes,
+    ),
+    Tool(
+        name="get_brush",
+        title="Get one brush",
+        description=(
+            "One brush by id: its names, the sets it is in, library, era and family, its dual (second) "
+            "brush if any, the preview paths, and the other places it occurs. `include` adds parts: "
+            "facets (the computed facts and facet words), tags (the six tag lists and their state), "
+            "visual (the sentence describing its preview), textures (where its shape and grain come "
+            "from), note (the note path, heading and line range) and settings (every archive key, "
+            "read-only; large). The default is every part but settings."),
+        input_schema={"type": "object", "additionalProperties": False, "required": ["id"], "properties": {
+            "id": BRUSH_ID,
+            "include": {"type": "array", "maxItems": 6,
+                        "items": {"type": "string", "enum": ["settings", "tags", "facets", "visual",
+                                                             "textures", "note"]}}}},
+        handler=get_brush,
+        meta=RESULT_SIZE,
+    ),
+    Tool(
+        name="similar_brushes",
+        title="Brushes with alike settings",
+        description=(
+            "Brushes whose settings are close to those of the brush `id` (method gower-v1: numbers "
+            "scaled by the library's own spread, booleans and enums equal or not, the shape and grain "
+            "images weighted most). Each result lists how many keys were compared and the keys that "
+            "differ most, with both values. It compares settings, not how a stroke looks. `where` and "
+            "`where_not` narrow the candidates as in search_brushes."),
+        input_schema={"type": "object", "additionalProperties": False, "required": ["id"], "properties": {
+            "id": BRUSH_ID,
+            "top": {"type": "integer", "minimum": 1, "maximum": MCP_TOP_MAX, "default": 8},
+            "where": {"type": "array", "maxItems": 12, "items": FILTER_ITEM},
+            "where_not": {"type": "array", "maxItems": 12, "items": FILTER_ITEM}}},
+        handler=similar_brushes,
+    ),
+    Tool(
+        name="list_sets",
+        title="List brush sets",
+        description=(
+            "Every brush set in the catalog: slug, id, name (verbatim), library (user or official), "
+            "vendor, brush count, how many of its brushes carry tags, and where its note is. `library` "
+            "narrows to one half of the library."),
+        input_schema={"type": "object", "additionalProperties": False, "properties": {
+            "library": {"type": "string", "enum": ["user", "official"]}}},
+        handler=list_sets,
+    ),
+    Tool(
+        name="list_vocabulary",
+        title="Tag vocabulary and facets",
+        description=(
+            "The closed tag vocabulary (six axes, each tag with its definition) that the tags filter of "
+            "search_brushes accepts, and the facets that where filters accept, with their value ranges "
+            "from the catalog. `axis` limits it to one axis."),
+        input_schema={"type": "object", "additionalProperties": False, "properties": {
+            "axis": {"type": "string", "maxLength": 40}}},
+        handler=list_vocabulary,
+    ),
+    Tool(
+        name="get_preview",
+        title="Get brush previews",
+        description=(
+            "The stored preview images of a brush as PNG: `stroke` (a drawn stroke, 530x162, the "
+            "drawing app's own thumbnail when it has one), `shape` and `grain` (256x256 tiles). It "
+            "serves the files previews.py wrote and renders nothing; a brush whose shape or grain is "
+            "an image inside the drawing app has no tile for it. The text block names the images and "
+            "says what is missing."),
+        input_schema={"type": "object", "additionalProperties": False, "required": ["id"], "properties": {
+            "id": BRUSH_ID,
+            "kinds": {"type": "array", "minItems": 1, "maxItems": 3, "default": ["stroke"],
+                      "items": {"type": "string", "enum": ["stroke", "shape", "grain"]}}}},
+        handler=get_preview,
+    ),
+    Tool(
+        name="get_brush_settings_schema",
+        title="Brush settings schema",
+        description=(
+            "What each brush setting (archive key) is: type, range, default, the eras that have it, and "
+            "its tab. `group` limits it to one tab, `keys` to named settings (up to 60). `detail` full "
+            "adds labels, descriptions, enums and the values the library holds. Labels and ranges are "
+            "inferred from key names and observed values; only a few rows are verified."),
+        input_schema={"type": "object", "additionalProperties": False, "properties": {
+            "group": {"type": "string", "maxLength": 40},
+            "keys": {"type": "array", "maxItems": 60, "items": {"type": "string", "maxLength": 64}},
+            "detail": {"type": "string", "enum": ["compact", "full"], "default": "compact"}}},
+        handler=get_brush_settings_schema,
+        meta=RESULT_SIZE,
+    ),
+    Tool(
+        name="validate_settings_patch",
+        title="Validate a settings patch",
+        description=(
+            "Check a change to a brush's settings without making any file. `changes` is {setting: "
+            "value}. The base is `base_id` (a library brush), `base` ({members: [{path, b64}]}; only "
+            "Brush.archive is read) or neither (the new-brush template of `era`). Returns what would "
+            "apply, what is clamped or rejected and why, and `patch_text`: a JSON patch the designer "
+            "app's paste box accepts. Python is the authority; the app's own check is advisory."),
+        input_schema={"type": "object", "additionalProperties": False, "required": ["changes"], "properties": {
+            "changes": {"type": "object"},
+            "base_id": BRUSH_ID,
+            "base": {"type": "object"},
+            "era": {"type": "string", "maxLength": 16}}},
+        handler=validate_settings_patch,
+    ),
+    Tool(
+        name="export_brush",
+        title="Export a changed brush",
+        description=(
+            "Write a library brush, with `changes` applied, as a .brush file into the server's export "
+            "folder (it was started with --export-dir). `name` renames the brush. With confirm false "
+            "(the default) nothing is written and the result says what would be; with confirm true the "
+            "file `<name-slug>-<id8>.brush` is written, never over an existing file. The original "
+            "archive's bytes are kept for an unchanged brush; the thumbnail is the old one (stale). "
+            "Nothing it writes is known to open in Procreate."),
+        input_schema={"type": "object", "additionalProperties": False, "required": ["base_id"], "properties": {
+            "base_id": BRUSH_ID,
+            "changes": {"type": "object"},
+            "name": {"type": "string", "minLength": 1, "maxLength": 120},
+            "confirm": {"type": "boolean", "default": False}}},
+        handler=export_brush,
+        read_only=False,
+        needs_export_dir=True,
     ),
 )
 
@@ -468,7 +569,8 @@ def _initialize(params, context):
         "protocolVersion": asked if known else DEFAULT_PROTOCOL_VERSION,
         "capabilities": {"tools": {"listChanged": False}},
         "serverInfo": {"name": SERVER_NAME, "title": SERVER_TITLE, "version": SERVER_VERSION},
-        "instructions": STAND_DOWN_INSTRUCTIONS if context.stand_down else INSTRUCTIONS,
+        "instructions": (STAND_DOWN_INSTRUCTIONS if context.stand_down else
+                         INSTRUCTIONS + (EXPORT_INSTRUCTIONS if context.export_dir is not None else "")),
     }
 
 
@@ -714,6 +816,13 @@ def selftest(context, write=print):
                   f"library/official {files['official']['files']} files, "
                   f"index {status['index']['state']}, "
                   f"next steps {len(status['next_steps'])}")
+        if "search_brushes" in names:
+            _, reply = ask({"jsonrpc": "2.0", "id": 5, "method": "tools/call",
+                            "params": {"name": "search_brushes", "arguments": {}}})
+            result = reply.get("result", {})
+            error = json.loads(result["content"][0]["text"]).get("error", {})
+            check("a tool that refuses answers with an isError result, not a protocol error",
+                  result.get("isError") is True and error.get("code") == "bad_argument", str(error.get("code")))
         _, reply = ask({"jsonrpc": "2.0", "id": 6, "method": "resources/list"})
         check("an unknown method is -32601", reply.get("error", {}).get("code") == METHOD_NOT_FOUND)
         reply = json.loads(handle_line(b"{not json\n", context).decode("ascii"))
@@ -736,8 +845,9 @@ def build_parser():
                     "Started by an MCP client; see the repository's .mcp.json.")
     bc.add_path_arguments(parser)
     parser.add_argument("--export-dir", metavar="DIR", default=None,
-                        help="the one folder an export tool may write into. Accepted and not "
-                             "used by this build: no export tool is registered")
+                        help="the one folder export_brush may write into; the tool is listed only "
+                             "with this flag. Never a folder inside the tool, the library, the "
+                             "catalog or the vault")
     parser.add_argument("--defer-to-project", metavar="DIR", default=None,
                         help="stand down (list no tools) when DIR is a project with its own "
                              "brushes/pipeline/mcp_server.py; for the copy a plugin starts")
@@ -757,8 +867,13 @@ def main(argv=None):
     bc.open_console()
     args = build_parser().parse_args(argv)
     paths = bc.paths_from_args(args)
+    if args.export_dir:
+        problem = service.check_export_dir(args.export_dir, paths)
+        if problem:
+            _stderr_log(f"--export-dir {args.export_dir}: {problem}")
+            return bc.EXIT_USAGE
     stand_down = should_stand_down(args.defer_to_project)
-    context = make_context(paths, export_dir=Path(args.export_dir) if args.export_dir else None,
+    context = make_context(paths, export_dir=Path(args.export_dir).resolve() if args.export_dir else None,
                            stand_down=stand_down, mode=running_mode(args.defer_to_project),
                            log=_stderr_log)
     if args.selftest:
@@ -774,10 +889,9 @@ def main(argv=None):
     reconfigure = getattr(sys.stderr, "reconfigure", None)
     if reconfigure is not None:
         reconfigure(errors="backslashreplace")
-    _stderr_log(f"{SERVER_VERSION} ({STAGE}) serving {paths.root} over stdio, mode {context.mode}"
-                + (", standing down: the project has its own server" if stand_down else ""))
-    if args.export_dir:
-        _stderr_log("--export-dir is accepted and not used: no export tool is registered in this build")
+    _stderr_log(f"{SERVER_VERSION} serving {paths.root} over stdio, mode {context.mode}"
+                + (", standing down: the project has its own server" if stand_down else "")
+                + (f", export_brush writes into {args.export_dir}" if args.export_dir and not stand_down else ""))
     try:
         return serve(wire_in, wire_out, context)
     except KeyboardInterrupt:
