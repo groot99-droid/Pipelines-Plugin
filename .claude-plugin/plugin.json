@@ -19,6 +19,8 @@
   "agents": [
     "./.claude/agents/creative-writing-chunk-tagger.md",
     "./.claude/agents/creative-writing-drafter.md",
-    "./.claude/agents/creative-writing-librarian-native.md"
+    "./.claude/agents/creative-writing-librarian-native.md",
+    "./.claude/agents/brush-librarian-native.md",
+    "./.claude/agents/brush-tagger.md"
   ]
 }

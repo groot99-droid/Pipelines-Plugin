@@ -22,8 +22,10 @@ Where a tool's skills and agents live depends on how the tool is used:
 ```
 INDEX.md             generated index of the tools, skills and agents
 .claude/skills/      creative-writing-pipeline, chunk-tag-backfill, studio-pipeline,
-                     higgsfield-library-sync, blender-gemini
-.claude/agents/      creative-writing-{chunk-tagger,drafter,librarian-native}
+                     higgsfield-library-sync, blender-gemini, brush-library,
+                     brush-tag-backfill, brush-designer
+.claude/agents/      creative-writing-{chunk-tagger,drafter,librarian-native},
+                     brush-{tagger,librarian-native}
 .mcp.json            the gemini MCP server Claude calls to reach Blender (blender-gemini)
 blender-gemini/      install.py (registers the Blender MCP server with the Gemini CLI,
                      and checks the chain), tests/, README.md
