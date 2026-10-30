@@ -13,6 +13,7 @@
     "spacing-continuous",
     "shape-bundled",
     "grain-embedded",
+    "grain-flat",
     "size-max",
     "era-e4"
   ],
@@ -27,8 +28,8 @@
     "era": "E4",
     "family": "legacy",
     "grain_application_code": null,
-    "grain_contrast": null,
-    "grain_mean": null,
+    "grain_contrast": 0.0216,
+    "grain_mean": 0.6544,
     "grain_movement": "rolling",
     "grain_source": "embedded",
     "has_grain": true,
@@ -109,11 +110,11 @@
   ],
   "pack": "everything-watercolour",
   "preview": {
-    "grain": null,
+    "grain": "_Previews/_textures/t_d4638f52d77d.grain.png",
     "grain_source": "embedded",
     "shape": null,
     "shape_source": "bundled",
-    "stroke": null,
+    "stroke": "_Previews/everything-watercolour/b_3f553212270e.stroke.png",
     "stroke_source": "thumbnail"
   },
   "reset": null,

@@ -34,6 +34,8 @@ import fixtures  # noqa: E402
 import identity  # noqa: E402
 import ingest  # noqa: E402
 import mcp_server  # noqa: E402
+import notes  # noqa: E402
+import previews  # noqa: E402
 
 BRUSHES = PIPELINE.parent
 REPO = BRUSHES.parent
@@ -111,6 +113,8 @@ class TheFile(Loaded):
         built = self.spec["build"]["built_verbs"]
         parsers = {"pipeline/fetch_base_library.py": fetch_base_library.build_parser(),
                    "pipeline/ingest.py": ingest.build_parser(),
+                   "pipeline/previews.py": previews.build_parser(),
+                   "pipeline/notes.py": notes.build_parser(),
                    "pipeline/device_tests.py": device_tests.build_parser(),
                    "pipeline/brush_file.py": brush_file.build_parser()}
         self.assertEqual(set(built), set(parsers))

@@ -1167,7 +1167,13 @@ Everything above `## Notes` is generated from the catalog. Write only below it.
 
 1. Render the generated part (frontmatter through the blank line before
    `## Notes`). `generated_fingerprint` is the first 16 hex of the sha256 of
-   that text with the fingerprint value blanked.
+   that text with the fingerprint value blanked (`generated_fingerprint: ""`),
+   after CRLF is read as LF.
+   `tags` is the fixed list `[brushset, library/<lib>, era/<id>...]`; `notes.py`
+   never reads tag sidecars, so a note is a pure function of the catalog.
+   `brush_count` is the set row's member count, so a loose note that lists
+   stubs under Shared brushes has more members than sections. The index pages
+   carry `type: moc` or `type: index` and the same fingerprint scheme.
 2. In an existing file, split at the last line exactly equal to `## Notes`. The
    tail is kept byte for byte, CRLF included.
 3. If the existing generated part's recomputed fingerprint differs from its

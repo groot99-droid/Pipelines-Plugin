@@ -222,7 +222,7 @@ NO_ARGUMENTS = {"type": "object", "properties": {}, "additionalProperties": Fals
 NEXT_STEPS = (
     ("official", "pipeline/fetch_base_library.py", "fetch", True),
     ("catalog", "pipeline/ingest.py", "build", True),
-    ("index", "vault/tools/brush_search.py", "index", False),   # the search tool is not written yet
+    ("index", "vault/tools/brush_search.py", "index", True),
 )
 
 

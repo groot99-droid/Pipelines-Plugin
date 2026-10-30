@@ -51,6 +51,11 @@ build:
     - "pipeline/brush_file.py"              # inspect, export, roundtrip
     - "pipeline/fetch_base_library.py"      # list, fetch, verify
     - "pipeline/ingest.py"                  # where, adopt, build, report and census
+    - "pipeline/previews.py"                # render: stroke, shape and grain previews, contact sheets
+    - "pipeline/notes.py"                   # write, check: one note per brushset, from the catalog
+    - "vault/tools/brush_search.py"         # the search engine and its CLI (F9)
+    - "vault/tools/brush_tags.py"           # tag sidecars: plan, apply, check, suggestions (F8)
+    - "vault/_BrushTags/vocabulary.yaml"    # the closed tag vocabulary, six axes
     - "pipeline/mcp_server.py"              # a stub: the protocol and one tool, library_status
     - "pipeline/device_tests.py"            # build and verify for sittings 1 and 2
     - "pipeline/tests/fixtures.py"
@@ -65,6 +70,8 @@ build:
   built_verbs:                              # checked against each script's own parser
     "pipeline/fetch_base_library.py": [list, fetch, verify]
     "pipeline/ingest.py": [where, adopt, build, report, census]
+    "pipeline/previews.py": [render]
+    "pipeline/notes.py": [write, check]
     "pipeline/device_tests.py": [build, verify]
     "pipeline/brush_file.py": [inspect, export, roundtrip]
   note: "Nothing here has written a file the drawing app is known to open. See device_test."

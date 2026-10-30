@@ -13,6 +13,7 @@
     "spacing-continuous",
     "shape-bundled",
     "grain-embedded",
+    "grain-strong",
     "size-fine",
     "era-e3"
   ],
@@ -27,8 +28,8 @@
     "era": "E3",
     "family": "legacy",
     "grain_application_code": null,
-    "grain_contrast": null,
-    "grain_mean": null,
+    "grain_contrast": 0.4591,
+    "grain_mean": 0.6982,
     "grain_movement": "rolling",
     "grain_source": "embedded",
     "has_grain": true,
@@ -109,11 +110,11 @@
   ],
   "pack": "texturetown",
   "preview": {
-    "grain": null,
+    "grain": "_Previews/_textures/t_6d3094492038.grain.png",
     "grain_source": "embedded",
     "shape": null,
     "shape_source": "bundled",
-    "stroke": null,
+    "stroke": "_Previews/texturetown/b_7565eabc4876.stroke.png",
     "stroke_source": "thumbnail"
   },
   "reset": null,

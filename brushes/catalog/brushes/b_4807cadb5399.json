@@ -13,6 +13,7 @@
     "spacing-visible",
     "shape-bundled",
     "grain-embedded",
+    "grain-subtle",
     "wet-mix",
     "pressure-size-medium",
     "pressure-opacity-low",
@@ -41,8 +42,8 @@
     "era": "M242",
     "family": "modern",
     "grain_application_code": 0,
-    "grain_contrast": null,
-    "grain_mean": null,
+    "grain_contrast": 0.0999,
+    "grain_mean": 0.3618,
     "grain_movement": "rolling",
     "grain_source": "embedded",
     "has_grain": true,
@@ -123,11 +124,11 @@
   ],
   "pack": "chinese-calligraphy",
   "preview": {
-    "grain": null,
+    "grain": "_Previews/_textures/t_72f931b9365f.grain.png",
     "grain_source": "embedded",
     "shape": null,
     "shape_source": "bundled",
-    "stroke": null,
+    "stroke": "_Previews/chinese-calligraphy/b_4807cadb5399.stroke.png",
     "stroke_source": "thumbnail"
   },
   "reset": {
