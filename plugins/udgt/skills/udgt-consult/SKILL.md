@@ -21,3 +21,25 @@ and if you still cannot find it, ask the owner.
 If `udgt check --profile P` reports the teardown as stale, say so before relying on it, and offer
 `udgt scan`. Quote the owner's answers verbatim and attribute chapter analysis to the teardown, not to
 the owner.
+
+## Worked example
+
+Asked "why does the timer for X work like that?", with `P` the teardown's `profile.json`:
+
+```
+udgt query "timer" --profile P --kind decision
+```
+
+One line per node, best match first: `id`, `[kind]`, a title, and `path:line` in the game checkout.
+
+```
+dec:A100  [decision] A100 <decision title> (owner, <date>)  docs/DECISIONS.md:140
+sec:GDD:3.9  [section] GDD 3.9 <section title>  docs/GDD.md:173
+```
+
+Then `udgt show dec:A100 --profile P` for what it cites and what cites it, `udgt query "timer" --profile P
+--kind answer` for what the owner said, and open `docs/DECISIONS.md:140` itself. Answer from those three,
+quoting the owner verbatim and saying which part is the chapter's analysis. If `udgt query` prints
+`no game checkout found`, the teardown is readable but its `path:line` targets are not: say so, and ask
+for the checkout (`--game`) before claiming what the code does.
+

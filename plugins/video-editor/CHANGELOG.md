@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Command `/ve-doctor`; agent `video-editor-render-qa` (read-only render check); `manim-video` creative direction moved to `references/creative-direction.md`, non-standard `version:` dropped.
+
 ## 0.1.0
 
 - Moved in from the standalone Video-Editor repository (its PRs #1 to #3), plus `ve doctor`

@@ -29,6 +29,22 @@ All paths here start from `${CLAUDE_PLUGIN_ROOT}`. Reading content is the `agent
    their browser; Reddit needs a logged-in session. Explain the steps from
    `${CLAUDE_PLUGIN_ROOT}/skills/agent-reach/references/`, and never attempt a login yourself.
 
+## Worked example
+
+User: "Claude can't read this YouTube link, why?"
+
+1. `agent-reach version` prints a version line, so it is installed.
+2. `agent-reach doctor --json` lists each platform with `status`, `backends` and `active_backend`.
+   Say what it showed, as a table:
+
+   | Platform | Ready | Still needs |
+   |----------|-------|-------------|
+   | youtube  | no    | `yt-dlp` is not on PATH (give the install line; wait for a yes) |
+   | rss      | yes   | nothing |
+
+3. Do not install anything. Offer `agent-reach install --env=auto --dry-run` to show what would change,
+   and once the user says yes, hand over to the `agent-reach` skill to fetch the link.
+
 ## Never
 
 - Read, print, echo or ask for anything in `~/.agent-reach/` (config, cookies, tokens), or paste a

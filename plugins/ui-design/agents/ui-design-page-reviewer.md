@@ -1,6 +1,7 @@
 ---
 name: ui-design-page-reviewer
 description: Reviews ONE area of ONE already-built page against the ui-design rule set in the plugin's references/quick-reference.md -- a11y+touch, layout, type-color-style, or motion -- and returns findings that each cite a real rule-id with the page line as evidence. Invoke once per area, in parallel, for a page review. Read-only; never edits the page. The caller (the ui-design-multipart skill) merges the four areas with merge_parts.py, which rejects any rule-id that is not in the quick reference.
+model: sonnet
 tools: Read, Grep, Glob
 ---
 

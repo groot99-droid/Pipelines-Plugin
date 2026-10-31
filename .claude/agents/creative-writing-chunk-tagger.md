@@ -1,6 +1,7 @@
 ---
 name: creative-writing-chunk-tagger
 description: Tags ONE vault work's chunks with plot_tags/context_tags/mood_tags/motif_tags from the closed vocabulary in creative-writing/vault/_ChunkTags/vocabulary.yaml, so creative-writing/vault/tools/vault_search.py can surface per-chunk (not just per-file) matches. Invoke once per work file with its vault-relative path. Returns structured per-chunk tag text; never writes any file itself -- the caller (the chunk-tag-backfill skill, or a live session) parses the output and writes the _ChunkTags/ sidecar.
+model: haiku
 tools: Read, Grep, Glob, Bash
 ---
 

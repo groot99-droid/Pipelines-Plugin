@@ -72,6 +72,10 @@ GUIDE_SKILL = "ui-design-catalog"    # the one whose commands and counts are lin
 
 SKILL_KEYS = {"name", "description"}
 AGENT_KEYS = {"name", "description", "tools"}
+# Keys a skill or agent may also carry: a skill may pre-approve tools, an agent
+# must pin its model. Anything else is rejected.
+SKILL_OPTIONAL_KEYS = {"allowed-tools"}
+AGENT_REQUIRED_KEYS = {"model"}
 # Agents only read and report; the caller decides what gets written or promoted.
 AGENT_FORBIDDEN_TOOLS = ("Write", "Edit", "Agent", "Bash", "NotebookEdit")
 # spec.yaml agent_tool_exceptions may lift the ban for these tools only, for a
@@ -249,10 +253,11 @@ def parse_frontmatter(yaml, path, errors):
     return frontmatter
 
 
-def check_keys(path, frontmatter, expected, errors):
-    if set(frontmatter) != expected:
-        errors.append(f"{rel(path)}: frontmatter keys are {sorted(frontmatter)}, "
-                      f"expected exactly {sorted(expected)}.")
+def check_keys(path, frontmatter, expected, errors, optional=()):
+    keys = set(frontmatter)
+    if not expected <= keys or keys - expected - set(optional):
+        errors.append(f"{rel(path)}: frontmatter keys are {sorted(keys)}, "
+                      f"expected {sorted(expected)} plus optionally {sorted(optional)}.")
     for key in ("name", "description"):
         value = frontmatter.get(key)
         if not value or not str(value).strip():
@@ -346,7 +351,7 @@ def check_skills(yaml, stack_total, errors):
         frontmatter = parse_frontmatter(yaml, path, errors)
         if frontmatter is None:
             continue
-        check_keys(path, frontmatter, SKILL_KEYS, errors)
+        check_keys(path, frontmatter, SKILL_KEYS, errors, SKILL_OPTIONAL_KEYS)
         if frontmatter.get("name") != path.parent.name:
             errors.append(f"{rel(path)}: frontmatter name {frontmatter.get('name')!r} "
                           f"does not match its folder name {path.parent.name!r}.")
@@ -413,7 +418,7 @@ def check_agents(yaml, spec, errors):
         frontmatter = parse_frontmatter(yaml, path, errors)
         if frontmatter is None:
             continue
-        check_keys(path, frontmatter, AGENT_KEYS, errors)
+        check_keys(path, frontmatter, AGENT_KEYS | AGENT_REQUIRED_KEYS, errors)
         if frontmatter.get("name") != path.stem:
             errors.append(f"{rel(path)}: frontmatter name {frontmatter.get('name')!r} "
                           f"does not match its file name {path.stem!r}.")

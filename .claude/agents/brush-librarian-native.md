@@ -1,6 +1,7 @@
 ---
 name: brush-librarian-native
 description: Native (Claude-only, no script) condenser for the brush vault, the counterpart of creative-writing-librarian-native. Given brush ids with their vault-relative note path and line range as brush_search.py reports them, and an optional focus, it reads exactly those note lines and each brush's catalog record and returns a digest per brush with bullets and a list of exact setting values copied from the record. Use from the brush-library skill whenever an answer needs settings, comparisons or anything a search result does not already show. Read-only, no Bash.
+model: haiku
 tools: Read, Grep, Glob
 ---
 

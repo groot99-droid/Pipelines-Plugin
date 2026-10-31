@@ -112,6 +112,8 @@ TOOL_PURPOSE = {
 REFERENCE_PURPOSE = {
     "quick-reference.md": "Every rule in ten categories, by rule-id; the source the page reviewer cites.",
     "pro-rules.md": "Native/mobile app polish rules and the pre-delivery checklist.",
+    "search-guide.md": "Search options for ui-design-catalog: persisting, design dials, output formats, symptom-to-rule table.",
+    "refresh-commands.md": "The exact fetch, generate, diff and promote commands for the catalog refresh skill.",
 }
 
 
