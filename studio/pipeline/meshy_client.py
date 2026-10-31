@@ -49,14 +49,15 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+from download import DownloadError, download
 from studio_common import (
-    EXIT_OK, EXIT_REFUSED, EXIT_USAGE, SPEC_PATH, Env, Refused, Usage, current_stage,
-    latest_confirmation, load_state, now, open_console, read_text, stamp, write_text,
+    EXIT_OK, EXIT_REFUSED, EXIT_USAGE, PLACEHOLDERS, SPEC_PATH, Env, Refused, Usage, current_stage,
+    latest_confirmation, load_state, now, open_console, read_key_file, read_text, stamp, user_keys_file,
+    write_text,
 )
 
 BASE_URL = "https://api.meshy.ai"
 KEY_NAME = "MESHY_API_KEY"
-PLACEHOLDERS = {"your-key-here", "Add_Key"}  # "no key yet", as llm.py and setup_keys.py
 LEDGER = "meshy_tasks.json"
 DOWNLOADS = "meshy"
 MAX_IMAGE_BYTES = 20 * 1024 * 1024
@@ -158,32 +159,6 @@ def estimate_credits(op, body):
 
 # ── the key ──────────────────────────────────────────────────────────────────
 
-def user_keys_file():
-    """The per-user key file, outside the repo. The same rule as
-    creative-writing/pipeline/llm.py user_keys_file; a test keeps them in step."""
-    return os.environ.get("ROSW_KEYS_FILE") or os.path.join(
-        os.path.expanduser("~"), ".rosw", "keys.env")
-
-
-def read_key_file(path):
-    """KEY=VALUE lines, as llm.py _load_env_file reads them. Never printed."""
-    try:
-        with open(path, encoding="utf-8") as f:
-            lines = f.read().splitlines()
-    except OSError:
-        return {}
-    found = {}
-    for line in lines:
-        line = line.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        key, _, value = line.partition("=")
-        value = value.strip().strip('"').strip("'")
-        if value and value not in PLACEHOLDERS:
-            found[key.strip()] = value
-    return found
-
-
 def api_key():
     value = read_key_file(user_keys_file()).get(KEY_NAME) or os.environ.get(KEY_NAME, "")
     if not value or value in PLACEHOLDERS:
@@ -237,33 +212,14 @@ def service_message(err):
 
 
 def fetch_file(url, target):
-    """A result file, into target, through target.part. No key is sent: the
-    link is signed by the service and goes to its file host."""
+    """A result file, into target. No key is sent: the link is signed by the
+    service and goes to its file host."""
     if urllib.parse.urlsplit(url).scheme not in ("https", "http"):
         raise Refused("the service gave a file link that is not http(s)")
-    part = target.with_name(target.name + ".part")
-    target.parent.mkdir(parents=True, exist_ok=True)
-    digest, size = hashlib.sha256(), 0
     try:
-        with urllib.request.urlopen(url, timeout=120) as response, part.open("wb") as out:
-            expected = response.headers.get("Content-Length")
-            while True:
-                chunk = response.read(1 << 16)
-                if not chunk:
-                    break
-                out.write(chunk)
-                digest.update(chunk)
-                size += len(chunk)
-        if expected is not None and int(expected) != size:
-            raise Refused(f"{target.name}: got {size} bytes of {expected}. Nothing was kept; download again.")
-        os.replace(part, target)
-    except (urllib.error.URLError, http.client.HTTPException, OSError) as err:
-        raise Refused(f"{target.name}: the download failed ({getattr(err, 'reason', None) or type(err).__name__}). "
-                      "Nothing was kept; download again.") from None
-    finally:
-        if part.exists():
-            part.unlink()
-    return {"file": target.name, "bytes": size, "sha256": digest.hexdigest()}
+        return download(url, target)
+    except DownloadError as problem:
+        raise Refused(f"{problem}. Nothing was kept; download again.") from None
 
 
 # ── the run and its ledger ───────────────────────────────────────────────────

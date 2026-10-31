@@ -376,7 +376,7 @@ class KeyReader(unittest.TestCase):
 
     def test_it_reads_keys_as_llm_py_does(self):
         llm = (REPO / "creative-writing" / "pipeline" / "llm.py").read_text(encoding="utf-8")
-        mine = (REPO / "studio" / "pipeline" / "meshy_client.py").read_text(encoding="utf-8")
+        mine = (REPO / "studio" / "pipeline" / "studio_common.py").read_text(encoding="utf-8")
         for line in ('os.environ.get("ROSW_KEYS_FILE") or os.path.join(',
                      'os.path.expanduser("~"), ".rosw", "keys.env")',
                      'if not line or line.startswith("#") or "=" not in line:',
