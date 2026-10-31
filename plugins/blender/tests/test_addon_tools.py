@@ -23,12 +23,12 @@ import server  # noqa: E402
 MANIFEST = {
     "addon": "demo_addon",
     "tools": [
-        {"name": "demo_make_cube", "description": "Add a cube", "op": "demo.make_cube", "context": "VIEW_3D",
+        {"name": "demo_make_cube", "enabled": True, "description": "Add a cube", "op": "demo.make_cube", "context": "VIEW_3D",
          "params": {"size": {"type": "number", "minimum": 0.01, "default": 1.0},
                     "label": {"type": "string", "required": True},
                     "style": {"type": "string", "enum": ["PLAIN", "FANCY"], "default": "PLAIN"},
                     "offset": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3}}},
-        {"name": "demo_count", "read_only": True, "code": ["report(count=len(bpy.data.objects))"]},
+        {"name": "demo_count", "enabled": True, "read_only": True, "code": ["report(count=len(bpy.data.objects))"]},
         {"name": "demo_hidden", "enabled": False, "op": "demo.secret"},
     ],
 }
@@ -146,6 +146,17 @@ class Manifests(Case):
         self.assertEqual(cube["inputSchema"]["required"], ["label"])
         self.assertFalse(cube["inputSchema"]["additionalProperties"])
         self.assertNotIn("required", cube["inputSchema"]["properties"]["label"])
+
+    def test_a_tool_without_enabled_is_off(self):
+        doc = {"addon": "demo_addon", "tools": [{"name": "demo_silent", "op": "demo.silent"}]}
+        (self.dir / "silent.json").write_text(json.dumps(doc), encoding="utf-8")
+        path = self.dir / "silent.json"
+        _, (tool,) = server.load_manifest(path)
+        self.assertIs(tool["enabled"], False)
+        tools, _ = server.load_tools(self.dir)
+        self.assertNotIn("demo_silent", tools)
+        tools, _ = server.load_tools(self.dir, include_disabled=True)
+        self.assertIn("demo_silent", tools)
 
     def test_what_a_manifest_may_not_say(self):
         bad = {

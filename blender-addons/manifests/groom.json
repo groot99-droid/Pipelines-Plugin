@@ -5,7 +5,7 @@
     {
       "name": "groom_import",
       "description": "Import Unreal Groom. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "import_scene.unreal_groom",
       "params": {
         "filepath": {

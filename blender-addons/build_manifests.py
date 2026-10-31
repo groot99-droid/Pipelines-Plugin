@@ -254,7 +254,7 @@ def build(zips, out):
             if not text.endswith("."):
                 text += "."
             text += " Settings that are not parameters here come from the add-on's panel."
-            tool = {"name": name, "description": text, "enabled": True, "op": opname, "params": params}
+            tool = {"name": name, "description": text, "enabled": False, "op": opname, "params": params}
             octx = ctx if ctx in ("VIEW_3D", "NODE_EDITOR") else None
             if octx:
                 tool["context"] = octx

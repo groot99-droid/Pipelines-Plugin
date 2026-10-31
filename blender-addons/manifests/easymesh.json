@@ -5,7 +5,7 @@
     {
       "name": "easymesh_batch_export",
       "description": "Export Selected Meshes: Exports selected mesh objects sequentially with status bar progress. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "mesh.batch_export",
       "params": {
         "batch_name": {
@@ -19,7 +19,7 @@
     {
       "name": "easymesh_load_export_preset",
       "description": "Load Preset: Load export settings from a saved preset. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "mesh.load_export_preset",
       "params": {
         "preset_name": {
@@ -33,7 +33,7 @@
     {
       "name": "easymesh_clear_export_indicators",
       "description": "Clear All Export Indicators: Clears export indicators from all mesh objects. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "mesh.clear_export_indicators",
       "params": {},
       "context": "VIEW_3D"

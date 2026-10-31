@@ -49,6 +49,14 @@ class Manifests(unittest.TestCase):
                 for tool in raw["tools"]:
                     self.assertIn(tool["op"], entry["operators"], tool["name"])
 
+    def test_every_tool_says_whether_it_is_enabled(self):
+        # The builder drafts every tool off; the author switches one on after calling it.
+        # A missing key would read as off (the server fails closed), but say it anyway.
+        for path in sorted(MANIFESTS.glob("*.json")):
+            for tool in json.loads(path.read_text(encoding="utf-8"))["tools"]:
+                with self.subTest(tool=tool["name"]):
+                    self.assertIsInstance(tool.get("enabled"), bool)
+
     def test_every_tool_builds_code_that_compiles(self):
         tools, _ = server.load_tools(MANIFESTS, include_disabled=True)
         for name, tool in tools.items():

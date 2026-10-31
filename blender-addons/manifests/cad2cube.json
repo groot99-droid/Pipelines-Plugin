@@ -5,7 +5,7 @@
     {
       "name": "cad2cube_import_dxf",
       "description": "Import DXF (CAD2Cube): Import an AutoCAD DXF file with CAD2Cube. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "import_scene.cad2cube_dxf",
       "params": {
         "filepath": {
