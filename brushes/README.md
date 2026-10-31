@@ -8,8 +8,8 @@ file codec, the library and its search: the contract, the identity and path
 modules, the codec that reads and writes brush files byte for byte, the scripts
 that fill the library and build the catalog, previews and notes, the search and
 tag tools, the MCP server and the loopback app server, the builder of the first
-two device tests, and the test fixtures. The designer app in `app/` is still the
-old one, copied in as it was received. Nothing here has written a file that
+two device tests, and the test fixtures. The designer app in `app/` opens, edits and
+exports brushes; its stroke engine is not built. Nothing here has written a file that
 Procreate is known to open.
 
 ## What is here now
@@ -43,7 +43,7 @@ Procreate is known to open.
 | `library/user/` | the author's 19 packs, adopted: 72 brush files |
 | `library/official/` | the 40 official sets, fetched by `fetch_base_library.py fetch --confirm` (below) |
 | `device-tests/` | one folder per sitting, written by `device_tests.py build --confirm` |
-| `app/` | the earlier designer, unchanged, byte for byte as it was received (nine of its files have CRLF line endings, and `.gitattributes` keeps them so). It cannot import a brush file, and what it exports is not in the real brush format |
+| `app/` | the designer and a library browser: plain ES modules in `js/`, no build step, served by `app_server.py`. It opens a brush from the library or from a file, edits it as a patch of changed keys, and exports through the server, which owns the encoding. `selftest.html` runs its checks in the browser. The stroke preview is a placeholder until the engine lands |
 
 ## What is planned
 

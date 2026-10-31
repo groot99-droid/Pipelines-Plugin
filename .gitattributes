@@ -21,10 +21,6 @@ plugins/ui-design/** text eol=lf
 # pairs inside them on a machine with core.autocrlf=true. Text files are still
 # stored and checked out with LF.
 brushes/** text=auto eol=lf
-# brushes/app/ is the earlier designer exactly as it was received. Nine of its
-# files have CRLF line endings; `-text` keeps every byte, so that what git
-# stores is what was received. The line goes when the app is rebuilt.
-brushes/app/** -text
 brushes/**/*.png binary
 brushes/**/*.archive binary
 # The original brush files are committed through Git LFS: one of them is over

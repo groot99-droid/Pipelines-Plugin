@@ -1,136 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Procreate Brush Designer</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- fflate UMD loaded as global before ES modules -->
-  <script src="https://cdn.jsdelivr.net/npm/fflate@0.8.2/umd/index.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Brushes</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="js/main.js"></script>
 </head>
 <body>
-  <div class="app-container">
-    <!-- Header -->
-    <header class="app-header">
-      <div class="header-left">
-        <input type="text" id="brushName" class="brush-name-input" placeholder="Untitled Brush" value="Untitled Brush">
-      </div>
-      <div class="header-right">
-        <button id="undoBtn" class="btn btn-icon" disabled title="Undo (Ctrl+Z)">↩ Undo</button>
-        <button id="redoBtn" class="btn btn-icon" disabled title="Redo (Ctrl+Y)">↪ Redo</button>
-        <div style="position:relative">
-          <button id="exportBtn" class="btn btn-primary">Export ▾</button>
-          <div id="exportMenu" class="export-menu" style="display:none">
-            <div class="export-menu-item" data-export="brush">Export .brush (Procreate)</div>
-            <div class="export-menu-item" data-export="brushset">Export .brushset (Procreate)</div>
-            <div class="export-menu-item export-menu-divider" data-export="gbr">Export .gbr (GIMP / Krita)</div>
-            <div class="export-menu-item" data-export="kit">Export Universal Kit (.zip)</div>
-            <div class="export-menu-item export-menu-divider" data-export="source">Download Source</div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Sidebar: tabs + panel content -->
-    <aside class="app-sidebar">
-      <nav class="sidebar-tabs">
-        <button class="tab-btn tab-btn-ai" data-panel="ai">
-          <span class="tab-icon">✦</span> AI Assist
-        </button>
-        <div class="tab-divider"></div>
-        <button class="tab-btn active" data-panel="stroke">
-          <span class="tab-icon">~</span> Stroke Path
-        </button>
-        <button class="tab-btn" data-panel="taper">
-          <span class="tab-icon">/</span> Taper
-        </button>
-        <button class="tab-btn" data-panel="shape">
-          <span class="tab-icon">O</span> Shape
-        </button>
-        <button class="tab-btn" data-panel="grain">
-          <span class="tab-icon">#</span> Grain
-        </button>
-        <button class="tab-btn" data-panel="dynamics">
-          <span class="tab-icon">~</span> Dynamics
-        </button>
-        <button class="tab-btn" data-panel="pencil">
-          <span class="tab-icon">P</span> Pencil
-        </button>
-        <button class="tab-btn" data-panel="wetmix">
-          <span class="tab-icon">W</span> Wet Mix
-        </button>
-        <button class="tab-btn" data-panel="color">
-          <span class="tab-icon">C</span> Color Dynamics
-        </button>
-        <button class="tab-btn" data-panel="rendering">
-          <span class="tab-icon">R</span> Rendering
-        </button>
-        <button class="tab-btn" data-panel="about">
-          <span class="tab-icon">i</span> About This Brush
-        </button>
-      </nav>
-      <div id="panelContent" class="panel-content"></div>
-    </aside>
-
-    <!-- Preview Area -->
-    <main class="app-preview">
-      <div class="preview-main">
-        <div class="preview-stage">
-          <canvas id="previewCanvas" class="preview-canvas is-drawable" tabindex="0"
-                  role="application"
-                  aria-label="Brush test sheet. Draw on it with the pointer; Escape abandons a stroke in progress."></canvas>
-          <div id="brushCursor" class="brush-cursor" aria-hidden="true"></div>
-        </div>
-        <div class="preview-controls">
-          <div class="preview-group" role="group" aria-label="Sample strokes">
-            <span class="preview-group-label">Sample</span>
-            <button type="button" class="preview-mode-btn active" data-pressure="light" aria-pressed="true">Light</button>
-            <button type="button" class="preview-mode-btn" data-pressure="medium" aria-pressed="false">Medium</button>
-            <button type="button" class="preview-mode-btn" data-pressure="heavy" aria-pressed="false">Heavy</button>
-            <button type="button" class="preview-mode-btn" data-pressure="all" aria-pressed="false">All</button>
-          </div>
-          <div class="preview-group" role="group" aria-label="Test sheet">
-            <span class="preview-group-label">Sheet</span>
-            <button type="button" class="preview-mode-btn" id="undoStrokeBtn" disabled>Undo stroke</button>
-            <button type="button" class="preview-mode-btn" id="clearSheetBtn" disabled>Clear</button>
-          </div>
-          <div class="preview-readout" id="previewReadout" role="status" aria-live="off">
-            draw on the sheet
-          </div>
-        </div>
-      </div>
-      <div class="preview-textures">
-        <div class="texture-preview">
-          <div class="texture-label">
-            <span>Shape</span><span>512×512</span>
-          </div>
-          <canvas id="shapeCanvas" class="texture-canvas" width="512" height="512"></canvas>
-        </div>
-        <div class="texture-preview">
-          <div class="texture-label">
-            <span>Grain</span><span>1024×1024</span>
-          </div>
-          <canvas id="grainCanvas" class="texture-canvas" width="1024" height="1024"></canvas>
-        </div>
-      </div>
-    </main>
-
-    <!-- Presets Panel -->
-    <aside class="app-presets">
-      <div class="presets-header">
-        <span class="presets-title">Presets</span>
-        <div class="presets-actions">
-          <button id="savePresetBtn" class="btn btn-icon" title="Save as preset">+</button>
-          <button id="importBrushBtn" class="btn btn-icon" title="Import .brush">↑</button>
-        </div>
-      </div>
-      <div id="presetsList" class="presets-list"></div>
-      <input type="file" id="importFileInput" accept=".brush,.brushset" style="display:none">
-    </aside>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <span class="brand">ROSW <span>Brushes</span></span>
+    <div class="tabs top-tabs" role="tablist" aria-label="Views">
+      <button type="button" role="tab" class="tab" id="tab-library" aria-selected="false" aria-controls="view-library" tabindex="-1">Library</button>
+      <button type="button" role="tab" class="tab" id="tab-designer" aria-selected="true" aria-controls="view-designer">Designer</button>
+    </div>
+    <span class="pill" id="server-pill">Connecting&hellip;</span>
+    <a class="small" id="selftest-link" href="selftest.html" target="_blank" rel="noopener">Self-test</a>
   </div>
+</header>
 
-  <div id="toastContainer" class="toast-container"></div>
+<div class="status-banner" role="note">
+  <strong>Not proven.</strong> Nothing this app writes is known to open in Procreate until the iPad sittings in
+  <code>brushes/device-tests/</code> (start with <code>sitting-1/CHECKLIST.md</code>) have been done.
+</div>
+<div id="banners"></div>
 
-  <script type="module" src="app.js"></script>
+<main id="main">
+  <section id="view-library" role="tabpanel" aria-labelledby="tab-library" hidden>
+    <div id="library-mount" data-mount="library"></div>
+  </section>
+  <section id="view-designer" role="tabpanel" aria-labelledby="tab-designer">
+    <div id="designer-root" data-mount="designer"></div>
+  </section>
+</main>
+
+<div id="toasts" role="status" aria-live="polite"></div>
+<dialog id="dlg" class="dialog"></dialog>
 </body>
 </html>

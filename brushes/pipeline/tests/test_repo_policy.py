@@ -214,12 +214,6 @@ TEXT = [
     "brushes/vault/02_Vendor_Packs/demo-set.md", "brushes/library/official/fetch_log.jsonl",
     "brushes/device-tests/sitting-1/manifest.json", "brushes/device-tests/sitting-1/CHECKLIST.md",
 ]
-# The earlier designer, as received: no line-ending conversion at all, so that
-# the nine files that came with CRLF are stored with CRLF.
-AS_RECEIVED = [
-    "brushes/app/index.html", "brushes/app/app.js", "brushes/app/editor/BrushState.js",
-    "brushes/app/export/PlistEncoder.js", "brushes/app/styles.css",
-]
 BINARY = [
     "brushes/x.png", "brushes/vault/_Previews/demo-set/b_0123456789ab.stroke.png",
     "brushes/vault/_Previews/_textures/t_0123456789ab.n.shape.png",
@@ -249,26 +243,11 @@ class Attributes(RealRepository):
         for path in BINARY:
             self.assertEqual(found[path], {"text": "unset", "diff": "unset", "merge": "unset"}, path)
 
-    def test_the_designer_as_received_is_stored_byte_for_byte(self):
-        """`text` unset: git converts no line ending in either direction, so a
-        file received with CRLF is committed and checked out with CRLF."""
-        found = attributes(REPO, ["text", "filter", "diff"], AS_RECEIVED)
-        for path in AS_RECEIVED:
-            self.assertEqual(found[path], {"text": "unset", "filter": "unspecified", "diff": "unspecified"},
-                             path)
-
-    def test_the_files_received_with_crlf_still_have_it(self):
-        """Nine files of the old designer came with CRLF. Nothing may have
-        rewritten them in the working tree."""
-        app = BRUSHES / "app"
-        if not app.is_dir():
-            self.skipTest("no brushes/app here")
-        crlf = sorted(path.relative_to(app).as_posix() for path in app.rglob("*.js")
-                      if b"\r\n" in path.read_bytes())
-        self.assertEqual(crlf, [
-            "editor/BrushState.js", "editor/HistoryManager.js", "editor/PresetLibrary.js",
-            "export/BrushArchive.js", "export/BrushExporter.js", "export/PlistEncoder.js",
-            "generators/GrainGenerator.js", "generators/ShapeGenerator.js", "ui/Slider.js"])
+    def test_the_app_is_ordinary_text(self):
+        """The rebuilt designer is LF text like the rest of brushes/."""
+        found = attributes(REPO, ["text", "eol"], ["brushes/app/index.html", "brushes/app/js/main.js"])
+        for path, values in found.items():
+            self.assertEqual(values, {"text": "auto", "eol": "lf"}, path)
 
     def test_nothing_outside_brushes_changed(self):
         found = attributes(REPO, ["filter", "text"], ["creative-writing/README.md",

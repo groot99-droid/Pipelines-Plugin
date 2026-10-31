@@ -883,12 +883,11 @@ class RepositoryFiles(Loaded):
         policy = self.spec["commit_policy"]
         lines = [line.strip() for line in read(REPO / ".gitattributes").splitlines()
                  if line.strip() and not line.startswith("#")]
-        wanted = ([policy["text"], policy["as_received"]]
+        wanted = ([policy["text"]]
                   + [f"{pattern} binary" for pattern in policy["binary"]]
                   + [f"{pattern} {policy['lfs']['attributes']}" for pattern in policy["lfs"]["patterns"]])
         self.assertEqual(wanted, [
             "brushes/** text=auto eol=lf",
-            "brushes/app/** -text",
             "brushes/**/*.png binary",
             "brushes/**/*.archive binary",
             "brushes/library/**/*.brushset filter=lfs diff=lfs merge=lfs -text",

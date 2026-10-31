@@ -66,7 +66,7 @@ build:
     - "schema/facets.json"                  # facet thresholds, key lists and words; ingest.py build reads it
     - "library/sources.json"
     - "library/README.md"
-    - "app/index.html"                      # the designer as received; not yet rebuilt
+    - "app/index.html"                      # the designer and library browser; modules in app/js/
   # Scripts named under cli.scripts and missing here are planned. A verb of an
   # existing script may be planned too: cli.scripts lists the full contract.
   built_verbs:                              # checked against each script's own parser
@@ -202,7 +202,6 @@ commit_policy:
     attributes: "filter=lfs diff=lfs merge=lfs -text"
     setup: "git lfs install, once per clone, before brush files are committed or pushed"
   text: "brushes/** text=auto eol=lf"       # never the forced `text`: the folder holds binary files
-  as_received: "brushes/app/** -text"       # the earlier designer, byte for byte (nine files are CRLF); goes when the app is rebuilt
   binary: ["brushes/**/*.png", "brushes/**/*.archive"]
   committed: ["catalog/**", "vault notes", "vault/_BrushTags/**", "vault/_Previews/** except _sheets/ and _local/", "library/**",
               "library/official/fetch_log.jsonl (plain text, never LFS)",
