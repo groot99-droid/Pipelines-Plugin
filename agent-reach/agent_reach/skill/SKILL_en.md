@@ -8,16 +8,14 @@ description: >
   shared link points at one of them.
 
   For ordinary web search or reading a normal web page, prefer the built-in
-  WebSearch/WebFetch tools; reach for this skill when those fail or the platform
-  needs a login-backed or platform-specific reader. 15 platforms, multi-backend
-  routing (OpenCLI / per-platform CLIs / APIs). Run `agent-reach doctor --json`
-  to see which backend serves each platform right now.
+  WebSearch/WebFetch tools. 15 platforms, multi-backend routing. Run
+  `agent-reach doctor --json` to see which backend serves each platform.
 
   NOT for: writing reports/analysis/translation (this skill only FETCHES
   internet content); posting/commenting/liking (write operations); platforms
-  that already have a dedicated skill installed (prefer that skill); collecting
-  outside evidence for a game teardown (udgt-field-research) or for a studio or
-  creative-writing run (reach-references, reach-research).
+  that already have a dedicated skill installed (prefer that skill); research
+  for a game teardown, studio run or creative-writing idea (udgt-field-research,
+  reach-references, reach-research).
 metadata:
   homepage: https://github.com/Panniantong/Agent-Reach
 ---
