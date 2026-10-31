@@ -71,7 +71,7 @@ curl -s "https://r.jina.ai/URL"
 gh search repos "query" --sort stars --limit 10
 
 # YouTube subtitles (never use yt-dlp for Bilibili; retry chain in video.md)
-yt-dlp --write-sub --write-auto-sub --skip-download -o "/tmp/%(id)s" "URL"
+yt-dlp --write-sub --write-auto-sub --skip-download -o "<temp-dir>/%(id)s" "URL"   # <temp-dir>: $TMPDIR, or %TEMP% on Windows
 
 # V2EX hot topics
 curl -s "https://www.v2ex.com/api/topics/hot.json" -H "User-Agent: agent-reach/1.0"
@@ -127,8 +127,8 @@ only when the user's task requires that platform, and require non-empty content.
 
 ## Workspace rules
 
-**Never create files in the agent workspace.** Use `/tmp/` for temporary
-output and `~/.agent-reach/` for persistent data.
+**Never create files in the agent workspace.** Use the system temp
+directory (`$TMPDIR`, or `%TEMP%` on Windows) for temporary output and `~/.agent-reach/` for persistent data.
 
 ## Detailed references
 
