@@ -1,6 +1,7 @@
 ---
 name: ui-design-search-part
 description: Runs exactly ONE part of a ui-design search manifest -- one query against one catalog domain or one stack, as emitted by the plugin's route.py -- and returns a fixed PART / QUERY / RETRIED / VERDICT / ROWS block. Invoke once per manifest part, in parallel, only for a wide brief (4 or more parts). Never persists and never writes any file; the caller (the ui-design-multipart skill) merges the blocks with merge_parts.py and owns every write.
+model: haiku
 tools: Read, Grep, Glob, Bash
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: ui-design-catalog-reviewer
 description: Reviews one machine-generated catalog refresh diff -- Google Fonts or Phosphor icon candidates staged under the plugin's maintenance/candidates/ -- against the live rows in the plugin's catalog/data, checking license fields, required columns, and count deltas. Invoke once per candidate file with its path; returns a structured per-row verdict and never writes any file. The caller (the ui-design-catalog-refresh skill) decides what gets promoted.
+model: sonnet
 tools: Read, Grep, Glob
 ---
 
