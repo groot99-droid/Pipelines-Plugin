@@ -306,8 +306,11 @@ def require_go_ahead(env, run_id):
     if not latest_confirmation(state, "execute"):
         raise Refused("no execute go-ahead is recorded. Show the recipe, and after a clear yes: "
                       f'studio_run.py confirm {run_id} execute --words "<what the author said>"')
-    if env.pipeline(state["pipeline"]).get("class") != "spend":
-        raise Refused(f"`{state['pipeline']}` does not spend credits, so it does not call Meshy")
+    cfg = env.pipeline(state["pipeline"])
+    client = (cfg.get("executes_through") or {}).get("client", "")
+    if cfg.get("class") != "spend" or Path(client).name != Path(__file__).name:
+        raise Refused(f"`{state['pipeline']}` is not a pipeline that runs through this client, "
+                      "so it does not call Meshy")
 
 
 # ── building a request ───────────────────────────────────────────────────────
@@ -395,16 +398,28 @@ def request_hash(path, body):
     return hashlib.sha256(json.dumps([path, body], sort_keys=True).encode("utf-8")).hexdigest()
 
 
-def shown(body):
-    """The body as it may be printed and logged: a data URI becomes its size and hash."""
-    out = {}
-    for key, value in body.items():
-        if isinstance(value, str) and value.startswith("data:"):
+def mask(value):
+    """One value as it may be printed and logged. A data URI becomes its size
+    and hash; an http(s) link (it may be signed) becomes its host and a hash.
+    Lists and objects are masked inside."""
+    if isinstance(value, str):
+        if value.startswith("data:"):
             head, _, payload = value.partition(",")
-            out[key] = f"{head},<{len(payload) * 3 // 4} bytes, sha256 {hashlib.sha256(payload.encode()).hexdigest()[:12]}>"
-        else:
-            out[key] = value
-    return out
+            return f"{head},<{len(payload) * 3 // 4} bytes, sha256 {hashlib.sha256(payload.encode()).hexdigest()[:12]}>"
+        if value[:8].lower().startswith(("http://", "https://")):
+            host = urllib.parse.urlsplit(value).hostname or "?"
+            return f"<link to {host}, sha256 {hashlib.sha256(value.encode()).hexdigest()[:12]}>"
+        return value
+    if isinstance(value, list):
+        return [mask(item) for item in value]
+    if isinstance(value, dict):
+        return {key: mask(item) for key, item in value.items()}
+    return value
+
+
+def shown(body):
+    """The body as it may be printed and logged (see mask)."""
+    return {key: mask(value) for key, value in body.items()}
 
 
 # ── commands ─────────────────────────────────────────────────────────────────

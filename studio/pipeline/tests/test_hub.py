@@ -169,6 +169,22 @@ class NewRun(HubCase):
         self.assertTrue((self.runs / run_id / "state.json").is_file())
         self.assertEqual(self.state(run_id)["pipeline"], "ui-direction")
 
+    def post_with(self, headers):
+        request = urllib.request.Request(f"http://127.0.0.1:{self.port}/api/runs", method="POST",
+                                         data=json.dumps({"pipeline": "ui-direction", "title": "Hub page"}).encode(),
+                                         headers={"Content-Type": "application/json", **headers})
+        try:
+            with urllib.request.urlopen(request, timeout=5) as reply:
+                return reply.status
+        except urllib.error.HTTPError as err:
+            return err.code
+
+    def test_a_cross_site_or_rebound_post_is_refused(self):
+        self.assertEqual(self.post_with({"Origin": "https://evil.example"}), 403)
+        self.assertEqual(self.post_with({"Host": "evil.example"}), 403)
+        self.assertEqual(self.runs.exists() and list(self.runs.iterdir()), [])
+        self.assertEqual(self.post_with({"Origin": f"http://localhost:{self.port}"}), 201)
+
     def test_a_pipeline_that_is_not_implemented_is_refused(self):
         status, reply = self.json("/api/runs", method="POST", body={"pipeline": "ui-build", "title": "x"})
         self.assertEqual(status, 400)

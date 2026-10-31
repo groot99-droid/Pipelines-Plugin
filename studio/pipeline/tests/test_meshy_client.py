@@ -166,7 +166,16 @@ class DryRun(MeshyCase):
         self.run_cmd("confirm", run_id, "execute", "--words", "go")
         code, _, err = self.meshy("create", "preview", run_id, "--name", "x", "--prompt", "x", "--confirm")
         self.assertEqual(code, 1)
-        self.assertIn("does not spend", err)
+        self.assertIn("not a pipeline that runs through this client", err)
+
+    def test_another_spend_pipeline_cannot_call_meshy(self):
+        run_id = self.new_run(pipeline="still-image")
+        self.through(run_id, "recipe", note="aurora/design/x.md")
+        self.run_cmd("confirm", run_id, "execute", "--words", "go")
+        code, _, err = self.meshy("create", "preview", run_id, "--name", "x", "--prompt", "x", "--confirm")
+        self.assertEqual(code, 1)
+        self.assertIn("not a pipeline that runs through this client", err)
+        self.assertEqual(self.world["posts"], [])
 
 
 class Requests(MeshyCase):
@@ -335,6 +344,16 @@ class Flow(MeshyCase):
         self.assertTrue((self.runs / run_id / "meshy" / "hero-rig-walking.glb").is_file())
         code, _, err = self.meshy("download", run_id, "--name", "hero", "--op", "rig", "--part", "running")
         self.assertEqual(code, 1, "the fake has no running clip")
+
+
+class Masking(unittest.TestCase):
+    def test_a_link_is_logged_as_its_host_and_a_hash_never_whole(self):
+        link = "https://cdn.example.com/a.glb?Signature=SECRETSIG&Expires=1"
+        out = meshy_client.shown({"model_url": link, "texture_urls": [{"base": link}], "n": 3})
+        text = json.dumps(out)
+        self.assertNotIn("SECRETSIG", text)
+        self.assertRegex(out["model_url"], r"^<link to cdn\.example\.com, sha256 [0-9a-f]{12}>$")
+        self.assertEqual(out["n"], 3)
 
 
 class Estimates(unittest.TestCase):

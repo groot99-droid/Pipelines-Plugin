@@ -543,7 +543,8 @@ def set_note(env, state, given):
     return others
 
 
-def cmd_new(env, args):
+def create_run(env, args):
+    """Start a run and return (state, run_dir, warnings). Prints nothing."""
     cfg = env.pipeline(args.pipeline)
     if cfg.get("status") != "implemented":
         raise Refused(f"`{args.pipeline}` is `{cfg.get('status')}`. Only an implemented pipeline starts."
@@ -583,7 +584,16 @@ def cmd_new(env, args):
     log_event(state, "new", args.pipeline)
     run_dir.mkdir(parents=True)
     save_state(env, state)
-    print(f"run       {run_id}")
+    return state, run_dir, others
+
+
+def cmd_new(env, args):
+    state, run_dir, others = create_run(env, args)
+    if getattr(args, "json", False):
+        print(json.dumps({"run_id": state["run_id"], "pipeline": args.pipeline, "folder": str(run_dir),
+                          "note_path": state["note_path"], "warnings": others}))
+        return EXIT_OK
+    print(f"run       {state['run_id']}")
     print(f"pipeline  {args.pipeline}")
     print(f"folder    {run_dir}")
     for other in others:
@@ -1014,6 +1024,7 @@ def build_parser():
     new.add_argument("--title", required=True)
     new.add_argument("--note", help="vault-relative path of the note, if already known")
     new.add_argument("--run-id")
+    new.add_argument("--json", action="store_true", help="print the new run as one JSON object")
     new.set_defaults(run=cmd_new)
 
     note = commands.add_parser("note", help="set the note this run reads and writes")
