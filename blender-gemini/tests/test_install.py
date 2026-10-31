@@ -396,7 +396,10 @@ class RepoAgreementTest(unittest.TestCase):
     def test_mcp_json_registers_the_gemini_server_on_the_gemini_backend(self):
         config = json.loads((REPO / ".mcp.json").read_text(encoding="utf-8"))
         gemini = config["mcpServers"]["gemini"]
-        self.assertEqual(gemini["args"], ["-y", "gemini-mcp-tool"])
+        self.assertEqual(gemini["args"], ["-y", "gemini-mcp-tool@1.1.4"])
+        # The pin is the version the README says was run ("reports 1.1.4").
+        readme = (REPO / "blender-gemini" / "README.md").read_text(encoding="utf-8")
+        self.assertRegex(readme, r"gemini-mcp-tool` \(reports 1\.1\.4\)")
         self.assertEqual(gemini["env"]["GEMINI_MCP_BACKEND"], "gemini")
         # The root .mcp.json is shared: other tools (brushes/) declare their own servers there.
         self.assertEqual(list(config), ["mcpServers"])

@@ -2,7 +2,7 @@
   "mcpServers": {
     "blender": {
       "command": "uvx",
-      "args": ["mcp-for-blender"],
+      "args": ["mcp-for-blender==2.2.6"],
       "env": {
         "DISABLE_TELEMETRY": "true"
       }
