@@ -47,9 +47,11 @@ it takes the files from a local zip or folder by content hash, so the author's
 own copies, or a zip uploaded to a session, work without the network and whatever
 they are named. A sound already on disk is never downloaded again.
 
-All 2,648 sounds in the catalog are in the release `SFX_2026_01`, in 16 zips of
-at most about 350 MB (`Sounds_B01.zip` to `Sounds_B15.zip` and `Sounds_12.zip`),
-each holding `<category>/<file>.wav`. The catalog records only these 16; any
+All 3,577 sounds in the catalog are in the release `SFX_2026_01`, in 23 zips of
+at most about 350 MB (`Sounds_B01.zip` to `Sounds_B15.zip`, `Sounds_12.zip`, and
+the themed packs `Atmospheres`, `Beautiful.Nature.Sound.FX`, `Big.City.Sound.FX`,
+`Dark.Horror.Sound.FX`, `Dreamscore.2`, `Risers.Sound.FX` and `Who.Did.It`),
+each holding `<category>/<file>.wav`. The catalog records only these 23; any
 other zip attached to the release is not used by it. An entry's name is the
 author's, the member name inside the zip is the cleaned file name.
 
