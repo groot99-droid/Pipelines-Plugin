@@ -3,6 +3,7 @@
     python studio/pipeline/compute_gate.py evaluate <class> [--probe FILE] [--all]
     python studio/pipeline/compute_gate.py mint     <class> [--probe FILE] [--force]
     python studio/pipeline/compute_gate.py consume  <run-id>
+    python studio/pipeline/compute_gate.py renew    [<run-id>] [--probe FILE]
     python studio/pipeline/compute_gate.py release
     python studio/pipeline/compute_gate.py status
 
@@ -40,6 +41,13 @@ from studio_common import (
 
 HERE = Path(__file__).resolve().parent
 MACHINE_PATH = HERE / "machine.yaml"
+# Keys in a class that are not thresholds.
+CLASS_SETTINGS = ("describes", "ttl_seconds")
+
+
+def class_ttl(machine, workload):
+    """A class may set its own ttl_seconds (a long render); else the token's."""
+    return int(machine["classes"].get(workload, {}).get("ttl_seconds") or machine["token"]["ttl_seconds"])
 
 
 def load_machine(path=MACHINE_PATH):
@@ -98,7 +106,7 @@ def evaluate(machine, probe, workload):
     if workload not in classes:
         raise Usage(f"no class `{workload}` in machine.yaml. Declared: {', '.join(sorted(classes))}")
     thresholds = {k: v for k, v in machine["every_class"].items()}
-    thresholds.update({k: v for k, v in classes[workload].items() if k != "describes"})
+    thresholds.update({k: v for k, v in classes[workload].items() if k not in CLASS_SETTINGS})
     checks = [check_threshold(probe, key, want) for key, want in thresholds.items()]
     either = machine["laws"].get("thermal_either") or []
     names = [key[: key.rfind("_")] for key in either]
@@ -166,14 +174,13 @@ def print_verdict(found, probe, ttl):
 
 def cmd_evaluate(env, machine, args):
     probe = read_probe(args.probe)
-    ttl = machine["token"]["ttl_seconds"]
     workloads = sorted(machine["classes"]) if args.all else [args.workload]
     if not args.all and not args.workload:
         raise Usage("name a class, or pass --all")
     worst = EXIT_OK
     for workload in workloads:
         found = evaluate(machine, probe, workload)
-        print_verdict(found, probe, ttl)
+        print_verdict(found, probe, class_ttl(machine, workload))
         if found["verdict"] != "PASS":
             worst = EXIT_REFUSED
     return worst
@@ -183,8 +190,8 @@ def cmd_mint(env, machine, args):
     if not args.workload:
         raise Usage("name a class to mint for")
     probe = read_probe(args.probe)
-    ttl = machine["token"]["ttl_seconds"]
     found = evaluate(machine, probe, args.workload)
+    ttl = class_ttl(machine, args.workload)
     held = load_token(env, machine)
     if machine["laws"].get("single_flight", True) and token_live(held) and held["workload"] != args.workload:
         if args.force:
@@ -207,9 +214,10 @@ def cmd_mint(env, machine, args):
         "workload": args.workload,
         "minted_at": stamp(now()),
         "ts_epoch": time.time(),
+        "started_epoch": same.get("started_epoch", same["ts_epoch"]) if same else time.time(),
         "ttl_seconds": ttl,
         "memory_budget_gb": metric(probe, "memory.dynamic_claim_limit_gb"),
-        "probe_snapshot": {"gpu": metric(probe, "gpu.status"), "available_gb": metric(probe, "memory.available_gb"),
+        "probe_snapshot": {"gpu": metric(probe, "gpu.status"), "gpu_count": metric(probe, "gpu.count"), "available_gb": metric(probe, "memory.available_gb"),
                            "power": metric(probe, "power.source"), "cpu_perf_pct": metric(probe, "thermal.cpu_perf_pct"),
                            "thermal_c": metric(probe, "thermal.cpu_temp_c")},
         "consumed_by": same.get("consumed_by") if same else None,
@@ -219,6 +227,34 @@ def cmd_mint(env, machine, args):
     print(f"    token: {token_path(env, machine)} -> PASS, {ttl}s"
           + (f", held by {token['consumed_by']}" if token["consumed_by"] else "")
           + (f", budget {token['memory_budget_gb']} GB" if token["memory_budget_gb"] is not None else ""))
+    return EXIT_OK
+
+
+def cmd_renew(env, machine, args):
+    """Extend the live token for a job that outlasts its TTL. The class is
+    evaluated again on a fresh probe, so a machine that has since overheated or
+    unplugged is not carried on; the token's total life is capped by
+    token.max_seconds."""
+    held = load_token(env, machine)
+    if not token_live(held):
+        raise Refused("no live PASS token to renew. A token that expired is not extended; mint again.")
+    if args.run_id and held.get("consumed_by") != args.run_id:
+        raise Refused(f"the token is held by `{held.get('consumed_by')}`, not `{args.run_id}`")
+    cap = int(machine["token"].get("max_seconds") or 0)
+    started = float(held.get("started_epoch") or held["ts_epoch"])
+    if cap and time.time() - started + held["ttl_seconds"] > cap:
+        raise Refused(f"the token has run {int(time.time() - started)}s of its {cap}s limit "
+                      "(token.max_seconds). Release it and mint again if the author says to go on.")
+    probe = read_probe(args.probe)
+    found = evaluate(machine, probe, held["workload"])
+    print_verdict(found, probe, held["ttl_seconds"])
+    if found["verdict"] != "PASS":
+        print("    the token on disk is untouched")
+        return EXIT_REFUSED
+    held["ts_epoch"] = time.time()
+    held["renewals"] = int(held.get("renewals") or 0) + 1
+    write_text(token_path(env, machine), json.dumps(held, indent=2) + "\n")
+    print(f"renewed   {held['workload']} token, {held['ttl_seconds']}s more (renewal {held['renewals']})")
     return EXIT_OK
 
 
@@ -278,6 +314,10 @@ def build_parser():
     p.add_argument("--probe")
     p.add_argument("--force", action="store_true")
     p.set_defaults(run=cmd_mint)
+    p = sub.add_parser("renew", help="extend the live token for a long job, after a fresh check")
+    p.add_argument("run_id", nargs="?", help="the run that holds it, if it should be checked")
+    p.add_argument("--probe")
+    p.set_defaults(run=cmd_renew)
     p = sub.add_parser("consume", help="stamp the run that uses the token")
     p.add_argument("run_id")
     p.set_defaults(run=cmd_consume)

@@ -18,6 +18,7 @@ import yaml
 from helpers import StudioCase, fixture_spec
 
 import compute_gate
+import probe as probe_module
 
 HEALTHY = {
     "host": {"name": "YOGA", "kind": "windows", "machine": "Yoga Book 9 14IMU9"},
@@ -209,3 +210,104 @@ class ExecuteNeedsAToken(StudioCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Renewal(GateCase):
+    def mint(self):
+        self.assertEqual(self.gate("mint", "render_3d_cpu", "--probe", self.probe_file())[0], 0)
+        self.assertEqual(self.gate("consume", "scene-000001")[0], 0)
+
+    def age(self, seconds):
+        path = compute_gate.token_path(self.env, self.machine)
+        token = json.loads(path.read_text(encoding="utf-8"))
+        token["ts_epoch"] -= seconds
+        token["started_epoch"] -= seconds
+        path.write_text(json.dumps(token), encoding="utf-8")
+
+    def test_renew_extends_a_live_token_and_counts_it(self):
+        self.mint()
+        self.age(1700)
+        code, out, _ = self.gate("renew", "scene-000001", "--probe", self.probe_file())
+        self.assertEqual(code, 0, out)
+        token = compute_gate.load_token(self.env, self.machine)
+        self.assertEqual(token["renewals"], 1)
+        self.assertEqual(token["consumed_by"], "scene-000001")
+        self.assertGreater(token["ttl_seconds"] - compute_gate.token_age(token), 1700)
+
+    def test_an_expired_token_is_not_renewed(self):
+        self.mint()
+        self.age(1801)
+        code, _, err = self.gate("renew", "--probe", self.probe_file())
+        self.assertEqual(code, 1)
+        self.assertIn("expired", err)
+
+    def test_renew_checks_the_machine_again_and_leaves_the_token_on_a_deny(self):
+        self.mint()
+        before = compute_gate.token_path(self.env, self.machine).read_text(encoding="utf-8")
+        code, out, _ = self.gate("renew", "--probe", self.probe_file(**{"power.source": "battery"}))
+        self.assertEqual(code, 1)
+        self.assertIn("untouched", out)
+        self.assertEqual(compute_gate.token_path(self.env, self.machine).read_text(encoding="utf-8"), before)
+
+    def test_another_run_cannot_renew_it_and_the_total_life_is_capped(self):
+        self.mint()
+        code, _, err = self.gate("renew", "scene-000002", "--probe", self.probe_file())
+        self.assertEqual(code, 1)
+        self.assertIn("held by", err)
+        path = compute_gate.token_path(self.env, self.machine)
+        token = json.loads(path.read_text(encoding="utf-8"))
+        token["started_epoch"] -= self.machine["token"]["max_seconds"] - 100  # many renewals ago
+        path.write_text(json.dumps(token), encoding="utf-8")
+        code, _, err = self.gate("renew", "scene-000001", "--probe", self.probe_file())
+        self.assertEqual(code, 1)
+        self.assertIn("max_seconds", err)
+
+    def test_a_class_may_set_its_own_ttl(self):
+        self.machine["classes"]["render_3d_cpu"]["ttl_seconds"] = 7200
+        self.assertEqual(compute_gate.class_ttl(self.machine, "render_3d_cpu"), 7200)
+        self.assertEqual(compute_gate.class_ttl(self.machine, "batch_2d"), 1800)
+        self.assertEqual(compute_gate.evaluate(self.machine, probe(), "render_3d_cpu")["verdict"], "PASS")
+
+
+class GpuProbe(unittest.TestCase):
+    def block(self, names, smi=()):
+        original = probe_module.nvidia_gpus
+        probe_module.nvidia_gpus = lambda: list(smi)
+        try:
+            return probe_module.gpu_block(names)
+        finally:
+            probe_module.nvidia_gpus = original
+
+    def test_names_are_classified(self):
+        cases = {
+            "NVIDIA GeForce RTX 4070 Laptop GPU": "discrete",
+            "AMD Radeon RX 7800 XT": "discrete",
+            "AMD Radeon(TM) Graphics": "integrated",
+            "AMD Radeon 780M Graphics": "integrated",
+            "Intel(R) Arc(TM) A770 Graphics": "discrete",
+            "Intel(R) Arc(TM) Graphics": "integrated",
+            "Intel(R) Iris(R) Xe Graphics": "integrated",
+            "Intel(R) UHD Graphics 770": "integrated",
+            "Microsoft Basic Display Adapter": "virtual",
+        }
+        for name, want in cases.items():
+            with self.subTest(name=name):
+                self.assertEqual(probe_module.classify_gpu(name), want)
+
+    def test_every_adapter_counts_not_the_first(self):
+        found = self.block(["Intel(R) Arc(TM) Graphics", "AMD Radeon RX 6600"])
+        self.assertEqual(found["status"], "discrete")
+        self.assertEqual((found["count"], found["discrete_count"]), (2, 1))
+        self.assertEqual(found["name"], "AMD Radeon RX 6600")
+        self.assertFalse(found["memory_shared_with_system"])
+
+    def test_nvidia_smi_gives_vram_and_adds_an_adapter_the_os_missed(self):
+        found = self.block(["Intel(R) UHD Graphics"], smi=[("NVIDIA RTX A2000", 12.0)])
+        self.assertEqual(found["status"], "discrete")
+        self.assertEqual(found["vram_total_gb"], 12.0)
+        self.assertEqual(found["count"], 2)
+
+    def test_integrated_virtual_and_none(self):
+        self.assertEqual(self.block(["Intel(R) Arc(TM) Graphics"])["status"], "integrated")
+        self.assertEqual(self.block(["Microsoft Basic Display Adapter"])["status"], "none")
+        self.assertEqual(self.block([])["status"], "none")

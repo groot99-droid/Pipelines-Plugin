@@ -19,6 +19,7 @@ import json
 import math
 import os
 import platform
+import re
 import shutil
 import subprocess
 import sys
@@ -36,7 +37,7 @@ $out.model = $cs.Model
 $out.total_kb = $os.TotalVisibleMemorySize
 $out.free_kb = $os.FreePhysicalMemory
 $out.pagefile_mb = (Get-CimInstance Win32_PageFileUsage | Measure-Object -Property CurrentUsage -Sum).Sum
-$out.gpu = (Get-CimInstance Win32_VideoController | Select-Object -First 1).Name
+$out.gpus = @(Get-CimInstance Win32_VideoController | ForEach-Object { $_.Name })
 $bat = Get-CimInstance Win32_Battery
 $out.battery_count = @($bat).Count
 $out.battery_status = if ($bat) { @($bat)[0].BatteryStatus } else { $null }
@@ -45,7 +46,8 @@ $tz = Get-CimInstance -Namespace root/wmi MSAcpi_ThermalZoneTemperature | Select
 $out.thermal_tenths_k = if ($tz) { $tz.CurrentTemperature } else { $null }
 $perf = Get-CimInstance Win32_PerfFormattedData_Counters_ProcessorInformation | Where-Object { $_.Name -eq '_Total' }
 $out.cpu_perf_pct = if ($perf) { $perf.PercentProcessorPerformance } else { $null }
-$out.system_free_bytes = (Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='C:'").FreeSpace
+$sysdrive = if ($env:SystemDrive) { $env:SystemDrive } else { 'C:' }
+$out.system_free_bytes = (Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='$sysdrive'").FreeSpace
 $out | ConvertTo-Json -Compress
 """
 
@@ -126,10 +128,13 @@ def probe_windows(kind):
     tenths = number(r.get("thermal_tenths_k"))
     temp_c = round(tenths / 10 - 273.15, 1) if tenths else None
     system_free = number(r.get("system_free_bytes"))
-    gpu_name = r.get("gpu") if isinstance(r.get("gpu"), str) else None
+    names = r.get("gpus")
+    if isinstance(names, str):  # ConvertTo-Json flattens a one-element array
+        names = [names]
+    names = [n for n in names or [] if isinstance(n, str)]
     return {
         "host": {"kind": kind, "machine": r.get("model") if isinstance(r.get("model"), str) else None},
-        "gpu": gpu_block(gpu_name),
+        "gpu": gpu_block(names),
         "memory": memory_block(total_gb, available_gb, number(r.get("pagefile_mb"))),
         "power": {"source": source, "battery_pct": number(r.get("battery_pct"))},
         "thermal": {"cpu_temp_c": temp_c, "cpu_perf_pct": number(r.get("cpu_perf_pct"))},
@@ -150,11 +155,9 @@ def probe_linux(kind):
     if meminfo.get("SwapTotal") is not None and meminfo.get("SwapFree") is not None:
         swap_used = round((meminfo["SwapTotal"] - meminfo["SwapFree"]) / 1024)
     machine = read_first("/sys/class/dmi/id/product_version", "/sys/class/dmi/id/product_name")
-    gpu_name = None
     lspci = run(["lspci"], timeout=5)
-    if lspci:
-        gpu_name = next((line.split(":", 2)[-1].strip() for line in lspci.splitlines()
-                         if "VGA" in line or "3D controller" in line), None)
+    names = [line.split(":", 2)[-1].strip() for line in (lspci or "").splitlines()
+             if "VGA" in line or "3D controller" in line or "Display controller" in line]
     source = None
     for supply in sorted(Path("/sys/class/power_supply").glob("A*")) if Path("/sys/class/power_supply").is_dir() else []:
         online = read_first(supply / "online")
@@ -179,7 +182,7 @@ def probe_linux(kind):
         pass
     return {
         "host": {"kind": kind, "machine": machine},
-        "gpu": gpu_block(gpu_name),
+        "gpu": gpu_block(names),
         "memory": memory_block(total_gb, available_gb, swap_used),
         "power": {"source": source, "battery_pct": battery_pct},
         "thermal": {"cpu_temp_c": temp_c, "cpu_perf_pct": perf},
@@ -187,10 +190,59 @@ def probe_linux(kind):
     }
 
 
-def gpu_block(name):
-    discrete = shutil.which("nvidia-smi") is not None
-    status = "discrete" if discrete else ("integrated" if name else "none")
-    return {"status": status, "name": name, "vram_total_gb": None, "memory_shared_with_system": not discrete}
+# A graphics adapter with its own memory, by name. Everything else that names a
+# GPU (Intel UHD/Iris/Arc Graphics, AMD Radeon Graphics/Vega on an APU, Apple)
+# is integrated.
+DISCRETE_RES = (
+    re.compile(r"\b(?:nvidia|geforce|quadro|tesla|rtx|gtx|titan)\b", re.I),
+    re.compile(r"\bradeon\s*(?:\(tm\)\s*)?(?:rx|pro|r[579]|hd|vii|instinct)\b", re.I),
+    re.compile(r"\bintel.*\barc\b.*\b(?:pro\s+)?[ab]\d{3}", re.I),
+    re.compile(r"\biris\s+xe\s+max\b|\bdata center gpu\b", re.I),
+)
+# A name that is no adapter at all (a remote-desktop or virtual display).
+VIRTUAL_RE = re.compile(r"basic (?:display|render)|remote ?fx|virtual|vmware|hyper-v|parsec|microsoft", re.I)
+
+
+def classify_gpu(name):
+    """"discrete", "integrated" or "virtual" for one adapter name."""
+    if VIRTUAL_RE.search(name):
+        return "virtual"
+    return "discrete" if any(r.search(name) for r in DISCRETE_RES) else "integrated"
+
+
+def nvidia_gpus():
+    """[(name, vram_gb)] from nvidia-smi, or [] when it is missing or silent."""
+    text = run(["nvidia-smi", "--query-gpu=name,memory.total", "--format=csv,noheader,nounits"], timeout=10)
+    found = []
+    for line in (text or "").splitlines():
+        name, _, mib = line.rpartition(",")
+        mib = number(mib.strip())
+        if name.strip():
+            found.append((name.strip(), round(mib / 1024, 1) if mib else None))
+    return found
+
+
+def gpu_block(names):
+    """Every adapter, not the first. status is "discrete" if any adapter is,
+    else "integrated" if any real one is, else "none". name and
+    vram_total_gb are those of the largest discrete adapter (else the first)."""
+    names = [n for n in names or [] if n]
+    vram = {}
+    smi = nvidia_gpus()
+    for name, gb in smi:
+        vram[name] = gb
+        if name not in names and not any(name in n or n in name for n in names):
+            names.append(name)  # the driver sees an adapter the OS listing did not
+    adapters = [{"name": n, "status": "discrete" if n in vram else classify_gpu(n),
+                 "vram_total_gb": vram.get(n)} for n in names]
+    real = [a for a in adapters if a["status"] != "virtual"]
+    discrete = [a for a in real if a["status"] == "discrete"]
+    status = "discrete" if discrete else ("integrated" if real else "none")
+    lead = max(discrete, key=lambda a: a["vram_total_gb"] or 0) if discrete else (real[0] if real else None)
+    return {"status": status, "name": lead["name"] if lead else None,
+            "vram_total_gb": lead["vram_total_gb"] if lead else None,
+            "count": len(real), "discrete_count": len(discrete), "adapters": adapters,
+            "memory_shared_with_system": not discrete}
 
 
 def memory_block(total_gb, available_gb, swap_used_mb):
@@ -218,7 +270,7 @@ def probe():
     elif kind == "linux":
         found = probe_linux(kind)
     else:
-        found = {"host": {"kind": kind, "machine": platform.machine() or None}, "gpu": gpu_block(None),
+        found = {"host": {"kind": kind, "machine": platform.machine() or None}, "gpu": gpu_block([]),
                  "memory": memory_block(None, None, None), "power": {"source": None, "battery_pct": None},
                  "thermal": {"cpu_temp_c": None, "cpu_perf_pct": None}, "disk": disk_block(None)}
     found["host"]["name"] = platform.node() or None
