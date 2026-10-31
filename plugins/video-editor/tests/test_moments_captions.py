@@ -54,7 +54,7 @@ class Captions(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             out = Path(td) / "c.ass"
             n = captions.build_ass(self.words(), "opus", out)
-            ev = re.findall(r"Dialogue: 0,([\d:.]+),([\d:.]+),", out.read_text())
+            ev = re.findall(r"Dialogue: 0,([\d:.]+),([\d:.]+),", out.read_text(encoding="utf-8"))
             self.assertEqual(len(ev), n)
             to_s = lambda t: sum(float(p) * m for p, m in zip(t.split(":"), (3600, 60, 1)))
             for (a1, b1), (a2, b2) in zip(ev, ev[1:]):
@@ -66,7 +66,7 @@ class Captions(unittest.TestCase):
             (edit / "transcripts").mkdir()
             (edit / "transcripts" / "a.json").write_text(json.dumps({"words": [
                 {"type": "word", "text": "one", "start": 10.0, "end": 10.4},
-                {"type": "word", "text": "two", "start": 20.0, "end": 20.4}]}))
+                {"type": "word", "text": "two", "start": 20.0, "end": 20.4}]}), encoding="utf-8")
             edl = {"ranges": [{"source": "a", "start": 9.9, "end": 10.5}, {"source": "a", "start": 19.9, "end": 20.5}]}
             got = captions.output_timeline_words(edl, edit)
             self.assertAlmostEqual(got[0]["start"], 0.1, places=3)

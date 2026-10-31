@@ -79,12 +79,12 @@ class BackendGuards(unittest.TestCase):
             v = Path(td) / "v.mp4"
             v.write_bytes(b"x")
             out = Path(td) / "t.json"
-            out.write_text(json.dumps({"words": [], "backend": "faster-whisper"}))
+            out.write_text(json.dumps({"words": [], "backend": "faster-whisper"}), encoding="utf-8")
             self.assertTrue(transcribe._is_cached(out, v, "faster-whisper", False))
             self.assertFalse(transcribe._is_cached(out, v, "whisperx", False))   # switching backend re-runs
-            out.write_text(json.dumps({"words": [], "backend": "whisperx", "diarized": False}))
+            out.write_text(json.dumps({"words": [], "backend": "whisperx", "diarized": False}), encoding="utf-8")
             self.assertFalse(transcribe._is_cached(out, v, "whisperx", True))    # asked for speakers, have none
-            out.write_text(json.dumps({"words": [], "backend": "whisperx", "diarized": True}))
+            out.write_text(json.dumps({"words": [], "backend": "whisperx", "diarized": True}), encoding="utf-8")
             self.assertTrue(transcribe._is_cached(out, v, "whisperx", True))
 
     def test_preflight_names_the_extra(self):
@@ -226,7 +226,7 @@ class SpeakerTurns(unittest.TestCase):
             subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "testsrc=s=1280x720:r=25:d=3",
                             "-f", "lavfi", "-i", "sine=d=3", "-shortest", "-pix_fmt", "yuv420p", str(clip)], check=True)
             # transcript of a longer source; the clip starts at 10s in it
-            tr.write_text(json.dumps({"words": [spoken("a", 10.0, 11.5, "SPEAKER_00"), spoken("b", 11.5, 13.0, "SPEAKER_01")]}))
+            tr.write_text(json.dumps({"words": [spoken("a", 10.0, 11.5, "SPEAKER_00"), spoken("b", 11.5, 13.0, "SPEAKER_01")]}), encoding="utf-8")
             reframe.main([str(clip), "-o", str(out), "--mode", "pan", "--left-roi", "100,200,200,200",
                           "--right-roi", "900,200,200,200", "--turns", str(tr),
                           "--speaker-map", "SPEAKER_00=left,SPEAKER_01=right", "--clip-start", "10"])
@@ -320,7 +320,7 @@ class RemotionOverlays(unittest.TestCase):
     def test_template_ships_and_has_no_remotion_source(self):
         files = {p.name for p in overlays.TEMPLATE_DIR.rglob("*") if p.is_file()}
         self.assertTrue({"package.json", "Overlay.tsx", "Root.tsx", "index.ts", "types.ts"} <= files)
-        pkg = json.loads((overlays.TEMPLATE_DIR / "package.json").read_text())
+        pkg = json.loads((overlays.TEMPLATE_DIR / "package.json").read_text(encoding="utf-8"))
         self.assertEqual(pkg["dependencies"]["remotion"], pkg["dependencies"]["@remotion/cli"])  # Remotion needs matching versions
 
     def test_spec_and_pages(self):
@@ -329,7 +329,7 @@ class RemotionOverlays(unittest.TestCase):
             (edit / "transcripts").mkdir()
             (edit / "transcripts" / "a.json").write_text(json.dumps({"words": [
                 {"type": "word", "text": "hello", "start": 1.0, "end": 1.3},
-                {"type": "word", "text": "world.", "start": 1.35, "end": 1.8}]}))
+                {"type": "word", "text": "world.", "start": 1.35, "end": 1.8}]}), encoding="utf-8")
             edl = {"ranges": [{"source": "a", "start": 0.9, "end": 2.0}]}
             pages = overlays.caption_pages_from_edl(edl, edit)
             self.assertEqual(pages[0]["text"], "hello world.")
@@ -346,7 +346,7 @@ class RemotionOverlays(unittest.TestCase):
             (slot / "node_modules").mkdir(parents=True)
             spec = overlays.build_overlay_spec(title="T")
             overlays.scaffold_remotion_slot(slot, spec)
-            self.assertEqual(json.loads((slot / "overlay.json").read_text())["items"][0]["text"], "T")
+            self.assertEqual(json.loads((slot / "overlay.json").read_text(encoding="utf-8"))["items"][0]["text"], "T")
             self.assertTrue((slot / "src" / "Overlay.tsx").exists())
 
     def test_render_commands(self):

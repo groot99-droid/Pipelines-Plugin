@@ -105,7 +105,7 @@ def _is_cached(out: Path, video: Path, backend: str, diarize: bool) -> bool:
     if not out.exists() or out.stat().st_mtime < video.stat().st_mtime:
         return False
     try:
-        data = json.loads(out.read_text())
+        data = json.loads(out.read_text(encoding="utf-8"))
     except ValueError:
         return False
     return data.get("backend", "faster-whisper") == backend and (data.get("diarized", False) or not diarize)
@@ -166,6 +166,6 @@ def transcribe(
                 condition_on_previous_text=False,
             )
             data = to_scribe_shape(list(segments), info.language, info.duration)  # list(): decoding is lazy
-    out.write_text(json.dumps(data, indent=2))
+    out.write_text(json.dumps(data, indent=2), encoding="utf-8")
     print(f"transcript -> {out} ({sum(1 for w in data['words'] if w['type'] == 'word')} words, backend {backend})")
     return out
