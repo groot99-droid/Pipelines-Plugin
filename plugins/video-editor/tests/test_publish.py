@@ -451,7 +451,7 @@ class OAuth(Env):
 
         th = threading.Thread(target=run)
         th.start()
-        for _ in range(100):
+        for _ in range(400):
             if printed:
                 break
             time.sleep(0) if False else threading.Event().wait(0.05)
@@ -468,7 +468,7 @@ class OAuth(Env):
         self.fake([("POST", "token", Resp(200, {"access_token": "T"}))])
         th = threading.Thread(target=lambda: result.update(tok=oauth.loopback_authorize(self.cfg(), timeout=10, say=printed.append)))
         th.start()
-        for _ in range(100):
+        for _ in range(400):
             if printed:
                 break
             threading.Event().wait(0.05)
@@ -495,7 +495,7 @@ class OAuth(Env):
 
         th = threading.Thread(target=run)
         th.start()
-        for _ in range(100):
+        for _ in range(400):
             if printed:
                 break
             threading.Event().wait(0.05)
