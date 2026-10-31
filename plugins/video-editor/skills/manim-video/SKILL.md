@@ -1,7 +1,6 @@
 ---
 name: manim-video
 description: "Production pipeline for mathematical and technical animations using Manim Community Edition. Creates 3Blue1Brown-style explainer videos, algorithm visualizations, equation derivations, architecture diagrams, and data stories. Use when users request: animated explanations, math animations, concept visualizations, algorithm walkthroughs, technical explainers, 3Blue1Brown style videos, or any programmatic animation with geometric/mathematical content."
-version: 1.0.0
 ---
 
 # Manim Video Production Pipeline
@@ -74,59 +73,9 @@ project-name/
     videos/script/480p15/
 ```
 
-## Creative Direction
+## Creative direction
 
-### Color Palettes
-
-| Palette | Background | Primary | Secondary | Accent | Use case |
-|---------|-----------|---------|-----------|--------|----------|
-| **Classic 3B1B** | `#1C1C1C` | `#58C4DD` (BLUE) | `#83C167` (GREEN) | `#FFFF00` (YELLOW) | General math/CS |
-| **Warm academic** | `#2D2B55` | `#FF6B6B` | `#FFD93D` | `#6BCB77` | Approachable |
-| **Neon tech** | `#0A0A0A` | `#00F5FF` | `#FF00FF` | `#39FF14` | Systems, architecture |
-| **Monochrome** | `#1A1A2E` | `#EAEAEA` | `#888888` | `#FFFFFF` | Minimalist |
-
-### Animation Speed
-
-| Context | run_time | self.wait() after |
-|---------|----------|-------------------|
-| Title/intro appear | 1.5s | 1.0s |
-| Key equation reveal | 2.0s | 2.0s |
-| Transform/morph | 1.5s | 1.5s |
-| Supporting label | 0.8s | 0.5s |
-| FadeOut cleanup | 0.5s | 0.3s |
-| "Aha moment" reveal | 2.5s | 3.0s |
-
-### Typography Scale
-
-| Role | Font size | Usage |
-|------|-----------|-------|
-| Title | 48 | Scene titles, opening text |
-| Heading | 36 | Section headers within a scene |
-| Body | 30 | Explanatory text |
-| Label | 24 | Annotations, axis labels |
-| Caption | 20 | Subtitles, fine print |
-
-### Fonts
-
-**Use monospace fonts for all text.** Manim's Pango renderer produces broken kerning with proportional fonts at all sizes. See `references/visual-design.md` for full recommendations.
-
-```python
-MONO = "Menlo"  # define once at top of file
-
-Text("Fourier Series", font_size=48, font=MONO, weight=BOLD)  # titles
-Text("n=1: sin(x)", font_size=20, font=MONO)                  # labels
-MathTex(r"\nabla L")                                            # math (uses LaTeX)
-```
-
-Minimum `font_size=18` for readability.
-
-### Per-Scene Variation
-
-Never use identical config for all scenes. For each scene:
-- **Different dominant color** from the palette
-- **Different layout** — don't always center everything
-- **Different animation entry** — vary between Write, FadeIn, GrowFromCenter, Create
-- **Different visual weight** — some scenes dense, others sparse
+Palettes, animation timing, the type scale, the mono-font rule (Pango kerning breaks on proportional fonts; minimum `font_size=18`) and per-scene variation are in `references/creative-direction.md`. Read it before Step 2. For an experimental or unconventional explanation (SCAMPER, assumption reversal), read its "Creative divergence" section first.
 
 ## Workflow
 
@@ -238,27 +187,7 @@ Always iterate at `-ql`. Only render `-qh` for final output.
 | `references/updaters-and-trackers.md` | ValueTracker, add_updater, always_redraw, time-based updaters, patterns |
 | `references/paper-explainer.md` | Turning research papers into animations — workflow, templates, domain patterns |
 | `references/decorations.md` | SurroundingRectangle, Brace, arrows, DashedLine, Angle, annotation lifecycle |
+| `references/creative-direction.md` | Palettes, run_time table, type scale, fonts, per-scene variation, creative divergence |
 | `references/production-quality.md` | Pre-code, pre-render, post-render checklists, spatial layout, color, tempo |
 
 ---
-
-## Creative Divergence (use only when user requests experimental/creative/unique output)
-
-If the user asks for creative, experimental, or unconventional explanatory approaches, select a strategy and reason through it BEFORE designing the animation.
-
-- **SCAMPER** — when the user wants a fresh take on a standard explanation
-- **Assumption Reversal** — when the user wants to challenge how something is typically taught
-
-### SCAMPER Transformation
-Take a standard mathematical/technical visualization and transform it:
-- **Substitute**: replace the standard visual metaphor (number line → winding path, matrix → city grid)
-- **Combine**: merge two explanation approaches (algebraic + geometric simultaneously)
-- **Reverse**: derive backward — start from the result and deconstruct to axioms
-- **Modify**: exaggerate a parameter to show why it matters (10x the learning rate, 1000x the sample size)
-- **Eliminate**: remove all notation — explain purely through animation and spatial relationships
-
-### Assumption Reversal
-1. List what's "standard" about how this topic is visualized (left-to-right, 2D, discrete steps, formal notation)
-2. Pick the most fundamental assumption
-3. Reverse it (right-to-left derivation, 3D embedding of a 2D concept, continuous morphing instead of steps, zero notation)
-4. Explore what the reversal reveals that the standard approach hides
