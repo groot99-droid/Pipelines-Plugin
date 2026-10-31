@@ -9,6 +9,7 @@ First packaging of the ui-design tool as a Claude Code plugin.
 
 ### Added
 
+- Slash command `/ui-design-verify`; `references/search-guide.md` and `references/refresh-commands.md`, split out of the catalog and refresh skills. Every agent pins a `model`.
 - Plugin manifest and a one-plugin marketplace entry (`.claude-plugin/`).
 - Skills `ui-design-catalog`, `ui-design-multipart` and `ui-design-catalog-refresh`, and
   agents `ui-design-search-part`, `ui-design-page-reviewer` and
