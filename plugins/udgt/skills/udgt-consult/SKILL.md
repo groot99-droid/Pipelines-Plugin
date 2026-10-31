@@ -1,6 +1,7 @@
 ---
 name: udgt-consult
 description: Look things up in an existing UDGT teardown of a game while working on that game - why a decision was made, what a section of the design doc says, which data records and code a mechanic touches, what the owner said in a brief, what is planned next. Use before changing a game that has a teardown, or when asked "why is it like this" about it. Not for writing the teardown (that is udgt-teardown).
+allowed-tools: Read Grep Glob Bash(python *udgt.py query*)
 ---
 # UDGT consult
 

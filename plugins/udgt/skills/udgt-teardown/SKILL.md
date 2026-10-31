@@ -1,6 +1,7 @@
 ---
 name: udgt-teardown
 description: Tear a game's repository apart stage by stage (UI and frontend, datasets, gameplay and mechanics, backend, world bible, art pipeline, history, future plans) into a dataset, written chapters and an explorer page that wears the game's own look, asking the owner a short creative brief before each chapter. Use when the owner asks for a teardown, a design review of the whole game, a chapter of it, or to refresh it after the game changed. Not for looking one thing up in an existing teardown (that is udgt-consult), and never writes into the game's repository.
+allowed-tools: Read Grep Glob Bash(python *udgt.py query*)
 ---
 # UDGT teardown
 

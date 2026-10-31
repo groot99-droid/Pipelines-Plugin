@@ -1,6 +1,7 @@
 ---
 name: ui-design-catalog
 description: Searches a local BM25 catalog of UI styles, product palettes, font pairings, UX guidelines, icons, motion presets, chart types, and 22 stacks, and generates a contrast-checked design system from it -- instead of inventing visual decisions from memory. Use when the user asks to design, restyle, or choose colors, fonts, layout, motion or icons for a UI, or to review its UX or accessibility. Not for front-end work that leaves the look unchanged (state, data fetching, routing, types, build or test config), nor backend, API, or infrastructure work.
+allowed-tools: Read Grep Glob Bash(python *search.py *) Bash(python *route.py *)
 ---
 
 # UI design catalog

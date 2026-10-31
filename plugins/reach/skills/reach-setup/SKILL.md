@@ -1,6 +1,7 @@
 ---
 name: reach-setup
 description: Check whether Agent Reach is installed and healthy, show which internet platforms are reachable, and explain exactly what each missing one needs. Use when the user wants Claude to read the web, search, YouTube, Reddit, GitHub, Bilibili or RSS and `agent-reach` is not yet set up, or when a fetch failed and the cause may be a missing tool or login. Not for fetching content itself (that is the agent-reach skill).
+allowed-tools: Read Bash(agent-reach doctor*)
 ---
 
 # Reach setup
