@@ -3,7 +3,8 @@ pyyaml
 
 # Only required if PIPELINE_LLM_BACKEND=anthropic (default backend is
 # "ollama", which needs no pip package -- see llm.py). The librarian
-# (librarian.py) always uses Ollama regardless of this setting.
+# (librarian.py) picks its own backend (LIBRARIAN_BACKEND: ollama or
+# gemini_mcp) regardless of this setting.
 anthropic
 
 # Only required if PIPELINE_LLM_BACKEND=gemini_mcp or LIBRARIAN_BACKEND=gemini_mcp
