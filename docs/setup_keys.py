@@ -35,7 +35,7 @@ KEYS = {
 }
 _HTML = "text/html; charset=utf-8"
 STATIC = {"/keys.html": _HTML, "/index.html": _HTML, "/creative-writing.html": _HTML,
-          "/studio.html": _HTML, "/ui-design.html": _HTML, "/style.css": "text/css; charset=utf-8"}
+          "/studio.html": _HTML, "/ui-design.html": _HTML, "/brushes.html": _HTML, "/style.css": "text/css; charset=utf-8"}
 MAX_VALUE = 512
 PLACEHOLDERS = {"your-key-here", "Add_Key"}  # "no key yet"
 

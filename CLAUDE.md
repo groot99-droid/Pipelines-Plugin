@@ -26,7 +26,8 @@ INDEX.md             generated index of the tools, skills and agents
                      brush-tag-backfill, brush-designer
 .claude/agents/      creative-writing-{chunk-tagger,drafter,librarian-native},
                      brush-{tagger,librarian-native}
-.mcp.json            the gemini MCP server Claude calls to reach Blender (blender-gemini)
+.mcp.json            the gemini MCP server Claude calls to reach Blender (blender-gemini), and the
+                     brushes MCP server (brushes/pipeline/mcp_server.py)
 blender-gemini/      install.py (registers the Blender MCP server with the Gemini CLI,
                      and checks the chain), tests/, README.md
 creative-writing/    the creative-writing tool
@@ -55,6 +56,11 @@ writing-museum/      the Writing Museum: a walkable 3D museum of the creative-wr
   tools/             walk_test.mjs: the browser walk-through
 sound-library/       the author's sound effects: catalog.json (versioned), library.py (ingest,
                      search, fetch, verify), tests/; files/ holds the WAVs and is not versioned
+brushes/             the brush tool: the Procreate brush library (library/, originals through Git LFS),
+                     the catalog built from it (catalog/), a search engine and Obsidian vault
+                     (vault/), the pipeline scripts (pipeline/: codec, ingest, previews, notes, MCP
+                     and app servers), and the designer app (app/); its own README.md and
+                     docs/CONTRACTS.md, the frozen contract the tests check the code against
 agent-reach/         the reach base: Agent Reach imported whole (git subtree): a Python package and
                      CLI (agent-reach) that installs, checks (doctor) and configures read access to
                      15 internet platforms; its own CLAUDE.md, tests/ and TOOLSETS.md

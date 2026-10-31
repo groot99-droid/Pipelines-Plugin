@@ -56,6 +56,8 @@ jobs:
         run: python writing-museum/build/build_museum.py build --lint
       - name: udgt tests
         run: python -m unittest discover -s plugins/udgt/tests
+      - name: brushes tests
+        run: python -m unittest discover -s brushes/pipeline/tests
       # ffmpeg (with libass) and a few packages are all the video-editor tests need; the optional
       # backends are faked. Linux only until it is known green on the other runners.
       - name: video-editor tests
