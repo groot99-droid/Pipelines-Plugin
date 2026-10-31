@@ -65,11 +65,11 @@ class BuildMasterSrtTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             edit = Path(d)
             (edit / "transcripts").mkdir()
-            (edit / "transcripts" / "C0103.json").write_text(json.dumps({"words": TAKE}))
+            (edit / "transcripts" / "C0103.json").write_text(json.dumps({"words": TAKE}), encoding="utf-8")
             edl = {"sources": {"C0103": "C0103.mp4"}, "ranges": [{"source": "C0103", "start": 2.55, "end": 6.8}]}
             out = edit / "master.srt"
             render.build_master_srt(edl, edit, out)
-            cues = [b.splitlines() for b in out.read_text().strip().split("\n\n")]
+            cues = [b.splitlines() for b in out.read_text(encoding="utf-8").strip().split("\n\n")]
             self.assertEqual([c[2] for c in cues], ["90% OF", "WHAT A WEB", "AGENT DOES", "IS COMPLETELY", "WASTED.", "WE FIX THIS."])
             self.assertEqual(cues[0][1], "00:00:00,090 --> 00:00:00,590")
 
@@ -78,7 +78,7 @@ class SubtitlesPathTests(unittest.TestCase):
     def test_relative_to_edl_dir(self):
         with tempfile.TemporaryDirectory() as d:
             edit = Path(d)
-            (edit / "master.srt").write_text("")
+            (edit / "master.srt").write_text("", encoding="utf-8")
             self.assertEqual(render.resolve_subtitles_path("master.srt", edit), (edit / "master.srt").resolve())
 
     def test_falls_back_to_cwd(self):
@@ -86,7 +86,7 @@ class SubtitlesPathTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             root = Path(d)
             (root / "edit").mkdir()
-            (root / "edit" / "master.srt").write_text("")
+            (root / "edit" / "master.srt").write_text("", encoding="utf-8")
             cwd = os.getcwd()
             try:
                 os.chdir(root)

@@ -18,7 +18,7 @@ def read(edit_dir: Path) -> list[dict]:
     p = edit_dir / FILE_NAME
     if not p.exists():
         return []
-    return [json.loads(line) for line in p.read_text().splitlines() if line.strip()]
+    return [json.loads(line) for line in p.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
 def find_success(edit_dir: Path, key: str) -> dict | None:
@@ -34,6 +34,6 @@ def record(edit_dir: Path, *, key: str, platform: str, mode: str, status: str, r
     edit_dir.mkdir(parents=True, exist_ok=True)
     entry = {"ts": time.strftime("%Y-%m-%dT%H:%M:%S%z"), "key": key, "platform": platform, "mode": mode,
              "status": status, "id": remote_id, "url": url, "note": note}
-    with open(edit_dir / FILE_NAME, "a") as f:
+    with open(edit_dir / FILE_NAME, "a", encoding="utf-8") as f:
         f.write(json.dumps(entry) + "\n")
     return entry

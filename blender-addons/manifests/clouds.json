@@ -5,7 +5,7 @@
     {
       "name": "clouds_create_cloud",
       "description": "Create Cloud: Create a new cloud with defaults applied. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "easyclouds.create_cloud",
       "params": {},
       "context": "VIEW_3D"
@@ -13,7 +13,7 @@
     {
       "name": "clouds_create_layer",
       "description": "Create Layer: Create a new layer with defaults applied. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "easyclouds.create_layer",
       "params": {},
       "context": "VIEW_3D"
@@ -21,7 +21,7 @@
     {
       "name": "clouds_create_sphere",
       "description": "Create Sphere: Create a new spherical cloud, used to manually create/modify cloud shapes. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "easyclouds.create_sphere",
       "params": {},
       "context": "VIEW_3D"

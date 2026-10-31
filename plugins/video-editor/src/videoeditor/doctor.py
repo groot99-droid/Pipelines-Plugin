@@ -25,7 +25,7 @@ OPTIONAL_PY = (
 
 def _first_line(cmd: list[str]) -> str | None:
     try:
-        out = subprocess.run(cmd, capture_output=True, text=True, timeout=15).stdout
+        out = subprocess.run(cmd, capture_output=True, text=True, timeout=15, encoding="utf-8", errors="replace").stdout
     except (OSError, subprocess.SubprocessError):
         return None
     return (out.splitlines() or [""])[0].strip() or None
@@ -33,7 +33,7 @@ def _first_line(cmd: list[str]) -> str | None:
 
 def _ffmpeg_has_filter(name: str) -> bool | None:
     try:
-        out = subprocess.run(["ffmpeg", "-hide_banner", "-filters"], capture_output=True, text=True, timeout=15).stdout
+        out = subprocess.run(["ffmpeg", "-hide_banner", "-filters"], capture_output=True, text=True, timeout=15, encoding="utf-8", errors="replace").stdout
     except (OSError, subprocess.SubprocessError):
         return None
     return any(line.split()[1:2] == [name] for line in out.splitlines() if line.strip())

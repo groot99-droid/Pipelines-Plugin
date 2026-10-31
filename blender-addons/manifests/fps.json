@@ -5,14 +5,14 @@
     {
       "name": "fps_enable_auto_fps_scale",
       "description": "Enable Auto Scale: Enable Auto-Scale Actions on FPS Change. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "anim.enable_auto_fps_scale",
       "params": {}
     },
     {
       "name": "fps_disable_auto_fps_scale",
       "description": "Disable Auto Scale: Disable Auto-Scale Actions on FPS Change. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "anim.disable_auto_fps_scale",
       "params": {}
     }

@@ -5,7 +5,7 @@
     {
       "name": "pivot_bake_pivot",
       "description": "Origin to Pivot: Move object origin to the pivot AND align local axes to the pivot orientation, keeping the mesh in place. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "msp.bake_pivot",
       "params": {},
       "context": "VIEW_3D"
@@ -13,7 +13,7 @@
     {
       "name": "pivot_reset_pivot",
       "description": "Reset Pivot: Reset pivot: 3D Cursor back to world origin (identity orientation), Median Point pivot, Global orientation. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "msp.reset_pivot",
       "params": {
         "also_reset_cursor": {
@@ -27,7 +27,7 @@
     {
       "name": "pivot_to_active",
       "description": "Pivot to Active Object: Snap pivot to the active object's origin and orientation. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "msp.pivot_to_active",
       "params": {},
       "context": "VIEW_3D"

@@ -5,7 +5,7 @@
     {
       "name": "step_import",
       "description": "Import STEP/IGES: Import a STEP or IGES file into the current scene. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "import_scene.step",
       "params": {
         "filepath": {
@@ -116,7 +116,7 @@
     {
       "name": "step_cleanup_selected",
       "description": "Clean Up Topology: Run topology cleanup on all selected mesh objects. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "step.cleanup_selected",
       "params": {},
       "context": "VIEW_3D"

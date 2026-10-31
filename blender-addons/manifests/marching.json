@@ -5,7 +5,7 @@
     {
       "name": "marching_cube_add",
       "description": "Marching Cube Surface: Generates a mesh from a level-set equation using the Marching Cubes algorithm. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "mesh.primitive_marching_cube_add",
       "params": {
         "eq": {

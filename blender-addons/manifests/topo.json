@@ -5,7 +5,7 @@
     {
       "name": "topo_analyze",
       "description": "Run Full Analysis: Analyzes the mesh and populates the report. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "mesh.analyze_topo_ultimate",
       "params": {},
       "context": "VIEW_3D"

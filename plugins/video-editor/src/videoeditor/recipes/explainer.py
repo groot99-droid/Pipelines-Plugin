@@ -10,8 +10,6 @@ def steps(b: dict) -> list[str]:
         out.append('ve overlay "Headline" --duration 4 -o <edit>/animations/slot_1/render.mp4   # zero-setup text card')
     elif engine == "manim":
         out.append("# build each slot with Manim; read skills/manim-video/SKILL.md (needs LaTeX + `pip install manim`)")
-    elif engine == "hyperframes":
-        out.append("# scaffold in <edit>/animations/slot_N/: npx --yes hyperframes init . --example blank --non-interactive --skip-skills")
     elif engine == "remotion":
         out.append("# scaffold in <edit>/animations/slot_N/ with Remotion; render to render.mp4")
     out += ["# several animations: build them in PARALLEL sub-agents, one slot each",

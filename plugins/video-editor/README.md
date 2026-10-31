@@ -75,7 +75,7 @@ environment variables, never in a file, and never in this plugin.
   (Bluesky's video service-auth audience, LinkedIn's person id, localhost redirects for LinkedIn/TikTok,
   Instagram resumable upload, X media billing) are listed in `UNVERIFIED.md`, with the rest of what is deferred.
 - whisperX **speaker diarization** was not run (needs a Hugging Face token); real footage and real human speech
-  were not used (all runs were on synthetic fixtures); GPU paths and the HyperFrames and Remotion-beyond-our-template
+  were not used (all runs were on synthetic fixtures); GPU paths and Remotion-beyond-our-template
   engines were not run.
 - Local Whisper normalizes fillers ("um", "uh"), so filler removal is best-effort.
 

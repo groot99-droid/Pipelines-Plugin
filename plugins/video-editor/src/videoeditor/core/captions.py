@@ -14,10 +14,10 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
-import subprocess
 from pathlib import Path
 
 from videoeditor.core import render
+from videoeditor.core.platform import fc_match
 
 STYLES = ("bold-overlay", "opus", "karaoke", "minimal")
 
@@ -31,16 +31,14 @@ OUTLINE = "&H00000000&"
 
 
 def installed_family(preferred: str, fallback: str = "DejaVu Sans") -> str:
-    """Return a font family fontconfig can actually render (libass silently substitutes otherwise)."""
-    if shutil.which("fc-match"):
-        try:
-            got = subprocess.run(["fc-match", "-f", "%{family}", f"{preferred}:bold"],
-                                 capture_output=True, text=True, check=True).stdout.split(",")[0].strip()
-            if got:
-                return got
-        except subprocess.CalledProcessError:
-            pass
-    return fallback
+    """Return a font family fontconfig can actually render (libass silently substitutes otherwise).
+
+    Without fontconfig (Windows, stock macOS) libass asks the system's own font provider, so the
+    preferred family is passed through unchanged."""
+    if not shutil.which("fc-match"):
+        return preferred
+    got = fc_match("%{family}", f"{preferred}:bold")
+    return got.split(",")[0].strip() if got else fallback
 
 
 def output_timeline_words(edl: dict, edit_dir: Path) -> list[dict]:
@@ -51,7 +49,7 @@ def output_timeline_words(edl: dict, edit_dir: Path) -> list[dict]:
         s, e = float(r["start"]), float(r["end"])
         tr = edit_dir / "transcripts" / f"{r['source']}.json"
         if tr.exists():
-            for w in render._words_in_range(json.loads(tr.read_text()), s, e):
+            for w in render._words_in_range(json.loads(tr.read_text(encoding="utf-8")), s, e):
                 out.append({
                     "text": (w.get("text") or "").strip(),
                     "start": max(0.0, max(w["start"], s) - s) + offset,
@@ -112,7 +110,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         if b <= a:
             continue
         events.append(f"Dialogue: 0,{_ass_time(a)},{_ass_time(b)},Default,,0,0,0,,{line}")
-    out_path.write_text(header + "\n".join(events) + "\n")
+    out_path.write_text(header + "\n".join(events) + "\n", encoding="utf-8")
     return len(events)
 
 
@@ -139,7 +137,7 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--style", choices=STYLES, default="bold-overlay")
     a = ap.parse_args(argv)
     edl_path = a.edl.resolve()
-    print(build_captions(json.loads(edl_path.read_text()), edl_path.parent, a.style))
+    print(build_captions(json.loads(edl_path.read_text(encoding="utf-8")), edl_path.parent, a.style))
 
 
 if __name__ == "__main__":

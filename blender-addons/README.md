@@ -9,9 +9,20 @@ types, and they reach Blender as a JSON literal, never as code.
 
 Point the server at this folder, then reconnect it (`/mcp` in Claude Code):
 
+macOS / Linux (bash, zsh):
+
 ```bash
 export BLENDER_ADDON_TOOLS_DIR="$PWD/blender-addons/manifests"
 ```
+
+Windows (PowerShell):
+
+```powershell
+$env:BLENDER_ADDON_TOOLS_DIR = "$PWD\blender-addons\manifests"
+```
+
+Every tool ships **off** (`"enabled": false`), and the server treats a missing `enabled` as off. The
+tools only appear once you have called one, looked at the result, and set `"enabled": true` in the manifest.
 
 ```bash
 python plugins/blender/addon-tools/server.py check --dir blender-addons/manifests
@@ -25,7 +36,7 @@ repository name (`bl_ext.blender_org.<id>`, `bl_ext.user_default.<id>`).
 
 - They were drafted from each add-on's **published source** on extensions.blender.org, in the version
   below. The zips were read with `ast` and nothing in them was run (`build_manifests.py`).
-- They have **not been run against the author's Blender** (2026-10-29). Before relying on a tool, call it
+- They have **not been run against the author's Blender** (2026-10-29), so every tool is drafted off. Before relying on a tool, call it
   once and look at the result. If the installed version differs, `server.py discover <module>` drafts
   that version's operators to compare.
 - Most of these operators read their settings from the add-on's panel (export folders, presets, bake
@@ -88,7 +99,7 @@ python blender-addons/build_manifests.py <folder of zips>
 ```
 
 The script needs Python 3.11 or later. It takes the zips from extensions.blender.org (their sha256 is in
-`sources.json`) and rewrites `manifests/` and `sources.json`. `CURATED` lists which operators become tools;
+`sources.json`) and rewrites `manifests/` and `sources.json`, with every tool off (so a rebuild also switches off anything you had enabled; keep your `enabled` edits in the diff review). `CURATED` lists which operators become tools;
 `NAMES` and `OVERRIDES` set a tool's name and any parameters that the source alone does not settle. Review
 the diff before you commit it.
 

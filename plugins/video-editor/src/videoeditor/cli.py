@@ -87,7 +87,7 @@ def cmd_find(a) -> None:
     text = json.dumps(out, indent=2)
     if a.output:
         a.output.parent.mkdir(parents=True, exist_ok=True)
-        a.output.write_text(text)
+        a.output.write_text(text, encoding="utf-8")
         print(f"{len(out)} {'shots' if a.shots else 'strikes'} -> {a.output}")
     else:
         print(text)
@@ -96,7 +96,7 @@ def cmd_find(a) -> None:
 def cmd_verify(a) -> None:
     from videoeditor.core import moments as M
 
-    items = json.loads(a.candidates.read_text())
+    items = json.loads(a.candidates.read_text(encoding="utf-8"))
     times = [float(i["strike"] if "strike" in i else i["time"]) for i in items]
     paths = M.verify_frames(a.video, times, a.out)
     print(f"{len(paths)} frames in {a.out}; view them and drop any candidate where the event is not visible")
@@ -139,7 +139,7 @@ def cmd_edl(a) -> None:
         if not path:
             sys.exit(f"--source expects NAME=PATH, got {s!r}")
         sources[name] = str(Path(path).resolve())
-    ranges = json.loads(a.ranges.read_text())
+    ranges = json.loads(a.ranges.read_text(encoding="utf-8"))
     for r in ranges:
         if "source" not in r:
             if len(sources) != 1:
@@ -153,7 +153,7 @@ def cmd_edl(a) -> None:
     if a.grade:
         edl["grade"] = a.grade
     a.output.parent.mkdir(parents=True, exist_ok=True)
-    a.output.write_text(json.dumps(edl, indent=2))
+    a.output.write_text(json.dumps(edl, indent=2), encoding="utf-8")
     print(f"{a.output} ({len(ranges)} ranges, {edl['total_duration_s']}s)")
 
 
@@ -195,7 +195,7 @@ def cmd_overlay(a) -> None:
     pages, duration = None, a.duration
     if a.captions_from:
         edl_path = a.captions_from.resolve()
-        edl = json.loads(edl_path.read_text())
+        edl = json.loads(edl_path.read_text(encoding="utf-8"))
         pages = overlays.caption_pages_from_edl(edl, edl_path.parent)
         duration = a.duration if a.duration_set else float(edl.get("total_duration_s") or a.duration)
     w, h = (int(v) for v in a.size.lower().split("x"))
@@ -234,7 +234,7 @@ def cmd_finish(a) -> None:
         T.transcribe(video, edit, a.model, None if a.language == "auto" else a.language)
         edl["subtitles"] = str(captions.build_captions(edl, edit, a.captions))
     edl_path = edit / "edl.json"
-    edl_path.write_text(json.dumps(edl, indent=2))
+    edl_path.write_text(json.dumps(edl, indent=2), encoding="utf-8")
     from videoeditor.core import render
     sys.argv = ["ve render", str(edl_path), "-o", str(a.output.resolve())]
     render.main()
