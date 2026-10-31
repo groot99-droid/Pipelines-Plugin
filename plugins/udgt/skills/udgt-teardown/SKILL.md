@@ -60,6 +60,22 @@ For each stage, in order, unless the owner picks one:
 6. Tell the owner, in a line or two, what the chapter found that surprised you, and move on to the
    next stage's brief.
 
+## Worked example: one stage
+
+```
+udgt brief 03 --profile P          # prompts, scan gaps, earlier answers for stage 03
+```
+
+Turn the gaps into 2 to 4 questions (AskUserQuestion), then record each answer as given:
+
+```
+udgt record 03 --profile P --question "Keep the timer fixed or scale it?" --answer "Scale it. Fixed felt unfair."
+```
+
+Write `chapters/03-<slug>.md` with a Describe / Compare / Critique block per choice (Describe cites
+`[[dec:A115]]` and `path:line`), then `udgt check --profile P`. A clean run prints no `chapter-link`
+findings; a broken `[[id]]` is reported as one and must be fixed before `udgt build --profile P`.
+
 ## Viewing
 
 `udgt build --profile P [--game <checkout>]` copies the page, writes `theme.css` from the game's
