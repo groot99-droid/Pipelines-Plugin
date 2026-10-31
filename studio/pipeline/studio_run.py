@@ -14,6 +14,7 @@ session, and reports here.
     python studio/pipeline/studio_run.py advance <run-id>
     python studio/pipeline/studio_run.py back    <run-id> --why "..."
     python studio/pipeline/studio_run.py keep    <run-id> <file in the run folder> --role final|variant|reference|export|concept-frame
+    python studio/pipeline/studio_run.py branch  <run-id> cloud|local   (a spend pipeline that also has a local branch)
     python studio/pipeline/studio_run.py park    <run-id> --constraint NAME --needs "..."
     python studio/pipeline/studio_run.py unpark  <run-id>
     python studio/pipeline/studio_run.py status  [<run-id>] [--json]
@@ -414,9 +415,17 @@ def token_held(env, state, stage, run_dir):
     import compute_gate  # beside this file
 
     cfg = env.pipeline(state["pipeline"])
-    if cfg.get("class") != "local-compute":
-        return
     workload = cfg.get("workload")
+    if cfg.get("local_workload"):  # a spend pipeline with a local branch
+        branch = state.get("branch")
+        if branch is None:
+            raise Refused(f"`{state['pipeline']}` has a cloud and a local branch, and this run chose none: "
+                          f"studio_run.py branch {state['run_id']} cloud|local")
+        if branch != "local":
+            return
+        workload = cfg["local_workload"]
+    elif cfg.get("class") != "local-compute":
+        return
     if not workload:
         raise Usage(f"`{state['pipeline']}` is local-compute and names no `workload:` class")
     machine = compute_gate.load_machine()
@@ -578,6 +587,7 @@ def create_run(env, args):
         "gate_plan": None,
         "gate_written": None,
         "kept": [],
+        "branch": None,
         "events": [],
     }
     others = set_note(env, state, args.note) if args.note else []
@@ -908,6 +918,26 @@ def cmd_keep(env, args):
     return EXIT_OK
 
 
+def cmd_branch(env, args):
+    state = load_state(env, args.run_id)
+    cfg = env.pipeline(state["pipeline"])
+    if not cfg.get("local_workload"):
+        raise Refused(f"`{state['pipeline']}` has no local branch to choose")
+    if state["status"] != "active":
+        raise Refused(f"the run is {state['status']}")
+    stage = current_stage(env, state)
+    if stage is None or stage["id"] not in ("intake", "context", "recipe", "execute"):
+        raise Refused("the branch is chosen before execute is done")
+    if any(c["what"] == "execute" for c in state.get("confirmations", [])) and state.get("branch") not in (None, args.branch):
+        raise Refused("the execute go-ahead was given for the other branch. Say so to the author and confirm again.")
+    state["branch"] = args.branch
+    log_event(state, "branch", args.branch)
+    save_state(env, state)
+    print(f"branch    {args.branch}"
+          + (f" (needs a consumed `{cfg['local_workload']}` compute token at execute)" if args.branch == "local" else ""))
+    return EXIT_OK
+
+
 def cmd_park(env, args):
     state = load_state(env, args.run_id)
     if state["status"] != "active":
@@ -1067,6 +1097,11 @@ def build_parser():
     keep.add_argument("file", help="a file in the run folder")
     keep.add_argument("--role", required=True)
     keep.set_defaults(run=cmd_keep)
+
+    branch = commands.add_parser("branch", help="choose the cloud or local branch of a pipeline that has both")
+    branch.add_argument("run_id")
+    branch.add_argument("branch", choices=("cloud", "local"))
+    branch.set_defaults(run=cmd_branch)
 
     park = commands.add_parser("park", help="stop a run on a constraint that cannot be resolved")
     park.add_argument("run_id")

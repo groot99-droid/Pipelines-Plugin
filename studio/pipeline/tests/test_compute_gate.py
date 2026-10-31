@@ -183,6 +183,8 @@ class ExecuteNeedsAToken(StudioCase):
         return run_id
 
     def test_execute_is_not_done_without_a_consumed_token(self):
+        if type(self) is not ExecuteNeedsAToken:
+            self.skipTest("the local-compute case")
         run_id = self.to_execute()
         code, _, err = self.run_cmd("advance", run_id)
         self.assertEqual(code, 1)
@@ -208,8 +210,44 @@ class ExecuteNeedsAToken(StudioCase):
         self.assertEqual(self.state(run_id)["completed_stages"][-1], "execute")
 
 
-if __name__ == "__main__":
-    unittest.main()
+
+class LocalBranch(ExecuteNeedsAToken):
+    """A spend pipeline with a local branch: the token is needed on `local` only."""
+
+    def setUp(self):
+        super().setUp()
+        spec = fixture_spec()
+        spec["pipelines"]["scene-3d"]["class"] = "spend"
+        spec["pipelines"]["scene-3d"]["local_workload"] = "render_3d_cpu"
+        spec["pipelines"]["scene-3d"]["requires_context"] = []
+        self.spec_path.write_text(yaml.safe_dump(spec, sort_keys=False, allow_unicode=True), encoding="utf-8")
+
+    def test_a_run_that_chose_no_branch_cannot_finish_execute(self):
+        run_id = self.to_execute()
+        code, _, err = self.run_cmd("advance", run_id)
+        self.assertEqual(code, 1)
+        self.assertIn("chose none", err)
+
+    def test_cloud_needs_no_token_and_local_needs_one(self):
+        cloud = self.to_execute()
+        self.assertEqual(self.run_cmd("branch", cloud, "cloud")[0], 0)
+        self.assertEqual(self.run_cmd("advance", cloud)[0], 0)
+        local = self.to_execute()
+        self.assertEqual(self.run_cmd("branch", local, "local")[0], 0)
+        code, _, err = self.run_cmd("advance", local)
+        self.assertEqual(code, 1)
+        self.assertIn("no live compute token", err)
+        path = self.root / "probe.json"
+        path.write_text(json.dumps(probe()), encoding="utf-8")
+        self.assertEqual(self.call(compute_gate, "mint", "render_3d_cpu", "--probe", str(path))[0], 0)
+        self.assertEqual(self.call(compute_gate, "consume", local)[0], 0)
+        self.assertEqual(self.run_cmd("advance", local)[0], 0)
+
+    def test_a_pipeline_with_no_local_branch_has_none_to_choose(self):
+        run_id = self.new_run()
+        code, _, err = self.run_cmd("branch", run_id, "local")
+        self.assertEqual(code, 1)
+        self.assertIn("no local branch", err)
 
 
 class Renewal(GateCase):
@@ -311,3 +349,7 @@ class GpuProbe(unittest.TestCase):
         self.assertEqual(self.block(["Intel(R) Arc(TM) Graphics"])["status"], "integrated")
         self.assertEqual(self.block(["Microsoft Basic Display Adapter"])["status"], "none")
         self.assertEqual(self.block([])["status"], "none")
+
+
+if __name__ == "__main__":
+    unittest.main()
