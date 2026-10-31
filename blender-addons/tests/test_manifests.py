@@ -1,6 +1,7 @@
 """The add-on manifests load, name operators their add-on's source registers, and
 make code that compiles. No Blender: the server's own loader and code builder."""
 
+import ast
 import json
 import re
 import sys
@@ -56,6 +57,17 @@ class Manifests(unittest.TestCase):
             for tool in json.loads(path.read_text(encoding="utf-8"))["tools"]:
                 with self.subTest(tool=tool["name"]):
                     self.assertIsInstance(tool.get("enabled"), bool)
+
+    def test_enabled_tools_are_exactly_the_builders_ENABLED_set(self):
+        # build_manifests.py (3.11+ only, so read as source) owns the choice; a rebuild never changes it.
+        tree = ast.parse((HERE / "build_manifests.py").read_text(encoding="utf-8"))
+        (assign,) = [n for n in tree.body if isinstance(n, ast.Assign)
+                     and any(isinstance(t, ast.Name) and t.id == "ENABLED" for t in n.targets)]
+        wanted = set(ast.literal_eval(assign.value)) if not (
+            isinstance(assign.value, ast.Call) and not assign.value.args) else set()
+        on = {t["name"] for path in MANIFESTS.glob("*.json")
+              for t in json.loads(path.read_text(encoding="utf-8"))["tools"] if t["enabled"]}
+        self.assertEqual(on, wanted)
 
     def test_every_tool_builds_code_that_compiles(self):
         tools, _ = server.load_tools(MANIFESTS, include_disabled=True)

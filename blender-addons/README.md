@@ -22,7 +22,7 @@ $env:BLENDER_ADDON_TOOLS_DIR = "$PWD\blender-addons\manifests"
 ```
 
 Every tool ships **off** (`"enabled": false`), and the server treats a missing `enabled` as off. The
-tools only appear once you have called one, looked at the result, and set `"enabled": true` in the manifest.
+tools only appear once you have called one, looked at the result, and added its name to `ENABLED` in `build_manifests.py` (then rebuild).
 
 ```bash
 python plugins/blender/addon-tools/server.py check --dir blender-addons/manifests
@@ -99,7 +99,7 @@ python blender-addons/build_manifests.py <folder of zips>
 ```
 
 The script needs Python 3.11 or later. It takes the zips from extensions.blender.org (their sha256 is in
-`sources.json`) and rewrites `manifests/` and `sources.json`, with every tool off (so a rebuild also switches off anything you had enabled; keep your `enabled` edits in the diff review). `CURATED` lists which operators become tools;
+`sources.json`) and rewrites `manifests/` and `sources.json`, with `enabled` taken from the `ENABLED` set in the script (empty: every tool is off), so a rebuild never changes a choice. To switch a tool on, add its name to `ENABLED` after calling it in your Blender, and rebuild. `CURATED` lists which operators become tools;
 `NAMES` and `OVERRIDES` set a tool's name and any parameters that the source alone does not settle. Review
 the diff before you commit it.
 

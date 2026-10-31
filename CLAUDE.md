@@ -301,7 +301,9 @@ against `server.py` of the version you document, and update `SERVER_TOOLS` in
   author connects their clone through Remote Control.
 - Tests: `python -m unittest discover -s plugins/blender/tests` (a fake add-on socket, no Blender).
 - `blender-addons/` (repo root, not in the plugin) holds the manifests for the add-ons the author
-  listed on 2026-10-29, with their tools switched on at the author's request. They were drafted with
+  listed on 2026-10-29. Every tool ships disabled; the author enables each one after calling it in their
+  own Blender, by adding its name to `ENABLED` in `build_manifests.py` (empty until then), so a rebuild never
+  changes a choice. Keep tools off unless the author enables them. They were drafted with
   `build_manifests.py` from each add-on's zip on extensions.blender.org, which is read with `ast` and
   never run. They are unverified against the author's install until a tool has been called there.
   Change a tool through `CURATED`, `NAMES` or `OVERRIDES` in that script and rebuild, not by editing
