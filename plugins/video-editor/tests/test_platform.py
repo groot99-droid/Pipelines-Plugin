@@ -53,5 +53,19 @@ class Utf8Everywhere(unittest.TestCase):
         self.assertEqual(offenders, [])
 
 
+class LegacyConsole(unittest.TestCase):
+    def test_progress_lines_do_not_raise_on_a_cp1252_stream(self):
+        import io
+        import contextlib
+        import videoeditor
+
+        buf = io.TextIOWrapper(io.BytesIO(), encoding="cp1252", errors="strict")
+        with mock.patch("sys.stdout", buf), mock.patch("sys.stderr", buf):
+            videoeditor._tolerate_legacy_consoles()
+            print("concat \u2192 out.mp4")      # raised UnicodeEncodeError before
+            buf.flush()
+        self.assertIn(b"concat ", buf.buffer.getvalue())
+
+
 if __name__ == "__main__":
     unittest.main()
