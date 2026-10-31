@@ -28,6 +28,8 @@ INDEX.md             generated index of the tools, skills and agents
                      brush-{tagger,librarian-native}
 .mcp.json            the gemini MCP server Claude calls to reach Blender (blender-gemini), and the
                      brushes MCP server (brushes/pipeline/mcp_server.py)
+blender-addons/      manifests/ (tools for the author's own Blender add-ons, read by the blender
+                     plugin's addon-tools server), sources.json, build_manifests.py, tests/
 blender-gemini/      install.py (registers the Blender MCP server with the Gemini CLI,
                      and checks the chain), tests/, README.md
 creative-writing/    the creative-writing tool
@@ -83,8 +85,9 @@ plugins/udgt/        the udgt plugin (UI, Dataset & Gameplay Teardown): engine/u
                      agent udgt-chapter-analyst, tests/
 teardowns/           one folder per torn-down game: profile.json, teardown.json (generated), answers.json
                      (the owner's words), chapters/; explorer/ is built and not versioned
-plugins/blender/     the blender plugin: .mcp.json (uvx mcp-for-blender, telemetry off), skills
-                     blender-{mcp,assets,polyhaven-library}, agent blender-scene-reviewer
+plugins/blender/     the blender plugin: .mcp.json (uvx mcp-for-blender, telemetry off, and the
+                     blender-addons server in addon-tools/), skills
+                     blender-{mcp,assets,polyhaven-library,addon-tools}, agent blender-scene-reviewer
 plugins/video-editor/ the video-editor plugin: bin/ve.py (launcher), src/videoeditor/ (the `ve` CLI),
                      skills video-editor and manim-video, tests/, UNVERIFIED.md
 .github/workflows/   verify.yml: CI for the whole repo (see "Working on the ui-design plugin");
@@ -202,6 +205,16 @@ the author names at a `scene-3d` intake, through `writing-museum/build/`.
   history (no generate tool), and `library.py` writes `catalog.json`, `thumbs/` and the
   git-ignored `files/`, nothing else. Never commit an original, and never keep a link
   to an uploaded input. Tests: `python -m unittest discover -s studio/library/tests`.
+- **3D assets** are two pipelines run in order: `asset-3d` (Meshy, `class: spend`) and
+  `assemble-3d` (Blender, `local-compute`, `render_3d_cpu`). `studio/pipeline/meshy_client.py`
+  is a dry run unless given `--confirm`, posts only at a run's execute stage after its go-ahead,
+  records every task in the run's `meshy_tasks.json` (and never a signed link), and reuses a
+  recorded task rather than paying twice. Its key is `MESHY_API_KEY` in `~/.rosw/keys.env`;
+  the same key rules as above apply. `studio/pipeline/bpy/assemble_plan.py` turns a layout
+  into one bpy snippet per step; `bpy/assemble.py` runs them headless, and the live branch
+  sends the same snippets through the Blender MCP server (they pass its safe mode).
+  `glb_inspect.py` checks a model against a budget. Tests use a fake Meshy and skip the
+  Blender run unless `blender` is on PATH or `ROSW_BPY_PYTHON` names a Python with `bpy`.
 - The studio makes no brush file itself. Its `brush` pipeline (not yet
   implemented) will run through `brushes/`, the brush tool at the repo root.
 - Run the tests after touching the spec, a gate, `tokens.json`, `SCHEMA.md`, the
@@ -276,7 +289,24 @@ third-party code: `mcp-for-blender` (MIT) is fetched by `uvx` at run time, and t
 Assets add-on (GPL-3.0) is only described, never copied. Keep `DISABLE_TELEMETRY=true` in
 `.mcp.json`, and never write an API key anywhere in the plugin (names of the
 `BLENDERMCP_*` variables only). Tool names in the skills must match the server's; check them
-against `server.py` of the version you document.
+against `server.py` of the version you document, and update `SERVER_TOOLS` in
+`plugins/blender/tests/test_tool_names.py` with them.
+
+- `addon-tools/server.py` (stdlib) is the `blender-addons` MCP server: named tools for the author's
+  own add-ons, from one manifest per add-on in `BLENDER_ADDON_TOOLS_DIR` (default
+  `~/.blender-addon-tools/`, outside this repo). Arguments are type-checked and reach Blender as a
+  JSON literal, never as code. `discover` drafts a manifest with every tool off and never
+  overwrites; only the author enables a tool, after seeing it. Do not write a manifest unasked.
+- Discovery needs the author's Blender, which this repo's cloud sessions cannot see unless the
+  author connects their clone through Remote Control.
+- Tests: `python -m unittest discover -s plugins/blender/tests` (a fake add-on socket, no Blender).
+- `blender-addons/` (repo root, not in the plugin) holds the manifests for the add-ons the author
+  listed on 2026-10-29, with their tools switched on at the author's request. They were drafted with
+  `build_manifests.py` from each add-on's zip on extensions.blender.org, which is read with `ast` and
+  never run. They are unverified against the author's install until a tool has been called there.
+  Change a tool through `CURATED`, `NAMES` or `OVERRIDES` in that script and rebuild, not by editing
+  the JSON. Nothing in the plugin may name this folder. Tests:
+  `python -m unittest discover -s blender-addons/tests`.
 
 ## Working on the udgt plugin and the teardowns
 

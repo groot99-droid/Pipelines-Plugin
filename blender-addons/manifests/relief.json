@@ -1,0 +1,14 @@
+{
+  "addon": "bl_ext.blender_org.photo_relief",
+  "seen_version": "1.0.1",
+  "tools": [
+    {
+      "name": "relief_create",
+      "description": "Create Relief Mesh: Build a solid, printable mesh from the chosen image. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "photo_relief.create",
+      "params": {},
+      "context": "VIEW_3D"
+    }
+  ]
+}

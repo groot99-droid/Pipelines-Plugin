@@ -1,0 +1,27 @@
+{
+ "answers": [
+  {"stage":"0","question":"When the loop drops the player back on the title card after the Grocery Store, what should they feel, in one line?","answer":"Trapped: there was never a way out","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"0","question":"What word do you use for it?","answer":"A walkthrough","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"0","question":"Who is it for first?","answer":"Me","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"0","question":"What should this teardown help you decide next?","answer":"whether to grow it and make merge it with the intern in some fashion","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"1","question":"Each loading screen is the clip and nothing else: no overlay, no LOG, no sound toggle, exactly 5.0 seconds. What is a loading screen to you?","answer":"A room of its own","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"1","question":"SKIP is offered during every loading clip and every walk, so no room is a dead end. Do you want people to use it?","answer":"Only if something breaks","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"1","question":"Phone or desktop first: which one do you play it on yourself?","answer":"Phone","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"2","question":"The three mini games (Lights Out, Fill the Frames, Shopping List) are bonuses: the exit is open from the start. Should any of them ever gate the exit?","answer":"Yes, all three","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"2","question":"Only three of the seven rooms have a mini game. What about the other four (hallway, both teal rooms, trampoline park)?","answer":"Give each one a game","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"2","question":"Which room is the best to walk, and which feels unfinished?","answer":"Best: dining · Unfinished: trampoline","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"3","question":"The captions and logs follow one first-person voice going deeper: \"They said to wait in the dining room\", \"I have to keep moving\". Who is the narrator to you?","answer":"The player","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"3","question":"The four phases run Departure from Reality → Holding Cells → System Breakdown → Empty Expanse. Is a room missing?","answer":"Open-ended: keep adding","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"3","question":"Do the clock stamps (14:32 → 27:81 → SysTime: 88:88 → ERR_CLOCK_NOT_FOUND → DISTANCE: NaN → PING_DETECTED_0x8F) carry the story, or are they texture?","answer":"They carry it","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"4","question":"The room videos came first, and the 3D rooms were built afterwards to match them, beat for beat. Which is the real room to you?","answer":"Neither alone","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"4","question":"How were the room videos, loading clips and section tracks made?","answer":"Mixed","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"4","question":"Each room's track plays on under the walk, and the walk adds small synthesized sounds (hum, buzz, drip, groan, chime). What should a room sound like when nothing is happening?","answer":"The track alone","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"5","question":"What is the slowest phone it must run on?","answer":"My own phone","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"5","question":"The walk test (Playwright, headless Chromium, desktop and --mobile) runs only by hand: the repo has no CI. Should it run on every push?","answer":"Yes, on every push","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"5","question":"The loading clips and room videos differ only by case (a.MP4 / A.mp4), which collides on macOS and Windows checkouts. Rename them, or keep the pairs?","answer":"Rename them","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"6","question":"It began on 2026-08-22 as a scroll reel of videos, became a click-through loop two days later, and grew a 3D walk five weeks after that. Was the 3D walk always the plan?","answer":"No, it grew","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"6","question":"Ninety-Nine names this game as its structural reference. What did you carry over into it?","answer":"The descent,Liminal rooms,The workflow,The trap","date":"2026-10-25","asked_as":"chat"},
+  {"stage":"6","question":"What would make Right Door, Wrong Exit finished?","answer":"Never: it keeps growing","date":"2026-10-25","asked_as":"chat"}
+ ],
+ "about": "The owner's answers to the teardown briefs, verbatim, in the order given. Appended by `udgt.py record`; never generated or edited."
+}

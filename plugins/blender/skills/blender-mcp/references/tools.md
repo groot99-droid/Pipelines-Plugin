@@ -1,43 +1,32 @@
 # MCP for Blender tools
 
-Every tool also takes an optional `user_prompt` string (the user's request, for context);
-ignore it unless a tool requires it (`get_scene_info` does).
+Checked against `server.py` of `mcp-for-blender` 2.2.6. Claude sees these as `mcp__blender__<name>`.
+Every tool also takes `user_prompt`: the user's own words, verbatim. Pass it when telemetry is on;
+this plugin turns telemetry off, so it can be left empty.
 
 | Tool | Parameters | Use |
 |---|---|---|
-| get_addon_status | | Blender version; addon/server version match |
-| get_scene_info | user_prompt | Objects, materials, scene summary |
-| get_object_info | object_name | Transform, materials, world bounding box |
-| get_viewport_screenshot | max_size=1000 | See the viewport |
-| execute_blender_code | code | Run bpy in small steps |
-| describe_node_type | bl_idname, property_overrides | Node property/socket schema without touching the scene |
-| bpy_api_lookup | query | RNA types, properties, functions, operators |
-| get_polyhaven_status | | Is the Poly Haven checkbox on in the addon |
-| get_polyhaven_categories | asset_type='hdris' | hdris / textures / models categories |
-| search_polyhaven_assets | asset_type='all', categories | Find assets |
-| download_polyhaven_asset | asset_id, asset_type, resolution='1k', file_format | Download and import |
-| set_texture | object_name, texture_id | Apply a downloaded Poly Haven texture |
-| get_sketchfab_status | | Needs API key in the addon |
-| search_sketchfab_models | query, categories, count=20, downloadable=True | Realistic models |
-| get_sketchfab_model_preview | uid | Thumbnail |
-| download_sketchfab_model | uid, target_size | Import scaled to target_size |
-| get_polypizza_status | | Needs API key |
-| search_polypizza_models | query, category, licence ('CC0'/'CC-BY'), animated, limit=20 | Low-poly models |
-| download_polypizza_model | model_id, normalize_size, target_size=1.0 | Import; returns attribution |
-| get_hyper3d_status | | Rodin enabled? key type? |
-| generate_hyper3d_model_via_text | text_prompt, bbox_condition | Start a Rodin job |
-| generate_hyper3d_model_via_images | input_image_paths / input_image_urls, bbox_condition | Start from images |
-| poll_rodin_job_status | subscription_key or request_id | Wait for completion |
-| import_generated_asset | name, task_uuid or request_id | Import the Rodin result |
-| get_hunyuan3d_status | | Mode: OFFICIAL_API or LOCAL_API |
-| generate_hunyuan3d_model | text_prompt or input_image_url | Start a job |
-| poll_hunyuan_job_status | job_id | Wait |
-| import_generated_asset_hunyuan | name, zip_file_url | Import (prefer .glb) |
-| export_scene | filepath, format, object_names, selection_only, apply_modifiers | GLB/FBX out |
-| disable_telemetry | | Turn collection off |
-| record_trajectory_feedback | feedback, correction_text, step_index | Telemetry feedback; skip when disabled |
+| get_addon_status | | Blender version, addon/server match, which `libraries` (polyhaven, sketchfab, polypizza) and `generators` (tripo, hunyuan3d, hyper3d, meshy) are on, telemetry consent |
+| get_scene_info | query, root, fields, limit=20 | Scene facts as text, one line per object. `fields`: location, size, ground, rotation, scale, parent, children, hidden, details, materials, modifiers, animation, topology, weights, settings |
+| look | mode, target, views, distance, shading, frames, frame_count=6, view, image, max_size=768 | One image. `mode`: viewport, camera, angles, frames. `shading`: solid, material, rendered, wireframe, xray. `image`: "Render Result" or a file path |
+| execute_blender_code | code | Run bpy (bmesh, mathutils) in small steps; returns what it prints |
+| search_assets | source, query, asset_type='all', category, attributes, min_size_m, licence, animated, limit=20, previews=0 | `source`: polyhaven, sketchfab or polypizza. Results carry each asset's id |
+| import_asset | source, id, asset_type, target_size, apply_to, resolution='1k', file_format | Bring a searched asset in. polyhaven needs `asset_type` (hdris, textures, models); sketchfab needs `target_size` (m, largest side) |
+| generate_3d | prompt or image, name, provider='auto', quality, bbox_condition, pose_mode, job, wait_seconds=50 | One generated object, imported. `provider`: auto, tripo, hunyuan3d, hyper3d, meshy. Returns a `job` handle if not done; call again with `job` to keep waiting |
+| disable_telemetry | | Turn collection off (it can only turn it off) |
+| record_trajectory_feedback | feedback (accept, reject, undo, correction), correction_text, step_index | Telemetry feedback; skip it while telemetry is off |
+
+The server also registers app-only tools (`open_viewport`, `viewport_latest`, `viewport_capture`,
+`viewport_pick`, `search_mentions`). The host UI calls them; the model never sees them.
+
+There is no export, object-info, node-schema or API-lookup tool in 2.2.6: do those in
+`execute_blender_code` (see the blender-mcp skill).
 
 Environment: `BLENDER_HOST`, `BLENDER_PORT`, `BLENDER_MCP_SAFE_MODE=1`, `DISABLE_TELEMETRY=true`.
-Credential variables (set in the shell or add-on preferences; never print values):
+Credential variables (set in the shell or the add-on preferences; never print values):
 `BLENDERMCP_SKETCHFAB_API_KEY`, `BLENDERMCP_POLYPIZZA_API_KEY`, `BLENDERMCP_HYPER3D_API_KEY`,
-`BLENDERMCP_HUNYUAN3D_SECRET_ID`, `BLENDERMCP_HUNYUAN3D_SECRET_KEY`, `BLENDERMCP_HUNYUAN3D_API_URL`.
+`BLENDERMCP_HUNYUAN3D_SECRET_ID`, `BLENDERMCP_HUNYUAN3D_SECRET_KEY`, `BLENDERMCP_HUNYUAN3D_API_URL`,
+`BLENDERMCP_MESHY_API_KEY`, `BLENDERMCP_TRIPO_API_KEY`.
+
+Tools for the user's own add-ons come from the second server this plugin registers,
+`blender-addons` (see the blender-addon-tools skill).

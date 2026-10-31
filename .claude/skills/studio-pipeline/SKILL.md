@@ -1,6 +1,6 @@
 ---
 name: studio-pipeline
-description: Walk one made thing through the studio's checkpointed pipeline (intake, context, recipe, execute, review, record), resolving and attesting its brand context before anything is run and leaving a Content MD in the studio vault. Use when the author wants a design system, palette, font pairing, style direction, UX review or accessibility audit made through the studio, a walkable 3D scene of the Writing Museum for a work they name, or asks to start, resume or park a studio run. Not for the creative-writing vault, which has its own pipeline.
+description: Walk one made thing through the studio's checkpointed pipeline (intake, context, recipe, execute, review, record), resolving and attesting its brand context before anything is run and leaving a Content MD in the studio vault. Use when the author wants a design system, palette, font pairing, style direction, UX review or accessibility audit made through the studio, a walkable 3D scene of the Writing Museum for a work they name, 3D models from a prompt or reference image through Meshy (asset-3d), those models assembled in Blender (assemble-3d), or asks to start, resume or park a studio run. Not for the creative-writing vault, which has its own pipeline.
 ---
 
 # Studio pipeline
@@ -42,6 +42,14 @@ edit `state.json` by hand, and never work around a refusal.
    pipeline that is not implemented, say so and stop; do not run its work under
    another pipeline's name. If it is unclear which pipeline the author means,
    ask. Do not guess.
+
+   Making 3D models and then a Blender scene from them is two runs, in order:
+   `asset-3d` (Meshy; spends credits), then `assemble-3d` (Blender; holds a
+   compute token) on what the first one kept. Finish the first, through its
+   record, before the second's intake names the kept models. A `class` is
+   one value per pipeline, which is why they are two. Never read, print or
+   ask for the value of `MESHY_API_KEY`; if `meshy_client.py` says it is not
+   set, the author adds it with `python docs/setup_keys.py`.
 
 2. **Start or resume the run.**
 

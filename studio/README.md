@@ -71,7 +71,7 @@ writes the reason into the note. It does not guess.
 
 ## Pipelines
 
-Ten are declared in `spec.yaml`. Eight are implemented.
+Twelve are declared in `spec.yaml`. Ten are implemented.
 
 | Pipeline | Makes | Status |
 |---|---|---|
@@ -83,6 +83,8 @@ Ten are declared in `spec.yaml`. Eight are implemented.
 | `edit-2d` | copies of existing images, through the Adobe connector | implemented |
 | `scene-3d` | one walkable room of the Writing Museum (`writing-museum/`) for a work the author names, built and walked locally; execute holds a `museum_walk` compute token | implemented |
 | `scene-blender` | through the Blender scene connector; a local Blender when the compute gate allows it | implemented (cloud branch) |
+| `asset-3d` | 3D models (GLB) from a prompt or a reference image, through the Meshy API (`meshy_client.py`): text or image to 3D, then remesh, retexture, rig or animate; each model checked by `glb_inspect.py`. A dry run first; a re-run never pays twice | implemented |
+| `assemble-3d` | a Blender scene from kept models: scaled to real height, grounded, LODs, lit, framed, saved as .blend, .glb and a preview. Headless (`bpy/assemble.py`) or live through the Blender MCP server; execute holds a `render_3d_cpu` compute token | implemented |
 
 A pipeline that is not implemented is a real entry: what it needs, what it
 carries from the skill it replaces, and what is still open. It does not start.

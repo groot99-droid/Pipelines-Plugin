@@ -1,0 +1,19 @@
+{
+  "addon": "bl_ext.blender_org.ue_groom_importer",
+  "seen_version": "1.0.1",
+  "tools": [
+    {
+      "name": "groom_import",
+      "description": "Import Unreal Groom. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "import_scene.unreal_groom",
+      "params": {
+        "filepath": {
+          "type": "string",
+          "description": "The file to import (absolute path)",
+          "required": true
+        }
+      }
+    }
+  ]
+}

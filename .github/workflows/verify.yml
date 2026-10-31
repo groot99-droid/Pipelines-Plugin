@@ -56,6 +56,10 @@ jobs:
         run: python writing-museum/build/build_museum.py build --lint
       - name: udgt tests
         run: python -m unittest discover -s plugins/udgt/tests
+      - name: blender plugin tests
+        run: python -m unittest discover -s plugins/blender/tests
+      - name: blender add-on manifests
+        run: python -m unittest discover -s blender-addons/tests
       - name: brushes tests
         run: python -m unittest discover -s brushes/pipeline/tests
       # ffmpeg (with libass) and a few packages are all the video-editor tests need; the optional

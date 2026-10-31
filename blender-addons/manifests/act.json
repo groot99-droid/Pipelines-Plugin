@@ -1,0 +1,188 @@
+{
+  "addon": "bl_ext.blender_org.act_game_asset_creation_toolset",
+  "seen_version": "2025.2.1",
+  "tools": [
+    {
+      "name": "act_export",
+      "description": "Export FBXs/OBJs/GLTFs: Export FBXs/OBJs/GLTFs to Unity/UE/Godot. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_export",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_create_palette",
+      "description": "Create Palette Texture. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_create_palette",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_delete_unused_materials",
+      "description": "Delete Unused Materials: Delete from Objects Unused Materials and Slots. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_delete_unused_materials",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_delete_duplicated_materials",
+      "description": "Cleanup Duplicated Materials: Delete from Selected Objects Duplicated Materials. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_delete_duplicated_materials",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_align",
+      "description": "Origin To: Origin To Min/Max/Mid/Coordinate/Cursor. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_align",
+      "params": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "MIN",
+            "MAX",
+            "MID",
+            "CURSOR",
+            "COORDINATE"
+          ],
+          "required": true,
+          "description": "Where the origin goes along the axis (COORDINATE uses the panel's coordinate)"
+        },
+        "axis": {
+          "type": "string",
+          "enum": [
+            "X",
+            "Y",
+            "Z"
+          ],
+          "required": true
+        }
+      },
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_clear_normals",
+      "description": "Clear Custom Normals: Clear Custom Split Normals. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_clear_normals",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_calc_normals",
+      "description": "Flip/Calculate Normals: Recalculate Normals. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_calc_normals",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_obj_name_to_mesh_name",
+      "description": "Obj Name -> Data Name: Obj Name to Data Name. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_obj_name_to_mesh_name",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_collection_name_to_obj_name",
+      "description": "Collection Name -> Obj Name: Col Name to Obj Name. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_collection_name_to_obj_name",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_select_negative_scaled_objects",
+      "description": "Select Negative Scaled Objs: Select Objects with Negative Scale. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_select_negative_scaled_objects",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_cleanup_empties",
+      "description": "Cleanup Empties: Delete empties without any child. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_cleanup_empties",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_numbering",
+      "description": "Set Numbering: Set Numbering of Objects. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_numbering",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_lod_to_objname",
+      "description": "Add LOD to Name: Add LOD to Obj Name. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_lod_to_objname",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_remove_lod_from_objname",
+      "description": "Remove LOD from Name: Remove LOD from Obj Name. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_remove_lod_from_objname",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_uv_clear",
+      "description": "Clear UV Maps: Clear UV layers. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_uv_clear",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_uv_add",
+      "description": "Add UV. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_uv_add",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_mark_seams_from_uv",
+      "description": "Mark Seams from UV. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_mark_seams_from_uv",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_material_to_viewport",
+      "description": "Material -> Viewport Colors: Material Color to Viewport Color. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_material_to_viewport",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_random_viewport_color",
+      "description": "Random Material Viewport Color. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_random_viewport_color",
+      "params": {},
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "act_clear_vc",
+      "description": "Clear Vertex Colors. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "object.act_clear_vc",
+      "params": {},
+      "context": "VIEW_3D"
+    }
+  ]
+}

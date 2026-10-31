@@ -85,6 +85,8 @@ DATA_PURPOSE = {
 TOOL_PURPOSE = {
     "agent-reach": "The reach base: a CLI that installs, checks and configures read access to 15 "
                    "internet platforms, and the contract the toolsets built on it follow.",
+    "blender-addons": "Tool manifests for the author's own Blender add-ons, read for the blender plugin's "
+                      "add-on tools server, with the script that drafts them from the add-ons' source.",
     "blender-gemini": "Registers the Blender MCP server with the Gemini CLI, and the skill that lets "
                       "Claude call Gemini to inspect or change an open Blender scene.",
     "brushes": "A Procreate brush library with tag-based search, and a brush designer for the brush "

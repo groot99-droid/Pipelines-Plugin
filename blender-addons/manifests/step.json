@@ -1,0 +1,125 @@
+{
+  "addon": "bl_ext.blender_org.step_importer",
+  "seen_version": "1.2.1",
+  "tools": [
+    {
+      "name": "step_import",
+      "description": "Import STEP/IGES: Import a STEP or IGES file into the current scene. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "import_scene.step",
+      "params": {
+        "filepath": {
+          "type": "string",
+          "description": "The file to import (absolute path)",
+          "required": true
+        },
+        "up_axis": {
+          "description": "Which axis pointed up in the CAD application this model came from. Usually Y for most CAD software. Try Z if your model appears lying on it's side after import (items depend on the scene)",
+          "type": "string",
+          "default": "Y"
+        },
+        "rotation_deg": {
+          "description": "Degrees to rotate around the vertical axis after up-axis correction (items depend on the scene)",
+          "type": "string",
+          "default": "0"
+        },
+        "placement": {
+          "description": "Where to place imported objects in the scene",
+          "type": "string",
+          "enum": [
+            "ORIGIN",
+            "CURSOR"
+          ],
+          "default": "ORIGIN"
+        },
+        "scale": {
+          "description": "Uniform scale multiplier applied to the imported geometry. Leave at 1.0 for correctly-exported files. Use 1000 if the model imports as millimetre-sized when it should be metres, or 0.001 for the reverse.",
+          "type": "number",
+          "minimum": 0.0001,
+          "maximum": 10000.0,
+          "default": 1.0
+        },
+        "origin_offset": {
+          "description": "Adjust how the imported assembly is offset relative to the chosen placement location. This does not change object origins.",
+          "type": "string",
+          "enum": [
+            "KEEP",
+            "CENTERXY",
+            "CENTERXYZ",
+            "BOTTOM"
+          ],
+          "default": "KEEP"
+        },
+        "merge_objects": {
+          "description": "Join all imported bodies into a single mesh object",
+          "type": "boolean",
+          "default": false
+        },
+        "use_assembly_collections": {
+          "description": "Organise imported parts into nested Blender collections matching the STEP assembly hierarchy. Ignored when Merge Bodies is enabled.",
+          "type": "boolean",
+          "default": false
+        },
+        "skip_axes": {
+          "description": "Axes",
+          "type": "boolean",
+          "default": true
+        },
+        "skip_sketches": {
+          "description": "Sketches",
+          "type": "boolean",
+          "default": true
+        },
+        "skip_lines": {
+          "description": "Lines",
+          "type": "boolean",
+          "default": true
+        },
+        "skip_hatches": {
+          "description": "Hatches",
+          "type": "boolean",
+          "default": true
+        },
+        "skip_wall_traces": {
+          "description": "Wall Traces",
+          "type": "boolean",
+          "default": false
+        },
+        "skip_wires": {
+          "description": "Wires",
+          "type": "boolean",
+          "default": false
+        },
+        "skip_rectangles": {
+          "description": "Rectangles",
+          "type": "boolean",
+          "default": false
+        },
+        "skip_extrudes": {
+          "description": "Extrude History",
+          "type": "boolean",
+          "default": false
+        },
+        "skip_cuts": {
+          "description": "Cuts / Pockets",
+          "type": "boolean",
+          "default": false
+        },
+        "skip_terrain": {
+          "description": "Terrain / Site",
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "context": "VIEW_3D"
+    },
+    {
+      "name": "step_cleanup_selected",
+      "description": "Clean Up Topology: Run topology cleanup on all selected mesh objects. Settings that are not parameters here come from the add-on's panel.",
+      "enabled": true,
+      "op": "step.cleanup_selected",
+      "params": {},
+      "context": "VIEW_3D"
+    }
+  ]
+}
