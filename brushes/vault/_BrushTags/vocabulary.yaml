@@ -1,0 +1,216 @@
+# Closed vocabulary for per-brush tagging (the brush-tagger subagent).
+#
+# The tagger picks tags ONLY from these six lists. A tag that is not here is
+# never used: the tagger returns it as a suggestion, brush_tags.py apply logs it
+# to _vocabulary_suggestions.jsonl, and the author adopts it by editing this
+# file. Re-tag with `brush_tags.py plan --force --only <note>` to apply one.
+#
+# What is NOT here, on purpose: anything the code reads from the archive. Stamp
+# or stroke, spacing, taper, pressure, tilt, speed, size, opacity, grain
+# source, era, blend and render numbers are FACETS (catalog/brushes/<id>.json;
+# query them with `brush_search.py search --where KEY=V`). A tag is for what
+# needs eyes or judgement.
+#
+# Evidence order for every tag: the contact-sheet cell (stroke, shape tile,
+# grain tile), then the brush's own name, then its facets. The set title is not
+# evidence. A name is a claim; when the preview contradicts it, tag the preview.
+# Caps per brush: medium 2, mark 2, texture 3, edge 2, motif 2, use 3. An empty
+# list is a correct answer.
+#
+# File shape (the stdlib parser in brush_search.py reads it by lines): top-level
+# `<axis>_tags:` keys, two-space `- tag` items, one `#` definition per tag on
+# the same line. A trailing `[also: a, b]` lists words people use for the tag;
+# `brush_search.py` adds them to a query that contains one of them, so
+# "fountain pen" finds brushes tagged nib-pen. Nothing is nested or quoted.
+
+# medium_tags: the traditional tool or material the mark imitates.
+medium_tags:
+  - graphite-pencil    # grey, fine-toothed line that pales as pressure lifts: HB, 6B, drawing and sketching pencils. Waxier and coloured is `colored-pencil`; blacker and crumbly is `charcoal` [also: pencil, graphite, hb, 6b, 2b, lead, sketch pencil]
+  - colored-pencil     # waxy pencil line, denser and more even than graphite, tooth shows at light touch: coloured and pastel pencils [also: coloured pencil, pastel pencil, derwent, crayon pencil, prismacolor]
+  - charcoal           # coarse, crumbly black laid by a stick or its side: vine, willow, compressed bars, conte. Paler and dustier is `chalk-pastel` [also: conte, vine charcoal, willow charcoal, carbon stick, compressed charcoal, burnt, coal]
+  - chalk-pastel       # soft, powdery, opaque stick mark: chalk and soft pastel. Greasy or waxy is `oil-pastel` or `wax-crayon` [also: chalk, soft pastel, pastel, bonobo chalk, blackboard chalk]
+  - oil-pastel         # greasy, saturated stick that smears and layers without dusting [also: oil pastels, pastel stick, greasy stick]
+  - wax-crayon         # waxy stick that skips over the tooth and leaves clumps and gaps: crayon, wax resist [also: crayon, artist crayon, wax pencil, grease pencil]
+  - technical-pen      # one constant width from start to finish: fineliner, tech pen, micron, drafting pen. Any swell makes it `nib-pen` or `brush-pen` [also: fineliner, fine liner, micron, tech pen, technical pen, drafting pen, monoline pen, rapidograph, fine tip]
+  - gel-pen            # smooth rolling ink with slight blobbing and skips: gel, ballpoint and rollerball pens [also: ballpoint, biro, rollerball, roller pen, studio pen]
+  - nib-pen            # a hard nib whose line swells with pressure or direction and ends sharp: fountain, dip, quill, calligraphy nib [also: fountain pen, dip pen, quill, calligraphy pen, crow quill, steel nib, script]
+  - brush-pen          # ink from a flexible brush tip: strong thick-thin, tapered tails, may break dry. Sumi, bamboo and reed brushes go here [also: sumi, sumi-e, sumie, ink brush, chinese brush, calligraphy brush, japanese brush, reed, bamboo]
+  - marker             # felt, chisel or art marker: flat even colour, blunt ends, overlaps darken. Wider and blunter than `technical-pen` [also: felt tip, felt pen, chisel marker, art marker, sketch marker, poster marker, highlighter]
+  - paint-pen          # opaque paint marker with a pumped tip: even body, hard ends, can run dry [also: paint marker, posca, acrylic marker, gouache pen, brushup]
+  - liquid-ink         # fluid ink as a medium: wet line that pools at its ends, beads, blots or bleeds into paper. India, China and drawing ink [also: india ink, indian ink, china ink, chinese ink, drawing ink, nautika, blotty ink, ink bleed, gesinski, iron gall, fury ink]
+  - ink-wash           # diluted ink laid as tone rather than line: grey washes, sumi shading and blots [also: diluted ink, sumi wash, grey wash, gray wash, ink shading]
+  - watercolor         # transparent wash that pools, blooms, granulates or dries darker at its rim. Opaque is `gouache` [also: watercolour, aquarelle, wet on wet, wet on dry, water colour, wash, bloom, water brush, waterbrush]
+  - gouache            # opaque water paint: flat, matte, chalky body with little pooling. Poster paint, tempera and fresco go here [also: poster paint, poster, tempera, fresco, body colour, body color, designer colour]
+  - acrylic            # opaque paint of moderate body with visible brush marks; flatter and drier than `oil-paint` [also: acrylics, acrylic paint, wet acrylic, student acrylic]
+  - oil-paint          # thick, buttery paint: ridged bristle tracks, colour dragged inside the stroke, slow edges [also: oil, oils, oil paint, turpentine, trementina, thinners, impasto brush, hogs hair, filbert, bristle brush]
+  - airbrush           # grainless, even gradient from a soft round tip. Visible particles make it `spray-paint` [also: air brush, soft brush, hard brush, medium brush, soft airbrush, hard airbrush, gradient brush]
+  - spray-paint        # aerosol: a speckled particle cloud with overspray, flicks or drips [also: spray, spraycan, spray can, aerosol, graffiti, nozzle, light spray, fat nozzle, fine nozzle]
+  - sponge             # a dabbed, pitted mark from a natural or kitchen sponge, wet or dry [also: sponge texture, wet sponge, sponge build-up, cloth, stipple sponge]
+  - palette-knife      # flat slab dragged with hard sides and broken ends, paint ridged at the edges [also: knife, painting knife, scraper, spatula, paint pusher]
+  - roller-brayer      # ink or paint rolled on: a band with streaks and patchy lift-off. Brayer, roller and ink roll [also: brayer, roller, ink roll, paint roller, rolling pin, marker roll, grit roll]
+  - printmaking        # ink pressed on: block print, rubber stamp, stamp pad, toner, linocut, letterpress. Flat ink with patchy lift-off [also: block print, linocut, lino, letterpress, rubber stamp, ink stamp, stamp pad, toner, woodcut, etching, photocopy]
+  - screentone         # comic and manga tone sheets: dot screens, line screens and hatches printed as a pattern [also: halftone, half-tone, tone sheet, manga tone, benday, ben-day, dot screen, comic tone]
+  - smudge-tool        # a brush made for the smudge tool: it drags paint that is already there and lays none of its own [also: smudge, smudger, blender, blending brush, stump, tortillon, finger, soft blender, blend]
+  - eraser             # shaped to remove paint with character: textured, wet or lift-out erasers [also: eraser brush, lift out, lift-out, rubber, erase]
+  - natural-material   # the grain of a raw material rather than a drawing tool: clay, silt, ash, sand, hemp, cotton, hessian, husk, wood [also: clay, ash, silt, sandstone, limestone, hemp, cotton, hessian, linen, husk, raw material, earth pigment]
+  - digital-light      # reads as emitted light: neon, glow, flare, bokeh, light pen [also: neon, glow, glowing, light pen, lightpen, light brush, lightbrush, flare, bokeh, nebula, luminance, light leak]
+  - digital-native     # no traditional counterpart: rendered tubes, jelly, metal, vector-clean shapes, pixel-clean patterns [also: rendered, 3d, vector, glossy, jelly, abstract, generative, digital]
+
+# mark_tags: the geometry of what one stroke or one tap leaves.
+mark_tags:
+  - line               # a continuous stroke, narrow against its length, that draws a contour and varies a little [also: lines, contour, linework, line work, outline, draw]
+  - monoline           # a line of one constant width and rounded ends, the same at every pressure [also: mono line, monoliner, constant width, even line, uniform line]
+  - tapered-line       # a line that thins to a point at one or both ends: flicks, whiskers, grass, brush tails [also: taper, tapered, pointed line, flick, tail]
+  - calligraphic-line  # a line with thick-thin stress from the angle or pressure of a pen: letterforms, flourishes [also: thick thin, thick-thin, stress, flourish, script line, lettering line]
+  - broad-stroke       # a continuous wide stroke in which the tip shape shows (flat, filbert, round, chisel); a paint stroke, not a contour [also: broad, wide stroke, flat brush, round brush, filbert, paint stroke, big brush]
+  - wash               # a wide area of thin tone with no tip shape visible: fills and glazes [also: washes, glaze, tone, wide wash, flat wash, colour field]
+  - dab                # separate tip impressions readable along the path, each one a touch of the tool. A whole picture per tap is a stamp tag [also: dabs, dabbing, dotting, touch, touches]
+  - smear              # paint dragged and softened along the path; the mark has a smoothed tail [also: smudge, smeared, drag, dragged, blend stroke, push]
+  - knife-scrape       # a flat slab dragged with hard sides and broken ends [also: scrape, scraped, knife stroke, scraper, spatula mark]
+  - roller-band        # one wide band laid by a roller, with streaky or patchy edges [also: band, roller stroke, brayer band, roll]
+  - stipple            # fine dots built up by touch, irregular in place. Regular printed dots are `pattern-fill` [also: stippling, stippled, dots, dotwork, pointillism, speckle fill, freckles]
+  - hatch              # sets of parallel short lines laid by each stroke [also: hatches, hatching, parallel lines, shading lines, diagonal hatch]
+  - crosshatch         # sets of crossed lines laid by each stroke, building tone where they overlap [also: crosshatching, cross hatch, cross hatching, cross-hatch, crossed lines]
+  - scribble           # looping, back-and-forth scrawl; no single line reads alone [also: scribbles, scrawl, doodle, squiggle, tangle]
+  - splatter           # flung droplets of mixed size with no order. Repeated identical pieces are `scatter` [also: splatters, splattering, splatted, splash, splashes, spatter, flecks, flicks, sprinkle]
+  - drip               # a run of liquid down from a point: tear-shaped drops with trails [also: drips, dripping, drop, drops, runs, runny, tear]
+  - scatter            # many small separate pieces thrown around the path; the pieces do not join into one mark [also: scattered, confetti, sprinkles, bits, particles, specks]
+  - spray-cloud        # a soft, wide, grainy cloud from a nozzle with no hard edge [also: spray, mist, spray cloud, fog brush, overspray, airbrush cloud]
+  - dotted-line        # separate round or square dots in a row along the path [also: dots in a row, dotted, dashed, dash line, beads, row of dots]
+  - pattern-fill       # a mechanical repeating pattern revealed by the stroke: halftone, screentone, grid, ruled lines, diagonals [also: pattern, patterns, repeat, tile, tiles, halftone dots, grid, tessellation, geometric pattern, seamless]
+  - picture-stamp      # one complete picture per tap: an object, ornament, flower, shape or frame [also: stamp, stamps, motif stamp, shape stamp, ornament, clip art, icon]
+  - stroke-stamp       # one pre-painted brush stroke or blot per tap; the tap places a finished mark instead of drawing one [also: stroke stamp, painted stroke, prepainted stroke, ready-made stroke, blot stamp]
+  - sheet-stamp        # one tap lays a whole sheet of surface: paper, canvas, noise, grunge. It is a texture, not a picture [also: texture stamp, texture sheet, surface stamp, overlay, noise sheet, paper sheet]
+  - ribbon             # the stroke renders as one continuous band, tube, rope or helix whose shading follows the path [also: tube, rope, band, helix, cord, spaghetti, noodle, tubular]
+  - flood-fill         # covers a wide area fast with one opaque, even layer; fillers and big rounds [also: filler, fill, flat fill, flats, block in, block-in, solid fill]
+  - soft-gradient      # a wide soft-edged dab that fades out evenly from its centre, no tip shape or grain showing [also: gradient, soft round, soft fade, airbrushed fade, soft blend]
+  - blot               # one ink or paint pool per touch: round, irregular, with a wet heart [also: blotch, blotches, blotty, blobs, ink blot, puddle, pool]
+  - rake-stroke        # parallel tracks laid together, a comb or rake of bristles pulled along [also: rake, comb, streaks, multi-bristle, streaky stroke, grainy rake, oily rake]
+
+# texture_tags: the surface inside the mark.
+texture_tags:
+  - smooth             # no surface variation inside the mark [also: clean, even, solid, plain, flat tone, smooth fill]
+  - paper-tooth        # fine, even speckle where paper grain shows through; it closes up under pressure [also: toothy, tooth, paper grain, paper, grainy, grain, dry paper, stained paper]
+  - canvas-weave       # a regular woven grid shows through, as in primed canvas [also: canvas, linen weave, weave, woven canvas, canvas texture, dirty canvas]
+  - bristle-streak     # parallel tracks along the stroke left by brush hairs [also: bristles, bristle, streaks, streaky, hog hair, visible bristles, brush hairs, bristle brush]
+  - dry-broken         # the mark skips into large irregular gaps as if the tool ran dry. Fine even speckle is `paper-tooth` [also: dry brush, dry, drybrush, broken, running out, drying, dried-out, skipping, worn-out]
+  - gritty             # coarse, irregular specks like sand, rougher and less even than `paper-tooth` [also: grit, grain, gritty, sandy, sand, rough grain, coarse, salt grain, dusty grit]
+  - speckled           # scattered small flecks or freckles over a clean body [also: freckles, freckled, flecked, flecks, specks, spots, spotty, sprinkled]
+  - mottled            # blotchy light and dark patches at a medium scale: sponge, cloud, stain, uneven wash [also: blotchy, patchy, cloudy, uneven, stained, stain, cloud texture, sponged]
+  - granulated         # soft darker flecks settled inside a wash, as pigment granulates in watercolor [also: granulating, granulation, pigment flecks, settled pigment]
+  - pooled             # tone gathers unevenly inside a wash and dries darker in puddles [also: pooling, puddles, puddled, pools, puddle]
+  - blooming           # feathery backruns and cauliflower blooms where wet paint meets damp paper [also: blooms, bloom, backrun, backruns, cauliflower, bleed bloom, blooming cloud]
+  - salt-starburst     # small pale starburst or snowflake gaps scattered through a wash, as salt makes [also: salt, salted, starburst, salt effect, snowflake texture]
+  - sponge-pitted      # a pitted, porous surface of small round holes [also: pitted, porous, sponge texture, holes, cratered]
+  - crumbly            # broken into crumbs or flakes along the stroke, as stick media crumble [also: crumbles, crumbling, flaky, flaking, broken stick, charcoal crumble]
+  - powdery            # soft dust with no hard particles: smoke-like pigment [also: dusty, dust, powder, charcoal dust, ash, soft dust]
+  - wet-sheen          # a damp, glossy look inside the stroke, edges still wet [also: wet, glossy wet, damp, moist, wet look, moist sharp, wet paint]
+  - flat-matte         # dull, opaque and uniform with no sheen, like gouache or flat acrylic [also: matte, opaque, flat, chalky, flat colour, flat color, poster flat]
+  - translucent-glaze  # thin layered colour through which what lies under shows [also: glaze, glazing, transparent, see-through, layered glaze, glazed, translucent]
+  - woven-cloth        # a coarse or fine fabric weave: hessian, cotton, burlap, linen thread [also: hessian, burlap, cotton, fabric, cloth, textile, linen, thread, jute]
+  - wood-grain         # long wavy grain lines and knots like cut timber [also: wood, wooden, timber, planks, woodgrain, grain of wood, wood texture, bark]
+  - stone-grain        # a mineral surface: rock, sandstone, concrete, plaster, limestone [also: stone, rock, rocky, sandstone, limestone, concrete, plaster, brick, wall, quartz]
+  - metal-surface      # brushed, scratched or plated metal [also: metal, metallic, steel, iron, brushed metal, corrugated, chrome, foil]
+  - rust-corroded      # flaking, pitted, orange-brown decay [also: rust, rusty, rusted, corroded, decay, patina, weathered]
+  - marbled            # swirling veins or flowing bands of two or more tones [also: marble, veins, veined, swirls, swirled, marbling]
+  - scratchy           # thin hard scratches or fibres scored across the mark [also: scratch, scratches, scratched, scored, scuffed, scribbly, hairlines]
+  - halftone-dots      # regular dots in a grid or screen [also: halftone, half-tone, dots grid, dot screen, screentone dots, benday dots]
+  - ruled-lines        # regular lines, hatching or a grid as the fill [also: grid, lines, hatched fill, ruled, line pattern, diagonal lines, stripes, striped]
+  - fibrous            # long irregular fibres: paper pulp, hemp, straw, reed [also: fibres, fibers, fiber, fibre, strands, straw, hemp, pulp, thread-like]
+  - impasto            # paint with visible thickness: ridges and ruts that catch light [also: thick paint, ridged, thick, buttery, heavy loaded, heavy body, paint ridges]
+  - glossy-form        # shaded with highlights so the mark reads as a solid body: tube, metal, jelly, glass [also: glossy, shiny, jelly, glass, gloss, highlights, rendered form, 3d form, solid]
+  - luminous           # reads as emitted light: a bright core with a soft halo [also: glow, glowing, light, neon, shining, radiant, lit]
+  - hairy              # separate hair or fur strands make up the body of the mark [also: hair, fur, furry, fuzzy strands, whiskers, bristly strands, stubble]
+  - crackled           # a network of fine cracks, as dry paint or old plaster makes [also: cracks, cracked, crackle, craquelure, fissured, parched]
+  - noisy-grain        # even digital static or film grain across the mark, with no paper or material behind it [also: noise, static, film grain, digital noise, grunge, grunge noise, grain shader, grain shaders]
+
+# edge_tags: the boundary of the mark.
+edge_tags:
+  - crisp              # a clean, sharp boundary [also: sharp, clean edge, hard edge, hard-edged, crisp edge, defined, hard]
+  - soft               # the boundary fades evenly to nothing [also: soft edge, soft-edged, faded, fading, gentle, diffuse, blurred, blurry]
+  - feathered          # the boundary fades out in a wide, even gradient of fine particles [also: feather, feathering, airy edge, graded edge]
+  - fuzzy              # the boundary is covered in fine short fibres or hairs [also: fuzz, fluffy, fluff, furry edge, hairy edge]
+  - rough              # the boundary is ragged at a fine scale: toothy, broken by grain, but still where it was drawn [also: roughened, toothy edge, grainy edge, rough edge, irregular]
+  - ragged             # the boundary is chewed and irregular at a larger scale, with gaps and nibbles [also: chewed, uneven edge, broken edge, raggedy, deckled]
+  - torn               # a deliberately torn or deckle edge like handmade paper [also: tear, deckle, deckled edge, ripped, torn paper]
+  - jagged             # sharp zig-zag points along the boundary [also: serrated, saw-tooth, sawtooth, spiky, zigzag, notched, pointy]
+  - frayed             # the boundary splits into separate strands or bristle ends, mostly at the tails [also: fray, frays, split ends, split, wispy, bristle ends]
+  - bleeding           # the boundary creeps outward in feathers or tendrils, as ink spreads in wet paper [also: bleed, bleeds, seeping, seep, wicking, spreading, wet bleed, creeping, directional seep]
+  - dark-rimmed        # darker at the boundary than inside, as a dried watercolor edge [also: wet edge, wet edges, rim, edge darkening, dark edge, hard dark edge, outlined wash]
+  - blobby             # the outline swells into rounded lumps and bobbles [also: blobs, blobbed, bobbles, bobbled, bulbous, lumpy]
+  - wobbly             # the outline wanders at a coarse scale, like a shaky hand [also: wobble, shaky, wavy outline, hand-drawn wobble, unsteady, trembling]
+  - scalloped          # the boundary is a row of round bumps, from repeated overlapping dabs [also: scallops, bumpy, bumps, bubbly edge, beaded, bead edge]
+  - speckled-edge      # loose specks and overspray sit around a hard boundary [also: overspray, spatter edge, specks around, halo of specks, flecked edge]
+  - round-ended        # the mark starts and ends in round caps [also: round caps, rounded ends, round tip, blunt round, rounded]
+  - square-ended       # the mark starts and ends in flat, square or angled cuts, as a chisel does [also: square caps, chisel end, flat end, blunt, square, cut ends]
+  - glowing-edge       # the boundary carries a soft light halo [also: halo, glow edge, outer glow, light rim, rim light]
+  - ink-pooled         # ink gathers into a bead or ball at the start or the end of the stroke [also: bead ends, balled ends, pooled ends, ink pools, dotted ends]
+  - pixel-clean        # the boundary is perfectly smooth and mechanical, as a vector or rendered shape [also: vector edge, smooth edge, precise edge, mechanical, anti-aliased, polygon edge]
+
+# motif_tags: what a stamp or scatter depicts. Empty for a plain tip.
+motif_tags:
+  - leaf-foliage       # leaves, sprigs, fronds and ferns [also: leaf, leaves, foliage, sprig, frond, fern, leafy, greenery, botanical]
+  - flower             # blooms and floral sprays. A bare leaf is `leaf-foliage` [also: floral, flowers, bloom, blossom, petal, petals, rose, peony, daisy, flower power]
+  - fruit-vegetable    # berries, pumpkins and other produce [also: fruit, vegetable, berry, berries, pumpkin, pumpkins, apple, produce, gourd]
+  - mushroom           # mushrooms, toadstools and fungi [also: mushrooms, toadstool, fungus, fungi]
+  - grass-reed         # blades, stalks and reeds growing from a base [also: grass, wheatgrass, reed, reeds, stalk, stalks, wheat, swordgrass, wildgrass, blades]
+  - tree-branch        # twigs, branches, trunks and treetops [also: tree, trees, branch, branches, twig, twigs, trunk, pine, forest, snow gum, canopy]
+  - bark-wood          # bark, planks and wood as a subject [also: bark, planks, timber, log, logs, wooden]
+  - household-object   # cups, mugs, teapots, candles and other made things [also: cup, mug, teapot, candle, jar, bottle, vase, tableware, object, kitchen]
+  - food-sweets        # cookies, cocoa, coffee, tea, puddings, candy: food and drink [also: food, drink, drinks, cookie, cookies, cocoa, chai, latte, pudding, caramel, candy, toffee, sweet, sweets, treats, dessert, cake, coffee, tea, chocolate]
+  - geometric-shape    # circles, squares, stars and polygons drawn as shapes in their own right [also: shape, shapes, circle, square, triangle, polygon, geometric, polygons, hexagon]
+  - polygon-facets     # low-poly facets, crystals of flat triangles and planes [also: low poly, faceted, facets, polygonal, polygon]
+  - frame-border       # an outline made to hold something inside it [also: frame, frames, border, borders, outline frame, edge frame]
+  - symbol             # stars, crosses, arrows, bolts and signs [also: sign, signs, icon, arrow, star, bolt, cross, mark]
+  - heart              # heart shapes, plain or ornamented [also: hearts, love, heart shape]
+  - droplet-splash     # drops, drips and splashes of liquid [also: drop, drops, droplet, droplets, splash, splashes, drip, drips, spill]
+  - bubble             # spheres with a highlight or rim [also: bubbles, soap bubble, sphere, spheres, orb, orbs, ball]
+  - cloud-smoke        # cloud, mist, smoke and steam [also: cloud, clouds, smoke, mist, fog, steam, haze, vapour, vapor]
+  - flame-spark        # fire, embers and sparks [also: flame, flames, fire, spark, sparks, ember, embers, burst, flare fire]
+  - water-wave         # ripples, waves and the surface of water [also: wave, waves, water, ocean, oceans, sea, ripple, ripples, river, waveform]
+  - rain               # rain, hail and falling streaks [also: rainfall, hard rain, drizzle, downpour, storm]
+  - snow-ice           # flakes, frost and ice [also: snow, snowflake, driven snow, frost, ice, icy, frozen]
+  - light-flare        # bokeh, lens flare, glimmer, aurora and nebula [also: flare, bokeh, glimmer, lens flare, aurora, nebula, lightleak, light leak, sparkle, glitter]
+  - star-sky           # stars, galaxies and night sky [also: stars, starry, starry night, galaxy, galaxies, space, cosmos, night sky, constellation]
+  - fur-hair           # fur, hair or feathers as the thing drawn [also: fur, hair, hairs, feather, feathers, whiskers, mane, long fur, short fur, flowing hair]
+  - skin-pores         # skin detail: pores, stubble, wrinkles, blemishes [also: skin, pores, stubble, wrinkle, wrinkles, old skin, rough skin, zombie skin, complexion]
+  - tube-rope          # tubes, ropes and cords [also: tube, tubes, rope, cord, pipe, hose, spaghetti, noodle]
+  - helix-spiral       # helixes, springs and spirals [also: helix, spiral, spirals, coil, coils, spring, swirl, twist]
+  - paper-sheet        # a sheet of paper or card as a surface [also: paper, sheet, card, cardboard, notepaper, newsprint, parchment, butcher paper]
+  - cloth-fabric       # cloth, weave or a piece of fabric as the thing drawn [also: cloth, fabric, textile, weave, hessian, cotton, sack, burlap]
+  - stone-concrete     # rock, plaster, concrete and brick as a subject [also: stone, rock, rocks, concrete, brick, wall, pebble, gravel, cobble]
+  - earth-sediment     # soil, sand, silt, ash and clay [also: earth, soil, sand, silt, ash, volcanic ash, clay, mud, dust, sediment, geology, geological]
+  - crystal-gem        # crystals and gemstones [also: crystal, crystals, gem, gems, gemstone, quartz, mineral, minerals, diamond]
+  - metal-rust         # metal plate, mesh, chain and corrosion as a subject [also: metal, rust, rusted, iron, mesh, chain, cage, caged, heavy metal, wire]
+  - abstract-form      # a designed shape that depicts nothing [also: abstract, abstraction, blob, organic form, membrane, form]
+  - retro-pattern      # period graphics: 60s and 70s swirls, discs, bolts and halftone prints [also: retro, vintage, groovy, disco, 70s, 60s, newsprint print, psychedelic, fever, buzzz]
+  - grid-lattice       # grids, lattices and tessellated cells [also: grid, lattice, mesh grid, tessellation, tessellated, cubes, cells, checker]
+
+# use_tags: the job an artist reaches for it to do.
+use_tags:
+  - sketching          # loose construction drawing: light line or tone that reads as erasable [also: sketch, sketcher, sketches, rough, drafting, draft, thumbnail, pencil sketch, underdrawing]
+  - line-art           # final linework: dark, dense, controlled. Inks, liners and outlining [also: inking, inker, inkers, inked, ink, linework, line work, outline, outlining, lineart, clean lines, tech pen]
+  - lettering          # made for letterforms and titles: thick-thin stress, or an even monoline with smoothing [also: letter, letters, letterform, hand lettering, titles, typography, type, text, signage]
+  - calligraphy        # formal pen or brush script with set stress and flourishes [also: calligraphic, script, copperplate, brush script, chinese calligraphy, sumi calligraphy, flourish]
+  - blocking-in        # covering area fast with flat opaque colour: fillers, rollers, big rounds [also: block in, block-in, blocking, fill, filling, flats, flat colour, base colour, big brush]
+  - painting-broad     # painterly work on a large scale: visible strokes that build form like oil or acrylic [also: painting, painterly, paint, impressionist, impressionism, expressive, oil painting]
+  - shading            # building tone gradually over a drawing: shaders, pencils on their side, hatching [also: shade, shader, shaders, shaded, tone, tonal, modelling, modeling, form shading, comic shading]
+  - blending           # moving or softening paint already there; named a smudge, blender or smudger, or lays no pigment of its own [also: blend, blender, blenders, smudge, smudger, smudging, soften, softening, smooth transitions]
+  - glazing            # thin transparent layers over a large area [also: glaze, glazes, tinting, transparent layers, veil]
+  - washes             # broad watery tone for backgrounds and skies [also: wash, background wash, sky, watery, flat wash, graded wash]
+  - underpainting      # first loose tonal layer under finished work [also: underpaint, ground, toning, imprimatura, base layer, monochrome block-in]
+  - detailing          # small precise accents: riggers, fine liners for hair, edges and highlights [also: details, detail, fine detail, rigger, fine, tiny, accents, small details]
+  - highlighting       # adding light accents and pale marks on top [also: highlight, highlights, lift, brighten, sparkle, light accents, glints]
+  - texturing          # laying a surface over an area without drawing a form: paper, canvas, noise, grain [also: texture, textures, textured, texturize, surface, overlay, grunge, add texture, background texture]
+  - grain-adding       # roughening smooth digital tone with paper or film grain after the fact [also: grain, grainy, grain shader, grain shaders, add grain, grain builder, dither, toothy overlay]
+  - pattern-filling    # filling a region with a mechanical pattern: halftone, hatching, grids [also: pattern, patterns, fill pattern, halftone fill, hatch fill, screen fill, tile fill]
+  - comic-toning       # tone for comics and manga: screentones, hatching, crosshatching, ink textures [also: comic, comics, manga, graphic novel, screentone, tone, cartoon, toon, panel, newspaper]
+  - decorating         # placing ready-made pictures: stamps, ornaments, frames [also: decorate, decoration, decorative, ornament, ornaments, embellish, clip art, stamp it, motifs]
+  - effects            # one-shot effects: splatter, sparks, glow, drips, spray [also: effect, fx, special effect, special effects, splash effect, splatter effect]
+  - atmosphere         # weather and air: clouds, smoke, fog, rain, snow, fire [also: weather, mist, fog, smoke, sky, clouds, mood, ambience, environment]
+  - lighting-glow      # painting light: glows, flares, bokeh, lightleaks, neon [also: light, lights, lighting, glow, neon, flare, bokeh, light effects, lightleak, luminous]
+  - portrait-detail    # skin, hair, stubble and wrinkles for faces and characters [also: portrait, face, faces, skin, hair, character, stubble, realism, figure]
+  - foliage-landscape  # plants, trees, grass, rock and ground for scenery [also: landscape, foliage, plants, nature, trees, scenery, garden, forest, environment art, botanical]
+  - dimensional-effects # 3D-looking lettering and ornament: tubes, helixes, jelly, metal [also: 3d, three-d, dimensional, 3d lettering, bubble lettering, glossy lettering, jelly lettering, tube lettering]
+  - retro-styling      # period looks: vintage prints, halftone, 70s patterns [also: retro, vintage, old print, newsprint, groovy, nostalgia, aged print, riso]
+  - erasing            # shaped to remove paint with character: lift-out and textured erasers [also: erase, eraser, lift out, remove, clean up, scrub out, cleanup]

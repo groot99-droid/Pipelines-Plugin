@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_ef6e9bd35739",
+    "b_b021b2756084",
+    "b_38721775fe19",
+    "b_f494dd719e36",
+    "b_8a720ebbafd2",
+    "b_a25eefd27655",
+    "b_27e7c8b6e879",
+    "b_195e9662f15c"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Water 1",
+  "note": "01_Procreate_Defaults/p5-water.md",
+  "pack": "procreate-5",
+  "pack_kind": "official",
+  "set_id": "s_4da9c863b438",
+  "set_slug": "p5-water",
+  "title": "Water (Procreate 5)"
+}

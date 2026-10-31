@@ -1,0 +1,24 @@
+{
+  "brush_count": 10,
+  "brushes": [
+    "b_3061f977116a",
+    "b_eb93c3ae801d",
+    "b_466e48a84da9",
+    "b_ec783f0c48ad",
+    "b_ada828a8e2e1",
+    "b_01cdd8e5d728",
+    "b_87ec109103e5",
+    "b_e88b4030adb0",
+    "b_e231a7e79736",
+    "b_d31caea2ed5c"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Sketching 1",
+  "note": "01_Procreate_Defaults/p5-sketching.md",
+  "pack": "procreate-5",
+  "pack_kind": "official",
+  "set_id": "s_e4b1960f5145",
+  "set_slug": "p5-sketching",
+  "title": "Sketching (Procreate 5)"
+}

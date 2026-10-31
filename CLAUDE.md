@@ -22,9 +22,12 @@ Where a tool's skills and agents live depends on how the tool is used:
 ```
 INDEX.md             generated index of the tools, skills and agents
 .claude/skills/      creative-writing-pipeline, chunk-tag-backfill, studio-pipeline,
-                     higgsfield-library-sync, blender-gemini
-.claude/agents/      creative-writing-{chunk-tagger,drafter,librarian-native}
-.mcp.json            the gemini MCP server Claude calls to reach Blender (blender-gemini)
+                     higgsfield-library-sync, blender-gemini, brush-library,
+                     brush-tag-backfill, brush-designer
+.claude/agents/      creative-writing-{chunk-tagger,drafter,librarian-native},
+                     brush-{tagger,librarian-native}
+.mcp.json            the gemini MCP server Claude calls to reach Blender (blender-gemini), and the
+                     brushes MCP server (brushes/pipeline/mcp_server.py)
 blender-addons/      manifests/ (tools for the author's own Blender add-ons, read by the blender
                      plugin's addon-tools server), sources.json, build_manifests.py, tests/
 blender-gemini/      install.py (registers the Blender MCP server with the Gemini CLI,
@@ -39,7 +42,7 @@ studio/              the studio tool
   pipeline/          spec.yaml, the bookkeeper, the note and gate writers, the brush
                      packer, the compute gate, and their tests
   hub/               the desk: a loopback server and page over the vault and the runs,
-                     the Windows launcher, and (once copied in) the brush designer
+                     and the Windows launcher
   assets/            what runs keep, by project, kind and slug. Not versioned
   library/           the generations library: every Higgsfield generation in catalog.json,
                      thumbnails, a page over them, and library.py; originals under files/
@@ -55,6 +58,11 @@ writing-museum/      the Writing Museum: a walkable 3D museum of the creative-wr
   tools/             walk_test.mjs: the browser walk-through
 sound-library/       the author's sound effects: catalog.json (versioned), library.py (ingest,
                      search, fetch, verify), tests/; files/ holds the WAVs and is not versioned
+brushes/             the brush tool: the Procreate brush library (library/, originals through Git LFS),
+                     the catalog built from it (catalog/), a search engine and Obsidian vault
+                     (vault/), the pipeline scripts (pipeline/: codec, ingest, previews, notes, MCP
+                     and app servers), and the designer app (app/); its own README.md and
+                     docs/CONTRACTS.md, the frozen contract the tests check the code against
 agent-reach/         the reach base: Agent Reach imported whole (git subtree): a Python package and
                      CLI (agent-reach) that installs, checks (doctor) and configures read access to
                      15 internet platforms; its own CLAUDE.md, tests/ and TOOLSETS.md
@@ -207,9 +215,8 @@ the author names at a `scene-3d` intake, through `writing-museum/build/`.
   sends the same snippets through the Blender MCP server (they pass its safe mode).
   `glb_inspect.py` checks a model against a budget. Tests use a fake Meshy and skip the
   Blender run unless `blender` is on PATH or `ROSW_BPY_PYTHON` names a Python with `bpy`.
-- `studio/pipeline/brush_pack.py` packs a designer bundle into a Procreate file
-  with `plistlib`. A Procreate-written `.brush` under
-  `studio/pipeline/tests/fixtures/procreate/` turns its format test on.
+- The studio makes no brush file itself. Its `brush` pipeline (not yet
+  implemented) will run through `brushes/`, the brush tool at the repo root.
 - Run the tests after touching the spec, a gate, `tokens.json`, `SCHEMA.md`, the
   vault's `CLAUDE.md`, the skill or either script:
   `python -m unittest discover -s studio/pipeline/tests`. They run against

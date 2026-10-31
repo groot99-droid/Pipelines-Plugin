@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_cde8b3d40de7",
+    "b_f957f24b084f",
+    "b_b2f80d7f27c2",
+    "b_213db4bd089b",
+    "b_269fe869d274",
+    "b_f4fedb6eabaf",
+    "b_848b7c1afbf8",
+    "b_b0ece141e38c"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "P2_Spraypaints",
+  "note": "01_Procreate_Defaults/p2-spraypaints.md",
+  "pack": "procreate-2",
+  "pack_kind": "official",
+  "set_id": "s_f483a19ba4f4",
+  "set_slug": "p2-spraypaints",
+  "title": "Spraypaints (Procreate 2)"
+}

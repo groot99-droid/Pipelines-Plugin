@@ -1,0 +1,830 @@
+{
+  "schema": "rosw-brushes-sources/1",
+  "packs": [
+    {
+      "id": "autumn-brush-box",
+      "kind": "vendor",
+      "vendor": "Gray Cat Graphics",
+      "product": "Autumn Brush Box for Procreate",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "info.txt in the pack is signed \"Asya aka Zzorna from Gray Cat Graphics\" and lists the storefronts creativemarket.com/zzorna, thehungryjpeg.com/zzorna and designbundles.net/zzorna",
+      "match": [
+        "Autumn_Brush_Box_for_Procreate/**",
+        "**/Autumn_Brush_Box_for_Procreate.zip",
+        "Autumn_Brush_Box_for_Procreate.zip"
+      ],
+      "sets": {
+        "Autumn Flow": {
+          "slug": "autumn-flow",
+          "title": "Autumn Flow"
+        },
+        "Autumn Stamps ": {
+          "slug": "autumn-stamps",
+          "title": "Autumn Stamps"
+        }
+      }
+    },
+    {
+      "id": "tgts-grain-shaders",
+      "kind": "vendor",
+      "vendor": "True Grit Texture Supply",
+      "product": "Grain Shader Brushes for Procreate",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "folder name (TGTS) and the links in the pack's PDF",
+      "match": [
+        "TGTS-GrainShader-Procreate-V2.0/**",
+        "**/Grain_Shader_Brushes_For_Procreate.zip",
+        "Grain_Shader_Brushes_For_Procreate.zip"
+      ],
+      "sets": {
+        "Grain Shaders": {
+          "slug": "grain-shaders",
+          "title": "Grain Shaders"
+        }
+      }
+    },
+    {
+      "id": "rsco-dry-brush-pack",
+      "kind": "vendor",
+      "vendor": "RetroSupply Co.",
+      "product": "The Dry Brush Pack for Procreate",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "folder name; a PDF in the pack links to https://www.retrosupply.co/collections/procreate-brushes",
+      "match": [
+        "The Dry Brush Pack for Procreate by RetroSupply/**",
+        "**/The_Dry_Brush_Pack_for_Procreate.zip",
+        "The_Dry_Brush_Pack_for_Procreate.zip"
+      ],
+      "sets": {
+        "RSCo Dry Brush Pack": {
+          "slug": "rsco-dry-brush-pack",
+          "title": "RSCo Dry Brush Pack"
+        }
+      }
+    },
+    {
+      "id": "frankentoon-canvas-x",
+      "kind": "vendor",
+      "vendor": "Frankentoon",
+      "product": "Canvas X - Procreate Brush Pack",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "folder name and set name",
+      "match": [
+        "Frankentoon - Canvas X/**",
+        "**/Canvas_X_-_Procreate_Brush_Pack.zip",
+        "Canvas_X_-_Procreate_Brush_Pack.zip"
+      ],
+      "sets": {
+        "FTOON - Canvas X": {
+          "slug": "ftoon-canvas-x",
+          "title": "FTOON - Canvas X"
+        }
+      }
+    },
+    {
+      "id": "frankentoon-nautika",
+      "kind": "vendor",
+      "vendor": "Frankentoon",
+      "product": "Nautika - Brush Pack for Procreate",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "brush file names (Frankentoon_-_...)",
+      "match": [
+        "Nautika_-_Brush_Pack_for_Procreate/**",
+        "**/Nautika_-_Brush_Pack_for_Procreate.zip",
+        "Nautika_-_Brush_Pack_for_Procreate.zip"
+      ],
+      "sets": {}
+    },
+    {
+      "id": "insecto-charcoal",
+      "kind": "vendor",
+      "vendor": "Insecto",
+      "product": "Charcoal Set - Procreate Brushes",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "folder name",
+      "match": [
+        "Insecto Charcoal Procreate/**",
+        "**/Charcoal_Set_-_Procreate_Brushes.zip",
+        "Charcoal_Set_-_Procreate_Brushes.zip"
+      ],
+      "sets": {}
+    },
+    {
+      "id": "bocadebra-forest-tales",
+      "kind": "vendor",
+      "vendor": "Bocadebra",
+      "product": "Texture brushes for Procreate (Forest Tales)",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "folder name",
+      "match": [
+        "Bocadebra Brushes for Procreate/**",
+        "**/Texture_brushes_for_Procreate.zip",
+        "Texture_brushes_for_Procreate.zip"
+      ],
+      "sets": {
+        "Forest Tales": {
+          "slug": "forest-tales",
+          "title": "Forest Tales"
+        }
+      }
+    },
+    {
+      "id": "brushup-paint-pens",
+      "kind": "vendor",
+      "vendor": "BrushUp",
+      "product": "Paint Pens for Procreate",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "folder name and set name",
+      "match": [
+        "BrushUp- Paint Pens/**",
+        "**/Paint_Pens_for_Procreate.zip",
+        "Paint_Pens_for_Procreate.zip"
+      ],
+      "sets": {
+        "BrushUp- Paint Pens": {
+          "slug": "brushup-paint-pens",
+          "title": "BrushUp- Paint Pens"
+        }
+      }
+    },
+    {
+      "id": "igb-vintage-ink-kit",
+      "kind": "vendor",
+      "vendor": "Ink Gang Boss",
+      "product": "Vintage Ink Kit",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "PDF file names",
+      "match": [
+        "Procreate_Vintage_Ink_Brushes/**",
+        "**/Procreate_Vintage_Ink_Brushes.zip",
+        "Procreate_Vintage_Ink_Brushes.zip"
+      ],
+      "sets": {
+        "IGB Vintage Ink Kit": {
+          "slug": "igb-vintage-ink-kit",
+          "title": "IGB Vintage Ink Kit"
+        }
+      }
+    },
+    {
+      "id": "lettering-3d",
+      "kind": "vendor",
+      "vendor": "Neka (muffin_elfa_art)",
+      "product": "Procreate 3D Lettering Bundle",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "PDF author and a link in the pack's PDF",
+      "match": [
+        "Procreate 3D Lettering Bundle/**",
+        "**/Procreate_3D_Lettering_Bundle.zip",
+        "Procreate_3D_Lettering_Bundle.zip"
+      ],
+      "sets": {
+        "3D": {
+          "slug": "3d",
+          "title": "3D"
+        }
+      }
+    },
+    {
+      "id": "trendy-stamps",
+      "kind": "vendor",
+      "vendor": null,
+      "product": "Trendy Stamps for Procreate",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "none found in the pack",
+      "match": [
+        "Trendy_Stamps_for_Procreate/**",
+        "**/Trendy_Stamps_for_Procreate.zip",
+        "Trendy_Stamps_for_Procreate.zip"
+      ],
+      "sets": {
+        "PD Dynamic Brushes": {
+          "slug": "pd-dynamic-brushes",
+          "title": "PD Dynamic Brushes"
+        },
+        "PD Floral Stamps": {
+          "slug": "pd-floral-stamps",
+          "title": "PD Floral Stamps"
+        },
+        "PD Polygonal Stamps": {
+          "slug": "pd-polygonal-stamps",
+          "title": "PD Polygonal Stamps"
+        },
+        "PD Watercolor Strokes": {
+          "slug": "pd-watercolor-strokes",
+          "title": "PD Watercolor Strokes"
+        }
+      }
+    },
+    {
+      "id": "monoliners",
+      "kind": "vendor",
+      "vendor": null,
+      "product": "Monoliners Procreate Brush Set",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "none found in the pack",
+      "match": [
+        "Monoliners Brushset/**",
+        "**/Monoliners_Procreate_Brush_Set.zip",
+        "Monoliners_Procreate_Brush_Set.zip"
+      ],
+      "sets": {
+        "Monoliners": {
+          "slug": "monoliners",
+          "title": "Monoliners"
+        }
+      }
+    },
+    {
+      "id": "everything-watercolour",
+      "kind": "vendor",
+      "vendor": null,
+      "product": "Everything Watercolour for Procreate",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "none found in the pack",
+      "match": [
+        "Pattern_Procreate_brushes/Everything_Watercolour.brushset*",
+        "**/EVERYTHING_WATERCOLOUR_for_Procreate.zip",
+        "EVERYTHING_WATERCOLOUR_for_Procreate.zip"
+      ],
+      "sets": {
+        "💧Everything Watercolour": {
+          "slug": "everything-watercolour",
+          "title": "Everything Watercolour"
+        }
+      }
+    },
+    {
+      "id": "pattern",
+      "kind": "vendor",
+      "vendor": null,
+      "product": "Pattern Procreate brushes",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "none found in the pack",
+      "match": [
+        "Pattern_Procreate_brushes/Pattern Procreate brushes/**",
+        "**/Pattern_Procreate_brushes.zip",
+        "Pattern_Procreate_brushes.zip"
+      ],
+      "sets": {
+        "Pattern": {
+          "slug": "pattern",
+          "title": "Pattern"
+        }
+      }
+    },
+    {
+      "id": "starter-kit",
+      "kind": "vendor",
+      "vendor": null,
+      "product": "Procreate Brushes Starter Kit",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "none found in the pack",
+      "match": [
+        "Starter Kit Procreate brushes/**",
+        "**/Procreate_Brushes_Starter_Kit.zip",
+        "Procreate_Brushes_Starter_Kit.zip"
+      ],
+      "sets": {
+        "Starter Kit": {
+          "slug": "starter-kit",
+          "title": "Starter Kit"
+        }
+      }
+    },
+    {
+      "id": "sargents-oils",
+      "kind": "vendor",
+      "vendor": null,
+      "product": "Sargent’s Oils Procreate Brushes",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "none found in the pack",
+      "match": [
+        "Sargent_s_Oils_____Procreate_Brushes/**",
+        "**/Sargent_s_Oils_____Procreate_Brushes.zip",
+        "Sargent_s_Oils_____Procreate_Brushes.zip"
+      ],
+      "sets": {
+        "Sargent’s Oils": {
+          "slug": "sargents-oils",
+          "title": "Sargent’s Oils"
+        }
+      }
+    },
+    {
+      "id": "painterly-pack",
+      "kind": "vendor",
+      "vendor": null,
+      "product": "Painterly Pack Procreate Brushes",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "none found in the pack",
+      "match": [
+        "Painterly_Pack.brushset*",
+        "**/Painterly_Pack_____Procreate_Brushes.zip",
+        "Painterly_Pack_____Procreate_Brushes.zip"
+      ],
+      "sets": {
+        "Painterly Pack": {
+          "slug": "painterly-pack",
+          "title": "Painterly Pack"
+        }
+      }
+    },
+    {
+      "id": "urban-sketching",
+      "kind": "vendor",
+      "vendor": null,
+      "product": "Urban Sketching Procreate Brushes",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "none found in the pack",
+      "match": [
+        "Urban_Sketching.brushset*",
+        "**/Urban_Sketching_____Procreate_Brushes.zip",
+        "Urban_Sketching_____Procreate_Brushes.zip"
+      ],
+      "sets": {
+        "Urban Sketching": {
+          "slug": "urban-sketching",
+          "title": "Urban Sketching"
+        }
+      }
+    },
+    {
+      "id": "texturetown",
+      "kind": "vendor",
+      "vendor": null,
+      "product": "Texture Town Brush Set for Procreate",
+      "source_url": null,
+      "licence_note": "none in pack; store terms apply",
+      "redistribute": "unknown",
+      "publish_previews": true,
+      "evidence": "none found in the pack",
+      "match": [
+        "TextureTown.brushset*",
+        "**/Texture_Town_Brush_Set_for_procreate.zip",
+        "Texture_Town_Brush_Set_for_procreate.zip"
+      ],
+      "sets": {
+        "TextureTown": {
+          "slug": "texturetown",
+          "title": "TextureTown"
+        }
+      }
+    }
+  ],
+  "official": {
+    "host": "download-assets.procreate.art",
+    "base": "https://download-assets.procreate.art/Old%20Procreate%20Assets/",
+    "index_page": "https://help.procreate.com/articles/Rg2k6V-older-procreate-brushes-and-palettes",
+    "packs": [
+      {
+        "id": "procreate-5",
+        "kind": "official",
+        "vendor": "Savage Interactive (Procreate)",
+        "product": "Procreate 5 default brush sets",
+        "licence_note": "none recorded; the download links are listed on index_page",
+        "redistribute": "unknown",
+        "publish_previews": true
+      },
+      {
+        "id": "procreate-2",
+        "kind": "official",
+        "vendor": "Savage Interactive (Procreate)",
+        "product": "Procreate 2 default brush sets",
+        "licence_note": "none recorded; the download links are listed on index_page",
+        "redistribute": "unknown",
+        "publish_previews": true
+      },
+      {
+        "id": "procreate-1",
+        "kind": "official",
+        "vendor": "Savage Interactive (Procreate)",
+        "product": "Procreate 1 default brushes",
+        "licence_note": "none recorded; the download links are listed on index_page",
+        "redistribute": "unknown",
+        "publish_previews": true
+      },
+      {
+        "id": "procreate-3",
+        "kind": "official",
+        "vendor": "Savage Interactive (Procreate)",
+        "product": "Procreate 3 Artistic brush set",
+        "licence_note": "none recorded; the download links are listed on index_page",
+        "redistribute": "unknown",
+        "publish_previews": true
+      },
+      {
+        "id": "sweet-treats",
+        "kind": "official",
+        "vendor": "Savage Interactive (Procreate)",
+        "product": "Sweet Treats brush set",
+        "licence_note": "none recorded; the download links are listed on index_page",
+        "redistribute": "unknown",
+        "publish_previews": true
+      },
+      {
+        "id": "elusive",
+        "kind": "official",
+        "vendor": "Savage Interactive (Procreate)",
+        "product": "Elusive brush set",
+        "licence_note": "none recorded; the download links are listed on index_page",
+        "redistribute": "unknown",
+        "publish_previews": true
+      },
+      {
+        "id": "earth",
+        "kind": "official",
+        "vendor": "Savage Interactive (Procreate)",
+        "product": "Earth brush set",
+        "licence_note": "none recorded; the download links are listed on index_page",
+        "redistribute": "unknown",
+        "publish_previews": true
+      },
+      {
+        "id": "chinese-calligraphy",
+        "kind": "official",
+        "vendor": "Savage Interactive (Procreate)",
+        "product": "Chinese Calligraphy brush set",
+        "licence_note": "none recorded; the download links are listed on index_page",
+        "redistribute": "unknown",
+        "publish_previews": true
+      }
+    ],
+    "files": [
+      {
+        "pack": "procreate-5",
+        "slug": "p5-abstract",
+        "title": "Abstract (Procreate 5)",
+        "path": "Procreate%205/Abstract%20Brush%20Set/P5_Abstract.brushset",
+        "bytes": 1436114,
+        "md5": "d22390b572c0afe8af3381c89c679f43"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-airbrushing",
+        "title": "Airbrushing (Procreate 5)",
+        "path": "Procreate%205/Airbrushing%20Brush%20Set/P5_Airbrushing.brushset",
+        "bytes": 747948,
+        "md5": "08d0e64750b9e1bb65508a837c9652fa"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-artistic",
+        "title": "Artistic (Procreate 5)",
+        "path": "Procreate%205/Artistic%20Brush%20Set/P5_Artistic.brushset",
+        "bytes": 1286917,
+        "md5": "b7836237af978883359fecff776cad80"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-calligraphy",
+        "title": "Calligraphy (Procreate 5)",
+        "path": "Procreate%205/Calligraphy%20Brush%20Set/P5_Calligraphy.brushset",
+        "bytes": 499912,
+        "md5": "cde05e8781363e04b33ba9154800cc4d"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-charcoals",
+        "title": "Charcoals (Procreate 5)",
+        "path": "Procreate%205/Charcoals%20Brush%20Set/P5_Charcoals.brushset",
+        "bytes": 1653162,
+        "md5": "a66f5771013378bd9d0cc17c42b11d0e"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-drawing",
+        "title": "Drawing (Procreate 5)",
+        "path": "Procreate%205/Drawing%20Brush%20Set/P5_Drawing.brushset",
+        "bytes": 633284,
+        "md5": "becda43cfbea4c982ef48a46592c0d23"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-elements",
+        "title": "Elements (Procreate 5)",
+        "path": "Procreate%205/Elements%20Brush%20Set/P5_Elements.brushset",
+        "bytes": 1040745,
+        "md5": "39f40a61c7b1a959ad96bf6c21d6d83c"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-industrial",
+        "title": "Industrial (Procreate 5)",
+        "path": "Procreate%205/Industrial%20Brush%20Set/P5_Industrial.brushset",
+        "bytes": 2336593,
+        "md5": "336850587d3f7893281efe90fe8e4ac9"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-inking",
+        "title": "Inking (Procreate 5)",
+        "path": "Procreate%205/Inking%20Brush%20Set/P5_Inking.brushset",
+        "bytes": 477489,
+        "md5": "2916edbbbdaa83a5de6072ff55b238a3"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-luminance",
+        "title": "Luminance (Procreate 5)",
+        "path": "Procreate%205/Luminance%20Brush%20Set/P5_Luminance.brushset",
+        "bytes": 1163966,
+        "md5": "1fd97cb2f6396e011bc05cc5a3f7aabc"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-materials",
+        "title": "Materials (Procreate 5)",
+        "path": "Procreate%205/Materials%20Brush%20Set/P5_Materials.brushset",
+        "bytes": 3696044,
+        "md5": "88afb478074dbddd69f30af67021032d"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-organic",
+        "title": "Organic (Procreate 5)",
+        "path": "Procreate%205/Organic%20Brush%20Set/P5_Organic.brushset",
+        "bytes": 1924790,
+        "md5": "569008a6bec942a94a7ca59e07ab036f"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-painting",
+        "title": "Painting (Procreate 5)",
+        "path": "Procreate%205/Painting%20Brush%20Set/P5_Painting.brushset",
+        "bytes": 2758019,
+        "md5": "4b27df5ed252180a68f3bddb70762b85"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-sketching",
+        "title": "Sketching (Procreate 5)",
+        "path": "Procreate%205/Sketching%20Brush%20Set/P5_Sketching.brushset",
+        "bytes": 813035,
+        "md5": "e643d63c83090ecdfa7902a8d0145385"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-spraypaints",
+        "title": "Spraypaints (Procreate 5)",
+        "path": "Procreate%205/Spraypaints%20Brush%20Set/P5_Spraypaints.brushset",
+        "bytes": 2077855,
+        "md5": "0e1d2835713b54fe42b9ff6e51d958a7"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-textures",
+        "title": "Textures (Procreate 5)",
+        "path": "Procreate%205/Textures%20Brush%20Set/P5_Textures.brushset",
+        "bytes": 2234162,
+        "md5": "87739145d69398d82b41f0209deea3c6"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-vintage",
+        "title": "Vintage (Procreate 5)",
+        "path": "Procreate%205/Vintage%20Brush%20Set/P5_Vintage.brushset",
+        "bytes": 1507357,
+        "md5": "c76909d468da3a114d2ea69e37668a11"
+      },
+      {
+        "pack": "procreate-5",
+        "slug": "p5-water",
+        "title": "Water (Procreate 5)",
+        "path": "Procreate%205/Water%20Brush%20Set/P5_Water.brushset",
+        "bytes": 1089763,
+        "md5": "fd31f1ce712a269d35b8c719fe25d01f"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-abstract",
+        "title": "Abstract (Procreate 2)",
+        "path": "Procreate%202/Abstract%20Brush%20Set/P2_Abstract.brushset",
+        "bytes": 1101369,
+        "md5": "c2c554a02a40b0779d018a84a75d41a2"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-airbrushing",
+        "title": "Airbrushing (Procreate 2)",
+        "path": "Procreate%202/Airbrushing%20Brush%20Set/P2_Airbrushing.brushset",
+        "bytes": 387972,
+        "md5": "41a4a99260bb4bb4beac42ccba74deac"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-charcoals",
+        "title": "Charcoals (Procreate 2)",
+        "path": "Procreate%202/Charcoals%20Brush%20Set/P2_Charcoals.brushset",
+        "bytes": 1163848,
+        "md5": "1d78d9e001c008f92caf18b7836156c2"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-elements",
+        "title": "Elements (Procreate 2)",
+        "path": "Procreate%202/Elements%20Brush%20Set/P2_Elements.brushset",
+        "bytes": 910068,
+        "md5": "f53729c7006be61259af7190c7abb2da"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-industrial",
+        "title": "Industrial (Procreate 2)",
+        "path": "Procreate%202/Industrial%20Brush%20Set/P2_Industrial.brushset",
+        "bytes": 1550079,
+        "md5": "6be1d120fa56b08c06adc8620087f497"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-inking",
+        "title": "Inking (Procreate 2)",
+        "path": "Procreate%202/Inking%20Brush%20Set/P2_Inking.brushset",
+        "bytes": 217851,
+        "md5": "d643620a63c39e4aed489a2aa7f68e0e"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-luminance",
+        "title": "Luminance (Procreate 2)",
+        "path": "Procreate%202/Luminance%20Brush%20Set/P2_Luminance.brushset",
+        "bytes": 734180,
+        "md5": "2bc201b786f11dd37da9ef5fae0444fc"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-organic",
+        "title": "Organic (Procreate 2)",
+        "path": "Procreate%202/Organic%20Brush%20Set/P2_Organic.brushset",
+        "bytes": 857042,
+        "md5": "d6259e317c4f2c1df2cdcb9a05a83392"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-painting",
+        "title": "Painting (Procreate 2)",
+        "path": "Procreate%202/Painting%20Brush%20Set/P2_Painting.brushset",
+        "bytes": 547579,
+        "md5": "8818471241e73c1ce31dc82f30ea715d"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-pocket",
+        "title": "Pocket (Procreate 2)",
+        "path": "Procreate%202/Pocket%20Brush%20Set/P2_Pocket.brushset",
+        "bytes": 1828359,
+        "md5": "8589e2c1957583fc9cf83d2995f88608"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-retro",
+        "title": "Retro (Procreate 2)",
+        "path": "Procreate%202/Retro%20Brush%20Set/P2_Retro.brushset",
+        "bytes": 804190,
+        "md5": "9921d67ddeb62c5f13ce054af37eb00e"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-sketching",
+        "title": "Sketching (Procreate 2)",
+        "path": "Procreate%202/Sketching%20Brush%20Set/P2_Sketching.brushset",
+        "bytes": 966780,
+        "md5": "fdf7c0dc4bfd758088199ba071e45b10"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-spraypaints",
+        "title": "Spraypaints (Procreate 2)",
+        "path": "Procreate%202/Spraypaints%20Brush%20Set/P2_Spraypaints.brushset",
+        "bytes": 1084157,
+        "md5": "6708b3b84fd67fcef1d1edfb0527aa1e"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-textures",
+        "title": "Textures (Procreate 2)",
+        "path": "Procreate%202/Textures%20Brush%20Set/P2_Textures.brushset",
+        "bytes": 836624,
+        "md5": "f6b67716bfd63986d86f8d563aeae89a"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-touchups",
+        "title": "Touchups (Procreate 2)",
+        "path": "Procreate%202/Touchups%20Brush%20Set/P2_Touchups.brushset",
+        "bytes": 852546,
+        "md5": "12e56d39849aaa34379d3b02bb3ebe74"
+      },
+      {
+        "pack": "procreate-2",
+        "slug": "p2-water",
+        "title": "Water (Procreate 2)",
+        "path": "Procreate%202/Water%20Brush%20Set/P2_Water.brushset",
+        "bytes": 673560,
+        "md5": "96ef7562a943925d027bb8cb67c50915"
+      },
+      {
+        "pack": "procreate-1",
+        "slug": "procreate-1",
+        "title": "Procreate 1",
+        "path": "Procreate%201/Procreate_1.brushset",
+        "bytes": 10954293,
+        "md5": "8820ef94171d0ca1b2603c6d703f2c71"
+      },
+      {
+        "pack": "procreate-3",
+        "slug": "p3-artistic",
+        "title": "Artistic (Procreate 3)",
+        "path": "Procreate%203/Artistic%20Brush%20Set/P3_Artistic.brushset",
+        "bytes": 1731624,
+        "md5": "3061b2c826188b2f7ee4cc35a4c91f4a"
+      },
+      {
+        "pack": "sweet-treats",
+        "slug": "sweet-treats",
+        "title": "Sweet Treats",
+        "path": "Sweet%20Treats%20Brush%20Set/Sweet_Treats.brushset",
+        "bytes": 80651776,
+        "md5": "ae76ea4f41174149f7c8489acae09a52"
+      },
+      {
+        "pack": "elusive",
+        "slug": "elusive",
+        "title": "Elusive",
+        "path": "Elusive%20Set/Elusive_Set.brushset",
+        "bytes": 1251440,
+        "md5": "7712c53e6262ab8db448ad801565be59"
+      },
+      {
+        "pack": "earth",
+        "slug": "earth",
+        "title": "Earth",
+        "path": "Earth_Set/Earth.brushset",
+        "bytes": 2072910,
+        "md5": "b3f332d7d4c3c29b2b504c88694767f1"
+      },
+      {
+        "pack": "chinese-calligraphy",
+        "slug": "chinese-calligraphy",
+        "title": "Chinese Calligraphy",
+        "path": "Chinese%20Calligraphy%20Set/%E6%B5%93%E5%A2%A8%E6%B7%A1%E5%BD%A9.brushset",
+        "bytes": 35642564,
+        "md5": "86692f5347fad04956a2e970dbeb50c3"
+      }
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brushes · ROSW</title>
+<meta name="description" content="A searchable library of 990 Procreate brushes and a brush designer that reads and writes the real brush file format, for the command line, Claude (MCP) and the browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="top-inner">
+  <a class="brand" href="index.html">RO<span>SW</span></a>
+  <nav aria-label="Pages"><ul class="nav">
+    <li><a href="index.html">Overview</a></li>
+    <li><a href="creative-writing.html">Creative writing</a></li>
+    <li><a href="studio.html">Studio</a></li>
+    <li><a href="ui-design.html">UI design</a></li>
+    <li><a href="writing-museum.html">Writing museum</a></li>
+    <li><a href="udgt.html">Teardowns</a></li>
+    <li><a href="reach.html">Reach</a></li>
+    <li><a href="video-editor.html">Video editor</a></li>
+    <li><a href="brushes.html" aria-current="page">Brushes</a></li>
+    <li><a href="keys.html">Keys</a></li>
+  </ul></nav>
+</div></header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">brushes/</p>
+    <h1>Brushes</h1>
+    <p class="lede">A library of Procreate brushes you can search by what they do, and a designer that opens a
+    brush, changes it and writes a brush file back. It reads the real Procreate format byte for byte, so a brush you
+    do not touch comes out identical. Everything runs on your machine with the standard library; search needs no
+    embedding model and no network.</p>
+  </section>
+
+  <p class="toc">On this page: <a href="#library">The library</a> · <a href="#search">Finding a brush</a> ·
+  <a href="#designer">The designer</a> · <a href="#use">Using it</a> · <a href="#limits">What is not verified</a></p>
+
+  <h2 id="library">The library</h2>
+  <div class="cards">
+    <div class="card"><h3>990 brushes</h3><p>597 from your own packs, 393 from Procreate's official sets</p></div>
+    <div class="card"><h3>65 sets, 64 notes</h3><p>One Obsidian note per brushset, with a section for every brush</p></div>
+    <div class="card"><h3>Original files kept</h3><p>The brush files themselves are committed through Git LFS, with each pack's licence recorded</p></div>
+  </div>
+  <p>Every brush is read from its archive and described by facts the code computes: its kind (stroke or
+  stamp), spacing, taper, pressure response, whether it carries its own shape and grain image, and about fifty
+  other settings. A notes folder, <code>brushes/vault/</code>, opens in Obsidian. The generated part of a note is
+  rewritten from the catalog; whatever you write under its <code>## Notes</code> heading is never touched.</p>
+
+  <h2 id="search">Finding a brush</h2>
+  <p>Search is a stdlib TF-IDF over one chunk per brush, with a closed tag vocabulary on six axes (medium, mark,
+  texture, edge, motif, use) that Claude fills in by looking at Procreate's own stroke thumbnails. It works on
+  names, sets and computed facts from the start, and gets better as brushes are tagged. A <code>similar</code>
+  mode compares two brushes' settings.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Surface</th><th>How</th></tr></thead>
+    <tbody>
+      <tr><td>Command line</td><td><code>python -I brushes/vault/tools/brush_search.py search "dry grainy ink"</code></td></tr>
+      <tr><td>Claude (MCP)</td><td>The <code>brushes</code> server: search, similar, get_brush, get_set, list_sets, facets, get_preview and library_status. It is read-only</td></tr>
+      <tr><td>Browser</td><td>The Library tab of the designer: search, facet chips, previews, similar brushes, open in the designer</td></tr>
+      <tr><td>Obsidian</td><td>The notes in <code>brushes/vault/</code></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="parts">Skills and agents</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Name</th><th>Kind</th><th>What it does</th></tr></thead>
+    <tbody>
+      <tr><td><code>brush-library</code></td><td>skill</td><td>Answers "which brush" questions from the vault and cites exact settings</td></tr>
+      <tr><td><code>brush-tag-backfill</code></td><td>skill</td><td>Runs the tagger over the library in supervised batches; nothing is written until you approve the first</td></tr>
+      <tr><td><code>brush-designer</code></td><td>skill</td><td>Starts the designer and proposes a settings patch you paste into it</td></tr>
+      <tr><td><code>brush-tagger</code></td><td>agent</td><td>Tags one batch of brushes from their contact sheets; returns text and writes nothing</td></tr>
+      <tr><td><code>brush-librarian-native</code></td><td>agent</td><td>Condenses notes into digests and cites exact values from the catalog</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="designer">The designer</h2>
+  <p>A browser app served from your machine only (127.0.0.1, with a token made for each run). Open a brush from the
+  library, from a file or as a new brush; edit its settings in panels generated from the format's own key list;
+  replace its shape or grain image; paste a settings patch that Claude proposed, check it against the server and
+  apply it as one undo step; then export a <code>.brush</code> or a <code>.brushset</code>. The page sends only
+  the keys you changed, and the server does the encoding. <code>selftest.html</code> runs the page's own checks.</p>
+
+  <h2 id="use">Using it</h2>
+<pre><code>/plugin marketplace add groot99-droid/Pipelines-Plugin
+/plugin install rosw@rosw
+python -I brushes/pipeline/app_server.py              # prints the URL with its token
+python -I brushes/vault/tools/brush_search.py search "stipple"
+python -I brushes/pipeline/brush_file.py inspect some.brush
+python -m unittest discover -s brushes/pipeline/tests</code></pre>
+
+  <h2 id="limits">What is not verified</h2>
+  <ul>
+    <li><strong>No exported file has been opened in Procreate.</strong> Nothing here can prove it; only an iPad can.
+      <code>brushes/device-tests/</code> holds the test sets and a checklist for two short sittings.</li>
+    <li>The stroke preview in the designer is an approximation built from key names and Procreate's thumbnails, and
+      each setting says whether the preview honours it. Many of its rules are inferred, not proven.</li>
+    <li>Official Procreate brushes mostly use textures bundled inside the app, which the library does not have; those
+      brushes show Procreate's own thumbnail and no shape or grain image.</li>
+    <li>Brush tags are being added in batches; until a brush is tagged, search sees its name, set and computed facts only.</li>
+    <li>The licence of every vendor pack is recorded as <em>unknown</em>.</li>
+  </ul>
+</main>
+
+<footer>ROSW · <a href="https://github.com/groot99-droid/Pipelines-Plugin">Source on GitHub</a></footer>
+</body>
+</html>

@@ -12,6 +12,7 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | `agent-reach/` | The reach base: a CLI that installs, checks and configures read access to 15 internet platforms, and the contract the toolsets built on it follow. | - |
 | `blender-addons/` | Tool manifests for the author's own Blender add-ons, read for the blender plugin's add-on tools server, with the script that drafts them from the add-ons' source. | - |
 | `blender-gemini/` | Registers the Blender MCP server with the Gemini CLI, and the skill that lets Claude call Gemini to inspect or change an open Blender scene. | - |
+| `brushes/` | A Procreate brush library with tag-based search, and a brush designer for the brush file format. Under construction. | - |
 | `creative-writing/` | The Obsidian vault of 63 works plus the checkpointed pipeline that writes into it. | - |
 | `docs/` | Browsable HTML pages describing each tool, and a local helper for setting API keys. | - |
 | `plugins/` | Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, with a design-system generator; blender, skills for driving a live Blender through MCP; udgt, a teardown engine that pulls a game's repository apart into a dataset, chapters and an explorer page; reach, setup and routing skills for reading the internet through Agent Reach; and video-editor, video editing by conversation with a questionnaire-driven set of recipes and a dry-run publisher. | [plugins/ui-design/INDEX.md](plugins/ui-design/INDEX.md) |
@@ -20,11 +21,14 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | `teardowns/` | Game teardowns made with the udgt plugin, one folder per game: its profile, the extracted dataset, the owner's answers to the briefs, and the chapters. | - |
 | `writing-museum/` | A walkable 3D museum of the creative-writing vault, one room per work, built through the studio's scene-3d pipeline. | - |
 
-## Skills (24)
+## Skills (27)
 
 | Skill | What it does |
 |---|---|
 | [blender-gemini](.claude/skills/blender-gemini/SKILL.md) | Drive the author's open Blender through the Gemini CLI by calling the gemini MCP server (ask-gemini), which has the Blender MCP server registered. |
+| [brush-designer](.claude/skills/brush-designer/SKILL.md) | Runs the brush designer app for the author and helps them change or build a Procreate brush in it. |
+| [brush-library](.claude/skills/brush-library/SKILL.md) | Answers questions about the author's Procreate brush library (their brush packs and Procreate's own legacy sets) from the brush vault, by searching it with brushes/vault/tools/brush_search.py or the brushes MCP tools and citing brush ids, sets and note lines. |
+| [brush-tag-backfill](.claude/skills/brush-tag-backfill/SKILL.md) | Runs (or re-runs) the brush-tagger subagent over the brush library, one contact-sheet batch at a time, and has brushes/vault/tools/brush_tags.py validate each reply and write the brushes/vault/_BrushTags/ sidecars. |
 | [chunk-tag-backfill](.claude/skills/chunk-tag-backfill/SKILL.md) | Runs (or re-runs) the creative-writing-chunk-tagger subagent over the vault's work files, writing/updating each one's creative-writing/vault/_ChunkTags/ sidecar. |
 | [creative-writing-pipeline](.claude/skills/creative-writing-pipeline/SKILL.md) | Walk a new idea for this vault through the checkpointed multi-stage pipeline (intake, reference pull, outline, draft, self-revision, vault integration) instead of writing a finished piece in one shot. |
 | [higgsfield-library-sync](.claude/skills/higgsfield-library-sync/SKILL.md) | Import the author's Higgsfield generations (images, videos, audio, 3D models) into the studio's generations library at studio/library/, or bring it up to date. |
@@ -49,10 +53,12 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | [manim-video](plugins/video-editor/skills/manim-video/SKILL.md) | Production pipeline for mathematical and technical animations using Manim Community Edition. |
 | [video-editor](plugins/video-editor/skills/video-editor/SKILL.md) | Edit video by conversation, with local tools. |
 
-## Agents (8)
+## Agents (10)
 
 | Agent | What it does |
 |---|---|
+| [brush-librarian-native](.claude/agents/brush-librarian-native.md) | Native (Claude-only, no script) condenser for the brush vault, the counterpart of creative-writing-librarian-native. |
+| [brush-tagger](.claude/agents/brush-tagger.md) | Tags ONE batch of brushes (the contact sheets that brush_tags.py plan names for one call) from the closed vocabulary in brushes/vault/_BrushTags/vocabulary.yaml on six axes (medium, mark, texture, edge, motif, use), plus a one-sentence visual description, by looking at the con... |
 | [creative-writing-chunk-tagger](.claude/agents/creative-writing-chunk-tagger.md) | Tags ONE vault work's chunks with plot_tags/context_tags/mood_tags/motif_tags from the closed vocabulary in creative-writing/vault/_ChunkTags/vocabulary.yaml, so creative-writing/vault/tools/vault_search.py can surface per-chunk (not just per-file) matches. |
 | [creative-writing-drafter](.claude/agents/creative-writing-drafter.md) | Generates the heavy-lift artifact for one stage of the creative-writing pipeline (outline, draft, or self-revision) from context the caller provides. |
 | [creative-writing-librarian-native](.claude/agents/creative-writing-librarian-native.md) | Native (Claude-only, no-Ollama) equivalent of creative-writing/pipeline/librarian.py's condense_file/digest_files for the creative-writing-pipeline skill. |

@@ -1,0 +1,31 @@
+{
+  "brush_count": 17,
+  "brushes": [
+    "b_b0c15eb83a46",
+    "b_e92b17f46d9b",
+    "b_6876712a9e00",
+    "b_0ea160db5621",
+    "b_4be0c80b0650",
+    "b_219d10cfe137",
+    "b_ae5bafdbbf87",
+    "b_bc3f841f4fae",
+    "b_dfd599d83018",
+    "b_029435d2b684",
+    "b_4e57476ddfb8",
+    "b_f5926355479e",
+    "b_14e3851b76f4",
+    "b_096eec0fb3c5",
+    "b_1864c76a0da1",
+    "b_1818f529fc77",
+    "b_604a1b75843e"
+  ],
+  "kind": "set",
+  "library": "user",
+  "name": "Painterly Pack",
+  "note": "02_Vendor_Packs/painterly-pack.md",
+  "pack": "painterly-pack",
+  "pack_kind": "vendor",
+  "set_id": "s_bec4ae4f7da2",
+  "set_slug": "painterly-pack",
+  "title": "Painterly Pack"
+}

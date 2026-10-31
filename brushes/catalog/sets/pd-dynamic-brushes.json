@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_694bf9dc02a2",
+    "b_776893b7e6f6",
+    "b_61806cc6c0c9",
+    "b_25b977d6cb8d",
+    "b_a9854930ce39",
+    "b_90224ff73d90",
+    "b_7377ea3e991f",
+    "b_b5beee736714"
+  ],
+  "kind": "set",
+  "library": "user",
+  "name": "PD Dynamic Brushes",
+  "note": "02_Vendor_Packs/pd-dynamic-brushes.md",
+  "pack": "trendy-stamps",
+  "pack_kind": "vendor",
+  "set_id": "s_4ddf8c11a6fb",
+  "set_slug": "pd-dynamic-brushes",
+  "title": "PD Dynamic Brushes"
+}

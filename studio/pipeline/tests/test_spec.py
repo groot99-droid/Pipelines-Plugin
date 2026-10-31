@@ -277,7 +277,7 @@ class Spec(unittest.TestCase):
             if len(cells) < 3 or cells[-1] not in legend or cells[0] in legend:
                 continue
             rows += 1
-            named = re.findall(r"`((?:studio|plugins|\.claude|brush-designer)/[^`<>*]*)`", line)
+            named = re.findall(r"`((?:studio|plugins|\.claude|brush-designer|brushes)/[^`<>*]*)`", line)
             for path in named:
                 with self.subTest(row=cells[0][:60], path=path):
                     if cells[-1] in built:

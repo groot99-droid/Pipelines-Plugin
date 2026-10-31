@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Brushes</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="library.css">
+<script type="module" src="js/main.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <span class="brand">ROSW <span>Brushes</span></span>
+    <div class="tabs top-tabs" role="tablist" aria-label="Views">
+      <button type="button" role="tab" class="tab" id="tab-library" aria-selected="false" aria-controls="view-library" tabindex="-1">Library</button>
+      <button type="button" role="tab" class="tab" id="tab-designer" aria-selected="true" aria-controls="view-designer">Designer</button>
+    </div>
+    <span class="pill" id="server-pill">Connecting&hellip;</span>
+    <a class="small" id="selftest-link" href="selftest.html" target="_blank" rel="noopener">Self-test</a>
+  </div>
+</header>
+
+<div class="status-banner" role="note">
+  <strong>Not proven.</strong> Nothing this app writes is known to open in Procreate until the iPad sittings in
+  <code>brushes/device-tests/</code> (start with <code>sitting-1/CHECKLIST.md</code>) have been done.
+</div>
+<div id="banners"></div>
+
+<main id="main">
+  <section id="view-library" role="tabpanel" aria-labelledby="tab-library" hidden>
+    <div id="library-mount" data-mount="library"></div>
+  </section>
+  <section id="view-designer" role="tabpanel" aria-labelledby="tab-designer">
+    <div id="designer-root" data-mount="designer"></div>
+  </section>
+</main>
+
+<div id="toasts" role="status" aria-live="polite"></div>
+<dialog id="dlg" class="dialog"></dialog>
+</body>
+</html>

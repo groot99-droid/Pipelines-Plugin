@@ -1,0 +1,30 @@
+{
+  "brush_count": 16,
+  "brushes": [
+    "b_4311540c8a88",
+    "b_f8e2cce264ee",
+    "b_b9dfd7e79b60",
+    "b_3fbd60ae7a28",
+    "b_ee1c63888efe",
+    "b_d3c26f71ab7c",
+    "b_9424b8a4a9ce",
+    "b_0fb329b2e703",
+    "b_7ed8f678bd5e",
+    "b_0202b8a1d076",
+    "b_d49ba0a15f8f",
+    "b_a0c5ce261a00",
+    "b_d026013640da",
+    "b_532bfe79475b",
+    "b_7ec2511d1338",
+    "b_cc877ebb27dd"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Textures 1",
+  "note": "01_Procreate_Defaults/p5-textures.md",
+  "pack": "procreate-5",
+  "pack_kind": "official",
+  "set_id": "s_799b2319e9b6",
+  "set_slug": "p5-textures",
+  "title": "Textures (Procreate 5)"
+}

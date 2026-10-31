@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_7bc9676d2bb2",
+    "b_d4bed1e19fb6",
+    "b_b83dcc24231f",
+    "b_2b10e0c4218e",
+    "b_8fb63c7797d0",
+    "b_bcaaf801d2fe",
+    "b_207fa1c029dd",
+    "b_de68ce74fbe0"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Elements 1",
+  "note": "01_Procreate_Defaults/p5-elements.md",
+  "pack": "procreate-5",
+  "pack_kind": "official",
+  "set_id": "s_0bb6cf2bd1c4",
+  "set_slug": "p5-elements",
+  "title": "Elements (Procreate 5)"
+}

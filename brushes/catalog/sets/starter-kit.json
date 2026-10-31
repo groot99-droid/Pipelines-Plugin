@@ -1,0 +1,30 @@
+{
+  "brush_count": 16,
+  "brushes": [
+    "b_31ce69900c5d",
+    "b_ccfe6477e692",
+    "b_91cef29de5f7",
+    "b_f512a4ecc126",
+    "b_219fe22e2e7b",
+    "b_931bf575a88c",
+    "b_7ac6f107a0b4",
+    "b_9bf5d790f146",
+    "b_d685796b8dcc",
+    "b_84d3639a8e70",
+    "b_ee94a3f557a5",
+    "b_9edb4c90f179",
+    "b_e7e72924ee5c",
+    "b_13c4fe6476d7",
+    "b_da8abb4d1cda",
+    "b_9b6b0e40d5a6"
+  ],
+  "kind": "set",
+  "library": "user",
+  "name": "Starter Kit",
+  "note": "02_Vendor_Packs/starter-kit.md",
+  "pack": "starter-kit",
+  "pack_kind": "vendor",
+  "set_id": "s_c3b9f1f347b9",
+  "set_slug": "starter-kit",
+  "title": "Starter Kit"
+}

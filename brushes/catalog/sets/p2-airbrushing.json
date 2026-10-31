@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_3a97ee9a9776",
+    "b_8e0154000957",
+    "b_b3e45c087f43",
+    "b_611d179d5ae2",
+    "b_fd67d28ed1b4",
+    "b_fa7f1c11651a",
+    "b_e64835057e89",
+    "b_b52b4bbbebb1"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "P2_Airbrushing",
+  "note": "01_Procreate_Defaults/p2-airbrushing.md",
+  "pack": "procreate-2",
+  "pack_kind": "official",
+  "set_id": "s_64cbe3a4d1c2",
+  "set_slug": "p2-airbrushing",
+  "title": "Airbrushing (Procreate 2)"
+}

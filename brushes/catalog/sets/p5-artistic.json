@@ -1,0 +1,24 @@
+{
+  "brush_count": 10,
+  "brushes": [
+    "b_d6699e3f6fa2",
+    "b_ed2d4463e3ce",
+    "b_7c6be10382e3",
+    "b_515e16a8426d",
+    "b_802a3cfeb2aa",
+    "b_42906d9962d9",
+    "b_9d74682a3a99",
+    "b_e2f83999fe7f",
+    "b_2bb444335d9b",
+    "b_d3a428e43208"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Artistic 1",
+  "note": "01_Procreate_Defaults/p5-artistic.md",
+  "pack": "procreate-5",
+  "pack_kind": "official",
+  "set_id": "s_8f611539e479",
+  "set_slug": "p5-artistic",
+  "title": "Artistic (Procreate 5)"
+}

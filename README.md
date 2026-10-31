@@ -310,8 +310,8 @@ in `~/.rosw/keys.env`); and `assemble-3d`, which assembles those models in Blend
 headless or in the author's live Blender through the Blender MCP server. Each names the connector tools it may call, spends
 nothing before the execute go-ahead, and keeps what the author keeps under
 `studio/assets/`. `ui-build` and `brush` are entries that say what each needs;
-`brush` has its packer (`studio/pipeline/brush_pack.py`) and waits for the
-designer app.
+`brush` will run through the brush tool, [`brushes/`](brushes), once it is
+finished.
 
 The generations library, [`studio/library`](studio/library), catalogues every
 image, video, audio clip and 3D model the author has made on Higgsfield, with
@@ -482,3 +482,15 @@ private or draft by default, nothing sent without `--yes`, credentials in the OS
 variables and never in a file. Install with `/plugin install video-editor@rosw`. `ve publish` has never been
 run against a live account; `plugins/video-editor/UNVERIFIED.md` lists what to check first. See
 `plugins/video-editor/README.md` and [`docs/video-editor.html`](docs/video-editor.html).
+
+## Brushes
+
+`brushes/` is a searchable library of Procreate brushes (the author's own packs and Procreate's official
+legacy sets: 990 brushes in 65 sets) and a brush designer that reads and writes the real brush file format
+byte for byte. Search is a standard-library TF-IDF over a catalog the code builds from the brush files, with a
+closed tag vocabulary that Claude fills in from Procreate's own stroke thumbnails; it runs from the command
+line, as the `brushes` MCP server, and in the designer's Library tab. There is one Obsidian note per brushset.
+The designer is a local browser app (127.0.0.1, a token per run) that opens a brush, edits it as a patch of
+changed keys and exports through the server. **No exported file has been opened in Procreate**:
+`brushes/device-tests/` holds the iPad sittings that will settle it. See `brushes/README.md` and
+[`docs/brushes.html`](docs/brushes.html).

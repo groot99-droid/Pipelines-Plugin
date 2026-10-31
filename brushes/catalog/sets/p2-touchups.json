@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_91f04b8eff00",
+    "b_214b004e31c9",
+    "b_c7441fd61422",
+    "b_7ff28827dffc",
+    "b_24c1244dd857",
+    "b_5ca98957ef4f",
+    "b_28de20affaac",
+    "b_8e5b77c46b87"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "P2_Touchups",
+  "note": "01_Procreate_Defaults/p2-touchups.md",
+  "pack": "procreate-2",
+  "pack_kind": "official",
+  "set_id": "s_913c5ce8344c",
+  "set_slug": "p2-touchups",
+  "title": "Touchups (Procreate 2)"
+}

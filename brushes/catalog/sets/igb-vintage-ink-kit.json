@@ -1,0 +1,20 @@
+{
+  "brush_count": 6,
+  "brushes": [
+    "b_fa63469e425e",
+    "b_c5b318f43de2",
+    "b_1c8a7d6aa9ff",
+    "b_4253298bac0e",
+    "b_f85acdb0894d",
+    "b_b4afce325b86"
+  ],
+  "kind": "set",
+  "library": "user",
+  "name": "IGB Vintage Ink Kit",
+  "note": "02_Vendor_Packs/igb-vintage-ink-kit.md",
+  "pack": "igb-vintage-ink-kit",
+  "pack_kind": "vendor",
+  "set_id": "s_127978109a2d",
+  "set_slug": "igb-vintage-ink-kit",
+  "title": "IGB Vintage Ink Kit"
+}

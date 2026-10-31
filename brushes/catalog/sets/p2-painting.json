@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_775dae7c1a7f",
+    "b_8a63ac6a710d",
+    "b_1dbdb418ec55",
+    "b_a0a0757f1748",
+    "b_a63e1ebed9b4",
+    "b_bcfb26c778a6",
+    "b_1845dfc970fc",
+    "b_0f5f793c77f2"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "P2_Painting",
+  "note": "01_Procreate_Defaults/p2-painting.md",
+  "pack": "procreate-2",
+  "pack_kind": "official",
+  "set_id": "s_d136b6dfbeb9",
+  "set_slug": "p2-painting",
+  "title": "Painting (Procreate 2)"
+}

@@ -15,7 +15,6 @@
     <button class="tab" data-tab="gates" role="tab">Gates</button>
     <button class="tab" data-tab="new" role="tab">New run</button>
     <button class="tab" data-tab="writing" role="tab">Writing</button>
-    <button class="tab" data-tab="brushes" role="tab">Brushes</button>
     <a class="out" id="libraryTab" href="#" hidden>Library ↗</a>
   </nav>
   <div class="status" id="status" aria-live="polite">loading</div>
@@ -76,12 +75,6 @@
       <tbody></tbody>
     </table>
     <p id="writingEmpty" class="empty" hidden></p>
-  </section>
-
-  <section id="view-brushes" class="view" data-view="brushes" hidden>
-    <p class="hint">The brush designer. Export a bundle into a <code>brush</code> run's folder; <code>brush_pack.py</code> packs it.</p>
-    <iframe id="brushFrame" class="frame" title="Brush designer" src="about:blank" loading="lazy"></iframe>
-    <p id="brushEmpty" class="empty" hidden>The designer is not installed under studio/hub/brush/ yet.</p>
   </section>
 </main>
 

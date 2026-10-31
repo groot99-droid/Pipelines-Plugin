@@ -1,0 +1,412 @@
+{
+  "complete": true,
+  "known_bad": {
+    "broken": true,
+    "bytes": 693852,
+    "file": "known-bad/KNOWN-BAD_old-designer.brush",
+    "finding": "its Brush.archive holds a single piece of text where a brush's settings should be, not the keyed archive a brush file carries",
+    "original_name": "Untitled_Brush.brush",
+    "sha256": "53c67c579daaa453fcce611526b5af81d01f7124a27eefad9cc458f518adf9a7"
+  },
+  "members": [
+    {
+      "as_specified": true,
+      "era": "E0",
+      "family": "legacy",
+      "files": [
+        {
+          "bytes": 1509,
+          "path": "Brush.archive",
+          "sha256": "8b96935cabd84599322b7b6b46d8a835c6bf758b992fb22970b7ebf981729e3b"
+        },
+        {
+          "bytes": 1849281,
+          "path": "Grain.png",
+          "sha256": "30c1de39a10fd339f064cb15707ef5f94da0facd8ed860791dfebf650c84e0fc"
+        },
+        {
+          "bytes": 22058,
+          "path": "QuickLook/Thumbnail.png",
+          "sha256": "3e89a058f79c03bbd62e40eb8137ee70e9839787bd8d492ca23c93deba53aa62"
+        },
+        {
+          "bytes": 91582,
+          "path": "Shape.png",
+          "sha256": "029c9412d478f75972bbf386aa374e98661f785571a19e815df77d6f4fb59b2e"
+        }
+      ],
+      "keys": 52,
+      "name": "Broken Conté",
+      "note": "",
+      "shows": "the oldest format: 52 keys, a name stored as UTF-16, a 440 x 276 thumbnail",
+      "single": "singles/1-Broken_Conte.brush",
+      "single_sha256": "2f0992f30708b2749ce155ce46d453873f6b4a71c040a94d10946802dd73286e",
+      "slot": 1,
+      "slot_kind": "e0",
+      "slot_shows": "the oldest format: 52 keys, a name stored as UTF-16, a 440 x 276 thumbnail",
+      "source": {
+        "container": "user/insecto-charcoal/Broken_Conte.brush",
+        "folder": "",
+        "position": 0,
+        "prefix": "",
+        "set": null
+      },
+      "uuid": "7DC60562-5995-4193-A5FD-F58C49B61DA5",
+      "wanted": "an E0 brush (52 keys), such as \"Broken Conté\" from the Insecto charcoal pack"
+    },
+    {
+      "as_specified": true,
+      "era": "E4",
+      "family": "legacy",
+      "files": [
+        {
+          "bytes": 523632,
+          "path": "Grain.png",
+          "sha256": "f0a5b4be79ea4437806d0b514d0cf311b83d5a9034a97486e2353b25d867de7b"
+        },
+        {
+          "bytes": 3287,
+          "path": "Brush.archive",
+          "sha256": "d74f7546e9e103ff01441a23b88725481f1d8fc730b3d4887bd3e22010bb4c20"
+        },
+        {
+          "bytes": 167580,
+          "path": "Shape.png",
+          "sha256": "f9cb6665ab7e3606651e39eacd9f7d6c68af0b72b2c31df67b4dfb177817cfea"
+        },
+        {
+          "bytes": 56811,
+          "path": "QuickLook/Thumbnail.png",
+          "sha256": "1c01d44c1246b34e401c7245d4c56a8ffed76ebb13f386638937906c17a74560"
+        }
+      ],
+      "keys": 101,
+      "name": "AN Botanicaliser",
+      "note": "",
+      "shows": "the plain legacy brush; the later test sets edit this one",
+      "single": "singles/2-AN_Botanicaliser.brush",
+      "single_sha256": "81a4a51b875c41af1f6377c85f5bb34ac1d3565cdfb344cb2b6163ea26ad0737",
+      "slot": 2,
+      "slot_kind": "e4",
+      "slot_shows": "the plain legacy brush; the later test sets edit this one",
+      "source": {
+        "container": "user/everything-watercolour/Everything_Watercolour.brushset",
+        "folder": "26BC713D-686F-4681-8AD0-0A979A7DE18F",
+        "position": 25,
+        "prefix": "26BC713D-686F-4681-8AD0-0A979A7DE18F/",
+        "set": "💧Everything Watercolour"
+      },
+      "uuid": "71F033BF-A9D5-4448-8E83-8FC14015483C",
+      "wanted": "an E4 brush (101 keys) that carries its own Shape.png and Grain.png and has no jitter and no scatter"
+    },
+    {
+      "as_specified": true,
+      "era": "E3",
+      "family": "legacy",
+      "files": [
+        {
+          "bytes": 2970,
+          "path": "Brush.archive",
+          "sha256": "fad3d66405c2b062567b0386ce2b5328070e6047d21c4edd122b40aa82283ccb"
+        },
+        {
+          "bytes": 46979,
+          "path": "QuickLook/Thumbnail.png",
+          "sha256": "b1e7a5bd147fd6f7c3e1dc3ca52e4ffa4840f1c7ce7b22ad76d74184fe07692a"
+        }
+      ],
+      "keys": 88,
+      "name": "IGB 6B Pencil",
+      "note": "",
+      "shows": "whether texture names from older versions of the app still resolve",
+      "single": "singles/3-IGB_6B_Pencil.brush",
+      "single_sha256": "1265335c9df2097d3cf13efefd9d375c8a79cf25ccd25a381dbca62eef5f6e98",
+      "slot": 3,
+      "slot_kind": "e3",
+      "slot_shows": "whether texture names from older versions of the app still resolve",
+      "source": {
+        "container": "user/igb-vintage-ink-kit/IGB_Vintage_Ink_Kit.brushset",
+        "folder": "401B8E73-5721-492C-BB16-BD8DF8A0419B",
+        "position": 1,
+        "prefix": "401B8E73-5721-492C-BB16-BD8DF8A0419B/",
+        "set": "IGB Vintage Ink Kit"
+      },
+      "uuid": "8E6DE2ED-5E11-4626-A863-7F4F742A3C98",
+      "wanted": "the E3 brush \"IGB 6B Pencil\" (88 keys), which carries no image and names two textures that ship inside the app"
+    },
+    {
+      "as_specified": true,
+      "era": "M220",
+      "family": "modern",
+      "files": [
+        {
+          "bytes": 9033,
+          "path": "Brush.archive",
+          "sha256": "9b3dd32e1c4c61357b04d1b59f61166baffeb0896ba2821964c782c1df142503"
+        },
+        {
+          "bytes": 8721,
+          "path": "Sub01/Brush.archive",
+          "sha256": "49c3dd8a5a3cf1086171bc426341861e99fec30c732eabeb143ee19a0ac3d806"
+        },
+        {
+          "bytes": 12838,
+          "path": "QuickLook/Thumbnail.png",
+          "sha256": "6d06b95bb2c3fe694352bdf502e92f2e81e7b292509c8a73f338120bd667dbc1"
+        }
+      ],
+      "keys": 221,
+      "name": "Pandani",
+      "note": "",
+      "shows": "whether a Sub01/ folder is carried",
+      "single": "singles/4-Pandani.brush",
+      "single_sha256": "4da846c9d847fc95b621707fd1cdbdb07457a3216c386aadbcb3bddbdcda86f8",
+      "slot": 4,
+      "slot_kind": "dual",
+      "slot_shows": "whether a Sub01/ folder is carried",
+      "source": {
+        "container": "official/procreate-5/p5-inking.brushset",
+        "folder": "7820CA44-FEC8-46C0-8989-A504014DD63D",
+        "position": 3,
+        "prefix": "7820CA44-FEC8-46C0-8989-A504014DD63D/",
+        "set": "Inking 1"
+      },
+      "uuid": "A0FD0C08-A2CE-47E3-8659-2A38D63162FF",
+      "wanted": "a modern dual brush (220 keys), whose second brush is in a Sub01/ folder"
+    },
+    {
+      "as_specified": true,
+      "era": "M220",
+      "family": "modern",
+      "files": [
+        {
+          "bytes": 8622,
+          "path": "Brush.archive",
+          "sha256": "b1e0b9e4ad469b07a3603db7d9ca6c6d2c662d127277ce4385eeba5d95858c7a"
+        }
+      ],
+      "keys": 220,
+      "name": "Studio Pen",
+      "note": "",
+      "shows": "whether the app draws a preview of its own when the file has none",
+      "single": "singles/5-Studio_Pen.brush",
+      "single_sha256": "cccb5c191c38f7f48c6ec141a613d4a8a63e2fc564dd9bba9771e08a9697751f",
+      "slot": 5,
+      "slot_kind": "no-thumbnail",
+      "slot_shows": "whether the app draws a preview of its own when the file has none",
+      "source": {
+        "container": "official/procreate-5/p5-inking.brushset",
+        "folder": "EA18BE50-8436-4FC2-A115-49A7694ED174",
+        "position": 11,
+        "prefix": "EA18BE50-8436-4FC2-A115-49A7694ED174/",
+        "set": "Inking 1"
+      },
+      "uuid": "1EAF2575-26AC-46F1-A62B-DDDEA2EA5CD9",
+      "wanted": "a modern brush from the Procreate 5 Inking set that has no thumbnail"
+    },
+    {
+      "as_specified": true,
+      "era": "M220",
+      "family": "modern",
+      "files": [
+        {
+          "bytes": 41311,
+          "path": "AuthorPicture/AuthorPicture.png",
+          "sha256": "81a19adca73f2af22471b01f1fca5acc3432bb771281f00d0a83d21b0dc27aec"
+        },
+        {
+          "bytes": 8736,
+          "path": "Brush.archive",
+          "sha256": "2516a10bb477151b059dc77315976e668b6218069db0d79bd0f1fbb8414dc072"
+        },
+        {
+          "bytes": 18552,
+          "path": "Signature/SignaturePicture.png",
+          "sha256": "0a56908e41facffa37ba8879509addc837efa08fa4f9d69f5ce4ba246c91c246"
+        },
+        {
+          "bytes": 19906,
+          "path": "QuickLook/Thumbnail.png",
+          "sha256": "f70c95929cf8ec105dd42cac8d827da5a6996a8cbb193ba41377c97f44c8bbd8"
+        }
+      ],
+      "keys": 220,
+      "name": "Narinder Pencil",
+      "note": "",
+      "shows": "whether the maker's picture and signature are carried",
+      "single": "singles/6-Narinder_Pencil.brush",
+      "single_sha256": "2d60a8cd9319249bb5b9db9f52c778cdad82e4ce824b25a63827b04f460dd76f",
+      "slot": 6,
+      "slot_kind": "author",
+      "slot_shows": "whether the maker's picture and signature are carried",
+      "source": {
+        "container": "official/procreate-5/p5-sketching.brushset",
+        "folder": "74BCDDB8-D19A-4C58-92F5-D2A7CB87868E",
+        "position": 6,
+        "prefix": "74BCDDB8-D19A-4C58-92F5-D2A7CB87868E/",
+        "set": "Sketching 1"
+      },
+      "uuid": "FF445601-D6A1-460D-A20D-4CE626BA80FB",
+      "wanted": "a brush that carries an author picture and a signature"
+    },
+    {
+      "as_specified": true,
+      "era": "M173",
+      "family": "modern",
+      "files": [
+        {
+          "bytes": 6571,
+          "path": "Reset/Brush.archive",
+          "sha256": "c3a3058ae50b45457e4ac768e12191a9018423cb2949448e8798e74bf47bad26"
+        },
+        {
+          "bytes": 6600,
+          "path": "Reset/Sub01/Brush.archive",
+          "sha256": "a69fb516303e78382de1105f13e7f938328701f0d6994a72e3e7f0389aac066e"
+        },
+        {
+          "bytes": 150824,
+          "path": "Reset/Sub01/QuickLook/Thumbnail.png",
+          "sha256": "8a7aa3fab2c2a2bb43b813431c4bfc77ba2de1aff078867782646d54acfdb056"
+        },
+        {
+          "bytes": 3561,
+          "path": "Reset/Signature/SignaturePicture.png",
+          "sha256": "d4f7b7bf5114eece35a6657e3393a8fee1af7c48647d5b1e54f7ae074148b298"
+        },
+        {
+          "bytes": 91151,
+          "path": "Reset/QuickLook/Thumbnail.png",
+          "sha256": "40746cf94c3db1bf27095d70a60085a60d5176d2ae252c7fbde5c7dfcddd6899"
+        },
+        {
+          "bytes": 13185,
+          "path": "AuthorPicture/AuthorPicture.png",
+          "sha256": "cab9897d0e7ce9e7d50f6a9a559da0aede2b84f6ba76cb787e9198f61a5d907c"
+        },
+        {
+          "bytes": 6589,
+          "path": "Brush.archive",
+          "sha256": "1b69096527d9229def75991b29ccd616376abb07664f3bae9bf5dd8cfa63a6fd"
+        },
+        {
+          "bytes": 6600,
+          "path": "Sub01/Brush.archive",
+          "sha256": "a69fb516303e78382de1105f13e7f938328701f0d6994a72e3e7f0389aac066e"
+        },
+        {
+          "bytes": 150824,
+          "path": "Sub01/QuickLook/Thumbnail.png",
+          "sha256": "8a7aa3fab2c2a2bb43b813431c4bfc77ba2de1aff078867782646d54acfdb056"
+        },
+        {
+          "bytes": 3561,
+          "path": "Signature/SignaturePicture.png",
+          "sha256": "d4f7b7bf5114eece35a6657e3393a8fee1af7c48647d5b1e54f7ae074148b298"
+        },
+        {
+          "bytes": 91151,
+          "path": "QuickLook/Thumbnail.png",
+          "sha256": "40746cf94c3db1bf27095d70a60085a60d5176d2ae252c7fbde5c7dfcddd6899"
+        }
+      ],
+      "keys": 173,
+      "name": "Cocoa",
+      "note": "",
+      "shows": "the deepest folder tree a brush has",
+      "single": "singles/7-Cocoa.brush",
+      "single_sha256": "9039dc053dc847b38b7de7d0ed586114af3ca155c8e4787cb8090e77934d64a9",
+      "slot": 7,
+      "slot_kind": "reset",
+      "slot_shows": "the deepest folder tree a brush has",
+      "source": {
+        "container": "official/sweet-treats/sweet-treats.brushset",
+        "folder": "16F666FC-D72F-41E5-93AF-5366566A54E3",
+        "position": 1,
+        "prefix": "16F666FC-D72F-41E5-93AF-5366566A54E3/",
+        "set": "Sweet Treats"
+      },
+      "uuid": "B86BEA9C-859E-4425-9DA7-DD94167DBCA1",
+      "wanted": "a Sweet Treats brush that has a reset copy with a second brush in it (Reset/Sub01/)"
+    },
+    {
+      "as_specified": true,
+      "era": "M242",
+      "family": "modern",
+      "files": [
+        {
+          "bytes": 0,
+          "path": ".empty",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 154062,
+          "path": "GL-Volcanic-Shape.png",
+          "sha256": "ed7cff7b7c2d5b8ee57a4eafb5fe4948da7448ed1a7d2b02443dd59aa2351c19"
+        },
+        {
+          "bytes": 9570,
+          "path": "Brush.archive",
+          "sha256": "2293cf8ee5e5fc61045b49053f6e2552dedc296868e87343e7159192df800bdb"
+        },
+        {
+          "bytes": 154062,
+          "path": "GL-Volcanic-Grain.png",
+          "sha256": "ed7cff7b7c2d5b8ee57a4eafb5fe4948da7448ed1a7d2b02443dd59aa2351c19"
+        },
+        {
+          "bytes": 0,
+          "path": "QuickLook/.empty",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 65455,
+          "path": "QuickLook/Thumbnail.png",
+          "sha256": "6e383f9e9ff1d21f109993db1321359d3ae938b752cd1338dff6c6699075a80d"
+        }
+      ],
+      "keys": 242,
+      "name": "Volcanic Ash",
+      "note": "",
+      "shows": "the newest format the library holds",
+      "single": "singles/8-Volcanic_Ash.brush",
+      "single_sha256": "383c517c168c555e062a005ca4045a61cde98985be8ff9f3cc3f568e36e3e02c",
+      "slot": 8,
+      "slot_kind": "earth",
+      "slot_shows": "the newest format the library holds",
+      "source": {
+        "container": "official/earth/earth.brushset",
+        "folder": "F23BBF2E-62EB-4B46-9192-3080002CD2E9",
+        "position": 7,
+        "prefix": "F23BBF2E-62EB-4B46-9192-3080002CD2E9/",
+        "set": "Earth"
+      },
+      "uuid": "B39B5043-C68E-46C4-AE22-51E664FDA7AA",
+      "wanted": "a brush from the Earth set (242 keys, `version` 4), with a texture kept under its own file name and zero-byte `.empty` files"
+    }
+  ],
+  "schema": "rosw-brushes-device-test/1",
+  "set": {
+    "bytes": 3705724,
+    "file": "ROSW-1-control.brushset",
+    "name": "ROSW 1 Control",
+    "sha256": "ba77c0057febbfccf0cd5bee88ea002bab7c024333d82a09291a5ab55211777a"
+  },
+  "sitting": "sitting-1",
+  "substitutes": [],
+  "unfilled": [],
+  "written": [
+    "CHECKLIST.md",
+    "ROSW-1-control.brushset",
+    "known-bad/KNOWN-BAD_old-designer.brush",
+    "manifest.json",
+    "singles/1-Broken_Conte.brush",
+    "singles/2-AN_Botanicaliser.brush",
+    "singles/3-IGB_6B_Pencil.brush",
+    "singles/4-Pandani.brush",
+    "singles/5-Studio_Pen.brush",
+    "singles/6-Narinder_Pencil.brush",
+    "singles/7-Cocoa.brush",
+    "singles/8-Volcanic_Ash.brush"
+  ]
+}

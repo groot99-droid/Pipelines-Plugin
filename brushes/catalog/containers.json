@@ -1,0 +1,3048 @@
+{
+  "0163e04071a1d857af915b5a47b6b93d8a30afe460f58535e041b56fa49f27c9": {
+    "bytes": 34807215,
+    "found": [
+      {
+        "brushes": [
+          "b_54fbda2bc5bc",
+          "b_10fa884116e7",
+          "b_35b7371e1eaf",
+          "b_69fba64427ec",
+          "b_81ab50fbf2c4",
+          "b_ad82e0c4f0f1",
+          "b_de9b249cd09b",
+          "b_19b3e5ad9003",
+          "b_40ec9718b769",
+          "b_0a87f7a76bb1",
+          "b_5f8d441b8a20",
+          "b_a192382601fc",
+          "b_2c15119876d6",
+          "b_0f4e35bed3b4",
+          "b_3257bacd4cdc",
+          "b_99c34873ec85",
+          "b_94ce1366835e",
+          "b_48dccb95ce82",
+          "b_fcb4962e5bd3",
+          "b_5704e1f7fbb6",
+          "b_4abeb83a4d67",
+          "b_231fd02dfffa",
+          "b_011e9a1d6971",
+          "b_2f6a0899b172",
+          "b_6c6579f8e518",
+          "b_bad0b44afcf3",
+          "b_179c7da8fcec",
+          "b_80b6b42de36b",
+          "b_5dac230ff808",
+          "b_12215fa51ddb",
+          "b_5604c956af43",
+          "b_a09e1077bec4",
+          "b_d0c9e4eedcee",
+          "b_d8b474b7761a",
+          "b_2be07fcd35d8",
+          "b_b7c400175a54",
+          "b_30743cf0604d",
+          "b_dbb02b82012b",
+          "b_262f9298239e",
+          "b_fdd4384d8a61",
+          "b_5e31a5e9b75a",
+          "b_d17822fd6a9f",
+          "b_5992a3b8a8fe",
+          "b_70a4e91ca31d",
+          "b_efbb88ad170f",
+          "b_e6db64acf6fa",
+          "b_e1879a08b80a",
+          "b_d4fc97fc3c35",
+          "b_b986d564c434",
+          "b_ad411f47b1f4"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "3D",
+        "set_slug": "3d"
+      }
+    ],
+    "library": "user",
+    "pack": "lettering-3d",
+    "paths": [
+      "user/lettering-3d/Procreate_3D_Lettering_Bundle.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "0385103ca3f6117c6d1d004f45b439bd6d5036ce06f8e973fff01a33cfa259a0": {
+    "bytes": 974990,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_0f45826e4e76",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Tech_Pen_0.5.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "04a6b29ea9280ee734ee8553d4e4aa68e0c9fad1d880c7ff2f84e582f63addc6": {
+    "bytes": 19527444,
+    "found": [
+      {
+        "brushes": [
+          "b_ca664d8fe2e8",
+          "b_3174316ce93a",
+          "b_479405190186",
+          "b_26651d5428fa",
+          "b_d8d4bbfb48b2",
+          "b_8a564a0134f6",
+          "b_e47b2c9fc6fe",
+          "b_202d8e5a1c64",
+          "b_f29138f508db",
+          "b_7be177e18223",
+          "b_f7b0d76c9d8b",
+          "b_9914805d43c6",
+          "b_d9c974660a24",
+          "b_314032a9dca7",
+          "b_a8cf2ee7575b",
+          "b_03ab8279e2c2",
+          "b_82e7024603fd",
+          "b_3569d8734375",
+          "b_0038196c4327",
+          "b_a870dfb2bf1f",
+          "b_638bb17ff180",
+          "b_e10e3fd3ebd6",
+          "b_bc756b04c931",
+          "b_5c424109f09b",
+          "b_9b1147ce780c",
+          "b_0a93b3f63324",
+          "b_564a911420fe",
+          "b_85b6113b5581"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Pattern",
+        "set_slug": "pattern"
+      }
+    ],
+    "library": "user",
+    "pack": "pattern",
+    "paths": [
+      "user/pattern/Pattern.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "053c269478732883a0505f5968171792d0f07e7900778d7b5a643274de8c192a": {
+    "bytes": 2594900,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_ecf3d78a9b66",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "monoliners",
+    "paths": [
+      "user/monoliners/Bobble_Texture.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "0b7167080ab3c253a8aa7b60b2e09ca0d842804141e0f21d9e896fdf43ec6052": {
+    "bytes": 31058698,
+    "found": [
+      {
+        "brushes": [
+          "b_31ce69900c5d",
+          "b_ccfe6477e692",
+          "b_91cef29de5f7",
+          "b_f512a4ecc126",
+          "b_219fe22e2e7b",
+          "b_931bf575a88c",
+          "b_7ac6f107a0b4",
+          "b_9bf5d790f146",
+          "b_d685796b8dcc",
+          "b_84d3639a8e70",
+          "b_ee94a3f557a5",
+          "b_9edb4c90f179",
+          "b_e7e72924ee5c",
+          "b_13c4fe6476d7",
+          "b_da8abb4d1cda",
+          "b_9b6b0e40d5a6"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Starter Kit",
+        "set_slug": "starter-kit"
+      }
+    ],
+    "library": "user",
+    "pack": "starter-kit",
+    "paths": [
+      "user/starter-kit/Starter_Kit.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "0c1ff528200a63bc14059789e4c70eefd28baa611aec58b822217e097a0d8df3": {
+    "bytes": 54475833,
+    "found": [
+      {
+        "brushes": [
+          "b_b0c15eb83a46",
+          "b_e92b17f46d9b",
+          "b_6876712a9e00",
+          "b_0ea160db5621",
+          "b_4be0c80b0650",
+          "b_219d10cfe137",
+          "b_ae5bafdbbf87",
+          "b_bc3f841f4fae",
+          "b_dfd599d83018",
+          "b_029435d2b684",
+          "b_4e57476ddfb8",
+          "b_f5926355479e",
+          "b_14e3851b76f4",
+          "b_096eec0fb3c5",
+          "b_1864c76a0da1",
+          "b_1818f529fc77",
+          "b_604a1b75843e"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Painterly Pack",
+        "set_slug": "painterly-pack"
+      }
+    ],
+    "library": "user",
+    "pack": "painterly-pack",
+    "paths": [
+      "user/painterly-pack/Painterly_Pack.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "0df270f4418fdd94d198f7b1be36818edc4fae9a182e5c2882c5e77294452fce": {
+    "bytes": 1828221,
+    "found": [
+      {
+        "brushes": [
+          "b_60e5afeee423",
+          "b_65c12adb5905",
+          "b_b00430aabf02",
+          "b_5152f7eb5fbf",
+          "b_a13ffba43873",
+          "b_bfee770707c5",
+          "b_3a7715ea5d88",
+          "b_523a430d0167",
+          "b_e762a60204a0",
+          "b_cc95cd79c499",
+          "b_cebbc424fe52",
+          "b_67536e81d171",
+          "b_5c1415fe71ed",
+          "b_0655cd7e25bb",
+          "b_c4a95a79ec5f",
+          "b_e84c675100a5",
+          "b_95b54de8807d",
+          "b_3aefe104b16f",
+          "b_75bb0236267a",
+          "b_f4d80cb0b7cb"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "PD Floral Stamps",
+        "set_slug": "pd-floral-stamps"
+      }
+    ],
+    "library": "user",
+    "pack": "trendy-stamps",
+    "paths": [
+      "user/trendy-stamps/PD_Floral_Stamps.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "0e31a77af543bc5279f6bc470590fd03fb9fb5f5310c0c5a60eefee5e942b234": {
+    "bytes": 622519,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_5780dbff18c0",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Art_Marker_Fine.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "0f930f6bdceeffb6ed9f90b76107bd22605ed1796753592e94e6ba3525412e1a": {
+    "bytes": 836624,
+    "found": [
+      {
+        "brushes": [
+          "b_8e83afee98b3",
+          "b_c36cbdb0ce87",
+          "b_57b2c7e1dfda",
+          "b_8e2a273a9d85",
+          "b_b250390a992c",
+          "b_a485c6c203eb",
+          "b_f9b37bde4ed7",
+          "b_8df26b96182e"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Textures",
+        "set_slug": "p2-textures"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-textures.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "105bc5fe295ab29ab5d18f8a1825a15dbd0f65344aa00ce1b9d001635f66fad5": {
+    "bytes": 1550079,
+    "found": [
+      {
+        "brushes": [
+          "b_2b43ec43df7b",
+          "b_b9dff8f090f1",
+          "b_ece5fd618291",
+          "b_0c398173c65e",
+          "b_9ab1dee58633",
+          "b_6468432fcfe5",
+          "b_21f17536bc4b",
+          "b_54a1f3c80d0a"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Industrial",
+        "set_slug": "p2-industrial"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-industrial.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "17894fb1827215c336f73fb6698fee14ef3810c5ca072e7404a3f25c400a20f1": {
+    "bytes": 238874,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_c8ca575d2ad9",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Sketcher_Pencil.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "184ed6739a85ce472ba02300f5bced2c24efc09207444c8bd2f3de2759ee081d": {
+    "bytes": 1505291,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_babe3a2d02da",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_China_Ink_.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "18583c21688d003255c935f8c166379d30e8fbec6e057164b008dc126e985c68": {
+    "bytes": 6000312,
+    "found": [
+      {
+        "brushes": [
+          "b_b34fe4ffa2c4",
+          "b_f2f436985df7",
+          "b_74bb61fc1540",
+          "b_d96205a232d3",
+          "b_65ac40c13883",
+          "b_a65823645f19",
+          "b_549f54623604",
+          "b_ffdba19425e8",
+          "b_df12d66cb0f8",
+          "b_9cb5b73af5a3",
+          "b_f7c0de74d89d",
+          "b_6684fd2cb929",
+          "b_bae654e70245",
+          "b_c45d4c65880c",
+          "b_7565eabc4876",
+          "b_660999e58ff1",
+          "b_aafdea5f3bff",
+          "b_d370a95e73c5",
+          "b_be5242d17f42",
+          "b_9d368e262e89",
+          "b_886489b62599"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "TextureTown",
+        "set_slug": "texturetown"
+      }
+    ],
+    "library": "user",
+    "pack": "texturetown",
+    "paths": [
+      "user/texturetown/TextureTown.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "18c64604fd5ca470f990c53985308ebfb4074c7a9d490fd7ab5bd716b82a8dd4": {
+    "bytes": 3537089,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_7b8d317ecdbb",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "monoliners",
+    "paths": [
+      "user/monoliners/Blocky_Texture.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "1aaf5d76072b6c243a848fc26a685ca40b81c27f668e0a8747375d95c3b95be9": {
+    "bytes": 970386,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_e005da2f38eb",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Classic_Dry_Brush.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "1b21cafea9203b204e6e8dfe53ff2031371fceef543f16faf7f326593a0ba5d8": {
+    "bytes": 1731624,
+    "found": [
+      {
+        "brushes": [
+          "b_d90896046bb3",
+          "b_20f841f5efc8",
+          "b_9aa18e87aa8d",
+          "b_c76fe64058b4",
+          "b_8dc822b80fb5",
+          "b_8b2d35bbf317",
+          "b_4dae29a02cdf",
+          "b_ded5921d7449"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P3_Artistic",
+        "set_slug": "p3-artistic"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-3",
+    "paths": [
+      "official/procreate-3/p3-artistic.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "1c4424c20992f1d86ebce8ac592032afb288aa140fe679b8c293a4bb7e9e5c80": {
+    "bytes": 477489,
+    "found": [
+      {
+        "brushes": [
+          "b_515cd9f056f4",
+          "b_f60a0f7d444d",
+          "b_edcedd65bdbc",
+          "b_4f3ca022f501",
+          "b_e066a4030f26",
+          "b_57e706632dd1",
+          "b_543002ab8be4",
+          "b_cd5989264469",
+          "b_e4e3b3037764",
+          "b_ca6b29ee80a7",
+          "b_ce64f9dc2228",
+          "b_a84b9465dbaf",
+          "b_44a680428322",
+          "b_b442b51ae9ac",
+          "b_2b41f88c2f4b",
+          "b_165ef38786eb",
+          "b_029e324d7472"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Inking 1",
+        "set_slug": "p5-inking"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-inking.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "1cccedf678fdd0e38fd9a4ff7b4b7a5dbd900f04ca90820dc63f2433d6841927": {
+    "bytes": 10229816,
+    "found": [
+      {
+        "brushes": [
+          "b_694bf9dc02a2",
+          "b_776893b7e6f6",
+          "b_61806cc6c0c9",
+          "b_25b977d6cb8d",
+          "b_a9854930ce39",
+          "b_90224ff73d90",
+          "b_7377ea3e991f",
+          "b_b5beee736714"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "PD Dynamic Brushes",
+        "set_slug": "pd-dynamic-brushes"
+      }
+    ],
+    "library": "user",
+    "pack": "trendy-stamps",
+    "paths": [
+      "user/trendy-stamps/PD_Dynamic_Brushes.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "23b8df72801024eaff207bfa880d3a534b5437e75afc8546bd09187632761c1a": {
+    "bytes": 1040745,
+    "found": [
+      {
+        "brushes": [
+          "b_7bc9676d2bb2",
+          "b_d4bed1e19fb6",
+          "b_b83dcc24231f",
+          "b_2b10e0c4218e",
+          "b_8fb63c7797d0",
+          "b_bcaaf801d2fe",
+          "b_207fa1c029dd",
+          "b_de68ce74fbe0"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Elements 1",
+        "set_slug": "p5-elements"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-elements.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "245b320f6cf36820d7d6777899225b97aae205dfff86c06b7986b750004b7335": {
+    "bytes": 1163848,
+    "found": [
+      {
+        "brushes": [
+          "b_777fc7ddd187",
+          "b_56b2eeb5ffec",
+          "b_420444d9e65d",
+          "b_046c1f8a6a26",
+          "b_6fccd1c1357b",
+          "b_4c33ecfc8203",
+          "b_5899cf324b81",
+          "b_fde25f1eb3a2"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Charcoals",
+        "set_slug": "p2-charcoals"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-charcoals.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "2683429993ac86678fa7557a1d807e16bbf192048ce97fb39810b7542f6c9e28": {
+    "bytes": 387972,
+    "found": [
+      {
+        "brushes": [
+          "b_3a97ee9a9776",
+          "b_8e0154000957",
+          "b_b3e45c087f43",
+          "b_611d179d5ae2",
+          "b_fd67d28ed1b4",
+          "b_fa7f1c11651a",
+          "b_e64835057e89",
+          "b_b52b4bbbebb1"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Airbrushing",
+        "set_slug": "p2-airbrushing"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-airbrushing.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "2a817e1d846c4f3951a2c40a2658827d4e2bf4845564958add131496aaf845d3": {
+    "bytes": 857042,
+    "found": [
+      {
+        "brushes": [
+          "b_7451c0b0f0bf",
+          "b_7b42c60f553b",
+          "b_509e6a38555e",
+          "b_53448b251b8c",
+          "b_5f788ead08d5",
+          "b_879b49f67ef4",
+          "b_8380acb85cd9",
+          "b_2618e45528a6"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Organic",
+        "set_slug": "p2-organic"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-organic.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "2ac864e92622bfab117c411ed213474e424c725b174cc561e50535e072ce34da": {
+    "bytes": 366773,
+    "found": [
+      {
+        "brushes": [
+          "b_f52ad68f3c8c",
+          "b_1b1945f99299",
+          "b_3952e7247f77",
+          "b_c099cef4a4d2",
+          "b_e8f00371d3fa",
+          "b_d73696a51651",
+          "b_b5d6dc6a43c5",
+          "b_5a98b9de095c"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "BrushUp- Paint Pens",
+        "set_slug": "brushup-paint-pens"
+      }
+    ],
+    "library": "user",
+    "pack": "brushup-paint-pens",
+    "paths": [
+      "user/brushup-paint-pens/BrushUp-_Paint_Pens.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "2ad09956b3ba4f35e208791777c7f35d9b63a74880020c5e3a24623d8d162f1a": {
+    "bytes": 35642564,
+    "found": [
+      {
+        "brushes": [
+          "b_8cf72c0c43b4",
+          "b_21f4f2a9e2f0",
+          "b_4807cadb5399",
+          "b_898243d3db8f",
+          "b_b514ff6303ba",
+          "b_b8637cb58581",
+          "b_3030e4750712",
+          "b_e2e42dbf6900"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "浓墨淡彩",
+        "set_slug": "chinese-calligraphy"
+      }
+    ],
+    "library": "official",
+    "pack": "chinese-calligraphy",
+    "paths": [
+      "official/chinese-calligraphy/chinese-calligraphy.brushset"
+    ],
+    "skipped": [],
+    "warnings": [
+      "84 later entries with a name already met were dropped; the first wins: E59EC327-B94E-41AB-A9AE-2328BCE7E3A8/Reset/AuthorPicture/.empty, E59EC327-B94E-41AB-A9AE-2328BCE7E3A8/Reset/Sub01/.empty, E59EC327-B94E-41AB-A9AE-2328BCE7E3A8/Reset/Sub01/QuickLook/.empty ..."
+    ]
+  },
+  "391f21e054c5f82d1e840d965401c7758c3b586e289e463fa6b74516553cb729": {
+    "bytes": 48324412,
+    "found": [
+      {
+        "brushes": [
+          "b_55ceae872b8a",
+          "b_4872b5bfd083",
+          "b_57dd3d61bf98",
+          "b_ee5b521f3f3c",
+          "b_8b581c2ccf0c",
+          "b_6ba21b862c8e",
+          "b_fe4bdcf937b5",
+          "b_d62d222d370e",
+          "b_019150c58259",
+          "b_b36c64beb323",
+          "b_608090379ab3",
+          "b_7b3f2e8a7c6c",
+          "b_77829f08626b",
+          "b_0d7324bbf4d7",
+          "b_95e50f957f30",
+          "b_45d4af77aef4",
+          "b_2b59498c5c54",
+          "b_578b7d1e5dc6",
+          "b_c28489984052",
+          "b_6e747d141386",
+          "b_6d4664f07a9a",
+          "b_44afceaffc5f",
+          "b_55ebef529f00",
+          "b_f868dda9b66b",
+          "b_9f27376f50cc"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "FTOON - Canvas X",
+        "set_slug": "ftoon-canvas-x"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-canvas-x",
+    "paths": [
+      "user/frankentoon-canvas-x/FTOON_-_Canvas_X.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "3b714490d157ecaa06510cb89128eb30a420716aeec979020b488b5facc79aa7": {
+    "bytes": 2476459,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_fd4a49584502",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "monoliners",
+    "paths": [
+      "user/monoliners/Blobby_Texture.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "3e8f77cba0017f0433d3242161ef38701a3fa2d4d70d90bb6919391017fa03bc": {
+    "bytes": 2513544,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_122b28258efb",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Wet_on_Cotton_Paper.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "41a817ae949d467ddb91c01d3be3c2561b3395dca10a5ff64395348839b7606b": {
+    "bytes": 1084157,
+    "found": [
+      {
+        "brushes": [
+          "b_cde8b3d40de7",
+          "b_f957f24b084f",
+          "b_b2f80d7f27c2",
+          "b_213db4bd089b",
+          "b_269fe869d274",
+          "b_f4fedb6eabaf",
+          "b_848b7c1afbf8",
+          "b_b0ece141e38c"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Spraypaints",
+        "set_slug": "p2-spraypaints"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-spraypaints.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "44d8778c21e56b20af12219f98f1ef3cab196c4bc7b2eabd93cdb34a62381db3": {
+    "bytes": 798587,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_bdae84db49eb",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Round_Marker.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "4c1595898f4c637f4fb6efbf64f3c9bf1325ff57c27fe78168c2b98b717568be": {
+    "bytes": 2137042,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_72dacfda3c12",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "insecto-charcoal",
+    "paths": [
+      "user/insecto-charcoal/Soft_Charcoal_Shader.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "4f29983b5e215aaf6e456be85412f0a2e2b40487ac0da93e0030f32766ccd4d6": {
+    "bytes": 747948,
+    "found": [
+      {
+        "brushes": [
+          "b_8502203cb4fc",
+          "b_c607acc2675c",
+          "b_2b2687b1c591",
+          "b_5f476426024e",
+          "b_7f2d969d6d5a",
+          "b_a6563d427848",
+          "b_390bcb938dcd",
+          "b_a9156f93d739",
+          "b_07d8abfd299e",
+          "b_ff84536642ea",
+          "b_2e961aebae4f",
+          "b_b64d5eff207d"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Airbrushing 1",
+        "set_slug": "p5-airbrushing"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-airbrushing.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "5458aa6da92f97124a6eecbc42699579b58a987d0c9fc62177974d7488b404b5": {
+    "bytes": 228853,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_0c6448476315",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Dry_Brush_Shader.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "547e87dddd82b46112c0b86994f2348cc67338e616607ffe9df84557a50e9a0f": {
+    "bytes": 1924790,
+    "found": [
+      {
+        "brushes": [
+          "b_3ffb986878aa",
+          "b_3316eeb52c94",
+          "b_b10639abaed8",
+          "b_b8498689e00e",
+          "b_7077bda61d83",
+          "b_9d32841dfdc6",
+          "b_90d6fc77cf82",
+          "b_8e1bc3e7ff83",
+          "b_0d24417837a1",
+          "b_b3ec02ee9ce7",
+          "b_d43792c3eaf1",
+          "b_b940d01b692d",
+          "b_6e669cb2783c",
+          "b_b4fb84b5f424",
+          "b_5b5930e4c195"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Organic 1",
+        "set_slug": "p5-organic"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-organic.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "5506fe35fb35d2039a9966e9454ddb3d86839157d69be8bc6e164f2d4cf37568": {
+    "bytes": 1315947,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_950b71b0b006",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "monoliners",
+    "paths": [
+      "user/monoliners/Blocky_Smooth.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "55f55093c8ee7e5feaa00851792c48d15f4855e428f0a44d46eaf4b06c830a0a": {
+    "bytes": 1395088,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_a43abefa675a",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Thin_Crayon.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "5b16f391b584cb335754c2cec5f3ee53693a0980dbe8ee4de0b0ddb1013da99d": {
+    "bytes": 80651776,
+    "found": [
+      {
+        "brushes": [
+          "b_de1ce6984dbd",
+          "b_cef59f097872",
+          "b_cbcaf26cef96",
+          "b_79703fa49fb2",
+          "b_6cd12ff7818d",
+          "b_7277569fae08",
+          "b_9a2854cfa2ae",
+          "b_97c2fafd8fe1"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Sweet Treats",
+        "set_slug": "sweet-treats"
+      }
+    ],
+    "library": "official",
+    "pack": "sweet-treats",
+    "paths": [
+      "official/sweet-treats/sweet-treats.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "5b325051f368de8b8f8b2cbe5b0b5f25ccd7a7c65a266d4f5601967e21cf0f79": {
+    "bytes": 40706549,
+    "found": [
+      {
+        "brushes": [
+          "b_b7c43cf8fea3",
+          "b_18d1be4dde68",
+          "b_995c8e4d5285",
+          "b_63f1c7cb6206",
+          "b_f5d63fac20f2",
+          "b_653a26580af6",
+          "b_6e17c347fac3",
+          "b_a4ceaba3d6b2",
+          "b_d33e051c2241",
+          "b_9326b3171603",
+          "b_92ed13a452ba",
+          "b_fed55c53b5ea",
+          "b_c1c8980f2825",
+          "b_34d29deb8765",
+          "b_09f2b0ded54a",
+          "b_c9ab0db699bc",
+          "b_ee568a088d80",
+          "b_fadf56391d2f",
+          "b_c91e51164e9e",
+          "b_f582eabb0c8c",
+          "b_2f1c77cd90d8",
+          "b_4653f97dbb21",
+          "b_2be07b62aa23",
+          "b_d7d147839ba7",
+          "b_ce3c188308b1"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Forest Tales",
+        "set_slug": "forest-tales"
+      }
+    ],
+    "library": "user",
+    "pack": "bocadebra-forest-tales",
+    "paths": [
+      "user/bocadebra-forest-tales/Forest_Tales.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "5e348803aa362354abe13ae353baebaa5249aed397647424768d5f582fe133e4": {
+    "bytes": 547579,
+    "found": [
+      {
+        "brushes": [
+          "b_775dae7c1a7f",
+          "b_8a63ac6a710d",
+          "b_1dbdb418ec55",
+          "b_a0a0757f1748",
+          "b_a63e1ebed9b4",
+          "b_bcfb26c778a6",
+          "b_1845dfc970fc",
+          "b_0f5f793c77f2"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Painting",
+        "set_slug": "p2-painting"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-painting.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "5fae7e8abe72bf0872f3876c3338e2c13402e584db66f3074d43b84af69b694b": {
+    "bytes": 206103,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_085ba342a7fd",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Dusty_s_Grit_Liner.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "62f3eb0c26faabe581984031caccf0e7a0d8eaf2e01435bb7e8a42fbd84cb6b7": {
+    "bytes": 309361,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_7df86214c675",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Sketch_Marker_Fine.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "6349c7513a1acff3285061c9a33e0aa1dd88bf5d3e302a7e4c0d4df2c6ff1766": {
+    "bytes": 2103800,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_76ff8fa23076",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "insecto-charcoal",
+    "paths": [
+      "user/insecto-charcoal/Sketch_Charcoal_-_Soft.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "645cbfdcb0b7521b83715d2f30953f16b8ac63956ccaa3fc99a18720f6972c17": {
+    "bytes": 346541,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_85490da0d218",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Gringo_Grit.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "652210419fdc7ccf51e3e8ca2003a8dc4f9377250f15443da0dd6e92ddf3167d": {
+    "bytes": 1682406,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_22835a061b6d",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Dry_Waterbrush_3.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "6848a859846f0f6368b76eded7f8a9317da5ee1ab52431b6ccba47e57311d7a2": {
+    "bytes": 1101369,
+    "found": [
+      {
+        "brushes": [
+          "b_c11dc9d2f9b2",
+          "b_f9aa22efc435",
+          "b_8be70eaf86b2",
+          "b_a04333276075",
+          "b_c3878a35b759",
+          "b_c261f7dfc799",
+          "b_97bc48a3f011",
+          "b_2f45287fadd8"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Abstract",
+        "set_slug": "p2-abstract"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-abstract.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "6b25929e36ed0b85da50cf8ccf179b2161007cb47092293db418fbfe2fcd39ec": {
+    "bytes": 958313,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_c9cbccd7c784",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Magic_Wash.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "6d2a17ce43b29d57d3a416cffc112fa4d5660b7c777f9b8a934fa36e8297bef2": {
+    "bytes": 2360463,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_7fcd194f7296",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "insecto-charcoal",
+    "paths": [
+      "user/insecto-charcoal/Charcoal_Dust.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "7017eac964321d2c1d5665510e0bb32992c2bbe76c1dd3ec9da46635b3cd9c07": {
+    "bytes": 673560,
+    "found": [
+      {
+        "brushes": [
+          "b_465a0b6b58db",
+          "b_e6c9fdcabe42",
+          "b_0bcb2094215a",
+          "b_5b0e51f9512c",
+          "b_efa4aa693962",
+          "b_8eb2871cf8d0",
+          "b_a9945dc418d2",
+          "b_0af687019e2f"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Water",
+        "set_slug": "p2-water"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-water.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "707225d3d3880431b5fc2b4abaf5b08118a10978e217567a356740d2fea2c874": {
+    "bytes": 1089763,
+    "found": [
+      {
+        "brushes": [
+          "b_ef6e9bd35739",
+          "b_b021b2756084",
+          "b_38721775fe19",
+          "b_f494dd719e36",
+          "b_8a720ebbafd2",
+          "b_a25eefd27655",
+          "b_27e7c8b6e879",
+          "b_195e9662f15c"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Water 1",
+        "set_slug": "p5-water"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-water.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "777c94bab6d883654f48d29c3b721e8c4c33d0ed981afd262e67c289465e60a2": {
+    "bytes": 10471968,
+    "found": [
+      {
+        "brushes": [
+          "b_b7a59c5b2f37",
+          "b_ecf3d78a9b66",
+          "b_926c93d4b988",
+          "b_cae1760dedb8",
+          "b_950b71b0b006",
+          "b_66d04ec46dd3"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Monoliners",
+        "set_slug": "monoliners"
+      }
+    ],
+    "library": "user",
+    "pack": "monoliners",
+    "paths": [
+      "user/monoliners/Monoliners.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "795e13a74f423e6b7d65ae596b00b46c7c72b3bc7eeecc244e3782c5747c1335": {
+    "bytes": 745335,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_430c0850c9a8",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Classic_Inker.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "7b2f420bb0ba932370200456e87a3a444b37743f721f2e15db6f11be51950fb6": {
+    "bytes": 1286917,
+    "found": [
+      {
+        "brushes": [
+          "b_d6699e3f6fa2",
+          "b_ed2d4463e3ce",
+          "b_7c6be10382e3",
+          "b_515e16a8426d",
+          "b_802a3cfeb2aa",
+          "b_42906d9962d9",
+          "b_9d74682a3a99",
+          "b_e2f83999fe7f",
+          "b_2bb444335d9b",
+          "b_d3a428e43208"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Artistic 1",
+        "set_slug": "p5-artistic"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-artistic.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "7fdd93c7df2bb6331668b0304017cba10cacfd6f821360f3200ddb30bfef657f": {
+    "bytes": 264585,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_20add76197af",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "monoliners",
+    "paths": [
+      "user/monoliners/Blobby_Smooth.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "80e50cefdb3006c9e46e5279de4bacb264740b71639602125049a4725ff00600": {
+    "bytes": 1405651,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_a1abcec7ed02",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Sand_Stripe.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "8698b086ade65b378966a16cd1ae698dc2ab7dfff3815cdc385dd5b85b6d22ec": {
+    "bytes": 1013815,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_55fb3ddae83b",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Dry_Waterbrush_1.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "86b6c2d38f1cc9b2686fcd6b80318573a804639cf8c70267ffae9d6caed7e9fe": {
+    "bytes": 10954293,
+    "found": [
+      {
+        "brushes": [
+          "b_edbab1ff335c",
+          "b_56c0f741305b",
+          "b_abed95d45858",
+          "b_13f35a936820",
+          "b_1d3e236fdcdc",
+          "b_be3903a57f46",
+          "b_9aae4b8fb556",
+          "b_c0829bffd361",
+          "b_7035791eef88",
+          "b_bc5cc91b1a4d",
+          "b_20b8b64ad29e",
+          "b_c4a38bf275d2"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Procreate 1",
+        "set_slug": "procreate-1"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-1",
+    "paths": [
+      "official/procreate-1/procreate-1.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "876812d8719ba9d2b76167c73148a9593511b269ca68afc22367b97ab3222b44": {
+    "bytes": 633284,
+    "found": [
+      {
+        "brushes": [
+          "b_9c165844bc80",
+          "b_bc6f9d24c596",
+          "b_51973eb7e70b",
+          "b_85f7b3b60061",
+          "b_18e53c03bddb",
+          "b_d85191236445",
+          "b_76876e3628b5",
+          "b_aec2191809f8",
+          "b_1fada7471920",
+          "b_330884bffd9c"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Drawing 1",
+        "set_slug": "p5-drawing"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-drawing.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "89af82d212a2652fbfe8187717af87699fa594d14babbeea8e4e90e2ee5d6638": {
+    "bytes": 1312290,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_4f09745d11cd",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Soft_Pencil_Shader.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "8c3c501fff245825d566175c0a30f0e3fef675a879ccd5e70a4e55a6aaf6b9b9": {
+    "bytes": 1507357,
+    "found": [
+      {
+        "brushes": [
+          "b_0556703e5999",
+          "b_114716d14bbe",
+          "b_b0c764e641e7",
+          "b_69192ec7410f",
+          "b_e61503d3aa74",
+          "b_3fa3361f5c01",
+          "b_7c08f5b2c936",
+          "b_0f33aacf6d3b",
+          "b_08065fa17d78",
+          "b_774b84cdd692",
+          "b_732513732553",
+          "b_e77c7a375dca",
+          "b_5b6b4252f541"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Vintage 1",
+        "set_slug": "p5-vintage"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-vintage.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "8f3290c8ee16b359aba02dc8334a761062c1c7130dfd6b4bb6dde12d5c24f37e": {
+    "bytes": 499912,
+    "found": [
+      {
+        "brushes": [
+          "b_b6f50203eaa3",
+          "b_123e6b3dde3f",
+          "b_8c7bb095d485",
+          "b_63318f3edf41",
+          "b_420662042b63",
+          "b_7bdf219be9a1",
+          "b_6ca3f366b676",
+          "b_263e1828332f",
+          "b_a00a383d2d36",
+          "b_9da452d2d26f"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Calligraphy 1",
+        "set_slug": "p5-calligraphy"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-calligraphy.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "9035468583427552300cdcf216963bbc0eea034077ba6696e8b7e096756350b5": {
+    "bytes": 3692673,
+    "found": [
+      {
+        "brushes": [
+          "b_960bf0601a8f",
+          "b_f44fc7c542b4",
+          "b_d1f1217ba0ae",
+          "b_b35bd1951c30",
+          "b_0fc671d085e7",
+          "b_04544d851424",
+          "b_406cc1665d34",
+          "b_5234c180a62e",
+          "b_c1e3c08366d7",
+          "b_15dd42bb0372",
+          "b_95818c5931fa",
+          "b_b569dff30d52",
+          "b_821714d5f921",
+          "b_26cce49f3358",
+          "b_3f30a195d613",
+          "b_bcf5336826e4",
+          "b_5a51441ad73a",
+          "b_68133c8ded6c",
+          "b_e5a93d05e260",
+          "b_26c1659dc0ea",
+          "b_a8049da89ddd",
+          "b_75261be830c1"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Autumn Stamps ",
+        "set_slug": "autumn-stamps"
+      }
+    ],
+    "library": "user",
+    "pack": "autumn-brush-box",
+    "paths": [
+      "user/autumn-brush-box/Autumn_Stamps_.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "904aa7a5d61a3c60af0ab2e189b8571957f522b4bb6988a5baddabf08e5da04e": {
+    "bytes": 651485,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_4a6b331d027b",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Dried-out_Finishes.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "91d8d3673f8899aa5f34a29f5a985adc95960c2120618714ec795d80d68abff4": {
+    "bytes": 3696044,
+    "found": [
+      {
+        "brushes": [
+          "b_20f3dedd097c",
+          "b_e76056e33bb8",
+          "b_244e4953c986",
+          "b_df2d2eaf0ead",
+          "b_1825b3d418c7",
+          "b_d6b3dc470563",
+          "b_f818e38c5663",
+          "b_8a2b11f98759",
+          "b_987eac56f283",
+          "b_e701806c0d46",
+          "b_331ce7d350dd",
+          "b_94001fb51897",
+          "b_a9db2c14d214",
+          "b_39c23f1142ce",
+          "b_02cc3fc86e19",
+          "b_9d235fadc0e4",
+          "b_9256d017866e"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Materials 1",
+        "set_slug": "p5-materials"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-materials.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "926d7313159ffec0dc7b6d7ec2ccf64f4314b9441a37b6f0cec2df1235b58a2f": {
+    "bytes": 1963098,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_3473ca10fc9c",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "insecto-charcoal",
+    "paths": [
+      "user/insecto-charcoal/Broken_Conte.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "97d6bfcc4dbc3fa2001bdefb757f990dd1e71401414722efdc69c107c2bf79a0": {
+    "bytes": 2324486,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_6646453a6f15",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "insecto-charcoal",
+    "paths": [
+      "user/insecto-charcoal/Charcoal_Bar_1.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "996fea64fe2c08b7eeb627c183fe206539d5d28aad54836e11c8b93f61342fc7": {
+    "bytes": 2336593,
+    "found": [
+      {
+        "brushes": [
+          "b_dffd445f2343",
+          "b_f1284ca91dcf",
+          "b_bcfb78f1787a",
+          "b_32d4744497b0",
+          "b_aa7cb398de7c",
+          "b_bbe6ffcc4e9b",
+          "b_2d892cff2844",
+          "b_822fb27a69c7"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Industrial 1",
+        "set_slug": "p5-industrial"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-industrial.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "9fa0825554d1c4133165179daff04363ee841c0d1356f4325fccb0fa2f7c7265": {
+    "bytes": 893872,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_3f7b04697391",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Dry_Waterbrush_2.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "a2378e77cd75c26654e03957fe2899b4098b6f1169431a1ce6c17a5537705c47": {
+    "bytes": 45403371,
+    "found": [
+      {
+        "brushes": [
+          "b_875a7f5639f1",
+          "b_24c821996808",
+          "b_9aaabc0d104e",
+          "b_170b2a23e2b2",
+          "b_74b093e5a746",
+          "b_439237ac463e",
+          "b_ec2b2e8963cc",
+          "b_1351bd157049",
+          "b_1174312d5566",
+          "b_2d7b54737d54",
+          "b_8d45606d2fc3",
+          "b_31c7a98b17fb",
+          "b_e52d3df0c856",
+          "b_08c3b296c8af",
+          "b_37c0cfc2c8d6",
+          "b_a4e241d9ece2",
+          "b_c90b93387dc0",
+          "b_41db2adcbea3",
+          "b_7ad66dd2270e",
+          "b_ebd513d530a1",
+          "b_f06b08a565f9",
+          "b_659637ebe39a",
+          "b_c1ae4a9d032c",
+          "b_eb21520d09d1",
+          "b_0328ae50696b",
+          "b_3df85198798e",
+          "b_0a710f49dfa7",
+          "b_4d889928e843",
+          "b_b51875fa2b4c",
+          "b_49093db1a4e1",
+          "b_f39d81700d78",
+          "b_6e5294a79f99",
+          "b_893ca027c4fb",
+          "b_7a37b731b8ed",
+          "b_b32951782f1c",
+          "b_a1311c3fc5c3",
+          "b_10ac9b1f620e",
+          "b_6f9c0bcde4a9",
+          "b_7868e229a008",
+          "b_23bd22130d5f",
+          "b_69e62e5ca97d",
+          "b_094731737d21",
+          "b_39fe9184bdc3",
+          "b_eed75db093f2",
+          "b_0c28b98caf6a",
+          "b_b7c674fb585b",
+          "b_85f993496fdc",
+          "b_f1c636632810",
+          "b_13df5c4fb004",
+          "b_831358fb4fc6",
+          "b_08bdbb20d159",
+          "b_8f82358d2c6f",
+          "b_bf2f5415d82f",
+          "b_46d89b0e7255",
+          "b_992df9e83ada",
+          "b_9eb5a2733f13",
+          "b_d6bee284c162",
+          "b_c6547aab8368",
+          "b_86c7474bd07b",
+          "b_35eb5cb428b1",
+          "b_ae2aae3d07f1",
+          "b_7c20a79fce43",
+          "b_cfbd91bef6b6",
+          "b_72062d438ee2",
+          "b_1d1bb00605ae",
+          "b_1a00b8cab7f8",
+          "b_b59b2d976656",
+          "b_f34bedc69618",
+          "b_4f406d184baa",
+          "b_15ef1c93bb0b",
+          "b_07c82d6076e0",
+          "b_1d75cd79c0a6",
+          "b_0724d19dc501",
+          "b_925fe1e5fd8f",
+          "b_9519c4e0ef6c",
+          "b_7a1966cc62a5",
+          "b_5adde9fcf780",
+          "b_c8e16d3e6f22",
+          "b_72c78685bb92",
+          "b_ab5771504241",
+          "b_0ef914cfeb40",
+          "b_bc57516566dc",
+          "b_4a0fb1500adb",
+          "b_b7125caddbaf",
+          "b_ccbcb0ba6e79",
+          "b_9dd41536c363",
+          "b_01b5c64faf68",
+          "b_4508e09542a0",
+          "b_7b640d6f3b15",
+          "b_c289ee474586",
+          "b_8b85182fc653",
+          "b_e49c42250025",
+          "b_f7efcc89bba2",
+          "b_d1795d0678cf",
+          "b_46a7977b8530",
+          "b_5187db7df6f3",
+          "b_9855da8f8e0d",
+          "b_2cadaae47bf2",
+          "b_791674e1dd9c",
+          "b_c2c908e2774f",
+          "b_c11595d5508c",
+          "b_9df6d2784da2",
+          "b_6dcab66eb56d",
+          "b_5a220f75ac7d",
+          "b_a1ea0ef884bc",
+          "b_6a327b31dbf8",
+          "b_e9613b213dc0",
+          "b_1d962f56e4ab",
+          "b_fae205265990"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "PD Watercolor Strokes",
+        "set_slug": "pd-watercolor-strokes"
+      }
+    ],
+    "library": "user",
+    "pack": "trendy-stamps",
+    "paths": [
+      "user/trendy-stamps/PD_Watercolor_Strokes.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "a29d2e1972515fec6f53c32092ba8dedc80bc76d771bb732152d047b62f8ab55": {
+    "bytes": 68139610,
+    "found": [
+      {
+        "brushes": [
+          "b_d64c969bb9bf",
+          "b_15784214d2d0",
+          "b_0fac4c081b1a",
+          "b_d9f96133c24e",
+          "b_7f9c65aa1ec7",
+          "b_b7110d3ab034",
+          "b_a8ac5b423aab",
+          "b_bdadafb75c6f",
+          "b_cd50f2c95efd",
+          "b_6cd0b40db79a",
+          "b_3d07786bc570",
+          "b_4b7eeb31be79",
+          "b_89a8c822242a",
+          "b_b4a271e33677",
+          "b_c5b4ae361b10",
+          "b_c10030bd84b1",
+          "b_e30805e89e0c"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Urban Sketching",
+        "set_slug": "urban-sketching"
+      }
+    ],
+    "library": "user",
+    "pack": "urban-sketching",
+    "paths": [
+      "user/urban-sketching/Urban_Sketching.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "a58b5677015435675a2f7e6c08b232c3abc48f3a27e170b4056c0101825c3833": {
+    "bytes": 217851,
+    "found": [
+      {
+        "brushes": [
+          "b_e9fe9907bee5",
+          "b_71e211ae2b65",
+          "b_fed8f439cc48",
+          "b_eb1f85125e11",
+          "b_db99b919faa5",
+          "b_3ca0460baebe",
+          "b_aa1006f83ac0",
+          "b_86f707a10892"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Inking",
+        "set_slug": "p2-inking"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-inking.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "a6b292053967406b8e05589e21550a54859744e065e1c7d588f3d4359b0f918b": {
+    "bytes": 56981,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_3ea39401c12c",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Toothy_Filler.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "a9f8f19b277556b901127efa12c98aecd4a4ec743b57c0046670b42eb9b9c69b": {
+    "bytes": 1653162,
+    "found": [
+      {
+        "brushes": [
+          "b_24853667ba37",
+          "b_9e8e3847a8c4",
+          "b_62b63df1462f",
+          "b_94a6614d3109",
+          "b_42e377b13c74",
+          "b_311ac4c0f5b8",
+          "b_3e6898381058",
+          "b_f231fb0362a3",
+          "b_8cc0ac282876"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Charcoals 1",
+        "set_slug": "p5-charcoals"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-charcoals.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "ab01ed09137a38c210543aabe09aea9b65bec0ffcdae96e1e3803720acbf72b4": {
+    "bytes": 2077855,
+    "found": [
+      {
+        "brushes": [
+          "b_a8612484ce1c",
+          "b_3800689835e1",
+          "b_d7dec4b4f2e9",
+          "b_b4abbf325673",
+          "b_bee1afb4fc2d",
+          "b_219bc2c84daf",
+          "b_0b0a63c1ce37",
+          "b_b0e9002b115d"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Spraypaints 1",
+        "set_slug": "p5-spraypaints"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-spraypaints.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "abf6242bcbd4028014d2844c4090f54f9785db79708b649e0e3af2c75377491e": {
+    "bytes": 54656968,
+    "found": [
+      {
+        "brushes": [
+          "b_7f7e6bd09c0b",
+          "b_3ba2555a24ee",
+          "b_5fcb0cc3ac36",
+          "b_5c9d4503641b",
+          "b_b66f2639bcb8",
+          "b_df16ab893d91",
+          "b_3f7ee579a7d1",
+          "b_fcf43350afa2",
+          "b_03647f8dfd2e",
+          "b_988bd778cb7d",
+          "b_33cf3c26d833",
+          "b_b14368b49756",
+          "b_eea94aa5e7ff",
+          "b_23f5477e3bed",
+          "b_79c87cc179da",
+          "b_c8d37edcc26f",
+          "b_baaab3647bfc",
+          "b_b23b23bcdb71",
+          "b_9590f631b0c4",
+          "b_d8693acff249",
+          "b_b6835dd9230c",
+          "b_f8f2cb7b761c",
+          "b_ad603a180f5f",
+          "b_c244e786403e",
+          "b_e0ed5bcbafeb",
+          "b_7c7141e8d85f",
+          "b_866cedcc5379",
+          "b_c131b26c923c",
+          "b_6289e55018a7",
+          "b_c3bd8c80648d",
+          "b_a1afe6314468",
+          "b_ed420c26d9cd",
+          "b_683a43b8272b",
+          "b_241622340dbb",
+          "b_edf35f52bee7",
+          "b_c8e00f09eea6",
+          "b_c780e7de7c8f",
+          "b_b69d102e9229"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Grain Shaders",
+        "set_slug": "grain-shaders"
+      }
+    ],
+    "library": "user",
+    "pack": "tgts-grain-shaders",
+    "paths": [
+      "user/tgts-grain-shaders/Grain_Shaders.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "afec638d723a0aa1f6c14681e6f3bd6d8c718a56d3b8d3b990ed9f37c27179cf": {
+    "bytes": 281063,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_b7a59c5b2f37",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "monoliners",
+    "paths": [
+      "user/monoliners/Bobble_Smooth.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "b1e9636a7c9c2ad46e8dab12a76f560d3eca6da29600c82cb06c3784b25c69a4": {
+    "bytes": 966780,
+    "found": [
+      {
+        "brushes": [
+          "b_d0eb2131c621",
+          "b_f294da395a33",
+          "b_2f3d8ea1989c",
+          "b_b7f543a61e6b",
+          "b_b6dcda8905d5",
+          "b_3624d791e352",
+          "b_f90af41229ac",
+          "b_d885480715c6"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Sketching",
+        "set_slug": "p2-sketching"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-sketching.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "b3a3524f3caa693ec62080c93a6c95b3e4fe38588075a0d64ab8f8147f67359b": {
+    "bytes": 139782,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_5dabd6e09ea5",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Sun_Baked_Freckles.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "b51666b1ff954db3eab38c3491677be1331dea9324a85117a53dcb7ee0df2c86": {
+    "bytes": 1163966,
+    "found": [
+      {
+        "brushes": [
+          "b_311652229c08",
+          "b_02bf3254509f",
+          "b_3ebfb4a9404a",
+          "b_d8fa93d0eec6",
+          "b_312dc00b1fb9",
+          "b_83f7352c58cf",
+          "b_9f39bf1d54f2",
+          "b_c53bde028a66"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Luminance 1",
+        "set_slug": "p5-luminance"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-luminance.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "b651cc959f8402d6a028b90b9757d06bcffecb737bc0a56619399381e1335e9a": {
+    "bytes": 1991617,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_78893a649286",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "insecto-charcoal",
+    "paths": [
+      "user/insecto-charcoal/Sketch_Charcoal.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "b69a73173d6c2ec2a1cf069d1cdba12bfebfadd775dee955838be867a6bcb04a": {
+    "bytes": 910068,
+    "found": [
+      {
+        "brushes": [
+          "b_4651086c36a7",
+          "b_ba50a7b6ccd9",
+          "b_bbbed1783598",
+          "b_137c6d1735b3",
+          "b_186d187ce312",
+          "b_8e00bbcaff76",
+          "b_dc03ad908eba",
+          "b_549c1588bf4b"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Elements",
+        "set_slug": "p2-elements"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-elements.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "b7d591b438997431bfc9021800b98d22ff84a0fdfa7f291ff8a171c6d398f2ef": {
+    "bytes": 2072910,
+    "found": [
+      {
+        "brushes": [
+          "b_d42ef7b4e2d1",
+          "b_9e938c930a65",
+          "b_7919063b7f4a",
+          "b_5eba922a7432",
+          "b_5d27c9129297",
+          "b_2ab7e71a0441",
+          "b_9b165d803dad",
+          "b_a48f7abfb899"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Earth",
+        "set_slug": "earth"
+      }
+    ],
+    "library": "official",
+    "pack": "earth",
+    "paths": [
+      "official/earth/earth.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "bba4cba81bad2f4767b920f751a7f0f9441b2397c293476b9af4c31bf1dbacfb": {
+    "bytes": 1097291,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_509326ec3ba9",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Wet_Sponge.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "be8c1e23d545d2fc690622e07cc2a0429d23183677d206f514fb5ae5ba5552f5": {
+    "bytes": 1828359,
+    "found": [
+      {
+        "brushes": [
+          "b_3964878e41fe",
+          "b_b972647e4177",
+          "b_05b7802066ed",
+          "b_cc4305ce9305",
+          "b_2047e48efaff",
+          "b_65245932eff6",
+          "b_cf87ea782c8a",
+          "b_caa7d2b76aee",
+          "b_a35224bda9d3",
+          "b_ab24cd4f6e76",
+          "b_1def314ead41",
+          "b_3f73641df9e9"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Pocket",
+        "set_slug": "p2-pocket"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-pocket.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "bea7c74d7831d56a16b11322beba7225c205882aa3e8c82c4a7bcc12632a2ec6": {
+    "bytes": 884559,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_34a610cf8192",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Sponge_Build-Up.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "c470df9812ad05d161ed518a9ad61610dcf7cc5efbea39ec0685d74f4cc51e32": {
+    "bytes": 852546,
+    "found": [
+      {
+        "brushes": [
+          "b_91f04b8eff00",
+          "b_214b004e31c9",
+          "b_c7441fd61422",
+          "b_7ff28827dffc",
+          "b_24c1244dd857",
+          "b_5ca98957ef4f",
+          "b_28de20affaac",
+          "b_8e5b77c46b87"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Touchups",
+        "set_slug": "p2-touchups"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-touchups.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "cb5e5826f1e05d1113499527c0623ae12e716227f38782a49deb0d4a21880d52": {
+    "bytes": 10642805,
+    "found": [
+      {
+        "brushes": [
+          "b_e005da2f38eb",
+          "b_85490da0d218",
+          "b_3464fab85b56",
+          "b_c8ca575d2ad9",
+          "b_085ba342a7fd",
+          "b_2c2204eaa53e",
+          "b_a1abcec7ed02",
+          "b_80c6622286c5",
+          "b_a43abefa675a",
+          "b_c9cbccd7c784",
+          "b_5dabd6e09ea5",
+          "b_3ea39401c12c",
+          "b_07838dbcf52e",
+          "b_0c6448476315",
+          "b_4f09745d11cd"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "RSCo Dry Brush Pack",
+        "set_slug": "rsco-dry-brush-pack"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Dry_Brush_Pack.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "cb61e68774b5d0433f2e4d5f1860abb0092c349f21f4fa514ca939a8ceda4438": {
+    "bytes": 1150937,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_80c6622286c5",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Dry_Wrangler.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "cd4a0b4184a5f558837b20c3296a12454e806aeed2ef0fcae0e5f7e07059bfe9": {
+    "bytes": 517781,
+    "found": [
+      {
+        "brushes": [
+          "b_fa63469e425e",
+          "b_c5b318f43de2",
+          "b_1c8a7d6aa9ff",
+          "b_4253298bac0e",
+          "b_f85acdb0894d",
+          "b_b4afce325b86"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "IGB Vintage Ink Kit",
+        "set_slug": "igb-vintage-ink-kit"
+      }
+    ],
+    "library": "user",
+    "pack": "igb-vintage-ink-kit",
+    "paths": [
+      "user/igb-vintage-ink-kit/IGB_Vintage_Ink_Kit.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "d146496cffe1e5e75a5715ecb300cdb87e38ab208907a9403b9fc95e1314bfd2": {
+    "bytes": 1528715,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_7d7669ed7e2c",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Light_Wash.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "d22daa29cdb53e2379694658133b3c1c111f4f531a9552a05a3dcc0cd2bb767c": {
+    "bytes": 2234162,
+    "found": [
+      {
+        "brushes": [
+          "b_4311540c8a88",
+          "b_f8e2cce264ee",
+          "b_b9dfd7e79b60",
+          "b_3fbd60ae7a28",
+          "b_ee1c63888efe",
+          "b_d3c26f71ab7c",
+          "b_9424b8a4a9ce",
+          "b_0fb329b2e703",
+          "b_7ed8f678bd5e",
+          "b_0202b8a1d076",
+          "b_d49ba0a15f8f",
+          "b_a0c5ce261a00",
+          "b_d026013640da",
+          "b_532bfe79475b",
+          "b_7ec2511d1338",
+          "b_cc877ebb27dd"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Textures 1",
+        "set_slug": "p5-textures"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-textures.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "dc2b56f49399ab39a64f525f357f832edfe1291090c3f88bf81d16429a64fddd": {
+    "bytes": 1204654,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_aee0904433b6",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Worn-out_Marker.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "de8f6aea2c7e1c5afc2d7b659e45dbc7282c03cc851d1fcaf5964950ac65d306": {
+    "bytes": 290640,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_8793e3e32420",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "insecto-charcoal",
+    "paths": [
+      "user/insecto-charcoal/Wet_tip_Pastel.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "dee19e1aa9cfbce7a43d79e978a1c617efe9a8eb79fee352d58b7ec0b8f4d11f": {
+    "bytes": 672025,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_bfc228b190a8",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Art_Marker_Broad.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "dfaf073cb0222b9b962f9e4a3a34fcc04c2cafc716c00e3d8b953460473fe5e8": {
+    "bytes": 169942,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_af2123284b73",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Nautika_Ink.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "e0259e64b4cdbaf6fefa38ba8f975db0faf09e387895ea4df549c9154e702111": {
+    "bytes": 1436114,
+    "found": [
+      {
+        "brushes": [
+          "b_0c1337e4815e",
+          "b_a41a5658d245",
+          "b_f5a6bdb6b1c0",
+          "b_07f5b6bfda01",
+          "b_5da0115b564b",
+          "b_fee0521f8361",
+          "b_cbdfb2bf739f",
+          "b_1300e1a3c5be",
+          "b_84b35b4f80c2",
+          "b_199940bef03e"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Abstract 1",
+        "set_slug": "p5-abstract"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-abstract.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "e15893cd88fd31614508b104f8997237f1afba2d40d8ef90f7da7171c27c165a": {
+    "bytes": 52648869,
+    "found": [
+      {
+        "brushes": [
+          "b_b012a5dbeb05",
+          "b_9802cd5429f8",
+          "b_6ade32b5845b",
+          "b_28173b68bdc5",
+          "b_9ed67c6920a7",
+          "b_2b9e18dd0016",
+          "b_696cada4bb98",
+          "b_a59c7d7b9b03",
+          "b_215f9a5785c0",
+          "b_f2cab1b9a9f9",
+          "b_8b553f1a586f",
+          "b_24e4096d5a38",
+          "b_cfe680e24399",
+          "b_ce9286932636"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Sargent’s Oils",
+        "set_slug": "sargents-oils"
+      }
+    ],
+    "library": "user",
+    "pack": "sargents-oils",
+    "paths": [
+      "user/sargents-oils/Sargent_s_Oils.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "e1ab4ed5a168baa610ec9e7dcdaa0af392296f25bef4016c1dc1a6dc3192466a": {
+    "bytes": 1262375,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_e28594367dc1",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Wet_On_Wet.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "e2aa9b20933657c2f0455eef8343bdee8b881d1ffdc93dfc5b95d0e4a58af342": {
+    "bytes": 2758019,
+    "found": [
+      {
+        "brushes": [
+          "b_ce0700568096",
+          "b_b4565298058f",
+          "b_b58c165bf7cf",
+          "b_bfd876eb29ba",
+          "b_7e030495f02b",
+          "b_91409032931b",
+          "b_2fce47d7d74f",
+          "b_af1e5cfa1269",
+          "b_36a769ae5a64",
+          "b_4a7208f6b78b",
+          "b_8151a0380f79",
+          "b_3f5a7b0cc3c2",
+          "b_418b535f0469",
+          "b_041b01612dff",
+          "b_124e0d785ad9",
+          "b_ea6939e71828",
+          "b_17ba48e52936"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Painting 1",
+        "set_slug": "p5-painting"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-painting.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "e43db72e7881f08761baed5f0f66e0ab253f9b5838f350b08d782df7eb6a0426": {
+    "bytes": 804190,
+    "found": [
+      {
+        "brushes": [
+          "b_b8919e8eeb5c",
+          "b_915d2a52dea6",
+          "b_8a972eb23249",
+          "b_42d34b6bd9bf",
+          "b_e6498e527bd5",
+          "b_ccfb05c7b5e1",
+          "b_b2619d7ed9c4",
+          "b_86d830072260"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Retro",
+        "set_slug": "p2-retro"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-retro.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "e5a85bfaff095495e20e6ecb2f499050d8032f0f1219865a5d1803034671c8b2": {
+    "bytes": 3693271,
+    "found": [
+      {
+        "brushes": [
+          "b_2ee068a397fc",
+          "b_c2fc3ad6008d",
+          "b_84cea7699fe8",
+          "b_65c5e7a6bf3b",
+          "b_3df5177c9df6",
+          "b_63f929836f64",
+          "b_397dbf4f6b5c",
+          "b_cd16d23a4a6e",
+          "b_a5c22defad24",
+          "b_699f03da55a5",
+          "b_6860eadf49f1",
+          "b_8b54f2616af7",
+          "b_e756d4a1a3ee",
+          "b_e5202a69f800",
+          "b_471fcbb9749b",
+          "b_e7e1cbac1115",
+          "b_72a71cb3a846",
+          "b_00a962cc8809",
+          "b_76b34ebcc250",
+          "b_226668023d39",
+          "b_079174eba4d3",
+          "b_1ef77f557121",
+          "b_462e30d5718d",
+          "b_c1c6247776c6",
+          "b_35c2909c8f81"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "PD Polygonal Stamps",
+        "set_slug": "pd-polygonal-stamps"
+      }
+    ],
+    "library": "user",
+    "pack": "trendy-stamps",
+    "paths": [
+      "user/trendy-stamps/PD_Polygonal_Stamps.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "e6259cdb09bfd7348c3bc2c0c5714b7258f67091a825e0a260b229702a7b9eaa": {
+    "bytes": 2289182,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_565b04684aba",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "insecto-charcoal",
+    "paths": [
+      "user/insecto-charcoal/Cloth_Shader.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "ea4188cd334987b99e7e929677e980e2c716460ff804409d48b0cf312eb2b531": {
+    "bytes": 522751,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_07838dbcf52e",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Dry_Wood.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "eb2467334ebee256e5c98ac671b77950e4e22c42e7d6eedd1795864b1959c214": {
+    "bytes": 7690001,
+    "found": [
+      {
+        "brushes": [
+          "b_9eb5fa009c60",
+          "b_e6ca28bee10d",
+          "b_085d3c970362",
+          "b_bcf0a00be4af",
+          "b_3b3ba5d30a2f",
+          "b_3eff2a597539",
+          "b_960465b07dd7",
+          "b_abf7822e1f47",
+          "b_2a28165a0554",
+          "b_372363cc81b5",
+          "b_c8083fab5753",
+          "b_6c4cfd947413",
+          "b_7bc3fd16b892",
+          "b_e880e079118f",
+          "b_fc2187e3bb87",
+          "b_20f3ff4baca8",
+          "b_94eff911ee2c",
+          "b_336a88948c98",
+          "b_6a29cbb20ea0",
+          "b_a24b7afe6f3c",
+          "b_c97c0210cab3",
+          "b_2f6157686357",
+          "b_c2b04b181d79",
+          "b_0dd2b052f116",
+          "b_2a8516266e30"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Autumn Flow",
+        "set_slug": "autumn-flow"
+      }
+    ],
+    "library": "user",
+    "pack": "autumn-brush-box",
+    "paths": [
+      "user/autumn-brush-box/Autumn_Flow.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "ece78d71dc0eac53f845add7eee497902c4159effa0c7cc42af4de8105815b7e": {
+    "bytes": 2328837,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_c36af3dbee93",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "insecto-charcoal",
+    "paths": [
+      "user/insecto-charcoal/Charcoal_Bar_2.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "edec3ebeb14256f4d1676373296219bfc0e9965bdc4fb355c51de21724f2cfe1": {
+    "bytes": 2357625,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_b599f3651121",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Salt.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "f1bb30b0f211f3ea4d26b73409843418dd39b6758c1f8db5d7a833121f283721": {
+    "bytes": 1251440,
+    "found": [
+      {
+        "brushes": [
+          "b_f2ea1e790c72",
+          "b_8bd3043d611a",
+          "b_5f38735ec206",
+          "b_c54394972078",
+          "b_bbd5b3a5a27c",
+          "b_9566daceaaa1",
+          "b_cc7b50740630",
+          "b_d0bbeecda09e",
+          "b_9730fd4e3d65",
+          "b_b291a7d6f845",
+          "b_d275de07cae0"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Elusive Set",
+        "set_slug": "elusive"
+      }
+    ],
+    "library": "official",
+    "pack": "elusive",
+    "paths": [
+      "official/elusive/elusive.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "f1bc3bf76ad98533c62f7e93d33c57bf7e4796db4682a315be7350636ac3ee8b": {
+    "bytes": 1079497,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_598f81f834c6",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Wet_Marker_1.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "f4ccbf7a78dbb66c573313e27e608628b09760d23bafadf6a0b1aa7caf952c32": {
+    "bytes": 894637,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_9afb5717fd67",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "frankentoon-nautika",
+    "paths": [
+      "user/frankentoon-nautika/Frankentoon_-_Poster_Marker.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "f51460b001d9fcf4aa7beb01ec6bf16207b6b3bed661f3fb8b87d1b05b95b6b3": {
+    "bytes": 894099,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_2c2204eaa53e",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Badlands_Brayer.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "f5ba2111769d7bd32920201183ded629672b4eb41e6590f7ee04baf048120c44": {
+    "bytes": 811693,
+    "found": [
+      {
+        "entry_prefix": "",
+        "id": "b_3464fab85b56",
+        "kind": "brush"
+      }
+    ],
+    "library": "user",
+    "pack": "rsco-dry-brush-pack",
+    "paths": [
+      "user/rsco-dry-brush-pack/RSCo_Blunted_Pencil.brush"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "f6bc1083f741c299ef12d8e0f0b96ddd5c752a9ea3de458f826e88741fcce29d": {
+    "bytes": 813035,
+    "found": [
+      {
+        "brushes": [
+          "b_3061f977116a",
+          "b_eb93c3ae801d",
+          "b_466e48a84da9",
+          "b_ec783f0c48ad",
+          "b_ada828a8e2e1",
+          "b_01cdd8e5d728",
+          "b_87ec109103e5",
+          "b_e88b4030adb0",
+          "b_e231a7e79736",
+          "b_d31caea2ed5c"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "Sketching 1",
+        "set_slug": "p5-sketching"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-5",
+    "paths": [
+      "official/procreate-5/p5-sketching.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "f7c467ec4c84c777f04c29aa669c6104e61092cf0ec9ee1cdf8af3cf1a19e375": {
+    "bytes": 135481414,
+    "found": [
+      {
+        "brushes": [
+          "b_447021de4bea",
+          "b_879b6aa87819",
+          "b_9778efdd7853",
+          "b_2a38969a4459",
+          "b_9da015c162ae",
+          "b_ebe6527ff3b1",
+          "b_926f4ce1564f",
+          "b_e62b2f726153",
+          "b_2c336d2e5ba7",
+          "b_8ee682388e90",
+          "b_1efcc696e88e",
+          "b_ddd6c0b33acc",
+          "b_0d70fbd58ad3",
+          "b_1711d3cdac02",
+          "b_fa6e22c05ed0",
+          "b_29ae861995b6",
+          "b_deb5ce0a1543",
+          "b_2e850612c199",
+          "b_92ef17e654d2",
+          "b_1336121f6a04",
+          "b_11af7f5363bd",
+          "b_981bf67def53",
+          "b_d379fc4e3efd",
+          "b_e5cd06881835",
+          "b_017879650f4c",
+          "b_ef4136383c3b",
+          "b_e04f8f46dea1",
+          "b_2837c0ef47b4",
+          "b_0acb995eb570",
+          "b_8e43f1f74668",
+          "b_2d2e1287e4a4",
+          "b_4ef72e1c76f7",
+          "b_a139f7abb6d7",
+          "b_4c95666ba5c9",
+          "b_08bcd85ee17e",
+          "b_725c4aac6ba7",
+          "b_6c8c7651fe6c",
+          "b_ef03ede7c792",
+          "b_88102f9fe766",
+          "b_a54c7589729f",
+          "b_b6507a0a3da7",
+          "b_e54f09f3bcdc",
+          "b_ea9ff787895b",
+          "b_9c78acf36739",
+          "b_a48866ca1ece",
+          "b_b804c3e0ac58",
+          "b_0d52a48a34d8",
+          "b_3e72c59afe3a",
+          "b_5f99d2b485dd",
+          "b_c1229e924043",
+          "b_0a96ab1d2516",
+          "b_7bf57a9a0abf",
+          "b_b15b2a88104b",
+          "b_239f841cdae6",
+          "b_28c4999ab80d",
+          "b_31d09a6ba9e1",
+          "b_d8b085d443b5",
+          "b_26d7726b45e1",
+          "b_94d7708efeaf",
+          "b_b942f3984892",
+          "b_1367cac477cf",
+          "b_8705e6494364",
+          "b_7c6c0b7e6253",
+          "b_e856e49707e1",
+          "b_8eb090c0d834",
+          "b_6023c4fa07f3",
+          "b_0f17ec5c6dad",
+          "b_e44ba7b2dd18",
+          "b_3f553212270e"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "💧Everything Watercolour",
+        "set_slug": "everything-watercolour"
+      }
+    ],
+    "library": "user",
+    "pack": "everything-watercolour",
+    "paths": [
+      "user/everything-watercolour/Everything_Watercolour.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  },
+  "f7de6919067fd13f34ce8c2a209c71e84524108277ac34a7944277f21440c460": {
+    "bytes": 734180,
+    "found": [
+      {
+        "brushes": [
+          "b_83dbc6ac6183",
+          "b_f15c0e79ecce",
+          "b_562db18c0979",
+          "b_26ca6301a5d0",
+          "b_f88702c4fd5c",
+          "b_200103802593",
+          "b_c8d15bd50bdd",
+          "b_38f39a3d648c"
+        ],
+        "entry_prefix": "",
+        "kind": "set",
+        "name": "P2_Luminance",
+        "set_slug": "p2-luminance"
+      }
+    ],
+    "library": "official",
+    "pack": "procreate-2",
+    "paths": [
+      "official/procreate-2/p2-luminance.brushset"
+    ],
+    "skipped": [],
+    "warnings": []
+  }
+}

@@ -3,7 +3,7 @@
     python studio/hub/serve.py [--port 8765]
 
 Binds 127.0.0.1 and serves two things: the static files in this folder (the
-hub page, and the brush designer under brush/), and a few JSON routes over the
+hub page), and a few JSON routes over the
 studio's own files. It never serves the repo root, and it reads the vault and
 the runs through studio_common, so it counts exactly the notes and runs the
 pipeline does.

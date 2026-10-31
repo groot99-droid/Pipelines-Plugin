@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_f52ad68f3c8c",
+    "b_1b1945f99299",
+    "b_3952e7247f77",
+    "b_c099cef4a4d2",
+    "b_e8f00371d3fa",
+    "b_d73696a51651",
+    "b_b5d6dc6a43c5",
+    "b_5a98b9de095c"
+  ],
+  "kind": "set",
+  "library": "user",
+  "name": "BrushUp- Paint Pens",
+  "note": "02_Vendor_Packs/brushup-paint-pens.md",
+  "pack": "brushup-paint-pens",
+  "pack_kind": "vendor",
+  "set_id": "s_6ba8986e21b5",
+  "set_slug": "brushup-paint-pens",
+  "title": "BrushUp- Paint Pens"
+}

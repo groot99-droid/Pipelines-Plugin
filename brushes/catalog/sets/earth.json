@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_d42ef7b4e2d1",
+    "b_9e938c930a65",
+    "b_7919063b7f4a",
+    "b_5eba922a7432",
+    "b_5d27c9129297",
+    "b_2ab7e71a0441",
+    "b_9b165d803dad",
+    "b_a48f7abfb899"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Earth",
+  "note": "01_Procreate_Defaults/earth.md",
+  "pack": "earth",
+  "pack_kind": "official",
+  "set_id": "s_5604529e5303",
+  "set_slug": "earth",
+  "title": "Earth"
+}

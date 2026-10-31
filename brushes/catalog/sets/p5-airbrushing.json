@@ -1,0 +1,26 @@
+{
+  "brush_count": 12,
+  "brushes": [
+    "b_8502203cb4fc",
+    "b_c607acc2675c",
+    "b_2b2687b1c591",
+    "b_5f476426024e",
+    "b_7f2d969d6d5a",
+    "b_a6563d427848",
+    "b_390bcb938dcd",
+    "b_a9156f93d739",
+    "b_07d8abfd299e",
+    "b_ff84536642ea",
+    "b_2e961aebae4f",
+    "b_b64d5eff207d"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Airbrushing 1",
+  "note": "01_Procreate_Defaults/p5-airbrushing.md",
+  "pack": "procreate-5",
+  "pack_kind": "official",
+  "set_id": "s_43350fe14aa3",
+  "set_slug": "p5-airbrushing",
+  "title": "Airbrushing (Procreate 5)"
+}

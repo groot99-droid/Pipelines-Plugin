@@ -1,0 +1,29 @@
+{
+  "brush_count": 15,
+  "brushes": [
+    "b_3ffb986878aa",
+    "b_3316eeb52c94",
+    "b_b10639abaed8",
+    "b_b8498689e00e",
+    "b_7077bda61d83",
+    "b_9d32841dfdc6",
+    "b_90d6fc77cf82",
+    "b_8e1bc3e7ff83",
+    "b_0d24417837a1",
+    "b_b3ec02ee9ce7",
+    "b_d43792c3eaf1",
+    "b_b940d01b692d",
+    "b_6e669cb2783c",
+    "b_b4fb84b5f424",
+    "b_5b5930e4c195"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Organic 1",
+  "note": "01_Procreate_Defaults/p5-organic.md",
+  "pack": "procreate-5",
+  "pack_kind": "official",
+  "set_id": "s_492e8c37f632",
+  "set_slug": "p5-organic",
+  "title": "Organic (Procreate 5)"
+}

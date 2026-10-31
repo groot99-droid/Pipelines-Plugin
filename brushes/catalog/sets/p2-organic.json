@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_7451c0b0f0bf",
+    "b_7b42c60f553b",
+    "b_509e6a38555e",
+    "b_53448b251b8c",
+    "b_5f788ead08d5",
+    "b_879b49f67ef4",
+    "b_8380acb85cd9",
+    "b_2618e45528a6"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "P2_Organic",
+  "note": "01_Procreate_Defaults/p2-organic.md",
+  "pack": "procreate-2",
+  "pack_kind": "official",
+  "set_id": "s_e2b6a28d3ee6",
+  "set_slug": "p2-organic",
+  "title": "Organic (Procreate 2)"
+}

@@ -398,7 +398,8 @@ class RepoAgreementTest(unittest.TestCase):
         gemini = config["mcpServers"]["gemini"]
         self.assertEqual(gemini["args"], ["-y", "gemini-mcp-tool"])
         self.assertEqual(gemini["env"]["GEMINI_MCP_BACKEND"], "gemini")
-        self.assertEqual(list(config["mcpServers"]), ["gemini"])
+        # The root .mcp.json is shared: other tools (brushes/) declare their own servers there.
+        self.assertEqual(list(config), ["mcpServers"])
 
     def test_the_skill_names_the_tool_the_mcp_json_server_exposes(self):
         text = (REPO / ".claude" / "skills" / "blender-gemini" / "SKILL.md").read_text(encoding="utf-8")

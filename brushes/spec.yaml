@@ -1,0 +1,545 @@
+# brushes spec -- the declared contract for this tool.
+#
+# What this file is, and is not. Everything under pipeline/ and vault/tools/ is
+# standard library only, so none of it can READ this file: YAML needs the
+# third-party pyyaml package. The constants live in code -- pipeline/identity.py
+# holds the id formulas, pipeline/brush_common.py the roots, the environment
+# names, the exit codes and the port -- and this file DECLARES what that code
+# IMPLEMENTS. pipeline/tests/test_spec_agreement.py is what stops it being
+# decorative: it fails when the two disagree, or when docs/CONTRACTS.md leaves
+# out a script or a tool named here. A change is made in code first, then
+# declared here.
+#
+# The tool is under construction. Most of what is declared below is not built
+# yet: a script, route or tool named here and missing on disk is planned, not
+# broken. `build:` says what exists today. As each piece lands, its own test
+# binds it to the block that declares it.
+#
+# Read with it: docs/CONTRACTS.md, the same contract in prose, with the exact
+# shapes (the catalog record, the note layout, the request and response bodies)
+# that do not fit a YAML value. Where the two differ, that is a bug in one of
+# them; the agreement test covers what it can.
+#
+# What this file does NOT own:
+#   - the archive keys (type, eras, default, limits, label): schema/silica_keys.json
+#   - the facet thresholds: schema/facets.json (this file lists the facet names)
+#   - the tag words: vault/_BrushTags/vocabulary.yaml, which is the author's
+#   - how a note is written and a brush tagged: vault/CLAUDE.md, authoritative
+#   - live counts: catalog/catalog.json
+#   - which packs exist and where each official file comes from: library/sources.json
+#
+# Paths are relative to brushes/. "repo:" means relative to the repository root.
+
+version: 1
+tool_root: "brushes"
+contract: "docs/CONTRACTS.md"
+
+build:
+  state: under_construction
+  exists:                                   # checked: every path here is on disk
+    - "spec.yaml"
+    - "docs/CONTRACTS.md"
+    - "pipeline/identity.py"
+    - "pipeline/brush_common.py"
+    - "pipeline/zip_writer.py"              # the one zip writer, in three forms; container.py calls it
+    - "pipeline/bplist.py"                  # binary property lists; the codec's error classes
+    - "pipeline/keyed_archive.py"           # NSKeyedArchiver graphs: decode, the two profiles, renumber
+    - "pipeline/brush_model.py"             # Brush: eras, JSON forms, patches, new brushes, census
+    - "pipeline/container.py"               # the one reader of .brush and .brushset; writes through zip_writer
+    - "pipeline/png_io.py"                  # PNG read and write, standard library (PIL optional, never required)
+    - "pipeline/gbr.py"                     # the GIMP .gbr brush, read and write
+    - "pipeline/brush_file.py"              # inspect, export, roundtrip
+    - "pipeline/fetch_base_library.py"      # list, fetch, verify
+    - "pipeline/ingest.py"                  # where, adopt, build, report and census
+    - "pipeline/previews.py"                # render: stroke, shape and grain previews, contact sheets
+    - "pipeline/notes.py"                   # write, check: one note per brushset, from the catalog
+    - "vault/tools/brush_search.py"         # the search engine and its CLI (F9)
+    - "vault/tools/brush_tags.py"           # tag sidecars: plan, apply, check, suggestions (F8)
+    - "vault/_BrushTags/vocabulary.yaml"    # the closed tag vocabulary, six axes
+    - "pipeline/mcp_server.py"              # the stdio server: nine read-only tools, export_brush behind --export-dir (F10)
+    - "pipeline/service.py"                 # BrushService, the layer both servers call (F10)
+    - "pipeline/app_server.py"              # loopback HTTP API and the designer app's files (F10)
+    - "pipeline/device_tests.py"            # build and verify for sittings 1 and 2
+    - "pipeline/tests/fixtures.py"
+    - "schema/silica_keys.json"             # every archive key, its eras and classes (F4)
+    - "schema/patch_cases.json"             # the patch cases Python and the app both run (F3)
+    - "schema/facets.json"                  # facet thresholds, key lists and words; ingest.py build reads it
+    - "library/sources.json"
+    - "library/README.md"
+    - "app/index.html"                      # the designer and library browser; modules in app/js/
+  # Scripts named under cli.scripts and missing here are planned. A verb of an
+  # existing script may be planned too: cli.scripts lists the full contract.
+  built_verbs:                              # checked against each script's own parser
+    "pipeline/fetch_base_library.py": [list, fetch, verify]
+    "pipeline/ingest.py": [where, adopt, build, report, census]
+    "pipeline/previews.py": [render]
+    "pipeline/notes.py": [write, check]
+    "pipeline/device_tests.py": [build, verify]
+    "pipeline/brush_file.py": [inspect, export, roundtrip]
+  note: "Nothing here has written a file the drawing app is known to open. See device_test."
+
+# ── rules every script follows ───────────────────────────────────────────────
+runtime:
+  python: "3.10"                            # the oldest version CI runs
+  command: "python"                         # never python3
+  stdlib_only:
+    roots: ["pipeline", "vault/tools"]
+    except: ["pipeline/tests"]              # unittest only; may import yaml
+    optional: {PIL: ["pipeline/png_io.py", "pipeline/previews.py"]}   # a faster decoder, never required
+  network:
+    script: "pipeline/fetch_base_library.py"   # the only script that opens a connection
+    scheme: https
+    hosts: ["download-assets.procreate.art"]   # == fetch_base_library.ALLOWED_HOSTS; a manifest naming another host is refused by fetch
+  encoding: "every text read and write names utf-8; text is written with LF newlines"
+  console: "main() makes stdout and stderr UTF-8"
+  isolation: "a script runs as `python -I path/to/script.py` from any directory; brush files are read only that way, the two servers included (repo:.mcp.json passes -I)"
+  retrieval: "lexical and tag-based. No embeddings and no local model."
+
+exit_codes:                                 # == brush_common.EXIT_OK, EXIT_REFUSED, EXIT_USAGE
+  ok: 0                                     # also an empty result and a clean dry run
+  refused: 1                                # a rule said no, a check failed, an id collided
+  usage: 2                                  # a bad argument, a missing folder, a busy port
+
+# ── F1: identity ─────────────────────────────────────────────────────────────
+identity:
+  module: "pipeline/identity.py"
+  hex_chars: 12
+  brush_id: "^b_[0-9a-f]{12}$"
+  texture_id: "^t_[0-9a-f]{12}$"
+  set_id: "^s_[0-9a-f]{12}$"
+  set_slug: "^[a-z0-9][a-z0-9-]{0,47}$"
+  content_sha256: "^[0-9a-f]{64}$"
+  domains: {brush: "rosw-brush-v1", set: "rosw-set-v1"}
+  hashed: [archive, shape, grain, "each SubNN: archive, shape, grain"]
+  subs: "every SubNN/ that holds a Brush.archive, ascending by folder name, whether or not the typed view shows it; its shape and grain are resolved inside that folder by the primary's rule"
+  not_hashed: [thumbnail, "Reset/", AuthorPicture, Signature, "extra members", "library/bundled/"]
+  loose_set_slug: "<pack_id>-loose"
+  pack_id_max: 42                           # == identity.PACK_ID_MAX: a pack id leaves room for "-loose" in a 48-character slug
+  loose_set:                                # a pack's loose .brush files; it has no plist
+    kind: loose
+    member_order: "the stored .brush files by (file name lower-cased, file name)"
+    name: "the slug itself, <pack_id>-loose; that is what set_id hashes"
+    title: "<product> (loose brushes)"
+    without_a_home_brush: "kept as a catalog row with note null; no note and no sidecar"
+  prefix_collision: "an error: exit 1"
+  golden:                                   # asserted in pipeline/tests/test_identity.py
+    brush_archive_only: {archive: "A", id: "b_8f525da47bd2"}
+    brush_with_textures: {archive: "A", shape: "S", grain: "G", id: "b_747322c04223"}
+    brush_with_sub: {archive: "A", shape: "S", grain: "G", sub: {archive: "A2", shape: null, grain: "G2"}, id: "b_7795500d8ec4"}
+    set: {name: "Demo Set ", members: ["b_8f525da47bd2", "b_747322c04223"], id: "s_41c10a3b97f2"}
+    texture: {bytes: "PNG", id: "t_796120837694"}
+
+# ── F2: roots ────────────────────────────────────────────────────────────────
+roots:
+  module: "pipeline/brush_common.py"
+  order: [flag, env, default]
+  # `root` is the DATA root: it moves library/, catalog/ and vault/. `<code>` is
+  # brush_common.TOOL_ROOT, the brushes/ folder that holds the running code;
+  # schema/ and app/ are part of the code and never move with the data.
+  root:    {flag: "--root",    env: "ROSW_BRUSHES_ROOT",    default: "<code>"}
+  library: {flag: "--library", env: "ROSW_BRUSHES_LIBRARY", default: "<root>/library"}
+  catalog: {flag: "--catalog", env: "ROSW_BRUSHES_CATALOG", default: "<root>/catalog"}
+  vault:   {flag: "--vault",   env: "ROSW_BRUSHES_VAULT",   default: "<root>/vault"}
+  index:   {flag: null,        env: "ROSW_BRUSHES_INDEX",   default: "<vault>/tools/rag_index/index.json",
+            vault_tools_flag: "--index"}    # only vault/tools/*.py take --index; resolve_paths has no flag for it
+  paths: [root, schema, catalog, vault, previews, tags, vocabulary, index, library, app]   # == brush_common.Paths._fields
+  derived:
+    schema: "<code>/schema"                 # code assets: the same folder whatever --root says
+    app: "<code>/app"
+    previews: "<vault>/_Previews"
+    tags: "<vault>/_BrushTags"
+    vocabulary: "<vault>/_BrushTags/vocabulary.yaml"
+  stored_paths: "POSIX and relative: a preview and a note to the vault, a container to the library. No absolute path is written to any file."
+  vault_tools:
+    rule: "vault/tools/*.py do not import pipeline/, and read the same five environment names"
+    flags: ["--vault", "--catalog", "--index"]
+    env: [ROSW_BRUSHES_VAULT, ROSW_BRUSHES_CATALOG, ROSW_BRUSHES_INDEX, ROSW_BRUSHES_ROOT]
+    order: "flag, then the folder's own variable, then ROSW_BRUSHES_ROOT (<ROOT>/vault, <ROOT>/catalog), then the tool's own vault and the catalog/ beside it"
+
+layout:
+  schema: "schema"                          # silica_keys.json, facets.json, bundled_textures.json, preview_calibration.json, patch_cases.json
+  pipeline: "pipeline"
+  catalog: "catalog"                        # generated: catalog.json, brushes/<brush_id>.json, sets/<set_slug>.json, ...
+  vault: "vault"
+  rules: "vault/CLAUDE.md"
+  notes: "vault/[0-9][0-9]_*/*.md"
+  note_folders: ["01_Procreate_Defaults", "02_Vendor_Packs", "03_Loose", "04_My_Brushes"]
+  note_folder_rule:                         # the first row that fits a set decides its folder
+    - {when: "library is official", folder: "01_Procreate_Defaults"}
+    - {when: "pack_kind is mine", folder: "04_My_Brushes"}
+    - {when: "the set's kind is loose", folder: "03_Loose"}
+    - {when: "anything else", folder: "02_Vendor_Packs"}
+  tags: "vault/_BrushTags"
+  vocabulary: "vault/_BrushTags/vocabulary.yaml"
+  previews: "vault/_Previews"
+  search: "vault/tools/brush_search.py"
+  tagger: "vault/tools/brush_tags.py"
+  index: "vault/tools/rag_index/index.json"
+  library: "library"
+  sources: "library/sources.json"
+  library_user: "library/user"              # user/<pack_id>/<file>.brushset|.brush
+  library_official: "library/official"      # official/<pack_id>/<set_slug>.brushset
+  app: "app"
+  device_tests: "device-tests"              # one folder per sitting; see device_test.kept
+
+# ── the library ──────────────────────────────────────────────────────────────
+library:
+  sources_schema: "rosw-brushes-sources/1"
+  user_packs: 19                            # == len(sources.json packs)
+  official_sets: 40                         # == len(sources.json official.files)
+  official_bytes: 174197966                 # == sum of their pinned sizes
+  pack_kinds: [vendor, official, mine]
+  libraries: [user, official]
+  redistribute: ["yes", "no", "unknown"]    # recorded information; it gates nothing
+  adoption_rename: {".brushset.zip": ".brushset"}   # the repository ignores *.zip
+
+commit_policy:
+  originals: "committed, through Git LFS"   # library/user and library/official alike
+  lfs:
+    file: "repo:.gitattributes"
+    patterns: ["brushes/library/**/*.brushset", "brushes/library/**/*.brush",
+               "brushes/device-tests/**/returned/**/*.brushset", "brushes/device-tests/**/returned/**/*.brush"]
+    attributes: "filter=lfs diff=lfs merge=lfs -text"
+    setup: "git lfs install, once per clone, before brush files are committed or pushed"
+  text: "brushes/** text=auto eol=lf"       # never the forced `text`: the folder holds binary files
+  binary: ["brushes/**/*.png", "brushes/**/*.archive"]
+  committed: ["catalog/**", "vault notes", "vault/_BrushTags/**", "vault/_Previews/** except _sheets/ and _local/", "library/**",
+              "library/official/fetch_log.jsonl (plain text, never LFS)",
+              "device-tests/<sitting>/manifest.json, CHECKLIST.md and returned/**"]
+  never_tracked:
+    - "*.zip"                               # repo:.gitignore
+    - "repo:brushes/device-tests/*/*"       # repo:.gitignore: what is built into a sitting's folder, except the three kept
+    - "library/user/<pack_id>/_docs/"       # library/.gitignore, rule `_docs/`
+    - "library/bundled/"                    # library/.gitignore
+    - "*.part"                              # library/.gitignore
+    - "vault/tools/rag_index/"              # vault/.gitignore
+    - "vault/_Previews/_sheets/"            # vault/.gitignore
+    - "vault/_Previews/_local/"             # vault/.gitignore
+  limits:
+    plain_blob_mb: 95                       # a tracked file that is not an LFS pointer
+    preview_kb: 128
+    previews_total_mb: 50
+  generated_data: "no timestamps and no absolute paths in anything committed"
+
+# ── F3: the file format ──────────────────────────────────────────────────────
+format:
+  detect_by: "the root key set, never the `version` key"
+  families: [legacy, modern]
+  eras: [E0, E1, E1b, E1c, E2, E3, E4, M172, M173, M220, M242]
+  era_keys: {E0: 52, E1: 61, E1b: 62, E1c: 63, E2: 67, E3: 88, E4: 101, M172: 172, M173: 173, M220: 220, M242: 242}   # root keys, $class included
+  era_family: {E0: legacy, E1: legacy, E1b: legacy, E1c: legacy, E2: legacy, E3: legacy, E4: legacy,
+               M172: modern, M173: modern, M220: modern, M242: modern}
+  era_variants: "an M220 archive may carry any of its 11 optional pressure curves (schema optional_keys; 221 to 223 keys seen) and is still M220"
+  unknown_era: {id: "X<count>", pattern: "^X[0-9]+$", note: "a key set no era matches, named by its key count"}
+  era_match: "exact root key set only (M220: its 220 keys plus any of its optional curve keys). Anything else is X<count>; its family, and the missing and extra keys reported, are those against the nearest era (smallest symmetric difference; the earlier era on a tie)"
+  profiles: [ios_legacy, ios_modern]        # the two string-sharing rules of the one encoder
+  reexport: "in the era, profile and key order a brush was read in; unknown keys and classes are written back as read"
+  byte_exact: "an archive read and written without a change is the same bytes; one the encoder cannot reproduce exports its original bytes"
+  new_brush_era: M220
+  new_brush_eras: [M220, E4]                # M220 by default, E4 selectable
+  new_brush_template: "one real donor archive of that era, read from the library when a brush is made"
+  reads: [".brush", ".brushset", ".brushset.zip", "a zip holding any of them, to nesting depth 3"]
+  writes: [".brush", ".brushset"]
+  caps:                                     # mirrors the reader's code constants
+    zip_entries: 5000                       # entries in one container
+    archive_bytes: 1048576                  # one Brush.archive: 1 MiB
+    entry_bytes: 67108864                   # one inflated entry: 64 MiB
+    total_bytes: 2147483648                 # one container, inflated: 2 GiB
+    ratio: 200                              # an entry inflating more than 200:1 ...
+    ratio_min_bytes: 16777216               # ... and larger than 16 MiB is refused
+    nesting_depth: 3
+    upload_bytes: 536870912                 # 512 MiB, also the cap on a nested container
+    plist_objects: 100000
+    plist_depth: 64
+    png_pixels: 67108864                    # 8192 x 8192
+  untrusted: "a zip is opened in memory and never extracted by entry name"
+  zip_forms:                                # == zip_writer.FORMS: (method, flag bits, zlib level), read off the library's 3,319 entries
+    fast: {method: 8, flag_bits: 6, level: 1}       # 3,003 entries in 110 files; the form of every member made here
+    normal: {method: 8, flag_bits: 0, level: 6}     # 216 entries of Earth and Chinese Calligraphy
+    stored: {method: 0, flag_bits: 0, level: null}  # their 100 zero-byte .empty entries
+  zip_default_form: fast                    # == zip_writer.DEFAULT_FORM; a member read from a file keeps its own form
+  zip_zero_date: [1980, 1, 0, 0, 0, 0]      # == zip_writer.ZERO_DATE: written as read; any other non-calendar date is refused
+
+device_test:
+  procreate_version: null
+  date: null
+  values: [untested, passed, failed]
+  results:                                  # one answer per path a file can take; nothing is claimed beyond these
+    container: untested                     # our zip and plist around untouched members
+    edit_legacy: untested                   # a legacy archive re-encoded with one key changed
+    edit_modern: untested                   # a modern archive re-encoded with one key changed
+    scratch_m220: untested                  # a brush built from the M220 template
+    scratch_e4: untested                    # a brush built from the E4 template
+    thumbnail_policy: untested              # what the app shows for a missing, stale or supplied thumbnail
+  files:
+    "ROSW-1-control.brushset": [container, thumbnail_policy]
+    "ROSW-2-edits.brushset": [edit_legacy, edit_modern, thumbnail_policy]
+    "ROSW-3-scratch.brushset": [scratch_m220, scratch_e4]
+  written_to: "repo:brushes/device-tests/"
+  kept: ["manifest.json", "CHECKLIST.md", "returned/"]   # of a sitting's folder, in git; the built brush files are ignored
+  complete_only: "build and verify refuse a set with a substitute or an empty slot unless --allow-substitutes is given"
+  wording:
+    untested: "has not been opened in Procreate"
+    passed: "opened in Procreate"
+    failed: "did not open in Procreate"
+
+# ── tags and facets ──────────────────────────────────────────────────────────
+tags:
+  axes: [medium, mark, texture, edge, motif, use]
+  stored_keys: [medium_tags, mark_tags, texture_tags, edge_tags, motif_tags, use_tags]   # "<axis>_tags" in vocabulary, sidecar, index and result row
+  caps: {medium: 2, mark: 2, texture: 3, edge: 2, motif: 2, use: 3}
+  closed: true
+  vocabulary: "vault/_BrushTags/vocabulary.yaml"
+  unknown_tag: "refused by vault/tools/brush_tags.py; logged to vault/_BrushTags/_vocabulary_suggestions.jsonl"
+  sidecar: "vault/_BrushTags/<note path>.tags.json"
+  visual_basis: "described-not-measured"
+  stale_when: "the brush's content_sha256 differs from the sidecar entry's"
+  sheet: {rows: 8, sheets_per_call: 2}      # the tagger reads contact sheets; no per-brush card
+
+# Facet names. Computed from the archive by pipeline/ingest.py, with thresholds
+# in schema/facets.json; never written by an agent and never derived a second
+# time by the search tool. A test binds this list to schema/facets.json. The last six are filled once previews.py has measured the tiles.
+facets:
+  - kind
+  - is_stamp
+  - spacing
+  - spacing_class
+  - shape_source
+  - uses_bundled_shape
+  - grain_source
+  - has_grain
+  - uses_bundled_grain
+  - grain_movement
+  - grain_application_code
+  - wet_mix
+  - render_code
+  - taper
+  - taper_start
+  - taper_end
+  - pressure_size
+  - pressure_size_class
+  - pressure_opacity
+  - pressure_opacity_class
+  - tilt
+  - speed
+  - size_min
+  - size_max
+  - size_class
+  - opacity_min
+  - opacity_max
+  - translucent
+  - dual
+  - dual_blend_code
+  - blend_code
+  - blend_extended_code
+  - scatter
+  - shape_rotation
+  - randomised
+  - azimuth
+  - jitter_size
+  - jitter_opacity
+  - jitter_position
+  - streamline
+  - color_dynamics
+  - wet_edges
+  - burnt_edges
+  - era
+  - family
+  - stroke_source
+  - shape_coverage
+  - shape_aspect
+  - shape_midtone
+  - shape_edge_touch
+  - grain_mean
+  - grain_contrast
+facet_owner: {code: "pipeline/ingest.py", rules: "schema/facets.json"}
+preview_sources:
+  stroke_source: [thumbnail, reset-thumbnail, none, rendered-approx]
+  shape_source: [embedded, bundled, bundled-supplied, none]
+  grain_source: [embedded, bundled, bundled-supplied, blank, none]
+  approximate: "true only for rendered-approx, which v1 never writes"
+
+similar:
+  method: "gower-v1"
+  weights: {default: 1, shape_ref: 4, grain_ref: 3}   # placeholder until vault/tools/brush_search.py lands
+  status: placeholder
+
+previews:
+  kinds: [stroke, shape, grain]
+  pixel_format: "8-bit grey, no alpha"
+  stroke: {path: "vault/_Previews/<home_set_slug>/<brush_id>.stroke.png", size: [530, 162]}
+  shape: {path: "vault/_Previews/_textures/<texture_id>.<n|i>.shape.png", size: [256, 256]}
+  grain: {path: "vault/_Previews/_textures/<texture_id>.grain.png", size: [256, 256]}
+  sheet: {path: "vault/_Previews/_sheets/<set_slug>/sheet-NN.png", size: [802, 1496], rows: 8, tracked: false}
+  manifest: "vault/_Previews/manifest.json"
+  local: "vault/_Previews/_local/"          # a pack with publish_previews false; ignored
+  preview_kb: 128
+  previews_total_mb: 50
+
+# ── F10: surfaces ────────────────────────────────────────────────────────────
+surfaces:
+  mcp:
+    declared_in: ["repo:.mcp.json", "repo:.claude-plugin/plugin.json"]   # every file that registers the server today
+    registration: {command: "python", args: ["-I", "brushes/pipeline/mcp_server.py"]}
+    plugin_entry:                           # the second registration, for the copy an installed plugin starts
+      file: "repo:.claude-plugin/plugin.json"
+      state: present                        # pending | present. A test reads the file and holds this word to it
+      key: "mcpServers.brushes"
+      command: "python"
+      args: ["-I", "${CLAUDE_PLUGIN_ROOT}/brushes/pipeline/mcp_server.py", "--defer-to-project", "${CLAUDE_PROJECT_DIR}"]
+      until_present: "repo:.mcp.json must not reach the published branch or an installed plugin snapshot: the plugin would start it in every project, where its relative path does not exist"
+    server: "brushes"
+    script: "pipeline/mcp_server.py"
+    transport: "stdio; one ASCII JSON object per line"
+    status:                                 # the library_status payload
+      keys: [server, version, mode, root, index, counts, library_present, library_files, vocabulary_axes, export, next_steps]
+      modes: [project, snapshot]            # a checkout's own server | the copy an installed plugin starts
+      index_states: [fresh, stale, memory, not_ingested]
+      counts: "the counts object of catalog/catalog.json; null when there is no catalog"
+      library_files: "per half of the library: files, brushset, brush, counted by name"
+    tools:
+      - library_status
+      - search_brushes
+      - get_brush
+      - similar_brushes
+      - list_sets
+      - list_vocabulary
+      - get_preview
+      - get_brush_settings_schema
+      - validate_settings_patch
+    gated_tools: {export_brush: "--export-dir"}
+    writes: "nothing unless started with --export-dir"
+  app:
+    script: "pipeline/app_server.py"
+    bind: "127.0.0.1"
+    port: 8719                              # == brush_common.APP_PORT
+    origin: "http://localhost:8719"
+    busy_port: "exit 2; never another port"
+    token: {header: "X-ROSW-Token", made: "per run", delivered: "in the URL fragment", needed_by: "/api/*"}
+    routes:
+      - "GET /api/status"
+      - "GET /api/search"
+      - "GET /api/facets"
+      - "GET /api/vocabulary"
+      - "GET /api/sets"
+      - "GET /api/sets/<set_slug>"
+      - "GET /api/brush/<id>"
+      - "GET /api/brush/<id>/similar"
+      - "GET /api/brush/<id>/open"
+      - "GET /api/preview/<id>/<kind>.png"   # kind: stroke | shape | grain
+      - "GET /api/app-source.zip"
+      - "POST /api/similar"
+      - "POST /api/import"
+      - "POST /api/validate-patch"
+      - "POST /api/export"
+      - "POST /api/quit"
+    static:
+      app: "every regular file under app/, by walk; no token"
+      schema: ["/schema/silica_keys.json", "/schema/facets.json", "/schema/bundled_textures.json", "/schema/preview_calibration.json"]
+    export_formats: [brush, brushset, gbr, kit]
+    tabs: [ai, stroke, stabilization, taper, shape, grain, dynamics, pencil, wetmix, color, rendering, properties, materials, about]
+    library_tab: library
+    patch_schema: "rosw-brushes-patch/1"
+    writes: nothing                         # an export is returned to the browser, which saves it
+  notes: {one_per: brushset, in: "vault/[0-9][0-9]_*/", author_section: "## Notes", chunker_version: "b1"}
+
+# ── F11: command lines ───────────────────────────────────────────────────────
+cli:
+  command: "python"
+  scripts:
+    "pipeline/fetch_base_library.py":
+      verbs: [list, fetch, verify]
+      confirm: [fetch]
+      flags: {fetch: ["--only", "--delay", "--accept-upstream", "--confirm"]}
+    "pipeline/ingest.py":
+      verbs: [where, adopt, build, report, census]
+      confirm: [adopt]
+      flags: {adopt: ["--with-docs", "--confirm"], build: ["--only", "--strict"], census: ["--json"]}
+    "pipeline/previews.py":
+      verbs: [render]
+      confirm: [render]
+      flags: {render: ["--only", "--force", "--no-sheets", "--sheets-only", "--stdlib", "--confirm"]}
+    "pipeline/notes.py":
+      verbs: [write, check]
+      confirm: [write]
+      flags: {write: ["--only", "--diff", "--overwrite-generated", "--confirm"]}
+    "pipeline/brush_file.py":
+      verbs: [inspect, export, roundtrip]
+      confirm: [export]
+      flags: {inspect: ["--json"],
+              export: ["--from", "--brush", "--set", "--change", "--out", "--json", "--confirm"],
+              roundtrip: ["--allow-table"]}   # export --confirm needs --out (exit 2 without it)
+    "pipeline/device_tests.py":
+      verbs: [build, verify]
+      confirm: [build]
+      flags: {build: ["--out", "--known-bad", "--allow-substitutes", "--confirm"],
+              verify: ["--out", "--allow-substitutes"]}
+    "pipeline/app_server.py":
+      verbs: []
+      confirm: []
+      flags: {"": ["--port", "--no-browser", "--dev"]}
+    "pipeline/mcp_server.py":
+      verbs: []
+      confirm: []
+      flags: {"": ["--export-dir", "--defer-to-project", "--selftest"]}
+    "vault/tools/brush_search.py":
+      verbs: [index, search, ask, similar, facets, files, chunks, verify, brush]
+      confirm: []
+      flags: {index: ["--check"]}
+    "vault/tools/brush_tags.py":
+      verbs: [plan, apply, check, suggestions]
+      confirm: [apply]
+      flags: {apply: ["--file", "--ids", "--confirm"], check: ["--strict"]}
+  library_modules: ["pipeline/identity.py", "pipeline/brush_common.py", "pipeline/zip_writer.py",
+                    "pipeline/bplist.py", "pipeline/keyed_archive.py", "pipeline/brush_model.py",
+                    "pipeline/container.py", "pipeline/png_io.py", "pipeline/gbr.py",
+                    "pipeline/service.py"]   # no command line of their own
+  # Every pipeline/*.py on disk is a key of `scripts` or a member of
+  # `library_modules`: a test walks the folder.
+
+# ── F12: who writes what ─────────────────────────────────────────────────────
+persistence:
+  rule: "A writer is a dry run without --confirm."
+  writers:
+    "catalog/**": ["pipeline/ingest.py build", "pipeline/previews.py render --confirm"]
+    "vault/[0-9][0-9]_*/*.md, _index.md and 00_INDEX.md, above `## Notes`": ["pipeline/notes.py write --confirm"]
+    "vault/_Previews/**": ["pipeline/previews.py render --confirm"]
+    "vault/_BrushTags/*.tags.json and the two .jsonl logs": ["vault/tools/brush_tags.py apply --confirm"]
+    "vault/tools/rag_index/**": ["vault/tools/brush_search.py index"]
+    "library/user/**": ["pipeline/ingest.py adopt --confirm"]
+    "library/official/** and library/official/fetch_log.jsonl": ["pipeline/fetch_base_library.py fetch --confirm"]
+    "repo:brushes/device-tests/**": ["pipeline/device_tests.py build --confirm"]   # returned/ is filled by hand
+    "a file in --export-dir or --out": ["service.write_export, reached by `brush_file.py export --confirm` and MCP `export_brush` with confirm true",
+                                        "brush_file.write_export until service.py exists: the one writer of --out, reached by `brush_file.py export --confirm`; <name>.tmp then linked into place, never over an existing file"]
+  no_confirm: ["pipeline/ingest.py build", "vault/tools/brush_search.py index"]   # generated and rebuildable
+  authored: ["spec.yaml", "docs/CONTRACTS.md", "schema/*.json", "library/sources.json", "vault/CLAUDE.md",
+             "vault/_BrushTags/vocabulary.yaml", "the `## Notes` section of each note"]
+  schema_files: "authored. No script writes under schema/. The census columns of silica_keys.json are merged in by hand from the printed output of `ingest.py census --json` (its `columns`: brush_model.census_columns); an opt-in corpus test compares them with a fresh census"
+  # The fields of catalog/brushes/<brush_id>.json that depend on what
+  # previews.py measured. `previews.py render --confirm` changes these three
+  # and no other, through one function in ingest.py, which then reassembles
+  # catalog.json. Notes, the index and the service read them from the brush
+  # record; the rows of catalog.json are copies.
+  preview_fields:
+    record: "catalog/brushes/<brush_id>.json"
+    fields: [facets, facet_words, preview]
+    applied_by: "ingest.apply_preview_results"
+    called_by: ["pipeline/ingest.py build", "pipeline/previews.py render --confirm"]
+    inputs: ["catalog/thumbnails.json", "catalog/textures.json"]
+    measured_facets: [stroke_source, has_grain, shape_coverage, shape_aspect, shape_midtone,
+                      shape_edge_touch, grain_mean, grain_contrast]
+    before_previews: "the six texture facets are null; preview.stroke, .shape and .grain are null; stroke_source is told from which thumbnail member exists; has_grain is true for an embedded grain"
+  run_order:                                # each step reads what the one before wrote
+    - "pipeline/fetch_base_library.py fetch --confirm"
+    - "pipeline/ingest.py adopt <src> --confirm"
+    - "pipeline/ingest.py build"
+    - "pipeline/previews.py render --confirm"
+    - "pipeline/notes.py write --confirm"
+    - "vault/tools/brush_search.py index"
+  never: "Agents return text. The MCP server and the app server write nothing else. No note or sidecar is written with an editor tool."
+
+agents:
+  forbidden_tools: [Write, Edit, Agent, NotebookEdit]
+  brush-tagger: {tools: [Read, Grep, Glob, Bash]}
+  brush-librarian-native: {tools: [Read, Grep, Glob]}
+skills: [brush-library, brush-tag-backfill, brush-designer]

@@ -1,0 +1,31 @@
+{
+  "brush_count": 17,
+  "brushes": [
+    "b_515cd9f056f4",
+    "b_f60a0f7d444d",
+    "b_edcedd65bdbc",
+    "b_4f3ca022f501",
+    "b_e066a4030f26",
+    "b_57e706632dd1",
+    "b_543002ab8be4",
+    "b_cd5989264469",
+    "b_e4e3b3037764",
+    "b_ca6b29ee80a7",
+    "b_ce64f9dc2228",
+    "b_a84b9465dbaf",
+    "b_44a680428322",
+    "b_b442b51ae9ac",
+    "b_2b41f88c2f4b",
+    "b_165ef38786eb",
+    "b_029e324d7472"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Inking 1",
+  "note": "01_Procreate_Defaults/p5-inking.md",
+  "pack": "procreate-5",
+  "pack_kind": "official",
+  "set_id": "s_15d3d149e527",
+  "set_slug": "p5-inking",
+  "title": "Inking (Procreate 5)"
+}

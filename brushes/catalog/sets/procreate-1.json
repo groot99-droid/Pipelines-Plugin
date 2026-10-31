@@ -1,0 +1,26 @@
+{
+  "brush_count": 12,
+  "brushes": [
+    "b_edbab1ff335c",
+    "b_56c0f741305b",
+    "b_abed95d45858",
+    "b_13f35a936820",
+    "b_1d3e236fdcdc",
+    "b_be3903a57f46",
+    "b_9aae4b8fb556",
+    "b_c0829bffd361",
+    "b_7035791eef88",
+    "b_bc5cc91b1a4d",
+    "b_20b8b64ad29e",
+    "b_c4a38bf275d2"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "Procreate 1",
+  "note": "01_Procreate_Defaults/procreate-1.md",
+  "pack": "procreate-1",
+  "pack_kind": "official",
+  "set_id": "s_f8ccc144d978",
+  "set_slug": "procreate-1",
+  "title": "Procreate 1"
+}

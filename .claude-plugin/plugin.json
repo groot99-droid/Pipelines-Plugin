@@ -1,7 +1,7 @@
 {
   "name": "rosw",
   "version": "0.1.0",
-  "description": "The ROSW pipelines: a checkpointed creative-writing pipeline with its vault, chunk tagging and plot-logic checks, and the studio pipeline that walks one made thing through six stages and records it in the studio vault.",
+  "description": "The ROSW pipelines: a checkpointed creative-writing pipeline with its vault, chunk tagging and plot-logic checks, the studio pipeline that walks one made thing through six stages and records it in the studio vault, and a searchable library of 990 Procreate brushes with a designer that reads and writes the real brush format.",
   "author": {
     "name": "groot99-droid"
   },
@@ -19,6 +19,19 @@
   "agents": [
     "./.claude/agents/creative-writing-chunk-tagger.md",
     "./.claude/agents/creative-writing-drafter.md",
-    "./.claude/agents/creative-writing-librarian-native.md"
-  ]
+    "./.claude/agents/creative-writing-librarian-native.md",
+    "./.claude/agents/brush-librarian-native.md",
+    "./.claude/agents/brush-tagger.md"
+  ],
+  "mcpServers": {
+    "brushes": {
+      "command": "python",
+      "args": [
+        "-I",
+        "${CLAUDE_PLUGIN_ROOT}/brushes/pipeline/mcp_server.py",
+        "--defer-to-project",
+        "${CLAUDE_PROJECT_DIR}"
+      ]
+    }
+  }
 }

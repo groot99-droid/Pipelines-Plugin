@@ -1,0 +1,28 @@
+{
+  "brush_count": 14,
+  "brushes": [
+    "b_b012a5dbeb05",
+    "b_9802cd5429f8",
+    "b_6ade32b5845b",
+    "b_28173b68bdc5",
+    "b_9ed67c6920a7",
+    "b_2b9e18dd0016",
+    "b_696cada4bb98",
+    "b_a59c7d7b9b03",
+    "b_215f9a5785c0",
+    "b_f2cab1b9a9f9",
+    "b_8b553f1a586f",
+    "b_24e4096d5a38",
+    "b_cfe680e24399",
+    "b_ce9286932636"
+  ],
+  "kind": "set",
+  "library": "user",
+  "name": "Sargent’s Oils",
+  "note": "02_Vendor_Packs/sargents-oils.md",
+  "pack": "sargents-oils",
+  "pack_kind": "vendor",
+  "set_id": "s_b7a45075bc6a",
+  "set_slug": "sargents-oils",
+  "title": "Sargent’s Oils"
+}

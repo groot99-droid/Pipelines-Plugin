@@ -1,0 +1,1358 @@
+{
+  "schema": "rosw-brushes-patch-cases/1",
+  "about": "Patches and the PatchReport each must give (docs/CONTRACTS.md F3, Patches). Python is the authority (brush_model.apply_patch, run by tests/test_brush_model.py); the app runs the same cases against its own advisory check. Authored by hand; no script writes this file.",
+  "base": "A case runs against a brush made of the schema alone: every key of eras[era].key_order in silica_keys.json with its row's `default` (a curve also takes the `resolution` its class gives the era's family: 1024 for legacy, none for modern), then each key of `assign` set to the value given, in the forms of F3 (a key the schema does not list goes last in the key order). This is brush_model.case_base(era, assign). It is a test base, not a brush the app wrote and not the new-brush template.",
+  "run": "apply_patch(base, changes, mode=mode, allow_unknown=allow_unknown). `mode` is \"strict\" and `allow_unknown` false where a case does not say.",
+  "compare": "`ok`, `era`, `applied`, `clamped`, `unchanged` and `warnings` are compared whole, as JSON values. `rejected` is compared item by item, in order, on `key`, `code` and `value`; `reason` is prose for a person and is not compared.",
+  "cases": [
+    {
+      "id": "real-takes-a-whole-number",
+      "about": "A JSON whole number on a real key is the real 1.0.",
+      "era": "M220",
+      "changes": {
+        "plotSpacing": 1
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {
+          "plotSpacing": 1.0
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "real-is-rounded-to-32-bits",
+      "about": "0.1 is stored as the nearest 32-bit float, widened.",
+      "era": "M220",
+      "changes": {
+        "plotSpacing": 0.1
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {
+          "plotSpacing": 0.10000000149011612
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "no-op-equal-value",
+      "about": "A change equal to the base value changes nothing.",
+      "era": "M220",
+      "changes": {
+        "plotSpacing": 0
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [
+          "plotSpacing"
+        ],
+        "warnings": []
+      }
+    },
+    {
+      "id": "no-op-at-the-32-bit-level",
+      "about": "0.1000000001 and 0.1 are one 32-bit float, so the change is no change.",
+      "era": "M220",
+      "assign": {
+        "plotSpacing": 0.1
+      },
+      "changes": {
+        "plotSpacing": 0.1000000001
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [
+          "plotSpacing"
+        ],
+        "warnings": []
+      }
+    },
+    {
+      "id": "unknown-key",
+      "about": "A key no era has is refused.",
+      "era": "M220",
+      "changes": {
+        "notABrushKey": 1
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "notABrushKey",
+            "value": 1,
+            "code": "unknown_key"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "unknown-key-held-but-not-allowed",
+      "about": "A key the brush holds and the schema does not list is written back as read, and refused as a change unless allow_unknown.",
+      "era": "M220",
+      "assign": {
+        "futureKey": {
+          "$real32": 0.5
+        }
+      },
+      "changes": {
+        "futureKey": 0.75
+      },
+      "expect": {
+        "ok": false,
+        "era": "X221",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "futureKey",
+            "value": 0.75,
+            "code": "unknown_key"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "unknown-key-held-and-allowed",
+      "about": "With allow_unknown the new value takes the type the brush holds, and stays tagged.",
+      "era": "M220",
+      "assign": {
+        "futureKey": {
+          "$real32": 0.5
+        }
+      },
+      "allow_unknown": true,
+      "changes": {
+        "futureKey": 0.75
+      },
+      "expect": {
+        "ok": true,
+        "era": "X221",
+        "applied": {
+          "futureKey": {
+            "$real32": 0.75
+          }
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "unknown-whole-real-stays-a-real",
+      "about": "An unknown real key equal to 1.0 sent back as 1 is the same 32-bit value: no change, and no int.",
+      "era": "M220",
+      "assign": {
+        "futureKey": {
+          "$real32": 1.0
+        }
+      },
+      "allow_unknown": true,
+      "changes": {
+        "futureKey": 1
+      },
+      "expect": {
+        "ok": true,
+        "era": "X221",
+        "applied": {},
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [
+          "futureKey"
+        ],
+        "warnings": []
+      }
+    },
+    {
+      "id": "unknown-int-stays-an-int",
+      "about": "An unknown int key takes a whole number and stays tagged as an int.",
+      "era": "M220",
+      "assign": {
+        "futureCount": {
+          "$int": 2
+        }
+      },
+      "allow_unknown": true,
+      "changes": {
+        "futureCount": 3
+      },
+      "expect": {
+        "ok": true,
+        "era": "X221",
+        "applied": {
+          "futureCount": {
+            "$int": 3
+          }
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "wrong-type-text-on-a-real",
+      "about": "Text is not a number.",
+      "era": "M220",
+      "changes": {
+        "plotSpacing": "0.5"
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "plotSpacing",
+            "value": "0.5",
+            "code": "wrong_type"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "wrong-type-boolean-on-a-real",
+      "about": "true is not a number.",
+      "era": "M220",
+      "changes": {
+        "plotSpacing": true
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "plotSpacing",
+            "value": true,
+            "code": "wrong_type"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "wrong-type-number-on-a-switch",
+      "about": "A switch is true or false, not 1.",
+      "era": "M220",
+      "changes": {
+        "stamp": 1
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "stamp",
+            "value": 1,
+            "code": "wrong_type"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "switch",
+      "about": "A switch takes true or false.",
+      "era": "M220",
+      "changes": {
+        "stamp": true
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {
+          "stamp": true
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "wrong-type-fraction-on-an-int",
+      "about": "An int key takes a whole number.",
+      "era": "M220",
+      "changes": {
+        "blendMode": 1.5
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "blendMode",
+            "value": 1.5,
+            "code": "wrong_type"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "int-from-a-whole-number",
+      "about": "1.0 on an int key is 1.",
+      "era": "M220",
+      "changes": {
+        "blendMode": 1.0
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {
+          "blendMode": 1
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "enum-miss",
+      "about": "An int key with an enum takes only the values the library holds for it.",
+      "era": "M220",
+      "changes": {
+        "blendMode": 5
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "blendMode",
+            "value": 5,
+            "code": "not_in_enum"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "non-finite-infinity",
+      "about": "JSON has no infinity; a tag carries the stored bytes, and the value is refused.",
+      "era": "M220",
+      "changes": {
+        "plotSpacing": {
+          "$real32": "7f800000"
+        }
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "plotSpacing",
+            "value": {
+              "$real32": "7f800000"
+            },
+            "code": "non_finite"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "non-finite-nan",
+      "about": "NaN is refused.",
+      "era": "M220",
+      "changes": {
+        "plotSpacing": {
+          "$real32": "7fc00000"
+        }
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "plotSpacing",
+            "value": {
+              "$real32": "7fc00000"
+            },
+            "code": "non_finite"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "non-finite-overflow",
+      "about": "A number beyond the 32-bit range would become infinity, and is refused.",
+      "era": "M220",
+      "changes": {
+        "plotSpacing": 1e+39
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "plotSpacing",
+            "value": 1e+39,
+            "code": "non_finite"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "read-only-version",
+      "about": "The archive version is read-only.",
+      "era": "M220",
+      "changes": {
+        "version": 4
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "version",
+            "value": 4,
+            "code": "read_only"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "read-only-color",
+      "about": "The stored color is read-only in v1.",
+      "era": "M220",
+      "changes": {
+        "color": {
+          "$data": "0000000000000000000000000000803f"
+        }
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "color",
+            "value": {
+              "$data": "0000000000000000000000000000803f"
+            },
+            "code": "read_only"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "read-only-class",
+      "about": "The class of a brush is not a setting.",
+      "era": "M220",
+      "changes": {
+        "$class": "SilicaBrush"
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "$class",
+            "value": "SilicaBrush",
+            "code": "read_only"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "read-only-creation-date",
+      "about": "The creation date is read-only; a new brush takes the clock.",
+      "era": "M220",
+      "changes": {
+        "creationDate": {
+          "time": 0
+        }
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "creationDate",
+            "value": {
+              "time": 0
+            },
+            "code": "read_only"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "read-only-sent-back-unchanged",
+      "about": "A read-only key sent back with the value the brush holds changes nothing: it is listed as unchanged, not refused. A client may echo what it read.",
+      "era": "M220",
+      "changes": {
+        "color": {
+          "$data": "00000000000000000000000000000000"
+        },
+        "version": 2,
+        "importedFromABR": false,
+        "creationDate": {
+          "time": 593566178.243195
+        }
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [
+          "color",
+          "version",
+          "importedFromABR",
+          "creationDate"
+        ],
+        "warnings": []
+      }
+    },
+    {
+      "id": "real-held-as-64-bits-equal-at-32",
+      "about": "A real key whose file stores a 64-bit real, sent the same value at the 32-bit level, is unchanged and keeps its stored width.",
+      "era": "M220",
+      "assign": {
+        "plotSpacing": {
+          "$real64": 0.5
+        }
+      },
+      "changes": {
+        "plotSpacing": 0.5
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [
+          "plotSpacing"
+        ],
+        "warnings": []
+      }
+    },
+    {
+      "id": "not-in-era-renamed-key",
+      "about": "A modern brush spells flow dynamicsGlazedFlow; the legacy name is refused.",
+      "era": "M220",
+      "changes": {
+        "dynamicsGlazeFlow": 0.5
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "dynamicsGlazeFlow",
+            "value": 0.5,
+            "code": "not_in_era"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "not-in-era-modern-key-on-legacy",
+      "about": "A legacy brush has no grain depth, and no key can be added to it.",
+      "era": "E3",
+      "changes": {
+        "grainDepth": 0.5
+      },
+      "expect": {
+        "ok": false,
+        "era": "E3",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "grainDepth",
+            "value": 0.5,
+            "code": "not_in_era"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "not-in-era-optional-only-in-M220",
+      "about": "The optional pressure curves are optional in M220 only.",
+      "era": "M242",
+      "changes": {
+        "dynamicsPressureAttackCurve": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0.3,
+            0.6
+          ]
+        ]
+      },
+      "expect": {
+        "ok": false,
+        "era": "M242",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "dynamicsPressureAttackCurve",
+            "value": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0.3,
+                0.6
+              ]
+            ],
+            "code": "not_in_era"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "optional-curve-added-in-M220",
+      "about": "An M220 brush may gain one of its era's optional curves. Numeric pairs become point strings, end points first.",
+      "era": "M220",
+      "changes": {
+        "dynamicsPressureAttackCurve": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0.3,
+            0.6
+          ]
+        ]
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {
+          "dynamicsPressureAttackCurve": {
+            "points": [
+              "{0.000000, 0.000000}",
+              "{1.000000, 1.000000}",
+              "{0.300000, 0.600000}"
+            ]
+          }
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "curve-numeric-pairs-modern",
+      "about": "Numeric pairs are written \"{%.6f, %.6f}\", the two end points first, then the points between by x. A modern curve has no resolution.",
+      "era": "M220",
+      "changes": {
+        "dynamicsPressureSizeCurve": [
+          [
+            0.5,
+            0.25
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {
+          "dynamicsPressureSizeCurve": {
+            "points": [
+              "{0.000000, 0.000000}",
+              "{1.000000, 1.000000}",
+              "{0.500000, 0.250000}"
+            ]
+          }
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "curve-numeric-pairs-legacy",
+      "about": "A legacy curve keeps its resolution of 1024.",
+      "era": "E4",
+      "changes": {
+        "dynamicsPressureSizeCurve": [
+          [
+            0,
+            0
+          ],
+          [
+            0.5,
+            0.25
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expect": {
+        "ok": true,
+        "era": "E4",
+        "applied": {
+          "dynamicsPressureSizeCurve": {
+            "points": [
+              "{0.000000, 0.000000}",
+              "{1.000000, 1.000000}",
+              "{0.500000, 0.250000}"
+            ],
+            "resolution": 1024
+          }
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "curve-strings-kept-in-their-order",
+      "about": "Point strings in the archive's own form are kept as given, in the order given.",
+      "era": "M220",
+      "changes": {
+        "dynamicsPressureSizeCurve": {
+          "points": [
+            "{0.000000, 0.000000}",
+            "{0.250000, 0.330000}",
+            "{1.000000, 1.000000}"
+          ]
+        }
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {
+          "dynamicsPressureSizeCurve": {
+            "points": [
+              "{0.000000, 0.000000}",
+              "{0.250000, 0.330000}",
+              "{1.000000, 1.000000}"
+            ]
+          }
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "curve-same-points-is-no-change",
+      "about": "The same points in another order are the same curve: the brush's own order is kept.",
+      "era": "M220",
+      "changes": {
+        "dynamicsPressureSizeCurve": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [
+          "dynamicsPressureSizeCurve"
+        ],
+        "warnings": []
+      }
+    },
+    {
+      "id": "bad-curve-coordinate",
+      "about": "Every coordinate of a point is a number from 0 to 1.",
+      "era": "M220",
+      "changes": {
+        "dynamicsPressureSizeCurve": [
+          [
+            0,
+            0
+          ],
+          [
+            1.5,
+            1
+          ]
+        ]
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "dynamicsPressureSizeCurve",
+            "value": [
+              [
+                0,
+                0
+              ],
+              [
+                1.5,
+                1
+              ]
+            ],
+            "code": "curve_invalid"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "bad-curve-one-point",
+      "about": "A curve has at least two points.",
+      "era": "M220",
+      "changes": {
+        "dynamicsPressureSizeCurve": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "dynamicsPressureSizeCurve",
+            "value": [
+              [
+                0,
+                0
+              ]
+            ],
+            "code": "curve_invalid"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "bad-curve-text",
+      "about": "A point string has the archive's form, six decimals each: \"{0.250000, 0.330000}\".",
+      "era": "M220",
+      "changes": {
+        "dynamicsPressureSizeCurve": [
+          "{0, 0}",
+          "{1, 1}"
+        ]
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "dynamicsPressureSizeCurve",
+            "value": [
+              "{0, 0}",
+              "{1, 1}"
+            ],
+            "code": "curve_invalid"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "bad-curve-not-a-list",
+      "about": "A curve is a list of points or {\"points\": [...]}.",
+      "era": "M220",
+      "changes": {
+        "dynamicsPressureSizeCurve": 0.5
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "dynamicsPressureSizeCurve",
+            "value": 0.5,
+            "code": "curve_invalid"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "bad-curve-resolution",
+      "about": "The resolution of a curve is not a setting.",
+      "era": "E4",
+      "changes": {
+        "dynamicsPressureSizeCurve": {
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "resolution": 512
+        }
+      },
+      "expect": {
+        "ok": false,
+        "era": "E4",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "dynamicsPressureSizeCurve",
+            "value": {
+              "points": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              "resolution": 512
+            },
+            "code": "curve_invalid"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "negative-zero-is-a-change-from-zero",
+      "about": "-0.0 and 0.0 are two 32-bit patterns. JSON cannot carry -0.0, so it travels as a tag of its bytes.",
+      "era": "M220",
+      "changes": {
+        "dynamicsTiltAngle": {
+          "$real32": "80000000"
+        }
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {
+          "dynamicsTiltAngle": {
+            "$real32": "80000000"
+          }
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "negative-zero-kept",
+      "about": "A base holding -0.0 sent its own tag back changes nothing.",
+      "era": "M220",
+      "assign": {
+        "dynamicsTiltAngle": {
+          "$real32": "80000000"
+        }
+      },
+      "changes": {
+        "dynamicsTiltAngle": {
+          "$real32": "80000000"
+        }
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [
+          "dynamicsTiltAngle"
+        ],
+        "warnings": []
+      }
+    },
+    {
+      "id": "zero-replaces-negative-zero",
+      "about": "0 on a base holding -0.0 is a change at the 32-bit level. A client that changed nothing sends nothing.",
+      "era": "M220",
+      "assign": {
+        "dynamicsTiltAngle": {
+          "$real32": "80000000"
+        }
+      },
+      "changes": {
+        "dynamicsTiltAngle": 0
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {
+          "dynamicsTiltAngle": 0.0
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "outside-observed-is-applied-and-warned",
+      "about": "Observed ranges are not rules: a value beyond them is applied, with a warning.",
+      "era": "M220",
+      "changes": {
+        "maxSize": 40
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {
+          "maxSize": 40.0
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": [
+          {
+            "key": "maxSize",
+            "code": "outside_observed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "clamp-mode-clamps-nothing-soft",
+      "about": "No row says limits_hard, so clamp mode clamps nothing.",
+      "era": "M220",
+      "mode": "clamp",
+      "changes": {
+        "plotJitter": 9.5
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {
+          "plotJitter": 9.5
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": [
+          {
+            "key": "plotJitter",
+            "code": "outside_observed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "text",
+      "about": "A name is text, kept exactly, trailing space included.",
+      "era": "M220",
+      "changes": {
+        "name": "My Brush "
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {
+          "name": "My Brush "
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "text-wrong-type",
+      "about": "A name is text or null.",
+      "era": "M220",
+      "changes": {
+        "name": 5
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "name",
+            "value": 5,
+            "code": "wrong_type"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "array",
+      "about": "An array is a list of numbers, each a 32-bit real.",
+      "era": "M220",
+      "changes": {
+        "savedPaintSizes": [
+          0.25,
+          1
+        ]
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {
+          "savedPaintSizes": [
+            0.25,
+            1.0
+          ]
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "array-wrong-type",
+      "about": "An array holds numbers.",
+      "era": "M220",
+      "changes": {
+        "savedPaintSizes": [
+          "big"
+        ]
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "savedPaintSizes",
+            "value": [
+              "big"
+            ],
+            "code": "wrong_type"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "roll-parameters",
+      "about": "Roll parameters are four fields; the three activation values are 32-bit reals.",
+      "era": "M220",
+      "changes": {
+        "shapeScatterRollParameters": {
+          "mode": 2,
+          "activationFalloff": 1.5707963705062866,
+          "activationOrigin": 3.141592653589793,
+          "activationRange": 3.141592653589793
+        }
+      },
+      "expect": {
+        "ok": true,
+        "era": "M220",
+        "applied": {
+          "shapeScatterRollParameters": {
+            "mode": 2,
+            "activationFalloff": 1.5707963705062866,
+            "activationOrigin": 3.1415927410125732,
+            "activationRange": 3.1415927410125732
+          }
+        },
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "roll-parameters-wrong-shape",
+      "about": "Roll parameters need all four fields.",
+      "era": "M220",
+      "changes": {
+        "shapeScatterRollParameters": {
+          "mode": 1
+        }
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {},
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "shapeScatterRollParameters",
+            "value": {
+              "mode": 1
+            },
+            "code": "wrong_type"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "several-changes-one-refused",
+      "about": "Each change stands alone: one refused change does not stop the others, and ok is false.",
+      "era": "M220",
+      "changes": {
+        "plotSpacing": 0.5,
+        "blendMode": 5,
+        "stamp": true
+      },
+      "expect": {
+        "ok": false,
+        "era": "M220",
+        "applied": {
+          "plotSpacing": 0.5,
+          "stamp": true
+        },
+        "clamped": [],
+        "rejected": [
+          {
+            "key": "blendMode",
+            "value": 5,
+            "code": "not_in_enum"
+          }
+        ],
+        "unchanged": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "no-changes",
+      "about": "An empty patch is ok and changes nothing.",
+      "era": "E0",
+      "changes": {},
+      "expect": {
+        "ok": true,
+        "era": "E0",
+        "applied": {},
+        "clamped": [],
+        "rejected": [],
+        "unchanged": [],
+        "warnings": []
+      }
+    }
+  ]
+}

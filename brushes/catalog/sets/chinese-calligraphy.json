@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_8cf72c0c43b4",
+    "b_21f4f2a9e2f0",
+    "b_4807cadb5399",
+    "b_898243d3db8f",
+    "b_b514ff6303ba",
+    "b_b8637cb58581",
+    "b_3030e4750712",
+    "b_e2e42dbf6900"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "浓墨淡彩",
+  "note": "01_Procreate_Defaults/chinese-calligraphy.md",
+  "pack": "chinese-calligraphy",
+  "pack_kind": "official",
+  "set_id": "s_ea3fe6db3185",
+  "set_slug": "chinese-calligraphy",
+  "title": "Chinese Calligraphy"
+}

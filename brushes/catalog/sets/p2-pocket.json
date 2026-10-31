@@ -1,0 +1,26 @@
+{
+  "brush_count": 12,
+  "brushes": [
+    "b_3964878e41fe",
+    "b_b972647e4177",
+    "b_05b7802066ed",
+    "b_cc4305ce9305",
+    "b_2047e48efaff",
+    "b_65245932eff6",
+    "b_cf87ea782c8a",
+    "b_caa7d2b76aee",
+    "b_a35224bda9d3",
+    "b_ab24cd4f6e76",
+    "b_1def314ead41",
+    "b_3f73641df9e9"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "P2_Pocket",
+  "note": "01_Procreate_Defaults/p2-pocket.md",
+  "pack": "procreate-2",
+  "pack_kind": "official",
+  "set_id": "s_d60d46062a9d",
+  "set_slug": "p2-pocket",
+  "title": "Pocket (Procreate 2)"
+}

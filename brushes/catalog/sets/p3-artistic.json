@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_d90896046bb3",
+    "b_20f841f5efc8",
+    "b_9aa18e87aa8d",
+    "b_c76fe64058b4",
+    "b_8dc822b80fb5",
+    "b_8b2d35bbf317",
+    "b_4dae29a02cdf",
+    "b_ded5921d7449"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "P3_Artistic",
+  "note": "01_Procreate_Defaults/p3-artistic.md",
+  "pack": "procreate-3",
+  "pack_kind": "official",
+  "set_id": "s_b6d5baca9f78",
+  "set_slug": "p3-artistic",
+  "title": "Artistic (Procreate 3)"
+}

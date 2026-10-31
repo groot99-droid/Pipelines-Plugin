@@ -1,0 +1,29 @@
+{
+  "brush_count": 15,
+  "brushes": [
+    "b_e005da2f38eb",
+    "b_85490da0d218",
+    "b_3464fab85b56",
+    "b_c8ca575d2ad9",
+    "b_085ba342a7fd",
+    "b_2c2204eaa53e",
+    "b_a1abcec7ed02",
+    "b_80c6622286c5",
+    "b_a43abefa675a",
+    "b_c9cbccd7c784",
+    "b_5dabd6e09ea5",
+    "b_3ea39401c12c",
+    "b_07838dbcf52e",
+    "b_0c6448476315",
+    "b_4f09745d11cd"
+  ],
+  "kind": "set",
+  "library": "user",
+  "name": "RSCo Dry Brush Pack",
+  "note": "02_Vendor_Packs/rsco-dry-brush-pack.md",
+  "pack": "rsco-dry-brush-pack",
+  "pack_kind": "vendor",
+  "set_id": "s_6b192b5497d8",
+  "set_slug": "rsco-dry-brush-pack",
+  "title": "RSCo Dry Brush Pack"
+}

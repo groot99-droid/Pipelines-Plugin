@@ -1,0 +1,5 @@
+# brushes/library -- what is NOT committed. The brush files themselves are
+# committed, through Git LFS (see .gitattributes at the repository root).
+_docs/
+bundled/
+*.part

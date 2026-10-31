@@ -1,0 +1,22 @@
+{
+  "brush_count": 8,
+  "brushes": [
+    "b_c11dc9d2f9b2",
+    "b_f9aa22efc435",
+    "b_8be70eaf86b2",
+    "b_a04333276075",
+    "b_c3878a35b759",
+    "b_c261f7dfc799",
+    "b_97bc48a3f011",
+    "b_2f45287fadd8"
+  ],
+  "kind": "set",
+  "library": "official",
+  "name": "P2_Abstract",
+  "note": "01_Procreate_Defaults/p2-abstract.md",
+  "pack": "procreate-2",
+  "pack_kind": "official",
+  "set_id": "s_486bb6ed2fd7",
+  "set_slug": "p2-abstract",
+  "title": "Abstract (Procreate 2)"
+}
