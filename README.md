@@ -12,24 +12,35 @@ its skills and agents live inside it, under `plugins/ui-design/`.
 
 ```
 INDEX.md               generated index of the tools, skills and agents
-.claude/skills/        creative-writing-pipeline, chunk-tag-backfill,
-                       studio-pipeline, blender-gemini
-.claude/agents/        creative-writing-{chunk-tagger,drafter,librarian-native}
+.claude/skills/        creative-writing-pipeline, chunk-tag-backfill, studio-pipeline,
+                       higgsfield-library-sync, render-pipeline, sound-library,
+                       reach-research, reach-references, blender-gemini,
+                       brush-library, brush-tag-backfill, brush-designer
+.claude/agents/        creative-writing-{chunk-tagger,drafter,librarian-native},
+                       brush-{tagger,librarian-native}
 .mcp.json              the gemini MCP server Claude calls (see blender-gemini)
 CLAUDE.md              repo conventions; points at each vault's own CLAUDE.md
 blender-addons/        tool manifests for the author's own Blender add-ons (see Blender plugin)
 blender-gemini/        installer and tests that register the Blender MCP server
                        with the Gemini CLI; its skill is blender-gemini
 creative-writing/
-  vault/               the Obsidian vault: 63 works, _Annotations/,
+  vault/               the Obsidian vault: about 150 notes (63 original
+                       certified works plus later additions), _Annotations/,
                        _ChunkTags/, _Idea_Library/, tools/, CLAUDE.md
   pipeline/            the checkpointed pipeline that writes into that vault
 studio/
   vault/               a second Obsidian vault: one note per made thing, the
                        brand gates, SCHEMA.md, CLAUDE.md
-  pipeline/            spec.yaml, the bookkeeper and the note writer
+  pipeline/            spec.yaml, the bookkeeper, the note and gate writers, compute gate
+  hub/                 the desk: a loopback server and page over the vault and the runs
+  library/             the generations library: every Higgsfield generation catalogued
+  assets/              what runs keep (not versioned)
   docs/                what was carried from Creative-Headquarters, and how
+writing-museum/        a walkable 3D museum of the creative-writing vault, and its library page
+sound-library/         the author's sound effects: catalog, library.py; WAVs live in GitHub Releases
+brushes/               the Procreate brush library, catalog, search, vault and designer app
 docs/                  HTML pages for new users, and setup_keys.py for API keys
+.github/workflows/     verify.yml (CI for the whole repo), pages.yml (publishes docs/ and the museum)
 .claude-plugin/        marketplace.json: installs plugins/ui-design from this repo
 plugins/ui-design/     the ui-design plugin: self-contained
   .claude-plugin/      plugin.json and marketplace.json
