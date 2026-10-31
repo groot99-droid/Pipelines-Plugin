@@ -7,14 +7,16 @@
 // 3b stroke engine will do with the key), the default, the observed range, and
 // a reset button once the key is edited.
 //
-// Seam for 3c: registerGroupPanel('ai', {mode: 'replace', render(container, ctx)})
-// swaps what a tab shows; mode 'append' adds below the generated rows.
+// Seam: registerGroupPanel(groupId, {mode: 'replace', render(container, ctx)})
+// swaps what a tab shows (the `ai` tab does, see ai.js); mode 'append' adds
+// below the generated rows (`about`).
 
 import {el, clear, uid} from './dom.js';
 import {groupLayout, groupCounts, widgetFor, defaultText, observedText, searchText, unknownKeys,
   advise, CONFIDENCE_LABELS, PREVIEW_LABELS} from './schema.js';
 import {buildControl} from './widgets.js';
 import {toast} from './ui.js';
+import {renderAiTab} from './ai.js';
 
 const registry = new Map();
 
@@ -23,17 +25,8 @@ export function registerGroupPanel(groupId, {mode = 'append', render}) {
   registry.set(groupId, {mode, render});
 }
 
-registerGroupPanel('ai', {
-  mode: 'replace',
-  render(container, ctx) {
-    container.append(
-      el('div', {class: 'card'},
-        el('h3', {text: 'AI assist'}),
-        el('p', {text: 'The assistant arrives in a later phase. For now Claude is the assistant: it proposes a settings patch, and you paste it into the Patch box.'}),
-        el('button', {class: 'btn', type: 'button', text: 'Go to the Patch box', onclick: () => ctx.focusPatchBox && ctx.focusPatchBox()}),
-        el('div', {class: 'mount', id: 'ai-mount', 'data-mount': 'ai'})));
-  },
-});
+// the AI tab (Ask Claude, paste the reply back, offline suggestions) lives in ai.js
+registerGroupPanel('ai', {mode: 'replace', render: renderAiTab});
 
 registerGroupPanel('about', {
   mode: 'append',

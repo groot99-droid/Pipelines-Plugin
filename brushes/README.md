@@ -9,7 +9,7 @@ modules, the codec that reads and writes brush files byte for byte, the scripts
 that fill the library and build the catalog, previews and notes, the search and
 tag tools, the MCP server and the loopback app server, the builder of the first
 two device tests, and the test fixtures. The designer app in `app/` opens, edits and
-exports brushes; its stroke engine is not built. Nothing here has written a file that
+exports brushes and previews strokes (an approximation). Nothing here has written a file that
 Procreate is known to open.
 
 ## What is here now
@@ -43,7 +43,7 @@ Procreate is known to open.
 | `library/user/` | the author's 19 packs, adopted: 72 brush files |
 | `library/official/` | the 40 official sets, fetched by `fetch_base_library.py fetch --confirm` (below) |
 | `device-tests/` | one folder per sitting, written by `device_tests.py build --confirm` |
-| `app/` | the designer and a library browser: plain ES modules in `js/`, no build step, served by `app_server.py`. It opens a brush from the library or from a file, edits it as a patch of changed keys, and exports through the server, which owns the encoding. `selftest.html` runs its checks in the browser. The stroke preview is a placeholder until the engine lands |
+| `app/` | the designer and a library browser: plain ES modules in `js/`, no build step, served by `app_server.py`. It opens a brush from the library or from a file, edits it as a patch of changed keys, and exports through the server, which owns the encoding. `selftest.html` runs its checks in the browser. The stroke preview is a canvas simulator whose every setting is marked honoured, approximate or ignored; it is an approximation of Procreate, not a match |
 
 ## What is planned
 

@@ -113,6 +113,12 @@ export const api = {
       info: infoOf(response.headers.get('X-ROSW-Export'))};
   },
 
+  /** GET /api/app-source.zip: the app's own files as a zip. */
+  appSourceZip: async () => {
+    const response = await send('GET', '/api/app-source.zip');
+    return {blob: await response.blob(), filename: filenameOf(response.headers.get('Content-Disposition'))};
+  },
+
   quit: async () => jsonOf(await send('POST', '/api/quit', {body: '{}', headers: {'Content-Type': 'application/json'}})),
 
   /** A preview PNG as a blob: URL (an <img> cannot send the token header). Cached. */

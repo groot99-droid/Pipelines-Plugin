@@ -17,7 +17,8 @@ import {createPanels} from './panels.js';
 import {brushSpec, runExport} from './exporter.js';
 import {openLibraryBrush, newBrush, docFromResponse} from './opener.js';
 import {validateBody} from './patchbox.js';
-import {createEngine} from './engine.js';
+import {pureEngineTests} from './engine.js';
+import {runEngineChecks} from './engine/browser-checks.js';
 import {textureView, thumbnailView, canvasToReplacement} from './textures.js';
 import {bytesToB64} from './b64.js';
 import {ShapeGenerators} from './generators/shape.js';
@@ -105,6 +106,7 @@ async function main() {
   if (!schema) { finish(); return; }
 
   for (const test of pureTests(schema)) await check(`pure: ${test.name}`, () => test.run());
+  for (const test of pureEngineTests(schema)) await check(`engine-pure: ${test.name}`, () => test.run());
 
   await check('panels: every schema key renders a labelled widget, and unverified keys are locked', async () => {
     const settings = Object.fromEntries(schema.rows.map((r) => [r.key, r.default === undefined ? null : r.default]));
@@ -139,11 +141,7 @@ async function main() {
     doc.undo(); eq(doc.patch(), {}); host.remove();
   });
 
-  await check('engine: the placeholder renders a labelled box and disposes', async () => {
-    const canvas = document.createElement('canvas'); const engine = createEngine(canvas);
-    const r = await engine.render({}, {width: 320, name: 'x'}); eq(r.drew, 'label'); engine.setBadges({a: 'ignored'}); engine.dispose();
-    const after = await engine.render({}, {width: 320}); eq(after.drew, 'nothing');
-  });
+  await runEngineChecks({check, ok, eq, skip, api, schema, libraryDoc, openLibraryBrush});
 
   let pen = null;
   await check('open: the library brush Brush Pen opens as a clean doc with its textures described honestly', async () => {
@@ -243,6 +241,7 @@ async function main() {
     const url = await api.previewUrl(BRUSH_PEN, 'stroke').catch((e) => { if (e.code === 'no_preview' || e.code === 'not_found' || e.code === 'unknown_id') skip(e.code); throw e; }); ok(url.startsWith('blob:'));
   });
 
+  await (await import('./selftest-library.js')).run({check, ok, eq, skip, api, schema});  // phase 3c checks: Library, AI, extra exports
   finish();
 }
 

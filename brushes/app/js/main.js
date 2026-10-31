@@ -64,6 +64,7 @@ async function boot() {
       },
       addToSet(id, name) { toast(basket.addLibrary(id, name) ? `Added ${name} to the set.` : `${name} is already in the set.`, 'info'); },
       toast,
+      basket,
     });
     library.refresh();
   }

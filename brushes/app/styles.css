@@ -100,8 +100,13 @@ summary.btn { list-style: none; display: inline-flex; } summary.btn::-webkit-det
 .side-section[open] > summary { border-bottom: 1px solid var(--line); }
 .side-section > :not(summary) { margin: .75rem 1rem 1rem; }
 .side-section .card { margin-left: 0; margin-right: 0; }
-.engine-canvas { display: block; width: 100%; height: auto; max-width: 640px; border-radius: 8px; aspect-ratio: 1060 / 324; background: #2a2825; }
+.engine-canvas { display: block; width: 100%; height: auto; max-width: 640px; border-radius: 8px; aspect-ratio: var(--engine-aspect, 1060 / 324); background: #1b1a18; touch-action: none; cursor: crosshair; }
 .engine-note { margin: .4rem 0 0; }
+.engine-controls { margin-top: .4rem; }
+.engine-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: .5rem; margin: .5rem 0; }
+.engine-options > summary, .engine-ledger > summary { cursor: pointer; display: list-item; padding: .65rem 0; margin-left: 1.1rem; }
+.engine-status { margin: .25rem 0 0; } .engine-approx { margin: .25rem 0; }
+.ledger-list { margin: .25rem 0 .5rem; padding-left: 1.1rem; }
 @media (min-width: 62rem) {
   .workspace { grid-template-columns: minmax(20rem, 26rem) 1fr; }
   .side { position: sticky; top: 4.5rem; max-height: calc(100vh - 5rem); overflow-y: auto; padding-right: .25rem; }

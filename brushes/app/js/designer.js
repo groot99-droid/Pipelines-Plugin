@@ -3,11 +3,12 @@
 
 import {el, clear, isTyping} from './dom.js';
 import {createPanels} from './panels.js';
-import {createTextures, thumbnailView} from './textures.js';
+import {createTextures} from './textures.js';
 import {createPatchBox} from './patchbox.js';
 import {createExportPanel} from './exporter.js';
 import {createOpener, openLibraryBrush} from './opener.js';
-import {createEngine} from './engine.js';
+import {createEngine, applyEngineSupport} from './engine.js';
+import {previewOpts} from './engine/opts.js';
 import {previewBadges} from './schema.js';
 import {blobFromB64} from './b64.js';
 import {confirmDialog, toast} from './ui.js';
@@ -15,13 +16,14 @@ import {confirmDialog, toast} from './ui.js';
 export function createDesigner({schema, status, basket, dialog, goLibrary, onDocChange}) {
   let doc = null;
   let unsubscribe = null;
-  let thumbUrl = null;
+  const urlCache = {thumb: null, shape: null, grain: null};       // blob URLs for the engine, reused while the image is the same
   let frame = 0;
 
   const root = el('div', {class: 'designer'});
   const engineCanvas = el('canvas', {class: 'engine-canvas', role: 'img', 'aria-label': 'Stroke preview'});
   const engineNote = el('p', {class: 'small muted engine-note'});
   const engine = createEngine(engineCanvas);
+  applyEngineSupport(schema);                                      // the panels' badges say what the engine does (js/engine/support.js)
   engine.setBadges(previewBadges(schema));
 
   const panels = createPanels({schema, focusPatchBox: () => { patchSection.open = true; patchBox.focus(); }});
@@ -53,7 +55,7 @@ export function createDesigner({schema, status, basket, dialog, goLibrary, onDoc
 
   // ── the side column ──
   const section = (title, body, open) => el('details', {class: 'side-section', open}, el('summary', {text: title}), body);
-  const previewSection = section('Preview', el('div', {class: 'preview-box'}, engineCanvas, engineNote), true);
+  const previewSection = section('Preview', el('div', {class: 'preview-box'}, engineCanvas, engine.ui, engineNote), true);
   const textureSection = section('Textures', textures.el, true);
   const patchSection = section('Patch from Claude', patchBox.el, false);
   const exportSection = section('Export', exportPanel.el, true);
@@ -113,18 +115,24 @@ export function createDesigner({schema, status, basket, dialog, goLibrary, onDoc
     frame = requestAnimationFrame(() => { frame = 0; renderPreview(); });
   }
 
+  function cachedUrl(slot, b64) {
+    const hit = urlCache[slot];
+    if (!b64) { if (hit) { URL.revokeObjectURL(hit.url); urlCache[slot] = null; } return null; }
+    if (hit && hit.b64 === b64) return hit.url;
+    if (hit) URL.revokeObjectURL(hit.url);
+    const url = URL.createObjectURL(blobFromB64(b64));
+    urlCache[slot] = {b64, url};
+    return url;
+  }
+
   async function renderPreview() {
     if (!doc) return;
-    if (thumbUrl) { URL.revokeObjectURL(thumbUrl); thumbUrl = null; }
-    const view = thumbnailView(doc);
-    if (view.kind === 'image') thumbUrl = URL.createObjectURL(blobFromB64(view.b64));
     const box = engineCanvas.parentElement;
-    const result = await engine.render(doc.effective('main'), {
-      width: Math.min(box.clientWidth || 360, 640), era: doc.era, name: doc.name, thumbnailUrl: thumbUrl,
+    await engine.render(doc.effective('main'), previewOpts(doc, cachedUrl, {
+      width: Math.min(box.clientWidth || 360, 640),
       dark: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches,
-      shapeInfo: (doc.textures || {}).shape, grainInfo: (doc.textures || {}).grain,
-    });
-    engineNote.textContent = `Preview engine: ${engine.name}. ${result.drew === 'thumbnail' ? 'This is the picture stored in the brush file.' : ''}`;
+    }));
+    engineNote.textContent = `Preview engine: ${engine.name}.`;
   }
 
   document.addEventListener('keydown', (event) => {
