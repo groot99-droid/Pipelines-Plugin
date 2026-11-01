@@ -121,8 +121,8 @@ Source: `DECISIONS.md`.
 Source: the nine files in `skills/`. Each was a set of instructions for an agent
 to follow. No code executed any of them.
 
-Each is now an entry under `pipelines:` in `studio/pipeline/spec.yaml`. Eight of
-the ten entries are implemented. The rest say what they need and what they carry,
+Each is now an entry under `pipelines:` in `studio/pipeline/spec.yaml`. Ten of
+the twelve entries are implemented. The other two (`ui-build`, `brush`) say what they need and what they carry,
 and do not start.
 
 | Skill | Becomes | What is kept | What is dropped | Status |

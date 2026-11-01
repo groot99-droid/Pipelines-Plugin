@@ -22,7 +22,8 @@ Where a tool's skills and agents live depends on how the tool is used:
 ```
 INDEX.md             generated index of the tools, skills and agents
 .claude/skills/      creative-writing-pipeline, chunk-tag-backfill, studio-pipeline,
-                     higgsfield-library-sync, blender-gemini, brush-library,
+                     higgsfield-library-sync, render-pipeline, sound-library,
+                     reach-research, reach-references, blender-gemini, brush-library,
                      brush-tag-backfill, brush-designer
 .claude/agents/      creative-writing-{chunk-tagger,drafter,librarian-native},
                      brush-{tagger,librarian-native}
@@ -33,7 +34,8 @@ blender-addons/      manifests/ (tools for the author's own Blender add-ons, rea
 blender-gemini/      install.py (registers the Blender MCP server with the Gemini CLI,
                      and checks the chain), tests/, README.md
 creative-writing/    the creative-writing tool
-  vault/             the Obsidian vault — 63 works, annotations, chunk tags,
+  vault/             the Obsidian vault — the 63 original certified works plus
+                     later additions (about 150 notes), annotations, chunk tags,
                      idea library, and the vault's own search tooling
   pipeline/          the checkpointed pipeline that writes into that vault
 studio/              the studio tool
@@ -88,6 +90,7 @@ teardowns/           one folder per torn-down game: profile.json, teardown.json 
 plugins/blender/     the blender plugin: .mcp.json (uvx mcp-for-blender, telemetry off, and the
                      blender-addons server in addon-tools/), skills
                      blender-{mcp,assets,polyhaven-library,addon-tools}, agent blender-scene-reviewer
+plugins/reach/       the reach plugin: reach-setup, reach-connect and a verbatim copy of the engine's agent-reach skill
 plugins/video-editor/ the video-editor plugin: bin/ve.py (launcher), src/videoeditor/ (the `ve` CLI),
                      skills video-editor and manim-video, tests/, UNVERIFIED.md
 .github/workflows/   verify.yml: CI for the whole repo (see "Working on the ui-design plugin");
@@ -213,7 +216,9 @@ the author names at a `scene-3d` intake, through `writing-museum/build/`.
   the same key rules as above apply. `studio/pipeline/bpy/assemble_plan.py` turns a layout
   into one bpy snippet per step; `bpy/assemble.py` runs them headless, and the live branch
   sends the same snippets through the Blender MCP server (they pass its safe mode).
-  `glb_inspect.py` checks a model against a budget. Tests use a fake Meshy and skip the
+  `glb_inspect.py` checks a model against a budget. `assemble-3d` accepts only `.glb`/`.gltf`, and its
+  live-branch tool names in `spec.yaml` are those of `mcp-for-blender` 2.2.6; they have not been reconciled
+  with the official `mcp__Blender__*` server (not checked in a live session), so treat them as unverified. Tests use a fake Meshy and skip the
   Blender run unless `blender` is on PATH or `ROSW_BPY_PYTHON` names a Python with `bpy`.
 - The studio makes no brush file itself. Its `brush` pipeline (not yet
   implemented) will run through `brushes/`, the brush tool at the repo root.

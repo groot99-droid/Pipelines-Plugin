@@ -7,9 +7,10 @@ Anthropic opt-in via PIPELINE_LLM_BACKEND=anthropic), and checkpoints after
 every stage by writing state + artifacts to runs/<run-id>/ and stopping.
 
 Reference material (worked examples, vault_search.py hits, and claimed-
-connection verification) is pre-condensed by librarian.py -- always
-Ollama-backed regardless of the drafting backend -- before it reaches the
-drafting prompt, to keep raw vault files out of that prompt's context.
+connection verification) is pre-condensed by librarian.py -- Ollama by
+default, or Gemini via LIBRARIAN_BACKEND=gemini_mcp, independent of the
+drafting backend -- before it reaches the drafting prompt, to keep raw vault
+files out of that prompt's context.
 
 Usage:
     python run_pipeline.py new --mode essay-self-help --idea "..." [--run-id slug] [--register R ...]
@@ -189,10 +190,28 @@ def _extract_idea_themes(idea_text: str, vault_root: Path, limit: int = 3) -> li
     closed vocabulary -- never a raw, unmapped phrase -- so every value this
     feeds to vault_integration.search_by_tag() is guaranteed to be a real,
     queryable tag rather than one that silently matches nothing."""
-    m = re.search(r"candidate themes[:\s]*(.+)", idea_text, re.IGNORECASE)
+    # Themes come inline ("Candidate themes: a, b") or as a bulleted/numbered
+    # list under the label; take the label's line plus any list lines after it,
+    # stopping at a blank line or the next heading.
+    m = re.search(r"candidate themes\W*(.*)", idea_text, re.IGNORECASE)
     if not m:
         return []
-    raw = re.split(r"[,\n]", m.group(1))[:limit * 3]
+    lines = [m.group(1)]
+    rest = idea_text[m.end():].split("\n")
+    for line in rest[1:]:
+        if not line.strip():
+            if any(l.strip() for l in lines):
+                break
+            continue
+        if re.match(r"\s*(?:[-*+]|\d+[.)])\s+", line):
+            lines.append(line)
+        else:
+            break
+    raw = []
+    for line in lines:
+        line = re.sub(r"^\s*(?:[-*+]|\d+[.)])\s+", "", line)
+        raw += re.split(r"[,;]", line)
+    raw = [r for r in raw if r.strip()][:limit * 3]
     # Small stopword set so common conjunctions (esp. "and", which appears
     # literally inside several hyphenated vocab tags like
     # memory-and-forgetting) don't create spurious token-overlap matches.
@@ -473,8 +492,13 @@ def handle_vault_integration(run_id, spec, mode, vault_root, confirm: bool, regi
     meta_result = draft(meta_prompt)
     m = _INTEGRATION_JSON_RE.search(meta_result)
     if not m:
-        raise SystemExit("Could not extract metadata JSON from the model response:\n" + meta_result)
-    meta = json.loads(m.group(1))
+        raise llm.LLMError("Could not extract metadata JSON from the model response:\n" + meta_result)
+    try:
+        meta = json.loads(m.group(1))
+    except json.JSONDecodeError as exc:
+        raise llm.LLMError(f"The model's metadata block is not valid JSON ({exc}):\n{m.group(1)}") from exc
+    if not isinstance(meta, dict) or not str(meta.get("title", "")).strip():
+        raise llm.LLMError("The model's metadata JSON has no \"title\"; retry the stage.")
 
     title = meta["title"]
     tags = [f"type/{file_type}", f"mode/{mode}"]
