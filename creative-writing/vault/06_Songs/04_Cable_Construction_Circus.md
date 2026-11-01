@@ -8,6 +8,7 @@ pov: first-person
 tense: present
 themes: [blue-collar-labor, workplace-chaos, camaraderie, dark-humor]
 archetypes: [the-slacker, the-unsung-workhorse]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "2974–3075"
 attachments: []

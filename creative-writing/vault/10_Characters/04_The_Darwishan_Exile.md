@@ -8,6 +8,7 @@ pov: third-omniscient
 tense: mixed
 themes: [exile, homeland, memory, longing]
 archetypes: [wandering-mystic-darwishan]
+origin: derived
 source_volume: The_Darwishan_Exile_Overview
 source_lines: "complete file"
 attachments: []

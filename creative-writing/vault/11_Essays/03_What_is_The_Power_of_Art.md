@@ -8,6 +8,7 @@ pov: first-person-plural
 tense: mixed
 themes: [artistic-lineage, cultural-memory, art-as-meaning, cost-of-forgetting-artists]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "4935–4992"
 attachments: []

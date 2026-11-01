@@ -8,6 +8,7 @@ pov: third-omniscient
 tense: mixed
 themes: [paradox, alienation, authenticity, absurdism]
 archetypes: [wandering-mystic-kafkan]
+origin: derived
 source_volume: The_Kafkan_Seer_Overview
 source_lines: "complete file"
 attachments: []

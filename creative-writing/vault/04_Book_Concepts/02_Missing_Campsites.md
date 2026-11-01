@@ -8,6 +8,7 @@ pov: mixed
 tense: present
 themes: [erasure, unreliable-reality, isolation, cosmic-dread]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "978–1019"
 attachments: []

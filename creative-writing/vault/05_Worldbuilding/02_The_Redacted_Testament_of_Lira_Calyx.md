@@ -8,6 +8,7 @@ pov: mixed
 tense: mixed
 themes: [conspiracy-and-truth, ecological-collapse, memory-and-record, scientific-hubris, incomplete-victory]
 archetypes: [found-document-testament, martyr-scientist]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "1812–2052"
 attachments: []

@@ -8,6 +8,7 @@ pov: mixed
 tense: present
 themes: [self-transformation, identity, groundedness, self-worth]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5809–5859"
 attachments: []

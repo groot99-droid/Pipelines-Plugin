@@ -8,6 +8,7 @@ pov: first-person
 tense: mixed
 themes: [childhood-trauma, family, distrust, self-protection]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5859–5913"
 attachments: []

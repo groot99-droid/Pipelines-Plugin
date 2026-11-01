@@ -8,6 +8,7 @@ pov: first-person
 tense: present
 themes: [authenticity, self-acceptance, autonomy, identity]
 archetypes: []
+origin: original
 source_volume: Master_Volume_2
 source_lines: "44–64"
 attachments: []

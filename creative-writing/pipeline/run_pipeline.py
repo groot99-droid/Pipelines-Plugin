@@ -517,6 +517,7 @@ def handle_vault_integration(run_id, spec, mode, vault_root, confirm: bool, regi
         "themes": meta.get("themes", []),
         "archetypes": meta.get("archetypes", []),
         "project": meta.get("project", ""),
+        "origin": "auto-authored",
         "source_volume": "",
         "source_lines": "",
         "attachments": [],

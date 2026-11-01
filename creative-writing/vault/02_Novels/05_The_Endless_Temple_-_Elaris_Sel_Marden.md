@@ -8,6 +8,7 @@ pov: third-limited
 tense: past
 themes: [worlds-within-books, found-purpose, coming-of-age, forbidden-knowledge]
 archetypes: [reluctant-guardian, rebellious-son, chosen-explorer]
+origin: original
 source_volume: Master_Volume_2
 source_lines: "32–44"
 attachments: []

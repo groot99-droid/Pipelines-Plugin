@@ -8,6 +8,7 @@ pov: third-omniscient
 tense: mixed
 themes: [honor, endurance, warrior-code, loyalty]
 archetypes: [stoic-warrior, raider-chieftain]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "4110–4141"
 attachments: []

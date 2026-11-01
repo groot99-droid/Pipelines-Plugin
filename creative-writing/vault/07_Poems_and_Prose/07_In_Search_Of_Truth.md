@@ -8,6 +8,7 @@ pov: first-person
 tense: present
 themes: [truth, self-deception, existentialism]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5397–5424"
 attachments: []

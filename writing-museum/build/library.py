@@ -21,7 +21,7 @@ from pathlib import Path
 import works
 
 FRONTMATTER_KEYS = ("type", "mode", "genre", "status", "pov", "tense", "themes", "archetypes",
-                    "source_volume", "source_lines")
+                    "origin", "source_volume", "source_lines")
 NOTE_DIR = "studio/vault/writing-museum/3d"
 
 INDEX_LINE_RE = re.compile(r"^\s*[-*]\s+\[\[([^\]|]+)(?:\|[^\]]*)?\]\]\s*[—–-]+\s*(.*)$")

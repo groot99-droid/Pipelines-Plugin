@@ -8,6 +8,7 @@ pov: third-omniscient
 tense: present
 themes: [scale-and-perspective, cosmic-insignificance, meaning-in-smallness, mythic-worldview]
 archetypes: [whimsical-micro-civilization]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "1711–1811"
 attachments: []

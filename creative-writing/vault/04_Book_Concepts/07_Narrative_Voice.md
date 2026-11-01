@@ -8,6 +8,7 @@ pov: mixed
 tense: present
 themes: [reincarnation, self-observation, cyclical-life, godhood]
 archetypes: [god-observer, self-duplicate, reincarnated-soul]
+origin: original
 source_volume: Master_Volume_2
 source_lines: "68–71"
 attachments: []

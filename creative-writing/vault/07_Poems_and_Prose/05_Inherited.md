@@ -8,6 +8,7 @@ pov: first-person
 tense: mixed
 themes: [parent-relationship, generational-cycle, forgiveness, becoming-your-parents]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "3724–3793"
 attachments: []

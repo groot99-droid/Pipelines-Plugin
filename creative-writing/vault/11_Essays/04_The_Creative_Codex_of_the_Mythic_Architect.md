@@ -9,6 +9,7 @@ tense: present
 project: creative-codex
 themes: [creative-systems-theory, symbolic-taxonomy, transmedia-worldbuilding, myth-as-technology]
 archetypes: []
+origin: auto-authored
 source_volume: Master_Volume_1
 source_lines: "4992–5109"
 attachments: []

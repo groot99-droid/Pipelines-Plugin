@@ -8,6 +8,7 @@ pov: second-person
 tense: present
 themes: [impermanence, present-moment, mindfulness, memory]
 archetypes: []
+origin: original
 source_volume: Master_Volume_2
 source_lines: "91–108"
 attachments: []

@@ -9,6 +9,7 @@ tense: present
 project: Dr. Sterling Vanguard Series
 themes: [adventure, discovery, pursuit, hidden-history]
 archetypes: [adventurer-scholar, pulp-hero]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5522–5544"
 attachments: []

@@ -8,6 +8,7 @@ pov: third-limited
 tense: present
 themes: [cursed-object, inevitability, dread, cyclical-doom]
 archetypes: [cursed-object-victim, everyman]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "1049–1085"
 attachments: []

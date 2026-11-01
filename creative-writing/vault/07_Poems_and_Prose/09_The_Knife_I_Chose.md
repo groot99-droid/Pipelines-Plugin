@@ -8,6 +8,7 @@ pov: third-person
 tense: present
 themes: [betrayal, trust, cyclical-harm]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5566–5647"
 attachments: []

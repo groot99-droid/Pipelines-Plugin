@@ -9,6 +9,7 @@ tense: past
 project: wyrmreach
 themes: [memory-erasure, soul-bonded-dragons, prophecy, environmental-corruption, chosen-ones]
 archetypes: [twin-souls, chosen-one, trickster-rogue, ancient-evil]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "4198–4529"
 attachments: []

@@ -8,6 +8,7 @@ pov: third-limited
 tense: present
 themes: [dissociation, altered-reality, identity, perception]
 archetypes: [unreliable-narrator, everyman]
+origin: original
 source_volume: Master_Volume_2
 source_lines: "72–74"
 attachments: []

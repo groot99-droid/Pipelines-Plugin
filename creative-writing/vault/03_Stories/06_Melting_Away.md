@@ -8,6 +8,7 @@ pov: third-limited
 tense: past
 themes: [predatory-manipulation, hazing, social-pressure, deception]
 archetypes: [the-predator, the-naive-newcomer]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5484-5522"
 attachments: []

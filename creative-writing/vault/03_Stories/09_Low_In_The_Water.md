@@ -8,6 +8,7 @@ pov: third-omniscient
 tense: past
 themes: [atmosphere-of-dread, tonal-juxtaposition, roadside-gothic]
 archetypes: []
+origin: original
 source_volume: Master_Volume_2
 source_lines: "64-68"
 attachments: []

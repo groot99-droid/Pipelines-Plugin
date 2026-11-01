@@ -8,6 +8,7 @@ pov: second-person
 tense: present
 themes: [cycle-of-violence, retaliation, forgiveness, hope]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5779–5808"
 attachments: []

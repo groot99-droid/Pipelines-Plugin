@@ -8,6 +8,7 @@ pov: second-person
 tense: present
 themes: [self-friendship, identity-as-architecture, authenticity-vs-persona, trust-and-repair, communion]
 archetypes: [the-climber, the-pleaser]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "1–932"
 attachments: []

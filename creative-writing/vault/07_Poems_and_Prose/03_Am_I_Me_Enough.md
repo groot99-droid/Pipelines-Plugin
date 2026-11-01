@@ -8,6 +8,7 @@ pov: first-person
 tense: mixed
 themes: [self-worth, love, self-acceptance, becoming]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "3599–3702"
 attachments: []

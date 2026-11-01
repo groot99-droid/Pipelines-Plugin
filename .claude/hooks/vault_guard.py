@@ -1,6 +1,6 @@
 """PreToolUse hook: keep Write and Edit away from the vaults' protected notes.
 
-creative-writing/vault: an original work (frontmatter has `source_volume`) is the author's
+creative-writing/vault: an original work (`origin: original`, or no origin but a `source_volume`) is the author's
   certified text. Edits ask first; the author may allow grammar fixes or a change they request.
 studio/vault: notes and brand gates are written only through content_md.py and gate_md.py, so a
   Write or Edit there is refused. The vault's own CLAUDE.md, SCHEMA.md and README.md stay editable.
@@ -38,7 +38,10 @@ def is_original(path):
     if not head.startswith("---"):
         return False
     front = head.split("---", 2)[1] if head.count("---") >= 2 else head
-    return re.search(r"^source_volume:", front, re.M) is not None
+    origin = re.search(r"^origin:\s*(\S+)", front, re.M)
+    if origin:
+        return origin.group(1) == "original"
+    return re.search(r"^source_volume:", front, re.M) is not None  # no origin recorded: a master-volume work counts as original
 
 
 def main():
@@ -55,7 +58,7 @@ def main():
         decide("deny", "studio/vault notes and brand gates are written only through content_md.py "
                        "(plan, then apply --confirm) or gate_md.py. Do not use Write or Edit here.")
     elif inside(path, CW) and is_original(path):
-        decide("ask", "This is an original work (it has source_volume). It is certified verbatim: "
+        decide("ask", "This is an original work (origin: original). It is certified verbatim: "
                       "edit only what the author asked for, such as grammar fixes or a stated update.")
 
 

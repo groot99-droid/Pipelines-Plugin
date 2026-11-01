@@ -9,6 +9,7 @@ tense: present
 project: "A Journey Into (body-cosmology series)"
 themes: [coming-of-age, separation, mortality, brotherhood]
 archetypes: [the-initiate, the-elder]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "1169-1248"
 attachments: []

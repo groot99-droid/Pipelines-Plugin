@@ -8,6 +8,7 @@ pov: second-person
 tense: mixed
 themes: [growth, courage, transformation]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5425–5483"
 attachments: []

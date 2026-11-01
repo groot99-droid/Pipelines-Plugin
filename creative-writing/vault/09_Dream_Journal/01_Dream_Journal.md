@@ -8,6 +8,7 @@ pov: first-person
 tense: past
 themes: [artistic-identity, self-mythology, romantic-reckoning, anima-and-eros, death-and-transcendence]
 archetypes: [elder-artist, anima, inner-witness]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "3793–4074"
 attachments: []
