@@ -5,7 +5,7 @@
     {
       "name": "omi_physics_auto_fit",
       "description": "Auto-Fit Collision from Object: Set the collision shape dimensions from the object's bounding box. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "object.omi_physics_auto_fit",
       "params": {},
       "context": "VIEW_3D"
@@ -13,7 +13,7 @@
     {
       "name": "omi_physics_bake_scale",
       "description": "Bake Scale into Shape: Multiply the collision shape's size/radius/height by the object's local scale, then reset the object's scale to (1, 1, 1). This prevents Godot's non-uniform-scale warning on the imported CollisionShape3D. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "object.omi_physics_bake_scale",
       "params": {},
       "context": "VIEW_3D"
@@ -21,7 +21,7 @@
     {
       "name": "omi_physics_validate_scene",
       "description": "Validate All Collision Objects: Scan all collision-enabled objects in the scene and report any with non-uniform local or world scale (Godot will warn about them). Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "object.omi_physics_validate_scene",
       "params": {},
       "context": "VIEW_3D"
@@ -29,7 +29,7 @@
     {
       "name": "omi_physics_reset_defaults",
       "description": "Reset Shape to Defaults: Reset the collision shape's dimensions to sane defaults (box=1,1,1; sphere=0.5; cylinder=0.5/1.0; capsule=0.5/1.0). Useful after editing the object's mesh if you don't want to re-run Auto-Fit. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "object.omi_physics_reset_defaults",
       "params": {},
       "context": "VIEW_3D"

@@ -4,7 +4,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "gemini-mcp-tool"
+        "gemini-mcp-tool@1.1.4"
       ],
       "env": {
         "GEMINI_MCP_BACKEND": "gemini"

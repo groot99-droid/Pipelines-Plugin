@@ -62,8 +62,8 @@ QUESTIONS: list[Question] = [
         "grade", "Colour grade?", ["none", "warm_cinematic", "neutral_punch", "auto"], "none",
     ),
     Question(
-        "overlays", "Animated overlays (titles, diagrams, charts)?", ["none", "pil", "hyperframes", "remotion", "manim"], "none",
-        help={"pil": "simple cards/counters, no extra install", "hyperframes": "HTML/CSS/GSAP motion (needs Node 22)",
+        "overlays", "Animated overlays (titles, diagrams, charts)?", ["none", "pil", "remotion", "manim"], "none",
+        help={"pil": "simple cards/counters, no extra install",
               "remotion": "React compositions (needs Node)", "manim": "math/technical diagrams (needs LaTeX)"},
     ),
     Question(
@@ -155,7 +155,7 @@ def ask_interactive(q: Question) -> str:
 def save_brief(brief: dict, edit_dir: Path) -> Path:
     edit_dir.mkdir(parents=True, exist_ok=True)
     p = edit_dir / "brief.json"
-    p.write_text(json.dumps(brief, indent=2))
+    p.write_text(json.dumps(brief, indent=2), encoding="utf-8")
     return p
 
 
@@ -163,7 +163,7 @@ def load_brief(edit_dir: Path) -> dict:
     p = edit_dir / "brief.json"
     if not p.exists():
         raise SystemExit(f"no brief at {p}; run `ve ask` first")
-    return json.loads(p.read_text())
+    return json.loads(p.read_text(encoding="utf-8"))
 
 
 def schema() -> list[dict]:

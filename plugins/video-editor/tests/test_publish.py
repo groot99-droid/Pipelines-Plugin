@@ -150,7 +150,7 @@ class PackageAndLedger(Env):
         self.assertIsNone(ledger.find_success(self.dir, k1))                  # a failure never blocks a retry
         ledger.record(self.dir, key=k1, platform="x", mode="public", status="ok", url="https://x/1")
         self.assertEqual(ledger.find_success(self.dir, k1)["url"], "https://x/1")
-        raw = (self.dir / ledger.FILE_NAME).read_text()
+        raw = (self.dir / ledger.FILE_NAME).read_text(encoding="utf-8")
         self.assertNotIn("text", [json.loads(l).get("caption") for l in raw.splitlines()])
 
 
@@ -213,7 +213,7 @@ class Secrets(Env):
         root = Path(__file__).parents[1] / "src" / "videoeditor" / "publish"
         writers = set()
         for p in root.rglob("*.py"):
-            text = p.read_text()
+            text = p.read_text(encoding="utf-8")
             if re.search(r"write_text|write_bytes|open\([^)]*[\"'][wax]b?[\"']", text):
                 writers.add(p.name)
         self.assertEqual(writers, {"package.py", "ledger.py"})
@@ -451,7 +451,7 @@ class OAuth(Env):
 
         th = threading.Thread(target=run)
         th.start()
-        for _ in range(100):
+        for _ in range(400):
             if printed:
                 break
             time.sleep(0) if False else threading.Event().wait(0.05)
@@ -468,7 +468,7 @@ class OAuth(Env):
         self.fake([("POST", "token", Resp(200, {"access_token": "T"}))])
         th = threading.Thread(target=lambda: result.update(tok=oauth.loopback_authorize(self.cfg(), timeout=10, say=printed.append)))
         th.start()
-        for _ in range(100):
+        for _ in range(400):
             if printed:
                 break
             threading.Event().wait(0.05)
@@ -495,7 +495,7 @@ class OAuth(Env):
 
         th = threading.Thread(target=run)
         th.start()
-        for _ in range(100):
+        for _ in range(400):
             if printed:
                 break
             threading.Event().wait(0.05)

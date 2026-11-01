@@ -35,6 +35,9 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 SERVER = "blender"
 PACKAGE = "mcp-for-blender"
+# The version the docs and the plugin's tool names were checked against; bump with them (a test compares).
+PACKAGE_VERSION = "2.2.6"
+PACKAGE_SPEC = f"{PACKAGE}=={PACKAGE_VERSION}"
 DEFAULT_HOST, DEFAULT_PORT = "localhost", 9876
 
 # Tool names as the package registers them (blender_mcp/server.py, v2.1.9). The read-only
@@ -73,7 +76,7 @@ def server_entry(profile="readonly", trust=False, safe_mode=True):
     env = {"BLENDER_MCP_DISABLE_TELEMETRY": "1"}
     if safe_mode:
         env["BLENDER_MCP_SAFE_MODE"] = "1"
-    entry = {"command": "uvx", "args": [PACKAGE], "env": env, "timeout": 120000}
+    entry = {"command": "uvx", "args": [PACKAGE_SPEC], "env": env, "timeout": 120000}
     if profile == "readonly":
         entry["includeTools"] = list(READ_ONLY_TOOLS)
         entry["trust"] = True
@@ -298,8 +301,10 @@ def run_checks(path, which=shutil.which, probe=port_open, platform=sys.platform,
         entry = servers.get(SERVER)
         if entry is None:
             add("fail", "gemini config", f"no mcpServers.{SERVER} in {path}; run: python blender-gemini/install.py install")
-        elif entry.get("command") != "uvx" or entry.get("args") != [PACKAGE]:
+        elif entry.get("command") != "uvx" or entry.get("args") not in ([PACKAGE_SPEC], [PACKAGE]):
             add("fail", "gemini config", f"mcpServers.{SERVER} in {path} is not the {PACKAGE} server")
+        elif entry.get("args") == [PACKAGE]:
+            add("warn", "gemini config", f"{path}: {PACKAGE} is not pinned; run install again to pin {PACKAGE_SPEC}")
         else:
             add("ok", "gemini config", f"{path}: {describe(entry)}")
     except SettingsError as err:

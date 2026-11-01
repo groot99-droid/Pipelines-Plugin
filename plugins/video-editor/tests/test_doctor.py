@@ -5,6 +5,7 @@ import io
 import json
 import os
 import subprocess
+import tempfile
 import sys
 import unittest
 from pathlib import Path
@@ -59,7 +60,7 @@ class Doctor(unittest.TestCase):
 
 class Launcher(unittest.TestCase):
     def run_ve(self, *args):
-        return subprocess.run([sys.executable, str(ROOT / "bin" / "ve.py"), *args], capture_output=True, text=True, cwd="/")
+        return subprocess.run([sys.executable, str(ROOT / "bin" / "ve.py"), *args], capture_output=True, text=True, encoding="utf-8", cwd=Path(tempfile.gettempdir()))
 
     def test_runs_from_any_directory_without_install(self):
         r = self.run_ve("--help")
@@ -73,7 +74,8 @@ class Launcher(unittest.TestCase):
         self.assertIn("required_python", json.loads(r.stdout))
 
     def test_publish_is_reachable_through_the_launcher(self):
-        r = self.run_ve("publish", "status", "--edit-dir", "/tmp/ve-launcher-test-edit")
+        with tempfile.TemporaryDirectory() as edit_dir:
+            r = self.run_ve("publish", "status", "--edit-dir", edit_dir)
         self.assertEqual(r.returncode, 0)
         self.assertIn("configured:", r.stdout)
 

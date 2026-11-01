@@ -65,5 +65,13 @@ class ToolNames(unittest.TestCase):
         self.assertIn("${CLAUDE_PLUGIN_ROOT}/addon-tools/server.py", config["blender-addons"]["args"])
 
 
+class PinTest(unittest.TestCase):
+    def test_mcp_json_pins_the_version_the_documents_describe(self):
+        config = json.loads((ROOT / ".mcp.json").read_text(encoding="utf-8"))
+        self.assertEqual(config["mcpServers"]["blender"]["args"], [f"mcp-for-blender=={VERSION}"])
+        reference = (ROOT / "skills" / "blender-mcp" / "references" / "tools.md").read_text(encoding="utf-8")
+        self.assertIn(f"mcp-for-blender` {VERSION}", reference)
+
+
 if __name__ == "__main__":
     unittest.main()

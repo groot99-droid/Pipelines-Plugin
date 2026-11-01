@@ -32,7 +32,7 @@ def cmd_init(a) -> None:
 
 
 def cmd_prepare(a) -> None:
-    caption = a.caption if a.caption is not None else (a.caption_file.read_text() if a.caption_file else None)
+    caption = a.caption if a.caption is not None else (a.caption_file.read_text(encoding="utf-8") if a.caption_file else None)
     if caption is None:
         raise PublishError("give --caption or --caption-file")
     overrides: dict = {}

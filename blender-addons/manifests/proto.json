@@ -5,7 +5,7 @@
     {
       "name": "proto_batch_export",
       "description": "Batch Export: Export currently-selected Export Items. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "prototools.batch_export",
       "params": {},
       "context": "VIEW_3D"
@@ -13,7 +13,7 @@
     {
       "name": "proto_quick_export_mesh",
       "description": "Quick Export Mesh: Export selected meshes (and up to 1 Armature) as an FBX mesh.\n\nMust include an Armature in order for this mesh to be animated. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "prototools.quick_export_mesh",
       "params": {
         "batch_export_item_index": {
@@ -26,7 +26,7 @@
     {
       "name": "proto_quick_export_mesh_and_animations",
       "description": "Quick Export Mesh and Animations: Export selected meshes (and up to 1 Armature) as an FBX mesh, with all of its animations (if any)\n\nMust include an Armature in order for this mesh to be animated. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "prototools.quick_export_mesh_and_animations",
       "params": {
         "batch_export_item_index": {
@@ -39,7 +39,7 @@
     {
       "name": "proto_quick_export_allactions",
       "description": "Quick Export All Actions: Export all Actions on selected Armature as FBX animations.\nDo not select the bound Mesh, unless the Mesh has Shape Key animation. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "prototools.quick_export_allactions",
       "params": {
         "batch_export_item_index": {
@@ -52,7 +52,7 @@
     {
       "name": "proto_quick_export_curaction",
       "description": "Quick Export Current Action: Export current Action on selected Armature as an FBX animation.\nDo not select the bound Mesh, unless the Mesh has Shape Key animation\nNOTE: will export the Action's frame range, not the current Timeline. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "prototools.quick_export_curaction",
       "params": {
         "batch_export_item_index": {
@@ -65,7 +65,7 @@
     {
       "name": "proto_apply_all_modifiers_keep_shape_keys",
       "description": "Apply All Modifiers: Apply all Modifiers on the active Mesh, while preserving Shape Keys\n* By default, Armature Modifiers will be skipped\n\nEXPERIMENTAL: this is complicated and may have cases that do not work. Please report bugs with this option if you experience them. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "prototools.apply_all_modifiers_keep_shape_keys",
       "params": {
         "apply_mode": {
@@ -89,7 +89,7 @@
     {
       "name": "proto_apply_active_modifier_keep_shape_keys",
       "description": "Apply Active Modifier: Apply the active Modifier on the active Mesh, while preserving Shape Keys\n* Use the object's Modifiers panel to select the active Modifier\n\nEXPERIMENTAL: this is complicated and may have cases that do not work. Please report bugs with this option if you experience them. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "prototools.apply_active_modifier_keep_shape_keys",
       "params": {},
       "context": "VIEW_3D"
@@ -97,7 +97,7 @@
     {
       "name": "proto_vertex_group_to_vertex_color",
       "description": "Vertex Group To Vertex Color): Copy the weight of the current Vertex Group into the given channel of the current Vertex Color Attribute. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "prototools.vertex_group_to_vertex_color",
       "params": {
         "channel": {
@@ -129,7 +129,7 @@
     {
       "name": "proto_fill_vertex_color",
       "description": "Fill Vertex Color: Set the given channel of the current Vertex Color Attribute to the given weight. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "prototools.fill_vertex_color",
       "params": {
         "channel": {
@@ -163,7 +163,7 @@
     {
       "name": "proto_timelinetoaction",
       "description": "Set Timeline: Set the Scene Timeline to match the start and end of the current Action. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "prototools.timelinetoaction",
       "params": {},
       "context": "VIEW_3D"

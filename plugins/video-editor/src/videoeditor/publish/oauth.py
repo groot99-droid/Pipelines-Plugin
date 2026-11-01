@@ -10,6 +10,7 @@ import hashlib
 import http.server
 import json
 import secrets as pysecrets
+import socketserver
 import time
 import urllib.parse
 from dataclasses import asdict, dataclass, field
@@ -95,6 +96,16 @@ def refresh(cfg: OAuthConfig, token: TokenSet) -> TokenSet:
     return new
 
 
+class _LoopbackServer(http.server.HTTPServer):
+    """HTTPServer without the `socket.getfqdn()` call in its `server_bind`: that reverse lookup can stall
+    for many seconds on macOS, and a loopback redirect has no use for the name."""
+
+    def server_bind(self):
+        socketserver.TCPServer.server_bind(self)
+        self.server_name = "127.0.0.1"
+        self.server_port = self.server_address[1]
+
+
 class _Handler(http.server.BaseHTTPRequestHandler):
     result: dict = {}
 
@@ -122,7 +133,7 @@ def loopback_authorize(cfg: OAuthConfig, *, port: int = 0, timeout: float = 300,
     state = pysecrets.token_urlsafe(24)
     verifier, challenge = pkce_pair() if cfg.pkce else (None, None)
     _Handler.result = {}
-    server = http.server.HTTPServer(("127.0.0.1", port), _Handler)
+    server = _LoopbackServer(("127.0.0.1", port), _Handler)
     redirect_uri = f"http://127.0.0.1:{server.server_address[1]}/callback"
     url = build_auth_url(cfg, redirect_uri, state, challenge)
     say(f"Open this URL in a browser and approve access:\n\n{url}\n\nWaiting for the redirect to {redirect_uri} ...")

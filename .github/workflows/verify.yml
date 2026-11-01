@@ -3,7 +3,7 @@
 #     data, contract, indexes, unit tests, the relevance gate, and a smoke test of
 #     every domain and stack), which stops at the first failure;
 #   - the creative-writing, studio, studio library, sound library, docs, blender-gemini,
-#     writing-museum, udgt and (Linux) video-editor test suites, and the writing-museum layout lint.
+#     writing-museum, udgt and video-editor test suites, and the writing-museum layout lint.
 #
 # The Windows and macOS jobs also prove the LF pin: the relevance gate fingerprints
 # raw bytes, and a Windows runner checks files out with CRLF unless .gitattributes
@@ -63,12 +63,21 @@ jobs:
       - name: brushes tests
         run: python -m unittest discover -s brushes/pipeline/tests
       # ffmpeg (with libass) and a few packages are all the video-editor tests need; the optional
-      # backends are faked. Linux only until it is known green on the other runners.
-      - name: video-editor tests
+      # backends are faked. Windows and macOS were added with the utf-8 / fontconfig fixes and have
+      # not been seen green yet: read the first run of each.
+      - name: install ffmpeg (Linux)
         if: runner.os == 'Linux'
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg
+      - name: install ffmpeg (macOS)
+        if: runner.os == 'macOS'
+        run: brew install ffmpeg
+      - name: install ffmpeg (Windows)
+        if: runner.os == 'Windows'
+        run: choco install ffmpeg --no-progress -y
+      - name: video-editor tests
+        run: |
           python -m pip install numpy pillow requests
           python -m unittest discover -s plugins/video-editor/tests
       # Upstream tests Linux and Windows only; macOS is added once it is known green.

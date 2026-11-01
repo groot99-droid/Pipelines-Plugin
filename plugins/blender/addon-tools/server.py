@@ -123,7 +123,7 @@ def load_manifest(path):
         for pname, spec in params.items():
             check_param(name, pname, spec)
         checked.append({**tool, "params": params, "addon": doc["addon"],
-                        "enabled": tool.get("enabled", True) is True,
+                        "enabled": tool.get("enabled", False) is True,
                         "read_only": tool.get("read_only", False) is True})
     return doc["addon"], checked
 

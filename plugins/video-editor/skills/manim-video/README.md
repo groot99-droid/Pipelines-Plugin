@@ -18,6 +18,17 @@ Creates 3Blue1Brown-style animated videos from text prompts. The agent handles t
 
 Python 3.10+, Manim CE (`pip install manim`), LaTeX, ffmpeg.
 
+Check what is installed (the same on Windows, macOS and Linux):
+
+```
+python -c "import manim; print(manim.__version__)"
+ffmpeg -version
+```
+
+Install what is missing with `pip install manim`; LaTeX comes from MiKTeX (Windows), MacTeX (macOS) or TeX Live
+(Linux). `scripts/setup.sh` in this folder is a bash convenience for macOS and Linux (on Windows run it under
+Git Bash or WSL, or use the commands above):
+
 ```bash
-bash skills/creative/manim-video/scripts/setup.sh
+bash scripts/setup.sh
 ```

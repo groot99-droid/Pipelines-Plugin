@@ -27,6 +27,11 @@ class RecipeSelection(unittest.TestCase):
         self.assertEqual((b["recipe"], b["addons"]), ("long_form", ["explainer"]))
         self.assertEqual(brief(goal="single_edit")["addons"], [])
 
+    def test_overlay_engines_offered_are_ones_the_cli_accepts(self):
+        (q,) = [q for q in Q.QUESTIONS if q.key == "overlays"]
+        self.assertEqual(q.choices, ["none", "pil", "remotion", "manim"])
+        self.assertNotIn("hyperframes", q.help)
+
     def test_every_recipe_has_playbook_and_steps(self):
         for name in ("highlight_clips", "long_form", "action_montage", "explainer"):
             r = recipes.get(name)
@@ -72,7 +77,7 @@ class CliSmoke(unittest.TestCase):
             edit = Path(td) / "edit"
             ve(["ask", "/nonexistent/a.mp4", "--defaults", "--edit-dir", str(edit),
                 "--answers", json.dumps({"goal": "highlights", "deliverable": "vertical", "captions": "opus"})])
-            saved = json.loads((edit / "brief.json").read_text())
+            saved = json.loads((edit / "brief.json").read_text(encoding="utf-8"))
             self.assertEqual(saved["recipe"], "highlight_clips")
             ve(["plan", "--edit-dir", str(edit)])
 

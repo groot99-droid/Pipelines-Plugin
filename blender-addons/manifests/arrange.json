@@ -5,7 +5,7 @@
     {
       "name": "arrange_apply",
       "description": "Apply Arrangement. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "object.easy_arrangement_apply",
       "params": {},
       "context": "VIEW_3D"
@@ -13,7 +13,7 @@
     {
       "name": "arrange_reset",
       "description": "Reset Arrangement. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "object.easy_arrangement_reset",
       "params": {},
       "context": "VIEW_3D"
