@@ -34,6 +34,11 @@
       "name": "video-editor",
       "source": "./plugins/video-editor",
       "description": "Edit video by conversation: a questionnaire picks one recipe (highlight clips, long-form edit, action montage, animated overlays); local Whisper, speaker-aware reframing, captions, stems; and a dry-run, private-by-default publisher built on official platform APIs only."
+    },
+    {
+      "name": "graphic-design",
+      "source": "./plugins/graphic-design",
+      "description": "Graphic design for print and screen: a searchable catalog of print specs, print colour rules, social sizes, identity rules and grids; SVG mark authoring with a delivery linter; a print preflight check; a render helper; and a router for which app or provider does which job."
     }
   ]
 }

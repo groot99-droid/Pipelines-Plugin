@@ -91,6 +91,9 @@ plugins/blender/     the blender plugin: .mcp.json (uvx mcp-for-blender, telemet
                      blender-addons server in addon-tools/), skills
                      blender-{mcp,assets,polyhaven-library,addon-tools}, agent blender-scene-reviewer
 plugins/reach/       the reach plugin: reach-setup, reach-connect and a verbatim copy of the engine's agent-reach skill
+plugins/graphic-design/ the graphic-design plugin: catalog/ (CSV tables, search.py, preflight.py, svg_lint.py, render.py,
+                     _build_data.py, tests/), skills graphic-design-catalog, vector-mark, print-preflight, tool-router,
+                     agents print-preflight-reviewer and brand-consistency-reviewer
 plugins/video-editor/ the video-editor plugin: bin/ve.py (launcher), src/videoeditor/ (the `ve` CLI),
                      skills video-editor and manim-video, tests/, UNVERIFIED.md
 .github/workflows/   verify.yml: CI for the whole repo (see "Working on the ui-design plugin");
@@ -314,6 +317,22 @@ against `server.py` of the version you document, and update `SERVER_TOOLS` in
   Change a tool through `CURATED`, `NAMES` or `OVERRIDES` in that script and rebuild, not by editing
   the JSON. Nothing in the plugin may name this folder. Tests:
   `python -m unittest discover -s blender-addons/tests`.
+
+## Working on the graphic-design plugin
+
+`plugins/graphic-design/` is a plugin like ui-design: paths in its skills and agents start from `${CLAUDE_PLUGIN_ROOT}`, and
+nothing in it (the README aside, which says where to install from) names this repo or `.claude/`; its tests check that.
+
+- The CSVs under `catalog/data/` are generated. Change a row in `catalog/scripts/_build_data.py`, run it, commit both; a test
+  fails if they drift. Rows are typical industry figures, not a printer's or a platform's word: never present one as certain.
+- `preflight.py` reads a JSON description of a layout, never the artwork. A missing key is "not checked", never a pass, and
+  nothing may say "print-ready".
+- `render.py` opens only the local file it is given and blocks every network request. It needs Playwright, which is optional;
+  without it the script exits 3 with the install line.
+- Rows marked "Unverified" in `tools.csv` are proposals under the blender-addons rule: nothing installs, configures or calls one
+  unasked, and the author enables it.
+- The plugin never writes a brand file or gate. The studio consumes it read-only, like ui-design.
+- Tests: `python -m unittest discover -s plugins/graphic-design/catalog/tests`.
 
 ## Working on the udgt plugin and the teardowns
 

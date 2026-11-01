@@ -1,0 +1,21 @@
+ID,Name,Trim,Bleed,Safe margin,Resolution,Colour,Keywords,Notes
+a0,A0 poster,841 x 1189 mm,3 mm (5 mm large format),10 mm,100-150 ppi at final size,CMYK or RGB per printer,poster large format wall plan architectural,Large-format printers usually take lower ppi; ask the printer.
+a1,A1 poster,594 x 841 mm,3 mm,10 mm,150 ppi at final size,CMYK,poster event wall,Typical event poster.
+a2,A2 poster,420 x 594 mm,3 mm,8 mm,200-300 ppi at final size,CMYK,poster print wall,Common for posters and prints.
+a3,A3 flyer or poster,297 x 420 mm,3 mm,6 mm,300 ppi at final size,CMYK,flyer poster print magazine spread,Also the trim of an A4 spread.
+a4,A4 document or flyer,210 x 297 mm,3 mm,5 mm,300 ppi at final size,CMYK,flyer letter brochure document print,Default office and flyer size outside North America.
+a5,A5 flyer or leaflet,148 x 210 mm,3 mm,5 mm,300 ppi at final size,CMYK,flyer leaflet postcard handout,Half of A4.
+a6,A6 postcard,105 x 148 mm,3 mm,4 mm,300 ppi at final size,CMYK,postcard invitation card,Quarter of A4.
+dl,DL flyer or rack card,99 x 210 mm,3 mm,5 mm,300 ppi at final size,CMYK,dl flyer leaflet rack card tri-fold,One third of an A4 sheet; common tri-fold panel.
+us-letter,US Letter,8.5 x 11 in,0.125 in,0.25 in,300 ppi at final size,CMYK,letter flyer document print us,Default office size in North America.
+us-legal,US Legal,8.5 x 14 in,0.125 in,0.25 in,300 ppi at final size,CMYK,legal document print us,Legal documents.
+us-tabloid,US Tabloid or Ledger,11 x 17 in,0.125 in,0.25 in,300 ppi at final size,CMYK,tabloid ledger poster spread us,Two US Letter pages side by side.
+us-poster-18x24,US poster 18 x 24 in,18 x 24 in,0.125 in,0.5 in,200-300 ppi at final size,CMYK,poster us print wall,Common US poster size.
+us-poster-24x36,US poster 24 x 36 in,24 x 36 in,0.125 in,0.5 in,150-200 ppi at final size,CMYK,poster us print wall movie,Common US one-sheet and wall poster size.
+business-card-us,Business card (US),3.5 x 2 in,0.125 in,0.125 in,300-600 ppi at final size,CMYK,business card us small,Keep text 0.125 in inside the trim.
+business-card-eu,Business card (EU),85 x 55 mm,3 mm,3 mm,300-600 ppi at final size,CMYK,business card eu small,Common European size.
+postcard-us,Postcard (US),6 x 4 in,0.125 in,0.25 in,300 ppi at final size,CMYK,postcard mail us,Leave the address area clear if it will be mailed.
+book-trade,Trade paperback cover,5.5 x 8.5 in,0.125 in,0.25 in,300 ppi at final size,CMYK,book cover paperback spine,Spine width depends on page count and paper; get it from the printer.
+brochure-trifold,Tri-fold brochure (letter),11 x 8.5 in flat,0.125 in,0.25 in per panel,300 ppi at final size,CMYK,brochure trifold folded panel,The folded-in panel is usually 1/16 in narrower.
+banner-rollup,Roll-up banner,850 x 2000 mm,10 mm,50 mm,100-150 ppi at final size,CMYK,banner rollup stand event,Keep key content well above the floor end.
+sticker-die,Die-cut sticker,per shape,1.5-3 mm,3 mm inside the cut line,300 ppi at final size,CMYK,sticker die cut vinyl,Supply a separate cut path as a named spot colour or its own layer.

@@ -1,0 +1,24 @@
+ID,Job,Route,Provider,How,Needs,Status
+svg-author,"Write a logo, icon or pattern as SVG",Claude-native,Claude,"Write the SVG, check it with svg_lint.py, shrink it with svgo",Nothing external,Ready
+html-poster,Poster or layout from HTML and CSS to PNG or PDF,Claude-native,Headless Chromium,render.py,Python playwright and Chromium,Ready if installed
+raster-generate,New raster image from a prompt,Provider,"Higgsfield, Adobe Firefly, Canva generate-image, Figma generate_image",The studio's still-image pipeline or the provider's tool,Provider account,Ready where connected
+bg-remove,Remove a background,Provider or local,"Adobe image_remove_background, Canva remove-background, rembg",Provider tool or CLI,Provider account or rembg,Ready where connected
+vectorize,Raster to vector,Provider or local,"Adobe image_vectorize, vtracer, potrace",Provider tool or CLI,Provider account or the CLI,Ready where connected
+upscale,Upscale an image,Provider or local,"Higgsfield upscale_image, Upscayl, Real-ESRGAN",Provider tool or CLI,Provider account or a GPU,Gate by compute class
+batch-resize,Resize or convert many files,Local,"ImageMagick, vips",CLI,The tool installed,Ready if installed
+svg-optimise,Shrink an SVG,Local,svgo,CLI,Node,Ready if installed
+font-subset,Subset or inspect a font,Local,fonttools (pyftsubset),CLI,Python package,Ready if installed
+adobe-cloud,"Edit, resize or lay out through Adobe Express",Provider,Adobe for Creativity MCP and its adobe-* skills,The provider's skills,Adobe sign-in,Ready where connected
+adobe-desktop,"Photoshop, Illustrator, InDesign or Premiere on the desktop",Community MCP,"adb-mcp, adobe-mcp, illustrator-mcp-server",Draft a setup; the author enables it,The app and the server,Unverified
+idml,Round-trip a layout to InDesign,Provider,Adobe export_idml and convert_pdf_to_indd,The provider's tools,Adobe sign-in,Ready where connected
+affinity,"Vector, raster and layout in Affinity",Local MCP,Affinity MCP execute_script and render_spread,Direct,Affinity installed and the server connected,Ready where connected
+inkscape,"SVG cleanup, text to path, PDF or EPS export",Local,Inkscape command line,CLI,Inkscape installed,Ready if installed
+gimp,Raster batch edits,Local,GIMP 3 Script-Fu or a community MCP,CLI,GIMP installed,Unverified for MCP
+krita,Painting and brushes,Local,Krita and a community MCP,Direct,Krita installed,Unverified
+penpot,Open-source interface and graphic design,MCP,Penpot MCP,Direct,A Penpot account or install,Unverified
+figma,Design files and diagrams in Figma,MCP,Figma MCP,The figma skills,Figma sign-in,Ready where connected
+canva,"Design from templates, resize, brand check",MCP,Canva MCP and its skills,The canva skills,Canva sign-in,Ready where connected
+scribus,"Print-ready desktop publishing, PDF/X",Local,"Scribus Python scripter, headless",CLI,Scribus installed,Ready if installed
+blender-3d,3D render for a hero image,Local MCP,Blender MCP,The blender plugin,Blender running,Ready where connected
+lottie,Light web motion,Local,Lottie JSON or Rive,Author in code or an editor,Nothing,Ready
+print-check,Check a layout before it goes to print,Local,preflight.py in this plugin,Skill print-preflight,A JSON description of the file,Ready
