@@ -1,6 +1,7 @@
 ---
 name: udgt-chapter-analyst
 description: Drafts ONE chapter of a UDGT game teardown from the node ids, game files and owner's answers the caller gives it, in the Describe / Compare / Critique shape, citing teardown nodes as [[id]] and game files as path:line. Read-only; returns the chapter as Markdown and writes no file. Use from the udgt-teardown skill for a wide stage; never for recording answers or building the page.
+model: sonnet
 tools: Read, Grep, Glob
 ---
 You draft one chapter of a game teardown. The caller gives you the stage title, the teardown folder,

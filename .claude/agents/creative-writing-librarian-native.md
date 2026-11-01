@@ -1,6 +1,7 @@
 ---
 name: creative-writing-librarian-native
 description: Native (Claude-only, no-Ollama) equivalent of creative-writing/pipeline/librarian.py's condense_file/digest_files for the creative-writing-pipeline skill. Reads exactly the vault files it's given and returns a condensed Markdown digest per file, in the SAME format librarian.py produces, so the caller's downstream handling (treating a "[UNVERIFIED]"-flagged line as non-citable) works identically regardless of which path produced the digest. Use this instead of shelling out to librarian.py for the skill's reference_pull and self_revision stages -- it needs no Ollama server and doesn't pay CPU-only local-inference latency, since Claude does the reading and condensing directly. Not used by the standalone script (run_pipeline.py), which has no live subagent to call and keeps using librarian.py/Ollama.
+model: haiku
 tools: Read, Grep, Glob
 ---
 

@@ -41,7 +41,7 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | [blender-assets](plugins/blender/skills/blender-assets/SKILL.md) | Choose and bring in 3D assets for a Blender scene through the MCP for Blender integrations -- Poly Haven models, textures and HDRIs, Sketchfab, Poly Pizza low-poly models, and AI generation with Tripo, Hunyuan3D, Hyper3D Rodin or Meshy -- then scale, place and credit them. |
 | [blender-mcp](plugins/blender/skills/blender-mcp/SKILL.md) | Drive a live Blender session from Claude through the MCP for Blender server -- connect, inspect the scene, build or change objects, materials and lighting with bpy, and verify every step by looking at it. |
 | [blender-polyhaven-library](plugins/blender/skills/blender-polyhaven-library/SKILL.md) | Guide for using the Poly Haven Assets add-on in Blender, which mirrors polyhaven.com HDRIs, materials and models into the Asset Browser as a local asset library -- first-time setup, catalogs, downloading, resolution and LOD switching, displacement and texture scale, and script... |
-| [agent-reach](plugins/reach/skills/agent-reach/SKILL.md) | MUST USE when user wants to research/search/look up/find anything on the internet — e.g. |
+| [agent-reach](plugins/reach/skills/agent-reach/SKILL.md) | Use when the user wants to read or search a specific internet platform that plain web search and page fetch cannot reach well: Twitter/X, Reddit, Facebook, Instagram, YouTube (video info and subtitles), GitHub, Bilibili, XiaoHongShu, Xiaoyuzhou Podcast, LinkedIn/jobs, V2EX, Xu... |
 | [reach-connect](plugins/reach/skills/reach-connect/SKILL.md) | Connect Agent Reach to another skill so it can read the internet - add a checked "Reach" block and a metadata.reach channel list to an existing skill, or start a new toolset skill from a template. |
 | [reach-setup](plugins/reach/skills/reach-setup/SKILL.md) | Check whether Agent Reach is installed and healthy, show which internet platforms are reachable, and explain exactly what each missing one needs. |
 | [udgt-consult](plugins/udgt/skills/udgt-consult/SKILL.md) | Look things up in an existing UDGT teardown of a game while working on that game - why a decision was made, what a section of the design doc says, which data records and code a mechanic touches, what the owner said in a brief, what is planned next. |
@@ -53,7 +53,7 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | [manim-video](plugins/video-editor/skills/manim-video/SKILL.md) | Production pipeline for mathematical and technical animations using Manim Community Edition. |
 | [video-editor](plugins/video-editor/skills/video-editor/SKILL.md) | Edit video by conversation, with local tools. |
 
-## Agents (10)
+## Agents (12)
 
 | Agent | What it does |
 |---|---|
@@ -64,7 +64,9 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | [creative-writing-librarian-native](.claude/agents/creative-writing-librarian-native.md) | Native (Claude-only, no-Ollama) equivalent of creative-writing/pipeline/librarian.py's condense_file/digest_files for the creative-writing-pipeline skill. |
 | [blender-scene-reviewer](plugins/blender/agents/blender-scene-reviewer.md) | Reviews the current Blender scene through the MCP for Blender connection and reports problems -- clipping, floating objects, wrong scale, missing materials, flat or blown-out lighting -- without changing anything. |
 | [udgt-chapter-analyst](plugins/udgt/agents/udgt-chapter-analyst.md) | Drafts ONE chapter of a UDGT game teardown from the node ids, game files and owner's answers the caller gives it, in the Describe / Compare / Critique shape, citing teardown nodes as [[id]] and game files as path:line. |
+| [udgt-citation-checker](plugins/udgt/agents/udgt-citation-checker.md) | Fact-checks the citations in ONE UDGT teardown chapter -- every [[node-id]] against teardown.json, every path:line against the game checkout, and every quoted owner answer against answers.json -- and says which citations exist but do not support the sentence they sit under. |
 | [ui-design-catalog-reviewer](plugins/ui-design/agents/ui-design-catalog-reviewer.md) | Reviews one machine-generated catalog refresh diff -- Google Fonts or Phosphor icon candidates staged under the plugin's maintenance/candidates/ -- against the live rows in the plugin's catalog/data, checking license fields, required columns, and count deltas. |
 | [ui-design-page-reviewer](plugins/ui-design/agents/ui-design-page-reviewer.md) | Reviews ONE area of ONE already-built page against the ui-design rule set in the plugin's references/quick-reference.md -- a11y+touch, layout, type-color-style, or motion -- and returns findings that each cite a real rule-id with the page line as evidence. |
 | [ui-design-search-part](plugins/ui-design/agents/ui-design-search-part.md) | Runs exactly ONE part of a ui-design search manifest -- one query against one catalog domain or one stack, as emitted by the plugin's route.py -- and returns a fixed PART / QUERY / RETRIED / VERDICT / ROWS block. |
+| [video-editor-render-qa](plugins/video-editor/agents/video-editor-render-qa.md) | Checks ONE finished render against its platform target and reports pass/fail findings -- container and codec, resolution and aspect, frame rate, duration, loudness against -14 LUFS / -1 dBTP, black or frozen frames, and whether burned-in captions sit above the bottom-of-frame... |
 

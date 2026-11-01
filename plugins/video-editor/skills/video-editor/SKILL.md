@@ -1,6 +1,7 @@
 ---
 name: video-editor
 description: Edit video by conversation, with local tools. Use when the user wants to cut highlight clips from long video, make vertical 9:16 shorts, edit a talking head or interview into one polished video, cut an action or rhythm montage on impacts, add captions, a colour grade or animated overlays, or prepare and (only when they say so) publish the result. Starts with a short questionnaire so only one recipe's tools are used.
+allowed-tools: Read Grep Glob Bash(python *ve.py ask*)
 ---
 
 # video-editor

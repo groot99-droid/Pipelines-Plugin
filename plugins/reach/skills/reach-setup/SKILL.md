@@ -1,6 +1,7 @@
 ---
 name: reach-setup
 description: Check whether Agent Reach is installed and healthy, show which internet platforms are reachable, and explain exactly what each missing one needs. Use when the user wants Claude to read the web, search, YouTube, Reddit, GitHub, Bilibili or RSS and `agent-reach` is not yet set up, or when a fetch failed and the cause may be a missing tool or login. Not for fetching content itself (that is the agent-reach skill).
+allowed-tools: Read Bash(agent-reach doctor*)
 ---
 
 # Reach setup
@@ -28,6 +29,22 @@ All paths here start from `${CLAUDE_PLUGIN_ROOT}`. Reading content is the `agent
 4. **Logins are the user's.** Twitter and XiaoHongShu need a Cookie-Editor export done by the user in
    their browser; Reddit needs a logged-in session. Explain the steps from
    `${CLAUDE_PLUGIN_ROOT}/skills/agent-reach/references/`, and never attempt a login yourself.
+
+## Worked example
+
+User: "Claude can't read this YouTube link, why?"
+
+1. `agent-reach version` prints a version line, so it is installed.
+2. `agent-reach doctor --json` lists each platform with `status`, `backends` and `active_backend`.
+   Say what it showed, as a table:
+
+   | Platform | Ready | Still needs |
+   |----------|-------|-------------|
+   | youtube  | no    | `yt-dlp` is not on PATH (give the install line; wait for a yes) |
+   | rss      | yes   | nothing |
+
+3. Do not install anything. Offer `agent-reach install --env=auto --dry-run` to show what would change,
+   and once the user says yes, hand over to the `agent-reach` skill to fetch the link.
 
 ## Never
 

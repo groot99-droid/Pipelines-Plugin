@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Command `/reach-doctor`; `agent-reach` skill description narrowed so it no longer claims all web research; worked example in `reach-setup`.
+
 ## 0.2.0
 
 - Skill: reach-connect, which adds a checked Reach block and `metadata.reach` list to another skill,

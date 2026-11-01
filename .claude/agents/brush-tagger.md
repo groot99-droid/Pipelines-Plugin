@@ -1,6 +1,7 @@
 ---
 name: brush-tagger
 description: Tags ONE batch of brushes (the contact sheets that brush_tags.py plan names for one call) from the closed vocabulary in brushes/vault/_BrushTags/vocabulary.yaml on six axes (medium, mark, texture, edge, motif, use), plus a one-sentence visual description, by looking at the contact sheet PNGs, which are Procreate's own stroke thumbnails with the shape and grain tiles beside them. Invoke once per plan call with the vault-relative note path, the sheet file names and the brush ids. Returns structured per-brush text only and never writes any file -- the caller (the brush-tag-backfill skill) hands the text to brushes/vault/tools/brush_tags.py, which validates it and writes the sidecar.
+model: sonnet
 tools: Read, Grep, Glob, Bash
 ---
 

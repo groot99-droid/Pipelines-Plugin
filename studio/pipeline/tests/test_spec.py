@@ -240,7 +240,7 @@ class Spec(unittest.TestCase):
         skill = read(SKILL)
         front = studio_common.front_matter(skill)
         self.assertEqual(front["name"], "studio-pipeline")
-        self.assertEqual(set(front), {"name", "description"})
+        self.assertEqual(set(front) - {"allowed-tools"}, {"name", "description"})
         self.assertIn("studio/pipeline/spec.yaml", skill)
         self.assertIn("studio/vault/CLAUDE.md", skill)
         self.assertIn("spec.yaml wins", skill)
