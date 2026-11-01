@@ -10,6 +10,7 @@ themes: [faith, secrecy, the-roles, complicity, judgment]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/character-profile, mode/epic-fantasy, project/who-did-it, status/draft, theme/faith, theme/secrecy, theme/the-roles, theme/complicity, theme/judgment, wdi/hollowmere, wdi/people, wdi/role]
 ---
 

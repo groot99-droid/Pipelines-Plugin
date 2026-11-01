@@ -10,6 +10,7 @@ themes: [grief, family, witness, staying, the-train]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/prose-poem, mode/confessional-poetry, project/who-did-it, status/draft, theme/grief, theme/family, theme/witness, theme/staying, theme/the-train, wdi/futures, wdi/hollowmere, wdi/train, wdi/poem]
 ---
 

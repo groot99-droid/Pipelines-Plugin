@@ -10,6 +10,7 @@ themes: [complicity, class, revolution, family, guilt]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/letter, mode/confessional-poetry, project/who-did-it, status/draft, theme/complicity, theme/class, theme/revolution, theme/family, theme/guilt, wdi/port-au-levain, wdi/letters, wdi/vendetta]
 ---
 

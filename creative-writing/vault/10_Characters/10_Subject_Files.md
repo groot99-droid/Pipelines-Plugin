@@ -10,6 +10,7 @@ themes: [the-program, transformation, dehumanisation, disappearance, the-agencie
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/character-profile, mode/epic-fantasy, project/who-did-it, status/draft, theme/the-program, theme/transformation, theme/dehumanisation, theme/disappearance, theme/the-agencies, wdi/blackpine, wdi/bestiary, wdi/people]
 ---
 

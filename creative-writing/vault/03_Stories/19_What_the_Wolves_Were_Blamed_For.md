@@ -10,6 +10,7 @@ themes: [complicity, debt, guilt, the-light, the-crowd]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/complicity, theme/debt, theme/guilt, theme/the-light, theme/the-crowd, wdi/bestiary, wdi/hollowmere, wdi/story, wdi/creatures]
 ---
 

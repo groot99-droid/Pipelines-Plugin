@@ -10,6 +10,7 @@ themes: [complicity, the-train, mail, identity, death]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/horror-prose, project/who-did-it, status/draft, theme/complicity, theme/the-train, theme/mail, theme/identity, theme/death, wdi/hollowmere, wdi/document]
 ---
 

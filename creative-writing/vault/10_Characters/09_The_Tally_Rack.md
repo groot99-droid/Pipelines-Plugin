@@ -10,6 +10,7 @@ themes: [identity, the-law, counting, complicity, the-program]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/character-profile, mode/epic-fantasy, project/who-did-it, status/draft, theme/identity, theme/the-law, theme/counting, theme/complicity, theme/the-program, wdi/blackpine, wdi/people, wdi/role]
 ---
 

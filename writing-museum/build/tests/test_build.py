@@ -358,6 +358,10 @@ class RealVault(unittest.TestCase):
         self.assertTrue(all(origins), "every one of the 63 carries an origin")
         counts = {o: [m.group(1) for m in origins].count(o) for o in ("original", "derived", "auto-authored")}
         self.assertEqual(counts, {"original": 58, "derived": 4, "auto-authored": 1})
+        later = [rel for rel in rels if rel not in originals]
+        self.assertTrue(later)
+        for rel in later:
+            self.assertRegex((REAL_VAULT / rel).read_text(encoding="utf-8"), r"(?m)^origin:\s*auto-authored\s*$", rel)
         self.assertTrue(all(rel.endswith(".md") and not rel.endswith("_index.md") for rel in rels))
         scenes = build_museum.SCENES
         if scenes.is_dir():

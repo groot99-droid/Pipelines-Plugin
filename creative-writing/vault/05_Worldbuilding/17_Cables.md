@@ -10,6 +10,7 @@ themes: [bureaucracy, the-program, disappearance, complicity, the-agencies]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/bureaucracy, theme/the-program, theme/disappearance, theme/complicity, theme/the-agencies, wdi/blackpine, wdi/document, wdi/agencies]
 ---
 

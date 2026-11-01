@@ -10,6 +10,7 @@ themes: [escape, guilt, brotherhood, the-train, staying]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/song, mode/confessional-poetry, project/who-did-it, status/draft, theme/escape, theme/guilt, theme/brotherhood, theme/the-train, theme/staying, wdi/stories, wdi/hollowmere, wdi/song, wdi/train]
 ---
 

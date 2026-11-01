@@ -10,6 +10,7 @@ themes: [debt, hunger, faith, the-company, waiting]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/prose-poem, mode/confessional-poetry, project/who-did-it, status/draft, theme/debt, theme/hunger, theme/faith, theme/the-company, theme/waiting, wdi/hollowmere, wdi/world-state]
 ---
 

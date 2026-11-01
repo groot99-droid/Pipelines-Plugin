@@ -10,6 +10,7 @@ themes: [complicity, silence, the-law, labour, guilt]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/song, mode/confessional-poetry, project/who-did-it, status/draft, theme/complicity, theme/silence, theme/the-law, theme/labour, theme/guilt, wdi/blackpine, wdi/song, wdi/law]
 ---
 

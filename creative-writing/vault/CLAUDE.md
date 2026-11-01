@@ -53,7 +53,7 @@ Every work now carries YAML frontmatter above its `# Title` line:
 | `pov`, `tense` | as actually written — don't assume from mode |
 | `project` | set only when a file is explicitly part of a named series/world (e.g. `wyrmreach`, `creative-codex`) |
 | `register` | optional list (`liminal`, `psychedelic`, `cosmic`): the kind of world a *new* piece was written under. Written only when a register was used, never inferred, and it never changes `mode`. The 63 originals carry none. |
-| `origin` | who made it: `original` (the author alone, certified verbatim), `derived` (author and AI together) or `auto-authored` (made through the pipeline). Set on the 63 works that came from the master documents; new pipeline works carry `auto-authored`. A work moves category only when the author says so. |
+| `origin` | who made it: `original` (the author alone, certified verbatim), `derived` (author and AI together) or `auto-authored` (made through the pipeline). Set on every work: the 63 from the master documents as listed above, and `auto-authored` on all the later ones (and on each new pipeline work). A work moves category only when the author says so. |
 | `source_volume`, `source_lines` | provenance back to the master documents |
 | `tags` | nested `type/…`, `mode/…`, `theme/…`, `project/…`, `status/…`, `archetype/…` for the Tag pane/Graph/Bases |
 | `attachments` | reserved for future non-markdown assets; empty today |

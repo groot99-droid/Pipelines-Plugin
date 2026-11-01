@@ -10,6 +10,7 @@ themes: [grief, the-crowd, memory, the-light, naming]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/prose-poem, mode/confessional-poetry, project/who-did-it, status/draft, theme/grief, theme/the-crowd, theme/memory, theme/the-light, theme/naming, wdi/bestiary, wdi/hollowmere, wdi/abilities, wdi/poem]
 ---
 

@@ -10,6 +10,7 @@ themes: [rumour, complicity, verification, debt, the-press]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/horror-prose, project/who-did-it, status/draft, theme/rumour, theme/complicity, theme/verification, theme/debt, theme/the-press, wdi/hollowmere, wdi/document]
 ---
 

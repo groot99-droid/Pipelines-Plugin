@@ -10,6 +10,7 @@ themes: [choice, complicity, debt, grief, the-company]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/letter, mode/confessional-poetry, project/who-did-it, status/draft, theme/choice, theme/complicity, theme/debt, theme/grief, theme/the-company, wdi/hollowmere, wdi/letters, wdi/people]
 ---
 

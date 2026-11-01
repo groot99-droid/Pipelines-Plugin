@@ -10,6 +10,7 @@ themes: [power, the-company, complicity, class, counting]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/power, theme/the-company, theme/complicity, theme/class, theme/counting, wdi/futures, wdi/hollowmere, wdi/port-au-levain, wdi/blackpine, wdi/document, wdi/enforcers]
 ---
 

@@ -10,6 +10,7 @@ themes: [the-law, class, identity, counting, complicity]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/character-profile, mode/epic-fantasy, project/who-did-it, status/draft, theme/the-law, theme/class, theme/identity, theme/counting, theme/complicity, wdi/port-au-levain, wdi/people, wdi/role]
 ---
 

@@ -10,6 +10,7 @@ themes: [grief, inheritance, complicity, family, witness]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/grief, theme/inheritance, theme/complicity, theme/family, theme/witness, wdi/futures, wdi/hollowmere, wdi/story, wdi/coast]
 ---
 

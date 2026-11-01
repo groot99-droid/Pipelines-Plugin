@@ -10,6 +10,7 @@ themes: [paranoia, the-program, complicity, sleep, enlistment]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/paranoia, theme/the-program, theme/complicity, theme/sleep, theme/enlistment, wdi/blackpine, wdi/story, wdi/role]
 ---
 

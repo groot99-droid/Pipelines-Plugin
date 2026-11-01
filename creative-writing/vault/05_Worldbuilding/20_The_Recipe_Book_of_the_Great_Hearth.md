@@ -10,6 +10,7 @@ themes: [class, appetite, revolution, the-law, complicity]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/class, theme/appetite, theme/revolution, theme/the-law, theme/complicity, wdi/port-au-levain, wdi/document, wdi/objects]
 ---
 

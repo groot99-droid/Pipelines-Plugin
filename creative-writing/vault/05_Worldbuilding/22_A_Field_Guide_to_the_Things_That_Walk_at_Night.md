@@ -10,6 +10,7 @@ themes: [fear, the-light, authorship, grief, the-wild]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/fear, theme/the-light, theme/authorship, theme/grief, theme/the-wild, wdi/bestiary, wdi/hollowmere, wdi/bestiary-guide, wdi/document]
 ---
 

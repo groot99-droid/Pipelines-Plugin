@@ -10,6 +10,7 @@ themes: [class, betrayal, memory, complicity, family]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/letter, mode/confessional-poetry, project/who-did-it, status/draft, theme/class, theme/betrayal, theme/memory, theme/complicity, theme/family, wdi/stories, wdi/port-au-levain, wdi/letters, wdi/revolution]
 ---
 

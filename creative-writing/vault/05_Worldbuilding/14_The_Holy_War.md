@@ -10,6 +10,7 @@ themes: [faith, company-power, inheritance, counting, rumour]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/faith, theme/company-power, theme/inheritance, theme/counting, theme/rumour, wdi/hollowmere, wdi/chronicle, wdi/vendetta]
 ---
 

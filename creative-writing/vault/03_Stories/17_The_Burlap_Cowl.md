@@ -10,6 +10,7 @@ themes: [faith, hunger, complicity, names, revolution]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/faith, theme/hunger, theme/complicity, theme/names, theme/revolution, wdi/port-au-levain, wdi/story, wdi/vendetta]
 ---
 

@@ -10,6 +10,7 @@ themes: [death, complicity, the-company, prophecy, record-keeping]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/horror-prose, project/who-did-it, status/draft, theme/death, theme/complicity, theme/the-company, theme/prophecy, theme/record-keeping, wdi/hollowmere, wdi/register, wdi/people]
 ---
 

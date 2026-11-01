@@ -10,6 +10,7 @@ themes: [complicity, faith, labour, the-body, devotion]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/complicity, theme/faith, theme/labour, theme/the-body, theme/devotion, wdi/stories, wdi/hollowmere, wdi/story, wdi/vendetta]
 ---
 

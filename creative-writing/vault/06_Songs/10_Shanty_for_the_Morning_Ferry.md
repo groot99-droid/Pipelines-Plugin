@@ -10,6 +10,7 @@ themes: [complicity, class, guilt, revolution, song]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/song, mode/confessional-poetry, project/who-did-it, status/draft, theme/complicity, theme/class, theme/guilt, theme/revolution, theme/song, wdi/port-au-levain, wdi/song, wdi/vendetta]
 ---
 

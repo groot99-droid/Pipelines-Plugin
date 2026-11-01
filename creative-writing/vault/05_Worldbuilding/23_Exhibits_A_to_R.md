@@ -10,6 +10,7 @@ themes: [evidence, the-law, grief, complicity, memory]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/evidence, theme/the-law, theme/grief, theme/complicity, theme/memory, wdi/bestiary, wdi/hollowmere, wdi/evidence, wdi/document]
 ---
 

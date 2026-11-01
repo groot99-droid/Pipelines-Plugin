@@ -10,6 +10,7 @@ themes: [surveillance, complicity, class, the-law, mercy]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/surveillance, theme/complicity, theme/class, theme/the-law, theme/mercy, wdi/port-au-levain, wdi/places, wdi/document]
 ---
 

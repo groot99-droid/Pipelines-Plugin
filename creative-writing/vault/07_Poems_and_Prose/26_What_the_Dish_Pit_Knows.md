@@ -10,6 +10,7 @@ themes: [class, labour, revolution, complicity, names]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/prose-poem, mode/confessional-poetry, project/who-did-it, status/draft, theme/class, theme/labour, theme/revolution, theme/complicity, theme/names, wdi/port-au-levain, wdi/people, wdi/places]
 ---
 
