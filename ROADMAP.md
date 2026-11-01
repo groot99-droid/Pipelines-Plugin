@@ -208,6 +208,51 @@ A new self-contained plugin (CLAUDE.md "Adding a tool" rules, `${CLAUDE_PLUGIN_R
 
 ---
 
+## Part F — Local/cloud split (Railway) — added 2026-11-01
+
+Goal: keep the repo local-first, and host only what gains from always-on or remote access, with safety restrictions in front. Nothing here is built. Railway is a candidate host, not a decision; the split below holds for any host.
+
+### F1. Sorting rule
+Each component is sorted by three questions: does it need the author's machine (Blender, GPU, Obsidian, local files)? does it hold a secret or write something the author must approve? is it read-only and always useful?
+
+| Tier | Runs on | Components |
+|---|---|---|
+| Local-only | the author's machine | Blender and `assemble-3d`; compute gate and local renders; Obsidian vaults as the working copy; key custody (`~/.rosw/keys.env`); `ve publish` credentials; Remote Control sessions |
+| Cloud, always on, read-only | host | brushes MCP (`brushes/pipeline/mcp_server.py`); sound-library and catalog search; vault search index; reach and teardown explorers; museum and docs (may stay on GitHub Pages) |
+| Cloud, gated, writes | host, behind login | the studio hub (create and track runs); scheduled syncs (Higgsfield library, catalog refresh); webhook receivers (e.g. Meshy callbacks) |
+| Git | GitHub | source of truth for everything that is not a secret or a large binary |
+
+### F2. Principles
+- Git stays the spine. Both sides pull and push the same repo; the host is never the only copy of anything that cannot be rebuilt.
+- One codebase, two roles: a `ROSW_ROLE` setting (`local` or `cloud`) read once. In `cloud`, anything needing the local machine refuses with a clear message instead of failing midway. This is also where the safety restrictions go.
+- The cloud may propose, never approve. The hub can create and track runs, but the execute go-ahead and a consumed compute token count only when recorded from an authenticated session. Extend the existing `studio_run.py` refusals; do not replace them.
+- Keys never cross. The cloud holds only the scoped keys its own jobs need. Anything that spends money (Meshy) or publishes (`ve publish`) keeps its key local.
+- One home per kind of state: run state and ledger in git or a backed-up volume; assets in object storage; large library files stay in Releases and LFS. Nothing important lives only on an ephemeral disk.
+- Jobs queue, the laptop claims them. For local-compute work the cloud hub writes a job note; the local runner claims it when online and writes the result back. This gives start-from-phone without giving the cloud the GPU or keys.
+
+### F3. Work items
+1. `deploy/` folder: Dockerfile, host config, `ROSW_ROLE` switch. Tools stay where they are; local use unchanged.
+2. Make storage paths configurable (hub runs, `studio/assets/`, library) so they can point at a volume or bucket.
+3. Hub authentication and Origin/Host checks before anything is exposed (lane A #28 added the Host/Origin check; login is still needed).
+4. Generate permissions from the spec (item B1) so the cloud role gets a narrower tool allowlist than the local role.
+5. Job queue in `studio_run.py` plus a local runner that claims jobs.
+6. Rewrite the key rules in `CLAUDE.md` and the studio vault `CLAUDE.md` for scoped service variables in the cloud role, keeping local custody rules intact.
+7. Backups for any volume, and a documented restore.
+
+### F4. Phasing
+1. Role switch and `deploy/` folder (no change for local use).
+2. Brushes MCP and the read-only searches on the host (safest; shows whether hosting is worth it).
+3. Hub with login, then scheduled syncs.
+4. Job queue for local compute, only when starting renders remotely is wanted.
+
+### F5. Open decisions
+- May the cloud hub create runs on its own? Recommended: yes for create and track, no for anything that spends or publishes; write that line into `studio/pipeline/spec.yaml`.
+- Keep museum and docs on GitHub Pages or move them to the host?
+- Which host (Railway or other), plan and budget; private (access-controlled or VPN) first deployment recommended.
+- Where assets and run state live (volume vs bucket vs git).
+
+---
+
 ## Phasing (when work resumes)
 1. **Stabilize:** P0 items 1–5, then P1 6–13.
 2. **Truth pass:** doc drift (#14–18), decide "63 vs 138" rule, regenerate INDEX.
@@ -215,6 +260,7 @@ A new self-contained plugin (CLAUDE.md "Adding a tool" rules, `${CLAUDE_PLUGIN_R
 4. **Skills/agents:** Part C (models, allowed-tools, splits, new reviewers, commands/hooks).
 5. **Graphic design:** E1 native render helper → E4 plugin catalog → `vector-mark`, `layout-print`, `social-variants`, `brand-kit`.
 6. **New pipelines & chains:** remaining Part D.
+7. **Local/cloud split:** Part F (can start after Stabilize; F4 step 1 is independent of the others).
 
 ## Verification (for each phase when executed)
 - `python plugins/ui-design/maintenance/verify.py` (runs all gates + index check).
