@@ -10,6 +10,7 @@ themes: [complicity, debt, motherhood, the-crowd, the-law]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/complicity, theme/debt, theme/motherhood, theme/the-crowd, theme/the-law, wdi/stories, wdi/hollowmere, wdi/story, wdi/vendetta]
 ---
 

@@ -8,6 +8,7 @@ pov: first-person
 tense: present
 themes: [creative-ambition, self-worth, defiance, mortality]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "3702–3724"
 attachments: []

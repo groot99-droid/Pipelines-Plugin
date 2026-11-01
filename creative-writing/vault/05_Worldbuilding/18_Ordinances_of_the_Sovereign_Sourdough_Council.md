@@ -10,6 +10,7 @@ themes: [the-law, class, revolution, bread, identity]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/the-law, theme/class, theme/revolution, theme/bread, theme/identity, wdi/port-au-levain, wdi/document, wdi/law]
 ---
 

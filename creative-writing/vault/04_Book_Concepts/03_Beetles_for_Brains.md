@@ -8,6 +8,7 @@ pov: mixed
 tense: present
 themes: [bodily-invasion, control, paranoia, sleep-as-threat]
 archetypes: [green-recruit, unreliable-institution]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "1020–1048"
 attachments: []

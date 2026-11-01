@@ -8,6 +8,7 @@ pov: mixed
 tense: mixed
 themes: [maternal-wisdom, risk-and-ambition, fear-of-failure, collective-complacency]
 archetypes: []
+origin: original
 source_volume: Master_Volume_2
 source_lines: "116–147"
 attachments: []

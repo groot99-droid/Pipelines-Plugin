@@ -10,6 +10,7 @@ themes: [debt, objects, the-law, memory, the-company]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/character-profile, mode/epic-fantasy, project/who-did-it, status/draft, theme/debt, theme/objects, theme/the-law, theme/memory, theme/the-company, wdi/bestiary, wdi/hollowmere, wdi/objects, wdi/people]
 ---
 

@@ -5,7 +5,7 @@
     {
       "name": "optimizer_batch_optimize",
       "description": "Batch Optimize VR Assets: One-click optimization for VR - combines vertex merge, decimation, and UV unwrap. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "mesh.batch_optimize",
       "params": {
         "optimization_preset": {
@@ -75,7 +75,7 @@
     {
       "name": "optimizer_dual_uv_unwrap",
       "description": "Dual UV Unwrap (UV0 + UV1): Generate UV0 for textures and UV1 for lightmaps - optimized for Unity/Unreal Engine. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "mesh.dual_uv_unwrap",
       "params": {
         "uv0_enabled": {
@@ -177,7 +177,7 @@
     {
       "name": "optimizer_generate_lods",
       "description": "Generate LOD Groups: Create multiple LOD levels with progressive decimation for Unity/Unreal Engine. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "mesh.generate_lods",
       "params": {
         "lod_count": {
@@ -292,7 +292,7 @@
     {
       "name": "optimizer_auto_decimate",
       "description": "Auto Decimate Mesh: Apply decimate modifier with weighted normal and auto smooth for optimized CAD models. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "mesh.auto_decimate",
       "params": {
         "ratio": {
@@ -362,7 +362,7 @@
     {
       "name": "optimizer_smart_vertex_merge",
       "description": "Merge Vertices by Distance: Merge vertices by distance - essential for imported CAD models. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "mesh.smart_vertex_merge",
       "params": {
         "merge_distance": {

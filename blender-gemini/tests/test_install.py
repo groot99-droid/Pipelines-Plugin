@@ -151,7 +151,14 @@ class ProfileTest(unittest.TestCase):
 
     def test_the_server_is_the_current_package_run_by_uvx(self):
         entry = install.server_entry()
-        self.assertEqual((entry["command"], entry["args"]), ("uvx", ["mcp-for-blender"]))
+        self.assertEqual((entry["command"], entry["args"]), ("uvx", ["mcp-for-blender==2.2.6"]))
+
+    def test_the_pin_matches_the_documents_and_the_blender_plugin(self):
+        self.assertEqual(install.PACKAGE_SPEC, f"mcp-for-blender=={install.PACKAGE_VERSION}")
+        readme = (TOOL / "README.md").read_text(encoding="utf-8")
+        self.assertIn(install.PACKAGE_SPEC, readme)
+        plugin = json.loads((REPO / "plugins" / "blender" / ".mcp.json").read_text(encoding="utf-8"))
+        self.assertEqual(plugin["mcpServers"]["blender"]["args"], [install.PACKAGE_SPEC])
 
     def test_unknown_profile_is_an_error(self):
         with self.assertRaises(ValueError):
@@ -197,6 +204,12 @@ class CheckTest(unittest.TestCase):
     def test_everything_in_place_is_ready(self):
         rows = self.run_checks()
         self.assertEqual({s for s, _ in rows.values()}, {"ok"}, rows)
+
+    def test_an_unpinned_entry_from_an_older_install_warns(self):
+        install.install(self.settings, {**install.server_entry(), "args": [install.PACKAGE]})
+        status, detail = self.run_checks()["gemini config"]
+        self.assertEqual(status, "warn")
+        self.assertIn(install.PACKAGE_SPEC, detail)
 
     def test_missing_config_names_the_fix(self):
         install.uninstall(self.settings)
@@ -396,7 +409,10 @@ class RepoAgreementTest(unittest.TestCase):
     def test_mcp_json_registers_the_gemini_server_on_the_gemini_backend(self):
         config = json.loads((REPO / ".mcp.json").read_text(encoding="utf-8"))
         gemini = config["mcpServers"]["gemini"]
-        self.assertEqual(gemini["args"], ["-y", "gemini-mcp-tool"])
+        self.assertEqual(gemini["args"], ["-y", "gemini-mcp-tool@1.1.4"])
+        # The pin is the version the README says was run ("reports 1.1.4").
+        readme = (REPO / "blender-gemini" / "README.md").read_text(encoding="utf-8")
+        self.assertRegex(readme, r"gemini-mcp-tool` \(reports 1\.1\.4\)")
         self.assertEqual(gemini["env"]["GEMINI_MCP_BACKEND"], "gemini")
         # The root .mcp.json is shared: other tools (brushes/) declare their own servers there.
         self.assertEqual(list(config), ["mcpServers"])

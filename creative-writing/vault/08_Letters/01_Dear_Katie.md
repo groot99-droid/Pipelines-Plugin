@@ -8,6 +8,7 @@ pov: first-person
 tense: mixed
 themes: [amends, toxic-love, self-forgiveness, boundaries]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "2962–2974"
 attachments: []

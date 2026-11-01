@@ -8,6 +8,7 @@ pov: mixed
 tense: present
 themes: [surveillance, hidden-lives, secrecy, mosaic-narrative]
 archetypes: [unwitting-detective, hidden-watcher]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "933–977"
 attachments: []

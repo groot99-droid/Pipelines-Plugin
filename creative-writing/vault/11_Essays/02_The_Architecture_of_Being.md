@@ -8,6 +8,7 @@ pov: mixed
 tense: mixed
 themes: [duality-of-being, presence-over-time, choice-as-sovereignty, becoming-as-surrender, greatness-through-humility]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "4890–4935"
 attachments: []

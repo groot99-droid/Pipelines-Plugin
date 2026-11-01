@@ -10,6 +10,7 @@ themes: [labour, complicity, light, the-company, fear]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/labour, theme/complicity, theme/light, theme/the-company, theme/fear, wdi/futures, wdi/hollowmere, wdi/story, wdi/creatures, wdi/coast]
 ---
 

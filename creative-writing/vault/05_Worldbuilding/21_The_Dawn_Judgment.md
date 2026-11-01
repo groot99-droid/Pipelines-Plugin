@@ -10,6 +10,7 @@ themes: [complicity, the-law, revolution, class, inheritance]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/horror-prose, project/who-did-it, status/draft, theme/complicity, theme/the-law, theme/revolution, theme/class, theme/inheritance, wdi/port-au-levain, wdi/law, wdi/story]
 ---
 

@@ -10,6 +10,7 @@ themes: [lineage, bread-as-law, complicity, inheritance, death]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/lineage, theme/bread-as-law, theme/complicity, theme/inheritance, theme/death, wdi/port-au-levain, wdi/codex]
 ---
 

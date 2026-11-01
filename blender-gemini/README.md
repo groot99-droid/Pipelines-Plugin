@@ -22,7 +22,7 @@ Gemini login, so the chain only works from a local session.
 
 1. **Prerequisites on your machine.** [uv](https://docs.astral.sh/uv/) (for `uvx`), Node.js 16+
    (for `npx`), Blender 3.0+, and a working Gemini CLI login. See "Which CLI" below.
-2. **Blender add-on.** `uvx mcp-for-blender install-addon`, then in Blender: Edit → Preferences →
+2. **Blender add-on.** `uvx mcp-for-blender==2.2.6 install-addon`, then in Blender: Edit → Preferences →
    Add-ons → enable *Interface: MCP for Blender*. Press `N` in the 3D viewport, open the
    *MCP for Blender* tab, click *Start MCP Server*. (`uvx mcp-for-blender setup` also edits
    other AI clients' configs; you don't need it for this.)
@@ -103,7 +103,7 @@ On 2026-10-10, from the packages' own source and docs: the package name (`mcp-fo
 formerly `blender-mcp`, which still runs), the `BLENDER_MCP_SAFE_MODE`,
 `BLENDER_MCP_DISABLE_TELEMETRY`, `BLENDER_HOST` and `BLENDER_PORT` variables, and the
 `mcpServers` keys of the Gemini CLI settings. By starting both servers over stdio and
-listing their tools: `uvx mcp-for-blender` (server version 1.30.0) exposes
+listing their tools: `uvx mcp-for-blender` (server version 1.30.0; `install.py` now pins `mcp-for-blender==2.2.6`, the package version the tool names were checked against) exposes
 `get_addon_status`, `disable_telemetry`, `get_scene_info`, `execute_blender_code`,
 `record_trajectory_feedback`, `look`, `generate_3d`, `search_assets` and `import_asset`, so
 the names in `includeTools`/`excludeTools` are real; `npx gemini-mcp-tool` (reports 1.1.4)

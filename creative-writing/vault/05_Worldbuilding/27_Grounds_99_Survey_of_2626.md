@@ -10,6 +10,7 @@ themes: [memory, names-and-numbers, inheritance, the-wild, witness]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/memory, theme/names-and-numbers, theme/inheritance, theme/the-wild, theme/witness, wdi/futures, wdi/blackpine, wdi/places, wdi/document]
 ---
 

@@ -10,6 +10,7 @@ themes: [the-train, labour, grief, guilt, staying]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/song, mode/confessional-poetry, project/who-did-it, status/draft, theme/the-train, theme/labour, theme/grief, theme/guilt, theme/staying, wdi/hollowmere, wdi/song]
 ---
 

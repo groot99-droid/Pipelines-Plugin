@@ -8,6 +8,7 @@ pov: third-person
 tense: present
 themes: [wealth-inequality, moral-critique, futility, satire]
 archetypes: []
+origin: original
 source_volume: Master_Volume_2
 source_lines: "83–91"
 attachments: []

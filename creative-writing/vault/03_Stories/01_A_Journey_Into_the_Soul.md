@@ -9,6 +9,7 @@ tense: present
 project: "A Journey Into (body-cosmology series)"
 themes: [body-as-world, perception, light-as-witness, inner-cosmos]
 archetypes: [the-traveler, the-witness]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "1086-1168"
 attachments: []

@@ -10,6 +10,7 @@ themes: [grief, faith, lying, love, the-dead]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/prose-poem, mode/confessional-poetry, project/who-did-it, status/draft, theme/grief, theme/faith, theme/lying, theme/love, theme/the-dead, wdi/futures, wdi/hollowmere, wdi/people, wdi/poem]
 ---
 

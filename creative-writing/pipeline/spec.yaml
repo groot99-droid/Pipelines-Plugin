@@ -401,6 +401,7 @@ frontmatter_schema:
   tense: "As actually written -- don't assume from mode."
   project: "Set only when explicitly part of a named series/world -- never inferred."
   register: "Optional list of registers the piece was written under (liminal | psychedelic | cosmic). Written only when a register was used; never inferred. It does not change `mode`."
+  origin: "original | derived | auto-authored. Pipeline-generated works are always auto-authored."
   source_volume: "Provenance field. For pipeline-generated new works, leave empty (not split from a master document)."
   source_lines: "Provenance field. Leave empty for pipeline-generated new works."
   tags: "Nested type/..., mode/..., theme/..., project/..., status/..., archetype/... tags for the Tag pane/Graph/Bases."

@@ -10,6 +10,7 @@ themes: [bread-as-law, scarcity, grief, rumour, inheritance]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/prose-poem, mode/confessional-poetry, project/who-did-it, status/draft, theme/bread-as-law, theme/scarcity, theme/grief, theme/rumour, theme/inheritance, wdi/hollowmere, wdi/daybook]
 ---
 

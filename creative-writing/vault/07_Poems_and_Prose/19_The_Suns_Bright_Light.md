@@ -8,6 +8,7 @@ pov: first-person
 tense: present
 themes: [gratitude, nature, permanence, vitality]
 archetypes: []
+origin: original
 source_volume: Master_Volume_2
 source_lines: "74–83"
 attachments: []

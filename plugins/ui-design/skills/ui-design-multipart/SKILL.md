@@ -1,6 +1,7 @@
 ---
 name: ui-design-multipart
 description: Orchestrates the two multipart ui-design workflows -- a search fan-out for a wide product brief, and a four-area review of a built page -- by splitting the work with a script, giving each part to one subagent, and merging and cross-checking the answers with merge_parts.py. Use when a brief needs four or more supplemental searches, or when the user wants an existing page reviewed against the ui-design rules. Not for a single search; run that inline with the ui-design-catalog skill.
+allowed-tools: Read Grep Glob Bash(python *route.py *) Bash(python *merge_parts.py *)
 ---
 
 # ui-design multipart

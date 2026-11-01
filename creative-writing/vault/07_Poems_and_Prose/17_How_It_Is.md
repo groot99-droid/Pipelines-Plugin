@@ -8,6 +8,7 @@ pov: first-person
 tense: mixed
 themes: [poverty, inequality, indifference, wealth]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "6019–6112"
 attachments: []

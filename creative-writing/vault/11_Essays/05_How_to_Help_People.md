@@ -8,6 +8,7 @@ pov: first-person
 tense: mixed
 themes: [self-preservation-before-service, boundaries-in-compassion, martyrdom-vs-wholeness]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5287–5297"
 attachments: []

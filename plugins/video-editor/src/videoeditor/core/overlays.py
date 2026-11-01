@@ -96,7 +96,7 @@ def scaffold_remotion_slot(slot_dir: Path, spec: dict) -> Path:
     """Copy the template into slot_dir (never inside the videoeditor repo) and write overlay.json."""
     slot_dir.mkdir(parents=True, exist_ok=True)
     shutil.copytree(TEMPLATE_DIR, slot_dir, dirs_exist_ok=True, ignore=shutil.ignore_patterns("node_modules", "*.mp4", "*.webm"))
-    (slot_dir / "overlay.json").write_text(json.dumps(spec, indent=2))
+    (slot_dir / "overlay.json").write_text(json.dumps(spec, indent=2), encoding="utf-8")
     return slot_dir
 
 

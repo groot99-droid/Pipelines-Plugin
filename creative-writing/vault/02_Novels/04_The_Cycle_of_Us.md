@@ -8,6 +8,7 @@ pov: mixed
 tense: mixed
 themes: [reincarnation, soul-lineage, familial-inheritance, grief, cyclical-healing]
 archetypes: [reincarnated-soul, wounded-father, healer-descendant]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5297–5397"
 attachments: []

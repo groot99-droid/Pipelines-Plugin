@@ -10,6 +10,7 @@ themes: [childhood, knowledge, faith, the-lie-a-town-tells, complicity]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/childhood, theme/knowledge, theme/faith, theme/the-lie-a-town-tells, theme/complicity, wdi/hollowmere, wdi/story]
 ---
 

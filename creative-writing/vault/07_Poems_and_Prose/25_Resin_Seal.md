@@ -10,6 +10,7 @@ themes: [faith, naming, complicity, transformation, the-program]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/prose-poem, mode/confessional-poetry, project/who-did-it, status/draft, theme/faith, theme/naming, theme/complicity, theme/transformation, theme/the-program, wdi/blackpine, wdi/people, wdi/bestiary]
 ---
 

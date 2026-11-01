@@ -10,6 +10,7 @@ themes: [light-and-dark, company-power, rumour, the-will, labour]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/light-and-dark, theme/company-power, theme/rumour, theme/the-will, theme/labour, wdi/hollowmere, wdi/gazetteer]
 ---
 

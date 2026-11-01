@@ -10,6 +10,7 @@ themes: [the-light, loyalty, complicity, the-dark, the-company]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/the-light, theme/loyalty, theme/complicity, theme/the-dark, theme/the-company, wdi/bestiary, wdi/hollowmere, wdi/story, wdi/creatures]
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: creative-writing-drafter
 description: Generates the heavy-lift artifact for one stage of the creative-writing pipeline (outline, draft, or self-revision) from context the caller provides. Use only for these three stages -- not intake or reference_pull (data-gathering, not generation) and never for vault_integration (file-writing must stay under the top-level Claude's direct control for the approval gate). Invoke once per stage with the relevant prior-stage artifacts, the mode's rules from spec.yaml, and the stage's own instructions; it returns the finished artifact as text and touches no files.
+model: sonnet
 tools: Read, Grep, Glob, Bash
 ---
 
@@ -42,13 +43,13 @@ a tie or a quote were asserted:
   yourself rather than relying on what the caller already gave you, you
   may run
   `python creative-writing/vault/tools/vault_search.py search "<query>" --top 5 --json`
-  and `python creative-writing/pipeline/librarian.py digest <path>
-  --query "<claim>"` via Bash (from the Pipelines repo root, which is the
-  working directory; `<path>` stays vault-relative) -- the same tools the
-  top-level Claude uses for this. Do not Read a full worked-example file
-  end-to-end when a librarian digest would do; you have Read/Grep/Glob
-  for targeted lookups, not to re-read what's already been condensed for
-  you.
+  via Bash (from the Pipelines repo root, which is the working directory;
+  paths stay vault-relative). Do not run `creative-writing/pipeline/librarian.py`:
+  it calls a local Ollama server, which this skill path deliberately avoids. If
+  you need a condensed digest of a file, say so in your output and the caller
+  will get one from `creative-writing-librarian-native`; otherwise Read or Grep
+  only the lines you need. Do not Read a full worked-example file end-to-end
+  when a digest would do.
 
 ## Scope boundaries
 

@@ -10,6 +10,7 @@ themes: [childhood, death, the-town, rumour, the-train]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/poem, mode/confessional-poetry, project/who-did-it, status/draft, theme/childhood, theme/death, theme/the-town, theme/rumour, theme/the-train, wdi/hollowmere, wdi/rhyme]
 ---
 

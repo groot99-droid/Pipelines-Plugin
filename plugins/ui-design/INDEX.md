@@ -448,6 +448,8 @@ Prose read on demand; not searched.
 |---|---|
 | [references/pro-rules.md](references/pro-rules.md) | Native/mobile app polish rules and the pre-delivery checklist. |
 | [references/quick-reference.md](references/quick-reference.md) | Every rule in ten categories, by rule-id; the source the page reviewer cites. |
+| [references/refresh-commands.md](references/refresh-commands.md) | The exact fetch, generate, diff and promote commands for the catalog refresh skill. |
+| [references/search-guide.md](references/search-guide.md) | Search options for ui-design-catalog: persisting, design dials, output formats, symptom-to-rule table. |
 
 ## Also here
 

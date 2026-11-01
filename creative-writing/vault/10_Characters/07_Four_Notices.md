@@ -10,6 +10,7 @@ themes: [vendetta, the-company, rumour, complicity, faith]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/character-profile, mode/epic-fantasy, project/who-did-it, status/draft, theme/vendetta, theme/the-company, theme/rumour, theme/complicity, theme/faith, wdi/hollowmere, wdi/vendetta, wdi/document]
 ---
 

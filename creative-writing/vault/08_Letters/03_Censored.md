@@ -10,6 +10,7 @@ themes: [censorship, guilt, family, the-program, rumour]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/letter, mode/confessional-poetry, project/who-did-it, status/draft, theme/censorship, theme/guilt, theme/family, theme/the-program, theme/rumour, wdi/blackpine, wdi/letters, wdi/people]
 ---
 

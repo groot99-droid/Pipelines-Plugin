@@ -8,6 +8,7 @@ pov: mixed
 tense: present
 themes: [sensory-genesis, sound-as-creation, waking-and-dreaming, origin-myth]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "1249-1301"
 attachments: []

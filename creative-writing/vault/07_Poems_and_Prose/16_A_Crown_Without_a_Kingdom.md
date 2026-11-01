@@ -8,6 +8,7 @@ pov: mixed
 tense: present
 themes: [mortality, legacy, impermanence, ambition]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5977–6019"
 attachments: []

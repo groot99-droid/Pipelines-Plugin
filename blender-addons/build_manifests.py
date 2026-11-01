@@ -131,6 +131,10 @@ CURATED = {
  "ue_groom_importer": "import_scene.unreal_groom",
  "SuperDuperBatchExporter": "export_mesh.batch batch_export.list_add batch_export.list_add_collection batch_export.clear_list",
 }
+# Tools the author has switched on, by tool name, after calling each one in their own Blender.
+# Empty on purpose: every tool is drafted off, and a rebuild writes `enabled` from this set, so it
+# never changes a choice made here. A name that matches no tool stops the build.
+ENABLED = set()
 # Short tool-name prefixes (tool names are at most 48 characters).
 PREFIX = {"act_game_asset_creation_toolset": "act", "asset_optimizer": "optimizer", "auto_scale_fps": "fps",
  "bake_to_single_material": "bake", "cad2cube": "cad2cube", "easy_arrangement": "arrange", "easy_clouds": "clouds",
@@ -212,9 +216,10 @@ def to_rna(p):
 
 def build(zips, out):
     """Write one manifest per curated add-on into out/manifests, and out/sources.json."""
-    previous = json.loads((out / "sources.json").read_text()) if (out / "sources.json").exists() else {}
+    previous = json.loads((out / "sources.json").read_text(encoding="utf-8")) if (out / "sources.json").exists() else {}
     (out / "manifests").mkdir(parents=True, exist_ok=True)
     sources = {}
+    built = set()
     for zid, ops in CURATED.items():
         zpath = zips / f"{zid}.zip"
         z = zipfile.ZipFile(zpath)
@@ -254,17 +259,18 @@ def build(zips, out):
             if not text.endswith("."):
                 text += "."
             text += " Settings that are not parameters here come from the add-on's panel."
-            tool = {"name": name, "description": text, "enabled": True, "op": opname, "params": params}
+            tool = {"name": name, "description": text, "enabled": name in ENABLED, "op": opname, "params": params}
             octx = ctx if ctx in ("VIEW_3D", "NODE_EDITOR") else None
             if octx:
                 tool["context"] = octx
             tools.append(tool)
+            built.add(name)
             for k, s in params.items():
                 if s["type"] == "string" and "enum" not in s and k != "filepath":
                     print(f"   free text: {zid} {opname} {k}")
         m = info["manifest"]
         manifest = {"addon": f"bl_ext.blender_org.{m['id']}", "seen_version": m["version"], "tools": tools}
-        (out / "manifests" / f"{PREFIX[zid]}.json").write_text(json.dumps(manifest, indent=2) + "\n")
+        (out / "manifests" / f"{PREFIX[zid]}.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
         server.load_manifest(out / "manifests" / f"{PREFIX[zid]}.json")
         sources[m["id"]] = {"name": m["name"], "version": m["version"], "license": m["license"],
             "sha256": hashlib.sha256(zpath.read_bytes()).hexdigest(),
@@ -273,7 +279,10 @@ def build(zips, out):
             "manifest": f"{PREFIX[zid]}.json",
             "operators": sorted({o["idname"] for o in info["operators"]})}
         print(f"{zid:34} {len(tools):2} tools")
-    (out / "sources.json").write_text(json.dumps(sources, indent=1, sort_keys=True) + "\n")
+    unknown = sorted(ENABLED - built)
+    if unknown:
+        sys.exit(f"ENABLED names tools that were not built: {', '.join(unknown)}")
+    (out / "sources.json").write_text(json.dumps(sources, indent=1, sort_keys=True) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

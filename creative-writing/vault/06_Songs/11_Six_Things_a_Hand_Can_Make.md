@@ -10,6 +10,7 @@ themes: [labour, complicity, family, the-camp, naming]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/song, mode/confessional-poetry, project/who-did-it, status/draft, theme/labour, theme/complicity, theme/family, theme/the-camp, theme/naming, wdi/bestiary, wdi/blackpine, wdi/song, wdi/objects]
 ---
 

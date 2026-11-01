@@ -2,7 +2,7 @@
 
 ## Purpose & scope
 
-This file governs how Claude helps write **new** material in this vault — matching the author's voice at the sentence level and the plot/structure level, and knowing what to avoid. It does **not** license editing the 63 original works in `00_INDEX.md`: those are certified verbatim transcriptions from two master source documents. Frontmatter was added above each file's `# Title` line, but the body below it is untouched. All craft commentary lives in the separate `_Annotations/` tree, never inline in the originals.
+This file governs how Claude helps write **new** material in this vault — matching the author's voice at the sentence level and the plot/structure level, and knowing what to avoid. It does **not** license editing the works marked `origin: original` (58 of the 63 in `00_INDEX.md`): those are certified verbatim transcriptions from the master source documents. The author may allow grammar fixes, or ask for an update to a specific original; nothing else changes them. The other five of the 63 are `origin: derived` (author and AI together: the four archetype profiles in `10_Characters/02–05`) or `origin: auto-authored` (made through the pipeline: *The Creative Codex of the Mythic Architect*); those are not bound by the verbatim rule, but still are not edited unasked. Frontmatter was added above each file's `# Title` line, but the body below it is untouched. All craft commentary lives in the separate `_Annotations/` tree, never inline in the originals.
 
 ## Where this vault sits, and how to read the paths below
 
@@ -53,6 +53,7 @@ Every work now carries YAML frontmatter above its `# Title` line:
 | `pov`, `tense` | as actually written — don't assume from mode |
 | `project` | set only when a file is explicitly part of a named series/world (e.g. `wyrmreach`, `creative-codex`) |
 | `register` | optional list (`liminal`, `psychedelic`, `cosmic`): the kind of world a *new* piece was written under. Written only when a register was used, never inferred, and it never changes `mode`. The 63 originals carry none. |
+| `origin` | who made it: `original` (the author alone, certified verbatim), `derived` (author and AI together) or `auto-authored` (made through the pipeline). Set on every work: the 63 from the master documents as listed above, and `auto-authored` on all the later ones (and on each new pipeline work). A work moves category only when the author says so. |
 | `source_volume`, `source_lines` | provenance back to the master documents |
 | `tags` | nested `type/…`, `mode/…`, `theme/…`, `project/…`, `status/…`, `archetype/…` for the Tag pane/Graph/Bases |
 | `attachments` | reserved for future non-markdown assets; empty today |

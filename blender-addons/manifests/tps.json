@@ -5,21 +5,21 @@
     {
       "name": "tps_assign_textures",
       "description": "Assign Textures: Find and assign textures as single images. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "tps.run",
       "params": {}
     },
     {
       "name": "tps_convert_to_udim",
       "description": "Convert Textures to UDIM: Convert Image Texture nodes from Single Image to UDIM tiles. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "tps.convert_to_udim",
       "params": {}
     },
     {
       "name": "tps_lod_swap",
       "description": "Swap Resolution: Swap image paths to another resolution folder. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "tps.lod_swap",
       "params": {
         "resolution": {

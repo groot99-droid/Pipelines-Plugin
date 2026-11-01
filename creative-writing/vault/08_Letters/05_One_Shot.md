@@ -10,6 +10,7 @@ themes: [the-law, duty, mercy, the-crowd, last-chances]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/letter, mode/confessional-poetry, project/who-did-it, status/draft, theme/the-law, theme/duty, theme/mercy, theme/the-crowd, theme/last-chances, wdi/bestiary, wdi/hollowmere, wdi/letters, wdi/objects]
 ---
 

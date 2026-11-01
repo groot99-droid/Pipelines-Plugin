@@ -10,6 +10,7 @@ themes: [the-town, surveillance, rumour, the-company, hospitality]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/character-profile, mode/epic-fantasy, project/who-did-it, status/draft, theme/the-town, theme/surveillance, theme/rumour, theme/the-company, theme/hospitality, wdi/hollowmere, wdi/people, wdi/guide]
 ---
 

@@ -9,6 +9,7 @@ tense: mixed
 project: creative-codex
 themes: [altered-perception, ego-dissolution, archetypal-guide, self-reconstruction]
 archetypes: [the-guide, shadow-self]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "4074–4109"
 attachments: []

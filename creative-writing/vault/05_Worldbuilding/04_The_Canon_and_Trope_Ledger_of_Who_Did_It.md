@@ -10,6 +10,7 @@ themes: [canon-and-record, rumour, company-power, identity]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/canon-and-record, theme/rumour, theme/company-power, theme/identity, wdi/world, wdi/codex]
 ---
 

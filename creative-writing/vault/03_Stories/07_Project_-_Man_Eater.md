@@ -8,6 +8,7 @@ pov: third-limited
 tense: past
 themes: [body-horror, folklore-monster, institutional-control, transformation]
 archetypes: [the-monster-within, the-complicit-authority]
+origin: original
 source_volume: Master_Volume_2
 source_lines: "1-12"
 attachments: []

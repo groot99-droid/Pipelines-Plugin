@@ -8,6 +8,7 @@ pov: first-person
 tense: present
 themes: [dual-perspective, perception-gap, loneliness, small-kindness]
 archetypes: [the-observer, the-outsider]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5238-5286"
 attachments: []

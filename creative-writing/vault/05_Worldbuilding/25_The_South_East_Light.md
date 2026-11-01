@@ -10,6 +10,7 @@ themes: [witness, the-company, counting, isolation, the-train]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/witness, theme/the-company, theme/counting, theme/isolation, theme/the-train, wdi/futures, wdi/hollowmere, wdi/document, wdi/places]
 ---
 

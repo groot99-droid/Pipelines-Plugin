@@ -10,6 +10,7 @@ themes: [hunger, transformation, the-program, dignity, the-body]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/hunger, theme/transformation, theme/the-program, theme/dignity, theme/the-body, wdi/futures, wdi/blackpine, wdi/story, wdi/lab, wdi/special-ending]
 ---
 

@@ -66,7 +66,7 @@ def build(video: Path, caption: str, *, title: str | None = None, tags: list[str
 def save(pkg: PostPackage, edit_dir: Path) -> Path:
     edit_dir.mkdir(parents=True, exist_ok=True)
     p = edit_dir / FILE_NAME
-    p.write_text(json.dumps(asdict(pkg), indent=2))
+    p.write_text(json.dumps(asdict(pkg), indent=2), encoding="utf-8")
     return p
 
 
@@ -74,4 +74,4 @@ def load(edit_dir: Path) -> PostPackage:
     p = edit_dir / FILE_NAME
     if not p.exists():
         raise FileNotFoundError(f"no publishing package at {p}; run `ve publish prepare` first")
-    return PostPackage(**json.loads(p.read_text()))
+    return PostPackage(**json.loads(p.read_text(encoding="utf-8")))

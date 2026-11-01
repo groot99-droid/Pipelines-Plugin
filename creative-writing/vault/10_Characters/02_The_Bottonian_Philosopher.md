@@ -8,6 +8,7 @@ pov: third-omniscient
 tense: mixed
 themes: [emotional-fragility, melancholy, self-knowledge, love-and-suffering]
 archetypes: [wandering-mystic-bottonian]
+origin: derived
 source_volume: The_Bottonian_Philosopher_Overview
 source_lines: "complete file"
 attachments: []

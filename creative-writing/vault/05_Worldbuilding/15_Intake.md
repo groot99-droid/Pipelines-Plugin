@@ -10,6 +10,7 @@ themes: [identity, language, the-program, complicity, hunger]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/identity, theme/language, theme/the-program, theme/complicity, theme/hunger, wdi/blackpine, wdi/document, wdi/law]
 ---
 

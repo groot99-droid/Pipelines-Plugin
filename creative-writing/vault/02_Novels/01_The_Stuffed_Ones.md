@@ -8,6 +8,7 @@ pov: first-person
 tense: mixed
 themes: [body-horror, ritual-sacrifice, hospitality-inverted, loss-of-identity, cyclical-violence]
 archetypes: [monster-from-victim, keeper-crone, unwitting-guest]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "3076–3564"
 attachments: []

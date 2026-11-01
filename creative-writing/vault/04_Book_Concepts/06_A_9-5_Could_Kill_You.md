@@ -8,6 +8,7 @@ pov: third-limited
 tense: present
 themes: [isolation, mental-illness, self-duplication, recovery]
 archetypes: [incel-antihero, doppelganger, self-duplicate]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5544–5566"
 attachments: []

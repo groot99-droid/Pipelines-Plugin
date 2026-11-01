@@ -10,6 +10,7 @@ themes: [debt, courtesy, the-count, escape, being-watched]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/debt, theme/courtesy, theme/the-count, theme/escape, theme/being-watched, wdi/stories, wdi/hollowmere, wdi/story, wdi/vendetta]
 ---
 

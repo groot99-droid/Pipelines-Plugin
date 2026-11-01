@@ -10,6 +10,7 @@ themes: [the-program, complicity, drowning, faith, rumour]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/the-program, theme/complicity, theme/drowning, theme/faith, theme/rumour, wdi/blackpine, wdi/story, wdi/bestiary]
 ---
 

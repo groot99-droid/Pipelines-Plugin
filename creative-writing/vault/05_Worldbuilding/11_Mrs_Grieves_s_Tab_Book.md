@@ -10,6 +10,7 @@ themes: [debt, memory, grief, the-tavern, rumour]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/debt, theme/memory, theme/grief, theme/the-tavern, theme/rumour, wdi/hollowmere, wdi/document]
 ---
 

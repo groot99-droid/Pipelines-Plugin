@@ -9,6 +9,7 @@ tense: present
 project: wyrmreach
 themes: [memory-and-oblivion, twin-souls, cosmic-imprisonment, elemental-balance]
 archetypes: [cosmology-codex, twin-souls]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "4142–4197"
 attachments: []

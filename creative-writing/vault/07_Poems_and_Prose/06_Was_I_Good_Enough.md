@@ -8,6 +8,7 @@ pov: first-person
 tense: mixed
 themes: [self-worth, loneliness, family, self-love]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "4529–4712"
 attachments: []

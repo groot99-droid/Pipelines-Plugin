@@ -7,7 +7,7 @@ free for individuals, for-profit orgs up to 3 people and non-profits, otherwise 
 (https://www.remotion.pro/license). Check eligibility before using it commercially. For deeper Remotion work,
 the user can install Remotion's official agent skills themselves: `npx skills add remotion-dev/skills`.
 
-Pick the engine per slot: PIL (simple cards/counters), HyperFrames (HTML/CSS/GSAP motion, needs Node 22),
+Pick the engine per slot: PIL (simple cards/counters),
 Remotion (React), Manim (formal diagrams, equations, graph morphs; see skills/manim-video/SKILL.md).
 
 Get palette, font and visual language from the user; propose and confirm if they have none.

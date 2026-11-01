@@ -10,6 +10,7 @@ themes: [company-power, debt, ownership, law, succession]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/epic-fantasy, project/who-did-it, status/draft, theme/company-power, theme/debt, theme/ownership, theme/law, theme/succession, wdi/hollowmere, wdi/document]
 ---
 

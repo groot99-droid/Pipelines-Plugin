@@ -10,6 +10,7 @@ themes: [motherhood, debt, the-law, faith, escape]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/motherhood, theme/debt, theme/the-law, theme/faith, theme/escape, wdi/stories, wdi/hollowmere, wdi/story, wdi/train]
 ---
 

@@ -19,11 +19,18 @@ machine:
 token:
   file: "compute_gate.json"      # under runs_root: bookkeeping, like a run
   ttl_seconds: 1800
+  # A class may set its own ttl_seconds. A job longer than the TTL renews the
+  # token (compute_gate.py renew) after a fresh check, up to this many seconds
+  # in all since it was minted. 0 removes the cap.
+  max_seconds: 14400
 
 # Held to by every class, whatever it asks.
 every_class:
   host.kind_in: [windows, wsl, linux]
   gpu.status_in: [integrated, none]     # a discrete GPU means this is not the machine described above
+  # probe.py now finds a discrete AMD or Intel Arc adapter as well as NVIDIA, and checks every adapter,
+  # so this line also refuses those. Widen it (add `discrete`) only with the thresholds below re-set
+  # for the machine; that is the author's call.
 
 classes:
   llm_local_sm:

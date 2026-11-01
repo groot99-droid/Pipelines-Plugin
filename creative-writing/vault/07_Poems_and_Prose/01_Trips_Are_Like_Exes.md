@@ -8,6 +8,7 @@ pov: first-person
 tense: mixed
 themes: [self-discovery, impermanence, duality]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "2858–2863"
 attachments: []

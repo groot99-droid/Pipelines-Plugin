@@ -8,6 +8,7 @@ pov: third-omniscient
 tense: mixed
 themes: [love, beauty, mortality, transcendence]
 archetypes: [wandering-mystic-rossettian]
+origin: derived
 source_volume: The_Rossettian_Oracle_Overview
 source_lines: "complete file"
 attachments: []

@@ -8,6 +8,7 @@ pov: first-person
 tense: present
 themes: [grief, grandfather-relationship, legacy]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5735–5779"
 attachments: []

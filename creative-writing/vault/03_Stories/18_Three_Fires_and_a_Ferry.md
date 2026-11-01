@@ -10,6 +10,7 @@ themes: [complicity, revolution, class, the-law, apprenticeship]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/complicity, theme/revolution, theme/class, theme/the-law, theme/apprenticeship, wdi/port-au-levain, wdi/story, wdi/vendetta]
 ---
 

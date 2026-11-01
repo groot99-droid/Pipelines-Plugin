@@ -8,6 +8,7 @@ pov: first-person
 tense: mixed
 themes: [childhood-abuse, resilience, reclamation, survivorship]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5914–5977"
 attachments: []

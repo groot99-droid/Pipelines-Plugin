@@ -10,6 +10,7 @@ themes: [grief, faith, complicity, memory, the-crowd]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/prose-poem, mode/confessional-poetry, project/who-did-it, status/draft, theme/grief, theme/faith, theme/complicity, theme/memory, theme/the-crowd, wdi/stories, wdi/hollowmere, wdi/vendetta, wdi/poem]
 ---
 

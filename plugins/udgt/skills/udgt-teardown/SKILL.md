@@ -1,6 +1,7 @@
 ---
 name: udgt-teardown
 description: Tear a game's repository apart stage by stage (UI and frontend, datasets, gameplay and mechanics, backend, world bible, art pipeline, history, future plans) into a dataset, written chapters and an explorer page that wears the game's own look, asking the owner a short creative brief before each chapter. Use when the owner asks for a teardown, a design review of the whole game, a chapter of it, or to refresh it after the game changed. Not for looking one thing up in an existing teardown (that is udgt-consult), and never writes into the game's repository.
+allowed-tools: Read Grep Glob Bash(python *udgt.py query*)
 ---
 # UDGT teardown
 
@@ -59,6 +60,22 @@ For each stage, in order, unless the owner picks one:
 5. `udgt check --profile P` must report no `chapter-link` findings. Then `udgt build --profile P`.
 6. Tell the owner, in a line or two, what the chapter found that surprised you, and move on to the
    next stage's brief.
+
+## Worked example: one stage
+
+```
+udgt brief 03 --profile P          # prompts, scan gaps, earlier answers for stage 03
+```
+
+Turn the gaps into 2 to 4 questions (AskUserQuestion), then record each answer as given:
+
+```
+udgt record 03 --profile P --question "Keep the timer fixed or scale it?" --answer "Scale it. Fixed felt unfair."
+```
+
+Write `chapters/03-<slug>.md` with a Describe / Compare / Critique block per choice (Describe cites
+`[[dec:A115]]` and `path:line`), then `udgt check --profile P`. A clean run prints no `chapter-link`
+findings; a broken `[[id]]` is reported as one and must be fixed before `udgt build --profile P`.
 
 ## Viewing
 

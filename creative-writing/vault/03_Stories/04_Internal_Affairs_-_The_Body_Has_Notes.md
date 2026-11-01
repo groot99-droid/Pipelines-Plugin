@@ -8,6 +8,7 @@ pov: third-limited
 tense: present
 themes: [body-personification, comedic-anxiety, self-conflict, everyday-absurdity]
 archetypes: [the-inner-chorus]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "1302-1710"
 attachments: []

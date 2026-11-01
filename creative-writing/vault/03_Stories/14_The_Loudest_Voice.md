@@ -10,6 +10,7 @@ themes: [identity, complicity, the-crowd, the-law, guilt]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/identity, theme/complicity, theme/the-crowd, theme/the-law, theme/guilt, wdi/hollowmere, wdi/story, wdi/role]
 ---
 

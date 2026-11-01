@@ -10,6 +10,7 @@ themes: [class, complicity, spectacle, grace, survival]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/class, theme/complicity, theme/spectacle, theme/grace, theme/survival, wdi/stories, wdi/port-au-levain, wdi/story, wdi/revolution]
 ---
 

@@ -10,6 +10,7 @@ themes: [choice, fortune, complicity, the-company, counting]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/character-profile, mode/epic-fantasy, project/who-did-it, status/draft, theme/choice, theme/fortune, theme/complicity, theme/the-company, theme/counting, wdi/futures, wdi/hollowmere, wdi/port-au-levain, wdi/blackpine, wdi/people]
 ---
 

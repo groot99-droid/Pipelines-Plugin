@@ -740,3 +740,33 @@ def current_stage(env, state):
 def latest_confirmation(state, what):
     matches = [c for c in state.get("confirmations", []) if c["what"] == what]
     return matches[-1] if matches else None
+
+
+# ── the key file (one reader for the studio's tools) ─────────────────────────
+
+PLACEHOLDERS = {"your-key-here", "Add_Key"}  # "no key yet", as llm.py and setup_keys.py
+
+
+def user_keys_file():
+    """The per-user key file, outside the repo. The same rule as
+    creative-writing/pipeline/llm.py user_keys_file; a test keeps them in step."""
+    return os.environ.get("ROSW_KEYS_FILE") or os.path.join(
+        os.path.expanduser("~"), ".rosw", "keys.env")
+
+
+def read_key_file(path):
+    """KEY=VALUE lines, as llm.py _load_env_file reads them. Never printed."""
+    try:
+        lines = Path(path).read_text(encoding="utf-8").splitlines()
+    except (OSError, UnicodeDecodeError):
+        return {}
+    found = {}
+    for line in lines:
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        value = value.strip().strip('"').strip("'")
+        if value and value not in PLACEHOLDERS:
+            found[key.strip()] = value
+    return found

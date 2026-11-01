@@ -10,6 +10,7 @@ themes: [guilt, the-light, doubt, drowning, duty]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/prose-poem, mode/confessional-poetry, project/who-did-it, status/draft, theme/guilt, theme/the-light, theme/doubt, theme/drowning, theme/duty, wdi/bestiary, wdi/hollowmere, wdi/creatures, wdi/poem]
 ---
 

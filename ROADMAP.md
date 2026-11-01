@@ -7,6 +7,18 @@ Findings cite paths relative to the repo root. Severity: **P0** broken/unsafe, *
 
 ---
 
+## Author decisions (2026-11-01)
+- **Goal:** plugins and skills a session can use for one specific outcome, with an orchestrator agent in a separate session managing the "employees" (the Who Did It agent-swarm model). The studio does not produce; it manages the tool list and how to harness it for games, films, pitch decks, automated video. The graphic-design plugin comes first; later a harness tool runs a pipeline that calls the skills.
+- **Origin field (DONE, `origin:` in frontmatter):** 58 original, 4 derived (the four archetype profiles), 1 auto-authored among the 63; all 75 later works are auto-authored. Graknox stays original. Originals needing updates: the author will list them later.
+- **Verbatim rule:** covers only the original works. Grammar fixes are always fine. Some originals need updating with new information, and a few move from Originals to **Derived** (author + AI). **Auto Authored** is for pipeline output. TODO: vault schema/category change, `creative-writing/vault/CLAUDE.md` rules, tests that pin the 63.
+- **Access tiers (User, Client, Viewer):** DEFERRED to the Railway launch; the author will add them then. Until then CDN links/thumbnails in `studio/library/catalog.json` stay flagged by lint and unresolved.
+- **Hooks:** BUILT on `integrate/wave1`: `.claude/hooks/vault_guard.py` (asks before editing an original, refuses Write/Edit into `studio/vault` notes) and `plugins/video-editor/hooks/publish_guard.py` (a real `ve publish send --yes` needs a dry run for that platform first, then still asks; `init`/`revoke` always ask).
+- **brush-tagger:** moved to haiku.
+- **New plugin:** build `plugins/graphic-design/` (Part E) rather than extending ui-design.
+- **Still open:** Blender add-on button label; real Blender plugin tool prefix (needs a live session); `machine.yaml` `gpu.status_in` thresholds and render TTL; which add-on tools to switch on.
+
+---
+
 ## Wave 1 status and review checklist (2026-11-01)
 Four Sonnet sessions worked items from this file. All four PRs are open and ready for review with CI green; none merged. Struck-through items below are done in a PR but not yet checked by a person; items marked PARTLY DONE keep their open remainder.
 

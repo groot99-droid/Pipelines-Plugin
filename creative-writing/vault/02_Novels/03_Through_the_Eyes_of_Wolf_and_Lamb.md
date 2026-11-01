@@ -8,6 +8,7 @@ pov: first-person
 tense: mixed
 themes: [complicity, unreliable-narration, institutional-language, satire-of-bureaucracy, grief-and-memory]
 archetypes: [unreliable-narrator, guilty-witness, chorus-of-townsfolk]
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5109–5238"
 attachments: []

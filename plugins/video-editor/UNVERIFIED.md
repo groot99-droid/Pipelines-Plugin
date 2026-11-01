@@ -57,7 +57,7 @@ Mastodon. Run `ve publish plan` first; it sends nothing.
       plumbing is unit-tested.
 - [ ] Real footage and real human speech (everything ran on synthetic fixtures). whisperX word starts were about
       41 ms from true onsets vs about 112 ms for faster-whisper on one synthetic clip: re-measure.
-- [ ] GPU paths; the Manim and HyperFrames engines, and Remotion beyond this plugin's own small template.
+- [ ] GPU paths; the Manim engine, and Remotion beyond this plugin's own small template.
 - [ ] whisperX needs NLTK `punkt_tab` once (the build sandbox blocked the download).
 - [ ] Remotion is not open source: free for individuals, for-profit organisations of up to 3 people and
       non-profits; others need a company licence.

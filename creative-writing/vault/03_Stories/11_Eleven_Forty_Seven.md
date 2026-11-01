@@ -10,6 +10,7 @@ themes: [service, the-will, time, complicity, the-house]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/horror-prose, project/who-did-it, status/draft, theme/service, theme/the-will, theme/time, theme/complicity, theme/the-house, wdi/hollowmere, wdi/story]
 ---
 

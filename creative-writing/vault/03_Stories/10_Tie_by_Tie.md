@@ -10,6 +10,7 @@ themes: [founding, sacrifice, company-power, faith, the-mere]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/story, mode/epic-fantasy, project/who-did-it, status/draft, theme/founding, theme/sacrifice, theme/company-power, theme/faith, theme/the-mere, wdi/hollowmere, wdi/story]
 ---
 

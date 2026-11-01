@@ -8,6 +8,7 @@ pov: first-person
 tense: present
 themes: [isolation, creative-anxiety, mortality, disillusionment-with-fame]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "5647–5691"
 attachments: []

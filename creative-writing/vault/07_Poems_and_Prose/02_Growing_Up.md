@@ -8,6 +8,7 @@ pov: first-person
 tense: mixed
 themes: [mortality, grandfather-relationship, memory, legacy]
 archetypes: []
+origin: original
 source_volume: Master_Volume_1
 source_lines: "3565–3598"
 attachments: []

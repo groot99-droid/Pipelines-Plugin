@@ -240,7 +240,7 @@ def main(argv: list[str] | None = None) -> None:
         if not a.speaker_map:
             raise SystemExit("--turns needs --speaker-map SPEAKER_00=left,SPEAKER_01=right")
         mapping = dict(kv.split("=", 1) for kv in a.speaker_map.split(","))
-        words = json.loads(a.turns.read_text())["words"]
+        words = json.loads(a.turns.read_text(encoding="utf-8"))["words"]
         shifted = [dict(w, start=w["start"] - a.clip_start, end=w["end"] - a.clip_start)
                    for w in words if w.get("type") == "word" and w["end"] > a.clip_start]
         segments = speaker_segments_from_words(shifted, mapping, a.min_dwell)

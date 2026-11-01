@@ -8,6 +8,7 @@ pov: first-person
 tense: present
 themes: [ambition-inventory, multi-domain-mastery, legacy-aspiration]
 archetypes: []
+origin: original
 source_volume: Master_Volume_2
 source_lines: "108–115"
 attachments: []

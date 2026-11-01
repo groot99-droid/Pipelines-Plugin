@@ -10,6 +10,7 @@ themes: [complicity, counting, the-program, guilt, inheritance]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/worldbuilding, mode/horror-prose, project/who-did-it, status/draft, theme/complicity, theme/counting, theme/the-program, theme/guilt, theme/inheritance, wdi/blackpine, wdi/places, wdi/story]
 ---
 

@@ -5,7 +5,7 @@
     {
       "name": "unreal_psk_import",
       "description": "Import: Import a PSK file. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "psk.import_file",
       "params": {
         "filepath": {
@@ -71,7 +71,7 @@
     {
       "name": "unreal_psa_import_all",
       "description": "Import PSA: Import all sequences from the selected PSA file. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "psa.import_all",
       "params": {
         "should_use_fake_user": {
@@ -188,7 +188,7 @@
     {
       "name": "unreal_psk_export",
       "description": "Export: Export selected meshes to PSK. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "psk.export",
       "params": {
         "filepath": {
@@ -201,7 +201,7 @@
     {
       "name": "unreal_psa_export",
       "description": "Export: Export actions to PSA. Settings that are not parameters here come from the add-on's panel.",
-      "enabled": true,
+      "enabled": false,
       "op": "psa.export",
       "params": {
         "filepath": {

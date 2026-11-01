@@ -301,6 +301,10 @@ connectors:
 # `class`: none | spend | local-compute. A local-compute pipeline also names
 # its `workload:` class from studio/pipeline/machine.yaml; execute is not
 # marked done without a live compute token for it, consumed by the run.
+# A `spend` pipeline with a local branch names `local_workload:` instead; the
+# run chooses its branch with `studio_run.py branch <run-id> cloud|local`, and
+# execute is not marked done on `local` without that token (on `cloud` it needs
+# none). Such a run that has chosen no branch cannot finish execute.
 # --------------------------------------------------------------------
 pipelines:
   ui-direction:
@@ -1047,17 +1051,19 @@ pipelines:
         - mcp__Higgsfield__scene_builder_3d_show_scene
         - mcp__Higgsfield__generate_3d
     class: spend
+    local_workload: render_3d_cpu   # the local branch: studio/pipeline/machine.yaml
     leaves_machine: "The scene code and any imported model, to the connector's service. A render there spends credits. A local render leaves nothing, and needs a compute token."
     carries:
       - "Fixed scripts with a parameter file: the bpy code that ran is the Method, whole, with its parameters beside it."
-      - "A local render needs a compute token: one token, one job. The cloud branch needs none."
+      - "A local render needs a compute token: one token, one job. The cloud branch needs none. The run records its branch (studio_run.py branch), and execute is not done on `local` without a consumed token."
       - "Silhouette, proportions, depth, contact, framing, then detail; lights move with the geometry."
     open:
-      - "The local branch (a headless Blender on the laptop, driven by studio/pipeline/bpy/) is built when Blender is installed there. Until then every scene-3d run is the cloud branch."
+      - "The local branch (a headless Blender on the laptop, driven by studio/pipeline/bpy/) is built when Blender is installed there. Until then every scene-blender run is the cloud branch."
     stage_notes:
       intake: |
         Capture what the scene is, what is wanted out of it (a GLB, a .blend,
-        a still, a turntable), and whether it continues a project's scene.
+        a still, a turntable), whether it continues a project's scene, and
+        which branch (cloud or local) it runs on.
         Read the connector's project list if continuing; the project id goes
         in the brief.
       recipe: |
@@ -1068,6 +1074,8 @@ pipelines:
         from the attestation, the quality bar, the brief. Say what leaves the
         machine and what a render spends.
       execute: |
+        Record the branch the author chose, before anything runs:
+          python studio/pipeline/studio_run.py branch <run-id> cloud|local
         Create or open the project; log the id. Inspect the scene
         (query_python) and log the revision and scene sequence the edit will
         be guarded with. Run each edit from the recipe with those guards; log

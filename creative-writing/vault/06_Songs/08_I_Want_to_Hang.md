@@ -10,6 +10,7 @@ themes: [being-seen, loneliness, the-law, complicity, identity]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/song, mode/confessional-poetry, project/who-did-it, status/draft, theme/being-seen, theme/loneliness, theme/the-law, theme/complicity, theme/identity, wdi/hollowmere, wdi/song, wdi/role]
 ---
 

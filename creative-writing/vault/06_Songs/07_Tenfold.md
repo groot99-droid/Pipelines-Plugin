@@ -10,6 +10,7 @@ themes: [faith, confession, martyrdom, debt, silence]
 archetypes: []
 project: who-did-it
 attachments: []
+origin: auto-authored
 tags: [type/song, mode/confessional-poetry, project/who-did-it, status/draft, theme/faith, theme/confession, theme/martyrdom, theme/debt, theme/silence, wdi/hollowmere, wdi/song, wdi/vendetta]
 ---
 
