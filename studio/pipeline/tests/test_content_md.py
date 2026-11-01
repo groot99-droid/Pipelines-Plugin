@@ -207,7 +207,13 @@ class Lint(StudioCase):
                      "https://www.dropbox.com/scl/fi/abc/file.png?rlkey=x",
                      "https://app.box.com/s/abcdef123456",
                      "https://contoso.sharepoint.com/:i:/g/personal/x/abc",
-                     "https://1drv.ms/u/s!abc"):
+                     "https://1drv.ms/u/s!abc",
+                     "https://d1a2b3c4.cloudfront.net/users/u-123/image.webp",
+                     "https://www.canva.com/design/DAF123/abc/view",
+                     "https://canva.link/abc123",
+                     "https://www.figma.com/design/AbCdEf/Name?node-id=1-2",
+                     "https://www.figma.com/proto/AbCdEf/Name",
+                     "https://gamma.app/docs/My-deck-abc123"):
             with self.subTest(link=link):
                 self.assertRefused(GOOD_NOTE + f"\n## Links\n\n- {link}\n", "is a credential")
 

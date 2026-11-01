@@ -94,6 +94,14 @@ SHARE_LINK_RES = (
     re.compile(r"^(?:https?://)?onedrive\.live\.com/.*[?&](?:authkey|resid)=", re.I),
     re.compile(r"^(?:https?://)?(?:we\.tl|wetransfer\.com/downloads)/", re.I),
     re.compile(r"^(?:https?://)?(?:[\w-]+\.)?adobe\.com/.*(?:/link/|[?&]x_api_client_id=)", re.I),
+    # Hosted by a CDN or a design tool whose URL alone is the access: the link
+    # cannot tell whether the file is shared, so the host is flagged.
+    re.compile(r"^(?:https?://)?[\w.-]+\.cloudfront\.net(?:[/?#:]|$)", re.I),
+    re.compile(r"^(?:https?://)?(?:[\w-]+\.)?canva\.com/design/", re.I),
+    re.compile(r"^(?:https?://)?canva\.link/", re.I),
+    re.compile(r"^(?:https?://)?(?:www\.)?figma\.com/(?:file|design|proto|board|slides|make|community/file)/", re.I),
+    re.compile(r"^(?:https?://)?figma\.link/", re.I),
+    re.compile(r"^(?:https?://)?(?:[\w-]+\.)?gamma\.app/(?:docs|public|embed)/", re.I),
 )
 CREDENTIAL_RES = (
     re.compile(r"\bsk-ant-[A-Za-z0-9_-]{8,}"),

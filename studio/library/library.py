@@ -34,12 +34,14 @@ import json
 import shutil
 import subprocess
 import sys
-import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE.parent / "pipeline"))  # download.py: the one download helper (stdlib only)
+from download import DownloadError, download  # noqa: E402
+
 CATALOG = HERE / "catalog.json"
 THUMBS = HERE / "thumbs"
 FILES = HERE / "files"
@@ -226,16 +228,10 @@ def select(items, types=None, ids=None, since=None, limit=None):
 
 
 def _download(url, dest):
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    part = dest.with_name(dest.name + ".part")
-    req = urllib.request.Request(url, headers={"User-Agent": "rosw-studio-library"})
-    with urllib.request.urlopen(req, timeout=120) as resp, open(part, "wb") as fh:
-        expected = resp.headers.get("Content-Length")
-        shutil.copyfileobj(resp, fh, 1 << 20)
-    if expected is not None and part.stat().st_size != int(expected):
-        part.unlink(missing_ok=True)
-        raise RuntimeError(f"short download ({part.name})")
-    part.replace(dest)
+    try:
+        download(url, dest, headers={"User-Agent": "rosw-studio-library"}, chunk=1 << 20)
+    except DownloadError as problem:
+        raise RuntimeError(str(problem)) from None
 
 
 def fetch(types=None, ids=None, since=None, limit=None, dry_run=False, workers=4):

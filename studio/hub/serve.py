@@ -128,12 +128,7 @@ def new_run(env, body):
         raise Usage("a run needs a pipeline and a title")
     env.pipeline(pipeline)
     args = argparse.Namespace(pipeline=pipeline, title=title, run_id=None, note=None)
-    import contextlib
-    import io
-    out = io.StringIO()
-    with contextlib.redirect_stdout(out):
-        studio_run.cmd_new(env, args)
-    run_id = next(line.split()[1] for line in out.getvalue().splitlines() if line.startswith("run "))
+    run_id = studio_run.create_run(env, args)[0]["run_id"]
     state = studio_common.load_state(env, run_id)
     return {
         "run": studio_run.summary(env, state),
@@ -217,10 +212,22 @@ class Handler(SimpleHTTPRequestHandler):
             return self.send_json({"error": str(problem)}, HTTPStatus.BAD_REQUEST)
         return self.send_json({"error": "no such route"}, HTTPStatus.NOT_FOUND)
 
+    def same_origin(self):
+        """A write comes only from this page: the Host is the loopback address
+        this server is bound to, and an Origin, if sent, is that same address.
+        (Closes cross-site POSTs and DNS rebinding.)"""
+        allowed = {f"{name}:{self.server.server_port}" for name in (HOST, "localhost")}
+        if (self.headers.get("Host") or "").lower() not in allowed:
+            return False
+        origin = self.headers.get("Origin")
+        return origin is None or urlsplit(origin).netloc.lower() in allowed
+
     def do_POST(self):
         parts = urlsplit(self.path)
         if parts.path != "/api/runs":
             return self.send_json({"error": "no such route"}, HTTPStatus.NOT_FOUND)
+        if not self.same_origin():
+            return self.send_json({"error": "Host or Origin is not this hub's own address"}, HTTPStatus.FORBIDDEN)
         length = int(self.headers.get("Content-Length") or 0)
         try:
             body = json.loads(self.rfile.read(length) or b"{}")

@@ -39,6 +39,12 @@ class Starting(StudioCase):
         code, out, _ = self.run_cmd("status", run_id, "--json")
         self.assertEqual(json.loads(out)["next_stage"], self.env.stages[0]["id"])
 
+    def test_new_json_prints_one_object_with_the_run_id(self):
+        code, out, _ = self.run_cmd("new", "--pipeline", "ui-direction", "--title", "Json run", "--json")
+        self.assertEqual(code, 0)
+        made = json.loads(out)
+        self.assertEqual(self.state(made["run_id"])["title"], "Json run")
+
     def test_a_run_id_is_not_reused(self):
         self.new_run("same-id")
         code, _, err = self.run_cmd("new", "--pipeline", "ui-direction", "--title", "x",
