@@ -1,0 +1,19 @@
+ID,Topic,Rule,Value,Keywords,Notes
+rgb-cmyk,Colour mode,Convert to CMYK for offset and most digital print; keep RGB only if the printer asks for it,CMYK,rgb cmyk convert mode profile,"Bright RGB blues, greens and oranges shift when converted. Proof them."
+ink-coated,"Total ink limit, coated",Sum of C+M+Y+K at any pixel,"300% (FOGRA39 about 330%, SWOP v2 300%)",ink limit tac coated sheetfed,Typical values; the printer's profile decides.
+ink-uncoated,"Total ink limit, uncoated",Sum of C+M+Y+K at any pixel,260-280%,ink limit tac uncoated paper,Uncoated paper absorbs more; lower the limit.
+ink-news,"Total ink limit, newsprint",Sum of C+M+Y+K at any pixel,240%,ink limit tac newsprint,Newsprint prints dull and spreads.
+rich-black,Rich black,"Use rich black for large black areas, plain K for small text",about C60 M40 Y40 K100 for large areas,rich black k text registration,Never use four-colour black for body text; misregistration blurs it.
+small-text-k,Small text colour,"Set text under about 12 pt in a single ink, not a CMYK mix",K100 or one spot,small text black registration,Mixed inks misregister and make thin strokes fuzzy.
+hairline,Minimum stroke,Strokes thinner than this may not print,0.25 pt (0.1 mm) at least; 0.5 pt safer; reversed out 1 pt,hairline stroke line weight,Reversed-out (white on colour) strokes need more.
+min-text,Minimum text size,Smallest readable size,6 pt on white; 8 pt reversed or on texture,text size small print legible,Thin serif faces need more.
+bleed,Bleed,Extend artwork past the trim,3 mm (0.125 in),bleed trim edge crop,Background colour and images must reach the bleed edge.
+safe-zone,Safe zone,Keep text and logos inside the trim by,3-5 mm (0.125-0.25 in),safe margin trim cut,Cutting moves up to about 1 mm.
+image-res,Image resolution,Effective ppi of a placed raster at its final size,300 ppi for print up to A3; 150 or lower for large format viewed from a distance,image resolution ppi dpi raster upscale,Effective ppi = pixels / placed inches. Upscaling does not add detail.
+fonts,Fonts,Embed or outline every font,All fonts embedded in the PDF,font embed outline pdf,A missing font is substituted silently.
+pdf-x,Delivery format,Press-ready PDF,PDF/X-1a or PDF/X-4,pdf x1a x4 delivery press,Ask the printer which one; X-4 keeps transparency.
+spot,Spot colours,Name spot colours exactly and use them on purpose,"Pantone or custom spots, named",spot pantone varnish foil cut,"Varnish, foil and die lines each go on their own named spot layer."
+overprint,Overprint,Overprint black text over colour; knock out everything else,Overprint K text only,overprint knockout trap,Check with an overprint preview.
+delta-e,Colour difference,How far a printed colour may drift from the proof,"Delta E 2000 under about 2-3 for brand colours, under 5 for general work",delta e colour match proof brand,"Supply brand colours as Pantone or CMYK values, not RGB."
+grey-neutral,Neutral greys,Build neutral greys from K alone,K only,grey gray neutral cast,CMY greys drift to a colour cast.
+profile,ICC profile,Embed or convert to the printer's profile,"Printer's profile, else FOGRA39/FOGRA51 (Europe) or GRACoL/SWOP (US)",icc profile fogra gracol swop,Do not guess; ask.

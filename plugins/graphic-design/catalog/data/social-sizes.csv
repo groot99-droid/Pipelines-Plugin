@@ -1,0 +1,19 @@
+ID,Platform,Placement,Size px,Ratio,Keywords,Notes
+ig-portrait,Instagram,"Feed post, portrait",1080 x 1350,4:5,instagram feed post portrait,Largest feed footprint.
+ig-square,Instagram,"Feed post, square",1080 x 1080,1:1,instagram feed post square,
+ig-story,Instagram,Story or Reel,1080 x 1920,9:16,instagram story reel vertical,Keep key content out of the top and bottom ~250 px.
+tt-video,TikTok,Video or cover,1080 x 1920,9:16,tiktok video vertical cover,Keep key content clear of the caption and button area.
+yt-short,YouTube,Short,1080 x 1920,9:16,youtube short vertical,
+yt-thumb,YouTube,Video thumbnail,1280 x 720,16:9,youtube thumbnail,Under 2 MB; text must read at small size.
+yt-banner,YouTube,Channel banner,2560 x 1440,16:9,youtube banner channel art,The safe area for all devices is about 1546 x 423 px at the centre.
+fb-link,Facebook,Link or shared image,1200 x 630,1.91:1,facebook link share post,
+fb-cover,Facebook,Page cover,820 x 312,about 2.6:1,facebook cover page,Shows differently on mobile; keep the middle clear.
+li-post,LinkedIn,Feed image,1200 x 627,1.91:1,linkedin post feed,
+li-banner,LinkedIn,Profile banner,1584 x 396,4:1,linkedin banner profile cover,The profile photo covers part of the lower left.
+x-post,X,Post image,1600 x 900,16:9,x twitter post image,
+x-header,X,Profile header,1500 x 500,3:1,x twitter header banner,
+pin-pin,Pinterest,Pin,1000 x 1500,2:3,pinterest pin vertical,
+bsky-post,Bluesky,Post image,1200 x 675,16:9,bluesky post image,Images are re-encoded; keep files small.
+og-image,Any site,Open Graph share image,1200 x 630,1.91:1,open graph og share preview link,Keep text in the central ~80%.
+favicon,Any site,Favicon,"32 x 32, 180 x 180 (touch), 512 x 512 (PWA)",1:1,favicon icon app touch,Provide an SVG as well; test at 16 px.
+email-header,Email,Header image,600 wide,about 3:1,email header newsletter,Design at 1200 wide for high-density screens; always set alt text.

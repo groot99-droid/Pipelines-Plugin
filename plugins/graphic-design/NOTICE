@@ -1,0 +1,8 @@
+graphic-design
+Copyright (c) 2026 groot99-droid. MIT licence (see LICENSE).
+
+The plugin bundles no third-party code or assets. The catalog tables are the author's own summaries of
+common print and platform conventions; confirm figures that cost money with the printer or the platform.
+render.py drives Playwright and Chromium, and the tool-router skill names Inkscape, Scribus, GIMP, Krita,
+ImageMagick, svgo, fonttools, vtracer, potrace and others. All are installed separately under their own
+licences; none is copied here.

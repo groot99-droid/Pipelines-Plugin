@@ -53,6 +53,7 @@ plugins/ui-design/     the ui-design plugin: self-contained
   references/          prose the ui-design-catalog skill reads on demand
   README.md, LICENSE, NOTICE, CHANGELOG.md
 plugins/udgt/          the udgt plugin: UI, Dataset & Gameplay Teardown of a game repo
+plugins/graphic-design/ the graphic-design plugin: print and social catalog, SVG mark linter, print preflight, tool router
 teardowns/             one folder per torn-down game: who-did-it, ninety-nine, right-door-wrong-exit
 agent-reach/          the reach base: Agent Reach (imported with git subtree). CLI `agent-reach`
                        installs, checks and configures read access to 15 internet platforms;
@@ -493,6 +494,17 @@ private or draft by default, nothing sent without `--yes`, credentials in the OS
 variables and never in a file. Install with `/plugin install video-editor@rosw`. `ve publish` has never been
 run against a live account; `plugins/video-editor/UNVERIFIED.md` lists what to check first. See
 `plugins/video-editor/README.md` and [`docs/video-editor.html`](docs/video-editor.html).
+
+## Graphic design plugin
+
+`plugins/graphic-design/` is for print and screen graphics. A stdlib catalog of seven small tables (print sizes with
+bleed and safe margins, print colour rules, social sizes, logo and identity rules, grids, illustration styles, and a
+table of which app or provider does which job) is searched with BM25. `svg_lint.py` checks an SVG mark for delivery,
+`preflight.py` checks a described layout against print rules (it never says "print-ready"), and `render.py` turns
+HTML or SVG into PNG or PDF with headless Chromium. Skills: `graphic-design-catalog`, `vector-mark`, `print-preflight`,
+`tool-router`; agents: `print-preflight-reviewer`, `brand-consistency-reviewer`. Install with
+`/plugin install graphic-design@rosw`. The figures are typical industry values: confirm them with the printer or the
+platform. See `plugins/graphic-design/README.md`.
 
 ## Brushes
 

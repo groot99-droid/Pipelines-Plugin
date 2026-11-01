@@ -54,6 +54,8 @@ jobs:
         run: python -m unittest discover -s writing-museum/build/tests
       - name: writing-museum lint
         run: python writing-museum/build/build_museum.py build --lint
+      - name: graphic-design tests
+        run: python -m unittest discover -s plugins/graphic-design/catalog/tests
       - name: udgt tests
         run: python -m unittest discover -s plugins/udgt/tests
       - name: blender plugin tests

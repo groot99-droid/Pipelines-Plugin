@@ -1,0 +1,13 @@
+ID,Style,Traits,Good for,Keywords,Notes
+flat-vector,Flat vector,"Solid shapes, limited palette, no gradients","Icons, explainers, UI illustration",flat vector shapes minimal explainer,Easy to keep consistent across a set.
+geometric,Geometric,"Circles, triangles, grids; built from a construction","Logos, patterns, posters",geometric shapes grid construction pattern,Show the construction in the brief.
+line-art,Line art,"Single stroke weight, no fill or sparse fill","Editorial, icons, colouring pages",line art stroke outline monoline,Keep one stroke width and one corner style.
+isometric,Isometric,"30-degree axes, no perspective","Diagrams, product illustration, game assets",isometric diagram 3d game,Use a fixed light direction.
+risograph,Risograph,"Two or three spot inks, overprint, grain","Posters, zines, covers",risograph riso grain overprint spot zine,"Overprint is the effect: set multiply, not opacity."
+halftone,Halftone,Dots of varying size in one or two inks,"Retro, newspaper, pop art",halftone dots retro pop print,Pick the dot angle and frequency deliberately.
+pixel,Pixel art,"Fixed grid, limited palette, no anti-aliasing","Games, retro, avatars",pixel art sprite game retro,Export at integer scale only; no smoothing.
+painterly,Painterly,"Visible brush marks, colour blending","Covers, concept art, mood",painterly brush concept art cover,Raster work: go through an image provider or Krita.
+collage,Collage,"Cut-out photos and paper textures, uneven edges","Editorial, music, zines",collage cutout paper texture editorial,Mind photo licences.
+grain-gradient,Grain gradient,Soft colour fields with noise,"Backgrounds, covers, social posts",grain gradient noise soft background,Add noise at final size so it does not blur.
+3d-render,3D render,"Lit 3D objects, soft materials","Product, hero images, icons",3d render blender product lit hero,A fixed camera and light rig repeats well.
+type-only,Type-only,The lettering is the picture,"Posters, covers, social",typography poster lettering type only,"One idea, one typeface, a large contrast in scale."

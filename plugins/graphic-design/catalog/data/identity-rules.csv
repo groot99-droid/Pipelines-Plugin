@@ -1,0 +1,15 @@
+ID,Topic,Rule,Check,Keywords,Notes
+mark-types,Mark types,"Pick one: wordmark, lettermark, pictorial mark, abstract mark, combination mark, emblem, mascot",Name which type it is and why,logo wordmark lettermark pictorial abstract emblem mascot,A combination mark needs the symbol and the wordmark to work alone too.
+small-size,Minimum size,The mark must read at its smallest use,Test at 16 px (screen) and 15 mm wide (print),logo small size favicon minimum legibility,"If it fails, make a simplified small-size version."
+one-colour,One-colour version,Provide a single-colour version that works on light and on dark,Render it in black and in white on a flat background,logo one colour mono black white reversed,Gradients and effects are not part of the mark.
+clear-space,Clear space,Keep a margin around the mark free of other elements,At least a defined unit (for example the height of the symbol's cap) on every side,logo clear space margin exclusion,Define the unit in the guidelines and show it.
+scalable,Scalable construction,Build from simple filled shapes,"No raster images, no tiny gaps, no strokes thinner than 1/20 of the mark's height",logo vector scalable construction stroke,Outline strokes for the final file.
+text-outlined,Type in the mark,Convert text to outlines in the delivered file,No live text element in the final SVG or PDF,logo font outline text convert,Keep an editable source file.
+distinct,Distinctiveness,Squint test and silhouette test,Blur it or reduce it to a silhouette: is it still itself?,logo distinct silhouette squint memorable,Compare against five competitors before keeping it.
+no-trend,Longevity,Avoid effects that date quickly,"No drop shadows, bevels or stock gradients",logo trend timeless effect,"Effects belong to applications of the mark, not the mark."
+lockups,Lockups,"Provide horizontal, stacked and icon-only lockups",Each has its own minimum size,logo lockup horizontal stacked icon,Name each variant in the file name.
+contrast,Contrast on backgrounds,Mark and background should differ clearly,Text-sized elements at least 4.5:1; large or graphic parts at least 3:1,logo contrast background wcag accessibility,Provide a version for each background in the palette.
+file-set,Delivery set,"Deliver SVG, PDF (vector) and PNG at 1x and 2x, in colour and one colour","SVG optimised, PNG with a transparent background",logo files deliver svg png pdf set,Name files <brand>-<variant>-<colour>.<ext>.
+palette,Palette,Define primary and secondary colours with values for screen and print,"HEX, RGB, CMYK and a Pantone reference for each",brand palette colour hex cmyk pantone,"Print values come from a proof, not a formula, for brand colours."
+typography,Typography,"One display face, one text face, a fallback for each","Licences cover the use (web, print, app)",brand typography font licence fallback,Check the licence before delivering a font to a client.
+consistency,Consistency,"Every piece uses the same palette, type scale and mark rules",Compare each new piece with the brand's tokens,brand consistency tokens guidelines review,"Brand gates belong to the author: propose changes, never write them."

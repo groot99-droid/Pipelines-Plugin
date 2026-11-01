@@ -1,0 +1,12 @@
+{
+  "name": "graphic-design",
+  "version": "0.1.0",
+  "description": "Graphic design for print and screen: a searchable catalog of print specs, print colour rules, social sizes, identity rules, grids and illustration styles; SVG mark authoring with a delivery linter; a print preflight check; a render helper; and a router that says which app or provider does which job.",
+  "author": {
+    "name": "groot99-droid"
+  },
+  "homepage": "https://github.com/groot99-droid/Pipelines-Plugin/tree/main/plugins/graphic-design",
+  "repository": "https://github.com/groot99-droid/Pipelines-Plugin",
+  "license": "MIT",
+  "keywords": ["graphic-design", "logo", "svg", "print", "preflight", "poster", "social", "branding", "typography"]
+}

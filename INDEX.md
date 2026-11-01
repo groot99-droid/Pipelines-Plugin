@@ -21,7 +21,7 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | `teardowns/` | Game teardowns made with the udgt plugin, one folder per game: its profile, the extracted dataset, the owner's answers to the briefs, and the chapters. | - |
 | `writing-museum/` | A walkable 3D museum of the creative-writing vault, one room per work, built through the studio's scene-3d pipeline. | - |
 
-## Skills (27)
+## Skills (31)
 
 | Skill | What it does |
 |---|---|
@@ -41,6 +41,10 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | [blender-assets](plugins/blender/skills/blender-assets/SKILL.md) | Choose and bring in 3D assets for a Blender scene through the MCP for Blender integrations -- Poly Haven models, textures and HDRIs, Sketchfab, Poly Pizza low-poly models, and AI generation with Tripo, Hunyuan3D, Hyper3D Rodin or Meshy -- then scale, place and credit them. |
 | [blender-mcp](plugins/blender/skills/blender-mcp/SKILL.md) | Drive a live Blender session from Claude through the MCP for Blender server -- connect, inspect the scene, build or change objects, materials and lighting with bpy, and verify every step by looking at it. |
 | [blender-polyhaven-library](plugins/blender/skills/blender-polyhaven-library/SKILL.md) | Guide for using the Poly Haven Assets add-on in Blender, which mirrors polyhaven.com HDRIs, materials and models into the Asset Browser as a local asset library -- first-time setup, catalogs, downloading, resolution and LOD switching, displacement and texture scale, and script... |
+| [graphic-design-catalog](plugins/graphic-design/skills/graphic-design-catalog/SKILL.md) | Look up graphic-design facts before making a poster, flyer, card, social image, logo or layout - print sizes with bleed and safe margins, print colour rules (ink limits, rich black, hairlines, fonts), platform image sizes, logo and identity rules, grids and hierarchy, illustra... |
+| [print-preflight](plugins/graphic-design/skills/print-preflight/SKILL.md) | Check a layout against print rules before it is sent to a printer or exported as a final PDF - bleed, safe margin, image resolution at placed size, colour mode, ink limit, hairlines, minimum text size, font embedding, PDF/X. Use before delivering any print file, and whenever t... |
+| [tool-router](plugins/graphic-design/skills/tool-router/SKILL.md) | Decide which app, provider or command line does a graphic-design job - raster generation, background removal, vectorizing, upscaling, batch resize, SVG optimising, font subsetting, Adobe, Affinity, Figma, Canva, Inkscape, GIMP, Krita, Penpot, Scribus, Blender, Lottie - and say... |
+| [vector-mark](plugins/graphic-design/skills/vector-mark/SKILL.md) | Design a logo, icon, pattern or simple illustration as clean SVG and check it before delivery. |
 | [agent-reach](plugins/reach/skills/agent-reach/SKILL.md) | Use when the user wants to read or search a specific internet platform that plain web search and page fetch cannot reach well: Twitter/X, Reddit, Facebook, Instagram, YouTube (video info and subtitles), GitHub, Bilibili, XiaoHongShu, Xiaoyuzhou Podcast, LinkedIn/jobs, V2EX, Xu... |
 | [reach-connect](plugins/reach/skills/reach-connect/SKILL.md) | Connect Agent Reach to another skill so it can read the internet - add a checked "Reach" block and a metadata.reach channel list to an existing skill, or start a new toolset skill from a template. |
 | [reach-setup](plugins/reach/skills/reach-setup/SKILL.md) | Check whether Agent Reach is installed and healthy, show which internet platforms are reachable, and explain exactly what each missing one needs. |
@@ -53,7 +57,7 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | [manim-video](plugins/video-editor/skills/manim-video/SKILL.md) | Production pipeline for mathematical and technical animations using Manim Community Edition. |
 | [video-editor](plugins/video-editor/skills/video-editor/SKILL.md) | Edit video by conversation, with local tools. |
 
-## Agents (12)
+## Agents (14)
 
 | Agent | What it does |
 |---|---|
@@ -63,6 +67,8 @@ One repo, several tools. Each tool is a self-contained folder: `creative-writing
 | [creative-writing-drafter](.claude/agents/creative-writing-drafter.md) | Generates the heavy-lift artifact for one stage of the creative-writing pipeline (outline, draft, or self-revision) from context the caller provides. |
 | [creative-writing-librarian-native](.claude/agents/creative-writing-librarian-native.md) | Native (Claude-only, no-Ollama) equivalent of creative-writing/pipeline/librarian.py's condense_file/digest_files for the creative-writing-pipeline skill. |
 | [blender-scene-reviewer](plugins/blender/agents/blender-scene-reviewer.md) | Reviews the current Blender scene through the MCP for Blender connection and reports problems -- clipping, floating objects, wrong scale, missing materials, flat or blown-out lighting -- without changing anything. |
+| [brand-consistency-reviewer](plugins/graphic-design/agents/brand-consistency-reviewer.md) | Reviews ONE piece (an SVG, an HTML layout, or a written description of a design) against a brand's own palette, type and mark rules and the identity rules in the graphic-design catalog, and returns findings with evidence. |
+| [print-preflight-reviewer](plugins/graphic-design/agents/print-preflight-reviewer.md) | Reviews ONE layout description against the print rules in the graphic-design catalog and returns findings, each citing a catalog row id. |
 | [udgt-chapter-analyst](plugins/udgt/agents/udgt-chapter-analyst.md) | Drafts ONE chapter of a UDGT game teardown from the node ids, game files and owner's answers the caller gives it, in the Describe / Compare / Critique shape, citing teardown nodes as [[id]] and game files as path:line. |
 | [udgt-citation-checker](plugins/udgt/agents/udgt-citation-checker.md) | Fact-checks the citations in ONE UDGT teardown chapter -- every [[node-id]] against teardown.json, every path:line against the game checkout, and every quoted owner answer against answers.json -- and says which citations exist but do not support the sentence they sit under. |
 | [ui-design-catalog-reviewer](plugins/ui-design/agents/ui-design-catalog-reviewer.md) | Reviews one machine-generated catalog refresh diff -- Google Fonts or Phosphor icon candidates staged under the plugin's maintenance/candidates/ -- against the live rows in the plugin's catalog/data, checking license fields, required columns, and count deltas. |

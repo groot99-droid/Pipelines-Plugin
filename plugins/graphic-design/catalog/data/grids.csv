@@ -1,0 +1,13 @@
+ID,Format,Grid,Hierarchy,Keywords,Notes
+poster-swiss,Poster,"12-column grid, strong left alignment, wide left margin","One dominant element (about 60% of the weight), one secondary, small details",poster swiss grid typographic modernist,Works with one type family in two or three sizes.
+poster-centered,Poster,Centred axis with symmetrical margins,"Title, image, date and place read top to bottom",poster centered symmetrical event concert,Good for formal events; avoid centring long text.
+poster-fullbleed,Poster,Full-bleed image with a text block on a calm area,The image carries the mood; text sits where the image is quiet,poster photo fullbleed overlay,"Check contrast of text on the image where the text sits, not on the average."
+editorial-2col,Editorial page,"Two columns, 5-8 mm gutter, 12-16 mm outer margin on A4","Headline, standfirst, body, caption",editorial magazine page columns gutter,Body 9-11 pt on 12-14 pt leading; 45-75 characters per line.
+editorial-modular,Editorial spread,Modular grid of 6 x 4 or 12 x 8 cells,Image sizes come in whole numbers of modules,editorial modular grid spread magazine,Align baselines across columns.
+book-single,Book page,"Single text block; inner margin smaller than outer, bottom margin largest","Running head, folio, text",book page margins text block,Pick the proportions once and reuse them.
+social-carousel,Carousel,"Same grid on every slide, the headline in the same place",One idea per slide; the last slide asks for the action,social carousel slides instagram linkedin,Keep the edge clear; the next slide peeks in on some apps.
+flyer-info,Flyer,Single column with a clear F or Z reading path,"What, when, where, how to act, in that order",flyer info event leaflet,Put the call to action where the eye ends.
+slide-title,Presentation slide,"8 or 12-column grid, 5% outer margin",One message per slide as the title; support below,slide deck presentation grid,Body text no smaller than 18 pt when projected.
+packaging-panel,Packaging,"Panels from the dieline, each panel its own mini-layout",The front panel carries brand and product; the back carries detail and legal,packaging dieline panel box label,Get the dieline from the manufacturer; never redraw it.
+card-small,Business card,Left-aligned stack with 3-4 lines of information,"Name, role, contact",business card small layout contact,Do not go under 7 pt.
+type-scale,Type scale,"Ratio scale: 1.25 for text, 1.5 or more for display",Three to five sizes in total,type scale ratio hierarchy size,Round to whole points.
