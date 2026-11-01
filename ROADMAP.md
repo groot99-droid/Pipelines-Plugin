@@ -7,29 +7,58 @@ Findings cite paths relative to the repo root. Severity: **P0** broken/unsafe, *
 
 ---
 
+## Wave 1 status and review checklist (2026-11-01)
+Four Sonnet sessions worked items from this file. All four PRs are open and ready for review with CI green; none merged. Struck-through items below are done in a PR but not yet checked by a person; items marked PARTLY DONE keep their open remainder.
+
+PRs: [#25](https://github.com/groot99-droid/Pipelines-Plugin/pull/25) lane C truth pass · [#26](https://github.com/groot99-droid/Pipelines-Plugin/pull/26) lane B plugins/tooling · [#27](https://github.com/groot99-droid/Pipelines-Plugin/pull/27) lane D skills/agents · [#28](https://github.com/groot99-droid/Pipelines-Plugin/pull/28) lane A studio safety.
+
+### To check in each PR
+- **#28 (A):** Meshy ledger logs any http(s) link as host + sha256, nested lists too; `require_go_ahead` checks `executes_through.client`; hub 403 on bad Host/Origin; lint flags CloudFront/Canva/Figma/Gamma links; compute probe classifies all GPUs, `compute_gate.py renew`, per-class `ttl_seconds`, `token.max_seconds`; scene-blender `local_workload` + new `studio_run.py branch`; `new --json`; shared `studio_common.py` key reader and `download.py`. Confirm the branch step does not break existing runs in progress.
+- **#26 (B):** 81 add-on tools now `enabled: false` (manifests rebuilt, 23 zip hashes matched); `server.py` missing `enabled` = off; `mcp-for-blender==2.2.6` and `gemini-mcp-tool@1.1.4` pins + tests; video-editor utf-8 everywhere, `fc_match()` fallback, stdout `errors=replace`, OAuth loopback server change (macOS cause unproven); CI now Linux/Windows/macOS; HyperFrames removed. Verify the follow-ups were pushed: `CLAUDE.md` blender-addons line, empty `ENABLED` set in `build_manifests.py`, `blender-gemini/install.py` pin, reach `/tmp` fix via `agent-reach/agent_reach/skill/SKILL_en.md` + `sync_reach_plugin.py`.
+- **#25 (C):** `llm.py` default `claude-sonnet-5-5` via `ANTHROPIC_MODEL`, retry/backoff env vars, truncation raises `LLMError`; `run_pipeline.py` JSON guards and theme extraction; "63 works" counts reworded in README, CLAUDE.md, docs pages, generate-index purpose string; `INDEX.md` regenerated; CLAUDE.md caveat on assemble-3d. Check it did not alter the 63-original rule statements.
+- **#27 (D):** every agent has `model:`; drafter no longer runs `librarian.py`; trigger fixes (agent-reach, ui-design-catalog, studio-pipeline); skill splits into `references/`; worked examples (udgt, reach-setup); `/ve-doctor`, `/reach-doctor`, `/ui-design-verify`, `/studio-status`; agents `video-editor-render-qa` and `udgt-citation-checker`. Verify `allowed-tools` was added with the agreed scopes (it was blocked first time) and that nothing pre-approves confirm/advance/keep/record/publish.
+- **Merge order / conflicts:** all four branch from old `main`; `INDEX.md` and `plugins/reach` may conflict (B and D both touch `SKILL_en.md`). Merge C last or re-run `python plugins/ui-design/maintenance/generate-index.py`, then `python plugins/ui-design/maintenance/verify.py`.
+- **Known unexplained:** `agent-reach/tests/test_doctor.py` failed at collection in lane D's sandbox (unrelated, not investigated). Chinese `agent-reach/agent_reach/skill/SKILL.md` still has the old "MUST USE" description.
+
+### Decisions still open for the author
+- Does "certified verbatim" cover all ~149 vault notes or only the 63 originals (63 carry `source_volume`, 86 do not)? Recommendation applied: rules unchanged.
+- Blender add-on button label: "Connect to MCP server" vs "Start MCP Server" (needs your Blender; change in plugins/blender and blender-gemini together with tests).
+- Real Blender plugin tool prefix (expected `mcp__plugin_blender_blender__*`): list names in a live session with the plugin, then fix agent, skills, references and `test_tool_names.py` with one prefix constant.
+- Move `assemble-3d` to the official `mcp__Blender__*` names: deferred to the Generalize wave.
+- CDN links and thumbnails in the public repo (`studio/library/catalog.json`): unresolved; now flagged by lint.
+- `machine.yaml` `gpu.status_in`: widen so a discrete GPU stops refusing every class? Needs thresholds for your machine. Render TTL: raise per class or rely on `renew`.
+- Hooks (run `ve publish` in plan mode before sends; block writes to vaults/originals): not built, proposal only.
+- `brush-tagger` stays on sonnet (haiku may be enough).
+- Which add-on tools, if any, to switch back on, only after calling each in your Blender.
+
+### Not started
+Everything in Part B (providers registry, 3D provider interface, per-project brand, multi-source library, compute profiles, neighbour skills, Blender route note), Part D pipelines and chains, Part E graphic-design toolkit, and the unchecked Part C items: `/blender-review`, Blender worked examples, studio spec `intent:` lists, English translation of agent-reach references, and the other proposed agents.
+
+---
+
 ## Part A — Fixes
 
 ### P0 (broken or unsafe)
-1. **Blender MCP tool prefix is probably wrong.** `plugins/blender/agents/blender-scene-reviewer.md:4` grants `mcp__blender__*`; plugin MCP tools are named `mcp__plugin_<plugin>_<server>__<tool>`. If so, the reviewer has no Blender access. Same prefix in `blender-mcp/SKILL.md:17`, `references/tools.md:3`, `blender-addon-tools/SKILL.md:10`, and enforced by `plugins/blender/tests/test_tool_names.py:169`. Confirm the real names in a live session first, then fix all + the test.
-2. **81 untested Blender add-on tools are enabled.** `blender-addons/manifests/*.json` all `"enabled": true` (`build_manifests.py:257`), contrary to the skill's own rule (`blender-addon-tools/SKILL.md:63-64`). `addon-tools/server.py:126` defaults a missing `enabled` to on. → default off, ship drafts, fail-closed default.
-3. **Signed links can land in the Meshy ledger.** `studio/pipeline/meshy_client.py:398-407` masks only `data:` URIs; an `https://` input is written verbatim to `meshy_tasks.json` (`:462`) and copied into Method. Also `require_go_ahead` checks only `class == spend` (`:309`), so any spend run can post to Meshy — gate on pipeline id.
-4. **Hub `POST /api/runs` has no Origin/Host check** (`studio/hub/serve.py:220-233`) — CSRF/DNS-rebinding on loopback. Low impact, cheap fix.
-5. **Public CDN bearer-ish links.** `studio/library/catalog.json` holds permanent CloudFront URLs containing the account user id; `content_md.py:87-97` lint doesn't flag CloudFront/Canva/Figma/Gamma share links. Decide policy; extend lint regardless.
+1. **Blender MCP tool prefix is probably wrong.** `plugins/blender/agents/blender-scene-reviewer.md:4` grants `mcp__blender__*`; plugin MCP tools are named `mcp__plugin_<plugin>_<server>__<tool>`. If so, the reviewer has no Blender access. Same prefix in `blender-mcp/SKILL.md:17`, `references/tools.md:3`, `blender-addon-tools/SKILL.md:10`, and enforced by `plugins/blender/tests/test_tool_names.py:169`. Confirm the real names in a live session first, then fix all + the test. **[NOT CHANGED: B #26 gathered evidence; real tool names still unconfirmed]**
+2. ~~**81 untested Blender add-on tools are enabled.** `blender-addons/manifests/*.json` all `"enabled": true` (`build_manifests.py:257`), contrary to the skill's own rule (`blender-addon-tools/SKILL.md:63-64`). `addon-tools/server.py:126` defaults a missing `enabled` to on. → default off, ship drafts, fail-closed default.~~ **DONE (B #26; verify)**
+3. ~~**Signed links can land in the Meshy ledger.** `studio/pipeline/meshy_client.py:398-407` masks only `data:` URIs; an `https://` input is written verbatim to `meshy_tasks.json` (`:462`) and copied into Method. Also `require_go_ahead` checks only `class == spend` (`:309`), so any spend run can post to Meshy — gate on pipeline id.~~ **DONE (A #28; verify)**
+4. ~~**Hub `POST /api/runs` has no Origin/Host check** (`studio/hub/serve.py:220-233`) — CSRF/DNS-rebinding on loopback. Low impact, cheap fix.~~ **DONE (A #28; verify)**
+5. **Public CDN bearer-ish links.** `studio/library/catalog.json` holds permanent CloudFront URLs containing the account user id; `content_md.py:87-97` lint doesn't flag CloudFront/Canva/Figma/Gamma share links. Decide policy; extend lint regardless. **[PARTLY DONE (A #28: lint extended); CDN-link policy still open]**
 
 ### P1 (wrong / misleading / fragile)
-6. **video-editor fails on Windows.** No `encoding=` on read/write across `src/videoeditor/` (`questionnaire.py:158,166`, `cli.py:90,99,142,198`, `render.py:493,549,761`, `captions.py:54,142`, `pack.py:127`, `timeline.py:121`, `transcribe.py:108`, `ledger.py:21`, `package.py:77`, `publish/cli.py:35`); `fc-match` assumed (`captions.py:35`, `platform.py:18`). CI runs it on Linux only (`.github/workflows/verify.yml:66-74`). Fix, then add Windows/macOS to the matrix.
-7. **Outdated model id.** `creative-writing/pipeline/llm.py:83` defaults to `claude-sonnet-5` → `claude-sonnet-5-5`. Make it configurable and documented.
-8. **Anthropic backend truncation.** `llm.py:107-133` fixed `MAX_TOKENS=8000`, no `stop_reason` check, no retry/streaming; Ollama call 600 s no retry (`llm.py:152`).
-9. **Uncaught JSON in vault integration.** `run_pipeline.py:~483-500` `json.loads`/`meta["title"]` on model output; `_run_and_advance` (`:590`) only catches `LLMError`/`VaultIntegrationError`. `_extract_idea_themes` (`:183-231`) misses bulleted themes.
-10. **Unpinned servers.** `plugins/blender/.mcp.json` `uvx mcp-for-blender` (docs/tests pinned to 2.2.6, `test_tool_names.py:145`); root `.mcp.json` `npx -y gemini-mcp-tool`. Pin and add a test that the pin matches.
-11. **Compute gate is one-laptop-shaped.** `probe.py:190-193` treats only `nvidia-smi` as discrete (AMD/Arc read as integrated); `machine.yaml:26` refuses every class on any NVIDIA box; first GPU only (`probe.py:39`), `C:` only (`:48`); token TTL 1800 s (`machine.yaml:21`) can't cover long renders; one global token (`compute_gate.py:56`).
-12. **scene-blender local branch unenforced** — `class: spend`, no `workload`, so `token_held` returns early (`studio_run.py:417`); `spec.yaml:1057` says "scene-3d" where it means scene-blender (also `IDEAS.md:136`).
-13. **Spec test rejects hyphenated MCP server names** (`studio/pipeline/tests/test_spec.py:135`), so UUID/hyphen connectors can never be allowlisted.
-14. **"63 works" is stale everywhere** (INDEX.md:15, README.md:24, CLAUDE.md:30, `vault/00_INDEX.md:3`, museum README). Vault has ~138 works; 75 lack `_ChunkTags`. **Decision for author:** does the "certified verbatim, do not edit" rule cover all 138 or only the original 63?
-15. **Doc drift.** `run_pipeline.py:4-12` + `requirements.txt:6` say librarian is Ollama-only (it supports Gemini); `llm.py:22` points at nonexistent `Pipelines/README.md`; `sound-library/README.md:50-51` says 2,648/16 zips (actual 3,577/23); `docs/index.html:7,29` says "four tools" (7 shown); `IDEAS.md:124` "eight of ten" (12 entries); README layout misses 5 root skills + writing-museum/sound-library/hub/library/workflows; CLAUDE.md layout misses reach-research/references, render-pipeline, sound-library. Blender add-on button "Connect to MCP server" (`blender-mcp/SKILL.md:24`) vs "Start MCP Server" (`blender-gemini/README.md:27`).
-16. **HyperFrames is a phantom option** — offered in `questionnaire.py:65-66`, rejected by `cli.py:352`. Implement or remove.
-17. **Windows-hostile paths/commands:** `/tmp/` in `plugins/reach/skills/agent-reach/SKILL.md:74,130` and `video-editor/tests/test_doctor.py:76`; bash `export` in `blender-addons/README.md:13`; `manim-video/README.md:22` wrong upstream path + bash-only `setup.sh`.
-18. **assemble-3d only accepts `.glb/.gltf`** (`bpy/assemble_plan.py:179-187`); spec tool names (`spec.yaml:1248-1251`) don't match the official `mcp__Blender__*` server available now.
+6. ~~**video-editor fails on Windows.** No `encoding=` on read/write across `src/videoeditor/` (`questionnaire.py:158,166`, `cli.py:90,99,142,198`, `render.py:493,549,761`, `captions.py:54,142`, `pack.py:127`, `timeline.py:121`, `transcribe.py:108`, `ledger.py:21`, `package.py:77`, `publish/cli.py:35`); `fc-match` assumed (`captions.py:35`, `platform.py:18`). CI runs it on Linux only (`.github/workflows/verify.yml:66-74`). Fix, then add Windows/macOS to the matrix.~~ **DONE (B #26; verify)**
+7. ~~**Outdated model id.** `creative-writing/pipeline/llm.py:83` defaults to `claude-sonnet-5` → `claude-sonnet-5-5`. Make it configurable and documented.~~ **DONE (C #25; verify)**
+8. ~~**Anthropic backend truncation.** `llm.py:107-133` fixed `MAX_TOKENS=8000`, no `stop_reason` check, no retry/streaming; Ollama call 600 s no retry (`llm.py:152`).~~ **DONE (C #25; verify)**
+9. ~~**Uncaught JSON in vault integration.** `run_pipeline.py:~483-500` `json.loads`/`meta["title"]` on model output; `_run_and_advance` (`:590`) only catches `LLMError`/`VaultIntegrationError`. `_extract_idea_themes` (`:183-231`) misses bulleted themes.~~ **DONE (C #25; verify)**
+10. **Unpinned servers.** `plugins/blender/.mcp.json` `uvx mcp-for-blender` (docs/tests pinned to 2.2.6, `test_tool_names.py:145`); root `.mcp.json` `npx -y gemini-mcp-tool`. Pin and add a test that the pin matches. **[PARTLY DONE (B #26: blender and gemini pins + tests); install.py pin was a follow-up, verify]**
+11. **Compute gate is one-laptop-shaped.** `probe.py:190-193` treats only `nvidia-smi` as discrete (AMD/Arc read as integrated); `machine.yaml:26` refuses every class on any NVIDIA box; first GPU only (`probe.py:39`), `C:` only (`:48`); token TTL 1800 s (`machine.yaml:21`) can't cover long renders; one global token (`compute_gate.py:56`). **[PARTLY DONE (A #28: GPU detection, drive, per-class TTL, renew); machine.yaml still refuses any discrete GPU; single token kept]**
+12. ~~**scene-blender local branch unenforced** — `class: spend`, no `workload`, so `token_held` returns early (`studio_run.py:417`); `spec.yaml:1057` says "scene-3d" where it means scene-blender (also `IDEAS.md:136`).~~ **DONE (A #28; verify)**
+13. ~~**Spec test rejects hyphenated MCP server names** (`studio/pipeline/tests/test_spec.py:135`), so UUID/hyphen connectors can never be allowlisted.~~ **DONE (A #28; verify)**
+14. **"63 works" is stale everywhere** (INDEX.md:15, README.md:24, CLAUDE.md:30, `vault/00_INDEX.md:3`, museum README). Vault has ~138 works; 75 lack `_ChunkTags`. **Decision for author:** does the "certified verbatim, do not edit" rule cover all 138 or only the original 63? **[PARTLY DONE (C #25: descriptive counts reworded); verbatim-rule decision open; vault 00_INDEX.md and museum README untouched]**
+15. **Doc drift.** `run_pipeline.py:4-12` + `requirements.txt:6` say librarian is Ollama-only (it supports Gemini); `llm.py:22` points at nonexistent `Pipelines/README.md`; `sound-library/README.md:50-51` says 2,648/16 zips (actual 3,577/23); `docs/index.html:7,29` says "four tools" (7 shown); `IDEAS.md:124` "eight of ten" (12 entries); README layout misses 5 root skills + writing-museum/sound-library/hub/library/workflows; CLAUDE.md layout misses reach-research/references, render-pipeline, sound-library. Blender add-on button "Connect to MCP server" (`blender-mcp/SKILL.md:24`) vs "Start MCP Server" (`blender-gemini/README.md:27`). **[PARTLY DONE (C #25); Blender button label open; docs pages for sound-library, blender, blender-gemini, blender-addons, generations library still missing]**
+16. ~~**HyperFrames is a phantom option** — offered in `questionnaire.py:65-66`, rejected by `cli.py:352`. Implement or remove.~~ **DONE (B #26; verify)**
+17. **Windows-hostile paths/commands:** `/tmp/` in `plugins/reach/skills/agent-reach/SKILL.md:74,130` and `video-editor/tests/test_doctor.py:76`; bash `export` in `blender-addons/README.md:13`; `manim-video/README.md:22` wrong upstream path + bash-only `setup.sh`. **[PARTLY DONE (B #26); reach SKILL.md /tmp was a follow-up, verify; manim setup.sh still bash-only]**
+18. **assemble-3d only accepts `.glb/.gltf`** (`bpy/assemble_plan.py:179-187`); spec tool names (`spec.yaml:1248-1251`) don't match the official `mcp__Blender__*` server available now. **[DOCUMENTED ONLY (C #25); no code change]**
 
 ### P2 (quality)
 19. `brush` pipeline + `hub/brush/` designer missing; `brush_pack.py` never verified against Procreate; fixtures folder absent.
@@ -73,17 +102,17 @@ Pipelines declare capabilities; the recipe stage picks a provider and records it
 ## Part C — Optimize existing skills & agents
 
 **Skills**
-- Add `allowed-tools` to script-running skills (ui-design, video-editor, udgt, reach-setup, studio-pipeline).
-- Split long bodies into `references/`: `ui-design-catalog/SKILL.md` (265 lines), `manim-video/SKILL.md` (264), `ui-design-catalog-refresh` (179). Drop non-standard `version:` in manim-video.
-- Fix triggers: `agent-reach` "MUST USE" (`SKILL.md:3-19`) over-claims vs WebSearch/WebFetch and udgt-field-research; `ui-design-catalog` fires on any front-end change; `studio-pipeline` description (`SKILL.md:3`) omits still-image, video-shot, music-cue, edit-2d, scene-blender, brand-gate → under-triggers. Have it read the spec's unused `intent:` lists.
+- Add `allowed-tools` to script-running skills (ui-design, video-editor, udgt, reach-setup, studio-pipeline). **[FOLLOW-UP sent to D; verify in #27]**
+- ~~Split long bodies into `references/`: `ui-design-catalog/SKILL.md` (265 lines), `manim-video/SKILL.md` (264), `ui-design-catalog-refresh` (179). Drop non-standard `version:` in manim-video.~~ **DONE (D #27; verify)**
+- Fix triggers: `agent-reach` "MUST USE" (`SKILL.md:3-19`) over-claims vs WebSearch/WebFetch and udgt-field-research; `ui-design-catalog` fires on any front-end change; `studio-pipeline` description (`SKILL.md:3`) omits still-image, video-shot, music-cue, edit-2d, scene-blender, brand-gate → under-triggers. Have it read the spec's unused `intent:` lists. **[DONE except studio-pipeline `intent:` lists (D #27; verify)]**
 - Add worked examples (call + expected output) to udgt, blender, reach-setup skills.
-- Add slash commands (none exist in any plugin): `/ve-doctor`, `/blender-review`, `/reach-doctor`, `/ui-design-verify`, `/studio-status`.
+- Add slash commands (none exist in any plugin): `/ve-doctor`, `/blender-review`, `/reach-doctor`, `/ui-design-verify`, `/studio-status`. **[PARTLY DONE: /ve-doctor, /reach-doctor, /ui-design-verify, /studio-status; /blender-review not (D #27)]**
 - Add hooks: run `ve publish plan` before any send; block Write/Edit into `studio/vault/` and `creative-writing/vault/` originals (turns advisory rules into enforcement).
 - English translations of agent-reach references (currently Chinese, `SKILL.md:137`).
 
 **Agents** (none set `model:`; all 8 inherit)
-- Set models: haiku-class for `ui-design-search-part`, `creative-writing-chunk-tagger`, `creative-writing-librarian-native`; sonnet/opus-class for drafter, chapter-analyst, reviewers.
-- Fix drafter quietly reintroducing Ollama via Bash `librarian.py` (`creative-writing-drafter.md:44-46`).
+- ~~Set models: haiku-class for `ui-design-search-part`, `creative-writing-chunk-tagger`, `creative-writing-librarian-native`; sonnet/opus-class for drafter, chapter-analyst, reviewers.~~ **DONE (D #27; verify)**
+- ~~Fix drafter quietly reintroducing Ollama via Bash `librarian.py` (`creative-writing-drafter.md:44-46`).~~ **DONE (D #27; verify)**
 - **New agents** (all read-only, one-part-per-invocation like the ui-design pattern):
   - Creative writing: *style-mode linter*, *continuity checker* (project world facts + characters), *fact-checker* (against reach-research notes), *plot-logic critic* (judges ledger links `plot_logic.py` can only shape-check), *annotation writer*, *poetry pairing finder*.
   - Studio (planned in `IDEAS.md:163`, never built): *precedent condenser*, *recipe drafter*, *run reviewer*.
