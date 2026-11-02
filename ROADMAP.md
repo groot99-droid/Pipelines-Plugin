@@ -19,6 +19,11 @@ Findings cite paths relative to the repo root. Severity: **P0** broken/unsafe, *
 
 ---
 
+## ComfyUI 3D (2026-11-01)
+`studio/pipeline/comfy_client.py` runs `3d_pixal3d_trellis2_image_to_model.json` (moved to `studio/pipeline/comfy/workflows/pixal3d_trellis2_image_to_3d.json`) against a ComfyUI server. Built and tested against a fake server only. Open: run it against a real GPU machine (`check` first); wire it into the studio as a pipeline or a provider beside Meshy (B1/B2); decide where the GPU machine lives (this laptop has no CUDA).
+
+---
+
 ## Wave 1 status and review checklist (2026-11-01)
 Four Sonnet sessions worked items from this file. All four PRs are open and ready for review with CI green; none merged. Struck-through items below are done in a PR but not yet checked by a person; items marked PARTLY DONE keep their open remainder.
 
