@@ -223,6 +223,17 @@ the author names at a `scene-3d` intake, through `writing-museum/build/`.
   live-branch tool names in `spec.yaml` are those of `mcp-for-blender` 2.2.6; they have not been reconciled
   with the official `mcp__Blender__*` server (not checked in a live session), so treat them as unverified. Tests use a fake Meshy and skip the
   Blender run unless `blender` is on PATH or `ROSW_BPY_PYTHON` names a Python with `bpy`.
+- **ComfyUI 3D** (`studio/pipeline/comfy_client.py`, workflow in `studio/pipeline/comfy/workflows/`): one image to a
+  textured 3D model with Trellis 2 or Pixal3D through a ComfyUI server (`COMFY_URL`, default `http://127.0.0.1:8188`).
+  `check` audits the server's node classes and model files against the workflow; `plan` prints the changes and sends
+  nothing; `run` is a dry run unless `--confirm`, and writes only to `--out` with a `comfy_tasks.json` ledger (image
+  sha256, never a path or a link). A server on another machine needs `--allow-remote` and https, because the image is
+  sent to it. These models need a CUDA GPU and `machine.yaml` describes a laptop without one, so `COMFY_URL` has to name
+  a GPU machine; the compute gate describes this machine and is not consulted. It is **not yet a studio pipeline**: no
+  `spec.yaml` entry, so there is no run, go-ahead or `keep` around it. That wiring is roadmap B2 (a provider interface
+  beside `asset-3d`). The `BINDINGS` in the client name the workflow's node ids and are checked on load; re-export the
+  workflow and update them together. Nothing here has run against a real ComfyUI server: the tests use a fake one.
+  Tests: `python -m unittest discover -s studio/pipeline/tests -p "test_comfy_client.py"`.
 - The studio makes no brush file itself. Its `brush` pipeline (not yet
   implemented) will run through `brushes/`, the brush tool at the repo root.
 - Run the tests after touching the spec, a gate, `tokens.json`, `SCHEMA.md`, the
