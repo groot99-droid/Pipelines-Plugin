@@ -1,6 +1,6 @@
 ---
 name: creative-writing-pipeline
-description: Walk a new idea for this vault through the checkpointed multi-stage pipeline (intake, reference pull, outline, draft, self-revision, vault integration) instead of writing a finished piece in one shot. Use when the author wants to develop a new work for the vault from an idea, not when editing one of the 63 existing verbatim originals.
+description: Walk a new idea for this vault through the checkpointed multi-stage pipeline (intake, reference pull, outline, draft, self-revision, vault integration) instead of writing a finished piece in one shot. Use when the author wants to develop a new work for the vault from an idea, not when editing one of the 64 existing verbatim originals.
 ---
 
 # Creative-writing pipeline
@@ -8,7 +8,7 @@ description: Walk a new idea for this vault through the checkpointed multi-stage
 All paths in this file are relative to the **Pipelines repo root**, which is
 your working directory. The layout:
 
-- `creative-writing/vault/` — the Obsidian vault: the 63 works, `_Annotations/`,
+- `creative-writing/vault/` — the Obsidian vault: the 64 works, `_Annotations/`,
   `_ChunkTags/`, `_Idea_Library/`, `tools/`, and the vault's own `CLAUDE.md`.
 - `creative-writing/pipeline/` — this pipeline's scripts and `spec.yaml`.
 
@@ -216,6 +216,6 @@ references it, it doesn't replace it.
 
 ## What this skill does not do
 
-It does not touch any of the 63 original works — those are verbatim and
+It does not touch any of the 64 original works — those are verbatim and
 out of scope for this pipeline entirely (per CLAUDE.md's Purpose &
 scope). It only creates new pieces from a new idea.

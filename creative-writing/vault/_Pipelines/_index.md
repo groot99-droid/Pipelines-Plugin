@@ -44,12 +44,12 @@ Pipelines/                     the repo (not the Obsidian vault)
    **not** do on its own.
 3. Add a row to the table above.
 4. If it writes into this vault, say so explicitly in its note — anything that
-   can modify the 63 verbatim originals needs that stated in the open, and
+   can modify the 64 verbatim originals needs that stated in the open, and
    [[CLAUDE.md]] governs what it is allowed to touch.
 
 ## Related
 
-- [[00_INDEX.md|The Living Archive — Index]] — the 63 works these pipelines reference.
+- [[00_INDEX.md|The Living Archive — Index]] — the 64 works these pipelines reference.
 - [[_Idea_Library/_index|Idea Library]] — where pipeline output waits before integration.
 - [[CLAUDE.md]] — the voice and craft rules every pipeline has to respect.
 - [[OBSIDIAN.md]] — how this vault is set up as an Obsidian vault.

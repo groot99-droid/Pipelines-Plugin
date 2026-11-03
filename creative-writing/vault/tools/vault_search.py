@@ -182,7 +182,7 @@ def chunk_fingerprint(text, length=16):
 
 # --------------------------------------------------------------------------
 # Chunk-tag sidecars (_ChunkTags/) -- per-chunk plot/context/mood/motif
-# tags, kept OUT of the vault's own markdown (the 63 originals' bodies are
+# tags, kept OUT of the vault's own markdown (the 64 originals' bodies are
 # verbatim and untouched; frontmatter is file-level only, not per-chunk).
 # See _ChunkTags/vocabulary.yaml for the closed tag vocabulary.
 # --------------------------------------------------------------------------

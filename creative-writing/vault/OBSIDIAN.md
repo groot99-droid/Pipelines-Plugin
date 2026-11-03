@@ -1,6 +1,6 @@
 # This repo is an Obsidian vault
 
-63 works in plain markdown. Open the folder directly and everything —
+64 works in plain markdown. Open the folder directly and everything —
 `00_INDEX.md`'s links, the wikilinks, the folder structure — works as written.
 
 **Obsidian → Open folder as vault → this directory**
@@ -9,7 +9,7 @@ repo as one tool's data; open *this* folder, not the repo root, or Obsidian will
 try to index the pipeline's Python too.
 
 Nothing needs converting. The files are the vault; if you stop using Obsidian
-tomorrow you still have 63 markdown files.
+tomorrow you still have 64 markdown files.
 
 Start from [[00_INDEX.md|the index]]. The tooling that writes into this vault is
 mapped at [[_Pipelines/_index|Pipelines index]]; its staging area is

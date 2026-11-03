@@ -2,7 +2,7 @@
 
 ## Purpose & scope
 
-This file governs how Claude helps write **new** material in this vault — matching the author's voice at the sentence level and the plot/structure level, and knowing what to avoid. It does **not** license editing the works marked `origin: original` (58 of the 63 in `00_INDEX.md`): those are certified verbatim transcriptions from the master source documents. The author may allow grammar fixes, or ask for an update to a specific original; nothing else changes them. The other five of the 63 are `origin: derived` (author and AI together: the four archetype profiles in `10_Characters/02–05`) or `origin: auto-authored` (made through the pipeline: *The Creative Codex of the Mythic Architect*); those are not bound by the verbatim rule, but still are not edited unasked. Frontmatter was added above each file's `# Title` line, but the body below it is untouched. All craft commentary lives in the separate `_Annotations/` tree, never inline in the originals.
+This file governs how Claude helps write **new** material in this vault — matching the author's voice at the sentence level and the plot/structure level, and knowing what to avoid. It does **not** license editing the works marked `origin: original` (59 of the 64 in `00_INDEX.md`): 58 are certified verbatim transcriptions from the master source documents, and one, *Stop Asking For It, Ask For What It Takes*, is the author's own prose, added verbatim later. The author may allow grammar fixes, or ask for an update to a specific original; nothing else changes them. The other five of the 64 are `origin: derived` (author and AI together: the four archetype profiles in `10_Characters/02–05`) or `origin: auto-authored` (made through the pipeline: *The Creative Codex of the Mythic Architect*); those are not bound by the verbatim rule, but still are not edited unasked. Frontmatter was added above each file's `# Title` line, but the body below it is untouched. All craft commentary lives in the separate `_Annotations/` tree, never inline in the originals.
 
 ## Where this vault sits, and how to read the paths below
 
@@ -17,10 +17,10 @@ this vault, prefix it: `creative-writing/vault/tools/vault_search.py`.
 
 ## Vault navigation
 
-- [[00_INDEX.md]] — bibliographic ledger of all 63 works, now wikilinked.
+- [[00_INDEX.md]] — bibliographic ledger of all 64 works, now wikilinked.
 - `<folder>/_index.md` — one per numbered folder (e.g. [[02_Novels/_index]]), listing every file in that folder with a link to its companion annotation.
 - [[Vault_Overview.canvas]] — visual map: one group per style-mode, with cross-project edges (open in Obsidian).
-- `_Annotations/<folder>/<file>.md` — a companion craft-annotation note for every one of the 63 works, mirroring the folder structure.
+- `_Annotations/<folder>/<file>.md` — a companion craft-annotation note for every one of the 64 works, mirroring the folder structure.
 - [[_Craft/_index]] — cross-cutting craft notes: plot logic, and the liminal, psychedelic and cosmic registers. Analysis written with Claude, not the author's prose.
 
 ## Using `tools/vault_search.py`
@@ -52,8 +52,8 @@ Every work now carries YAML frontmatter above its `# Title` line:
 | `status` | draft / complete / fragment / outline |
 | `pov`, `tense` | as actually written — don't assume from mode |
 | `project` | set only when a file is explicitly part of a named series/world (e.g. `wyrmreach`, `creative-codex`) |
-| `register` | optional list (`liminal`, `psychedelic`, `cosmic`): the kind of world a *new* piece was written under. Written only when a register was used, never inferred, and it never changes `mode`. The 63 originals carry none. |
-| `origin` | who made it: `original` (the author alone, certified verbatim), `derived` (author and AI together) or `auto-authored` (made through the pipeline). Set on every work: the 63 from the master documents as listed above, and `auto-authored` on all the later ones (and on each new pipeline work). A work moves category only when the author says so. |
+| `register` | optional list (`liminal`, `psychedelic`, `cosmic`): the kind of world a *new* piece was written under. Written only when a register was used, never inferred, and it never changes `mode`. The 64 works in `00_INDEX.md` carry none. |
+| `origin` | who made it: `original` (the author alone, certified verbatim), `derived` (author and AI together) or `auto-authored` (made through the pipeline). Set on every work: the 64 in `00_INDEX.md` as listed above (63 from the master documents, one the author added later), and `auto-authored` on the later pipeline works (and on each new one). A later work the author hands over as their own prose, kept verbatim, is `original`, has no `source_volume`, and joins `00_INDEX.md`. A work moves category only when the author says so. |
 | `source_volume`, `source_lines` | provenance back to the master documents |
 | `tags` | nested `type/…`, `mode/…`, `theme/…`, `project/…`, `status/…`, `archetype/…` for the Tag pane/Graph/Bases |
 | `attachments` | reserved for future non-markdown assets; empty today |
@@ -122,7 +122,7 @@ Applies to stories: `horror-prose`, `epic-fantasy`, and any piece written under 
 
 ## Companion annotation notes as worked examples
 
-Every one of the 63 works has a companion note at `_Annotations/<folder>/<file>.md` with genuine, specific craft analysis (not templated). Use the folder MOCs to browse them; use `tools/vault_search.py` to find one by topic/pattern rather than guessing a path.
+Every one of the 64 works has a companion note at `_Annotations/<folder>/<file>.md` with genuine, specific craft analysis (not templated). Use the folder MOCs to browse them; use `tools/vault_search.py` to find one by topic/pattern rather than guessing a path.
 
 ## Maintenance
 

@@ -1,6 +1,6 @@
 # The Living Archive — Index
 
-**63 works**, split out of 6 source files. Every file below is complete and verbatim.
+**64 works**: 63 split out of 6 source files, and one the author added later. Every file below is complete and verbatim.
 
 See also: [[Vault_Overview.canvas|Vault Overview canvas]] (visual map by style-mode) and [[CLAUDE.md]] (voice/craft guide for new writing).
 
@@ -177,7 +177,7 @@ MOC: [[09_Dream_Journal/_index|Dream Journal index]]
 57. **[[09_Dream_Journal/02_Trip_Tracker_-_July_Fourteenth_2023|Trip Tracker - July Fourteenth 2023]]** — Vision record / seven phases + symbolic index — filed under the same "Creative Codex" as [[11_Essays/04_The_Creative_Codex_of_the_Mythic_Architect|The Creative Codex of the Mythic Architect]]
    <sub>`Master_Volume_1`, lines 4074–4109</sub>
 
-## Essays  (6)
+## Essays  (7)
 
 MOC: [[11_Essays/_index|Essays index]]
 
@@ -193,12 +193,16 @@ MOC: [[11_Essays/_index|Essays index]]
    <sub>`Master_Volume_2`, lines 108–115</sub>
 63. **[[11_Essays/07_Shoot_for_the_Moon|Shoot for the Moon]]** — Aphorisms and reflections
    <sub>`Master_Volume_2`, lines 116–147</sub>
+64. **[[11_Essays/08_Stop_Asking_For_It_Ask_For_What_It_Takes|Stop Asking For It, Ask For What It Takes]]** — Personal essay, a chapter of the Who Did It book
+   <sub>given by the author, 2026-11-03</sub>
 
 ---
 
 ## Provenance and verification
 
-The six source files were cut at title boundaries into contiguous segments. Each file above is one such segment, reproduced verbatim.
+The six source files were cut at title boundaries into contiguous segments. Each of the first 63 files above is one such segment, reproduced verbatim.
+
+**Added later by the author.** *Stop Asking For It, Ask For What It Takes* (64) has no master-document source: the author gave it on 2026-11-03 and it is kept verbatim. The only change is a blank line between its paragraphs, which the pasted text separated with single line breaks.
 
 **Verified, not assumed.** The splitter asserts a byte-exact partition of each source before writing anything. A separate line-for-line audit confirms every output line is either identical to its source line, or that same line plus two trailing spaces — the markdown hard-break marker that keeps poem and lyric line breaks from collapsing when rendered. Zero anomalies.
 
@@ -210,4 +214,4 @@ The six source files were cut at title boundaries into contiguous segments. Each
 
 Line ranges in each file header point back to the exact span of the original, so any file can be traced to source.
 
-**A note on this index vs. the works themselves.** This file, unlike the 63 works it lists, is a living navigation aid, not a verbatim artifact — its wikilinks, the per-folder MOC references, and the cross-references above (Wyrmreach, the Cycle of Us/Narrative Voice pair, the Creative Codex) were added after the fact to make the vault navigable in Obsidian. They do not change or annotate the works themselves.
+**A note on this index vs. the works themselves.** This file, unlike the 64 works it lists, is a living navigation aid, not a verbatim artifact — its wikilinks, the per-folder MOC references, and the cross-references above (Wyrmreach, the Cycle of Us/Narrative Voice pair, the Creative Codex) were added after the fact to make the vault navigable in Obsidian. They do not change or annotate the works themselves.

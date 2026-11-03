@@ -718,7 +718,7 @@
       "x": 0,
       "y": 3348,
       "width": 1908,
-      "height": 604,
+      "height": 720,
       "label": "Essay / Self-Help Mode",
       "color": "#d22d4f"
     },
@@ -728,8 +728,8 @@
       "x": 30,
       "y": 3418,
       "width": 1084,
-      "height": 292,
-      "label": "Essay (6)",
+      "height": 408,
+      "label": "Essay (7)",
       "color": "#cc89d2"
     },
     {
@@ -760,10 +760,19 @@
       "height": 100
     },
     {
+      "id": "n_11_Essays_08_Stop_Asking_For_It_Ask_For_What_It_Takes_md",
+      "type": "file",
+      "file": "11_Essays/08_Stop_Asking_For_It_Ask_For_What_It_Takes.md",
+      "x": 46,
+      "y": 3578,
+      "width": 340,
+      "height": 100
+    },
+    {
       "id": "n_11_Essays_02_The_Architecture_of_Being_md",
       "type": "file",
       "file": "11_Essays/02_The_Architecture_of_Being.md",
-      "x": 46,
+      "x": 402,
       "y": 3578,
       "width": 340,
       "height": 100
@@ -772,7 +781,7 @@
       "id": "n_11_Essays_04_The_Creative_Codex_of_the_Mythic_Architect_md",
       "type": "file",
       "file": "11_Essays/04_The_Creative_Codex_of_the_Mythic_Architect.md",
-      "x": 402,
+      "x": 758,
       "y": 3578,
       "width": 340,
       "height": 100
@@ -781,8 +790,8 @@
       "id": "n_11_Essays_03_What_is_The_Power_of_Art_md",
       "type": "file",
       "file": "11_Essays/03_What_is_The_Power_of_Art.md",
-      "x": 758,
-      "y": 3578,
+      "x": 46,
+      "y": 3694,
       "width": 340,
       "height": 100
     },
@@ -836,7 +845,7 @@
       "id": "sgrp_essay_self_help_book",
       "type": "group",
       "x": 30,
-      "y": 3746,
+      "y": 3862,
       "width": 372,
       "height": 176,
       "label": "Book (1)",
@@ -847,7 +856,7 @@
       "type": "file",
       "file": "01_Books/01_The_First_Friend.md",
       "x": 46,
-      "y": 3790,
+      "y": 3906,
       "width": 340,
       "height": 100
     },
@@ -855,7 +864,7 @@
       "id": "grp_confessional_poetry",
       "type": "group",
       "x": 0,
-      "y": 4172,
+      "y": 4288,
       "width": 1500,
       "height": 1840,
       "label": "Confessional-Poetry Mode",
@@ -865,7 +874,7 @@
       "id": "sgrp_confessional_poetry_poem",
       "type": "group",
       "x": 30,
-      "y": 4242,
+      "y": 4358,
       "width": 1440,
       "height": 524,
       "label": "Poem (16)",
@@ -876,7 +885,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/03_Am_I_Me_Enough.md",
       "x": 46,
-      "y": 4286,
+      "y": 4402,
       "width": 340,
       "height": 100
     },
@@ -885,7 +894,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/12_Darkness.md",
       "x": 402,
-      "y": 4286,
+      "y": 4402,
       "width": 340,
       "height": 100
     },
@@ -894,7 +903,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/11_For_My_Papa.md",
       "x": 758,
-      "y": 4286,
+      "y": 4402,
       "width": 340,
       "height": 100
     },
@@ -903,7 +912,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/15_From_Ashes_to_Ascendancy.md",
       "x": 1114,
-      "y": 4286,
+      "y": 4402,
       "width": 340,
       "height": 100
     },
@@ -912,7 +921,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/02_Growing_Up.md",
       "x": 46,
-      "y": 4402,
+      "y": 4518,
       "width": 340,
       "height": 100
     },
@@ -921,7 +930,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/23_Hopscotch.md",
       "x": 402,
-      "y": 4402,
+      "y": 4518,
       "width": 340,
       "height": 100
     },
@@ -930,7 +939,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/17_How_It_Is.md",
       "x": 758,
-      "y": 4402,
+      "y": 4518,
       "width": 340,
       "height": 100
     },
@@ -939,7 +948,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/05_Inherited.md",
       "x": 1114,
-      "y": 4402,
+      "y": 4518,
       "width": 340,
       "height": 100
     },
@@ -948,7 +957,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/14_Love.md",
       "x": 46,
-      "y": 4518,
+      "y": 4634,
       "width": 340,
       "height": 100
     },
@@ -957,7 +966,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/18_My_Wish.md",
       "x": 402,
-      "y": 4518,
+      "y": 4634,
       "width": 340,
       "height": 100
     },
@@ -966,7 +975,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/13_Past_Present_and_Future.md",
       "x": 758,
-      "y": 4518,
+      "y": 4634,
       "width": 340,
       "height": 100
     },
@@ -975,7 +984,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/09_The_Knife_I_Chose.md",
       "x": 1114,
-      "y": 4518,
+      "y": 4634,
       "width": 340,
       "height": 100
     },
@@ -984,7 +993,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/10_The_Stripes_Remain.md",
       "x": 46,
-      "y": 4634,
+      "y": 4750,
       "width": 340,
       "height": 100
     },
@@ -993,7 +1002,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/19_The_Suns_Bright_Light.md",
       "x": 402,
-      "y": 4634,
+      "y": 4750,
       "width": 340,
       "height": 100
     },
@@ -1002,7 +1011,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/08_The_Unfamiliar.md",
       "x": 758,
-      "y": 4634,
+      "y": 4750,
       "width": 340,
       "height": 100
     },
@@ -1011,7 +1020,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/06_Was_I_Good_Enough.md",
       "x": 1114,
-      "y": 4634,
+      "y": 4750,
       "width": 340,
       "height": 100
     },
@@ -1019,7 +1028,7 @@
       "id": "sgrp_confessional_poetry_prose_poem",
       "type": "group",
       "x": 30,
-      "y": 4802,
+      "y": 4918,
       "width": 1440,
       "height": 408,
       "label": "Prose Poem (12)",
@@ -1030,7 +1039,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/30_Eight_Phrases.md",
       "x": 46,
-      "y": 4846,
+      "y": 4962,
       "width": 340,
       "height": 100
     },
@@ -1039,7 +1048,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/07_In_Search_Of_Truth.md",
       "x": 402,
-      "y": 4846,
+      "y": 4962,
       "width": 340,
       "height": 100
     },
@@ -1048,7 +1057,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/25_Resin_Seal.md",
       "x": 758,
-      "y": 4846,
+      "y": 4962,
       "width": 340,
       "height": 100
     },
@@ -1057,7 +1066,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/27_Sayings_of_the_Fork.md",
       "x": 1114,
-      "y": 4846,
+      "y": 4962,
       "width": 340,
       "height": 100
     },
@@ -1066,7 +1075,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/24_The_Apostate_the_Stowaway_the_Starving.md",
       "x": 46,
-      "y": 4962,
+      "y": 5078,
       "width": 340,
       "height": 100
     },
@@ -1075,7 +1084,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/22_The_Daybook_of_Crumb_s_Ovens.md",
       "x": 402,
-      "y": 4962,
+      "y": 5078,
       "width": 340,
       "height": 100
     },
@@ -1084,7 +1093,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/31_The_Dream_Book.md",
       "x": 758,
-      "y": 4962,
+      "y": 5078,
       "width": 340,
       "height": 100
     },
@@ -1093,7 +1102,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/29_The_Lavender_Field.md",
       "x": 1114,
-      "y": 4962,
+      "y": 5078,
       "width": 340,
       "height": 100
     },
@@ -1102,7 +1111,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/01_Trips_Are_Like_Exes.md",
       "x": 46,
-      "y": 5078,
+      "y": 5194,
       "width": 340,
       "height": 100
     },
@@ -1111,7 +1120,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/26_What_the_Dish_Pit_Knows.md",
       "x": 402,
-      "y": 5078,
+      "y": 5194,
       "width": 340,
       "height": 100
     },
@@ -1120,7 +1129,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/04_When_You_Know_to_Much.md",
       "x": 758,
-      "y": 5078,
+      "y": 5194,
       "width": 340,
       "height": 100
     },
@@ -1129,7 +1138,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/28_Will_o.md",
       "x": 1114,
-      "y": 5078,
+      "y": 5194,
       "width": 340,
       "height": 100
     },
@@ -1137,7 +1146,7 @@
       "id": "sgrp_confessional_poetry_song",
       "type": "group",
       "x": 30,
-      "y": 5246,
+      "y": 5362,
       "width": 1084,
       "height": 408,
       "label": "Song (7)",
@@ -1148,7 +1157,7 @@
       "type": "file",
       "file": "06_Songs/06_Ballad_of_the_Iron_Beast.md",
       "x": 46,
-      "y": 5290,
+      "y": 5406,
       "width": 340,
       "height": 100
     },
@@ -1157,7 +1166,7 @@
       "type": "file",
       "file": "06_Songs/12_Don_t_Miss_the_Train.md",
       "x": 402,
-      "y": 5290,
+      "y": 5406,
       "width": 340,
       "height": 100
     },
@@ -1166,7 +1175,7 @@
       "type": "file",
       "file": "06_Songs/08_I_Want_to_Hang.md",
       "x": 758,
-      "y": 5290,
+      "y": 5406,
       "width": 340,
       "height": 100
     },
@@ -1175,7 +1184,7 @@
       "type": "file",
       "file": "06_Songs/10_Shanty_for_the_Morning_Ferry.md",
       "x": 46,
-      "y": 5406,
+      "y": 5522,
       "width": 340,
       "height": 100
     },
@@ -1184,7 +1193,7 @@
       "type": "file",
       "file": "06_Songs/11_Six_Things_a_Hand_Can_Make.md",
       "x": 402,
-      "y": 5406,
+      "y": 5522,
       "width": 340,
       "height": 100
     },
@@ -1193,7 +1202,7 @@
       "type": "file",
       "file": "06_Songs/07_Tenfold.md",
       "x": 758,
-      "y": 5406,
+      "y": 5522,
       "width": 340,
       "height": 100
     },
@@ -1202,7 +1211,7 @@
       "type": "file",
       "file": "06_Songs/09_The_Blade_Sings_at_Dawn.md",
       "x": 46,
-      "y": 5522,
+      "y": 5638,
       "width": 340,
       "height": 100
     },
@@ -1210,7 +1219,7 @@
       "id": "sgrp_confessional_poetry_letter",
       "type": "group",
       "x": 30,
-      "y": 5690,
+      "y": 5806,
       "width": 1084,
       "height": 292,
       "label": "Letter (5)",
@@ -1221,7 +1230,7 @@
       "type": "file",
       "file": "08_Letters/04_Black_Wax.md",
       "x": 46,
-      "y": 5734,
+      "y": 5850,
       "width": 340,
       "height": 100
     },
@@ -1230,7 +1239,7 @@
       "type": "file",
       "file": "08_Letters/03_Censored.md",
       "x": 402,
-      "y": 5734,
+      "y": 5850,
       "width": 340,
       "height": 100
     },
@@ -1239,7 +1248,7 @@
       "type": "file",
       "file": "08_Letters/02_Five_Letters_at_the_Fork.md",
       "x": 758,
-      "y": 5734,
+      "y": 5850,
       "width": 340,
       "height": 100
     },
@@ -1248,7 +1257,7 @@
       "type": "file",
       "file": "08_Letters/05_One_Shot.md",
       "x": 46,
-      "y": 5850,
+      "y": 5966,
       "width": 340,
       "height": 100
     },
@@ -1257,7 +1266,7 @@
       "type": "file",
       "file": "08_Letters/06_The_Red_Crust.md",
       "x": 402,
-      "y": 5850,
+      "y": 5966,
       "width": 340,
       "height": 100
     },
@@ -1265,7 +1274,7 @@
       "id": "grp_unclassified",
       "type": "group",
       "x": 0,
-      "y": 6232,
+      "y": 6348,
       "width": 1960,
       "height": 1028,
       "label": "Unclassified / Mixed",
@@ -1275,7 +1284,7 @@
       "id": "sgrp_unclassified_book_concept",
       "type": "group",
       "x": 30,
-      "y": 6302,
+      "y": 6418,
       "width": 728,
       "height": 292,
       "label": "Book Concept (4)",
@@ -1286,7 +1295,7 @@
       "type": "file",
       "file": "04_Book_Concepts/06_A_9-5_Could_Kill_You.md",
       "x": 46,
-      "y": 6346,
+      "y": 6462,
       "width": 340,
       "height": 100
     },
@@ -1295,7 +1304,7 @@
       "type": "file",
       "file": "04_Book_Concepts/05_Chasing_Cold_Clues.md",
       "x": 402,
-      "y": 6346,
+      "y": 6462,
       "width": 340,
       "height": 100
     },
@@ -1304,7 +1313,7 @@
       "type": "file",
       "file": "04_Book_Concepts/07_Narrative_Voice.md",
       "x": 46,
-      "y": 6462,
+      "y": 6578,
       "width": 340,
       "height": 100
     },
@@ -1313,7 +1322,7 @@
       "type": "file",
       "file": "04_Book_Concepts/08_The_Show_Must_Go_On.md",
       "x": 402,
-      "y": 6462,
+      "y": 6578,
       "width": 340,
       "height": 100
     },
@@ -1321,7 +1330,7 @@
       "id": "sgrp_unclassified_story",
       "type": "group",
       "x": 794,
-      "y": 6302,
+      "y": 6418,
       "width": 728,
       "height": 292,
       "label": "Story (4)",
@@ -1332,7 +1341,7 @@
       "type": "file",
       "file": "03_Stories/01_A_Journey_Into_the_Soul.md",
       "x": 810,
-      "y": 6346,
+      "y": 6462,
       "width": 340,
       "height": 100
     },
@@ -1341,7 +1350,7 @@
       "type": "file",
       "file": "03_Stories/04_Internal_Affairs_-_The_Body_Has_Notes.md",
       "x": 1166,
-      "y": 6346,
+      "y": 6462,
       "width": 340,
       "height": 100
     },
@@ -1350,7 +1359,7 @@
       "type": "file",
       "file": "03_Stories/03_The_Yellow_Drop_and_The_Plain_Before_Sound.md",
       "x": 810,
-      "y": 6462,
+      "y": 6578,
       "width": 340,
       "height": 100
     },
@@ -1359,7 +1368,7 @@
       "type": "file",
       "file": "03_Stories/05_Two_Takes_-_Stage_Left_Stage_Right.md",
       "x": 1166,
-      "y": 6462,
+      "y": 6578,
       "width": 340,
       "height": 100
     },
@@ -1367,7 +1376,7 @@
       "id": "sgrp_unclassified_dream_journal",
       "type": "group",
       "x": 30,
-      "y": 6630,
+      "y": 6746,
       "width": 728,
       "height": 176,
       "label": "Dream Journal (2)",
@@ -1378,7 +1387,7 @@
       "type": "file",
       "file": "09_Dream_Journal/01_Dream_Journal.md",
       "x": 46,
-      "y": 6674,
+      "y": 6790,
       "width": 340,
       "height": 100
     },
@@ -1387,7 +1396,7 @@
       "type": "file",
       "file": "09_Dream_Journal/02_Trip_Tracker_-_July_Fourteenth_2023.md",
       "x": 402,
-      "y": 6674,
+      "y": 6790,
       "width": 340,
       "height": 100
     },
@@ -1395,7 +1404,7 @@
       "id": "sgrp_unclassified_novel",
       "type": "group",
       "x": 794,
-      "y": 6630,
+      "y": 6746,
       "width": 728,
       "height": 176,
       "label": "Novel (2)",
@@ -1406,7 +1415,7 @@
       "type": "file",
       "file": "02_Novels/04_The_Cycle_of_Us.md",
       "x": 810,
-      "y": 6674,
+      "y": 6790,
       "width": 340,
       "height": 100
     },
@@ -1415,7 +1424,7 @@
       "type": "file",
       "file": "02_Novels/03_Through_the_Eyes_of_Wolf_and_Lamb.md",
       "x": 1166,
-      "y": 6674,
+      "y": 6790,
       "width": 340,
       "height": 100
     },
@@ -1423,7 +1432,7 @@
       "id": "sgrp_unclassified_poem",
       "type": "group",
       "x": 30,
-      "y": 6842,
+      "y": 6958,
       "width": 728,
       "height": 176,
       "label": "Poem (2)",
@@ -1434,7 +1443,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/20_Taking_All_From_the_Rich.md",
       "x": 46,
-      "y": 6886,
+      "y": 7002,
       "width": 340,
       "height": 100
     },
@@ -1443,7 +1452,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/21_Todays_Wine.md",
       "x": 402,
-      "y": 6886,
+      "y": 7002,
       "width": 340,
       "height": 100
     },
@@ -1451,7 +1460,7 @@
       "id": "sgrp_unclassified_song",
       "type": "group",
       "x": 794,
-      "y": 6842,
+      "y": 6958,
       "width": 728,
       "height": 176,
       "label": "Song (2)",
@@ -1462,7 +1471,7 @@
       "type": "file",
       "file": "06_Songs/04_Cable_Construction_Circus.md",
       "x": 810,
-      "y": 6886,
+      "y": 7002,
       "width": 340,
       "height": 100
     },
@@ -1471,7 +1480,7 @@
       "type": "file",
       "file": "06_Songs/05_How_i_feel.md",
       "x": 1166,
-      "y": 6886,
+      "y": 7002,
       "width": 340,
       "height": 100
     },
@@ -1479,7 +1488,7 @@
       "id": "sgrp_unclassified_letter",
       "type": "group",
       "x": 1558,
-      "y": 6842,
+      "y": 6958,
       "width": 372,
       "height": 176,
       "label": "Letter (1)",
@@ -1490,7 +1499,7 @@
       "type": "file",
       "file": "08_Letters/01_Dear_Katie.md",
       "x": 1574,
-      "y": 6886,
+      "y": 7002,
       "width": 340,
       "height": 100
     },
@@ -1498,7 +1507,7 @@
       "id": "sgrp_unclassified_prose_poem",
       "type": "group",
       "x": 30,
-      "y": 7054,
+      "y": 7170,
       "width": 372,
       "height": 176,
       "label": "Prose Poem (1)",
@@ -1509,7 +1518,7 @@
       "type": "file",
       "file": "07_Poems_and_Prose/16_A_Crown_Without_a_Kingdom.md",
       "x": 46,
-      "y": 7098,
+      "y": 7214,
       "width": 340,
       "height": 100
     },
@@ -1517,7 +1526,7 @@
       "id": "sgrp_unclassified_worldbuilding",
       "type": "group",
       "x": 438,
-      "y": 7054,
+      "y": 7170,
       "width": 372,
       "height": 176,
       "label": "Worldbuilding (1)",
@@ -1528,7 +1537,7 @@
       "type": "file",
       "file": "05_Worldbuilding/01_People_of_the_Bark.md",
       "x": 454,
-      "y": 7098,
+      "y": 7214,
       "width": 340,
       "height": 100
     }
@@ -1992,6 +2001,12 @@
     },
     {
       "id": "e_77",
+      "fromNode": "n_10_Characters_13_The_Two_Roads_md",
+      "toNode": "n_11_Essays_08_Stop_Asking_For_It_Ask_For_What_It_Takes_md",
+      "label": "who-did-it"
+    },
+    {
+      "id": "e_78",
       "fromNode": "n_09_Dream_Journal_02_Trip_Tracker_July_Fourteenth_2023_md",
       "toNode": "n_11_Essays_04_The_Creative_Codex_of_the_Mythic_Architect_md",
       "label": "creative-codex"
