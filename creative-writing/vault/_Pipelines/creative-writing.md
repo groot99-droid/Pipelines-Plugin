@@ -56,7 +56,7 @@ integration.
 - **It will not write to the vault without explicit confirmation.** The
   integration stage prints a dry-run preview unless it is given `--confirm`
   (the skill asks for approval at the same point). Keep it that way.
-- **It will not touch the 63 originals.** Those are certified verbatim
+- **It will not touch the 64 originals.** Those are certified verbatim
   transcriptions; the pipeline only adds new files.
 - **It will not guess a mode.** `unclassified` is deliberately a stub — for a
   piece that isn't one of the four modes, it asks which register you want.

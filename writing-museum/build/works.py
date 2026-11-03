@@ -4,7 +4,7 @@ Modelled on the Chronicle Museum's `people_entries.py`: one entry per work in th
 viewer already reads (an "artist" whose "works" hang on the walls). Here the artist is the work
 and its works are PASSAGES: the chunks that `creative-writing/vault/tools/vault_search.py` cuts
 the body into, each a verbatim text panel with the plot, context, mood and motif tags its
-`_ChunkTags/` sidecar carries. Nothing in the vault is written; the 63 originals stay verbatim.
+`_ChunkTags/` sidecar carries. Nothing in the vault is written; the 64 originals stay verbatim.
 
 A panel's size in metres follows its text: a fixed width for prose or verse and a height from
 the wrapped line count at the viewer's panel typography (web/js/procroom.js panelTexture), so the

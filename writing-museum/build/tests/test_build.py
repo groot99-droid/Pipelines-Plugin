@@ -348,9 +348,9 @@ class Library(TempVault):
 class RealVault(unittest.TestCase):
     """Read-only: the proposal path on the real vault, for one work of each mode."""
 
-    def test_the_library_lists_the_63_works_and_every_scene_is_one_of_them(self):
+    def test_the_library_lists_the_64_works_and_every_scene_is_one_of_them(self):
         rels = library.list_works(REAL_VAULT)
-        # The 63 certified transcriptions carry a source_volume; works the pipeline adds later carry none.
+        # The 63 transcriptions from the master documents carry a source_volume; works added later carry none.
         originals = [rel for rel in rels
                      if re.search(r"^source_volume:\s*\S", (REAL_VAULT / rel).read_text(encoding="utf-8"), re.M)]
         self.assertEqual(len(originals), 63)
@@ -360,8 +360,19 @@ class RealVault(unittest.TestCase):
         self.assertEqual(counts, {"original": 58, "derived": 4, "auto-authored": 1})
         later = [rel for rel in rels if rel not in originals]
         self.assertTrue(later)
-        for rel in later:
-            self.assertRegex((REAL_VAULT / rel).read_text(encoding="utf-8"), r"(?m)^origin:\s*auto-authored\s*$", rel)
+        later_origin = {rel: re.search(r"(?m)^origin:\s*(\S+)\s*$", (REAL_VAULT / rel).read_text(encoding="utf-8"))
+                        for rel in later}
+        for rel, m in later_origin.items():
+            # Later works are pipeline-made, or the author's own prose handed over verbatim.
+            self.assertTrue(m and m.group(1) in ("auto-authored", "original"), rel)
+        # The ledger in 00_INDEX.md: the 63 from the master documents plus the originals the author added later.
+        added = sorted(rel for rel, m in later_origin.items() if m.group(1) == "original")
+        self.assertEqual(added, ["11_Essays/08_Stop_Asking_For_It_Ask_For_What_It_Takes.md"])
+        self.assertEqual(counts["original"] + len(added), 59)
+        index = (REAL_VAULT / "00_INDEX.md").read_text(encoding="utf-8")
+        self.assertIn("**64 works**", index)
+        for rel in added:
+            self.assertIn("[[" + rel[:-3] + "|", index, rel)
         self.assertTrue(all(rel.endswith(".md") and not rel.endswith("_index.md") for rel in rels))
         scenes = build_museum.SCENES
         if scenes.is_dir():

@@ -16,7 +16,7 @@ next. [SCHEMA.md](SCHEMA.md) defines the note.
 Notes are written by the author, in Obsidian, and by pipelines, through
 `studio/pipeline/content_md.py`. Nothing else writes here.
 
-This vault is separate from `creative-writing/vault/`. That vault holds 63
+This vault is separate from `creative-writing/vault/`. That vault holds 64
 verbatim works under its own rules and is not touched from here.
 
 ## The prime rule

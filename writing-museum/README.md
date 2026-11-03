@@ -37,7 +37,7 @@ the Chronicle Museum's URL flags and mean the same here.
 ## The library
 
 `web/explore.html` is the flat side of the museum: a page to read through the works and look
-through the scenes without walking. The **Works** view is a shelf of all 63 works, in the vault's
+through the scenes without walking. The **Works** view is a shelf of all the vault's works, in the vault's
 own folders, with a search over titles, themes and the text, a mode and folder filter, and a
 reader that shows the chosen work's frontmatter, the blurb its folder's `_index.md` gives it, and
 its passages, verbatim, cut as the vault's search tool cuts them, each cited to its file lines and
@@ -110,7 +110,7 @@ off; the placard test ignores the `*` of italics. Both are worth carrying back t
 
 ## What it does not do
 
-- It never writes into `creative-writing/vault/`. The 63 works stay verbatim; a panel shows a
+- It never writes into `creative-writing/vault/`. The 64 works stay verbatim; a panel shows a
   passage and cites its path and lines.
 - It never writes into `studio/vault/`. The note is written by the run, through `content_md.py`.
 - `data/scenes/` is not edited by hand. A scene spec is written by a `scene-3d` run at execute,

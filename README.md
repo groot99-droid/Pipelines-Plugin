@@ -24,7 +24,7 @@ blender-addons/        tool manifests for the author's own Blender add-ons (see 
 blender-gemini/        installer and tests that register the Blender MCP server
                        with the Gemini CLI; its skill is blender-gemini
 creative-writing/
-  vault/               the Obsidian vault: about 150 notes (63 original
+  vault/               the Obsidian vault: about 150 notes (64 original
                        certified works plus later additions), _Annotations/,
                        _ChunkTags/, _Idea_Library/, tools/, CLAUDE.md
   pipeline/            the checkpointed pipeline that writes into that vault

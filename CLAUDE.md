@@ -34,7 +34,7 @@ blender-addons/      manifests/ (tools for the author's own Blender add-ons, rea
 blender-gemini/      install.py (registers the Blender MCP server with the Gemini CLI,
                      and checks the chain), tests/, README.md
 creative-writing/    the creative-writing tool
-  vault/             the Obsidian vault — the 63 original certified works plus
+  vault/             the Obsidian vault — the 64 original certified works plus
                      later additions (about 150 notes), annotations, chunk tags,
                      idea library, and the vault's own search tooling
   pipeline/          the checkpointed pipeline that writes into that vault
@@ -118,7 +118,7 @@ may contain it. `validate-contract.py` enforces both, and fails on any hard-code
 **`creative-writing/vault/CLAUDE.md` is authoritative** for anything that writes
 creative prose: the four style modes and their sentence- and structure-level
 rules, the anti-style do-not list, the frontmatter schema, the ethical-restraint
-precedent, and the rule that the 63 existing works are certified verbatim
+precedent, and the rule that the 64 existing works are certified verbatim
 transcriptions that are **not** to be edited. Read it in full before writing or
 revising any creative material — this file does not summarize or replace it, and
 `creative-writing/pipeline/spec.yaml` points back to it too.
@@ -146,7 +146,7 @@ Do not duplicate its rules here. If the writing rules change, they change there.
   ledger in `_Craft/` against its declared verdict and every quotation in it against
   the vault, so editing a craft note can fail them; that is the point.
 - `_Craft/` notes are analysis written with Claude, not the author's prose. Do not
-  present them as the author's voice, and do not edit the 63 originals to fit them.
+  present them as the author's voice, and do not edit the 64 originals to fit them.
 - **Keys live outside the repo**, in `~/.rosw/keys.env` (or `ROSW_KEYS_FILE`).
   `python docs/setup_keys.py` writes it from a local page; `llm.py` reads it, and still
   reads a legacy `creative-writing/pipeline/.env` if one exists (`--migrate` moves it).
@@ -280,7 +280,7 @@ panels cited by vault path and lines.
   a branch" source publishes `docs/` alone and drops `museum/`.
 - Tests: `python -m unittest discover -s writing-museum/build/tests`. They run on a
   temporary vault, and read the real one only to check the ten-work path.
-- It reads `creative-writing/vault/` and never writes it. The 63 works stay verbatim;
+- It reads `creative-writing/vault/` and never writes it. The 64 works stay verbatim;
   the transcription header above a work's text is left off its panels.
 - `web/` stays the Chronicle Museum's viewer with the edits the README lists. Bring a
   fix from that repo over as a copy, and note it there.
@@ -354,7 +354,7 @@ game's specifics live in that game's `teardowns/<slug>/profile.json`, never in t
 - `udgt.py scan` reads the game checkout (a sibling clone, `--game`, or `UDGT_GAME`) and its git log,
   and writes only `teardown.json`. It never writes into the game, and it runs none of its code.
 - The Who Did It profile's `lore` also reads the works in `creative-writing/vault/` whose frontmatter says
-  `project: who-did-it` (the owner named them the game's upcoming lore). It only reads them; the 63 originals
+  `project: who-did-it` (the owner named them the game's upcoming lore). It only reads them; the 64 originals
   and every work stay as they are.
 - `answers.json` is the owner's word: only `udgt.py record` appends to it, verbatim, after the owner
   answered a brief. Never edit an answer, and never write one the owner did not give.
