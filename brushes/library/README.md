@@ -13,8 +13,9 @@ library/
   user/<pack_id>/_docs/                    optional: a pack's documents (ignored by git)
 ```
 
-`user/` is adopted: 72 brush files in 19 packs. `official/` is not there until
-the fetch has run:
+`user/` is adopted: 72 brush files in 19 packs. `official/` holds the 40
+official sets and the fetch log, committed with the rest (2026-10-10, `42848e6`).
+The fetch script downloads them again, or checks what is on disk:
 
 ```
 python -I brushes/pipeline/fetch_base_library.py fetch              # a dry run: prints the plan

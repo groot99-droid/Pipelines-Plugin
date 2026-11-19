@@ -1,5 +1,7 @@
 # ROSW (Pipelines-Plugin) — Audit & Expansion Roadmap (2026-10-30)
 
+> **Status, 2026-11-19:** Kept as written on 2026-10-30 (with the author's decisions of 2026-11-01); only a status has been added to each item, in the form **[2026-11-19: Done / Partly / Open — evidence]**. Current state: the four Wave 1 PRs (#25 to #28) were merged together through #29 (`54f1ce9`) on 2026-11-01, then the graphic-design plugin (#31, `fb637e2`), the ComfyUI client (#32, `1a9144c`) and the 64th original (#33, `906448a`). Parts B, D and F are open; what is done is listed item by item below.
+
 ## Context
 The author asked for a read-only pass over the whole repo to find what needs **fixing**, **optimizing**, and **generalizing from one tool/use case to many**; to propose **new pipelines** that the newly-available tools make possible; to improve existing **skills and agents**; and to plan a **graphic-design toolkit** (Claude-native image/vector generation, Adobe-specific tools, free artist tools). Nothing is to be built now — the goal is to collect everything and store it for later.
 
@@ -8,82 +10,82 @@ Findings cite paths relative to the repo root. Severity: **P0** broken/unsafe, *
 ---
 
 ## Author decisions (2026-11-01)
-- **Goal:** plugins and skills a session can use for one specific outcome, with an orchestrator agent in a separate session managing the "employees" (the Who Did It agent-swarm model). The studio does not produce; it manages the tool list and how to harness it for games, films, pitch decks, automated video. The graphic-design plugin comes first; later a harness tool runs a pipeline that calls the skills.
-- **Origin field (DONE, `origin:` in frontmatter):** 58 original, 4 derived (the four archetype profiles), 1 auto-authored among the 63 from the master documents; the later works are auto-authored, except one original the author added on 2026-11-03 (*Stop Asking For It, Ask For What It Takes*), which makes the ledger 64 works and 59 originals. Graknox stays original. Originals needing updates: the author will list them later.
-- **Verbatim rule:** covers only the original works. Grammar fixes are always fine. Some originals need updating with new information, and a few move from Originals to **Derived** (author + AI). **Auto Authored** is for pipeline output. TODO: vault schema/category change, `creative-writing/vault/CLAUDE.md` rules, tests that pin the 63.
-- **Access tiers (User, Client, Viewer):** DEFERRED to the Railway launch; the author will add them then. Until then CDN links/thumbnails in `studio/library/catalog.json` stay flagged by lint and unresolved.
-- **Hooks:** BUILT on `integrate/wave1`: `.claude/hooks/vault_guard.py` (asks before editing an original, refuses Write/Edit into `studio/vault` notes) and `plugins/video-editor/hooks/publish_guard.py` (a real `ve publish send --yes` needs a dry run for that platform first, then still asks; `init`/`revoke` always ask).
-- **brush-tagger:** moved to haiku.
-- **New plugin:** build `plugins/graphic-design/` (Part E) rather than extending ui-design.
-- **Still open:** Blender add-on button label; real Blender plugin tool prefix (needs a live session); `machine.yaml` `gpu.status_in` thresholds and render TTL; which add-on tools to switch on.
+- **Goal:** plugins and skills a session can use for one specific outcome, with an orchestrator agent in a separate session managing the "employees" (the Who Did It agent-swarm model). The studio does not produce; it manages the tool list and how to harness it for games, films, pitch decks, automated video. The graphic-design plugin comes first; later a harness tool runs a pipeline that calls the skills. **[2026-11-19: the graphic-design plugin is built (#31, `fb637e2`); the harness tool is Open]**
+- **Origin field (DONE, `origin:` in frontmatter):** 58 original, 4 derived (the four archetype profiles), 1 auto-authored among the 63 from the master documents; the later works are auto-authored, except one original the author added on 2026-11-03 (*Stop Asking For It, Ask For What It Takes*), which makes the ledger 64 works and 59 originals. Graknox stays original. Originals needing updates: the author will list them later. **[2026-11-19: Done, `a8cb5f6`, `20e0591`, #33 `906448a`; `writing-museum/build/tests/test_build.py` checks the 63 and the 64-work ledger]**
+- **Verbatim rule:** covers only the original works. Grammar fixes are always fine. Some originals need updating with new information, and a few move from Originals to **Derived** (author + AI). **Auto Authored** is for pipeline output. TODO: vault schema/category change, `creative-writing/vault/CLAUDE.md` rules, tests that pin the 63. **[2026-11-19: the TODO is Done: `origin:` in every work's frontmatter and the vault CLAUDE.md rule (`a8cb5f6`); which originals need updates is the author's list, Open]**
+- **Access tiers (User, Client, Viewer):** DEFERRED to the Railway launch; the author will add them then. Until then CDN links/thumbnails in `studio/library/catalog.json` stay flagged by lint and unresolved. **[2026-11-19: Open, deferred as decided]**
+- **Hooks:** BUILT on `integrate/wave1`: `.claude/hooks/vault_guard.py` (asks before editing an original, refuses Write/Edit into `studio/vault` notes) and `plugins/video-editor/hooks/publish_guard.py` (a real `ve publish send --yes` needs a dry run for that platform first, then still asks; `init`/`revoke` always ask). **[2026-11-19: Done, merged in #29; `b3b87d0`; tests in `.claude/hooks/tests/` and `plugins/video-editor/tests/test_publish_guard.py`]**
+- **brush-tagger:** moved to haiku. **[2026-11-19: Done, `b3b87d0` (`model: haiku`)]**
+- **New plugin:** build `plugins/graphic-design/` (Part E) rather than extending ui-design. **[2026-11-19: Done, #31 `fb637e2`]**
+- **Still open:** Blender add-on button label; real Blender plugin tool prefix (needs a live session); `machine.yaml` `gpu.status_in` thresholds and render TTL; which add-on tools to switch on. **[2026-11-19: Open, all four; `ENABLED` in `blender-addons/build_manifests.py` is still empty]**
 
 ---
 
 ## ComfyUI 3D (2026-11-01)
-`studio/pipeline/comfy_client.py` runs `3d_pixal3d_trellis2_image_to_model.json` (moved to `studio/pipeline/comfy/workflows/pixal3d_trellis2_image_to_3d.json`) against a ComfyUI server. Built and tested against a fake server only. Open: run it against a real GPU machine (`check` first); wire it into the studio as a pipeline or a provider beside Meshy (B1/B2); decide where the GPU machine lives (this laptop has no CUDA).
+`studio/pipeline/comfy_client.py` runs `3d_pixal3d_trellis2_image_to_model.json` (moved to `studio/pipeline/comfy/workflows/pixal3d_trellis2_image_to_3d.json`) against a ComfyUI server. Built and tested against a fake server only. Open: run it against a real GPU machine (`check` first); wire it into the studio as a pipeline or a provider beside Meshy (B1/B2); decide where the GPU machine lives (this laptop has no CUDA). **[2026-11-19: client built, #32 `1a9144c`; real-GPU run, studio wiring (B2) and the GPU machine are Open]**
 
 ---
 
 ## Wave 1 status and review checklist (2026-11-01)
-Four Sonnet sessions worked items from this file. All four PRs are open and ready for review with CI green; none merged. Struck-through items below are done in a PR but not yet checked by a person; items marked PARTLY DONE keep their open remainder.
+Four Sonnet sessions worked items from this file. All four PRs are open and ready for review with CI green; none merged. Struck-through items below are done in a PR but not yet checked by a person; items marked PARTLY DONE keep their open remainder. **[2026-11-19: all four were merged through #29 (`54f1ce9`) on 2026-11-01; no person's review of the struck items is recorded in the repo]**
 
 PRs: [#25](https://github.com/groot99-droid/Pipelines-Plugin/pull/25) lane C truth pass · [#26](https://github.com/groot99-droid/Pipelines-Plugin/pull/26) lane B plugins/tooling · [#27](https://github.com/groot99-droid/Pipelines-Plugin/pull/27) lane D skills/agents · [#28](https://github.com/groot99-droid/Pipelines-Plugin/pull/28) lane A studio safety.
 
 ### To check in each PR
-- **#28 (A):** Meshy ledger logs any http(s) link as host + sha256, nested lists too; `require_go_ahead` checks `executes_through.client`; hub 403 on bad Host/Origin; lint flags CloudFront/Canva/Figma/Gamma links; compute probe classifies all GPUs, `compute_gate.py renew`, per-class `ttl_seconds`, `token.max_seconds`; scene-blender `local_workload` + new `studio_run.py branch`; `new --json`; shared `studio_common.py` key reader and `download.py`. Confirm the branch step does not break existing runs in progress.
-- **#26 (B):** 81 add-on tools now `enabled: false` (manifests rebuilt, 23 zip hashes matched); `server.py` missing `enabled` = off; `mcp-for-blender==2.2.6` and `gemini-mcp-tool@1.1.4` pins + tests; video-editor utf-8 everywhere, `fc_match()` fallback, stdout `errors=replace`, OAuth loopback server change (macOS cause unproven); CI now Linux/Windows/macOS; HyperFrames removed. Verify the follow-ups were pushed: `CLAUDE.md` blender-addons line, empty `ENABLED` set in `build_manifests.py`, `blender-gemini/install.py` pin, reach `/tmp` fix via `agent-reach/agent_reach/skill/SKILL_en.md` + `sync_reach_plugin.py`.
-- **#25 (C):** `llm.py` default `claude-sonnet-5-5` via `ANTHROPIC_MODEL`, retry/backoff env vars, truncation raises `LLMError`; `run_pipeline.py` JSON guards and theme extraction; "63 works" counts reworded in README, CLAUDE.md, docs pages, generate-index purpose string; `INDEX.md` regenerated; CLAUDE.md caveat on assemble-3d. Check it did not alter the 63-original rule statements.
-- **#27 (D):** every agent has `model:`; drafter no longer runs `librarian.py`; trigger fixes (agent-reach, ui-design-catalog, studio-pipeline); skill splits into `references/`; worked examples (udgt, reach-setup); `/ve-doctor`, `/reach-doctor`, `/ui-design-verify`, `/studio-status`; agents `video-editor-render-qa` and `udgt-citation-checker`. Verify `allowed-tools` was added with the agreed scopes (it was blocked first time) and that nothing pre-approves confirm/advance/keep/record/publish.
-- **Merge order / conflicts:** all four branch from old `main`; `INDEX.md` and `plugins/reach` may conflict (B and D both touch `SKILL_en.md`). Merge C last or re-run `python plugins/ui-design/maintenance/generate-index.py`, then `python plugins/ui-design/maintenance/verify.py`.
-- **Known unexplained:** `agent-reach/tests/test_doctor.py` failed at collection in lane D's sandbox (unrelated, not investigated). Chinese `agent-reach/agent_reach/skill/SKILL.md` still has the old "MUST USE" description.
+- **#28 (A):** Meshy ledger logs any http(s) link as host + sha256, nested lists too; `require_go_ahead` checks `executes_through.client`; hub 403 on bad Host/Origin; lint flags CloudFront/Canva/Figma/Gamma links; compute probe classifies all GPUs, `compute_gate.py renew`, per-class `ttl_seconds`, `token.max_seconds`; scene-blender `local_workload` + new `studio_run.py branch`; `new --json`; shared `studio_common.py` key reader and `download.py`. Confirm the branch step does not break existing runs in progress. **[2026-11-19: merged in #29; the branch step is covered by `studio/pipeline/tests`, which pass]**
+- **#26 (B):** 81 add-on tools now `enabled: false` (manifests rebuilt, 23 zip hashes matched); `server.py` missing `enabled` = off; `mcp-for-blender==2.2.6` and `gemini-mcp-tool@1.1.4` pins + tests; video-editor utf-8 everywhere, `fc_match()` fallback, stdout `errors=replace`, OAuth loopback server change (macOS cause unproven); CI now Linux/Windows/macOS; HyperFrames removed. Verify the follow-ups were pushed: `CLAUDE.md` blender-addons line, empty `ENABLED` set in `build_manifests.py`, `blender-gemini/install.py` pin, reach `/tmp` fix via `agent-reach/agent_reach/skill/SKILL_en.md` + `sync_reach_plugin.py`. **[2026-11-19: merged in #29; every follow-up was pushed: CLAUDE.md line and empty `ENABLED` (`f153841`), install.py pin (`dd82dbc`), reach temp folder (`fbaf966`)]**
+- **#25 (C):** `llm.py` default `claude-sonnet-5-5` via `ANTHROPIC_MODEL`, retry/backoff env vars, truncation raises `LLMError`; `run_pipeline.py` JSON guards and theme extraction; "63 works" counts reworded in README, CLAUDE.md, docs pages, generate-index purpose string; `INDEX.md` regenerated; CLAUDE.md caveat on assemble-3d. Check it did not alter the 63-original rule statements. **[2026-11-19: merged in #29; the originals rule was then restated by the origin decision (`a8cb5f6`)]**
+- **#27 (D):** every agent has `model:`; drafter no longer runs `librarian.py`; trigger fixes (agent-reach, ui-design-catalog, studio-pipeline); skill splits into `references/`; worked examples (udgt, reach-setup); `/ve-doctor`, `/reach-doctor`, `/ui-design-verify`, `/studio-status`; agents `video-editor-render-qa` and `udgt-citation-checker`. Verify `allowed-tools` was added with the agreed scopes (it was blocked first time) and that nothing pre-approves confirm/advance/keep/record/publish. **[2026-11-19: merged in #29; `allowed-tools` added (`b1c4ab3`)]**
+- **Merge order / conflicts:** all four branch from old `main`; `INDEX.md` and `plugins/reach` may conflict (B and D both touch `SKILL_en.md`). Merge C last or re-run `python plugins/ui-design/maintenance/generate-index.py`, then `python plugins/ui-design/maintenance/verify.py`. **[2026-11-19: Done: merged through `integrate/wave1`, INDEX regenerated]**
+- **Known unexplained:** `agent-reach/tests/test_doctor.py` failed at collection in lane D's sandbox (unrelated, not investigated). Chinese `agent-reach/agent_reach/skill/SKILL.md` still has the old "MUST USE" description. **[2026-11-19: explained: that sandbox lacked the engine's dependencies (`rich`); with them installed the suite passes (595 tests). The Chinese `SKILL.md` description is unchanged, Open]**
 
 ### Decisions still open for the author
-- Does "certified verbatim" cover all ~149 vault notes or only the 63 originals (63 carry `source_volume`, 86 do not)? Recommendation applied: rules unchanged.
-- Blender add-on button label: "Connect to MCP server" vs "Start MCP Server" (needs your Blender; change in plugins/blender and blender-gemini together with tests).
-- Real Blender plugin tool prefix (expected `mcp__plugin_blender_blender__*`): list names in a live session with the plugin, then fix agent, skills, references and `test_tool_names.py` with one prefix constant.
-- Move `assemble-3d` to the official `mcp__Blender__*` names: deferred to the Generalize wave.
-- CDN links and thumbnails in the public repo (`studio/library/catalog.json`): unresolved; now flagged by lint.
-- `machine.yaml` `gpu.status_in`: widen so a discrete GPU stops refusing every class? Needs thresholds for your machine. Render TTL: raise per class or rely on `renew`.
-- Hooks (run `ve publish` in plan mode before sends; block writes to vaults/originals): not built, proposal only.
-- `brush-tagger` stays on sonnet (haiku may be enough).
-- Which add-on tools, if any, to switch back on, only after calling each in your Blender.
+- Does "certified verbatim" cover all ~149 vault notes or only the 63 originals (63 carry `source_volume`, 86 do not)? Recommendation applied: rules unchanged. **[2026-11-19: answered by the author on 2026-11-01: only `origin: original` (`a8cb5f6`)]**
+- Blender add-on button label: "Connect to MCP server" vs "Start MCP Server" (needs your Blender; change in plugins/blender and blender-gemini together with tests). **[2026-11-19: Open]**
+- Real Blender plugin tool prefix (expected `mcp__plugin_blender_blender__*`): list names in a live session with the plugin, then fix agent, skills, references and `test_tool_names.py` with one prefix constant. **[2026-11-19: Open; the plugin still uses `mcp__blender__*`]**
+- Move `assemble-3d` to the official `mcp__Blender__*` names: deferred to the Generalize wave. **[2026-11-19: Open]**
+- CDN links and thumbnails in the public repo (`studio/library/catalog.json`): unresolved; now flagged by lint. **[2026-11-19: Open, deferred to the Railway launch (author decisions above)]**
+- `machine.yaml` `gpu.status_in`: widen so a discrete GPU stops refusing every class? Needs thresholds for your machine. Render TTL: raise per class or rely on `renew`. **[2026-11-19: Open; `per-class TTL` and `renew` exist (`14f072f`)]**
+- Hooks (run `ve publish` in plan mode before sends; block writes to vaults/originals): not built, proposal only. **[2026-11-19: Done after all, `b3b87d0`]**
+- `brush-tagger` stays on sonnet (haiku may be enough). **[2026-11-19: superseded: moved to haiku, `b3b87d0`]**
+- Which add-on tools, if any, to switch back on, only after calling each in your Blender. **[2026-11-19: Open]**
 
 ### Not started
-Everything in Part B (providers registry, 3D provider interface, per-project brand, multi-source library, compute profiles, neighbour skills, Blender route note), Part D pipelines and chains, Part E graphic-design toolkit, and the unchecked Part C items: `/blender-review`, Blender worked examples, studio spec `intent:` lists, English translation of agent-reach references, and the other proposed agents.
+Everything in Part B (providers registry, 3D provider interface, per-project brand, multi-source library, compute profiles, neighbour skills, Blender route note), Part D pipelines and chains, Part E graphic-design toolkit, and the unchecked Part C items: `/blender-review`, Blender worked examples, studio spec `intent:` lists, English translation of agent-reach references, and the other proposed agents. **[2026-11-19: since then: the graphic-design toolkit's plugin (E4) and two of the proposed agents' kind are done; see each item]**
 
 ---
 
 ## Part A — Fixes
 
 ### P0 (broken or unsafe)
-1. **Blender MCP tool prefix is probably wrong.** `plugins/blender/agents/blender-scene-reviewer.md:4` grants `mcp__blender__*`; plugin MCP tools are named `mcp__plugin_<plugin>_<server>__<tool>`. If so, the reviewer has no Blender access. Same prefix in `blender-mcp/SKILL.md:17`, `references/tools.md:3`, `blender-addon-tools/SKILL.md:10`, and enforced by `plugins/blender/tests/test_tool_names.py:169`. Confirm the real names in a live session first, then fix all + the test. **[NOT CHANGED: B #26 gathered evidence; real tool names still unconfirmed]**
-2. ~~**81 untested Blender add-on tools are enabled.** `blender-addons/manifests/*.json` all `"enabled": true` (`build_manifests.py:257`), contrary to the skill's own rule (`blender-addon-tools/SKILL.md:63-64`). `addon-tools/server.py:126` defaults a missing `enabled` to on. → default off, ship drafts, fail-closed default.~~ **DONE (B #26; verify)**
-3. ~~**Signed links can land in the Meshy ledger.** `studio/pipeline/meshy_client.py:398-407` masks only `data:` URIs; an `https://` input is written verbatim to `meshy_tasks.json` (`:462`) and copied into Method. Also `require_go_ahead` checks only `class == spend` (`:309`), so any spend run can post to Meshy — gate on pipeline id.~~ **DONE (A #28; verify)**
-4. ~~**Hub `POST /api/runs` has no Origin/Host check** (`studio/hub/serve.py:220-233`) — CSRF/DNS-rebinding on loopback. Low impact, cheap fix.~~ **DONE (A #28; verify)**
-5. **Public CDN bearer-ish links.** `studio/library/catalog.json` holds permanent CloudFront URLs containing the account user id; `content_md.py:87-97` lint doesn't flag CloudFront/Canva/Figma/Gamma share links. Decide policy; extend lint regardless. **[PARTLY DONE (A #28: lint extended); CDN-link policy still open]**
+1. **Blender MCP tool prefix is probably wrong.** `plugins/blender/agents/blender-scene-reviewer.md:4` grants `mcp__blender__*`; plugin MCP tools are named `mcp__plugin_<plugin>_<server>__<tool>`. If so, the reviewer has no Blender access. Same prefix in `blender-mcp/SKILL.md:17`, `references/tools.md:3`, `blender-addon-tools/SKILL.md:10`, and enforced by `plugins/blender/tests/test_tool_names.py:169`. Confirm the real names in a live session first, then fix all + the test. **[NOT CHANGED: B #26 gathered evidence; real tool names still unconfirmed]** **[2026-11-19: Open]**
+2. ~~**81 untested Blender add-on tools are enabled.** `blender-addons/manifests/*.json` all `"enabled": true` (`build_manifests.py:257`), contrary to the skill's own rule (`blender-addon-tools/SKILL.md:63-64`). `addon-tools/server.py:126` defaults a missing `enabled` to on. → default off, ship drafts, fail-closed default.~~ **DONE (B #26; verify)** **[2026-11-19: Done, `0918187`, `f153841`]**
+3. ~~**Signed links can land in the Meshy ledger.** `studio/pipeline/meshy_client.py:398-407` masks only `data:` URIs; an `https://` input is written verbatim to `meshy_tasks.json` (`:462`) and copied into Method. Also `require_go_ahead` checks only `class == spend` (`:309`), so any spend run can post to Meshy — gate on pipeline id.~~ **DONE (A #28; verify)** **[2026-11-19: Done, `b9c495b`]**
+4. ~~**Hub `POST /api/runs` has no Origin/Host check** (`studio/hub/serve.py:220-233`) — CSRF/DNS-rebinding on loopback. Low impact, cheap fix.~~ **DONE (A #28; verify)** **[2026-11-19: Done, `b9c495b`]**
+5. **Public CDN bearer-ish links.** `studio/library/catalog.json` holds permanent CloudFront URLs containing the account user id; `content_md.py:87-97` lint doesn't flag CloudFront/Canva/Figma/Gamma share links. Decide policy; extend lint regardless. **[PARTLY DONE (A #28: lint extended); CDN-link policy still open]** **[2026-11-19: Partly: lint `6bf6e9f`; the policy is deferred to the Railway launch]**
 
 ### P1 (wrong / misleading / fragile)
-6. ~~**video-editor fails on Windows.** No `encoding=` on read/write across `src/videoeditor/` (`questionnaire.py:158,166`, `cli.py:90,99,142,198`, `render.py:493,549,761`, `captions.py:54,142`, `pack.py:127`, `timeline.py:121`, `transcribe.py:108`, `ledger.py:21`, `package.py:77`, `publish/cli.py:35`); `fc-match` assumed (`captions.py:35`, `platform.py:18`). CI runs it on Linux only (`.github/workflows/verify.yml:66-74`). Fix, then add Windows/macOS to the matrix.~~ **DONE (B #26; verify)**
-7. ~~**Outdated model id.** `creative-writing/pipeline/llm.py:83` defaults to `claude-sonnet-5` → `claude-sonnet-5-5`. Make it configurable and documented.~~ **DONE (C #25; verify)**
-8. ~~**Anthropic backend truncation.** `llm.py:107-133` fixed `MAX_TOKENS=8000`, no `stop_reason` check, no retry/streaming; Ollama call 600 s no retry (`llm.py:152`).~~ **DONE (C #25; verify)**
-9. ~~**Uncaught JSON in vault integration.** `run_pipeline.py:~483-500` `json.loads`/`meta["title"]` on model output; `_run_and_advance` (`:590`) only catches `LLMError`/`VaultIntegrationError`. `_extract_idea_themes` (`:183-231`) misses bulleted themes.~~ **DONE (C #25; verify)**
-10. **Unpinned servers.** `plugins/blender/.mcp.json` `uvx mcp-for-blender` (docs/tests pinned to 2.2.6, `test_tool_names.py:145`); root `.mcp.json` `npx -y gemini-mcp-tool`. Pin and add a test that the pin matches. **[PARTLY DONE (B #26: blender and gemini pins + tests); install.py pin was a follow-up, verify]**
-11. **Compute gate is one-laptop-shaped.** `probe.py:190-193` treats only `nvidia-smi` as discrete (AMD/Arc read as integrated); `machine.yaml:26` refuses every class on any NVIDIA box; first GPU only (`probe.py:39`), `C:` only (`:48`); token TTL 1800 s (`machine.yaml:21`) can't cover long renders; one global token (`compute_gate.py:56`). **[PARTLY DONE (A #28: GPU detection, drive, per-class TTL, renew); machine.yaml still refuses any discrete GPU; single token kept]**
-12. ~~**scene-blender local branch unenforced** — `class: spend`, no `workload`, so `token_held` returns early (`studio_run.py:417`); `spec.yaml:1057` says "scene-3d" where it means scene-blender (also `IDEAS.md:136`).~~ **DONE (A #28; verify)**
-13. ~~**Spec test rejects hyphenated MCP server names** (`studio/pipeline/tests/test_spec.py:135`), so UUID/hyphen connectors can never be allowlisted.~~ **DONE (A #28; verify)**
-14. **"63 works" is stale everywhere** (INDEX.md:15, README.md:24, CLAUDE.md:30, `vault/00_INDEX.md:3`, museum README). Vault has ~138 works; 75 lack `_ChunkTags`. **Decision for author:** does the "certified verbatim, do not edit" rule cover all 138 or only the original 63? **[PARTLY DONE (C #25: descriptive counts reworded); verbatim-rule decision open; vault 00_INDEX.md and museum README untouched]**
-15. **Doc drift.** `run_pipeline.py:4-12` + `requirements.txt:6` say librarian is Ollama-only (it supports Gemini); `llm.py:22` points at nonexistent `Pipelines/README.md`; `sound-library/README.md:50-51` says 2,648/16 zips (actual 3,577/23); `docs/index.html:7,29` says "four tools" (7 shown); `IDEAS.md:124` "eight of ten" (12 entries); README layout misses 5 root skills + writing-museum/sound-library/hub/library/workflows; CLAUDE.md layout misses reach-research/references, render-pipeline, sound-library. Blender add-on button "Connect to MCP server" (`blender-mcp/SKILL.md:24`) vs "Start MCP Server" (`blender-gemini/README.md:27`). **[PARTLY DONE (C #25); Blender button label open; docs pages for sound-library, blender, blender-gemini, blender-addons, generations library still missing]**
-16. ~~**HyperFrames is a phantom option** — offered in `questionnaire.py:65-66`, rejected by `cli.py:352`. Implement or remove.~~ **DONE (B #26; verify)**
-17. **Windows-hostile paths/commands:** `/tmp/` in `plugins/reach/skills/agent-reach/SKILL.md:74,130` and `video-editor/tests/test_doctor.py:76`; bash `export` in `blender-addons/README.md:13`; `manim-video/README.md:22` wrong upstream path + bash-only `setup.sh`. **[PARTLY DONE (B #26); reach SKILL.md /tmp was a follow-up, verify; manim setup.sh still bash-only]**
-18. **assemble-3d only accepts `.glb/.gltf`** (`bpy/assemble_plan.py:179-187`); spec tool names (`spec.yaml:1248-1251`) don't match the official `mcp__Blender__*` server available now. **[DOCUMENTED ONLY (C #25); no code change]**
+6. ~~**video-editor fails on Windows.** No `encoding=` on read/write across `src/videoeditor/` (`questionnaire.py:158,166`, `cli.py:90,99,142,198`, `render.py:493,549,761`, `captions.py:54,142`, `pack.py:127`, `timeline.py:121`, `transcribe.py:108`, `ledger.py:21`, `package.py:77`, `publish/cli.py:35`); `fc-match` assumed (`captions.py:35`, `platform.py:18`). CI runs it on Linux only (`.github/workflows/verify.yml:66-74`). Fix, then add Windows/macOS to the matrix.~~ **DONE (B #26; verify)** **[2026-11-19: Done, `c46e693`, `33de76f`; CI on three systems]**
+7. ~~**Outdated model id.** `creative-writing/pipeline/llm.py:83` defaults to `claude-sonnet-5` → `claude-sonnet-5-5`. Make it configurable and documented.~~ **DONE (C #25; verify)** **[2026-11-19: Done, `cf337d6`]**
+8. ~~**Anthropic backend truncation.** `llm.py:107-133` fixed `MAX_TOKENS=8000`, no `stop_reason` check, no retry/streaming; Ollama call 600 s no retry (`llm.py:152`).~~ **DONE (C #25; verify)** **[2026-11-19: Done, `cf337d6`]**
+9. ~~**Uncaught JSON in vault integration.** `run_pipeline.py:~483-500` `json.loads`/`meta["title"]` on model output; `_run_and_advance` (`:590`) only catches `LLMError`/`VaultIntegrationError`. `_extract_idea_themes` (`:183-231`) misses bulleted themes.~~ **DONE (C #25; verify)** **[2026-11-19: Done, `cf337d6`]**
+10. **Unpinned servers.** `plugins/blender/.mcp.json` `uvx mcp-for-blender` (docs/tests pinned to 2.2.6, `test_tool_names.py:145`); root `.mcp.json` `npx -y gemini-mcp-tool`. Pin and add a test that the pin matches. **[PARTLY DONE (B #26: blender and gemini pins + tests); install.py pin was a follow-up, verify]** **[2026-11-19: Done: `efbb3e0` and the install.py pin `dd82dbc`]**
+11. **Compute gate is one-laptop-shaped.** `probe.py:190-193` treats only `nvidia-smi` as discrete (AMD/Arc read as integrated); `machine.yaml:26` refuses every class on any NVIDIA box; first GPU only (`probe.py:39`), `C:` only (`:48`); token TTL 1800 s (`machine.yaml:21`) can't cover long renders; one global token (`compute_gate.py:56`). **[PARTLY DONE (A #28: GPU detection, drive, per-class TTL, renew); machine.yaml still refuses any discrete GPU; single token kept]** **[2026-11-19: Partly, `14f072f`; `machine.yaml` still refuses a discrete GPU (the author's call) and one token is kept]**
+12. ~~**scene-blender local branch unenforced** — `class: spend`, no `workload`, so `token_held` returns early (`studio_run.py:417`); `spec.yaml:1057` says "scene-3d" where it means scene-blender (also `IDEAS.md:136`).~~ **DONE (A #28; verify)** **[2026-11-19: Done, `be747d5`]**
+13. ~~**Spec test rejects hyphenated MCP server names** (`studio/pipeline/tests/test_spec.py:135`), so UUID/hyphen connectors can never be allowlisted.~~ **DONE (A #28; verify)** **[2026-11-19: Done, `be747d5`]**
+14. **"63 works" is stale everywhere** (INDEX.md:15, README.md:24, CLAUDE.md:30, `vault/00_INDEX.md:3`, museum README). Vault has ~138 works; 75 lack `_ChunkTags`. **Decision for author:** does the "certified verbatim, do not edit" rule cover all 138 or only the original 63? **[PARTLY DONE (C #25: descriptive counts reworded); verbatim-rule decision open; vault 00_INDEX.md and museum README untouched]** **[2026-11-19: Done: counts reworded (`0468fb7`, and the docs pass of 2026-11-19); `00_INDEX.md` now says 64 works and is right; the verbatim decision is the origin field. 76 of the 139 works still lack `_ChunkTags` (count the sidecars under `creative-writing/vault/_ChunkTags/`), Open]**
+15. **Doc drift.** `run_pipeline.py:4-12` + `requirements.txt:6` say librarian is Ollama-only (it supports Gemini); `llm.py:22` points at nonexistent `Pipelines/README.md`; `sound-library/README.md:50-51` says 2,648/16 zips (actual 3,577/23); `docs/index.html:7,29` says "four tools" (7 shown); `IDEAS.md:124` "eight of ten" (12 entries); README layout misses 5 root skills + writing-museum/sound-library/hub/library/workflows; CLAUDE.md layout misses reach-research/references, render-pipeline, sound-library. Blender add-on button "Connect to MCP server" (`blender-mcp/SKILL.md:24`) vs "Start MCP Server" (`blender-gemini/README.md:27`). **[PARTLY DONE (C #25); Blender button label open; docs pages for sound-library, blender, blender-gemini, blender-addons, generations library still missing]** **[2026-11-19: Partly: the listed counts and layouts are fixed (`0468fb7`, 2026-11-19); the Blender button label and the docs pages for sound-library, the blender plugin, blender-gemini, blender-addons, the generations library and graphic-design are Open]**
+16. ~~**HyperFrames is a phantom option** — offered in `questionnaire.py:65-66`, rejected by `cli.py:352`. Implement or remove.~~ **DONE (B #26; verify)** **[2026-11-19: Done, `c46e693`]**
+17. **Windows-hostile paths/commands:** `/tmp/` in `plugins/reach/skills/agent-reach/SKILL.md:74,130` and `video-editor/tests/test_doctor.py:76`; bash `export` in `blender-addons/README.md:13`; `manim-video/README.md:22` wrong upstream path + bash-only `setup.sh`. **[PARTLY DONE (B #26); reach SKILL.md /tmp was a follow-up, verify; manim setup.sh still bash-only]** **[2026-11-19: Partly: reach temp folder `fbaf966`, manim README path `2ba9099`, blender-addons README gives PowerShell too; `plugins/video-editor/skills/manim-video/scripts/setup.sh` is still bash-only]**
+18. **assemble-3d only accepts `.glb/.gltf`** (`bpy/assemble_plan.py:179-187`); spec tool names (`spec.yaml:1248-1251`) don't match the official `mcp__Blender__*` server available now. **[DOCUMENTED ONLY (C #25); no code change]** **[2026-11-19: Open (documented in CLAUDE.md)]**
 
 ### P2 (quality)
-19. `brush` pipeline + `hub/brush/` designer missing; `brush_pack.py` never verified against Procreate; fixtures folder absent.
-20. Duplicated logic: key-file reading (`meshy_client.py:161-184`, `llm.py`, `setup_keys.py`); `.part` downloads (`meshy_client.py:239-266`, `library/library.py:228-238` — leaves stray `.part` on error). Extract one helper.
-21. Hub scrapes `cmd_new` stdout for run id (`serve.py:136`) → have `studio_run.py` emit JSON.
-22. Repo weight: 1,155 of studio's 1,238 files are `studio/library/thumbs/*.webp` (12 MB, grows each sync); 1 MB `studio/docs/inventory/` names a local path. Consider release-artifact thumbs and archiving inventory.
-23. `ui-design` ships a second `marketplace.json` that can drift from root; generate it.
-24. `blender/backrooms_L1_blockout.py` (outside repo) is untracked, no export step, estimated tri count.
+19. `brush` pipeline + `hub/brush/` designer missing; `brush_pack.py` never verified against Procreate; fixtures folder absent. **[2026-11-19: Partly: the designer is `brushes/app/` (`a067dc0`) and the studio's packer was retired for `brushes/` (`1cd1ecd`); the `brush` pipeline is still `not_yet_implemented` and no export has been opened in Procreate]**
+20. Duplicated logic: key-file reading (`meshy_client.py:161-184`, `llm.py`, `setup_keys.py`); `.part` downloads (`meshy_client.py:239-266`, `library/library.py:228-238` — leaves stray `.part` on error). Extract one helper. **[2026-11-19: Partly: one reader and one `.part` helper in the studio (`92e7295`); `llm.py` and `setup_keys.py` keep their own]**
+21. Hub scrapes `cmd_new` stdout for run id (`serve.py:136`) → have `studio_run.py` emit JSON. **[2026-11-19: Done, `b9c495b`: the hub calls `studio_run.create_run` directly, and `new --json` exists]**
+22. Repo weight: 1,155 of studio's 1,238 files are `studio/library/thumbs/*.webp` (12 MB, grows each sync); 1 MB `studio/docs/inventory/` names a local path. Consider release-artifact thumbs and archiving inventory. **[2026-11-19: Open]**
+23. `ui-design` ships a second `marketplace.json` that can drift from root; generate it. **[2026-11-19: Open; `validate-contract.py` checks it agrees with the manifest]**
+24. `blender/backrooms_L1_blockout.py` (outside repo) is untracked, no export step, estimated tri count. **[2026-11-19: Open]**
 
 ---
 
@@ -91,7 +93,7 @@ Everything in Part B (providers registry, 3D provider interface, per-project bra
 
 The central pattern: **replace hard-wired vendor tool lists with a provider registry.**
 
-**B1. `providers.yaml` + capability-based allowlists (studio).** Today still-image/video-shot/music-cue/scene-blender call only `mcp__Higgsfield__*`, edit-2d only Adobe, asset-3d only Meshy (`spec.yaml:596-1201`). Introduce `studio/pipeline/providers.yaml` mapping capabilities → providers → tool names:
+**B1. `providers.yaml` + capability-based allowlists (studio).** Today still-image/video-shot/music-cue/scene-blender call only `mcp__Higgsfield__*`, edit-2d only Adobe, asset-3d only Meshy (`spec.yaml:596-1201`). Introduce `studio/pipeline/providers.yaml` mapping capabilities → providers → tool names: **[2026-11-19: Open: no `providers.yaml`]**
 - `image.generate`: Higgsfield, Adobe Firefly/Express, Canva `generate-image`, Figma `generate_image`/`weave_run_model`, Gamma `generate_image`, Claude-native SVG/canvas (Part E).
 - `image.edit`: Adobe (bg remove, fill, expand, adjustments, vectorize), Canva (`remove-background`, `separate-image-layers`), Higgsfield (`upscale_image`, `outpaint_image`, `reframe`), Affinity `execute_script`, local Pillow/ImageMagick/GIMP (`batch_2d` class, currently unused).
 - `video.generate/edit`: Higgsfield, Adobe `video_*`, local `plugins/video-editor`.
@@ -100,37 +102,37 @@ The central pattern: **replace hard-wired vendor tool lists with a provider regi
 - `layout/doc/deck`: Canva, Adobe Express/InDesign (IDML), Figma, Gamma, Affinity.
 Pipelines declare capabilities; the recipe stage picks a provider and records it in the note. Resolve by bare tool name at run time so aliased/UUID servers work (fixes #13). Also **generate `.claude/settings.json` permission rules** from `connector.tools` + `connectors.never` so the allowlist is enforced, not advisory (W8).
 
-**B2. 3D provider interface.** Factor `meshy_client.py` into `create / wait / download / ledger / budget` and add a Higgsfield/Tripo adapter behind the same ledger and price checks. Merge scene-blender (cloud) and assemble-3d (local) into one pipeline with backend branches; accept FBX/OBJ/USD/.blend; revive the dropped `camera_path.py` / `lowpoly_gen.py` templates as plan steps.
+**B2. 3D provider interface.** Factor `meshy_client.py` into `create / wait / download / ledger / budget` and add a Higgsfield/Tripo adapter behind the same ledger and price checks. Merge scene-blender (cloud) and assemble-3d (local) into one pipeline with backend branches; accept FBX/OBJ/USD/.blend; revive the dropped `camera_path.py` / `lowpoly_gen.py` templates as plan steps. **[2026-11-19: Open; `comfy_client.py` (#32) is a second 3D route outside the studio, waiting on this]**
 
-**B3. Per-project brand context.** `context_root` is global (`spec.yaml:20`) and only 3 of 10 gates exist (visual_identity, typography_system, color_science). Allow `_Context/brand/<project>/` with fallback to global, so Who Did It (pixel art), the Museum, and client work stop forcing STATED rows. Prioritize authoring `brand_voice` (unblocks `ui-build`), `motion_language`, `sound_identity`.
+**B3. Per-project brand context.** `context_root` is global (`spec.yaml:20`) and only 3 of 10 gates exist (visual_identity, typography_system, color_science). Allow `_Context/brand/<project>/` with fallback to global, so Who Did It (pixel art), the Museum, and client work stop forcing STATED rows. Prioritize authoring `brand_voice` (unblocks `ui-build`), `motion_language`, `sound_identity`. **[2026-11-19: Open]**
 
-**B4. Multi-source generations library.** `studio/library/library.py:88-112` normalizes Higgsfield only. Add source adapters (Adobe, Canva, Figma, Gamma, Meshy ledgers, `studio/assets/`) and a hub tab; generalize `higgsfield-library-sync` → `generations-library-sync` with a `--source`.
+**B4. Multi-source generations library.** `studio/library/library.py:88-112` normalizes Higgsfield only. Add source adapters (Adobe, Canva, Figma, Gamma, Meshy ledgers, `studio/assets/`) and a hub tab; generalize `higgsfield-library-sync` → `generations-library-sync` with a `--source`. **[2026-11-19: Open]**
 
-**B5. Compute gate profiles.** Per-machine profiles, AMD/Intel discrete detection, a `gpu` class, job-length tokens/renewal, use or drop `llm_local_*`/`batch_2d`.
+**B5. Compute gate profiles.** Per-machine profiles, AMD/Intel discrete detection, a `gpu` class, job-length tokens/renewal, use or drop `llm_local_*`/`batch_2d`. **[2026-11-19: Partly: AMD/Arc detection, every adapter, per-class TTL and `renew` (`14f072f`); profiles and a `gpu` class Open]**
 
-**B6. Generalize neighbour skills.** `render-pipeline` is Who-Did-It only (`$WDI` paths) → profile-driven per game (reuse udgt profile pattern). `sound-library` assumes GitHub Releases → storage backend option. `reach-research`/`reach-references` hard-code repo paths → thin toolsets pointing into the reach plugin.
+**B6. Generalize neighbour skills.** `render-pipeline` is Who-Did-It only (`$WDI` paths) → profile-driven per game (reuse udgt profile pattern). `sound-library` assumes GitHub Releases → storage backend option. `reach-research`/`reach-references` hard-code repo paths → thin toolsets pointing into the reach plugin. **[2026-11-19: Open]**
 
-**B7. One Blender route decision note.** Four paths exist: blender plugin (`uvx mcp-for-blender`), `blender-gemini`, the official `mcp__Blender__*` server now in this environment, and studio assemble-3d. Write one routing table (which for what), and align tool names to the official server where possible.
+**B7. One Blender route decision note.** Four paths exist: blender plugin (`uvx mcp-for-blender`), `blender-gemini`, the official `mcp__Blender__*` server now in this environment, and studio assemble-3d. Write one routing table (which for what), and align tool names to the official server where possible. **[2026-11-19: Open]**
 
-**B8. ui-design beyond screens.** Catalog is UI-only (12 domains, 22 stacks, WCAG contrast). Add a sibling **`graphic-design` catalog/plugin** (Part E) rather than overloading ui-design.
+**B8. ui-design beyond screens.** Catalog is UI-only (12 domains, 22 stacks, WCAG contrast). Add a sibling **`graphic-design` catalog/plugin** (Part E) rather than overloading ui-design. **[2026-11-19: Done as `plugins/graphic-design/` (#31)]**
 
 ---
 
 ## Part C — Optimize existing skills & agents
 
 **Skills**
-- Add `allowed-tools` to script-running skills (ui-design, video-editor, udgt, reach-setup, studio-pipeline). **[FOLLOW-UP sent to D; verify in #27]**
-- ~~Split long bodies into `references/`: `ui-design-catalog/SKILL.md` (265 lines), `manim-video/SKILL.md` (264), `ui-design-catalog-refresh` (179). Drop non-standard `version:` in manim-video.~~ **DONE (D #27; verify)**
-- Fix triggers: `agent-reach` "MUST USE" (`SKILL.md:3-19`) over-claims vs WebSearch/WebFetch and udgt-field-research; `ui-design-catalog` fires on any front-end change; `studio-pipeline` description (`SKILL.md:3`) omits still-image, video-shot, music-cue, edit-2d, scene-blender, brand-gate → under-triggers. Have it read the spec's unused `intent:` lists. **[DONE except studio-pipeline `intent:` lists (D #27; verify)]**
-- Add worked examples (call + expected output) to udgt, blender, reach-setup skills.
-- Add slash commands (none exist in any plugin): `/ve-doctor`, `/blender-review`, `/reach-doctor`, `/ui-design-verify`, `/studio-status`. **[PARTLY DONE: /ve-doctor, /reach-doctor, /ui-design-verify, /studio-status; /blender-review not (D #27)]**
-- Add hooks: run `ve publish plan` before any send; block Write/Edit into `studio/vault/` and `creative-writing/vault/` originals (turns advisory rules into enforcement).
-- English translations of agent-reach references (currently Chinese, `SKILL.md:137`).
+- Add `allowed-tools` to script-running skills (ui-design, video-editor, udgt, reach-setup, studio-pipeline). **[FOLLOW-UP sent to D; verify in #27]** **[2026-11-19: Done, `b1c4ab3`]**
+- ~~Split long bodies into `references/`: `ui-design-catalog/SKILL.md` (265 lines), `manim-video/SKILL.md` (264), `ui-design-catalog-refresh` (179). Drop non-standard `version:` in manim-video.~~ **DONE (D #27; verify)** **[2026-11-19: Done, `93c7cab`, `acc50b8`]**
+- Fix triggers: `agent-reach` "MUST USE" (`SKILL.md:3-19`) over-claims vs WebSearch/WebFetch and udgt-field-research; `ui-design-catalog` fires on any front-end change; `studio-pipeline` description (`SKILL.md:3`) omits still-image, video-shot, music-cue, edit-2d, scene-blender, brand-gate → under-triggers. Have it read the spec's unused `intent:` lists. **[DONE except studio-pipeline `intent:` lists (D #27; verify)]** **[2026-11-19: Done, `e074276`, `913835b`; the `intent:` lists are Open]**
+- Add worked examples (call + expected output) to udgt, blender, reach-setup skills. **[2026-11-19: Partly: udgt and reach-setup (`7344a62`); blender Open]**
+- Add slash commands (none exist in any plugin): `/ve-doctor`, `/blender-review`, `/reach-doctor`, `/ui-design-verify`, `/studio-status`. **[PARTLY DONE: /ve-doctor, /reach-doctor, /ui-design-verify, /studio-status; /blender-review not (D #27)]** **[2026-11-19: Partly, `8757798`; `/blender-review` Open]**
+- Add hooks: run `ve publish plan` before any send; block Write/Edit into `studio/vault/` and `creative-writing/vault/` originals (turns advisory rules into enforcement). **[2026-11-19: Done, `b3b87d0`]**
+- English translations of agent-reach references (currently Chinese, `SKILL.md:137`). **[2026-11-19: Open]**
 
 **Agents** (none set `model:`; all 8 inherit)
-- ~~Set models: haiku-class for `ui-design-search-part`, `creative-writing-chunk-tagger`, `creative-writing-librarian-native`; sonnet/opus-class for drafter, chapter-analyst, reviewers.~~ **DONE (D #27; verify)**
-- ~~Fix drafter quietly reintroducing Ollama via Bash `librarian.py` (`creative-writing-drafter.md:44-46`).~~ **DONE (D #27; verify)**
-- **New agents** (all read-only, one-part-per-invocation like the ui-design pattern):
+- ~~Set models: haiku-class for `ui-design-search-part`, `creative-writing-chunk-tagger`, `creative-writing-librarian-native`; sonnet/opus-class for drafter, chapter-analyst, reviewers.~~ **DONE (D #27; verify)** **[2026-11-19: Done, `cc4b10c`]**
+- ~~Fix drafter quietly reintroducing Ollama via Bash `librarian.py` (`creative-writing-drafter.md:44-46`).~~ **DONE (D #27; verify)** **[2026-11-19: Done, `cc4b10c`]**
+- **New agents** (all read-only, one-part-per-invocation like the ui-design pattern): **[2026-11-19: Partly: render QA and citation checker (`ebe3d49`), both graphic-design reviewers (#31); the rest Open]**
   - Creative writing: *style-mode linter*, *continuity checker* (project world facts + characters), *fact-checker* (against reach-research notes), *plot-logic critic* (judges ledger links `plot_logic.py` can only shape-check), *annotation writer*, *poetry pairing finder*.
   - Studio (planned in `IDEAS.md:163`, never built): *precedent condenser*, *recipe drafter*, *run reviewer*.
   - video-editor: *render QA* (cuts, loudness, caption safe zones, platform dims/fps via ffprobe), *moment picker* (reads `takes_packed.md`).
@@ -139,17 +141,17 @@ Pipelines declare capabilities; the recipe stage picks a provider and records it
   - graphic-design: *print preflight reviewer*, *brand-consistency reviewer* (Part E).
 
 **Coverage gaps to fill**
-- video-editor questionnaire: real `mixed` recipe; ask `content` before `reframe`; reframe for square; standalone explainer/manim recipe.
-- Writing Museum: 10 of ~138 works have rooms; `assets/models.json` empty; no audio.
-- Teardowns: no `research/` folder anywhere though `udgt-field-research` targets it; right-door-wrong-exit stops at `06-history.md`.
-- Reach channels unused by any toolset: twitter, linkedin, instagram, facebook, xiaohongshu, xiaoyuzhou, v2ex, xueqiu.
-- docs/ pages missing: sound-library, blender plugin, blender-gemini, blender-addons, generations library.
+- video-editor questionnaire: real `mixed` recipe; ask `content` before `reframe`; reframe for square; standalone explainer/manim recipe. **[2026-11-19: Open: `content` is still asked after `reframe`, and `mixed` has no recipe of its own]**
+- Writing Museum: 10 of ~138 works have rooms; `assets/models.json` empty; no audio. **[2026-11-19: Open: 10 scenes in `writing-museum/data/scenes/`, `assets/models.json` empty]**
+- Teardowns: no `research/` folder anywhere though `udgt-field-research` targets it; right-door-wrong-exit stops at `06-history.md`. **[2026-11-19: Partly: still no `research/`; Right Door's seven chapters (00 to 06) are its seven stages, so it is complete]**
+- Reach channels unused by any toolset: twitter, linkedin, instagram, facebook, xiaohongshu, xiaoyuzhou, v2ex, xueqiu. **[2026-11-19: Open]**
+- docs/ pages missing: sound-library, blender plugin, blender-gemini, blender-addons, generations library. **[2026-11-19: Open, and graphic-design has none either]**
 
 ---
 
 ## Part D — New pipelines to build
 
-Studio pipelines (each = spec entry + capabilities from B1):
+Studio pipelines (each = spec entry + capabilities from B1): **[2026-11-19: Open: none added to `studio/pipeline/spec.yaml`; `vector-mark` exists as a graphic-design skill, not a studio pipeline]**
 | id | Purpose | Providers |
 |---|---|---|
 | `ui-build` (finish) | token-only markup/CSS, browser-measured | local + Figma `use_figma` |
@@ -166,7 +168,7 @@ Studio pipelines (each = spec entry + capabilities from B1):
 | `mockup` | product/print mockups | Adobe fill/expand, Higgsfield, Blender |
 | `map-art` | worldbuilding maps (Wyrmreach etc.) | Felt, Inkscape, Higgsfield |
 
-Cross-tool chains (meta-pipelines):
+Cross-tool chains (meta-pipelines): **[2026-11-19: Open]**
 1. **Work → room → reel:** creative-writing → scene-3d → `walk_test.mjs` capture → video-editor (captions from verbatim passages) → `ve publish` (dry-run).
 2. **Teardown → redesign:** udgt `01-ui.md` → ui-design `--design-system` → page-reviewer.
 3. **Sound → video:** sound-library by mood/category per beat → video-editor → note.
@@ -186,7 +188,7 @@ Claude does **not** output raster images directly; it writes code that renders t
 - **HTML/CSS + canvas** posters and layouts → PNG/PDF via headless Chromium (Playwright already used by `walk_test.mjs`).
 - **p5.js / generative art** (`anthropic-skills:algorithmic-art`), `canvas-design`, `theme-factory`, `brand-guidelines`, `slack-gif-creator`.
 - **Blender bpy** for 3D renders, **manim** for math motion.
-Plan: a `claude-native-render` helper (`html|svg → png|pdf` at set DPI) shared by `vector-mark`, `layout-print`, `motion-graphic`. Raster generation goes through providers (Higgsfield, Firefly, Canva, Figma, Gamma).
+Plan: a `claude-native-render` helper (`html|svg → png|pdf` at set DPI) shared by `vector-mark`, `layout-print`, `motion-graphic`. Raster generation goes through providers (Higgsfield, Firefly, Canva, Figma, Gamma). **[2026-11-19: Partly: `plugins/graphic-design/catalog/scripts/render.py` renders HTML/SVG to PNG/PDF (#31); not yet shared by studio pipelines]**
 
 ### E2. Adobe-specific
 Already connected: **Adobe for Creativity** MCP (Express: image edits, `image_vectorize`, `image_generative_expand`, `image_fill_area`, fonts/`font_create_kit`, `animate_design`, Firefly boards, `export_idml`/`convert_pdf_to_indd`, `document_render_layout`, PDF tools, video tools) + skills `adobe-*` (batch-edit-photos, create-social-variations, design-from-template, retouch-portraits, resize, fonts). Desktop apps (community, unverified — check licence/maintenance before adopting):
@@ -194,7 +196,7 @@ Already connected: **Adobe for Creativity** MCP (Express: image edits, `image_ve
 - Photoshop/Premiere/Illustrator/InDesign: `matrayu/adobe-mcp`.
 - Illustrator only: `ie3jp/illustrator-mcp-server` (`npx illustrator-mcp-server`).
 - Reconsider the dropped COM/ExtendScript routes (`studio/docs/INVENTORY.md:154-170`) only if UXP servers fall short.
-Plan: an `adobe` provider block in `providers.yaml`; a skill that routes cloud (Express MCP) vs desktop (UXP) by task; IDML round-trip for print.
+Plan: an `adobe` provider block in `providers.yaml`; a skill that routes cloud (Express MCP) vs desktop (UXP) by task; IDML round-trip for print. **[2026-11-19: Open; the `tool-router` skill routes Adobe jobs by hand (#31)]**
 
 ### E3. Free/open tools to merge in
 | Tool | Use | Agent route |
@@ -214,10 +216,10 @@ Plan: an `adobe` provider block in `providers.yaml`; a skill that routes cloud (
 | **Darktable / RawTherapee** | photo grading | CLI |
 | **Synfig / OpenToonz / Pencil2D** | 2D animation | CLI render |
 | **Lottie (bodymovin) / Rive** | lightweight web motion | JSON output |
-All community MCP servers are unverified; adopt under the same rules as blender-addons (draft, off by default, author enables).
+All community MCP servers are unverified; adopt under the same rules as blender-addons (draft, off by default, author enables). **[2026-11-19: Partly: listed as Unverified rows in `plugins/graphic-design/catalog/data/tools.csv`; none adopted]**
 
 ### E4. Packaging: `plugins/graphic-design/`
-A new self-contained plugin (CLAUDE.md "Adding a tool" rules, `${CLAUDE_PLUGIN_ROOT}` paths):
+A new self-contained plugin (CLAUDE.md "Adding a tool" rules, `${CLAUDE_PLUGIN_ROOT}` paths): **[2026-11-19: Done, #31 `fb637e2` (packaging is a grid row that defers to the manufacturer's dieline)]**
 - `catalog/` (stdlib BM25, same engine as ui-design): print specs (paper sizes, bleed, DPI, CMYK/PDF-X), social size table, logo/identity rules (mark types, clear space, min sizes), illustration styles, poster/editorial grids, packaging dielines, colour for print (ΔE, ink limits) beside WCAG.
 - Skills: `graphic-design-catalog`, `vector-mark`, `print-preflight`, `tool-router` (which app/provider for which job, with E2/E3 tables).
 - Agents: `print-preflight-reviewer`, `brand-consistency-reviewer`.
@@ -227,7 +229,7 @@ A new self-contained plugin (CLAUDE.md "Adding a tool" rules, `${CLAUDE_PLUGIN_R
 
 ## Part F — Local/cloud split (Railway) — added 2026-11-01
 
-Goal: keep the repo local-first, and host only what gains from always-on or remote access, with safety restrictions in front. Nothing here is built. Railway is a candidate host, not a decision; the split below holds for any host.
+Goal: keep the repo local-first, and host only what gains from always-on or remote access, with safety restrictions in front. Nothing here is built. Railway is a candidate host, not a decision; the split below holds for any host. **[2026-11-19: Open: nothing built; no `deploy/` folder]**
 
 ### F1. Sorting rule
 Each component is sorted by three questions: does it need the author's machine (Blender, GPU, Obsidian, local files)? does it hold a secret or write something the author must approve? is it read-only and always useful?
@@ -250,7 +252,7 @@ Each component is sorted by three questions: does it need the author's machine (
 ### F3. Work items
 1. `deploy/` folder: Dockerfile, host config, `ROSW_ROLE` switch. Tools stay where they are; local use unchanged.
 2. Make storage paths configurable (hub runs, `studio/assets/`, library) so they can point at a volume or bucket.
-3. Hub authentication and Origin/Host checks before anything is exposed (lane A #28 added the Host/Origin check; login is still needed).
+3. Hub authentication and Origin/Host checks before anything is exposed (lane A #28 added the Host/Origin check; login is still needed). **[2026-11-19: Partly: Host/Origin `b9c495b`; login Open]**
 4. Generate permissions from the spec (item B1) so the cloud role gets a narrower tool allowlist than the local role.
 5. Job queue in `studio_run.py` plus a local runner that claims jobs.
 6. Rewrite the key rules in `CLAUDE.md` and the studio vault `CLAUDE.md` for scoped service variables in the cloud role, keeping local custody rules intact.
@@ -271,13 +273,13 @@ Each component is sorted by three questions: does it need the author's machine (
 ---
 
 ## Phasing (when work resumes)
-1. **Stabilize:** P0 items 1–5, then P1 6–13.
-2. **Truth pass:** doc drift (#14–18), decide "63 vs 138" rule, regenerate INDEX.
-3. **Generalize:** B1 providers registry + generated permissions → B2/B4 → B3 per-project brand.
-4. **Skills/agents:** Part C (models, allowed-tools, splits, new reviewers, commands/hooks).
-5. **Graphic design:** E1 native render helper → E4 plugin catalog → `vector-mark`, `layout-print`, `social-variants`, `brand-kit`.
-6. **New pipelines & chains:** remaining Part D.
-7. **Local/cloud split:** Part F (can start after Stabilize; F4 step 1 is independent of the others).
+1. **Stabilize:** P0 items 1–5, then P1 6–13. **[2026-11-19: mostly Done; 1, 5 and 11 remain]**
+2. **Truth pass:** doc drift (#14–18), decide "63 vs 138" rule, regenerate INDEX. **[2026-11-19: Partly: see 14, 15 and 17]**
+3. **Generalize:** B1 providers registry + generated permissions → B2/B4 → B3 per-project brand. **[2026-11-19: Open]**
+4. **Skills/agents:** Part C (models, allowed-tools, splits, new reviewers, commands/hooks). **[2026-11-19: Partly]**
+5. **Graphic design:** E1 native render helper → E4 plugin catalog → `vector-mark`, `layout-print`, `social-variants`, `brand-kit`. **[2026-11-19: Partly: E4 plugin and its render helper; the studio pipelines are Open]**
+6. **New pipelines & chains:** remaining Part D. **[2026-11-19: Open]**
+7. **Local/cloud split:** Part F (can start after Stabilize; F4 step 1 is independent of the others). **[2026-11-19: Open]**
 
 ## Verification (for each phase when executed)
 - `python plugins/ui-design/maintenance/verify.py` (runs all gates + index check).
@@ -286,7 +288,7 @@ Each component is sorted by three questions: does it need the author's machine (
 - For MCP-name fixes: a live session listing the actual tool names before editing.
 
 ## Open decisions for the author
-- Does "certified verbatim" cover all ~138 works or only the original 63?
-- Keep CDN links/thumbnails in the public repo, or move to releases/ignore?
-- New `plugins/graphic-design/` vs extending ui-design?
-- Which free tools to adopt first (suggest: Affinity, Inkscape CLI, Penpot, ImageMagick, vtracer).
+- Does "certified verbatim" cover all ~138 works or only the original 63? **[2026-11-19: answered 2026-11-01: only `origin: original`]**
+- Keep CDN links/thumbnails in the public repo, or move to releases/ignore? **[2026-11-19: deferred to the Railway launch]**
+- New `plugins/graphic-design/` vs extending ui-design? **[2026-11-19: decided 2026-11-01: a new plugin, built in #31]**
+- Which free tools to adopt first (suggest: Affinity, Inkscape CLI, Penpot, ImageMagick, vtracer). **[2026-11-19: Open]**

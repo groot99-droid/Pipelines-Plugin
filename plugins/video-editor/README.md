@@ -4,12 +4,18 @@ Claude Code plugin for editing video by conversation. A short questionnaire pick
 vertical vs landscape and dialogue vs action choices never compete. The editing runs locally on ffmpeg and
 local Whisper; no API keys are needed for any of it.
 
+This plugin is the maintained version; the standalone Video-Editor repository it was moved in from is a
+secondary copy.
+
 | Piece | What it is |
 |---|---|
 | `video-editor` skill | Runs the questionnaire, follows the chosen recipe's playbook, and enforces the editing and publishing rules |
 | `manim-video` skill | Production pipeline for Manim explainer overlays (vendored from video-use, see NOTICE) |
 | `bin/ve.py` | Launcher: runs the CLI from the plugin folder or the install cache, no `pip install` |
 | `src/videoeditor/` | The CLI (`ve`): questionnaire, recipes and playbooks, ffmpeg render, captions, reframe, publish |
+| `video-editor-render-qa` agent | Read-only check of one finished render against its platform target (codec, size, frame rate, loudness, caption safe zone) |
+| `/ve-doctor` command | Runs `ve doctor` and reports what is missing, by name only |
+| `hooks/publish_guard.py` | A PreToolUse hook: a real `ve publish send --yes` needs a dry run for that platform first and still asks; `init` and `revoke` always ask |
 
 ## Install
 

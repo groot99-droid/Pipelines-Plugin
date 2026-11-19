@@ -3,6 +3,10 @@
 ## Unreleased
 
 - Command `/ve-doctor`; agent `video-editor-render-qa` (read-only render check); `manim-video` creative direction moved to `references/creative-direction.md`, non-standard `version:` dropped.
+- UTF-8 on all text I/O, no `fc-match` assumption, and console output that survives cp1252 (`c46e693`, `33de76f`); CI runs the tests on Linux, Windows and macOS.
+- The HyperFrames overlay option, which the CLI never accepted, is gone from the questionnaire (`c46e693`).
+- The OAuth loopback server binds without `getfqdn`, which stalled on macOS (`ec77792`).
+- Hook `hooks/publish_guard.py`: a real `ve publish send --yes` needs a dry run for that platform first, then still asks; `init` and `revoke` always ask (`b3b87d0`).
 
 ## 0.1.0
 

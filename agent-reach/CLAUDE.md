@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 ## Project
-Agent Reach — Python CLI + library that gives AI agents read/search access to 13 internet platforms.
+Agent Reach — Python CLI + library that gives AI agents read/search access to 15 internet platforms (the list is in `llms.txt` upstream; `agent_reach/channels/`).
 Positioning: installer + doctor + config tool. NOT a wrapper — after install, agents call upstream tools directly.
 Repo: github.com/Panniantong/Agent-Reach | License: MIT | Version: 1.5.0
 
@@ -15,7 +15,7 @@ Repo: github.com/Panniantong/Agent-Reach | License: MIT | Version: 1.5.0
 
 ## Structure
 - `agent_reach/cli.py` — CLI entry point (argparse)
-- `agent_reach/core.py` — Core read/search routing logic
+- `agent_reach/core.py` — `AgentReach`: the doctor entry point (`doctor()`, `doctor_report()`)
 - `agent_reach/config.py` — Config management (YAML, env vars)
 - `agent_reach/doctor.py` — Diagnostics engine
 - `agent_reach/channels/` — One file per platform (twitter.py, reddit.py, youtube.py, etc.)
@@ -29,7 +29,7 @@ Repo: github.com/Panniantong/Agent-Reach | License: MIT | Version: 1.5.0
 ## Conventions
 - Python 3.10+ with type hints
 - Each channel is a single file in `channels/`, inherits from `BaseChannel`
-- Channel contract: must implement `can_handle(url)`, `read(url)`, `search(query)`, `check()` methods
+- Channel contract: set `name`, `description`, `backends` (probe order) and `tier`; implement `can_handle(url)`; `check()` probes the backends (`ordered_backends()` honours a `<channel>_backend` override). Channels do not read or search for the agent: the agent calls the upstream tool directly. A few carry helpers of their own (`web.read`, `v2ex.search`, `xueqiu.search_stock`)
 - Use `loguru` for logging, `rich` for CLI output
 - Commit format: `type(scope): message` (one commit = one thing)
 - All upstream tool calls go through public API/CLI, never hack internals

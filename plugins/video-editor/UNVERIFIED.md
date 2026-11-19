@@ -1,7 +1,7 @@
 # Not verified yet, and deferred work
 
-Kept here so it can be surfaced later (the same list is tracked in the Video-Editor repository, issue 4). Nothing
-here blocks use. Each item is something that was **not verified** or **deliberately deferred**.
+Kept here so it can be surfaced later. This list is the maintained one; the standalone Video-Editor repository,
+a secondary copy, carried an earlier version of it as its issue 4. Nothing here blocks use. Each item is something that was **not verified** or **deliberately deferred**.
 
 ## `ve publish`: first live run checklist
 No platform was ever run against a real account. Request shapes were checked against the official docs, a fake
@@ -71,4 +71,5 @@ Mastodon. Run `ve publish plan` first; it sends nothing.
 - [ ] Automate Instagram/Meta token handling; remind before LinkedIn's 60-day expiry.
 - [ ] Let `ve publish` read its credentials from the repo's key helper convention (`docs/setup_keys.py`) instead of
       only the OS keyring and `VE_*` variables. It was left separate on purpose: that helper writes a file.
-- [ ] Decide whether to archive the standalone Video-Editor repository now that the code lives here.
+- [x] Which copy is maintained: the owner decided this plugin is, and the standalone Video-Editor repository is a
+      secondary copy. Whether to archive that repository is still the owner's call.

@@ -26,6 +26,7 @@ keep the path quoted, since an install path can contain spaces.
 | Visual style | `style` | `"glassmorphism dark"` |
 | Palette | `color` | `"fintech trust"` |
 | Font pairing | `typography` | `"professional modern"` |
+| One Google Fonts family | `google-fonts` | `"sans serif popular variable"` |
 | Landing page structure | `landing` | `"hero social-proof"` |
 | Accessibility, forms, navigation, touch | `ux` | `"keyboard focus modal"` |
 | Charts | `chart` | `"real-time dashboard"` |

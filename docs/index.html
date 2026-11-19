@@ -27,7 +27,7 @@
 <main>
   <section class="hero">
     <p class="eyebrow">Start here</p>
-    <h1>One repo, eight tools for making things with Claude Code</h1>
+    <h1>One repo of tools for making things with Claude Code</h1>
     <p class="lede">ROSW keeps each tool in its own folder: its code, its data and its docs
     together. Every tool works in checkpoints. It stops, shows you what it did, and waits for
     you before going on. Nothing lands in a vault without a preview and an explicit yes.</p>
@@ -37,7 +37,7 @@
     <article class="card">
       <span class="tag">creative-writing/</span>
       <h3>Creative writing</h3>
-      <p>An Obsidian vault of about 150 notes (64 of them the original certified works), and a six-stage pipeline that turns an idea into a new
+      <p>An Obsidian vault of writing (64 indexed works, 59 of them the author's verbatim originals, and the pipeline's later works), and a six-stage pipeline that turns an idea into a new
       piece in the author's own modes: essay, horror prose, epic fantasy or confessional poetry.
       A causal-ledger checker keeps stories to <em>but</em> and <em>therefore</em>.</p>
       <a class="go" href="creative-writing.html">What it does →</a>
@@ -102,6 +102,12 @@
     </article>
   </div>
 
+  <p>Also in the repo, without a page here yet (the
+  <a href="https://github.com/groot99-droid/Pipelines-Plugin#readme">README</a> has a section on each): the
+  graphic-design plugin, the blender plugin and the manifests for the author's own add-ons
+  (<code>blender-addons/</code>), Blender through Gemini (<code>blender-gemini/</code>), the sound library
+  (<code>sound-library/</code>) and the studio's generations library (<code>studio/library/</code>).</p>
+
   <h2 id="quick-start">Quick start</h2>
   <ol>
     <li><strong>Get the repo.</strong>
@@ -145,10 +151,16 @@ pip install -r studio/pipeline/requirements.txt</pre></li>
   <div class="table-wrap"><table>
     <thead><tr><th>Folder</th><th>What it holds</th></tr></thead>
     <tbody>
-      <tr><td><code>creative-writing/vault/</code></td><td>The Obsidian vault: about 150 notes (64 original certified works plus later additions), annotations, chunk tags, craft notes, the idea library and its search tool</td></tr>
+      <tr><td><code>creative-writing/vault/</code></td><td>The Obsidian vault: the 64 works of its index (59 of them the author's verbatim originals), the works the pipeline has made since, annotations, chunk tags, craft notes, the idea library and its search tool</td></tr>
       <tr><td><code>creative-writing/pipeline/</code></td><td>The checkpointed pipeline that writes into that vault</td></tr>
       <tr><td><code>studio/vault/</code></td><td>A second vault: one note per made thing, and the brand gates</td></tr>
       <tr><td><code>studio/pipeline/</code></td><td>The studio's spec, bookkeeper and note writer</td></tr>
+      <tr><td><code>studio/hub/</code>, <code>studio/library/</code></td><td>The studio's local desk, and the catalogue of the author's Higgsfield generations</td></tr>
+      <tr><td><code>writing-museum/</code></td><td>The walkable museum of the vault and its library page</td></tr>
+      <tr><td><code>brushes/</code></td><td>The Procreate brush library, its search and vault, and the brush designer</td></tr>
+      <tr><td><code>sound-library/</code></td><td>The author's sound effects: the catalogue here, the files on GitHub Releases</td></tr>
+      <tr><td><code>plugins/blender/</code>, <code>blender-addons/</code>, <code>blender-gemini/</code></td><td>The blender plugin, the tool manifests for the author's add-ons, and Blender reached through the Gemini CLI</td></tr>
+      <tr><td><code>plugins/video-editor/</code>, <code>plugins/graphic-design/</code></td><td>Video editing by conversation, and print and screen graphics</td></tr>
       <tr><td><code>plugins/ui-design/</code></td><td>The UI design plugin, complete and self-contained</td></tr>
       <tr><td><code>agent-reach/</code>, <code>plugins/reach/</code></td><td>The reach base (Agent Reach, imported whole) that installs and checks read access to the internet, and the plugin that carries its skill</td></tr>
       <tr><td><code>plugins/udgt/</code>, <code>teardowns/</code></td><td>The teardown plugin, and one folder per torn-down game: its profile, dataset, the owner's answers and the chapters</td></tr>

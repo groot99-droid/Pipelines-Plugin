@@ -22,7 +22,7 @@ or `UDGT_GAME`). Nothing is written into the game.
 U="python plugins/udgt/engine/udgt.py"; P=teardowns/right-door-wrong-exit/profile.json
 $U scan  --profile $P
 $U check --profile $P
-$U brief 0 --profile $P
+$U brief 0 --profile $P          # a stage's questions for the owner (all seven chapters are written)
 $U build --profile $P && python -m http.server --directory teardowns/right-door-wrong-exit 8791
 ```
 

@@ -16,17 +16,28 @@ Where a tool's skills and agents live depends on how the tool is used:
 - **ui-design** is a Claude Code plugin, published on its own. A plugin is copied
   into a cache when it is installed and cannot reach outside its own folder, so its
   skills and agents live inside it, in `plugins/ui-design/`, not under `.claude/`.
+  The other plugins under `plugins/` (blender, reach, udgt, video-editor,
+  graphic-design) are built the same way.
+- **The repo root is also a plugin**, `rosw` (`.claude-plugin/plugin.json`): it
+  points at the `.claude/` skills and agents and registers the brushes MCP server.
+  Those skills read and write this checkout's folders, so they work only from a
+  clone of this repo.
 
 ## Layout
 
 ```
 INDEX.md             generated index of the tools, skills and agents
+ROADMAP.md           the 2026-10-30 audit and expansion roadmap, each item marked with its status
 .claude/skills/      creative-writing-pipeline, chunk-tag-backfill, studio-pipeline,
                      higgsfield-library-sync, render-pipeline, sound-library,
                      reach-research, reach-references, blender-gemini, brush-library,
                      brush-tag-backfill, brush-designer
 .claude/agents/      creative-writing-{chunk-tagger,drafter,librarian-native},
                      brush-{tagger,librarian-native}
+.claude/commands/    studio-status
+.claude/hooks/       vault_guard.py (PreToolUse: asks before a Write or Edit of an original work,
+                     refuses one into a studio vault note or gate) and its tests/;
+                     settings.json registers it
 .mcp.json            the gemini MCP server Claude calls to reach Blender (blender-gemini), and the
                      brushes MCP server (brushes/pipeline/mcp_server.py)
 blender-addons/      manifests/ (tools for the author's own Blender add-ons, read by the blender
@@ -34,15 +45,17 @@ blender-addons/      manifests/ (tools for the author's own Blender add-ons, rea
 blender-gemini/      install.py (registers the Blender MCP server with the Gemini CLI,
                      and checks the chain), tests/, README.md
 creative-writing/    the creative-writing tool
-  vault/             the Obsidian vault — the 64 original certified works plus
-                     later additions (about 150 notes), annotations, chunk tags,
+  vault/             the Obsidian vault — the 64 works of 00_INDEX.md (59 of them
+                     `origin: original`, the author's verbatim text), the works the
+                     pipeline has made since, annotations, chunk tags, craft notes,
                      idea library, and the vault's own search tooling
   pipeline/          the checkpointed pipeline that writes into that vault
 studio/              the studio tool
   vault/             a second Obsidian vault — one note per made thing, the brand
                      gates, and the vault's own CLAUDE.md and SCHEMA.md
-  pipeline/          spec.yaml, the bookkeeper, the note and gate writers, the brush
-                     packer, the compute gate, and their tests
+  pipeline/          spec.yaml, the bookkeeper, the note and gate writers, the compute
+                     gate, the Meshy and ComfyUI clients, bpy/ (the assemble-3d steps),
+                     glb_inspect.py, and their tests
   hub/               the desk: a loopback server and page over the vault and the runs,
                      and the Windows launcher
   assets/            what runs keep, by project, kind and slug. Not versioned
@@ -70,32 +83,38 @@ agent-reach/         the reach base: Agent Reach imported whole (git subtree): a
                      15 internet platforms; its own CLAUDE.md, tests/ and TOOLSETS.md
 docs/                HTML pages describing each tool, and setup_keys.py (a localhost-only
                      helper that saves API keys to ~/.rosw/keys.env)
-.claude-plugin/      marketplace.json: installs plugins/ui-design from this repo
+.claude-plugin/      plugin.json (the repo root as the `rosw` plugin) and marketplace.json
+                     (lists rosw and every plugin under plugins/)
 plugins/ui-design/   the ui-design plugin: the plugin root, and the whole of what is published
   .claude-plugin/    plugin.json and marketplace.json
   skills/            ui-design-catalog, ui-design-catalog-refresh, ui-design-multipart
   agents/            ui-design-{catalog-reviewer,search-part,page-reviewer}
+  commands/          ui-design-verify
   spec.yaml          the declared contract; validate-contract.py enforces it
   INDEX.md           generated: the catalog's own vocabulary, data files, references
   ROUTER.md          which mode, domain and query; what to do when a match looks wrong
   catalog/           data/ and scripts/ — the search catalog, stdlib only
   maintenance/       validators, relevance gate, refresh scripts, verify.py
   references/        prose the ui-design-catalog skill reads on demand
-  README.md, LICENSE, NOTICE, CHANGELOG.md, .gitignore, .gitattributes
+  README.md, LICENSE, NOTICE, CHANGELOG.md, SOURCE-RESEARCH.md, .gitignore, .gitattributes
 plugins/udgt/        the udgt plugin (UI, Dataset & Gameplay Teardown): engine/udgt.py (stdlib),
-                     explorer/ (the page template), profiles/schema.json, skills udgt-{teardown,consult},
-                     agent udgt-chapter-analyst, tests/
+                     explorer/ (the page template), profiles/schema.json, skills
+                     udgt-{teardown,consult,field-research}, agents udgt-{chapter-analyst,citation-checker},
+                     tests/
 teardowns/           one folder per torn-down game: profile.json, teardown.json (generated), answers.json
                      (the owner's words), chapters/; explorer/ is built and not versioned
 plugins/blender/     the blender plugin: .mcp.json (uvx mcp-for-blender, telemetry off, and the
                      blender-addons server in addon-tools/), skills
-                     blender-{mcp,assets,polyhaven-library,addon-tools}, agent blender-scene-reviewer
-plugins/reach/       the reach plugin: reach-setup, reach-connect and a verbatim copy of the engine's agent-reach skill
+                     blender-{mcp,assets,polyhaven-library,addon-tools}, agent blender-scene-reviewer, tests/
+plugins/reach/       the reach plugin: reach-setup, reach-connect and a verbatim copy of the engine's agent-reach
+                     skill; command reach-doctor
 plugins/graphic-design/ the graphic-design plugin: catalog/ (CSV tables, search.py, preflight.py, svg_lint.py, render.py,
                      _build_data.py, tests/), skills graphic-design-catalog, vector-mark, print-preflight, tool-router,
                      agents print-preflight-reviewer and brand-consistency-reviewer
 plugins/video-editor/ the video-editor plugin: bin/ve.py (launcher), src/videoeditor/ (the `ve` CLI),
-                     skills video-editor and manim-video, tests/, UNVERIFIED.md
+                     skills video-editor and manim-video, agent video-editor-render-qa, command
+                     ve-doctor, hooks/publish_guard.py (a real send needs a dry run first), tests/,
+                     UNVERIFIED.md
 .github/workflows/   verify.yml: CI for the whole repo (see "Working on the ui-design plugin");
                      pages.yml: publishes docs/ and the Writing Museum to GitHub Pages from main
 ```
@@ -118,8 +137,8 @@ may contain it. `validate-contract.py` enforces both, and fails on any hard-code
 **`creative-writing/vault/CLAUDE.md` is authoritative** for anything that writes
 creative prose: the four style modes and their sentence- and structure-level
 rules, the anti-style do-not list, the frontmatter schema, the ethical-restraint
-precedent, and the rule that the 64 existing works are certified verbatim
-transcriptions that are **not** to be edited. Read it in full before writing or
+precedent, and the rule that the works marked `origin: original` (59 of the 64 in
+`00_INDEX.md`) are the author's verbatim text and are **not** to be edited. Read it in full before writing or
 revising any creative material — this file does not summarize or replace it, and
 `creative-writing/pipeline/spec.yaml` points back to it too.
 
@@ -146,7 +165,7 @@ Do not duplicate its rules here. If the writing rules change, they change there.
   ledger in `_Craft/` against its declared verdict and every quotation in it against
   the vault, so editing a craft note can fail them; that is the point.
 - `_Craft/` notes are analysis written with Claude, not the author's prose. Do not
-  present them as the author's voice, and do not edit the 64 originals to fit them.
+  present them as the author's voice, and do not edit the originals to fit them.
 - **Keys live outside the repo**, in `~/.rosw/keys.env` (or `ROSW_KEYS_FILE`).
   `python docs/setup_keys.py` writes it from a local page; `llm.py` reads it, and still
   reads a legacy `creative-writing/pipeline/.env` if one exists (`--migrate` moves it).
@@ -204,7 +223,7 @@ the author names at a `scene-3d` intake, through `writing-museum/build/`.
   on the museum's own server (`/api/museum`, `--museum-port`) and never serves or
   reads the museum's files beyond whether `library.json` exists. Its stylesheet holds no literal value: every colour,
   size and font is a custom property set from `tokens.json` at load, and
-  `tests/test_hub.py` refuses a literal. `studio/vault/tools/vault_index.py` is
+  `studio/pipeline/tests/test_hub.py` refuses a literal. `studio/vault/tools/vault_index.py` is
   the index it searches; it carries no note bodies and is not versioned.
 - **The generations library** (`studio/library/`) catalogues the author's Higgsfield
   history. It is not a run: the `higgsfield-library-sync` skill only browses the
@@ -280,7 +299,7 @@ panels cited by vault path and lines.
   a branch" source publishes `docs/` alone and drops `museum/`.
 - Tests: `python -m unittest discover -s writing-museum/build/tests`. They run on a
   temporary vault, and read the real one only to check the ten-work path.
-- It reads `creative-writing/vault/` and never writes it. The 64 works stay verbatim;
+- It reads `creative-writing/vault/` and never writes it. Every work stays as written;
   the transcription header above a work's text is left off its panels.
 - `web/` stays the Chronicle Museum's viewer with the edits the README lists. Bring a
   fix from that repo over as a copy, and note it there.
@@ -354,8 +373,8 @@ game's specifics live in that game's `teardowns/<slug>/profile.json`, never in t
 - `udgt.py scan` reads the game checkout (a sibling clone, `--game`, or `UDGT_GAME`) and its git log,
   and writes only `teardown.json`. It never writes into the game, and it runs none of its code.
 - The Who Did It profile's `lore` also reads the works in `creative-writing/vault/` whose frontmatter says
-  `project: who-did-it` (the owner named them the game's upcoming lore). It only reads them; the 64 originals
-  and every work stay as they are.
+  `project: who-did-it` (the owner named them the game's upcoming lore). It only reads them; every work
+  stays as it is.
 - `answers.json` is the owner's word: only `udgt.py record` appends to it, verbatim, after the owner
   answered a brief. Never edit an answer, and never write one the owner did not give.
 - Chapters are Claude's: each design choice is written in three parts. *Describe* cites `[[node-id]]`
@@ -366,13 +385,28 @@ game's specifics live in that game's `teardowns/<slug>/profile.json`, never in t
 - Tests: `python -m unittest discover -s plugins/udgt/tests` (a fake game in a temp folder, plus one
   test that runs only when the real Who Did It checkout sits beside this repo).
 
+## Working on the brushes tool
+
+`brushes/` is used from this repo (its skills and agents are under `.claude/`). Its own documents
+govern it: `brushes/README.md` (what is here, how to fill the library and run the device tests),
+`brushes/docs/CONTRACTS.md` and `brushes/spec.yaml` (the frozen contract the tests hold the code to),
+and `brushes/vault/CLAUDE.md` (authoritative inside the brush vault: what is generated and by what,
+and what is never written by hand). Do not duplicate them here.
+
+- The tool is under construction (`build.state` in `brushes/spec.yaml`). No exported brush file has
+  been opened in Procreate: every `device_test` answer there is `untested` until the author's iPad
+  sittings (`brushes/device-tests/`) say otherwise.
+- The original brush files are committed through Git LFS; run `git lfs install` before committing one.
+- Tests: `python -m unittest discover -s brushes/pipeline/tests` (temporary folders, no LFS content).
+
 ## Working on agent-reach (the reach base)
 
 `agent-reach/` is Agent Reach (MIT, imported with `git subtree`; see its `NOTICE`). It is the
 shared base for toolsets that read the internet: it installs and checks upstream tools, and after
 that agents call those tools directly. **`agent-reach/CLAUDE.md` is authoritative for the engine**
 (the channel contract, the version in three places, "glue, not a wrapper"); do not duplicate it here.
-`agent-reach/TOOLSETS.md` is the contract a toolset follows.
+`agent-reach/TOOLSETS.md` is the contract a toolset follows. This folder is the maintained
+version; the standalone `groot99-droid/Agent-Reach` repository is a secondary copy.
 
 - Tests: `cd agent-reach && python -m pytest tests -q`. A test that fails only because the
   environment holds a `GITHUB_TOKEN` is not a code defect; run it with the variable unset.
@@ -396,6 +430,8 @@ that agents call those tools directly. **`agent-reach/CLAUDE.md` is authoritativ
 `plugins/video-editor/` is a plugin like ui-design: paths in its skills start from `${CLAUDE_PLUGIN_ROOT}`, and
 nothing in it names this repo or `.claude/`. Everything runs through `bin/ve.py` (no `pip install`); the skill
 tells the assistant that `ve <command>` means `python "${CLAUDE_PLUGIN_ROOT}/bin/ve.py" <command>`.
+This plugin is the maintained version; the standalone `groot99-droid/Video-Editor` repository is a
+secondary copy.
 
 - A **questionnaire** (`ve ask`) picks exactly one recipe; keep it that way (a new use case is a recipe module,
   a playbook in `src/videoeditor/recipes/playbooks/` and a branch in `questionnaire.select_recipes`).
@@ -472,9 +508,9 @@ the plugin root.
   at `Path(__file__).parent.parent / "data"`.
 - Verify with one command: `python plugins/ui-design/maintenance/verify.py`, from any
   directory. It runs every gate and prints the exact command to re-run whichever one
-  fails. On GitHub, `.github/workflows/verify.yml` runs it, and the creative-writing,
-  studio and docs test suites, on Linux, Windows and macOS with Python 3.10 and 3.13,
-  on every push to `main` and every pull request.
+  fails. On GitHub, `.github/workflows/verify.yml` runs it and every tool's test suite
+  (the workflow's steps are the list), on Linux, Windows and macOS with Python 3.10 and
+  3.13, on every push to `main` and every pull request.
 - `claude plugin validate ./plugins/ui-design` checks the manifest and marketplace
   file. It is not part of `verify.py`, because it needs the Claude Code CLI.
 - `--persist` writes `design-system/<project-slug>/` under `--output-dir`, or under

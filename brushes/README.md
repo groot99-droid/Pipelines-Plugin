@@ -41,11 +41,13 @@ Procreate is known to open.
 | `schema/patch_cases.json` | the settings-patch cases Python and the app both run |
 | `library/sources.json` | which packs the library holds and where the 40 official sets come from |
 | `library/user/` | the author's 19 packs, adopted: 72 brush files |
-| `library/official/` | the 40 official sets, fetched by `fetch_base_library.py fetch --confirm` (below) |
+| `library/official/` | the 40 official sets, fetched by `fetch_base_library.py fetch --confirm` (below) and committed through Git LFS |
 | `device-tests/` | one folder per sitting, written by `device_tests.py build --confirm` |
 | `app/` | the designer and a library browser: plain ES modules in `js/`, no build step, served by `app_server.py`. It opens a brush from the library or from a file, edits it as a patch of changed keys, and exports through the server, which owns the encoding. `selftest.html` runs its checks in the browser. The stroke preview is a canvas simulator whose every setting is marked honoured, approximate or ignored; it is an approximation of Procreate, not a match |
 
-## What is planned
+## The whole layout
+
+Every folder below exists; the tool is still under construction (`build.state` in `spec.yaml`).
 
 ```
 brushes/
@@ -91,8 +93,9 @@ python -I brushes/pipeline/device_tests.py build sitting-2 --confirm
 python -I brushes/pipeline/device_tests.py verify sitting-2
 ```
 
-The official sets are not on disk until `fetch --confirm` has run. Five of the
-eight brushes of the control set come from them, so until then
+The official sets are committed through Git LFS, so they are on disk after `git lfs pull`
+(or after `fetch --confirm`); a clone without the LFS content holds pointers. Five of the
+eight brushes of the control set come from them, so without them
 `device_tests.py build` refuses (exit 1, nothing written): a set with stand-ins
 is not the control set, and there are only two sittings with the iPad.
 `--allow-substitutes` builds one anyway and marks it as what it is.

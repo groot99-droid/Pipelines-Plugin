@@ -44,6 +44,7 @@ missing it says so and falls back to the written rules in `references/`.
 | `ui-design-search-part` agent | Runs exactly one search from a router manifest. |
 | `ui-design-page-reviewer` agent | Reviews one area of one built page against the rules in `references/quick-reference.md`. Read-only. |
 | `ui-design-catalog-refresh` skill, `ui-design-catalog-reviewer` agent | Maintainer tooling that refreshes the Google Fonts and Phosphor data. See "Maintaining the catalog". |
+| `/ui-design-verify` command | Runs `maintenance/verify.py` and reports which gate fails, if any. |
 
 Once installed, the names are prefixed by the plugin: `/ui-design:ui-design-catalog`,
 and the agent types are `ui-design:ui-design-search-part` and so on. You rarely type

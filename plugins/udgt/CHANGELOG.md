@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Skill udgt-field-research (2026-10-29, `3d0ae8d`): a toolset on Agent Reach that keeps cited outside
+  sources under a teardown's `research/`.
+- Agent udgt-citation-checker (2026-10-31, `ebe3d49`): checks one chapter's `[[node-id]]`, `path:line` and
+  quoted answers. Worked examples in the udgt-teardown skill.
+
 ## 0.1.0
 
 - Engine `engine/udgt.py` (stdlib only): scan, check, diff, brief, record, build, query, show, stages.

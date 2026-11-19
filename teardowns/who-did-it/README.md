@@ -24,7 +24,7 @@ The owner named those works as the game's upcoming lore (stage 5 brief). The vau
 U="python plugins/udgt/engine/udgt.py"; P=teardowns/who-did-it/profile.json
 $U scan  --profile $P            # after the game changes; `diff` first shows what moved
 $U check --profile $P            # broken citations, stale scan, chapter links
-$U brief 3 --profile $P          # the next stage's questions for the owner
+$U brief 3 --profile $P          # a stage's questions for the owner (all nine chapters are written)
 $U build --profile $P && python -m http.server --directory teardowns/who-did-it 8791
 # then open http://127.0.0.1:8791/explorer/index.html
 $U query "quick mode" --profile $P; $U show dec:A115 --profile $P

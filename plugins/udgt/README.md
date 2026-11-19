@@ -23,8 +23,11 @@ feeling and priority. `udgt.py record` stores the answers verbatim, and the chap
 /plugin install udgt@rosw
 ```
 
-The skills are `/udgt:udgt-teardown` (write or refresh a teardown) and `/udgt:udgt-consult` (look
-something up while working on the game). The agent is `udgt:udgt-chapter-analyst`.
+The skills are `/udgt:udgt-teardown` (write or refresh a teardown), `/udgt:udgt-consult` (look
+something up while working on the game) and `/udgt:udgt-field-research` (outside sources for the Compare
+and Critique parts, as cited notes under the teardown's `research/`; it needs Agent Reach, see the reach
+plugin). The agents are `udgt:udgt-chapter-analyst` (drafts one chapter) and `udgt:udgt-citation-checker`
+(checks one chapter's citations against the dataset, the game and the answers). Both are read-only.
 
 ## How it fits together
 
