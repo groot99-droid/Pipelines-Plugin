@@ -1,5 +1,7 @@
 # Agents, brand gates, domain libraries
 
+> **Status, 2026-11-19:** Historical record, kept as written on 2026-09-28. Current state: it describes Creative-Headquarters, not this repo, and its paths are that repo's; what each idea became here is in `studio/docs/IDEAS.md`.
+
 Subsystem `agents-context` of Creative-Headquarters. Part of the [inventory](../INVENTORY.md).
 
 Verifier confidence: 0.9 · 24 entries · 20 corrections made to the first reading.

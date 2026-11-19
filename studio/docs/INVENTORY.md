@@ -1,5 +1,7 @@
 # Inventory of Creative-Headquarters
 
+> **Status, 2026-11-19:** Historical record, kept as written on 2026-09-28. Current state: it describes Creative-Headquarters, not this repo, and its paths are that repo's; what each idea became here is in `studio/docs/IDEAS.md`, and the studio as it is now is in `studio/README.md`.
+
 What Creative-Headquarters contains and how each part is used. Extracted on
 2026-09-28 from the working tree of `C:\Users\utopi\Creative-Headquarters`
 (branch `claude/hub-taskbar-launcher`, last commit `05ccb93`, with uncommitted

@@ -17,7 +17,12 @@ studio/
     content_md.py      lints a note, previews a write, writes after a go-ahead
     gate_md.py         the same, for a brand gate
     compute_gate.py    one token, one heavy local job; machine.yaml and probe.py beside it
-    studio_common.py   what those share
+    studio_common.py   what those share; download.py, the one `.part` download helper
+    meshy_client.py    the Meshy API for asset-3d: a dry run unless --confirm, a ledger per run
+    glb_inspect.py     a model's triangles, textures and size against a budget
+    bpy/               assemble_plan.py (a layout as bpy steps) and assemble.py (runs them headless)
+    comfy_client.py    image to 3D through a ComfyUI server; comfy/workflows/ beside it. Not a
+                       pipeline yet: no spec.yaml entry
     tests/
     runs/<run-id>/     one run's state and stage outputs. Ignored by git
   vault/               the Obsidian vault. Open THIS folder in Obsidian
@@ -28,8 +33,10 @@ studio/
     _templates/
     tools/vault_index.py   one row per note, and a search by section
   hub/                 the desk: serve.py, the page, launcher/ for Windows
+  library/             the generations library (below)
   assets/              what runs keep. Ignored by git
-  docs/
+  docs/                what Creative-Headquarters held (INVENTORY.md) and what became of it
+                       (IDEAS.md); the owner's progress records under progress/
 ```
 
 The skill is at `.claude/skills/studio-pipeline/SKILL.md`, at the repo root.

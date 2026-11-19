@@ -1,5 +1,7 @@
 # Baseline
 
+> **Status, 2026-11-19:** Historical record, kept as written on 2026-09-28. Current state: the checks have grown to one suite per tool, run together by `.github/workflows/verify.yml` (its steps are the list); `python plugins/ui-design/maintenance/verify.py` still runs the same ten gates.
+
 The state of this repo's existing checks before anything under `studio/` was
 added. A failure that appears later is measured against this.
 

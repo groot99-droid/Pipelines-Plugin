@@ -1,5 +1,7 @@
 # Review of the studio pipeline, 2026-09-28
 
+> **Status, 2026-11-19:** Historical record, kept as written on 2026-09-28 (fix noted 2026-09-29). Current state: every problem below is pinned by `studio/pipeline/tests/test_second_review.py`, which passes with the rest of `python -m unittest discover -s studio/pipeline/tests`; the rules it led to are in `studio/vault/CLAUDE.md` and `studio/pipeline/spec.yaml`.
+
 Five lenses read and ran the code after the first round of fixes: bypass,
 correctness, consistency, dry run, tests. A second agent reproduced each
 finding. 59 findings, 1 judged not a problem. They collapse to the problems
