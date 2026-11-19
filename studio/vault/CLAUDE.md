@@ -5,7 +5,7 @@ writes a note into this vault. `studio/pipeline/spec.yaml` is its
 machine-readable form and points back here. If they disagree on a rule, this
 file is right and the spec is to be fixed.
 
-Paths are relative to the Pipelines repo root unless they start inside the vault.
+Paths are relative to the Pipelines-Plugin repo root unless they start inside the vault.
 
 ## Purpose and scope
 
@@ -16,8 +16,8 @@ next. [SCHEMA.md](SCHEMA.md) defines the note.
 Notes are written by the author, in Obsidian, and by pipelines, through
 `studio/pipeline/content_md.py`. Nothing else writes here.
 
-This vault is separate from `creative-writing/vault/`. That vault holds 64
-verbatim works under its own rules and is not touched from here.
+This vault is separate from `creative-writing/vault/`. That vault holds the author's
+works (the ones marked `origin: original` are verbatim) under its own rules and is not touched from here.
 
 ## The prime rule
 

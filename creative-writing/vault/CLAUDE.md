@@ -6,7 +6,7 @@ This file governs how Claude helps write **new** material in this vault — matc
 
 ## Where this vault sits, and how to read the paths below
 
-This vault lives at `creative-writing/vault/` inside the `Pipelines` repo, as the
+This vault lives at `creative-writing/vault/` inside the `Pipelines-Plugin` repo, as the
 data half of the creative-writing tool (the pipeline that writes into it is at
 `creative-writing/pipeline/`). See the repo root's `CLAUDE.md` for the layout.
 
@@ -17,10 +17,10 @@ this vault, prefix it: `creative-writing/vault/tools/vault_search.py`.
 
 ## Vault navigation
 
-- [[00_INDEX.md]] — bibliographic ledger of all 64 works, now wikilinked.
+- [[00_INDEX.md]] — bibliographic ledger of the 64 works it indexes, now wikilinked. The works the pipeline has made since are listed in their folder's `_index.md`, as every work is.
 - `<folder>/_index.md` — one per numbered folder (e.g. [[02_Novels/_index]]), listing every file in that folder with a link to its companion annotation.
 - [[Vault_Overview.canvas]] — visual map: one group per style-mode, with cross-project edges (open in Obsidian).
-- `_Annotations/<folder>/<file>.md` — a companion craft-annotation note for every one of the 64 works, mirroring the folder structure.
+- `_Annotations/<folder>/<file>.md` — a companion craft-annotation note for every work in the vault, mirroring the folder structure.
 - [[_Craft/_index]] — cross-cutting craft notes: plot logic, and the liminal, psychedelic and cosmic registers. Analysis written with Claude, not the author's prose.
 
 ## Using `tools/vault_search.py`
@@ -66,7 +66,7 @@ Every work now carries YAML frontmatter above its `# Title` line:
 | `epic-fantasy` | Epic-Fantasy Mode |
 | `essay-self-help` | Essay / Self-Help Mode |
 | `confessional-poetry` | Confessional-Poetry Mode |
-| `unclassified` | No fixed mode rules apply — this is a real, expected value (roughly a third of the vault: satire, true-crime/pulp concepts, comedic sketches, dream/vision records, letters, songs, argued-not-confessed poems). Ask the user which register they want rather than defaulting to one of the four modes. |
+| `unclassified` | No fixed mode rules apply — this is a real, expected value (roughly a third of the 64 works in `00_INDEX.md`: satire, true-crime/pulp concepts, comedic sketches, dream/vision records, letters, songs, argued-not-confessed poems). Ask the user which register they want rather than defaulting to one of the four modes. |
 
 If a new piece's intended mode is ambiguous, ask — don't silently invent a `mode` or `project` value.
 
@@ -122,7 +122,7 @@ Applies to stories: `horror-prose`, `epic-fantasy`, and any piece written under 
 
 ## Companion annotation notes as worked examples
 
-Every one of the 64 works has a companion note at `_Annotations/<folder>/<file>.md` with genuine, specific craft analysis (not templated). Use the folder MOCs to browse them; use `tools/vault_search.py` to find one by topic/pattern rather than guessing a path.
+Every work has a companion note at `_Annotations/<folder>/<file>.md` with genuine, specific craft analysis (not templated). Use the folder MOCs to browse them; use `tools/vault_search.py` to find one by topic/pattern rather than guessing a path.
 
 ## Maintenance
 
