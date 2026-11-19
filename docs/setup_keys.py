@@ -33,6 +33,7 @@ KEYS = {
     "ANTHROPIC_API_KEY": "creative-writing: the anthropic drafting backend",
     "GOOGLE_FONTS_API_KEY": "ui-design: a live Google Fonts catalog refresh (maintainers only)",
     "MESHY_API_KEY": "studio: the asset-3d pipeline makes 3D models through the Meshy API",
+    "VAST_API_KEY": "vast plugin: rents GPUs on Vast.ai for Blender and ComfyUI (the studio's remote branch)",
 }
 _HTML = "text/html; charset=utf-8"
 STATIC = {"/keys.html": _HTML, "/index.html": _HTML, "/creative-writing.html": _HTML,

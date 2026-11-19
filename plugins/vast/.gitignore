@@ -1,0 +1,9 @@
+# vast plugin -- ignore rules that travel with the plugin.
+.env
+.env.*
+*.key
+*.pem
+__pycache__/
+*.py[cod]
+# Files moved to and from a rented instance
+vast-work/

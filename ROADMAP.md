@@ -22,7 +22,7 @@ Findings cite paths relative to the repo root. Severity: **P0** broken/unsafe, *
 ---
 
 ## ComfyUI 3D (2026-11-01)
-`studio/pipeline/comfy_client.py` runs `3d_pixal3d_trellis2_image_to_model.json` (moved to `studio/pipeline/comfy/workflows/pixal3d_trellis2_image_to_3d.json`) against a ComfyUI server. Built and tested against a fake server only. Open: run it against a real GPU machine (`check` first); wire it into the studio as a pipeline or a provider beside Meshy (B1/B2); decide where the GPU machine lives (this laptop has no CUDA). **[2026-11-19: client built, #32 `1a9144c`; real-GPU run, studio wiring (B2) and the GPU machine are Open]**
+`studio/pipeline/comfy_client.py` runs `3d_pixal3d_trellis2_image_to_model.json` (moved to `studio/pipeline/comfy/workflows/pixal3d_trellis2_image_to_3d.json`) against a ComfyUI server. Built and tested against a fake server only. Open: run it against a real GPU machine (`check` first); wire it into the studio as a pipeline or a provider beside Meshy (B1/B2); decide where the GPU machine lives (this laptop has no CUDA). **[2026-11-19: client built, #32 `1a9144c`. Later the same day: the GPU machine is a Vast.ai rental through the new `plugins/vast/` plugin, and the client is the `remote` branch of `asset-3d`, reached through the plugin's ssh tunnel. The real-GPU run is still Open (`plugins/vast/UNVERIFIED.md`)]**
 
 ---
 
@@ -102,13 +102,13 @@ The central pattern: **replace hard-wired vendor tool lists with a provider regi
 - `layout/doc/deck`: Canva, Adobe Express/InDesign (IDML), Figma, Gamma, Affinity.
 Pipelines declare capabilities; the recipe stage picks a provider and records it in the note. Resolve by bare tool name at run time so aliased/UUID servers work (fixes #13). Also **generate `.claude/settings.json` permission rules** from `connector.tools` + `connectors.never` so the allowlist is enforced, not advisory (W8).
 
-**B2. 3D provider interface.** Factor `meshy_client.py` into `create / wait / download / ledger / budget` and add a Higgsfield/Tripo adapter behind the same ledger and price checks. Merge scene-blender (cloud) and assemble-3d (local) into one pipeline with backend branches; accept FBX/OBJ/USD/.blend; revive the dropped `camera_path.py` / `lowpoly_gen.py` templates as plan steps. **[2026-11-19: Open; `comfy_client.py` (#32) is a second 3D route outside the studio, waiting on this]**
+**B2. 3D provider interface.** Factor `meshy_client.py` into `create / wait / download / ledger / budget` and add a Higgsfield/Tripo adapter behind the same ledger and price checks. Merge scene-blender (cloud) and assemble-3d (local) into one pipeline with backend branches; accept FBX/OBJ/USD/.blend; revive the dropped `camera_path.py` / `lowpoly_gen.py` templates as plan steps. **[2026-11-19: Open; the factoring and the Higgsfield/Tripo adapter. Partly: `comfy_client.py` (#32) is now `asset-3d`'s `remote` branch (ComfyUI on a GPU rented through `plugins/vast/`), beside Meshy, with its own `comfy_tasks.json` ledger, not yet the shared one]**
 
 **B3. Per-project brand context.** `context_root` is global (`spec.yaml:20`) and only 3 of 10 gates exist (visual_identity, typography_system, color_science). Allow `_Context/brand/<project>/` with fallback to global, so Who Did It (pixel art), the Museum, and client work stop forcing STATED rows. Prioritize authoring `brand_voice` (unblocks `ui-build`), `motion_language`, `sound_identity`. **[2026-11-19: Open]**
 
 **B4. Multi-source generations library.** `studio/library/library.py:88-112` normalizes Higgsfield only. Add source adapters (Adobe, Canva, Figma, Gamma, Meshy ledgers, `studio/assets/`) and a hub tab; generalize `higgsfield-library-sync` → `generations-library-sync` with a `--source`. **[2026-11-19: Open]**
 
-**B5. Compute gate profiles.** Per-machine profiles, AMD/Intel discrete detection, a `gpu` class, job-length tokens/renewal, use or drop `llm_local_*`/`batch_2d`. **[2026-11-19: Partly: AMD/Arc detection, every adapter, per-class TTL and `renew` (`14f072f`); profiles and a `gpu` class Open]**
+**B5. Compute gate profiles.** Per-machine profiles, AMD/Intel discrete detection, a `gpu` class, job-length tokens/renewal, use or drop `llm_local_*`/`batch_2d`. **[2026-11-19: Partly: AMD/Arc detection, every adapter, per-class TTL and `renew` (`14f072f`); profiles and a `gpu` class Open. GPU work now has a route that leaves `machine.yaml` describing the laptop: the `remote` branch (`remote_gpu: optional`) runs on a Vast.ai rental claimed with `studio_run.py lease`, under the author's biweekly band budgets in `plugins/vast/limits.json`]**
 
 **B6. Generalize neighbour skills.** `render-pipeline` is Who-Did-It only (`$WDI` paths) → profile-driven per game (reuse udgt profile pattern). `sound-library` assumes GitHub Releases → storage backend option. `reach-research`/`reach-references` hard-code repo paths → thin toolsets pointing into the reach plugin. **[2026-11-19: Open]**
 

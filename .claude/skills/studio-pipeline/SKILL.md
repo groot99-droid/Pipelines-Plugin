@@ -52,6 +52,19 @@ edit `state.json` by hand, and never work around a refusal.
    ask for the value of `MESHY_API_KEY`; if `meshy_client.py` says it is not
    set, the author adds it with `python docs/setup_keys.py`.
 
+   Either run can take the `remote` branch: the work runs on a GPU rented
+   through the vast plugin (`plugins/vast/`, its skill `vast-gpu`). For
+   `asset-3d` that means image to 3D with ComfyUI beside Meshy; for
+   `assemble-3d`, the same headless Blender run on a rented card. Record the
+   branch with `python studio/pipeline/studio_run.py branch <run-id> remote`.
+   The recipe pastes the plugin's quote. Rent only after the execute go-ahead,
+   then claim the rental with
+   `python studio/pipeline/studio_run.py lease <run-id> <instance-id>` before
+   anything runs on it. Destroy the instance when the files are down. The
+   plugin refuses what the author's biweekly band budgets do not allow; never
+   look for a way around that. Never read, print or ask for `VAST_API_KEY` or
+   the ssh private key.
+
 2. **Start or resume the run.**
 
    ```

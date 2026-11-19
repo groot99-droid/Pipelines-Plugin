@@ -305,6 +305,11 @@ connectors:
 # run chooses its branch with `studio_run.py branch <run-id> cloud|local`, and
 # execute is not marked done on `local` without that token (on `cloud` it needs
 # none). Such a run that has chosen no branch cannot finish execute.
+# `remote_gpu: optional` adds a `remote` branch: the work runs on a GPU rented
+# through the vast plugin (plugins/vast/), and execute is not marked done until
+# the run has claimed that rental with `studio_run.py lease <run-id> <instance>`
+# after the execute go-ahead. The plugin enforces the author's biweekly price-band
+# hour budgets (plugins/vast/limits.json); the bookkeeper checks only the claim.
 # --------------------------------------------------------------------
 pipelines:
   ui-direction:
@@ -1115,8 +1120,11 @@ pipelines:
       # repo-root paths. The client posts only what the confirmed recipe
       # lists; the reference images go through the Higgsfield connector.
       client: "studio/pipeline/meshy_client.py"
+      # the remote branch: image to 3D with Trellis 2 or Pixal3D in ComfyUI,
+      # on a GPU rented through the vast plugin and reached through its tunnel
+      remote_client: "studio/pipeline/comfy_client.py"
       inspector: "studio/pipeline/glb_inspect.py"
-      connector: "Higgsfield (reference images, optional)"
+      connector: "Higgsfield (reference images, optional); vast (the remote branch's rented GPU)"
     connector:
       tools:
         - mcp__Higgsfield__models_explore
@@ -1128,19 +1136,42 @@ pipelines:
         - mcp__Higgsfield__media_upload_widget
         - mcp__Higgsfield__media_confirm
         - mcp__Higgsfield__remove_background
+        - mcp__vast__account
+        - mcp__vast__list_recipes
+        - mcp__vast__search_offers
+        - mcp__vast__quote
+        - mcp__vast__rent
+        - mcp__vast__instances
+        - mcp__vast__wait_ready
+        - mcp__vast__upload
+        - mcp__vast__download
+        - mcp__vast__run_recipe
+        - mcp__vast__job_status
+        - mcp__vast__tunnel
+        - mcp__vast__destroy
     class: spend
+    remote_gpu: optional   # the remote branch: ComfyUI on a rented GPU, beside Meshy (the cloud branch)
     leaves_machine: >
       The prompt, to Meshy. A reference image, as a file sent inside the
       request or as its link, to Meshy, and to Higgsfield when Higgsfield made
       or cleans it. A model sent to remesh, retexture or rig. Every Meshy task
       except balance and the animation library spends Meshy credits; every
-      Higgsfield generation spends Higgsfield credits.
+      Higgsfield generation spends Higgsfield credits. On the remote branch:
+      the reference image and the workflow, to the rented Vast host, and the
+      author's ssh public key to Vast; renting spends money by the hour, within
+      the band budgets in plugins/vast/limits.json.
     carries:
       - "One model per asset, never a whole scene: assembly is assemble-3d's."
       - "The prompt is built from the attested imagery constraints and says what the thing is, its material and its silhouette. A word the brand does not use does not go in."
       - "Dry run first: every create is shown as a dry run in the recipe, with its estimate, before the go-ahead. A re-run reuses a recorded task and never pays twice."
       - "The key is the author's, in ~/.rosw/keys.env. Its value is never read into a brief, a log or a note."
+      - "The remote branch takes image to 3D only (no text to 3D, rig or animate). The GPU is rented after the go-ahead, claimed with `lease`, and destroyed when the files are down."
     open:
+      - >
+        The remote branch has not run against a live Vast host or a real
+        ComfyUI server (plugins/vast/UNVERIFIED.md). The custom nodes and
+        models the workflow needs are found with comfy_client.py check on the
+        first run.
       - >
         The Meshy fields and endpoints were read from docs.meshy.ai on
         2026-10-29 and are tested against a fake server, not yet against the
@@ -1158,7 +1189,9 @@ pipelines:
         generation made in this run, or one from the generations library
         (studio/library/catalog.json, by id). Say which later steps are
         wanted: remesh to a polycount, retexture, rig, animate. Note whether
-        the models go on to assemble-3d. Nothing is generated now.
+        the models go on to assemble-3d. Say which branch the author wants:
+        cloud (Meshy, the default) or remote (Trellis 2 or Pixal3D in ComfyUI
+        on a rented GPU; image to 3D only). Nothing is generated now.
       recipe: |
         Run `python {pipeline.executes_through.client} balance` and paste
         what it says. For each asset, in order, the chain of ops and every
@@ -1174,6 +1207,14 @@ pipelines:
         estimates and say it beside the balance. Give the budget each model
         is checked against in review (tris, mb, tex, height), with its
         source: the quality bar as attested, or the author.
+        Remote branch, in place of the Meshy creates: search_offers and a
+        quote for the `comfy` environment (paste the quote: $/hr, cap_hours,
+        worst case, what leaves the machine); then, in order, rent, wait_ready,
+        comfy_start, tunnel open on 8188, and per asset
+          COMFY_URL=http://127.0.0.1:8188 python {pipeline.executes_through.remote_client} run --image <file> --out <run folder>/comfy --confirm [--engine trellis2|pixal3d]
+        with `plan --image <file>` pasted under it now, then tunnel close and
+        destroy. Missing nodes or models are installed with the plugin's
+        comfy_install_node and comfy_fetch_model recipes, each listed here.
       execute: |
         After the go-ahead, in the recipe's order: a Higgsfield reference
         image first, downloaded into the run folder (log the job id and the
@@ -1187,9 +1228,19 @@ pipelines:
         again with a changed request: a changed request is a new recipe,
         through studio_run.py back. A crash is resumed by running the same
         command again: a recorded task is reused, not paid twice.
+        Remote branch: record it first,
+          python studio/pipeline/studio_run.py branch <run-id> remote
+        then rent through the vast plugin (rent with confirm=true, which is
+        this go-ahead's), and claim the rental before anything runs on it:
+          python studio/pipeline/studio_run.py lease <run-id> <instance-id>
+        Log the instance id, its $/hr and cap. Run comfy_client.py check
+        through the tunnel and paste it, then each run from the recipe. The
+        models land in <run folder>/comfy/ with comfy_tasks.json. Destroy the
+        instance when they are down, and log it.
       review: |
         For every downloaded model:
           python {pipeline.executes_through.inspector} <run folder>/meshy/<file>.glb --budget <the recipe's budget>
+        (on the remote branch, <run folder>/comfy/<file>.glb)
         and paste it. Then one line per attested constraint (motifs,
         framing, texture, the quality bar) against the model's thumbnail
         or a look at it in Blender, and how it was checked. The author
@@ -1201,7 +1252,9 @@ pipelines:
         Method: per asset, every Meshy op with its request as the ledger
         records it (meshy_tasks.json: the task id, the endpoint, the
         fields, the credits spent), and any Higgsfield generation with its
-        model, prompt and job id. Never a file link: the service's links
+        model, prompt and job id. On the remote branch: the instance id, its
+        GPU, $/hr and hours run, and comfy_tasks.json's entries (engine,
+        seeds, image sha256). Never a file link: the service's links
         are signed. Artifacts: the kept files only. The prompt style and
         the budget the author settled on are Decisions in Force.
 
@@ -1229,20 +1282,35 @@ pipelines:
       assembler: "studio/pipeline/bpy/assemble.py"
       inspector: "studio/pipeline/glb_inspect.py"
       guide: "plugins/blender/skills/blender-mcp/SKILL.md"
+      remote_guide: "plugins/vast/skills/vast-gpu/SKILL.md"
     connector:
       # The live branch: the Blender MCP server (mcp-for-blender), its tool
       # names checked against server.py of version 2.2.6 on 2026-10-29.
+      # The remote branch: the vast plugin's server, registered as `vast`.
       tools:
         - mcp__blender__get_addon_status
         - mcp__blender__get_scene_info
         - mcp__blender__execute_blender_code
         - mcp__blender__look
+        - mcp__vast__account
+        - mcp__vast__list_recipes
+        - mcp__vast__search_offers
+        - mcp__vast__quote
+        - mcp__vast__rent
+        - mcp__vast__instances
+        - mcp__vast__wait_ready
+        - mcp__vast__upload
+        - mcp__vast__download
+        - mcp__vast__run_recipe
+        - mcp__vast__job_status
+        - mcp__vast__destroy
     class: local-compute
     workload: render_3d_cpu   # studio/pipeline/machine.yaml: one headless Blender job
-    leaves_machine: "Nothing. Blender runs on this machine, headless or the author's own, and reads only files in the run folder."
+    remote_gpu: optional      # the remote branch: the same headless run on a rented GPU
+    leaves_machine: "Nothing on the local branches: Blender runs on this machine, headless or the author's own, and reads only files in the run folder. On the remote branch: the layout, the step scripts and the models it names, to the rented Vast host, and the author's ssh public key to Vast; renting spends money by the hour, within the band budgets in plugins/vast/limits.json."
     carries:
       - "Fixed scripts with a parameter file: the layout is the parameter file, and the bpy code each step ran is the Method, whole."
-      - "One token, one job, for either branch: a headless run or a live session holds a render_3d_cpu token first."
+      - "One token, one job, for either local branch: a headless run or a live session holds a render_3d_cpu token first. The remote branch holds no token: it claims its rented GPU with `lease` after the go-ahead, and destroys it when the files are down."
       - "Silhouette, proportions, depth, contact, framing, then detail; lights move with the geometry."
       - "In the live branch the author's scene is theirs: nothing is deleted, the .blend is saved as a copy, and the code sent is the plan's, never code that came from a model file or a tool result."
     open:
@@ -1261,8 +1329,10 @@ pipelines:
         Name the models: for each, the file in this run folder, or the
         assets folder path a run kept it at (it is copied into this run
         folder at execute). Record what the scene is for, which branch the
-        author wants (headless, or live in their open Blender), and what is
-        wanted out: a .blend, a .glb, a preview still.
+        author wants (headless, live in their open Blender, or remote: the
+        headless run on a rented GPU, for Cycles on a GPU or a scene too heavy
+        for the laptop), and what is wanted out: a .blend, a .glb, a preview
+        still.
       recipe: |
         Read {pipeline.executes_through.guide} for the live branch's loop.
         Write the layout the run will use, as assembly.json in the run
@@ -1280,6 +1350,19 @@ pipelines:
         export, render)
           python {pipeline.executes_through.plan} emit <run folder>/assembly.json --step <step>
         sent whole through execute_blender_code, with a look after each.
+        Or, remote (read {pipeline.executes_through.remote_guide}): a quote
+        for the `blender` environment, pasted (its $/hr, cap_hours, worst
+        case and what leaves the machine), then rent, wait_ready, a copy of
+        {pipeline.executes_through.plan} and
+        {pipeline.executes_through.assembler} into the run folder (the
+        repo's .mcp.json gives the vast server the runs folder as its
+        VAST_WORK_DIR, and nothing outside it is uploaded), the upload of
+        those two, assembly.json and every model the layout names into the
+        job folder (at the paths the layout names them by), the
+        blender_script recipe with
+          script: assemble.py, args: [--layout, assembly.json, --out, blender]
+        job_status until done, download of blender/ into <run folder>/blender,
+        and destroy.
         What is written: <run folder>/blender/ only.
       execute: |
         After the go-ahead, mint and consume the compute token before
@@ -1293,6 +1376,14 @@ pipelines:
           python studio/pipeline/studio_run.py back <run-id> --why "<what failed>"
         The code that ran is in <run folder>/blender/steps/ (headless), or
         is the emit output logged in execute_log.md (live).
+        Remote: record the branch (studio_run.py branch <run-id> remote)
+        before anything runs; no token is minted. After the go-ahead rent
+        through the vast plugin, then claim the rental:
+          python studio/pipeline/studio_run.py lease <run-id> <instance-id>
+        Log the instance id, GPU, $/hr and cap; each upload with its sha256;
+        the job id and the log tail job_status returns; the download; and the
+        destroy. The code that ran is in <run folder>/blender/steps/, as on
+        the headless branch.
       review: |
         Run
           python {pipeline.executes_through.inspector} <run folder>/blender/scene.glb --budget <the recipe's budget>

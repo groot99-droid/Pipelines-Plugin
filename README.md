@@ -83,6 +83,12 @@ plugins/video-editor/  the video-editor plugin: self-contained
   skills/, agents/     video-editor, manim-video; video-editor-render-qa
   commands/, hooks/    /ve-doctor; publish_guard.py (a real send needs a dry run first)
   tests/, UNVERIFIED.md  unittest suite; what is not verified and what is deferred
+plugins/vast/          the vast plugin: self-contained, stdlib
+  server/              server.py (the `vast` MCP server), vast_api.py, remote.py (ssh/scp), ledger.py
+  limits.json          the biweekly per-price-band GPU-hour budgets the server enforces
+  recipes.json         environments (base, blender, comfy) and typed recipes
+  skills/, commands/   vast-gpu; /vast-status
+  tests/, UNVERIFIED.md  a fake Vast API and fake ssh; what the first live run must check
 ```
 
 Paths in the creative-writing and studio skills and agents are relative to this
@@ -540,6 +546,30 @@ HTML or SVG into PNG or PDF with headless Chromium. Skills: `graphic-design-cata
 `tool-router`; agents: `print-preflight-reviewer`, `brand-consistency-reviewer`. Install with
 `/plugin install graphic-design@rosw`. The figures are typical industry values: confirm them with the printer or the
 platform. See `plugins/graphic-design/README.md`.
+
+## Vast plugin
+
+`plugins/vast/` rents GPUs on Vast.ai and runs headless Blender, ComfyUI and your own commands on them, through
+the stdlib `vast` MCP server. Renting spends money, so the server guards it itself:
+- `quote` prices an offer against the biweekly hour budgets in `limits.json`: up to $1/hr for 100 h per 14 days,
+  $1.50 for 50 h, $2.50 for 30 h, $5 for 10 h, $10 for 4 h, and nothing above $10.
+- `rent`, `run_shell`, `stop`, `destroy` and `reap` are dry runs without `confirm: true`.
+- Every rental starts an on-box watchdog that stops it at its deadline.
+- Every result carries a spend meter.
+
+Files move with `scp` inside one local folder. Recipes take typed, shell-quoted arguments. ComfyUI is reached
+through an ssh tunnel on 127.0.0.1, so `studio/pipeline/comfy_client.py` needs no `--allow-remote`. The studio
+uses it as the `remote` branch of `asset-3d` (image to 3D in ComfyUI) and `assemble-3d` (headless Blender), and a
+run claims its rental with `studio_run.py lease`.
+
+The key is `VAST_API_KEY` (set it with `python docs/setup_keys.py`; the repo's `.mcp.json` points the server at
+`~/.rosw/keys.env`). Install elsewhere with `/plugin install vast@rosw`. It has never been run against a live
+account; `plugins/vast/UNVERIFIED.md` lists what the first run must check. See `plugins/vast/README.md`.
+
+```
+python -m unittest discover -s plugins/vast/tests
+python plugins/vast/server/server.py --selftest
+```
 
 ## Brushes
 

@@ -39,6 +39,11 @@
       "name": "graphic-design",
       "source": "./plugins/graphic-design",
       "description": "Graphic design for print and screen: a searchable catalog of print specs, print colour rules, social sizes, identity rules and grids; SVG mark authoring with a delivery linter; a print preflight check; a render helper; and a router for which app or provider does which job."
+    },
+    {
+      "name": "vast",
+      "source": "./plugins/vast",
+      "description": "Rent Vast.ai GPUs and run headless Blender, ComfyUI and your own commands on them: quotes priced against biweekly per-price-band hour budgets, confirm-gated renting with an on-box stop watchdog, ssh/scp transfer, typed recipes, tunnels and a spend meter on every result."
     }
   ]
 }

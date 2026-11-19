@@ -1,0 +1,106 @@
+{
+  "_comment": "Environments are what an instance is rented with (image, disk, onstart). Recipes are named commands run on a live instance over ssh. Literal text in a template is trusted; every {param} is checked against its type and inserted shell-quoted, never spliced. A `path` param is relative to /workspace/job and may not contain `..`. Images and versions are pinned; none has been run on a live Vast host yet (UNVERIFIED.md).",
+  "job_dir": "/workspace/job",
+  "environments": {
+    "base": {
+      "description": "CUDA 12.4 runtime on Ubuntu 22.04, nothing else. For gpu_info and your own run_shell work.",
+      "image": "nvidia/cuda:12.4.1-runtime-ubuntu22.04",
+      "disk_gb": 20,
+      "onstart": [
+        "mkdir -p /workspace/job/logs"
+      ]
+    },
+    "blender": {
+      "description": "Blender 4.2.3 LTS (headless, Cycles on CUDA/OptiX) in /opt/blender, its tarball checked against the sha256 file Blender publishes beside it.",
+      "image": "nvidia/cuda:12.4.1-runtime-ubuntu22.04",
+      "disk_gb": 30,
+      "onstart": [
+        "mkdir -p /workspace/job/logs",
+        "apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq wget xz-utils libxi6 libxxf86vm1 libxfixes3 libxrender1 libgl1 libxkbcommon0 libsm6 libegl1 >/workspace/job/logs/apt.log 2>&1",
+        "cd /tmp && wget -q https://download.blender.org/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz https://download.blender.org/release/Blender4.2/blender-4.2.3.sha256",
+        "cd /tmp && grep 'blender-4.2.3-linux-x64.tar.xz' blender-4.2.3.sha256 | sha256sum -c - && mkdir -p /opt/blender && tar -xJf blender-4.2.3-linux-x64.tar.xz -C /opt/blender --strip-components=1 && touch /workspace/job/.blender-ready"
+      ]
+    },
+    "comfy": {
+      "description": "ComfyUI v0.3.10 on PyTorch 2.5.1 / CUDA 12.4 in /workspace/ComfyUI, listening on 127.0.0.1:8188 only (reach it through the `tunnel` tool). Add custom nodes and models with comfy_install_node and comfy_fetch_model.",
+      "image": "pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime",
+      "disk_gb": 80,
+      "onstart": [
+        "mkdir -p /workspace/job/logs",
+        "apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq git wget libgl1 libglib2.0-0 >/workspace/job/logs/apt.log 2>&1",
+        "[ -d /workspace/ComfyUI ] || git clone --depth 1 --branch v0.3.10 https://github.com/comfyanonymous/ComfyUI.git /workspace/ComfyUI",
+        "cd /workspace/ComfyUI && pip install -q -r requirements.txt >/workspace/job/logs/pip.log 2>&1 && touch /workspace/job/.comfy-ready"
+      ]
+    }
+  },
+  "recipes": {
+    "gpu_info": {
+      "description": "The GPU's name, memory and driver, and the CUDA version nvidia-smi reports.",
+      "template": "nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv && nvidia-smi | head -n 4",
+      "params": {}
+    },
+    "ready": {
+      "description": "Whether the environment's onstart has finished (prints which ready markers exist).",
+      "template": "ls -1 /workspace/job/.*-ready 2>/dev/null || echo 'not ready yet'; tail -n 5 /workspace/job/logs/*.log 2>/dev/null || true",
+      "params": {}
+    },
+    "blender_version": {
+      "environment": "blender",
+      "description": "The Blender build in /opt/blender.",
+      "template": "/opt/blender/blender -b --factory-startup --version",
+      "params": {}
+    },
+    "blender_render": {
+      "environment": "blender",
+      "description": "Render frames of an uploaded .blend with Cycles on the GPU. Output goes to /workspace/job/<output> (a Blender output path, e.g. render/frame_####).",
+      "template": "/opt/blender/blender -b {blend} -E CYCLES -o {output} -s {frame_start} -e {frame_end} -a -- --cycles-device {device}",
+      "background": true,
+      "params": {
+        "blend": {"type": "path", "description": "the .blend, relative to /workspace/job"},
+        "output": {"type": "path", "description": "output path prefix, relative to /workspace/job"},
+        "frame_start": {"type": "integer", "minimum": 0, "maximum": 1000000, "default": 1},
+        "frame_end": {"type": "integer", "minimum": 0, "maximum": 1000000, "default": 1},
+        "device": {"type": "enum", "values": ["OPTIX", "CUDA", "CPU"], "default": "OPTIX"}
+      }
+    },
+    "blender_script": {
+      "environment": "blender",
+      "description": "Run an uploaded Python script inside headless Blender: blender -b --factory-startup --python <script> -- <args>. Runs from /workspace/job, so the script finds the files uploaded beside it.",
+      "template": "cd /workspace/job && /opt/blender/blender -b --factory-startup --python {script} -- {args}",
+      "background": true,
+      "params": {
+        "script": {"type": "path", "description": "the .py, relative to /workspace/job"},
+        "args": {"type": "array", "maxItems": 40, "items": {"type": "string", "maxLength": 400}, "default": []}
+      }
+    },
+    "comfy_start": {
+      "environment": "comfy",
+      "description": "Start ComfyUI on 127.0.0.1:8188 in the background. Open a tunnel to reach it.",
+      "template": "cd /workspace/ComfyUI && python main.py --listen 127.0.0.1 --port 8188",
+      "background": true,
+      "params": {}
+    },
+    "comfy_install_node": {
+      "environment": "comfy",
+      "description": "Clone a custom node repository into ComfyUI/custom_nodes at a pinned ref and install its requirements. Restart ComfyUI (comfy_start) afterwards.",
+      "template": "cd /workspace/ComfyUI/custom_nodes && git clone {repo} {name} && cd {name} && git checkout {ref} && if [ -f requirements.txt ]; then pip install -q -r requirements.txt; fi",
+      "background": true,
+      "params": {
+        "repo": {"type": "string", "pattern": "^https://github\\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+(\\.git)?$", "maxLength": 200},
+        "name": {"type": "string", "pattern": "^[A-Za-z0-9_.-]{1,80}$"},
+        "ref": {"type": "string", "pattern": "^[A-Za-z0-9_./-]{1,80}$", "description": "a commit, tag or branch; prefer a commit"}
+      }
+    },
+    "comfy_fetch_model": {
+      "environment": "comfy",
+      "description": "Download a model file from Hugging Face into a ComfyUI models folder. comfy_client.py check names what is missing.",
+      "template": "mkdir -p /workspace/ComfyUI/models/{folder} && wget -q -O /workspace/ComfyUI/models/{folder}/{filename} {url}",
+      "background": true,
+      "params": {
+        "url": {"type": "string", "pattern": "^https://huggingface\\.co/[A-Za-z0-9_./%-]+$", "maxLength": 400},
+        "folder": {"type": "enum", "values": ["checkpoints", "diffusion_models", "unet", "vae", "clip", "clip_vision", "text_encoders", "loras", "upscale_models", "background_removal", "moge", "trellis", "pixal3d"]},
+        "filename": {"type": "string", "pattern": "^[A-Za-z0-9_.-]{1,160}$"}
+      }
+    }
+  }
+}

@@ -17,7 +17,7 @@ Where a tool's skills and agents live depends on how the tool is used:
   into a cache when it is installed and cannot reach outside its own folder, so its
   skills and agents live inside it, in `plugins/ui-design/`, not under `.claude/`.
   The other plugins under `plugins/` (blender, reach, udgt, video-editor,
-  graphic-design) are built the same way.
+  graphic-design, vast) are built the same way.
 - **The repo root is also a plugin**, `rosw` (`.claude-plugin/plugin.json`): it
   points at the `.claude/` skills and agents and registers the brushes MCP server.
   Those skills read and write this checkout's folders, so they work only from a
@@ -38,8 +38,9 @@ ROADMAP.md           the 2026-10-30 audit and expansion roadmap, each item marke
 .claude/hooks/       vault_guard.py (PreToolUse: asks before a Write or Edit of an original work,
                      refuses one into a studio vault note or gate) and its tests/;
                      settings.json registers it
-.mcp.json            the gemini MCP server Claude calls to reach Blender (blender-gemini), and the
-                     brushes MCP server (brushes/pipeline/mcp_server.py)
+.mcp.json            the gemini MCP server Claude calls to reach Blender (blender-gemini), the
+                     brushes MCP server (brushes/pipeline/mcp_server.py), and the vast server
+                     (plugins/vast/server/server.py, keys from ~/.rosw/keys.env, files in studio/pipeline/runs)
 blender-addons/      manifests/ (tools for the author's own Blender add-ons, read by the blender
                      plugin's addon-tools server), sources.json, build_manifests.py, tests/
 blender-gemini/      install.py (registers the Blender MCP server with the Gemini CLI,
@@ -115,6 +116,9 @@ plugins/video-editor/ the video-editor plugin: bin/ve.py (launcher), src/videoed
                      skills video-editor and manim-video, agent video-editor-render-qa, command
                      ve-doctor, hooks/publish_guard.py (a real send needs a dry run first), tests/,
                      UNVERIFIED.md
+plugins/vast/        the vast plugin: server/ (the `vast` MCP server, stdlib: Vast.ai API, ssh/scp, ledger),
+                     limits.json (biweekly price-band hour budgets), recipes.json, skill vast-gpu,
+                     command vast-status, tests/, UNVERIFIED.md
 .github/workflows/   verify.yml: CI for the whole repo (see "Working on the ui-design plugin");
                      pages.yml: publishes docs/ and the Writing Museum to GitHub Pages from main
 ```
@@ -248,9 +252,10 @@ the author names at a `scene-3d` intake, through `writing-museum/build/`.
   nothing; `run` is a dry run unless `--confirm`, and writes only to `--out` with a `comfy_tasks.json` ledger (image
   sha256, never a path or a link). A server on another machine needs `--allow-remote` and https, because the image is
   sent to it. These models need a CUDA GPU and `machine.yaml` describes a laptop without one, so `COMFY_URL` has to name
-  a GPU machine; the compute gate describes this machine and is not consulted. It is **not yet a studio pipeline**: no
-  `spec.yaml` entry, so there is no run, go-ahead or `keep` around it. That wiring is roadmap B2 (a provider interface
-  beside `asset-3d`). The `BINDINGS` in the client name the workflow's node ids and are checked on load; re-export the
+  a GPU machine; the compute gate describes this machine and is not consulted. In the studio it is the `remote` branch
+  of `asset-3d` (image to 3D only): the GPU is rented through the vast plugin after the execute go-ahead, ComfyUI is
+  reached through the plugin's ssh tunnel on 127.0.0.1 (so no `--allow-remote`), and the run claims the rental with
+  `studio_run.py lease`. The `BINDINGS` in the client name the workflow's node ids and are checked on load; re-export the
   workflow and update them together. Nothing here has run against a real ComfyUI server: the tests use a fake one.
   Tests: `python -m unittest discover -s studio/pipeline/tests -p "test_comfy_client.py"`.
 - The studio makes no brush file itself. Its `brush` pipeline (not yet
@@ -424,6 +429,38 @@ version; the standalone `groot99-droid/Agent-Reach` repository is a secondary co
   `reach` plugin carries `reach-setup`, `reach-connect` (wires a skill to the base), and a verbatim copy
   of the engine's skill (`agent-reach/scripts/sync_reach_plugin.py`, checked by a test).
   A test fails on a `reach:` channel the engine does not have.
+
+## Working on the vast plugin
+
+`plugins/vast/` is a plugin like ui-design: paths in its skill start from `${CLAUDE_PLUGIN_ROOT}`, and nothing in it
+(README and plugin.json aside) names this repo, `.claude/` or the studio; `tests/test_plugin.py` checks. It is stdlib
+Python; the instance is reached with the system's own `ssh` and `scp`.
+
+- **It spends money.** The server enforces the rules itself:
+  - `quote` spends nothing.
+  - `rent` needs a fresh, unused quote and `confirm: true`.
+  - `run_shell`, `stop`, `destroy` and `reap` need `confirm: true`.
+  - Never pass `confirm: true` unasked, and never loosen a check to get past a refusal.
+- **`limits.json` is the author's** (set 2026-11-19): GPU hours per rolling 14 days for each price band. Change it
+  only when the author asks. The tests pin its values, so update them together.
+- **The onstart watchdog** stops an instance at its deadline. Keep it first in every onstart.
+- **Recipes** (`recipes.json`) are data. Every parameter is typed and inserted shell-quoted, and a `path` stays
+  inside `/workspace/job`. Local files move only inside `VAST_WORK_DIR`. Add a recipe rather than reaching for
+  `run_shell`.
+- **Keys.**
+  - `VAST_API_KEY` comes from the environment, from `VAST_KEYS_FILE`, or from the Vast CLI's own file. The root
+    `.mcp.json` sets `VAST_KEYS_FILE=~/.rosw/keys.env`, written by `docs/setup_keys.py`.
+  - The ssh key is `VAST_SSH_KEY` (default `~/.ssh/id_ed25519`), and only its `.pub` is sent.
+  - Never read, print, echo or ask for either value. The tests use a fake key and check that it appears nowhere.
+- **The studio side.**
+  - `studio/pipeline/vast_lease.py` reads the plugin's ledger (`VAST_STATE_DIR`, default `~/.vast-mcp/`), read-only.
+  - `studio_run.py lease` claims a rental for a run on the `remote` branch. `remote_gpu: optional` in `spec.yaml`
+    offers that branch, today on `asset-3d` and `assemble-3d`.
+  - `studio/pipeline/tests/test_vast_lease.py` checks the branch, and that the spec names only tools the server has.
+- **Unverified.** Nothing has run against a live account or host. `plugins/vast/UNVERIFIED.md` is the checklist,
+  so do not describe the integration as working live.
+- **Tests:** `python -m unittest discover -s plugins/vast/tests` (a fake Vast API on 127.0.0.1, fake ssh/scp, an
+  injected clock).
 
 ## Working on the video-editor plugin
 
