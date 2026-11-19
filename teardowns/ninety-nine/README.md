@@ -22,7 +22,7 @@ The game is read from a sibling checkout (`../The-Intern` beside this repo, or `
 U="python plugins/udgt/engine/udgt.py"; P=teardowns/ninety-nine/profile.json
 $U scan  --profile $P            # after the game changes; `diff` first shows what moved
 $U check --profile $P            # broken citations, stale scan, chapter links
-$U brief 0 --profile $P          # the first stage's questions for the owner
+$U brief 0 --profile $P          # a stage's questions for the owner (all nine chapters are written)
 $U build --profile $P && python -m http.server --directory teardowns/ninety-nine 8791
 # then open http://127.0.0.1:8791/explorer/index.html
 ```
