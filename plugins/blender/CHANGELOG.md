@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- `.mcp.json` pins `mcp-for-blender==2.2.6`; a test ties the pin to the documented version (`efbb3e0`).
+- The `blender-addons` server treats a manifest tool with no `enabled` field as off (`0918187`).
+
 ## 0.2.0
 
 - Tool names and parameters checked against mcp-for-blender 2.2.6: `look`, `get_scene_info`

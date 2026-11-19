@@ -10,6 +10,7 @@ routes each to the platform's own upstream tool.
 | `reach-setup` | Is `agent-reach` installed and healthy; how to install it; what each platform still needs |
 | `reach-connect` | Wire another skill to Agent Reach: channel map, a Reach block, a new-toolset template, and a checker |
 | `agent-reach` | The router: which tool for which platform, with the retry chains in `references/` |
+| `/reach-doctor` | Command: runs `agent-reach doctor` and reports which platforms are reachable |
 
 ## Install
 
@@ -20,7 +21,9 @@ routes each to the platform's own upstream tool.
 
 ## Setup
 
-The plugin carries instructions, not the program. Install the CLI yourself:
+The plugin carries instructions, not the program. The program is the `agent-reach/` folder of this
+repository, which is the maintained version (the standalone `groot99-droid/Agent-Reach` repository is a
+secondary copy). Install the CLI yourself:
 
 ```
 pipx install "git+https://github.com/groot99-droid/Pipelines-Plugin.git#subdirectory=agent-reach"
