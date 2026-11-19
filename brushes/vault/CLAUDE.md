@@ -8,7 +8,7 @@ It does **not** license editing a generated note, a preview, a tag sidecar or th
 
 ## Where this vault sits, and how to read the paths
 
-This vault lives at `brushes/vault/` inside the `Pipelines` repo, as the data half of the brushes tool. The code that writes into it is `brushes/pipeline/`; the facts it is written from are `brushes/catalog/`; the original brush files are `brushes/library/`.
+This vault lives at `brushes/vault/` inside the `Pipelines-Plugin` repo, as the data half of the brushes tool. The code that writes into it is `brushes/pipeline/`; the facts it is written from are `brushes/catalog/`; the original brush files are `brushes/library/`.
 
 **Every path in this file is vault-relative** unless it starts with `brushes/`: `02_Vendor_Packs/igb-vintage-ink-kit.md`, `tools/brush_search.py`, `_BrushTags/vocabulary.yaml`. That is the form the search tool reports and accepts. From the repo root, prefix `brushes/vault/`. Commands below are written for the repo root and use `python`, never `python3`.
 

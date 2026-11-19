@@ -1,15 +1,16 @@
-# This repo is an Obsidian vault
+# This folder is an Obsidian vault
 
-64 works in plain markdown. Open the folder directly and everything —
+The author's works in plain markdown: the 64 that `00_INDEX.md` indexes and the
+works the pipeline has made since. Open the folder directly and everything —
 `00_INDEX.md`'s links, the wikilinks, the folder structure — works as written.
 
 **Obsidian → Open folder as vault → this directory**
-(`Pipelines/creative-writing/vault`). The vault lives inside the `Pipelines`
+(`Pipelines-Plugin/creative-writing/vault`). The vault lives inside the `Pipelines-Plugin`
 repo as one tool's data; open *this* folder, not the repo root, or Obsidian will
 try to index the pipeline's Python too.
 
 Nothing needs converting. The files are the vault; if you stop using Obsidian
-tomorrow you still have 64 markdown files.
+tomorrow you still have the same markdown files.
 
 Start from [[00_INDEX.md|the index]]. The tooling that writes into this vault is
 mapped at [[_Pipelines/_index|Pipelines index]]; its staging area is
@@ -42,7 +43,7 @@ all of them. Point it at this vault's new location:
 
 ```bash
 cd ~/Creative-Headquarters
-python3 tools/vault_rag.py index --vault ~/Pipelines/creative-writing/vault
+python3 tools/vault_rag.py index --vault ~/Pipelines-Plugin/creative-writing/vault
 python3 tools/vault_rag.py ask "which stories share the drowning motif"
 ```
 That repo's own `OBSIDIAN.md` has the full setup and failure modes. Note it still
