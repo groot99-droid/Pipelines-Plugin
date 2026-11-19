@@ -8,30 +8,39 @@ creative-writing tool is used from this repo, so its skills and agents live once
 at the repo root under `.claude/` and load whenever this repo is the working
 directory. The studio tool is used from this repo too, and keeps its skill
 there. The ui-design tool is a Claude Code plugin published on its own, so
-its skills and agents live inside it, under `plugins/ui-design/`.
+its skills and agents live inside it, under `plugins/ui-design/`; the other
+plugins under `plugins/` are built the same way. The repo root is a plugin too
+(`rosw`), which carries the `.claude/` skills and agents; they work only from a
+clone of this repo.
 
 ```
 INDEX.md               generated index of the tools, skills and agents
+ROADMAP.md             the 2026-10-30 audit and expansion roadmap, each item marked with its status
 .claude/skills/        creative-writing-pipeline, chunk-tag-backfill, studio-pipeline,
                        higgsfield-library-sync, render-pipeline, sound-library,
                        reach-research, reach-references, blender-gemini,
                        brush-library, brush-tag-backfill, brush-designer
 .claude/agents/        creative-writing-{chunk-tagger,drafter,librarian-native},
                        brush-{tagger,librarian-native}
-.mcp.json              the gemini MCP server Claude calls (see blender-gemini)
+.claude/commands/      studio-status
+.claude/hooks/         vault_guard.py: asks before an original work is edited, refuses a
+                       Write or Edit into a studio vault note or gate
+.mcp.json              the gemini MCP server Claude calls (see blender-gemini), and the brushes server
 CLAUDE.md              repo conventions; points at each vault's own CLAUDE.md
 blender-addons/        tool manifests for the author's own Blender add-ons (see Blender plugin)
 blender-gemini/        installer and tests that register the Blender MCP server
                        with the Gemini CLI; its skill is blender-gemini
 creative-writing/
-  vault/               the Obsidian vault: about 150 notes (64 original
-                       certified works plus later additions), _Annotations/,
-                       _ChunkTags/, _Idea_Library/, tools/, CLAUDE.md
+  vault/               the Obsidian vault: the 64 works of 00_INDEX.md (59 of them
+                       the author's verbatim originals), the works the pipeline
+                       has made since, _Annotations/, _ChunkTags/, _Craft/,
+                       _Idea_Library/, tools/, CLAUDE.md
   pipeline/            the checkpointed pipeline that writes into that vault
 studio/
   vault/               a second Obsidian vault: one note per made thing, the
                        brand gates, SCHEMA.md, CLAUDE.md
-  pipeline/            spec.yaml, the bookkeeper, the note and gate writers, compute gate
+  pipeline/            spec.yaml, the bookkeeper, the note and gate writers, compute gate,
+                       the Meshy and ComfyUI clients, the Blender assembly steps (bpy/)
   hub/                 the desk: a loopback server and page over the vault and the runs
   library/             the generations library: every Higgsfield generation catalogued
   assets/              what runs keep (not versioned)
@@ -41,24 +50,29 @@ sound-library/         the author's sound effects: catalog, library.py; WAVs liv
 brushes/               the Procreate brush library, catalog, search, vault and designer app
 docs/                  HTML pages for new users, and setup_keys.py for API keys
 .github/workflows/     verify.yml (CI for the whole repo), pages.yml (publishes docs/ and the museum)
-.claude-plugin/        marketplace.json: installs plugins/ui-design from this repo
+.claude-plugin/        plugin.json (the repo root as the rosw plugin) and marketplace.json
+                       (rosw and every plugin under plugins/)
 plugins/ui-design/     the ui-design plugin: self-contained
   .claude-plugin/      plugin.json and marketplace.json
   skills/, agents/     ui-design-{catalog,catalog-refresh,multipart},
                        ui-design-{catalog-reviewer,search-part,page-reviewer}
+  commands/            /ui-design-verify
   spec.yaml            the declared contract; validate-contract.py enforces it
   INDEX.md, ROUTER.md  the catalog's vocabulary (generated) and how to route a brief
   catalog/             data/ and scripts/: the search catalog, stdlib only
   maintenance/         validators, relevance gate, refresh scripts, verify.py
   references/          prose the ui-design-catalog skill reads on demand
   README.md, LICENSE, NOTICE, CHANGELOG.md
-plugins/udgt/          the udgt plugin: UI, Dataset & Gameplay Teardown of a game repo
+plugins/udgt/          the udgt plugin: UI, Dataset & Gameplay Teardown of a game repo;
+                       skills udgt-{teardown,consult,field-research},
+                       agents udgt-{chapter-analyst,citation-checker}
 plugins/graphic-design/ the graphic-design plugin: print and social catalog, SVG mark linter, print preflight, tool router
 teardowns/             one folder per torn-down game: who-did-it, ninety-nine, right-door-wrong-exit
 agent-reach/          the reach base: Agent Reach (imported with git subtree). CLI `agent-reach`
                        installs, checks and configures read access to 15 internet platforms;
                        toolsets follow agent-reach/TOOLSETS.md
-plugins/reach/         the reach plugin: reach-setup, reach-connect, and the engine's agent-reach skill (a copy)
+plugins/reach/         the reach plugin: reach-setup, reach-connect, and the engine's agent-reach skill (a copy);
+                       /reach-doctor
 plugins/blender/       the blender plugin: self-contained
   .mcp.json            launches `uvx mcp-for-blender` with telemetry off, and blender-addons
   addon-tools/         server.py: named tools for the user's own add-ons, from manifests
@@ -66,7 +80,8 @@ plugins/blender/       the blender plugin: self-contained
 plugins/video-editor/  the video-editor plugin: self-contained
   bin/ve.py            launcher: runs the CLI from the plugin folder or install cache, no pip install
   src/videoeditor/     the `ve` CLI: questionnaire, recipes and playbooks, ffmpeg render, captions, publish
-  skills/              video-editor, manim-video
+  skills/, agents/     video-editor, manim-video; video-editor-render-qa
+  commands/, hooks/    /ve-doctor; publish_guard.py (a real send needs a dry run first)
   tests/, UNVERIFIED.md  unittest suite; what is not verified and what is deferred
 ```
 
@@ -246,7 +261,8 @@ of the librarian:
   `http://localhost:11434`).
 - **`anthropic`** — opt in with `$env:PIPELINE_LLM_BACKEND = "anthropic"`
   and `$env:ANTHROPIC_API_KEY = "sk-ant-..."`. Requires `pip install anthropic`
-  (see `requirements.txt`).
+  (see `requirements.txt`). The model is `$env:ANTHROPIC_MODEL`, default
+  `claude-sonnet-5-5`.
 - **`gemini_mcp`** — Gemini via google-genai; see "Three execution backends"
   above.
 
@@ -374,9 +390,10 @@ Both are published on GitHub Pages, with the docs pages, on every push to `main`
 <https://groot99-droid.github.io/Pipelines-Plugin/museum/web/explore.html> and the
 museum at <https://groot99-droid.github.io/Pipelines-Plugin/museum/web/index.html>.
 The deploy rebuilds the museum from the vault, so a merged `scene-3d` run's room is
-on the site a few minutes later. The workflow is the site's only publisher: its first
-step sets the repository's Pages source to GitHub Actions, because a "deploy from a
-branch" source publishes `docs/` alone on the same push, after it, and drops `museum/`.
+on the site a few minutes later. The repository's Pages source must be "GitHub
+Actions": the workflow tries to set it, but its token cannot (HTTP 403), so the owner
+sets it once in Settings > Pages. Until then the workflow warns and skips the deploy,
+and a "deploy from a branch" source publishes `docs/` alone and drops `museum/`.
 
 ```powershell
 python -m http.server 8768 --directory writing-museum          # then open /web/index.html, or /web/explore.html to read
@@ -483,6 +500,23 @@ kept verbatim. The first teardown is `teardowns/who-did-it/`; see its README and
 [`docs/udgt.html`](docs/udgt.html). `teardowns/ninety-nine/` (The-Intern) and
 `teardowns/right-door-wrong-exit/` followed: Right Door has all seven chapters and Ninety-Nine all nine.
 
+## Reach (reading the internet)
+
+`agent-reach/` is Agent Reach (MIT, imported with `git subtree`; its `NOTICE` says from where and what
+changed here). It installs, checks (`agent-reach doctor`) and configures read access to the platforms
+its `agent_reach/channels/` lists, and after that agents call each platform's own upstream tool. This
+folder is the maintained version; the standalone `groot99-droid/Agent-Reach` repository is a secondary
+copy. `plugins/reach/` carries `reach-setup`, `reach-connect` and a copy of the engine's own skill
+(install with `/plugin install reach@rosw`). The toolsets that use it (`reach-research`,
+`reach-references`, `udgt-field-research`) follow `agent-reach/TOOLSETS.md`. Everything it does is
+read-only; credentials and cookies stay in `~/.agent-reach/`, outside the repo.
+
+```
+pipx install "git+https://github.com/groot99-droid/Pipelines-Plugin.git#subdirectory=agent-reach"
+agent-reach doctor
+cd agent-reach && python -m pytest tests -q
+```
+
 ## Video editor
 
 `plugins/video-editor/` edits video by conversation. A short questionnaire picks one recipe (highlight
@@ -491,7 +525,8 @@ dialogue vs action work never compete. It runs locally on ffmpeg and local Whisp
 adds optional extras for word alignment and speaker turns (whisperX), stem separation (Demucs) and a Remotion
 overlay template. `ve publish` sends the result through official platform APIs only: dry run by default,
 private or draft by default, nothing sent without `--yes`, credentials in the OS keyring or environment
-variables and never in a file. Install with `/plugin install video-editor@rosw`. `ve publish` has never been
+variables and never in a file. Install with `/plugin install video-editor@rosw`. This plugin is the maintained
+version; the standalone `groot99-droid/Video-Editor` repository is a secondary copy. `ve publish` has never been
 run against a live account; `plugins/video-editor/UNVERIFIED.md` lists what to check first. See
 `plugins/video-editor/README.md` and [`docs/video-editor.html`](docs/video-editor.html).
 

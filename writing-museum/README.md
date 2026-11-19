@@ -110,7 +110,7 @@ off; the placard test ignores the `*` of italics. Both are worth carrying back t
 
 ## What it does not do
 
-- It never writes into `creative-writing/vault/`. The 64 works stay verbatim; a panel shows a
+- It never writes into `creative-writing/vault/`. Every work stays as written; a panel shows a
   passage and cites its path and lines.
 - It never writes into `studio/vault/`. The note is written by the run, through `content_md.py`.
 - `data/scenes/` is not edited by hand. A scene spec is written by a `scene-3d` run at execute,
