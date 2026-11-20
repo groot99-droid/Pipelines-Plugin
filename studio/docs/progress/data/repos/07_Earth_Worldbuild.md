@@ -1,0 +1,934 @@
+# Earth_Worldbuild
+
+**Earth Chronicle vault, static site, walkable 3D museum, Art-Talk.** Source: https://github.com/groot99-droid/Earth_Worldbuild
+
+Generated 20 November 2026 from the repository clone (`git log`, `git ls-files`, and the files at HEAD). Counts are as cloned. Commit dates are git author dates in UTC and can differ from when the work was done (merged PRs, integration passes).
+
+## 1. Numbers
+
+| Measure | Value |
+|---|---|
+| Commits (all branches) | 98 (83 non-merge, 15 merge) |
+| First commit | 2026-09-28 |
+| Last commit | 2026-11-19 |
+| Days with commits | 3 |
+| Tracked files | 7096 |
+| Checked-out branch | HEAD |
+| Commit authors (non-merge, by name) | Claude: 72; groot99-droid: 11 |
+
+Author names are git author names: "Claude" marks commits made by a Claude session, and the owner's GitHub handle marks commits made by the owner. Email addresses are left out.
+
+**Tracked files by type (top 15):** .jpg 4265; .md 2453; .json 119; .py 69; .md" 65; .js 55; .glb 25; .bin 11; .gltf 11; (none) 5; .html 5; .canvas 2; .txt 2; .css 2; .yml 1
+
+**Tracked files by top-level folder:** _Site 4030; 07_Sources 787; 03_Entities 783; _Rewrite 689; Art-Talk-main 366; _Museum 178; _RAG 66; 01_Eras 41; "07_Sources 39; 05_Observer_Notes 29; "03_Entities 26; 02_Regions 21; _Templates 10; 04_Themes 9; .obsidian 5; 00_Meta 5; (root) 4; 06_Timelines 3; .claude 2; 08_Canvas_Maps 2; .github 1
+
+## 2. Activity by month and by day
+
+| Month | Non-merge commits |
+|---|---|
+| 2026-09 | 58 |
+| 2026-11 | 25 |
+
+**Per day (non-merge commits):** 2026-09-28 53; 2026-09-29 5; 2026-11-19 25
+
+## 3. Layout (folders and file counts)
+
+- **_Site/** 4030 files
+  - _Site/images/ 3726
+  - _Site/data/ 138
+  - _Site/_quarantine/ 134
+  - _Site/scripts/ 17
+  - _Site/js/ 11
+- **07_Sources/** 787 files
+- **03_Entities/** 783 files
+  - 03_Entities/People/ 188
+  - 03_Entities/Peoples-Cultures/ 178
+  - 03_Entities/Events/ 165
+  - 03_Entities/Places/ 106
+  - 03_Entities/Artifacts-Technologies/ 88
+  - 03_Entities/Species/ 58
+- **_Rewrite/** 689 files
+  - _Rewrite/incoming/ 567
+  - _Rewrite/batches/ 115
+  - _Rewrite/store/ 2
+- **Art-Talk-main/** 366 files
+  - Art-Talk-main/images/ 299
+  - Art-Talk-main/artists/ 53
+  - Art-Talk-main/scripts/ 5
+  - Art-Talk-main/rag/ 2
+  - Art-Talk-main/data/ 1
+- **_Museum/** 178 files
+  - _Museum/assets/ 113
+  - _Museum/web/ 45
+  - _Museum/blender/ 9
+  - _Museum/data/ 4
+  - _Museum/tools/ 1
+- **_RAG/** 66 files
+  - _RAG/tools/ 32
+  - _RAG/handoff/ 24
+- **01_Eras/** 41 files
+- **"07_Sources/** 39 files
+- **05_Observer_Notes/** 29 files
+- **"03_Entities/** 26 files
+  - "03_Entities/People/ 15
+  - "03_Entities/Peoples-Cultures/ 5
+  - "03_Entities/Places/ 5
+  - "03_Entities/Events/ 1
+- **02_Regions/** 21 files
+- **_Templates/** 10 files
+- **04_Themes/** 9 files
+- **.obsidian/** 5 files
+- **00_Meta/** 5 files
+- **(repository root)** 4 files
+- **06_Timelines/** 3 files
+- **.claude/** 2 files
+  - .claude/agents/ 1
+- **08_Canvas_Maps/** 2 files
+- **.github/** 1 files
+  - .github/workflows/ 1
+
+## 5. CI workflows
+
+- `.github/workflows/deploy-pages.yml`: Deploy GitHub Pages
+
+## 6. Documents inventory (2453 Markdown files)
+
+Markdown files by folder (top 25): 07_Sources 787; _Rewrite/incoming/merged 567; 03_Entities/People 188; 03_Entities/Peoples-Cultures 178; 03_Entities/Events 165; 03_Entities/Places 106; _Rewrite/batches 90; 03_Entities/Artifacts-Technologies 88; 03_Entities/Species 58; Art-Talk-main/artists 53; 01_Eras 41; 05_Observer_Notes 29; _Rewrite/batches/superseded 25; 02_Regions 21; _Templates 10; 04_Themes 9; _RAG/handoff 9; 00_Meta 5; _RAG 4; _Rewrite 4; 06_Timelines 3; _RAG/handoff/tier5-sandbox-2026-11-19 3; Art-Talk-main 2; _Museum/blender/scripts 2; _Site 2
+
+- `.claude/agents/chronicle-rewriter.md` (759 words): (no title). Sections: Before anything else; What you were asked to do; For each batch; Non-negotiable; Report back
+- `00_Meta/Conventions.md` (983 words): (no title). Sections: Note Types and Folders; Frontmatter Schema; Theme Slugs; Dates; Body Sections; Confidence and Status; Source Access Levels; Named-Artist Notes; Linking; Validation and Indexing
+- `00_Meta/Glossary of Observer Terms.md` (377 words): (no title). Sections: How to Use This Glossary; Terms
+- `00_Meta/Observer's Charter.md` (513 words): (no title). Sections: Purpose; The Two-Layer Rule; Voice Rules for the Observer's Reading; Vocabulary; What the Observer Is Not; Accuracy and Status
+- `00_Meta/Project Status Overview.md` (1345 words): (no title). Sections: Summary; What Exists; Design; Retrieval System; Where Things Stand; Next Steps
+- `00_Meta/README.md` (638 words): (no title). Sections: What This Vault Is; How the Vault Is Organized; Where to Start; The Two-Layer Rule; Status of the Content; Adding a Note; Searching the Vault (RAG)
+- `01_Eras/Anthropocene.md` (315 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Archean Eon.md` (273 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Bronze Age.md` (666 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Cambrian Period.md` (388 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Carboniferous Period.md` (427 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Cenozoic Era.md` (295 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Classical Antiquity.md` (679 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Cretaceous Period.md` (421 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Cryogenian Period.md` (419 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Devonian Period.md` (428 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Early Modern Period.md` (767 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Ediacaran Period.md` (410 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Epipaleolithic.md` (432 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Hadean Eon.md` (343 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Holocene Epoch.md` (216 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Industrial Age.md` (1010 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Information Age.md` (410 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Iron Age.md` (607 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Jurassic Period.md` (425 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Lower Paleolithic.md` (428 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Medieval Period.md` (1220 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Mesolithic.md` (428 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Mesoproterozoic Era.md` (414 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Mesozoic Era.md` (238 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Middle Paleolithic.md` (446 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Neogene Period.md` (451 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Neolithic.md` (526 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Neoproterozoic Era.md` (392 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Ordovician Period.md` (398 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Paleogene Period.md` (442 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Paleolithic.md` (403 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Paleoproterozoic Era.md` (421 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Paleozoic Era.md` (310 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Permian Period.md` (410 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Pleistocene Epoch.md` (340 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Proterozoic Eon.md` (268 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Quaternary Period.md` (414 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Silurian Period.md` (411 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Tonian Period.md` (369 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Triassic Period.md` (448 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `01_Eras/Upper Paleolithic.md` (460 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Era
+- `02_Regions/Amazon Basin and South American Lowlands.md` (550 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Andes.md` (355 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Arabian Peninsula.md` (326 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Caribbean and Atlantic World.md` (309 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Central Asian Oases.md` (336 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Central Asian Steppe.md` (340 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/East Asia.md` (665 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Europe.md` (961 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Iranian Plateau.md` (285 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Levant and Anatolia.md` (447 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Mediterranean Basin.md` (409 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Mesoamerica.md` (326 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Mesopotamia.md` (381 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Nile Valley.md` (362 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/North America.md` (583 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Oceania.md` (326 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Planet-wide.md` (707 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Siberia and the Arctic.md` (392 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/South Asia.md` (461 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Southeast Asia.md` (371 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `02_Regions/Sub-Saharan Africa.md` (664 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions; Notes in This Region
+- `03_Entities/Artifacts-Technologies/Airplane.md` (340 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Alphabet.md` (225 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Anesthesia.md` (341 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Antibiotics.md` (221 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Antikythera Mechanism.md` (343 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Aqueduct.md` (348 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Astrolabe.md` (333 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Battery.md` (345 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Bessemer Process.md` (308 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Brewing and Fermentation.md` (346 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Bronze Metallurgy.md` (248 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/CRISPR Gene Editing.md` (434 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Calendars.md` (343 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Cannon.md` (367 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Chariot.md` (343 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Chinampas.md` (349 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Code of Hammurabi.md` (353 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Codex.md` (328 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Coinage.md` (351 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Container Shipping.md` (431 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Crossbow.md` (367 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Crucible Steel.md` (343 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Cyrus Cylinder.md` (345 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Dead Sea Scrolls.md` (364 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Digital Computer.md` (207 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Double-Entry Bookkeeping.md` (344 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Electric Lighting.md` (318 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Electric Motor.md` (334 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Electrical Power Grid.md` (194 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Eyeglasses.md` (344 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/GPS.md` (417 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Gunpowder.md` (192 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Gutenberg Bible.md` (353 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Haber-Bosch Process.md` (327 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Hormonal Contraception.md` (437 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Insulin.md` (326 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Integrated Circuit.md` (416 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Internal Combustion Engine.md` (330 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Internet.md` (428 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Iron Smelting.md` (599 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Irrigation Canals.md` (360 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Liquid-Fueled Rocket.md` (417 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Magnetic Compass.md` (192 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Mechanical Clock.md` (188 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Microscope.md` (316 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Movable-Type Printing Press.md` (199 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Nuclear Fission.md` (236 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Nuclear Weapons.md` (440 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Oldowan Stone Tools.md` (177 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Oral Rehydration Therapy.md` (452 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Outrigger Canoe.md` (335 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Paper Money.md` (343 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Paper.md` (199 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Papyrus.md` (348 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Photography.md` (347 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Photovoltaic Cell.md` (436 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Porcelain.md` (350 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Pottery.md` (191 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Qanat.md` (352 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Quipu.md` (219 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Radio.md` (347 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Radiocarbon Dating.md` (414 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Railways.md` (330 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Refrigeration.md` (350 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Rosetta Stone.md` (286 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Sanitation and Sewers.md` (339 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Seismoscope.md` (331 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Sericulture.md` (339 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Smartphone.md` (420 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Steam Engine.md` (197 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Stirrup.md` (349 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Telegraph and Submarine Cables.md` (253 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Telephone.md` (323 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Telescope.md` (325 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Terracotta Army.md` (352 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/The Wheel.md` (206 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Trans-Siberian Railway.md` (319 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Transistor.md` (405 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Vaccination.md` (202 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Variolation.md` (347 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Water Chlorination.md` (406 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Water Clock.md` (341 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Windmill.md` (339 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Woodblock Printing.md` (196 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/World Wide Web.md` (432 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/X-ray Imaging.md` (311 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/Zero and Place-Value Notation.md` (421 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Artifacts-Technologies/mRNA Vaccines.md` (487 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/1918 Influenza Pandemic.md` (303 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Abolition of Slavery.md` (366 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/African Humid Period.md` (447 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Age of Revolutions.md` (456 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Alexander's Conquests.md` (244 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Amazonian Urbanism and Dark Earths.md` (430 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/American Civil War.md` (653 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/American Revolution.md` (311 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Animal Domestication.md` (266 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Armenian Genocide.md` (472 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Assembly of Pangaea.md` (357 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Assembly of Rodinia.md` (349 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Atlantic Slave Trade.md` (238 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Austronesian Expansion.md` (324 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Axial Age.md` (233 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Banded Iron Formations.md` (364 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Bantu Expansion.md` (232 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Battle of Adwa.md` (333 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Battle of Kadesh.md` (351 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Battle of Talas.md` (346 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Bengal Famine of 1943.md` (478 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Black Death.md` (227 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Boxer Rebellion.md` (250 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Breakup of Pangaea.md` (342 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/British Raj.md` (455 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Bronze Age Collapse.md` (204 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/COVID-19 Pandemic.md` (264 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Cambrian Explosion.md` (194 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Campanian Ignimbrite Eruption.md` (443 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Carboniferous Coal Forests.md` (355 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Chinese Reform and Opening.md` (318 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Classic Maya Collapse.md` (294 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Closure of the Isthmus of Panama.md` (329 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Cold War.md` (267 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Collapse of the Soviet Union.md` (346 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Collision of India and Asia.md` (329 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Colonization of Land.md` (252 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Columbian Exchange.md` (278 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Congo Free State.md` (262 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Events/Control of Fire.md` (316 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Ada Lovelace.md` (194 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Aisha bint Abi Bakr.md` (560 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Ajuricaba.md` (590 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Akbar.md` (493 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Akhenaten.md` (195 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Al-Biruni.md` (582 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Al-Khwarizmi.md` (206 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Alan Turing.md` (325 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Albert Einstein.md` (252 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Alexander the Great.md` (233 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Alphonse Mucha.md` (645 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Amanirenas.md` (569 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Amanitore.md` (491 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Ambiorix.md` (468 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Amir Khusrau.md` (527 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Amrita Sher-Gil.md` (718 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Anacaona.md` (548 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Andrea Palladio.md` (584 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Aristotle.md` (223 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Artemisia Gentileschi.md` (656 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Ashoka.md` (235 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Ashurbanipal.md` (511 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Attila.md` (564 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Augustus.md` (223 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Ba Trieu.md` (575 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Ban Zhao.md` (563 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Basawan.md` (688 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Basil II.md` (510 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Behzad.md` (714 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Buster Keaton.md` (657 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Caravaggio.md` (645 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Catherine de' Medici.md` (618 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Chandragupta Maurya.md` (575 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Charlemagne.md` (355 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Charles Darwin.md` (219 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Charles Rennie Mackintosh.md` (625 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Chico Mendes.md` (568 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Christopher Dresser.md` (633 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Christopher Wren.md` (643 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/People/Cixi.md` (257 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Abbasid Caliphate.md` (242 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Aboriginal Australians.md` (202 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Achaemenid Persians.md` (214 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Ainu.md` (591 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Akkadian Empire.md` (507 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Al-Andalus.md` (331 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Almoravid Dynasty.md` (561 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Ancestral Puebloans.md` (456 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Ancient Egyptians.md` (228 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Ancient Greeks.md` (195 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Anglo-Saxons.md` (374 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Asante Empire.md` (582 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Ayutthaya Kingdom.md` (447 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Aztec Empire.md` (202 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Babylonian Empire.md` (540 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Basques.md` (567 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Beaker Culture.md` (586 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Berbers.md` (579 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Botai Culture.md` (324 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Buddhism.md` (370 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Buganda.md` (630 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Byzantine Empire.md` (214 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Carthaginian Empire.md` (509 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Casarabe Culture.md` (262 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Celts.md` (390 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Champa.md` (475 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Cherokee.md` (390 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Chinchorro Culture.md` (278 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Chola Dynasty.md` (286 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Christianity.md` (389 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Chukchi.md` (525 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Comanche.md` (629 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Confucianism.md` (406 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Daoism.md` (361 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Delhi Sultanate.md` (274 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Dutch Republic.md` (576 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Elamites.md` (555 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Etruscans.md` (369 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Evenki.md` (511 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Peoples-Cultures/Franks.md` (420 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Aksum.md` (682 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Amazon River.md` (568 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Angkor.md` (226 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Antarctica.md` (508 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Arkaim.md` (613 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Athens.md` (226 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Atlantic Ocean.md` (502 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Auschwitz-Birkenau.md` (504 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Ayutthaya.md` (670 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Babylon.md` (688 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Bagan.md` (582 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Baghdad.md` (717 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Beringia.md` (416 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Borobudur.md` (300 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Botany Bay.md` (532 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Bukhara.md` (631 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Cahokia.md` (261 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Caral.md` (236 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Carthage.md` (246 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Chaco Canyon.md` (242 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Chang'an.md` (706 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Chauvet Cave.md` (363 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Chichen Itza.md` (322 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Constantinople.md` (227 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Cusco.md` (561 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Doggerland.md` (339 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Elmina Castle.md` (665 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Forbidden City.md` (634 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Ganges River.md` (610 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Giza Necropolis.md` (204 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Great Wall of China.md` (679 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Great Zimbabwe.md` (218 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Harappa.md` (637 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Hattusa.md` (631 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Havana.md` (689 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Hegra.md` (576 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Hiroshima.md` (686 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Hispaniola.md` (621 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Isfahan.md` (672 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Issyk-Kul.md` (655 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Jack Hills Zircons.md` (372 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Jamestown.md` (535 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Jericho.md` (293 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Jerusalem.md` (721 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Karakorum.md` (720 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Karnak.md` (649 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Kilwa Kisiwani.md` (678 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Knossos.md` (449 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Kolyma.md` (669 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Kuk Early Agricultural Site.md` (333 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Kyoto.md` (622 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/L'Anse aux Meadows.md` (480 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Lake Baikal.md` (658 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Lake Titicaca.md` (491 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Library of Alexandria.md` (305 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/London.md` (675 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Machu Picchu.md` (210 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Marib.md` (665 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Mausoleum of Qin Shi Huang.md` (676 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Mecca.md` (757 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Medina.md` (653 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Mekong River.md` (707 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Merv.md` (686 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Mesa Verde.md` (462 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Mexico City.md` (548 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Mogao Caves.md` (739 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Mohenjo-daro.md` (204 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Monte Alban.md` (315 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Monte Verde.md` (260 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Nalanda.md` (550 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Nan Madol.md` (513 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Nara.md` (617 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Nazca Lines.md` (569 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Newgrange.md` (623 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Nile River.md` (671 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Paris.md` (781 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Pasargadae.md` (582 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Persepolis.md` (274 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Petra.md` (630 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Pompeii.md` (434 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Port Royal.md` (679 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Potosi.md` (304 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Poverty Point.md` (286 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Rapa Nui.md` (564 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Robben Island.md` (652 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Rock-Hewn Churches of Lalibela.md` (636 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Rome.md` (196 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Samarkand.md` (243 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Santo Domingo.md` (720 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Sarai.md` (702 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Stonehenge.md` (364 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Taj Mahal.md` (323 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Tenochtitlan.md` (204 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Teotihuacan.md` (201 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Tikal.md` (501 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Timbuktu.md` (199 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Troy.md` (645 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Uluru.md` (528 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Upano Valley Settlements.md` (270 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Ur.md` (735 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Uruk.md` (206 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Valley of the Kings.md` (597 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Varanasi.md` (642 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Venice.md` (566 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Xingu Garden Cities.md` (279 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Places/Yellow River.md` (658 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Anomalocaris.md` (449 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Archaea.md` (388 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Archaeopteryx.md` (287 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Australopithecus afarensis.md` (236 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Barley.md` (562 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Black Rat.md` (520 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Cacao.md` (567 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Cassava.md` (600 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Cattle.md` (508 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Chicken.md` (547 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Coffee.md` (666 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Cotton.md` (612 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Cyanobacteria.md` (264 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Denisovans.md` (279 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Dinosaurs.md` (183 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Domestic Cat.md` (494 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Domestic Pig.md` (516 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Donkey.md` (488 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Dromedary and Bactrian Camels.md` (492 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Dunkleosteus.md` (407 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Ediacaran Biota.md` (305 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Eurypterids.md` (403 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Flowering Plants.md` (358 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Goat.md` (580 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Hallucigenia.md` (388 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Homo erectus.md` (210 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Homo floresiensis.md` (210 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Homo habilis.md` (221 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Homo naledi.md` (221 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Homo neanderthalensis.md` (232 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Homo sapiens.md` (273 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Honeybee.md` (513 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Horse.md` (562 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Influenza A Virus.md` (582 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Last Universal Common Ancestor.md` (424 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Llama and Alpaca.md` (510 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Maize.md` (553 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Mycobacterium tuberculosis.md` (609 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Pikaia.md` (392 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Plasmodium falciparum.md` (598 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Potato.md` (560 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Rice.md` (586 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Sahelanthropus tchadensis.md` (204 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Sheep.md` (642 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Sorghum.md` (515 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Soybean.md` (653 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Sponges.md` (370 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Stromatolites.md` (301 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Sugarcane.md` (586 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Tea Plant.md` (593 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Tiktaalik.md` (199 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Tobacco.md` (637 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Trilobites.md` (183 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Variola Virus.md` (563 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Vibrio cholerae.md` (535 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Wheat.md` (500 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Woolly Mammoth.md` (201 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `03_Entities/Species/Yersinia pestis.md` (527 words): (no title). Sections: Summary; Facts; Context & Connections; Observer's Reading; Open Questions
+- `04_Themes/Art and Ritual.md` (3108 words): (no title). Sections: Summary; Key Threads; Through the Eras; Regional Patterns; Debates and Limits; Observer's Reading; Open Questions; Notes Tagged With This Theme
+- `04_Themes/Earth Systems and Life.md` (3481 words): (no title). Sections: Summary; Key Threads; Through the Eras; Regional Patterns; Debates and Limits; Observer's Reading; Open Questions; Notes Tagged With This Theme
+- `04_Themes/Kinship and Society.md` (3293 words): (no title). Sections: Summary; Key Threads; Through the Eras; Regional Patterns; Debates and Limits; Observer's Reading; Open Questions; Notes Tagged With This Theme
+- `04_Themes/Language and Writing.md` (2691 words): (no title). Sections: Summary; Key Threads; Through the Eras; Regional Patterns; Debates and Limits; Observer's Reading; Open Questions; Notes Tagged With This Theme
+- `04_Themes/Religion and Belief.md` (3349 words): (no title). Sections: Summary; Key Threads; Through the Eras; Regional Patterns; Debates and Limits; Observer's Reading; Open Questions; Notes Tagged With This Theme
+- `04_Themes/Science.md` (2619 words): (no title). Sections: Summary; Key Threads; Through the Eras; Regional Patterns; Debates and Limits; Observer's Reading; Open Questions; Notes Tagged With This Theme
+- `04_Themes/Technology.md` (2991 words): (no title). Sections: Summary; Key Threads; Through the Eras; Regional Patterns; Debates and Limits; Observer's Reading; Open Questions; Notes Tagged With This Theme
+- `04_Themes/Trade and Economy.md` (3752 words): (no title). Sections: Summary; Key Threads; Through the Eras; Regional Patterns; Debates and Limits; Observer's Reading; Open Questions; Notes Tagged With This Theme
+- `04_Themes/War and Conflict.md` (4028 words): (no title). Sections: Summary; Key Threads; Through the Eras; Regional Patterns; Debates and Limits; Observer's Reading; Open Questions; Notes Tagged With This Theme
+- `05_Observer_Notes/Cargo That Was Not Goods - What Exchange-Webs Carry.md` (487 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Fire, Then Everything.md` (234 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Frontiers of Extraction.md` (322 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Institutionalized Doubt - How Strangers Learned to Check Each Other.md` (520 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Plague Years - Disease as a Historical Actor.md` (495 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Sacred Ground - Why Some Places Are Special.md` (455 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Sanctioned Harm.md` (249 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Scripts as Borders - Writing and Identity.md` (457 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Second Chances - How the Species Ran the Experiment Again.md` (309 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Story-Glue - How Strangers Cooperate at Scale.md` (236 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/The Aftermath Problem - How Societies Remember Their Wars.md` (492 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/The Fiction of Claim-Lines.md` (253 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/The Great Outsourcing of Memory.md` (237 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/The Kin-Lattice at Scale - From Households to States.md` (496 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/The Long Partnership - Domesticates and the Species.md` (455 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/The Ratchet and Its Gaps - Why Some Tool-Lineages Stall.md` (459 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/The Settling and Its Bargain.md` (251 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/The Species as a Geological Force.md` (281 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Who Counts as a Person - The Long Argument over Status.md` (509 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Who Gets Credit for the Machine.md` (491 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Who Writes the Record.md` (289 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Why Empires Keep Forming.md` (459 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Why Every Meaning-Engine Splits.md` (452 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Why Languages Die and Why Some Spread.md` (458 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Why Prophets Appear in Clusters.md` (461 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Why Strangers Trust Strangers - Money as Story-Glue.md` (484 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Why the Same Discovery Happens Twice.md` (440 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Why the Species Buries Its Dead.md` (285 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `05_Observer_Notes/Why the Species Makes Things That Do Nothing.md` (451 words): (no title). Sections: Question; What the Record Shows; Observer's Reading; Limits of This Reading
+- `06_Timelines/Deep-Time Timeline.md` (1562 words): (no title). Sections: Summary; How to Read This; Timeline
+- `06_Timelines/Human Timeline.md` (9951 words): (no title). Sections: Summary; How to Read This; Timeline
+- `06_Timelines/Master Timeline.md` (3201 words): (no title). Sections: Summary; How to Read This; Timeline
+- `07_Sources/African and Portuguese Decolonization Dates (Search Summaries).md` (240 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Age of the Solar System and Earth (Search Summaries).md` (221 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Alan Turing (Search Summaries).md` (193 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Ancient Americas on the Oval Palace Tablet.md` (144 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Ancient Civilizations (Scarre and Fagan).md` (88 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Anderson and Westneat 2007 Dunkleosteus Bite Force.md` (157 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Apollo Landings and Lunar Samples (Search Summaries).md` (189 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Archaeology Magazine on Anatolian Iron Smelting.md` (178 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Armenian Genocide (Search Summaries).md` (213 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Art-Talk (Artist Profiles).md` (227 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Art-Talk (Expansion Profiles).md` (264 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Ayutthaya Kingdom (Search Summaries).md` (203 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Barboni et al. 2017 Early Formation of the Moon.md` (193 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Bengal Famine of 1943 (Search Summaries).md` (207 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/BlackPast on Toussaint Louverture.md` (115 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/BlackPast on the Haitian Revolution.md` (97 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/BlackPast on the Sokoto Caliphate.md` (133 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Bottke and Norman 2017 The Late Heavy Bombardment.md` (211 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Braddy et al. 2008 Giant Eurypterid Claw.md` (128 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Brahmagupta and Fibonacci on Zero and Numerals (Search Summaries).md` (164 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Abd al-Malik.md` (136 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Al-Andalus.md` (143 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Angiosperm Paleobotany and Evolution.md` (165 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Archaefructus.md` (93 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Aristotle.md` (133 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Bedrich Hrozny.md` (94 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Beringia.md` (209 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Carolingian Minuscule.md` (102 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Chauvet-Pont d'Arc.md` (184 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Chichen Itza.md` (199 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Christopher Dresser.md` (140 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Continental Drift.md` (151 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Emperor Meiji.md` (188 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Ferdinand de Lesseps and the Suez Canal.md` (181 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Filippo Brunelleschi.md` (176 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Hernan Cortes.md` (142 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Hunayn ibn Ishaq.md` (191 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Khadijah.md` (137 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Kublai Khan.md` (152 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `07_Sources/Britannica on Malinche.md` (146 words): (no title). Sections: Citation; What It Is Used For; Caveats
+- `Art-Talk-main/README.md` (1416 words): Art-Talk. Sections: The artists; Viewing the timeline; Using the RAG files; Adding or editing an artist; Licensing
+- `Art-Talk-main/TIMELINE.md` (1586 words): Art-Talk Timeline. Sections: Lifespans at a glance; Born in the 900s; Born in the 1200s; Born in the 1300s; Born in the 1400s; Born in the 1500s; Born in the 1600s; Born in the 1700s; Born in the 1800s; Born in the 1900s
+- `Art-Talk-main/artists/alice-guy-blache.md` (1579 words): Alice Guy-Blaché (1873–1968). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/alphonse-mucha.md` (1288 words): Alphonse Mucha (1860–1939). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/amir-khusrau.md` (1327 words): Amir Khusrau (1253–1325). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/amrita-sher-gil.md` (1586 words): Amrita Sher-Gil (1913–1941). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/andrea-palladio.md` (1433 words): Andrea Palladio (1508–1580). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/antoni-gaudi.md` (1886 words): Antoni Gaudí (1852–1926). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/artemisia-gentileschi.md` (1734 words): Artemisia Gentileschi (1593–c. 1656). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/basawan.md` (1813 words): Basawan (active c. 1560–1600). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/behzad.md` (1909 words): Kamāl ud-Dīn Behzād (c. 1450–c. 1535). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/bosch.md` (1808 words): Hieronymus Bosch (c. 1450–1516). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/bruegel.md` (1740 words): Pieter Bruegel the Elder (c. 1525–1569). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/buster-keaton.md` (1481 words): Buster Keaton (1895–1966). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/caravaggio.md` (1670 words): Caravaggio (1571–1610). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/charles-rennie-mackintosh.md` (1398 words): Charles Rennie Mackintosh (1868–1928). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/christopher-dresser.md` (1322 words): Christopher Dresser (1834–1904). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/christopher-wren.md` (1470 words): Christopher Wren (1632–1723). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/durer.md` (1741 words): Albrecht Dürer (1471–1528). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/frank-lloyd-wright.md` (1393 words): Frank Lloyd Wright (1867–1959). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/georges-melies.md` (1441 words): Georges Méliès (1861–1938). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/giotto.md` (1882 words): Giotto di Bondone (c. 1267–1337). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/goya.md` (1795 words): Francisco Goya (1746–1828). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/henry-ossawa-tanner.md` (1681 words): Henry Ossawa Tanner (1859–1937). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/hilma-af-klint.md` (1826 words): Hilma af Klint (1862–1944). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/hiroshige.md` (1829 words): Utagawa Hiroshige (1797–1858). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/hokusai.md` (1773 words): Katsushika Hokusai (1760–1849). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/jane-austen.md` (1264 words): Jane Austen (1775–1817). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/jeong-seon.md` (1646 words): Jeong Seon (1676–1759). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/kandinsky.md` (1547 words): Wassily Kandinsky (1866–1944). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/klimt.md` (1818 words): Gustav Klimt (1862–1918). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/leo-tolstoy.md` (1313 words): Leo Tolstoy (1828–1910). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/leonardo-da-vinci.md` (1820 words): Leonardo da Vinci (1452–1519). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/louis-comfort-tiffany.md` (1410 words): Louis Comfort Tiffany (1848–1933). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/lumiere-brothers.md` (1421 words): Auguste and Louis Lumière (1862–1954). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/mary-cassatt.md` (1622 words): Mary Cassatt (1844–1926). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/michelangelo.md` (1717 words): Michelangelo Buonarroti (1475–1564). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/mimar-sinan.md` (1414 words): Mimar Sinan (c. 1489–1588). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/monet.md` (1723 words): Claude Monet (1840–1926). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/munch.md` (1725 words): Edvard Munch (1863–1944). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/murasaki-shikibu.md` (1587 words): Murasaki Shikibu (c. 973–c. 1014). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/raja-ravi-varma.md` (1551 words): Raja Ravi Varma (1848–1906). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/rembrandt.md` (1825 words): Rembrandt van Rijn (1606–1669). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/rumi.md` (1458 words): Jalal al-Din Rumi (1207–1273). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/sergei-eisenstein.md` (1468 words): Sergei Eisenstein (1898–1948). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/sesshu.md` (1800 words): Sesshū Tōyō (1420–1506). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/shen-zhou.md` (1768 words): Shen Zhou (1427–1509). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/sofonisba-anguissola.md` (1690 words): Sofonisba Anguissola (c. 1532–1625). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/turner.md` (1807 words): J. M. W. Turner (1775–1851). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/van-eyck.md` (1892 words): Jan van Eyck (c. 1390–1441). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/van-gogh.md` (1737 words): Vincent van Gogh (1853–1890). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/velasco.md` (1622 words): José María Velasco (1840–1912). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/velazquez.md` (1770 words): Diego Velázquez (1599–1660). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/vermeer.md` (1707 words): Johannes Vermeer (1632–1675). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/artists/william-morris.md` (1387 words): William Morris (1834–1896). Sections: Overview; Life; Style & Technique; Legacy; Key Works; Sources
+- `Art-Talk-main/rag/art-talk.md` (53776 words): Art-Talk: Artist Knowledge Base. Sections: Contents; Murasaki Shikibu (c. 973–c. 1014); Jalal al-Din Rumi (1207–1273); Amir Khusrau (1253–1325); Giotto di Bondone (c. 1267–1337); Jan van Eyck (c. 1390–1441); Sesshū Tōyō (1420–1506); Shen Zhou (1427–1509); Hieronymus Bosch (c. 1450–1516); Kamāl ud-Dīn Behzād (c. 1450–c. 1535)
+- `_Museum/README.md` (2172 words): The Chronicle Museum. Sections: How to view it; Pipeline; Testing: the browser walk-through harness; Adding things; Placard rewrite layer; The Writing Museum, a copy in Pipelines-Plugin; Known limitations
+- `_Museum/assets/CREDITS.md` (1164 words): Asset credits (Chronicle Museum). Sections: Sky; Models
+- `_Museum/blender/scripts/V2_CONTRACT.md` (2577 words): Chronicle Museum v2 — build contract (every agent reads this first). Sections: 0. Paths, tools, run model; 1. Coordinates and units; 2. Naming rules (the viewer classifies meshes by substring — case-sensitive, lowercase); 3. Idempotency, tagging, retirement (museum_lib_v2); 4. Core API (museum_lib_v2.py) — use these, don't re-invent them; 5. Materials (`MAT-v2_<slot>`; custom props `tile_m`, `slot`); 6. Fixture metadata (FX-* empties, exported via `export_extras=True` → three.js `userData`); 7. Web viewer contract (Phase 1); 8. Styles; 9. Budgets
+- `_Museum/blender/scripts/V2_HANDOFF.md` (1115 words): Hyper-Realism Pass v2: handoff (updated 2026-09-28 09:05). Sections: Why we stopped; Done; Findings to carry forward; Next steps (in order)
+- `_RAG/HANDOFF.md` (2845 words): Handoff: Earth Chronicle source re-read (Tiers 1-5 done, Tier 6 next). Sections: Current state (2026-11-19, after Tier 5); Why this exists; State; Policy A (agreed with the user on 2026-09-26, use it for Tiers 4-6); Tier 5 plan (mixed reference sites); Tier 6 plan; Working loop per tier; Tool reference (`_RAG/tools/`, documented in `_RAG/README.md`); Rules and gotchas that cost time; Report format at the end of each tier
+- `_RAG/HANDOFF_Tier5.md` (2314 words): Handoff: Tier 5 of the source re-read (written 2026-09-28; applied 2026-11-19). Sections: Result (2026-11-19): Tier 5 is applied; To finish Tier 5 where the pages can be read; The first pass (2026-09-28), kept for the record; Current state before the apply (checked 2026-11-19, superseded by the Result above); State in one paragraph; What exists now; The main finding; Remaining steps, in order; Judgment calls already made (say them in the report); Gotchas hit this session
+- `_RAG/OBSIDIAN_PLUGINS.md` (219 words): Obsidian setup. Sections: Handy Dataview queries (require the Dataview plugin); Two search systems, one vault
+- `_RAG/README.md` (1461 words): Earth Chronicle RAG. Sections: How it works; Setup (already done on the owner's Windows machine); Daily workflow; Command-line search; MCP server (lets Claude query the vault); Files; Work in progress (handoff files); Re-reading sources (fact-checking); Tuning; Note on OneDrive
+- `_RAG/handoff/Brief1_Handoff.md` (6212 words): Handoff: Earth Chronicle Brief 1 (People + Peoples & Cultures). Sections: 0. Where things stand; 1. Message to paste; 2. Ledger; 3. Batch procedure (run after every batch of 8); 4. Decisions already taken (stay consistent); 5. House rules digest (full text is in the original brief); 6. Plan; 7. Watch-outs; 8. Done criteria; 9. Live Cultures plan (written 2026-09-27 evening; supersedes 2.3 and the candidate lists above)
+- `_RAG/handoff/Brief3_Handoff.md` (1744 words): Brief 3 (Technologies and Themes) - handoff, written 2026-09-27. Sections: State; Per-batch procedure that worked (Batches 3-6); Conventions settled; Part B remaining (columns: title | date_start | era | region | themes | confidence | key facts and cautions); Part C: 18 essays in `05_Observer_Notes/`, batches 4, 4, 4, 4, 2
+- `_RAG/handoff/EarthChronicle_Brief1_People_and_Peoples-Cultures.md` (3426 words): BRIEF 1 of 4: People and Peoples & Cultures. Sections: MISSION; WHAT IS THIN TODAY (measured); COVERAGE RULES; CANDIDATES (suggestions; choose about 100 per category, add others if a gap remains, skip anything under EXISTING TITLES); AUTHORING NOTES; EXAMPLE 1 (person; match this length and tone); Summary; Facts; Context & Connections; Observer's Reading
+- `_RAG/handoff/EarthChronicle_Brief2_Places_and_Species.md` (3144 words): BRIEF 2 of 4: Places and Species. Sections: MISSION; WHAT IS THIN TODAY (measured); COVERAGE RULES; CANDIDATES (suggestions; choose about 70 places and about 40 species, add others if a gap remains, skip anything under EXISTING TITLES); AUTHORING NOTES; EXAMPLE 1 (place); Summary; Facts; Context & Connections; Observer's Reading
+- `_RAG/handoff/EarthChronicle_Brief3_Technologies_and_Themes.md` (3837 words): BRIEF 3 of 4: Technologies and Themes. Sections: MISSION; WHAT IS THIN TODAY (measured); PART A: HUB REWRITE RULES; PART B: TECHNOLOGY COVERAGE RULES; PART B CANDIDATES (suggestions; choose about 65, skip anything under EXISTING TITLES); PART C: ESSAY RULES; EXAMPLE 1 (technology); Summary; Facts; Context & Connections
+- `_RAG/handoff/HANDOFF_Art_Section_Expansion.md` (2971 words): Art Section Expansion: handoff. Sections: READ FIRST; CURRENT STATE (checked 2026-11-19); STATE (2026-09-28); WHAT IS LEFT (in order); DECISIONS (settled; do not reopen); WORKFLOW; CONVENTIONS; CAUTIONS; DO NOT; END-STATE WORK (near the end of the project)
+- `_RAG/handoff/HANDOFF_Brief1_Cultures_Remaining.md` (2285 words): Handoff: Brief 1 Peoples & Cultures, what is left (written 2026-09-28). Sections: 1. State right now; 2. What the pilot taught (use before launching the rest); 3. The reusable script; 4. Remaining batches (78 planned minus 8 done = 70 titles; re-check every title with `find . -iname "Title.md" -not -path "./_RAG/*"` at write time); 5. After the batches; 6. Standing rules and cautions (unchanged)
+- `_RAG/handoff/HANDOFF_Brief2_Places_and_Species.md` (3853 words): (no title)
+- `_RAG/handoff/factcheck_sweep_status.md` (1538 words): Handoff: fact-check + image sweep (stopped 2026-09-28 by the user's request). Sections: Goal and decisions already made by the user; Current state (checked 2026-11-19); State at stop (2026-09-28); Tools (`_RAG/tools/`); Recipe for one batch (about 30 minutes wall clock); Lessons and hazards; Frontmatter dates deliberately left for the user's decision; Not part of this sweep; Final numbers
+- `_RAG/handoff/tier5-sandbox-2026-11-19/README.md` (110 words): Tier 5 logs from the cloud session of 2026-11-19
+- `_RAG/handoff/tier5-sandbox-2026-11-19/discrepancies.md` (548 words): Discrepancies found while re-reading sources. Sections: 2026-11-19
+- `_RAG/handoff/tier5-sandbox-2026-11-19/unresolved.md` (2353 words): Unresolved claims. Sections: Tier 5 (2026-11-19)
+- `_Rewrite/HANDOFF.md` (588 words): Rewrite layer handoff (stopped 2026-09-28; state updated 2026-11-19). Sections: Where it stands (2026-11-19); How to resume; Voice mix (2026-11-19); Things to know
+- `_Rewrite/README.md` (443 words): Rewrite layer. Sections: Layout; New additions; What the checker enforces
+- `_Rewrite/VOICES.md` (1877 words): Voices for the rewrite layer. Sections: What a rewrite is; Choosing the voice: a mix, each where it fits; The four voices; Fidelity rules; Batch format; Commands
+- `_Rewrite/batches/museum-001.md` (778 words): (no title)
+- `_Rewrite/batches/museum-002.md` (7205 words): (no title)
+- `_Rewrite/batches/museum-003.md` (7066 words): (no title)
+- `_Rewrite/batches/museum-004.md` (6494 words): (no title)
+- `_Rewrite/batches/museum-005.md` (5916 words): (no title)
+- `_Rewrite/batches/museum-006.md` (7112 words): (no title)
+- `_Rewrite/batches/museum-007.md` (6896 words): (no title)
+- `_Rewrite/batches/museum-008.md` (6968 words): (no title)
+- `_Rewrite/batches/museum-009.md` (6722 words): (no title)
+- `_Rewrite/batches/museum-010.md` (6756 words): (no title)
+- `_Rewrite/batches/museum-011.md` (6932 words): (no title)
+- `_Rewrite/batches/museum-012.md` (6790 words): (no title)
+- `_Rewrite/batches/museum-013.md` (6682 words): (no title)
+- `_Rewrite/batches/museum-014.md` (6715 words): (no title)
+- `_Rewrite/batches/museum-015.md` (6675 words): (no title)
+- `_Rewrite/batches/museum-016.md` (6687 words): (no title)
+- `_Rewrite/batches/museum-017.md` (2248 words): (no title)
+- `_Rewrite/batches/museum-018.md` (1340 words): (no title)
+- `_Rewrite/batches/site-001.md` (2594 words): (no title)
+- `_Rewrite/batches/site-002.md` (7438 words): (no title)
+- `_Rewrite/batches/site-003.md` (7694 words): (no title)
+- `_Rewrite/batches/site-004.md` (8059 words): (no title)
+- `_Rewrite/batches/site-005.md` (7811 words): (no title)
+- `_Rewrite/batches/site-006.md` (7617 words): (no title)
+- `_Rewrite/batches/site-007.md` (7718 words): (no title)
+- `_Rewrite/batches/site-008.md` (7862 words): (no title)
+- `_Rewrite/batches/site-009.md` (8079 words): (no title)
+- `_Rewrite/batches/site-035.md` (7251 words): (no title)
+- `_Rewrite/batches/site-036.md` (6890 words): (no title)
+- `_Rewrite/batches/site-037.md` (6934 words): (no title)
+- `_Rewrite/batches/site-038.md` (7522 words): (no title)
+- `_Rewrite/batches/site-039.md` (7871 words): (no title)
+- `_Rewrite/batches/site-040.md` (7835 words): (no title)
+- `_Rewrite/batches/site-041.md` (7857 words): (no title)
+- `_Rewrite/batches/site-042.md` (7795 words): (no title)
+- `_Rewrite/batches/site-043.md` (7564 words): (no title)
+- `_Rewrite/batches/site-044.md` (8040 words): (no title)
+- `_Rewrite/batches/site-045.md` (7549 words): (no title)
+- `_Rewrite/batches/site-046.md` (7498 words): (no title)
+- `_Rewrite/batches/site-047.md` (7804 words): (no title)
+- `_Rewrite/batches/site-048.md` (7813 words): (no title)
+- `_Rewrite/batches/site-049.md` (7358 words): (no title)
+- `_Rewrite/batches/site-050.md` (7608 words): (no title)
+- `_Rewrite/batches/site-051.md` (7719 words): (no title)
+- `_Rewrite/batches/site-052.md` (7369 words): (no title)
+- `_Rewrite/batches/site-053.md` (7562 words): (no title)
+- `_Rewrite/batches/site-054.md` (7136 words): (no title)
+- `_Rewrite/batches/site-055.md` (7273 words): (no title)
+- `_Rewrite/batches/site-056.md` (7081 words): (no title)
+- `_Rewrite/batches/site-057.md` (4653 words): (no title)
+- `_Rewrite/batches/site-058.md` (5920 words): (no title)
+- `_Rewrite/batches/site-059.md` (6519 words): (no title)
+- `_Rewrite/batches/site-060.md` (8043 words): (no title)
+- `_Rewrite/batches/site-061.md` (6500 words): (no title)
+- `_Rewrite/batches/site-062.md` (5844 words): (no title)
+- `_Rewrite/batches/site-063.md` (5939 words): (no title)
+- `_Rewrite/batches/site-064.md` (4436 words): (no title)
+- `_Rewrite/batches/site-065.md` (4739 words): (no title)
+- `_Rewrite/batches/site-066.md` (5018 words): (no title)
+- `_Rewrite/batches/site-067.md` (5295 words): (no title)
+- `_Rewrite/batches/site-068.md` (2067 words): (no title)
+- `_Rewrite/batches/site-069.md` (377 words): (no title)
+- `_Rewrite/batches/site-070.md` (1660 words): (no title)
+- `_Rewrite/batches/site-071.md` (3566 words): (no title)
+- `_Rewrite/batches/site-072.md` (6750 words): (no title)
+- `_Rewrite/batches/site-073.md` (4366 words): (no title)
+- `_Rewrite/batches/site-074.md` (4548 words): (no title)
+- `_Rewrite/batches/site-075.md` (4572 words): (no title)
+- `_Rewrite/batches/site-076.md` (4398 words): (no title)
+- `_Rewrite/batches/site-077.md` (84 words): (no title)
+- `_Rewrite/batches/site-078.md` (6229 words): (no title)
+- `_Rewrite/batches/site-079.md` (6722 words): (no title)
+- `_Rewrite/batches/site-080.md` (5693 words): (no title)
+- `_Rewrite/batches/site-081.md` (5604 words): (no title)
+- `_Rewrite/batches/site-082.md` (5524 words): (no title)
+- `_Rewrite/batches/site-083.md` (5641 words): (no title)
+- `_Rewrite/batches/site-084.md` (5719 words): (no title)
+- `_Rewrite/batches/site-085.md` (5472 words): (no title)
+- `_Rewrite/batches/site-086.md` (5570 words): (no title)
+- `_Rewrite/batches/site-087.md` (5381 words): (no title)
+- `_Rewrite/batches/site-088.md` (5838 words): (no title)
+- `_Rewrite/batches/site-089.md` (5568 words): (no title)
+- `_Rewrite/batches/site-090.md` (5358 words): (no title)
+- `_Rewrite/batches/site-091.md` (6118 words): (no title)
+- `_Rewrite/batches/site-092.md` (4094 words): (no title)
+- `_Rewrite/batches/site-093.md` (7241 words): (no title)
+- `_Rewrite/batches/site-094.md` (5057 words): (no title)
+- `_Rewrite/batches/site-095.md` (7040 words): (no title)
+- `_Rewrite/batches/site-096.md` (289 words): (no title)
+- `_Rewrite/batches/site-097.md` (519 words): (no title)
+- `_Rewrite/batches/superseded/site-010.md` (8303 words): (no title)
+- `_Rewrite/batches/superseded/site-011.md` (7867 words): (no title)
+- `_Rewrite/batches/superseded/site-012.md` (7778 words): (no title)
+- `_Rewrite/batches/superseded/site-013.md` (7994 words): (no title)
+- `_Rewrite/batches/superseded/site-014.md` (7471 words): (no title)
+- `_Rewrite/batches/superseded/site-015.md` (7834 words): (no title)
+- `_Rewrite/batches/superseded/site-016.md` (7848 words): (no title)
+- `_Rewrite/batches/superseded/site-017.md` (7589 words): (no title)
+- `_Rewrite/batches/superseded/site-018.md` (7822 words): (no title)
+- `_Rewrite/batches/superseded/site-019.md` (7619 words): (no title)
+- `_Rewrite/batches/superseded/site-020.md` (7416 words): (no title)
+- ... (list capped at 700 files)
+
+Folders with more than 120 notes list only their first 40 files: 03_Entities/Events, 03_Entities/People, 03_Entities/Peoples-Cultures, 07_Sources, _Rewrite/incoming/merged
+
+## 9. Skills, agents and plugins
+
+- `.claude/agents/chronicle-rewriter.md`: Rewrites Earth Chronicle site notes and Chronicle Museum placards into the creative-writing tool's four voices (epic-fantasy, horror-prose, essay/self-help, confessional poetry, each where it fits) as a separate, labelled layer, then validates and merges them.
+
+## 10. Pull requests merged (13)
+
+- 2026-09-28 #2 from `groot99-droid/claude/confident-pasteur-35nfku`
+- 2026-09-28 #1 from `groot99-droid/claude/lucid-ptolemy-asq8wk`
+- 2026-09-28 #3 from `groot99-droid/claude/lucid-ptolemy-asq8wk`
+- 2026-09-28 #5 from `groot99-droid/claude/admiring-edison-8b6a06`
+- 2026-09-29 #4 from `groot99-droid/claude/confident-pasteur-35nfku`
+- 2026-09-29 #6 from `groot99-droid/claude/wizardly-cray-6bn04i`
+- 2026-09-29 #7 from `groot99-droid/claude/wizardly-cray-6bn04i`
+- 2026-09-29 #8 from `groot99-droid/claude/wizardly-cray-6bn04i`
+- 2026-09-29 #9 from `groot99-droid/claude/youthful-knuth-e8iz6n`
+- 2026-11-19 #10 from `groot99-droid/claude/inspiring-cori-juqfrm`
+- 2026-11-19 #11 from `groot99-droid/claude/inspiring-cori-juqfrm`
+- 2026-11-19 #12 from `groot99-droid/claude/inspiring-cori-juqfrm`
+- 2026-11-19 #13 from `groot99-droid/claude/inspiring-cori-juqfrm`
+
+## 11. Source documents (verbatim)
+
+Each file below is quoted from the repository at HEAD. Lines start with ">" so its headings do not mix with this document's.
+
+## 12. Full commit log (date, hash, subject)
+
+Every commit, oldest first. Merge commits are shown with their subjects.
+
+
+### 2026-09
+
+- 2026-09-28 59340b57 Initial commit: Earth Chronicle worldbuilding vault
+- 2026-09-28 f0bed2e8 Add GitHub Pages deploy workflow and landing page
+- 2026-09-28 5bcf4cf9 Apply Batch 6 fact-check corrections to 24 Places notes
+- 2026-09-28 586bdb55 Merge pull request #2 from groot99-droid/claude/confident-pasteur-35nfku [merge]
+- 2026-09-28 994d533d Merge pull request #1 from groot99-droid/claude/lucid-ptolemy-asq8wk [merge]
+- 2026-09-28 bad38d9b Add Species Batch 13 (Brief 2): 8 pathogens and organisms
+- 2026-09-28 a6b192a4 Complete Brief 3: Technologies Batch 7-8 and 18 Part C essays
+- 2026-09-28 11835c0a Add .nojekyll at repo root to stop the legacy Pages Jekyll build
+- 2026-09-28 21661666 Add Cultures Batch 4 (Brief 1): Huns, Normans, Hopewell Tradition, Maroon Communities, Zapotec Civilization, Chavin Culture, Sasanian Empire, Akkadian Empire
+- 2026-09-28 b12b7440 Add Cultures Batch 5 (Brief 1): Kievan Rus, Holy Roman Empire, Tupi-Guarani, Yanomami, Ptolemaic Kingdom, Kingdom of Makuria, Nok Culture, Tui Tonga Empire
+- 2026-09-28 c716a8e0 Add Cultures Batch 6 (Brief 1): Venetian Republic, Dutch Republic, Toltec, Moche Culture, Kingdom of Himyar, Babylonian Empire, Sukhothai Kingdom, Parthian Empire
+- 2026-09-28 c7b119ae Add Cultures Batch 7 (Brief 1): Soviet Union, Beaker Culture, Mixtec, Wari Empire, Rashidun Caliphate, Kingdom of Israel and Judah, Oyo Empire, Moriori
+- 2026-09-28 7340c61f Add Cultures Batch 8 (Brief 1): Sarmatians, Khazar Khaganate, Golden Horde, Yuezhi, Kara-Khitan Khanate, Evenki, Nenets, Elamites
+- 2026-09-28 f47548fb Merge pull request #3 from groot99-droid/claude/lucid-ptolemy-asq8wk [merge]
+- 2026-09-28 c0351471 Add Cultures Batch 9 (Brief 1): Chukchi, Carthaginian Empire, Berbers, Almoravid Dynasty, Igbo-Ukwu Culture, Asante Empire, Mamluk Sultanate, Đại Việt
+- 2026-09-28 d9c103e1 Add Cultures Batch 10 (Brief 1): Tapajos Culture, Khwarazmian Empire, Zhou Dynasty, Sui Dynasty, Yuan Dynasty, Goguryeo, Silla, Joseon Dynasty
+- 2026-09-28 5b665bc3 Add Cultures Batch 11 (Brief 1): Yamato Court, Ainu, Yayoi Culture, Magadha, Gandhara, Vijayanagara Empire, Maratha Empire, Sikh Empire
+- 2026-09-28 6f2cf3af Add Cultures Batch 12 (Brief 1): Pala Empire, Tibetan Empire, Habsburg Monarchy, Polish-Lithuanian Commonwealth, Basques, Sami, Navajo, Comanche
+- 2026-09-28 24c03a40 Complete Brief 1 Cultures: Batch 13 (final) - Tiwanaku, Chimu, Buganda, Luba Empire, Kingdom of Dahomey, Khoisan Peoples
+- 2026-09-28 c52b3924 Site rewrite checkpoint: batch 041 merged (in-progress agents on 039/040/042)
+- 2026-09-28 8baf7bc3 Site rewrite checkpoint: batches 039 and 040 fully merged
+- 2026-09-28 ac7c5df0 Site rewrite: complete Wave 1 (batches 039-042, 125 notes)
+- 2026-09-28 2e22cc0f museum: vendor Three.js r160 for the web viewer
+- 2026-09-28 3e9c53fe museum: build out the 3D walk-through (verified, navigable, guided)
+- 2026-09-28 ed28aeab Site rewrite checkpoint: batch 043 merged, new batches 069-071 exported
+- 2026-09-28 1c7b95b4 Site rewrite checkpoint: batch 046 fully merged
+- 2026-09-28 b6100358 Site rewrite: complete Wave 2 (batches 043-046, 105 notes)
+- 2026-09-28 1b47afc6 museum: Earth Chronicle "People" wing, generated in the viewer (no Blender)
+- 2026-09-28 e39acea8 museum: harness dismisses the entrance screen before wing screenshots
+- 2026-09-28 93a02fab museum: mention the Pages deployment; landing card names both wings
+- 2026-09-28 610970f2 Merge origin/main (GitHub Pages deploy workflow, landing page) into the museum branch [merge]
+- 2026-09-28 9e09e754 Site rewrite: complete Wave 3 (batches 047-050, 90 notes)
+- 2026-09-28 042a87a0 Site rewrite: Wave 4 checkpoint (batch 054 complete, 051-053 in progress)
+- 2026-09-28 f8e3f0b5 Site rewrite: Wave 4 checkpoint (051-053 nearing completion)
+- 2026-09-28 fc740e79 Site rewrite: complete Wave 4 batches 051 and 053 (46 notes)
+- 2026-09-28 5216971d Site rewrite: complete Wave 4 (batches 051-054, 91 notes)
+- 2026-09-28 39f50990 Site rewrite: Wave 5 checkpoint (055 complete, 056/057/060 progressing)
+- 2026-09-28 1400006e Site rewrite: Wave 5 checkpoint (058 progressing, 060 at 40/60)
+- 2026-09-28 616ce1c9 Site rewrite: complete Wave 5 batches 055, 056, 060 (106 notes)
+- 2026-09-28 23b511b9 Site rewrite: Wave 5 checkpoint (058 complete, 059 nearly done)
+- 2026-09-28 2dce30ab Merge pull request #5 from groot99-droid/claude/admiring-edison-8b6a06 [merge]
+- 2026-09-28 308f8934 Site rewrite: complete Wave 5 (batches 055-060, 122 notes)
+- 2026-09-28 2f0fc2f5 Site rewrite: Wave 6 checkpoint (064 complete, 061-063 progressing)
+- 2026-09-28 0b78fe14 Site rewrite: Wave 6 checkpoint (063 complete, 061/062 progressing)
+- 2026-09-28 80726855 Site rewrite: Wave 6 checkpoint (062 complete, 061 nearly done)
+- 2026-09-28 2ff14cd7 Site rewrite: complete Wave 6 (batches 061-064, 240 notes)
+- 2026-09-28 864afc54 Site rewrite: Wave 7 checkpoint (068 complete, 065-067 progressing)
+- 2026-09-28 366ca6fb Site rewrite: Wave 7 checkpoint (067 complete, 065/066 nearly done)
+- 2026-09-28 90d1945d Site rewrite: complete Wave 7 (batches 065-068, 210 notes)
+- 2026-09-28 ea6e3cfb Site rewrite: export final pending batches (072-077, 263 items)
+- 2026-09-28 6880f4c1 Site rewrite: Wave 8 checkpoint (073 and 076 complete, 074/075 progressing)
+- 2026-09-28 1fce1100 Site rewrite: Wave 8 checkpoint (074 complete, 075 nearly done)
+- 2026-09-28 329246d7 Site rewrite: complete Wave 8 (batches 073-076, 240 notes)
+- 2026-09-28 4eaf8eba Site rewrite: final cleanup checkpoint (stale items cleared, 12 left)
+- 2026-09-28 51c34400 Site rewrite: complete final cleanup (batches 072, 077-090, 371 notes)
+- 2026-09-28 35342dc1 Site rewrite: remove stale incoming residue, refresh recs.json
+- 2026-09-28 09b5ff49 museum: Grand Hall hub with era doors, per-room scenes, real-size salon hangs, museum sculptures
+- 2026-09-28 ebc843d3 museum: release the mouse when the floor plan or go-to panel opens; harness waits for models
+- 2026-09-29 63ed4bd3 Merge pull request #4 from groot99-droid/claude/confident-pasteur-35nfku [merge]
+- 2026-09-29 1eb2d1e4 museum: size resolver survives the Wikimedia edge rate limit
+- 2026-09-29 9be3dba9 museum: a rate-limited lookup leaves the work for the next resolver run
+- 2026-09-29 3c5da4ec Merge pull request #6 from groot99-droid/claude/wizardly-cray-6bn04i [merge]
+- 2026-09-29 f088d6d1 museum: size cache marks two more works as looked up
+- 2026-09-29 c1f9ac9d Merge origin/main after PR #6 merged [merge]
+- 2026-09-29 779c9dc4 Merge pull request #7 from groot99-droid/claude/wizardly-cray-6bn04i [merge]
+- 2026-09-29 d834ebe7 museum: sky backdrop and an open rotunda oculus
+- 2026-09-29 452d7617 Merge pull request #8 from groot99-droid/claude/wizardly-cray-6bn04i [merge]
+- 2026-09-29 ed1b1a66 Add gamepad (Xbox controller) support to the 3D museum
+- 2026-09-29 3123d444 Merge pull request #9 from groot99-droid/claude/youthful-knuth-e8iz6n [merge]
+
+### 2026-11
+
+- 2026-11-19 87ae4c7e vault: list every fact-checked source in sources:, record summary-only access
+- 2026-11-19 fb0ad005 site: rebuild data after the frontmatter fixes
+- 2026-11-19 427e17e9 docs(meta): regenerate Project Status Overview with a counter script
+- 2026-11-19 ecc68d27 docs(art-talk): describe schema v2, the probe script and how the page is published
+- 2026-11-19 cd732c9c docs(rag): bring the README and the handoffs in line with the repository
+- 2026-11-19 89bd05c3 docs(rewrite): current state of the layer, and where the voices come from
+- 2026-11-19 aafb7fa6 docs(museum): rewrite-layer state, the Writing Museum copy, retired-Blender banners
+- 2026-11-19 9034fada docs(site): current note and image counts, the ui-design plugin's home
+- 2026-11-19 2f375406 docs(meta): refresh the overview's wikilink count after the README and Conventions edits
+- 2026-11-19 dfdc8527 Merge pull request #10 from groot99-droid/claude/inspiring-cori-juqfrm [merge]
+- 2026-11-19 bbaeb049 tools: the fact-check spec builder lists cited sources; the rewriter agent's paths are relative to the repo
+- 2026-11-19 181b77d1 rewrite: export the 387 pending museum placards (People wing) as batches museum-006 to museum-017
+- 2026-11-19 2c228638 vault: correct the 17 passages flagged in _Rewrite/vault-issues.md, each against a cited source
+- 2026-11-19 2ba148dc rewrite: museum batches 006 to 013 validated and merged (580 of 686 placards rewritten)
+- 2026-11-19 9b836c5e rewrite: museum batch 014 validated and merged (638 of 686 placards rewritten)
+- 2026-11-19 c0548183 rewrite: museum batch 016 part 1 validated and merged (643 of 686 placards rewritten)
+- 2026-11-19 f32aaf28 rewrite: museum batch 016 validated and merged (659 of 686 placards rewritten)
+- 2026-11-19 cb77f6e5 rewrite: every site and museum item rewritten (1683 site, 686 museum); eight new source problems logged
+- 2026-11-19 b098a1a7 vault: Tier 5 of the source re-read, re-fetched in a cloud session and applied
+- 2026-11-19 c9be4e67 vault: fix seven of the eight problems the rewriter flagged; Gorgo's image left for the owner
+- 2026-11-19 31811991 rewrite: export the pending items as batches museum-018 and site-093 to site-096
+- 2026-11-19 432593d3 rewrite: redo the 189 items the Tier 5 patch and today's fixes made stale; both layers current
+- 2026-11-19 ecb4982a Merge pull request #11 from groot99-droid/claude/inspiring-cori-juqfrm [merge]
+- 2026-11-19 574ae575 vault: Sheep says where it was domesticated and how long before wool breeding, as its sources do
+- 2026-11-19 574d7e4b rewrite: export batch site-097 (the Sheep note)
+- 2026-11-19 c7018b42 rewrite: the Sheep note's site rewrite follows its corrected text (site-097)
+- 2026-11-19 c13739e9 Merge pull request #12 from groot99-droid/claude/inspiring-cori-juqfrm [merge]
+- 2026-11-19 79cdc576 museum: Gorgo's placard shows a labelled stand-in instead of a painting of Pericles
+- 2026-11-19 0c231e9e Merge pull request #13 from groot99-droid/claude/inspiring-cori-juqfrm [merge]
