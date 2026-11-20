@@ -7,6 +7,10 @@
 - The HyperFrames overlay option, which the CLI never accepted, is gone from the questionnaire (`c46e693`).
 - The OAuth loopback server binds without `getfqdn`, which stalled on macOS (`ec77792`).
 - Hook `hooks/publish_guard.py`: a real `ve publish send --yes` needs a dry run for that platform first, then still asks; `init` and `revoke` always ask (`b3b87d0`).
+- `ve render`: each segment is now cut to a whole number of frames on both streams (`-frames:v`, audio
+  resampled to 48 kHz and padded/trimmed to the same length). A millisecond-rounded `-t` could land just past a
+  frame boundary, giving the video an extra frame the audio never got; over many cuts the audio ran ahead of the
+  picture (about 150 ms across 17 cuts). Regression test: `tests/test_render_av_sync.py`.
 
 ## 0.1.0
 

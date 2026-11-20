@@ -1,0 +1,158 @@
+[
+ {
+  "source": "title",
+  "start": 0.0,
+  "end": 3.9985,
+  "beat": "title"
+ },
+ {
+  "source": "N1",
+  "start": 0,
+  "end": 6,
+  "beat": "dusk: the signal stops"
+ },
+ {
+  "source": "c11",
+  "start": 0.416667,
+  "end": 5.581834,
+  "beat": "tracking",
+  "reason": "telemetry antenna: she is following a collared rhino"
+ },
+ {
+  "source": "c02",
+  "start": 0.791667,
+  "end": 7.581834,
+  "beat": "tracking",
+  "reason": "the scientist moves through the jungle, dart gun raised"
+ },
+ {
+  "source": "N2",
+  "start": 0,
+  "end": 6,
+  "beat": "poachers set snares"
+ },
+ {
+  "source": "c12",
+  "start": 0.416667,
+  "end": 5.790167,
+  "beat": "threat",
+  "reason": "binoculars: three men, wire strung between trees"
+ },
+ {
+  "source": "N3",
+  "start": 0,
+  "end": 6,
+  "beat": "she sees them"
+ },
+ {
+  "source": "c05",
+  "start": 0.0,
+  "end": 6.0,
+  "beat": "snare",
+  "reason": "the rhino catches the snare and drops"
+ },
+ {
+  "source": "c14",
+  "start": 0.0,
+  "end": 5.9985,
+  "beat": "snare",
+  "reason": "trapped, bristles up, the eye"
+ },
+ {
+  "source": "c13",
+  "start": 0.0,
+  "end": 6.0,
+  "beat": "rescue",
+  "reason": "the scientist reads the situation"
+ },
+ {
+  "source": "c01",
+  "start": 0.416667,
+  "end": 6.581834,
+  "beat": "snare",
+  "reason": "ECU: she watches, she does not run"
+ },
+ {
+  "source": "c06",
+  "start": 0.0,
+  "end": 8.0,
+  "beat": "rescue",
+  "reason": "knife on the wire, intercut with the eye"
+ },
+ {
+  "source": "c07",
+  "start": 0.0,
+  "end": 6.0,
+  "beat": "freed",
+  "reason": "freed, the rhino knocks her down and stands over her"
+ },
+ {
+  "source": "c08",
+  "start": 0.0,
+  "end": 6.0,
+  "beat": "freed",
+  "reason": "the gentlest contact"
+ },
+ {
+  "source": "N4",
+  "start": 0,
+  "end": 6,
+  "beat": "poachers load the truck"
+ },
+ {
+  "source": "c15",
+  "start": 0,
+  "end": 5,
+  "beat": "headlights"
+ },
+ {
+  "source": "N5a",
+  "start": 0,
+  "end": 5.625,
+  "beat": "she fires"
+ },
+ {
+  "source": "N5b",
+  "start": 0.5,
+  "end": 6,
+  "beat": "tanker explodes"
+ },
+ {
+  "source": "N6",
+  "start": 0,
+  "end": 6,
+  "beat": "poachers flee"
+ },
+ {
+  "source": "N7",
+  "start": 0,
+  "end": 6,
+  "beat": "watching the fire"
+ },
+ {
+  "source": "c10",
+  "start": 0.0,
+  "end": 7.9985,
+  "beat": "dawn",
+  "reason": "pre-dawn: she walks into the river"
+ },
+ {
+  "source": "c03",
+  "start": 2.0,
+  "end": 8.0,
+  "beat": "underwater"
+ },
+ {
+  "source": "c04",
+  "start": 0.0,
+  "end": 8.0,
+  "beat": "dawn",
+  "reason": "riverbank, drone rises to the park boundary"
+ },
+ {
+  "source": "end",
+  "start": 0.0,
+  "end": 7.0,
+  "beat": "end card"
+ }
+]

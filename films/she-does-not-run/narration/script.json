@@ -1,0 +1,239 @@
+{
+ "voice": "A woman in her late thirties, Indonesian, speaking English with a light Indonesian accent. Low, warm, slightly husky; tired but steady; close to the microphone, unhurried, no performance.",
+ "model": "seed_audio",
+ "voice_take": {
+  "voice_type": "preset",
+  "voice_id": "0c51919f-0756-5f8d-8169-026a339d8fd7",
+  "name": "Vera"
+ },
+ "lines": [
+  {
+   "id": "L01",
+   "seg": "N1",
+   "window": [
+    3.6,
+    13.2
+   ],
+   "delivery": "hushed, steady, remembering",
+   "text": "For six years, her collar has told me where she sleeps, where she feeds, where she bathes. Tonight, it stopped moving.",
+   "place": [
+    3.3,
+    13.4
+   ],
+   "fitted": {
+    "start": 3.3,
+    "length": 9.088,
+    "tempo": 1.0
+   }
+  },
+  {
+   "id": "L02",
+   "seg": "c02",
+   "window": [
+    14.2,
+    20.0
+   ],
+   "delivery": "hushed, a little tense",
+   "text": "A rhino that stops moving at night is either asleep... or caught.",
+   "place": [
+    13.8,
+    20.8
+   ],
+   "fitted": {
+    "start": 13.8,
+    "length": 6.246,
+    "tempo": 1.0
+   }
+  },
+  {
+   "id": "L03",
+   "seg": "N2",
+   "window": [
+    21.0,
+    26.0
+   ],
+   "delivery": "hushed, bitter",
+   "text": "Wire is cheap. A horn is worth a fortune.",
+   "place": [
+    21.2,
+    27.8
+   ],
+   "fitted": {
+    "start": 21.2,
+    "length": 6.442,
+    "tempo": 1.0
+   }
+  },
+  {
+   "id": "L04",
+   "seg": "N3",
+   "window": [
+    32.2,
+    37.4
+   ],
+   "delivery": "almost a whisper, hiding",
+   "text": "Three men. Three torches. And somewhere out there... her.",
+   "place": [
+    28.6,
+    38.2
+   ],
+   "fitted": {
+    "start": 28.6,
+    "length": 6.818,
+    "tempo": 1.0
+   }
+  },
+  {
+   "id": "L05",
+   "seg": "c14",
+   "window": [
+    44.5,
+    55.2
+   ],
+   "delivery": "matter-of-fact, clinical, the scientist talking",
+   "text": "Snares don't kill quickly. They hold. The harder she fights the wire, the deeper it cuts.",
+   "place": [
+    44.3,
+    55.4
+   ],
+   "fitted": {
+    "start": 44.3,
+    "length": 7.582,
+    "tempo": 1.0
+   }
+  },
+  {
+   "id": "L06",
+   "seg": "c01",
+   "window": [
+    56.3,
+    61.6
+   ],
+   "delivery": "slow, a pause at the full stop",
+   "text": "She doesn't run. She watches me decide.",
+   "place": [
+    56.0,
+    61.9
+   ],
+   "fitted": {
+    "start": 56.0,
+    "length": 4.614,
+    "tempo": 1.0
+   }
+  },
+  {
+   "id": "L07",
+   "seg": "c08",
+   "window": [
+    76.4,
+    81.2
+   ],
+   "delivery": "slow, a little shaken, a pause at the full stop",
+   "text": "She could have crushed me. She didn't.",
+   "place": [
+    76.2,
+    81.3
+   ],
+   "fitted": {
+    "start": 76.2,
+    "length": 3.198,
+    "tempo": 1.0
+   }
+  },
+  {
+   "id": "L08",
+   "seg": "N4",
+   "window": [
+    82.0,
+    87.2
+   ],
+   "delivery": "flat, hard",
+   "text": "The men who set the wire were coming back for her.",
+   "place": [
+    81.8,
+    87.3
+   ],
+   "fitted": {
+    "start": 81.8,
+    "length": 2.612,
+    "tempo": 1.0
+   }
+  },
+  {
+   "id": "L09",
+   "seg": "N7",
+   "window": [
+    110.0,
+    113.2
+   ],
+   "delivery": "an exhale, quietly relieved",
+   "text": "They won't come back tonight.",
+   "place": [
+    109.8,
+    113.6
+   ],
+   "fitted": {
+    "start": 109.8,
+    "length": 3.213,
+    "tempo": 1.0
+   }
+  },
+  {
+   "id": "L10",
+   "seg": "c10",
+   "window": [
+    116.0,
+    121.3
+   ],
+   "delivery": "warm, unhurried",
+   "text": "At first light, she does what her kind has always done.",
+   "place": [
+    115.6,
+    121.8
+   ],
+   "fitted": {
+    "start": 115.6,
+    "length": 6.206,
+    "tempo": 1.048
+   }
+  },
+  {
+   "id": "L11",
+   "seg": "c04",
+   "window": [
+    127.5,
+    132.8
+   ],
+   "delivery": "warm, unhurried, letting the last word fall away",
+   "text": "Her forest is an island now. And the sea keeps rising.",
+   "place": [
+    127.0,
+    133.0
+   ],
+   "fitted": {
+    "start": 127.0,
+    "length": 5.418,
+    "tempo": 1.0
+   }
+  },
+  {
+   "id": "L12",
+   "seg": "end",
+   "window": [
+    133.6,
+    137.6
+   ],
+   "delivery": "quiet, final",
+   "text": "There may be fewer than fifty of them left.",
+   "place": [
+    133.8,
+    139.6
+   ],
+   "fitted": {
+    "start": 133.8,
+    "length": 5.298,
+    "tempo": 1.0
+   }
+  }
+ ]
+}

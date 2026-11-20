@@ -94,6 +94,8 @@ TOOL_PURPOSE = {
     "creative-writing": "An Obsidian vault of writing (the works, their annotations and craft notes) plus the "
                         "checkpointed pipeline that writes into it.",
     "docs": "Browsable HTML pages describing each tool, and a local helper for setting API keys.",
+    "films": "Finished films made with the video editor: the cut list, finishing pass and narration script for "
+             "each; the media itself is attached to a release.",
     "plugins": "Claude Code plugins, each self-contained and shippable on its own. Today: ui-design, "
                "a local BM25 catalog of UI styles, palettes, fonts, UX rules, icons, motion and stacks, "
                "with a design-system generator; blender, skills for driving a live Blender through MCP; "
