@@ -245,6 +245,20 @@ def probe_source_fps(video: Path) -> str | None:
 # -------- Per-segment extraction (Rule 2 + Rule 3) --------------------------
 
 
+AUDIO_RATE = 48000
+
+
+def frame_exact_duration(duration: float, rate: str) -> tuple[int, float]:
+    """Round a range length to whole frames at `rate`: (frame count, exact seconds).
+
+    Every segment is cut to this length on both streams, so concatenated
+    segments keep audio and video in step.
+    """
+    fps = Fraction(rate)
+    n_frames = max(1, round(Fraction(duration).limit_denominator(1_000_000) * fps))
+    return n_frames, float(n_frames / fps)
+
+
 def extract_segment(
     source: Path,
     seg_start: float,
@@ -281,9 +295,24 @@ def extract_segment(
         vf_parts.append(grade_filter)
     vf = ",".join(vf_parts)
 
+    # Frame rate: use the rate the caller resolved once for the whole render
+    # (every segment must share it — concat -c copy in Rule 2 requires a uniform
+    # frame rate). When called standalone with no rate, preserve this source's
+    # own rate; fall back to 24 only if it can't be probed.
+    out_rate = rate if rate is not None else (probe_source_fps(source) or "24")
+
+    # Video and audio must end at the same instant, or the concat drifts: a
+    # millisecond-rounded `-t` can land just past a frame boundary, so the video
+    # gains a whole frame the audio never gets, and that adds up across segments.
+    # Cut the video to a whole number of frames and trim/pad the audio to exactly
+    # that length.
+    n_frames, exact = frame_exact_duration(duration, out_rate)
+    end_sample = round(exact * AUDIO_RATE)
+
     # 30ms audio fades at both edges (Rule 3) — prevent pops
-    fade_out_start = max(0.0, duration - 0.03)
-    af = f"afade=t=in:st=0:d=0.03,afade=t=out:st={fade_out_start:.3f}:d=0.03"
+    fade_out_start = max(0.0, exact - 0.03)
+    af = (f"aresample={AUDIO_RATE},apad,atrim=end_sample={end_sample},"
+          f"afade=t=in:st=0:d=0.03,afade=t=out:st={fade_out_start:.6f}:d=0.03")
 
     if draft:
         preset, crf = "ultrafast", "28"
@@ -292,22 +321,19 @@ def extract_segment(
     else:
         preset, crf = "fast", "20"
 
-    # Frame rate: use the rate the caller resolved once for the whole render
-    # (every segment must share it — concat -c copy in Rule 2 requires a uniform
-    # frame rate). When called standalone with no rate, preserve this source's
-    # own rate; fall back to 24 only if it can't be probed.
-    out_rate = rate if rate is not None else (probe_source_fps(source) or "24")
-
     cmd = [
         "ffmpeg", "-y",
         "-ss", f"{seg_start:.3f}",
+        # input-side bound only (a little past the cut); the exact length comes
+        # from -frames:v and the audio trim below
+        "-t", f"{exact + 0.5:.6f}",
         "-i", str(source),
-        "-t", f"{duration:.3f}",
         "-vf", vf,
         "-af", af,
+        "-frames:v", str(n_frames),
         "-c:v", "libx264", "-preset", preset, "-crf", crf,
         "-pix_fmt", "yuv420p", "-r", out_rate,
-        "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
+        "-c:a", "aac", "-b:a", "192k", "-ar", str(AUDIO_RATE),
         "-movflags", "+faststart",
         str(out_path),
     ]
