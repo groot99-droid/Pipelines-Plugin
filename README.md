@@ -536,6 +536,13 @@ version; the standalone `groot99-droid/Video-Editor` repository is a secondary c
 run against a live account; `plugins/video-editor/UNVERIFIED.md` lists what to check first. See
 `plugins/video-editor/README.md` and [`docs/video-editor.html`](docs/video-editor.html).
 
+## Films
+
+`films/` holds finished films made with the video editor, one folder per film: the cut list, the finishing
+pass (transitions and sound mix), the narration script and subtitles. The video and audio are not versioned;
+each film's README links the GitHub release that carries the finished file. First film:
+[`films/she-does-not-run/`](films/she-does-not-run/README.md), a 2:20 Sumatran rhino rescue short.
+
 ## Graphic design plugin
 
 `plugins/graphic-design/` is for print and screen graphics. A stdlib catalog of seven small tables (print sizes with

@@ -72,6 +72,8 @@ writing-museum/      the Writing Museum: a walkable 3D museum of the creative-wr
   web/, assets/      the viewer (copied from Earth_Worldbuild/_Museum), the library page
                      (explore.html, this museum's own) and the CC0 textures
   tools/             walk_test.mjs: the browser walk-through
+films/              finished films made with the video editor, one folder per film: cut list, finishing
+                     pass (finish.py), narration script and subtitles; media goes to a GitHub release
 sound-library/       the author's sound effects: catalog.json (versioned), library.py (ingest,
                      search, fetch, verify), tests/; files/ holds the WAVs and is not versioned
 brushes/             the brush tool: the Procreate brush library (library/, originals through Git LFS),

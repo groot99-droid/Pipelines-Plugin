@@ -179,3 +179,15 @@ sound-library/files/
 # ── Teardowns (udgt) ─────────────────────────────────────────────────────────
 # `udgt.py build` regenerates a teardown's explorer/ (page, theme, copied fonts).
 teardowns/*/explorer/
+
+# ── Films ────────────────────────────────────────────────────────────────────
+# A film folder versions its edit (cut list, finishing pass, narration script);
+# the media is large and goes to a GitHub release instead.
+films/*/media/
+films/*/clips_*/
+films/*/_finish/
+films/*/base*.mp4
+films/*/She_Does_Not_Run*.mp4
+films/*/narration/*.wav
+films/*/narration/fitted/
+films/*/narration/takes/

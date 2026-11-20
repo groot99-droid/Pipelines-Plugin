@@ -1,0 +1,219 @@
+{
+ "native_gain_db": -6,
+ "transitions": {
+  "title": {
+   "type": "fadeblack",
+   "dur": 1.0
+  },
+  "N1": {
+   "type": "fade",
+   "dur": 0.6
+  },
+  "c08": {
+   "type": "fade",
+   "dur": 0.5
+  },
+  "N7": {
+   "type": "fadeblack",
+   "dur": 1.2
+  },
+  "c10": {
+   "type": "fade",
+   "dur": 0.8
+  },
+  "c03": {
+   "type": "fade",
+   "dur": 0.8
+  },
+  "c04": {
+   "type": "fadeblack",
+   "dur": 1.5
+  }
+ },
+ "cues": [
+  {
+   "file": "../../sound-library/files/dreamscore-2/fragments-of-dawn.wav",
+   "seg": "title",
+   "dur": 24,
+   "gain_db": -14,
+   "fade_in": 2,
+   "fade_out": 5
+  },
+  {
+   "file": "../../sound-library/files/temporal-transitions/air-suspense-transition.wav",
+   "seg": "title",
+   "offset": 2.4,
+   "gain_db": -10
+  },
+  {
+   "file": "../../sound-library/files/beautiful-nature-sound-fx/crickets-in-the-forest.wav",
+   "seg": "N1",
+   "dur": 7,
+   "gain_db": -8,
+   "fade_in": 1,
+   "fade_out": 2
+  },
+  {
+   "file": "../../sound-library/files/beautiful-nature-sound-fx/forest-at-night-ambience.wav",
+   "seg": "c11",
+   "loop": true,
+   "dur": 92,
+   "gain_db": 12,
+   "fade_in": 2,
+   "fade_out": 3
+  },
+  {
+   "file": "../../sound-library/files/tension-builders/heartbeat-tension-builder.wav",
+   "seg": "c05",
+   "dur": 44,
+   "gain_db": -12,
+   "fade_in": 2,
+   "fade_out": 3
+  },
+  {
+   "file": "../../sound-library/files/tension-builders/low-rumble-tension.wav",
+   "seg": "N4",
+   "loop": true,
+   "dur": 16,
+   "gain_db": 2,
+   "fade_in": 1,
+   "fade_out": 0.5
+  },
+  {
+   "file": "../../sound-library/files/blockbuster-guns/sniper-rifle-shot.wav",
+   "seg": "N5a",
+   "offset": 5.27,
+   "gain_db": -2
+  },
+  {
+   "file": "../../sound-library/files/blockbuster-explosions/gas-explosion-far-away.wav",
+   "seg": "N5b",
+   "offset": 1.05,
+   "gain_db": 0
+  },
+  {
+   "file": "../../sound-library/files/blockbuster-explosions/deep-explosion-far-away.wav",
+   "seg": "N5b",
+   "offset": 1.05,
+   "gain_db": -5
+  },
+  {
+   "file": "../../sound-library/files/blockbuster-fire/huge-fire-outside.wav",
+   "seg": "N5b",
+   "offset": 2.5,
+   "loop": true,
+   "dur": 15,
+   "gain_db": -8,
+   "fade_out": 4
+  },
+  {
+   "file": "../../sound-library/files/temporal-transitions/rumble-whoosh-transition.wav",
+   "seg": "N7",
+   "offset": 3.8,
+   "gain_db": -9
+  },
+  {
+   "file": "../../sound-library/files/dreamscore-2/through-silent-valleys.wav",
+   "seg": "N7",
+   "dur": 38,
+   "gain_db": -8,
+   "fade_in": 3,
+   "fade_out": 5
+  },
+  {
+   "file": "../../sound-library/files/beautiful-nature-sound-fx/rainforest-ambience.wav",
+   "seg": "c10",
+   "dur": 22,
+   "gain_db": -2,
+   "fade_in": 3,
+   "fade_out": 4
+  },
+  {
+   "file": "../../sound-library/files/beautiful-nature-sound-fx/underwater.wav",
+   "seg": "c03",
+   "loop": true,
+   "dur": 6,
+   "gain_db": -6,
+   "fade_in": 0.8,
+   "fade_out": 1
+  },
+  {
+   "file": "narration/fitted/L01.wav",
+   "at": 3.3,
+   "narration": true,
+   "gain_db": 0
+  },
+  {
+   "file": "narration/fitted/L02.wav",
+   "at": 13.8,
+   "narration": true,
+   "gain_db": 0
+  },
+  {
+   "file": "narration/fitted/L03.wav",
+   "at": 21.2,
+   "narration": true,
+   "gain_db": 0
+  },
+  {
+   "file": "narration/fitted/L04.wav",
+   "at": 28.6,
+   "narration": true,
+   "gain_db": 0
+  },
+  {
+   "file": "narration/fitted/L05.wav",
+   "at": 44.3,
+   "narration": true,
+   "gain_db": 0
+  },
+  {
+   "file": "narration/fitted/L06.wav",
+   "at": 56.0,
+   "narration": true,
+   "gain_db": 0
+  },
+  {
+   "file": "narration/fitted/L07.wav",
+   "at": 76.2,
+   "narration": true,
+   "gain_db": 0
+  },
+  {
+   "file": "narration/fitted/L08.wav",
+   "at": 81.8,
+   "narration": true,
+   "gain_db": 0
+  },
+  {
+   "file": "narration/fitted/L09.wav",
+   "at": 109.8,
+   "narration": true,
+   "gain_db": 0
+  },
+  {
+   "file": "narration/fitted/L10.wav",
+   "at": 115.6,
+   "narration": true,
+   "gain_db": 0
+  },
+  {
+   "file": "narration/fitted/L11.wav",
+   "at": 127.0,
+   "narration": true,
+   "gain_db": 0
+  },
+  {
+   "file": "narration/fitted/L12.wav",
+   "at": 133.8,
+   "narration": true,
+   "gain_db": 0
+  }
+ ],
+ "duck": {
+  "threshold": 0.015,
+  "ratio": 8,
+  "attack_ms": 20,
+  "release_ms": 400
+ }
+}

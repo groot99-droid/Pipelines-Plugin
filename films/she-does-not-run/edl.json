@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "sources": {
+    "c01": "media/clips/hf_20260620_015941_19a883be-56ce-4019-871a-51ec9c5ee0f2.mp4",
+    "c02": "media/clips/hf_20260620_015946_677f2b53-1cac-48f7-b289-d939c8bb9aca.mp4",
+    "c03": "media/regen/c03_hf_20261119_230935_e23e3055-6727-4506-9549-982bab11830c.mp4",
+    "c04": "media/regen/c04_hf_20261119_231511_8e5de7ad-325e-4c07-a2f0-4a81489e8987.mp4",
+    "c05": "media/regen/c05_hf_20261119_230935_0e31afe8-90c1-4952-aaf0-1d05020b7667.mp4",
+    "c06": "media/regen/c06_hf_20261119_230935_56644a60-b934-4a06-86ed-daa4cf93f9de.mp4",
+    "c07": "media/regen/c07_hf_20261119_230935_ccb413aa-3c7e-4600-a0f8-b8f804c722c1.mp4",
+    "c08": "media/regen/c08_hf_20261119_230936_cc4408b9-7fd6-4a6c-9f3f-da5ad1f1e240.mp4",
+    "c09": "media/clips/hf_20260620_022151_76f0f08f-ae96-481d-9deb-eaf99eb5fd09.mp4",
+    "c10": "media/clips/hf_20260620_022159_f764c24f-1a97-42ea-b2b6-a4e699c7a3f7.mp4",
+    "c11": "media/clips/hf_20260620_022207_af48a259-9a8e-4f0d-9e40-1b6773428b2e.mp4",
+    "c12": "media/clips/hf_20260620_024422_252b2235-7065-4656-a303-3616be05faff.mp4",
+    "c13": "media/regen/c13_hf_20261119_230935_a1ac9c9f-406c-4eb5-8796-b25ccd4641d9.mp4",
+    "c14": "media/clips/hf_20260620_024445_62255774-62cd-4cd4-ae1a-26cc123e2c9c.mp4",
+    "c15": "media/clips/hf_20260620_024453_0bd013de-c9a5-4b30-9bc4-ddf672dfee30.mp4",
+    "N1": "media/regen/N1_hf_20261119_235500_6ad710ea-37a3-4bfe-afd7-c31571dcc1ec.mp4",
+    "N2": "media/regen/N2_hf_20261119_235503_a2955614-bd6f-4e1c-a103-a8027885d2ae.mp4",
+    "N3": "media/regen/N3_hf_20261119_235500_11646a48-7ac8-451e-903c-a3b84db91822.mp4",
+    "N4": "media/regen/N4_hf_20261119_235502_99ef1df4-a106-4a6d-be6f-f131160aac59.mp4",
+    "N5a": "media/regen/N5a_hf_20261119_235500_ccc5ff6e-ffdb-477d-af65-d9f701ff6aea.mp4",
+    "N5b": "media/regen/N5b_hf_20261119_235500_a5885569-b463-43fe-a9e4-eb750201ef14.mp4",
+    "N6": "media/regen/N6_hf_20261119_235501_afcff305-dce7-4ba2-b4eb-dbf840a4518c.mp4",
+    "N7": "media/regen/N7_hf_20261119_235500_3a4f1dcf-8d68-4973-b094-4aa8b4560313.mp4",
+    "title": "cards/title.mp4",
+    "end": "cards/end.mp4"
+  },
+  "ranges": [
+    {
+      "source": "title",
+      "start": 0.0,
+      "end": 3.9985,
+      "beat": "title"
+    },
+    {
+      "source": "N1",
+      "start": 0,
+      "end": 6,
+      "beat": "dusk: the signal stops"
+    },
+    {
+      "source": "c11",
+      "start": 0.416667,
+      "end": 5.581834,
+      "beat": "tracking",
+      "reason": "telemetry antenna: she is following a collared rhino"
+    },
+    {
+      "source": "c02",
+      "start": 0.791667,
+      "end": 7.581834,
+      "beat": "tracking",
+      "reason": "the scientist moves through the jungle, dart gun raised"
+    },
+    {
+      "source": "N2",
+      "start": 0,
+      "end": 6,
+      "beat": "poachers set snares"
+    },
+    {
+      "source": "c12",
+      "start": 0.416667,
+      "end": 5.790167,
+      "beat": "threat",
+      "reason": "binoculars: three men, wire strung between trees"
+    },
+    {
+      "source": "N3",
+      "start": 0,
+      "end": 6,
+      "beat": "she sees them"
+    },
+    {
+      "source": "c05",
+      "start": 0.0,
+      "end": 6.0,
+      "beat": "snare",
+      "reason": "the rhino catches the snare and drops"
+    },
+    {
+      "source": "c14",
+      "start": 0.0,
+      "end": 5.9985,
+      "beat": "snare",
+      "reason": "trapped, bristles up, the eye"
+    },
+    {
+      "source": "c13",
+      "start": 0.0,
+      "end": 6.0,
+      "beat": "rescue",
+      "reason": "the scientist reads the situation"
+    },
+    {
+      "source": "c01",
+      "start": 0.416667,
+      "end": 6.581834,
+      "beat": "snare",
+      "reason": "ECU: she watches, she does not run"
+    },
+    {
+      "source": "c06",
+      "start": 0.0,
+      "end": 8.0,
+      "beat": "rescue",
+      "reason": "knife on the wire, intercut with the eye"
+    },
+    {
+      "source": "c07",
+      "start": 0.0,
+      "end": 6.0,
+      "beat": "freed",
+      "reason": "freed, the rhino knocks her down and stands over her"
+    },
+    {
+      "source": "c08",
+      "start": 0.0,
+      "end": 6.0,
+      "beat": "freed",
+      "reason": "the gentlest contact"
+    },
+    {
+      "source": "N4",
+      "start": 0,
+      "end": 6,
+      "beat": "poachers load the truck"
+    },
+    {
+      "source": "c15",
+      "start": 0,
+      "end": 5,
+      "beat": "headlights"
+    },
+    {
+      "source": "N5a",
+      "start": 0,
+      "end": 5.625,
+      "beat": "she fires"
+    },
+    {
+      "source": "N5b",
+      "start": 0.5,
+      "end": 6,
+      "beat": "tanker explodes"
+    },
+    {
+      "source": "N6",
+      "start": 0,
+      "end": 6,
+      "beat": "poachers flee"
+    },
+    {
+      "source": "N7",
+      "start": 0,
+      "end": 6,
+      "beat": "watching the fire"
+    },
+    {
+      "source": "c10",
+      "start": 0.0,
+      "end": 7.9985,
+      "beat": "dawn",
+      "reason": "pre-dawn: she walks into the river"
+    },
+    {
+      "source": "c03",
+      "start": 2.0,
+      "end": 8.0,
+      "beat": "underwater"
+    },
+    {
+      "source": "c04",
+      "start": 0.0,
+      "end": 8.0,
+      "beat": "dawn",
+      "reason": "riverbank, drone rises to the park boundary"
+    },
+    {
+      "source": "end",
+      "start": 0.0,
+      "end": 7.0,
+      "beat": "end card"
+    }
+  ],
+  "total_duration_s": 146.615
+}
