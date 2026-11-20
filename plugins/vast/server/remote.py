@@ -3,7 +3,8 @@
 Every command runs as `root@<ssh_host> -p <ssh_port>` with:
   * the private key named by VAST_SSH_KEY (default ~/.ssh/id_ed25519); only its .pub is ever sent
     to Vast;
-  * BatchMode=yes, so ssh never prompts;
+  * BatchMode=yes, so ssh never prompts, and stdin from the null device, so ssh never reads the
+    server's own input;
   * StrictHostKeyChecking=accept-new with a known_hosts file of the server's own, under the state
     folder, so a host key that changes after the first connection is refused.
 
@@ -177,7 +178,7 @@ class Remote:
         host, port = self.target(instance)
         argv = [self._binary("ssh"), *self._options("-p"), str(port), f"root@{host}", command]
         try:
-            done = self.runner(argv, capture_output=True, text=True, timeout=timeout)
+            done = self.runner(argv, stdin=subprocess.DEVNULL, capture_output=True, text=True, timeout=timeout)
         except subprocess.TimeoutExpired:
             raise VastError("timeout", f"the command ran longer than {timeout}s",
                             "run long work as a background recipe and read it with job_status") from None
@@ -189,7 +190,7 @@ class Remote:
         pair = [str(source), remote] if upload else [remote, str(destination)]
         argv = [self._binary("scp"), *self._options("-P"), str(port), "-r", *pair]
         try:
-            done = self.runner(argv, capture_output=True, text=True, timeout=timeout)
+            done = self.runner(argv, stdin=subprocess.DEVNULL, capture_output=True, text=True, timeout=timeout)
         except subprocess.TimeoutExpired:
             raise VastError("timeout", f"the copy ran longer than {timeout}s") from None
         if done.returncode != 0:

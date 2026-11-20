@@ -17,11 +17,12 @@ class FakeVast:
     def __init__(self):
         self.offers = [
             {"id": 101, "gpu_name": "RTX 3090", "num_gpus": 1, "gpu_ram": 24576, "dph_total": 0.25,
-             "reliability2": 0.995, "verified": True, "geolocation": "US", "cpu_ram": 65536,
-             "disk_space": 200, "inet_down": 900, "cuda_max_good": 12.4},
+             "reliability2": 0.995, "verified": None, "verification": "verified", "geolocation": "US",
+             "cpu_ram": 65536, "disk_space": 200, "inet_down": 900, "cuda_max_good": 12.4,
+             "storage_cost": 0.146},     # the live shape: `verified` null, $/GB/month for the disk
             {"id": 202, "gpu_name": "RTX 4090", "num_gpus": 1, "gpu_ram": 24564, "dph_total": 1.20,
              "reliability2": 0.99, "verified": True, "geolocation": "DE", "cpu_ram": 65536,
-             "disk_space": 300, "inet_down": 2000, "cuda_max_good": 12.4},
+             "disk_space": 300, "inet_down": 2000, "cuda_max_good": 12.2},
             {"id": 303, "gpu_name": "H100 SXM", "num_gpus": 1, "gpu_ram": 81920, "dph_total": 12.0,
              "reliability2": 0.99, "verified": True, "geolocation": "US", "cpu_ram": 262144,
              "disk_space": 1000, "inet_down": 5000, "cuda_max_good": 12.4},
@@ -76,10 +77,14 @@ class FakeVast:
         if method == "PUT" and parts == ["search", "asks"]:
             query = (body or {}).get("q", {})
             offers = list(self.offers)
-            if "id" in query:
-                offers = [o for o in offers if o["id"] == query["id"]["eq"]]
+            if "id" in query:      # the live API matches nothing on `id`
+                offers = []
+            if "ask_contract_id" in query:
+                offers = [o for o in offers if o["id"] == query["ask_contract_id"]["eq"]]
             if "dph_total" in query:
                 offers = [o for o in offers if o["dph_total"] <= query["dph_total"]["lte"]]
+            if "cuda_max_good" in query:
+                offers = [o for o in offers if o["cuda_max_good"] >= query["cuda_max_good"]["gte"]]
             if "gpu_name" in query:
                 offers = [o for o in offers if o["gpu_name"] == query["gpu_name"]["eq"]]
             return 200, {"offers": sorted(offers, key=lambda o: o["dph_total"])}

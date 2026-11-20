@@ -51,7 +51,7 @@ The environments in `recipes.json` are:
 | Environment | Image and setup |
 |---|---|
 | `base` | CUDA 12.4 runtime. |
-| `blender` | Blender 4.2.3 LTS, checked against Blender's published sha256. |
+| `blender` | Blender 5.2.1 LTS from a mirror, checked against a sha256 pinned in `recipes.json`. |
 | `comfy` | ComfyUI v0.3.10 on PyTorch 2.5.1, listening on localhost only. |
 
 ## The budget
@@ -74,10 +74,13 @@ How the hours are counted:
 - `quote` caps a rental at what its band has left.
 - `rent` re-reads the price and refuses if it has risen by more than 2%, and refuses a quote that is
   stale (over 15 minutes old) or already used.
+- The bands use Vast's listed price. That price leaves out the disk you ask for, so `quote` also shows
+  an estimate with it (`dph_with_disk_estimate`). Bandwidth, and the disk of a stopped instance until
+  it is destroyed, are billed on top and are not metered here.
 
 Every rental's onstart starts a watchdog that stops the instance at its deadline. It uses the
 instance-scoped `CONTAINER_API_KEY` Vast injects, so it works with your laptop closed. That watchdog is
-unverified (see `UNVERIFIED.md`). `reap` is the fallback.
+stopped two live rentals at their deadline (see `UNVERIFIED.md`). `reap` is the fallback.
 
 Every tool result carries a `spend` block with live rentals, dollars spent so far, and the hours each
 band has left.

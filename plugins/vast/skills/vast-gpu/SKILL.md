@@ -38,26 +38,32 @@ hours come back, or offer a cheaper band.
 1. **`account`**: is a key set, and what is the balance. If no key is set, tell the user to set
    `VAST_API_KEY` (or `VAST_KEYS_FILE`), or to run `vastai set api-key` once, and stop.
 2. **`list_recipes`**: the environments (`base`, `blender`, `comfy`) and the recipes each one runs.
-3. **`search_offers`**: filter by `gpu_name`, `min_gpu_ram_gb`, `max_dph` and `geolocation`. Results are
-   cheapest first, each with `band_hours_left`. A Blender render or Trellis 2 wants 24 GB or more.
-4. **`quote`**: pass `offer_id`, `environment` and `hours`. Show the user the $/hr, `cap_hours`,
-   `worst_case_gpu_cost_usd` and `leaves_this_machine`, and ask for the go-ahead.
+3. **`search_offers`**: filter by `gpu_name`, `min_gpu_ram_gb`, `max_dph`, `geolocation` and `min_cuda`
+   (pass the environment's `cuda` from `list_recipes`). Results are cheapest first, each with
+   `band_hours_left`. A Blender render or Trellis 2 wants 24 GB or more.
+4. **`quote`**: pass `offer_id`, `environment` and `hours`. Show the user the $/hr, the estimate with the
+   disk (`dph_with_disk_estimate`, `worst_case_cost_with_disk_usd`), `cap_hours`, any `warnings` and
+   `leaves_this_machine`, and ask for the go-ahead. The estimate leaves out bandwidth.
 5. **`rent`** with `confirm: true` after they say yes. The quote is spent once, and expires after 15
    minutes.
 6. **`wait_ready`**. The environment's onstart may still be installing after ssh answers. The `ready`
-   recipe shows its markers (`.blender-ready`, `.comfy-ready`).
+   recipe shows its markers (`.blender-ready`, `.comfy-ready`). A `.blender-failed` marker means the
+   install gave up: read `logs/blender-install.log` in the same output, tell the user, and do not keep
+   waiting on a billing instance.
 7. **Work**:
    - `upload` takes a path relative to `VAST_WORK_DIR` on this machine and a path relative to
      `/workspace/job` there.
    - `run_recipe` runs a named recipe. Background recipes return a `job_id`; poll it with `job_status`.
+     A result with `start_confirmed: false` means ssh did not answer in time: the job may be running, so
+     ask `job_status` before starting it again.
    - `run_shell` is only for what no recipe covers.
    - `download` brings results back into `VAST_WORK_DIR`. Check the returned sha256 and size.
 8. **`destroy`** with the user's go-ahead. Then call `instances` to confirm nothing is left running.
 
 ## Blender
 
-- Rent with `environment: "blender"`. It gives Blender 4.2.3 LTS, checked against Blender's published
-  sha256.
+- Rent with `environment: "blender"`. It gives Blender 5.2.1 LTS, checked against a sha256 pinned in
+  `recipes.json`.
 - Upload the `.blend` and its textures, then run the `blender_render` recipe. Its arguments are `blend`,
   `output` (e.g. `render/frame_####`), `frame_start`, `frame_end` and `device` (`OPTIX`, `CUDA` or
   `CPU`).

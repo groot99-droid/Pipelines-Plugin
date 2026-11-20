@@ -1,30 +1,33 @@
 {
-  "_comment": "Environments are what an instance is rented with (image, disk, onstart). Recipes are named commands run on a live instance over ssh. Literal text in a template is trusted; every {param} is checked against its type and inserted shell-quoted, never spliced. A `path` param is relative to /workspace/job and may not contain `..`. Images and versions are pinned; none has been run on a live Vast host yet (UNVERIFIED.md).",
+  "_comment": "Environments are what an instance is rented with (image, disk, onstart). Recipes are named commands run on a live instance over ssh. Literal text in a template is trusted; every {param} is checked against its type and inserted shell-quoted, never spliced. A `path` param is relative to /workspace/job and may not contain `..`. Images and versions are pinned. `cuda` is the CUDA version the image carries; quote warns when a host lists less. UNVERIFIED.md says what has run on a live Vast host.",
   "job_dir": "/workspace/job",
   "environments": {
     "base": {
       "description": "CUDA 12.4 runtime on Ubuntu 22.04, nothing else. For gpu_info and your own run_shell work.",
       "image": "nvidia/cuda:12.4.1-runtime-ubuntu22.04",
       "disk_gb": 20,
+      "cuda": 12.4,
       "onstart": [
         "mkdir -p /workspace/job/logs"
       ]
     },
     "blender": {
-      "description": "Blender 4.2.3 LTS (headless, Cycles on CUDA/OptiX) in /opt/blender, its tarball checked against the sha256 file Blender publishes beside it.",
+      "description": "Blender 5.2.1 LTS (headless, Cycles on CUDA/OptiX) in /opt/blender, fetched from a Blender mirror and checked against a sha256 pinned here. `ready` shows .blender-ready, or .blender-failed with logs/blender-install.log.",
       "image": "nvidia/cuda:12.4.1-runtime-ubuntu22.04",
       "disk_gb": 30,
+      "cuda": 12.4,
       "onstart": [
         "mkdir -p /workspace/job/logs",
         "apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq wget xz-utils libxi6 libxxf86vm1 libxfixes3 libxrender1 libgl1 libxkbcommon0 libsm6 libegl1 >/workspace/job/logs/apt.log 2>&1",
-        "cd /tmp && wget -q https://download.blender.org/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz https://download.blender.org/release/Blender4.2/blender-4.2.3.sha256",
-        "cd /tmp && grep 'blender-4.2.3-linux-x64.tar.xz' blender-4.2.3.sha256 | sha256sum -c - && mkdir -p /opt/blender && tar -xJf blender-4.2.3-linux-x64.tar.xz -C /opt/blender --strip-components=1 && touch /workspace/job/.blender-ready"
+        "cd /tmp && for base in https://mirror.clarkson.edu/blender/release https://mirrors.ocf.berkeley.edu/blender/release https://download.blender.org/release; do echo \"trying $base\"; wget -nv -O blender.tar.xz \"$base/Blender5.2/blender-5.2.1-linux-x64.tar.xz\" && echo 'a31f524fa99a527d3d52b7f5aaa68c34e1a19d5a1c9473f79c5cc610fd5b10e9  blender.tar.xz' | sha256sum -c - && break; rm -f blender.tar.xz; done >/workspace/job/logs/blender-install.log 2>&1",
+        "if [ -f /tmp/blender.tar.xz ] && mkdir -p /opt/blender && tar -xJf /tmp/blender.tar.xz -C /opt/blender --strip-components=1 >>/workspace/job/logs/blender-install.log 2>&1; then touch /workspace/job/.blender-ready; else touch /workspace/job/.blender-failed; fi"
       ]
     },
     "comfy": {
       "description": "ComfyUI v0.3.10 on PyTorch 2.5.1 / CUDA 12.4 in /workspace/ComfyUI, listening on 127.0.0.1:8188 only (reach it through the `tunnel` tool). Add custom nodes and models with comfy_install_node and comfy_fetch_model.",
       "image": "pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime",
       "disk_gb": 80,
+      "cuda": 12.4,
       "onstart": [
         "mkdir -p /workspace/job/logs",
         "apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq git wget libgl1 libglib2.0-0 >/workspace/job/logs/apt.log 2>&1",
@@ -40,8 +43,8 @@
       "params": {}
     },
     "ready": {
-      "description": "Whether the environment's onstart has finished (prints which ready markers exist).",
-      "template": "ls -1 /workspace/job/.*-ready 2>/dev/null || echo 'not ready yet'; tail -n 5 /workspace/job/logs/*.log 2>/dev/null || true",
+      "description": "Whether the environment's onstart has finished: prints the .<name>-ready markers, or .<name>-failed when an install gave up, and the tail of each log.",
+      "template": "ls -1A /workspace/job 2>/dev/null | grep -E '^[.].*-(ready|failed)$' || echo 'not ready yet'; tail -n 5 /workspace/job/logs/*.log 2>/dev/null || true",
       "params": {}
     },
     "blender_version": {
