@@ -9,6 +9,7 @@ import json
 import os
 import socket
 import stat
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -41,10 +42,15 @@ class FakeRun:
 
     def __init__(self):
         self.calls = []
+        self.stdins = []
+        self.hang = False
         self.answer = (0, "ok\n", "")
 
-    def __call__(self, argv, capture_output=True, text=True, timeout=None):
+    def __call__(self, argv, stdin=None, capture_output=True, text=True, timeout=None):
         self.calls.append(argv)
+        self.stdins.append(stdin)
+        if self.hang:
+            raise subprocess.TimeoutExpired(argv, timeout)
         code, out, err = self.answer
         if argv and Path(argv[0]).stem.lower() == "scp" and not str(argv[-1]).startswith("root@"):
             Path(argv[-1]).write_bytes(b"rendered bytes")   # a download lands a file
@@ -149,6 +155,28 @@ class BudgetTests(Base):
     def test_over_ceiling_refused(self):
         self.refused("quote", {"offer_id": 303, "environment": "base", "hours": 1}, "over_ceiling")
 
+    def test_quote_adds_the_disk_and_warns_on_cuda(self):
+        quote = self.ok("quote", {"offer_id": 101, "environment": "blender", "hours": 2})
+        self.assertEqual(quote["dph"], 0.25)
+        self.assertEqual(quote["disk_dph_estimate"], round(0.146 * 30 / 730, 4))
+        self.assertEqual(quote["dph_with_disk_estimate"], round(0.25 + 0.146 * 30 / 730, 4))
+        self.assertEqual(quote["worst_case_cost_with_disk_usd"], round(quote["dph_with_disk_estimate"] * 2, 2))
+        self.assertEqual(quote["warnings"], [])
+        self.assertIs(quote["offer"]["verified"], True)
+        # no storage_cost listed: no estimate, and the listed price stands
+        quote = self.ok("quote", {"offer_id": 202, "environment": "base", "hours": 1})
+        self.assertIsNone(quote["disk_dph_estimate"])
+        self.assertEqual(quote["dph_with_disk_estimate"], quote["dph"])
+        self.assertIn("CUDA up to 12.2", quote["warnings"][0])
+
+    def test_search_reads_verification_and_filters_on_cuda(self):
+        offers = {o["offer_id"]: o for o in self.ok("search_offers", {"max_dph": 2})["offers"]}
+        self.assertIs(offers[101]["verified"], True)      # from `verification`
+        self.assertIs(offers[202]["verified"], True)      # from the older `verified`
+        fits = self.ok("search_offers", {"max_dph": 2, "min_cuda": 12.4})["offers"]
+        self.assertEqual([o["offer_id"] for o in fits], [101])
+        self.assertEqual(self.ok("list_recipes")["environments"]["blender"]["cuda"], 12.4)
+
     def test_quote_caps_to_band_and_reserves(self):
         quote = self.ok("quote", {"offer_id": 202, "environment": "base", "hours": 80})
         self.assertEqual(quote["cap_hours"], 50)
@@ -189,7 +217,12 @@ class RentTests(Base):
         instance = self.fake.instances[rented["instance_id"]]
         self.assertIn("sleep 7200;", instance["onstart"])
         self.assertIn("$CONTAINER_ID", instance["onstart"])
-        self.assertIn("blender-4.2.3-linux-x64.tar.xz", instance["onstart"])
+        onstart = instance["onstart"]
+        self.assertIn("blender-5.2.1-linux-x64.tar.xz", onstart)
+        self.assertIn("sha256sum -c", onstart)
+        self.assertIn(".blender-failed", onstart)
+        # the watchdog still comes before anything the environment adds
+        self.assertLess(onstart.index("sleep 7200;"), onstart.index("apt-get install -y -qq wget"))
         self.assertEqual(instance["label"], "claude-vast-" + quote["quote_id"])
         rental = self.context.ledger.rental(rented["instance_id"])
         self.assertEqual(rental["deadline"] - rental["started"], 2 * HOUR)
@@ -311,11 +344,24 @@ class RecipeTests(Base):
         started = self.ok("run_recipe", {"instance_id": rented["instance_id"], "recipe": "blender_render",
                                          "arguments": {"blend": "scene.blend", "output": "render/f_####"}})
         self.assertRegex(started["job_id"], r"^j_[0-9a-f]{8}$")
-        self.assertIn("nohup bash -c", self.run.calls[-1][-1])
+        self.assertIn("setsid nohup bash -c", self.run.calls[-1][-1])
+        self.assertIn("2>&1 < /dev/null &", self.run.calls[-1][-1])
+        self.assertTrue(all(s is subprocess.DEVNULL for s in self.run.stdins))
         self.run.answer = (0, "STATE done 0\nSaved: render/f_0001.png\n", "")
         status = self.ok("job_status", {"instance_id": rented["instance_id"], "job_id": started["job_id"]})
         self.assertEqual(status["state"], "done")
         self.assertEqual(status["exit_code"], 0)
+
+    def test_background_start_that_hangs_still_returns_the_job_id(self):
+        _, rented = self.rent()
+        self.run.hang = True
+        started = self.ok("run_recipe", {"instance_id": rented["instance_id"], "recipe": "blender_script",
+                                         "arguments": {"script": "driver.py"}})
+        self.assertRegex(started["job_id"], r"^j_[0-9a-f]{8}$")
+        self.assertFalse(started["start_confirmed"])
+        self.assertIn(started["job_id"], self.run.calls[-1][-1])
+        # a foreground command that hangs is still a timeout
+        self.refused("run_recipe", {"instance_id": rented["instance_id"], "recipe": "gpu_info"}, "timeout")
 
     def test_wrong_environment_refused(self):
         _, rented = self.rent(environment="base")

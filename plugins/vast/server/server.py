@@ -45,7 +45,7 @@ from vast_api import VastAPI, VastError, has_key  # noqa: E402
 
 SERVER_NAME = "vast"
 SERVER_TITLE = "Vast.ai GPU"
-SERVER_VERSION = "0.1.0"
+SERVER_VERSION = "0.1.1"
 PROTOCOL_VERSIONS = ("2024-11-05", "2025-03-26", "2025-06-18", "2025-11-25")
 DEFAULT_PROTOCOL_VERSION = "2025-11-25"
 
@@ -62,6 +62,7 @@ WATCHDOG = ("(sleep {seconds}; curl -s -X PUT -H \"Authorization: Bearer $CONTAI
 CURL_FIRST = ("command -v curl >/dev/null 2>&1 || (apt-get update -qq && "
               "DEBIAN_FRONTEND=noninteractive apt-get install -y -qq curl >/dev/null 2>&1)")
 LABEL_PREFIX = "claude-vast-"
+HOURS_PER_MONTH = 730.0
 JOB_ID = re.compile(r"^j_[0-9a-f]{8}$")
 
 INSTRUCTIONS = (
@@ -146,13 +147,29 @@ def trim_offer(offer):
         "gpu_ram_gb": round(num(offer.get("gpu_ram")) / 1024, 1),
         "dph_total": round(num(offer.get("dph_total")), 4),
         "reliability": round(num(offer.get("reliability2", offer.get("reliability"))), 4),
-        "verified": offer.get("verified"),
+        "verified": verified(offer),
         "geolocation": offer.get("geolocation"),
         "cpu_ram_gb": round(num(offer.get("cpu_ram")) / 1024, 1),
         "disk_space_gb": round(num(offer.get("disk_space")), 1),
         "inet_down_mbps": round(num(offer.get("inet_down")), 1),
         "cuda_max_good": offer.get("cuda_max_good"),
     }
+
+
+def verified(offer):
+    """Vast's live offers carry `verification` ("verified" / "unverified"); `verified` came back null."""
+    if offer.get("verification") is not None:
+        return offer.get("verification") == "verified"
+    return offer.get("verified")
+
+
+def disk_dph(offer, disk_gb):
+    """An estimate of what the disk adds per hour: Vast lists `storage_cost` in $/GB/month, and the
+    listed dph_total did not include the disk asked for (live run, 2026-11-19). None when not listed."""
+    cost = offer.get("storage_cost")
+    if cost is None:
+        return None
+    return round(num(cost) * disk_gb / HOURS_PER_MONTH, 4)
 
 
 def instance_or_refuse(context, instance_id):
@@ -192,7 +209,7 @@ def t_list_recipes(arguments, context):
     return {
         "job_dir": recipes["job_dir"],
         "environments": {name: {"description": env["description"], "image": env["image"],
-                                "disk_gb": env["disk_gb"]} for name, env in recipes["environments"].items()},
+                                "disk_gb": env["disk_gb"], "cuda": env.get("cuda")} for name, env in recipes["environments"].items()},
         "recipes": {name: {"description": r["description"], "environment": r.get("environment", "any"),
                            "background": bool(r.get("background")), "params": r.get("params", {})}
                     for name, r in recipes["recipes"].items()},
@@ -222,6 +239,8 @@ def t_search_offers(arguments, context):
         query["disk_space"] = {"gte": num(arguments["min_disk_gb"])}
     if arguments.get("geolocation"):
         query["geolocation"] = {"in": arguments["geolocation"]}
+    if arguments.get("min_cuda"):
+        query["cuda_max_good"] = {"gte": num(arguments["min_cuda"])}
     offers = [trim_offer(o) for o in context.api().search(query)]
     state = context.ledger.load()
     for offer in offers:
@@ -255,14 +274,26 @@ def t_quote(arguments, context):
         "image": environment["image"], "disk_gb": disk, "cap_hours": round(hours, 3),
         "gpu_name": offer.get("gpu_name"), "num_gpus": offer.get("num_gpus"),
     })
+    extra = disk_dph(offer, disk)
+    dph_all = round(dph + (extra or 0.0), 4)
+    warnings = []
+    needs_cuda, has_cuda = environment.get("cuda"), offer.get("cuda_max_good")
+    if needs_cuda and has_cuda is not None and num(has_cuda) < num(needs_cuda):
+        warnings.append(f"this host lists CUDA up to {has_cuda} and the image needs {needs_cuda}: the GPU may "
+                        f"not work in it; search_offers with min_cuda {needs_cuda} finds hosts that fit")
     return {
         "quote_id": quote["quote_id"], "expires_in_seconds": int(quote["expires"] - context.clock()),
         "offer": trim_offer(offer), "environment": environment_name, "image": environment["image"],
-        "disk_gb": disk, "dph": dph, "band": f"<= ${band['max_dph']}/hr",
+        "disk_gb": disk, "dph": dph, "disk_dph_estimate": extra, "dph_with_disk_estimate": dph_all,
+        "band": f"<= ${band['max_dph']}/hr",
         "band_hours_left_before": remaining, "cap_hours": round(hours, 3),
         "capped": hours < num(arguments["hours"]),
         "worst_case_gpu_cost_usd": round(dph * hours, 2),
-        "note": "dph_total is Vast's all-in hourly price as listed; a stopped instance still bills its disk "
+        "worst_case_cost_with_disk_usd": round(dph_all * hours, 2),
+        "warnings": warnings,
+        "note": "dph is Vast's listed hourly price, which does not include the disk asked for; "
+                "dph_with_disk_estimate adds storage_cost for disk_gb and is an estimate (the band and the "
+                "ledger use dph). Bandwidth is billed apart, and a stopped instance still bills its disk "
                 "until destroyed. The on-box watchdog stops the instance at cap_hours.",
         "leaves_this_machine": ["the image name and the onstart script, to Vast and the host",
                                 "your ssh public key, to Vast and the host",
@@ -405,13 +436,24 @@ def start_or_run(context, instance, command, background, timeout):
     if background:
         job = "j_" + secrets.token_hex(4)
         inner = f"cd {shlex.quote(job_dir)} && ({command}); echo $? > logs/{job}.exit"
+        # The job gets its own session and all three of its streams away from ssh. On the first live
+        # run (2026-11-19) the job kept ssh's stdin, the call hung to its timeout and no job_id came back.
         wrapper = (f"mkdir -p {shlex.quote(job_dir)}/logs && cd {shlex.quote(job_dir)} && "
-                   f"nohup bash -c {shlex.quote(inner)} > logs/{job}.log 2>&1 & echo $! > "
+                   f"setsid nohup bash -c {shlex.quote(inner)} > logs/{job}.log 2>&1 < /dev/null & echo $! > "
                    f"{shlex.quote(job_dir)}/logs/{job}.pid; echo started")
-        code, out, err = context.remote.run(instance, wrapper, timeout=60)
+        started = {"job_id": job, "background": True, "next": "job_status with this job_id"}
+        try:
+            code, out, err = context.remote.run(instance, wrapper, timeout=60)
+        except VastError as exc:
+            if exc.code != "timeout":
+                raise
+            # The id was made here, so it is still good: the job may well be running.
+            return {**started, "start_confirmed": False,
+                    "warning": "ssh did not answer within 60 s, so the start is not confirmed; "
+                               "job_status says whether the job is running"}
         if code != 0:
             refuse("start_failed", "the job did not start: " + remote_mod.tail(err, 5))
-        return {"job_id": job, "background": True, "next": "job_status with this job_id"}
+        return started
     code, out, err = context.remote.run(instance, f"cd {shlex.quote(job_dir)} 2>/dev/null; {command}",
                                         timeout=timeout)
     return {"exit_code": code, "stdout_tail": remote_mod.tail(out), "stderr_tail": remote_mod.tail(err, 20)}
@@ -589,6 +631,8 @@ TOOLS = {tool.name: tool for tool in (
               "num_gpus": {"type": "integer", "minimum": 1, "maximum": 16, "default": 1},
               "min_disk_gb": {"type": "number", "minimum": 0, "maximum": 100000},
               "verified": {"type": "boolean", "default": True},
+              "min_cuda": {"type": "number", "minimum": 0, "maximum": 100,
+                           "description": "the CUDA version the image needs, e.g. 12.4 (list_recipes shows it)"},
               "geolocation": {"type": "array", "maxItems": 30, "items": {"type": "string", "maxLength": 8}},
               "limit": {"type": "integer", "minimum": 1, "maximum": 50, "default": 10}}),
          t_search_offers),

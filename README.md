@@ -88,7 +88,7 @@ plugins/vast/          the vast plugin: self-contained, stdlib
   limits.json          the biweekly per-price-band GPU-hour budgets the server enforces
   recipes.json         environments (base, blender, comfy) and typed recipes
   skills/, commands/   vast-gpu; /vast-status
-  tests/, UNVERIFIED.md  a fake Vast API and fake ssh; what the first live run must check
+  tests/, UNVERIFIED.md  a fake Vast API and fake ssh; what the first live run settled and what is open
 ```
 
 Paths in the creative-writing and studio skills and agents are relative to this
@@ -570,8 +570,8 @@ uses it as the `remote` branch of `asset-3d` (image to 3D in ComfyUI) and `assem
 run claims its rental with `studio_run.py lease`.
 
 The key is `VAST_API_KEY` (set it with `python docs/setup_keys.py`; the repo's `.mcp.json` points the server at
-`~/.rosw/keys.env`). Install elsewhere with `/plugin install vast@rosw`. It has never been run against a live
-account; `plugins/vast/UNVERIFIED.md` lists what the first run must check. See `plugins/vast/README.md`.
+`~/.rosw/keys.env`). Install elsewhere with `/plugin install vast@rosw`. It has had one live run
+(2026-11-19); `plugins/vast/UNVERIFIED.md` says what that run settled and what is still open. See `plugins/vast/README.md`.
 
 ```
 python -m unittest discover -s plugins/vast/tests

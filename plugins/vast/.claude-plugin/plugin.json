@@ -1,6 +1,6 @@
 {
   "name": "vast",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Rent Vast.ai GPUs from Claude and run headless Blender, ComfyUI and your own commands on them: offer search, quotes priced against biweekly per-price-band hour budgets, confirm-gated renting with an on-box stop watchdog, ssh/scp file transfer, typed recipes, background jobs, ssh tunnels, and a spend meter on every result.",
   "author": {
     "name": "groot99-droid"

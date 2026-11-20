@@ -459,8 +459,9 @@ Python; the instance is reached with the system's own `ssh` and `scp`.
   - `studio_run.py lease` claims a rental for a run on the `remote` branch. `remote_gpu: optional` in `spec.yaml`
     offers that branch, today on `asset-3d` and `assemble-3d`.
   - `studio/pipeline/tests/test_vast_lease.py` checks the branch, and that the spec names only tools the server has.
-- **Unverified.** Nothing has run against a live account or host. `plugins/vast/UNVERIFIED.md` is the checklist,
-  so do not describe the integration as working live.
+- **Partly verified.** One live run (2026-11-19, two rentals) settled renting, ssh, the watchdog, `destroy` and
+  Blender on the GPU. `plugins/vast/UNVERIFIED.md` says what was seen and what is still open (the background-start
+  fix, the `blender` environment's own install, `comfy`, the tunnel), so describe only those checked items as working live.
 - **Tests:** `python -m unittest discover -s plugins/vast/tests` (a fake Vast API on 127.0.0.1, fake ssh/scp, an
   injected clock).
 

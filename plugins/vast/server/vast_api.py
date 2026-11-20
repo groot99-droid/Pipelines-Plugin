@@ -2,7 +2,7 @@
 
 Every call sends `Authorization: Bearer <key>`. The key is read once by `api_key()` and never
 returned, logged or written anywhere. The endpoint shapes are those of docs.vast.ai/api as read on
-2026-11-19; none has been called against a live account yet (UNVERIFIED.md lists them).
+2026-11-19, corrected by the first live run that day (UNVERIFIED.md says which were called).
 
 VAST_BASE_URL overrides the base for tests. It must be https, or http on 127.0.0.1 / localhost.
 """
@@ -120,8 +120,8 @@ class VastAPI:
         self.base = base_url(self.environ)
         self.opener = opener or urllib.request.build_opener()
 
-    def call(self, method, path, body=None, query=None):
-        url = self.base + path
+    def call(self, method, path, body=None, query=None, base=None):
+        url = (base or self.base) + path
         if query:
             url += "?" + urllib.parse.urlencode(query)
         data = None if body is None else json.dumps(body).encode("utf-8")
@@ -164,7 +164,10 @@ class VastAPI:
         return offers if isinstance(offers, list) else []
 
     def offer(self, offer_id):
-        offers = self.search({"id": {"eq": int(offer_id)}, "rentable": {"eq": True}, "limit": 1})
+        # Vast's search returns nothing for an `id` filter (live run, 2026-11-19); the same number is
+        # filterable as `ask_contract_id`.
+        offers = self.search({"ask_contract_id": {"eq": int(offer_id)}, "rentable": {"eq": True},
+                              "type": "on-demand", "limit": 1})
         for offer in offers:
             if int(offer.get("id", -1)) == int(offer_id):
                 return offer
@@ -175,7 +178,11 @@ class VastAPI:
         return self.call("PUT", f"/asks/{int(offer_id)}/", body)
 
     def instances(self):
-        reply = self.call("GET", "/instances/")
+        # The v0 list answers 410 "deprecated, use /api/v1/instances/" (live run, 2026-11-19). v1 keeps
+        # the list under the same `instances` key. Only this one call moves; a base that is not Vast's
+        # v0 (the tests' fake) is used as it is.
+        base = self.base[:-len("/api/v0")] + "/api/v1" if self.base.endswith("/api/v0") else self.base
+        reply = self.call("GET", "/instances/", base=base)
         items = reply.get("instances") if isinstance(reply, dict) else reply
         return items if isinstance(items, list) else []
 
