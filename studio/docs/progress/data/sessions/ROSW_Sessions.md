@@ -766,37 +766,37 @@ Every questionnaire, owner-answers file, handoff, status log, round packet and d
 
 ## 9. Update, 20 November: local sessions and what changed since 17 November
 
-The five sessions below run on the owner's own computer through Remote Control (origin `claude_code_cli`, environment `bridge`). They are the owner-side sessions: the cloud sessions in the earlier sections run in Anthropic containers. All five were rechecked on 20 November. The weekly rate-limit info on every one of them reads `allowed_warning` with a reset of 26 November 16:00 UTC, and the owner reports 42% weekly usage.
+The five sessions below run on the owner's own computer through Remote Control (origin `claude_code_cli`, environment `bridge`). They are the owner-side sessions: the cloud sessions in the earlier sections run in Anthropic containers. All five were rechecked on 20 November by reading their recent events, not only their summaries. The weekly rate-limit info on every one of them reads `allowed_warning` with a reset of 26 November 16:00 UTC, and the owner reports 42% weekly usage.
 
 ### Vast GPU: Dr. Tox build, 1 hour (`2026-11-20_vast-gpu-dr-tox-build-1-hour_rj85qwRk.md`)
 
-- State: Running. Model: claude-fable-5-2. Created 2026-11-20 01:39 UTC, last activity 2026-11-20 02:21 UTC.
-- What it did: Rented its first Vast.ai GPU: an RTX 3090 at $0.1889 an hour with a one-hour cap, for a Dr. Tox build (the session title); the recipes it ran were Blender setup checks. The rental went through the new vast plugin quote, confirm and deadline gates. At last check Blender was still unpacking on the instance, and the session was waiting. The plan was at step 4 of 7.
-- Spend meter after about five minutes: $0.02. Budget band up to $1/hr: 99 of 100 hours left. Context used: 282k of 400k tokens.
+- State: Running when first checked, finished by the next morning. Model: claude-fable-5-2. Created 2026-11-20 01:39 UTC, last activity 2026-11-20 02:21 UTC.
+- What it did: The first live use of the vast plugin. Two one-hour rentals of an RTX 3090 (listed at about nineteen cents an hour) rendered all 370 Blender scenes of the 13 esc-ZINE99 games: 144 build files, 152 blend files and 543 PNG renders, about 1.1 GB, now on the owner's machine, with an HTML gallery. It also opened PR #41, which fixed the faults the live run exposed (merged 20 November, 05:31 UTC). The account was charged $0.54 for about $0.42 of metered hours, because bandwidth and stopped-disk storage are not metered. Instance 61558327 was stopped and kept, which still bills storage until it is destroyed. Another session asked it to push a branch of JPEG contact sheets (renders/vast-first-pass); it was waiting for the owner's go-ahead. [Evidence: its events, the SSH key session's relays, PR #41]
+- Spend meter at the first check: $0.02 after five minutes. Budget band up to $1 an hour: 99 of 100 hours left at that point.
 
 ### Public SSH key location (`2026-11-20_public-ssh-key-location_F1kW8xwZ.md`)
 
-- State: Idle, blocked. Model: claude-fable-5-2. Created 2026-11-20 00:00 UTC, last activity 2026-11-20 01:46 UTC.
-- What it did: Titled as a question about where the public SSH key lives. Its last summary says the Vast GPU session needed the VAST_API_KEY, and the fix was to restart the Claude app or run docs/setup_keys.py. The Vast GPU session above then rented a card, which suggests the key was supplied (inferred from the rental, not stated).
-- Context used: 235k of 1M tokens.
+- State: Idle, waiting on the owner. Model: claude-fable-5-2. Created 2026-11-20 00:00 UTC, last activity 2026-11-20 01:46 UTC.
+- What it did: Titled as a question about where the public SSH key lives, it became the coordinator for the Dr. Tox Blender work on the owner's machine. It prepared the hospital-room job on its own branch (claude/hospital-room-blockout), started the Vast GPU sessions, and relayed the esc-ZINE99 queue of 154 locations and 370 scenes across 13 games. The owner told it to scale the building up: if the hospital room would only take a minute, build more scenes. On keys: the owner had set VAST_API_KEY as a Windows environment variable themselves. The first Vast session reported the key as not set only because the Claude app had been running when it was added. The fix offered was to restart the app, or to run docs/setup_keys.py and enter the key on its local page. No key value appears in anything the session recorded; the sessions only reported whether the key was set.
+- Its last report: a push of the render contact sheets was waiting for the owner. Context used: 235k of 1M tokens when first checked.
 
 ### Rhino documentary short film (`2026-11-19_rhino-documentary-short-film_qYQAuiN8.md`)
 
 - State: Idle, completed. Model: claude-opus-5-5. Created 2026-11-19 21:56 UTC, last activity 2026-11-20 01:21 UTC.
-- What it did: Made She Does Not Run, a 2:20 rhino short film, with the video editor. Found and fixed a video-editor bug (every segment is now cut to whole frames so audio stays in sync). PR #39 merged to Pipelines-Plugin main; release v5 is public. Six CI jobs were still running on main at last check. This is the first completed film from the video editor, and the first use of it beyond editing tests.
-- Context used: 533k of 1M tokens.
+- What it did: Made She Does Not Run, a 2:20 rhino short film, with the video editor, and put its edit in the repository. It fixed a video-editor bug so that every cut is a whole number of frames, which keeps sound and picture in sync. PR #39 merged to Pipelines-Plugin main (main has no required checks, so it merged immediately). The repo gained a films/ folder holding the cut list, finish script and cue sheet, narration script, subtitles, title and end cards, and a README with rebuild steps, with local paths rewritten to relative ones. Release film-she-does-not-run-v5 is public: the 1080p film (92 MB), a 720p copy, subtitles and a zip of the 12 narration lines. The raw clips and edit versions 1 to 4 stay on the owner's machine. Local checks passed: ui-design verify, 180 video-editor tests, 13 docs tests.
+- Context used: 533k of 1M tokens when first checked.
 
 ### Higgsfield Assets release upload (`2026-11-19_higgsfield-assets-release-upload_NkVwWYfa.md`)
 
-- State: Idle, waiting for the owner. Model: claude-sonnet-5-5. Created 2026-11-19 21:20 UTC, last activity 2026-11-20 00:40 UTC.
-- What it did: Titled as an upload of Higgsfield assets as a release. Its last question to the owner was "Is this the update you meant with the link?", so it is waiting on a reply.
-- Context used: 165k of 1M tokens.
+- State: Idle, waiting on the owner. Model: claude-sonnet-5-5. Created 2026-11-19 21:20 UTC, last activity 2026-11-20 00:40 UTC.
+- What it did: Published the owner's Higgsfield material as GitHub releases. Six new zips of Greek-god 3D assets (Morpheus, Hypnos, Selene, Nyx, Thanatos, Oneiros, about 4.3 GB) went onto a Higgsfield Assets release on Pipelines-Plugin, with a lookbook PDF and three images, ten assets in all. The 78 GLB models (13 per god) went onto a greek-gods-glb release on Look_Over_There; they are meant to become the Greek-gods rooms in Right Door Wrong Exit. Both repositories are public, so these files are world-readable. A request from the Who-Did-It orchestrator to replace char-models.zip on that repo's char-models release was blocked. The owner gave the go-ahead, but the new zip (126,221,678 bytes) is not on the machine; it is presumably behind a claude.ai file link the session cannot open.
+- Context used: 165k of 1M tokens when first checked.
 
 ### Blender tools setup (`2026-11-10_blender-tools-setup_HwQQXcDr.md`)
 
-- State: Idle, completed (paused). Model: claude-opus-5-5. Created 2026-11-10 20:28 UTC, last activity 2026-11-20 02:11 UTC.
-- What it did: The long-running Blender tools session (created 10 November, reactivated and resumed 18 times). Ultracode was on. Work was paused at the owner's request and its keep-awake helper was stopped; it says "continue" resumes it.
-- Context used: 215k of 1M tokens.
+- State: Active again (was paused earlier). Model: claude-opus-5-5. Created 2026-11-10 20:28 UTC, last activity 2026-11-20 02:11 UTC.
+- What it did: Working on the HollowMere caves for Who Did It. Its cave-carving tool passed an independent check after five fix rounds and is committed and pushed with 26 passing tests. From a cave section's plan the tool builds the rock, the collision and the crawl, squeeze and climb zones, then walks the result at the player's true body widths and reports traps, unguarded drops, rock too thin between passages, and forced moves that could be skipped. Open items: cracks 0.42 to 0.6 metres wide are not flagged, a crawl ending in a low dome is one-way, and one large test section has too much collision mesh. The cave design is running two more repair rounds, and five cave calls are waiting for the owner to accept or answer one by one. It was created on 10 November and resumed 18 times.
+- Context used: 215k of 1M tokens when first checked.
 
 ### Counts after the 20 November recheck
 
@@ -804,4 +804,4 @@ The five sessions below run on the owner's own computer through Remote Control (
 - Archived since 17 November: Flake fix for manhunt test; Fix two flaky server tests (mugFlight, manhunt); 11T round 11 tooling; 11D round 11 decisions; Story P0 (HollowMere arc design); Story S3 (protocol and client cards); Fix timing-dependent waits in server tests.
 - New since 17 November: the five local sessions above, AI MCP tool for pipeline applications, Round 11 11F figure sprites, Round 11 11R the renderer, 11P round 11 prop list, Check other server tests for sleep-based timing races, Documentation audit plan, and the two flake-fix sessions.
 - Repository activity since 17 November 12:00 UTC: 131 commits in Who-Did-It (56 merges, PR #579 latest), 29 in Earth_Worldbuild, 32 in Look_Over_There, 24 in esc-ZINE99 (Dr. Tox Fall and Dr. Tox Finale built, with 199 code-drawn assets and seven web modes), 18 in Pipelines-Plugin (documentation audit; the vast plugin, PR #38; film She Does Not Run, PR #39).
-- Vast.ai: the plugin (`plugins/vast/`) was added with biweekly per-price-band GPU-hour budgets (up to $1/hr 100 h, $1.50 50 h, $2.50 30 h, $5 10 h, $10 4 h per rolling 14 days). Its first live rental ran on 20 November. This is the start of the owner's hourly-GPU plan, ahead of the 70 to 80 percent crawl.
+- Vast.ai: the plugin (`plugins/vast/`) was added with biweekly per-price-band GPU-hour budgets (up to $1/hr 100 h, $1.50 50 h, $2.50 30 h, $5 10 h, $10 4 h per rolling 14 days). Its first live use was on 19 November (two one-hour rentals that rendered 370 scenes); PR #41 then fixed what that run broke. This is the start of the owner's hourly-GPU plan, ahead of the 70 to 80 percent crawl.

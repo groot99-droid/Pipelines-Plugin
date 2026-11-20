@@ -2,9 +2,9 @@
 
 ## Local session status (checked 20 November 2026)
 
-- State: Idle, completed (paused). Model: claude-opus-5-5.
-- The long-running Blender tools session (created 10 November, reactivated and resumed 18 times). Ultracode was on. Work was paused at the owner's request and its keep-awake helper was stopped; it says "continue" resumes it.
-- Context used: 215k of 1M tokens.
+- State: Active again (was paused earlier). Model: claude-opus-5-5.
+- Working on the HollowMere caves for Who Did It. Its cave-carving tool passed an independent check after five fix rounds and is committed and pushed with 26 passing tests. From a cave section's plan the tool builds the rock, the collision and the crawl, squeeze and climb zones, then walks the result at the player's true body widths and reports traps, unguarded drops, rock too thin between passages, and forced moves that could be skipped. Open items: cracks 0.42 to 0.6 metres wide are not flagged, a crawl ending in a low dome is one-way, and one large test section has too much collision mesh. The cave design is running two more repair rounds, and five cave calls are waiting for the owner to accept or answer one by one. It was created on 10 November and resumed 18 times.
+- Context used: 215k of 1M tokens when first checked.
 
 
 | Field | Value |

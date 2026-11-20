@@ -2,9 +2,9 @@
 
 ## Local session status (checked 20 November 2026)
 
-- State: Running. Model: claude-fable-5-2.
-- Rented its first Vast.ai GPU: an RTX 3090 at $0.1889 an hour with a one-hour cap, for a Dr. Tox build (the session title); the recipes it ran were Blender setup checks. The rental went through the new vast plugin quote, confirm and deadline gates. At last check Blender was still unpacking on the instance, and the session was waiting. The plan was at step 4 of 7.
-- Spend meter after about five minutes: $0.02. Budget band up to $1/hr: 99 of 100 hours left. Context used: 282k of 400k tokens.
+- State: Running when first checked, finished by the next morning. Model: claude-fable-5-2.
+- The first live use of the vast plugin. Two one-hour rentals of an RTX 3090 (listed at about nineteen cents an hour) rendered all 370 Blender scenes of the 13 esc-ZINE99 games: 144 build files, 152 blend files and 543 PNG renders, about 1.1 GB, now on the owner's machine, with an HTML gallery. It also opened PR #41, which fixed the faults the live run exposed (merged 20 November, 05:31 UTC). The account was charged $0.54 for about $0.42 of metered hours, because bandwidth and stopped-disk storage are not metered. Instance 61558327 was stopped and kept, which still bills storage until it is destroyed. Another session asked it to push a branch of JPEG contact sheets (renders/vast-first-pass); it was waiting for the owner's go-ahead. [Evidence: its events, the SSH key session's relays, PR #41]
+- Spend meter at the first check: $0.02 after five minutes. Budget band up to $1 an hour: 99 of 100 hours left at that point.
 
 
 | Field | Value |

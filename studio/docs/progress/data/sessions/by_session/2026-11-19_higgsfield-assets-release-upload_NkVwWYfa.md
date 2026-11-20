@@ -2,9 +2,9 @@
 
 ## Local session status (checked 20 November 2026)
 
-- State: Idle, waiting for the owner. Model: claude-sonnet-5-5.
-- Titled as an upload of Higgsfield assets as a release. Its last question to the owner was "Is this the update you meant with the link?", so it is waiting on a reply.
-- Context used: 165k of 1M tokens.
+- State: Idle, waiting on the owner. Model: claude-sonnet-5-5.
+- Published the owner's Higgsfield material as GitHub releases. Six new zips of Greek-god 3D assets (Morpheus, Hypnos, Selene, Nyx, Thanatos, Oneiros, about 4.3 GB) went onto a Higgsfield Assets release on Pipelines-Plugin, with a lookbook PDF and three images, ten assets in all. The 78 GLB models (13 per god) went onto a greek-gods-glb release on Look_Over_There; they are meant to become the Greek-gods rooms in Right Door Wrong Exit. Both repositories are public, so these files are world-readable. A request from the Who-Did-It orchestrator to replace char-models.zip on that repo's char-models release was blocked. The owner gave the go-ahead, but the new zip (126,221,678 bytes) is not on the machine; it is presumably behind a claude.ai file link the session cannot open.
+- Context used: 165k of 1M tokens when first checked.
 
 
 | Field | Value |

@@ -2,9 +2,9 @@
 
 ## Local session status (checked 20 November 2026)
 
-- State: Idle, blocked. Model: claude-fable-5-2.
-- Titled as a question about where the public SSH key lives. Its last summary says the Vast GPU session needed the VAST_API_KEY, and the fix was to restart the Claude app or run docs/setup_keys.py. The Vast GPU session above then rented a card, which suggests the key was supplied (inferred from the rental, not stated).
-- Context used: 235k of 1M tokens.
+- State: Idle, waiting on the owner. Model: claude-fable-5-2.
+- Titled as a question about where the public SSH key lives, it became the coordinator for the Dr. Tox Blender work on the owner's machine. It prepared the hospital-room job on its own branch (claude/hospital-room-blockout), started the Vast GPU sessions, and relayed the esc-ZINE99 queue of 154 locations and 370 scenes across 13 games. The owner told it to scale the building up: if the hospital room would only take a minute, build more scenes. On keys: the owner had set VAST_API_KEY as a Windows environment variable themselves. The first Vast session reported the key as not set only because the Claude app had been running when it was added. The fix offered was to restart the app, or to run docs/setup_keys.py and enter the key on its local page. No key value appears in anything the session recorded; the sessions only reported whether the key was set.
+- Its last report: a push of the render contact sheets was waiting for the owner. Context used: 235k of 1M tokens when first checked.
 
 
 | Field | Value |

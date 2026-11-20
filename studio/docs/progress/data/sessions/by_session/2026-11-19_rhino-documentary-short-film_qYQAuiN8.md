@@ -3,8 +3,8 @@
 ## Local session status (checked 20 November 2026)
 
 - State: Idle, completed. Model: claude-opus-5-5.
-- Made She Does Not Run, a 2:20 rhino short film, with the video editor. Found and fixed a video-editor bug (every segment is now cut to whole frames so audio stays in sync). PR #39 merged to Pipelines-Plugin main; release v5 is public. Six CI jobs were still running on main at last check. This is the first completed film from the video editor, and the first use of it beyond editing tests.
-- Context used: 533k of 1M tokens.
+- Made She Does Not Run, a 2:20 rhino short film, with the video editor, and put its edit in the repository. It fixed a video-editor bug so that every cut is a whole number of frames, which keeps sound and picture in sync. PR #39 merged to Pipelines-Plugin main (main has no required checks, so it merged immediately). The repo gained a films/ folder holding the cut list, finish script and cue sheet, narration script, subtitles, title and end cards, and a README with rebuild steps, with local paths rewritten to relative ones. Release film-she-does-not-run-v5 is public: the 1080p film (92 MB), a 720p copy, subtitles and a zip of the 12 narration lines. The raw clips and edit versions 1 to 4 stay on the owner's machine. Local checks passed: ui-design verify, 180 video-editor tests, 13 docs tests.
+- Context used: 533k of 1M tokens when first checked.
 
 
 | Field | Value |
