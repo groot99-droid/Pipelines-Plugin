@@ -14,7 +14,8 @@ session, and reports here.
     python studio/pipeline/studio_run.py advance <run-id>
     python studio/pipeline/studio_run.py back    <run-id> --why "..."
     python studio/pipeline/studio_run.py keep    <run-id> <file in the run folder> --role final|variant|reference|export|concept-frame
-    python studio/pipeline/studio_run.py branch  <run-id> cloud|local   (a spend pipeline that also has a local branch)
+    python studio/pipeline/studio_run.py branch  <run-id> cloud|local|remote   (a pipeline with more than one branch)
+    python studio/pipeline/studio_run.py lease   <run-id> <vast-instance-id>   (the remote branch: claim a rented GPU)
     python studio/pipeline/studio_run.py park    <run-id> --constraint NAME --needs "..."
     python studio/pipeline/studio_run.py unpark  <run-id>
     python studio/pipeline/studio_run.py status  [<run-id>] [--json]
@@ -408,6 +409,49 @@ def confirmed_before_output(env, state, stage, run_dir):
                           "The work ran ahead of the go-ahead.")
 
 
+def branches_of(cfg):
+    """The branches a pipeline offers, in the order the spec implies them.
+    A spend pipeline with `local_workload` has cloud and local; a local-compute
+    one has local; `remote_gpu: optional` adds remote (a GPU rented through
+    the vast plugin) beside them."""
+    found = []
+    if cfg.get("local_workload"):
+        found += ["cloud", "local"]
+    elif cfg.get("class") == "local-compute":
+        found += ["local"]
+    elif cfg.get("remote_gpu"):
+        found += ["cloud"]
+    if cfg.get("remote_gpu"):
+        found.append("remote")
+    return found
+
+
+def execute_go_ahead_epoch(state):
+    times = [c.get("at_epoch") for c in state.get("confirmations", []) if c["what"] == "execute"]
+    times = [t for t in times if isinstance(t, (int, float))]
+    return max(times) if times else None
+
+
+def lease_held(state):
+    """A remote-branch run claims one rental from the vast ledger, after the
+    execute go-ahead, and that rental began no earlier than the go-ahead."""
+    import vast_lease  # beside this file
+
+    lease = state.get("lease")
+    if not lease:
+        raise Refused("the remote branch runs on a rented GPU, and this run has claimed none: "
+                      f"studio_run.py lease {state['run_id']} <vast-instance-id>")
+    rental = vast_lease.rental(lease["instance_id"])
+    if rental is None:
+        raise Refused(f"the vast ledger has no rental {lease['instance_id']} (VAST_STATE_DIR)")
+    given = execute_go_ahead_epoch(state)
+    if given is None or lease["claimed_epoch"] < given:
+        raise Refused("the lease was claimed before the execute go-ahead. Claim it again.")
+    if rental.get("started", 0) < given - 60:
+        raise Refused(f"rental {lease['instance_id']} began before the execute go-ahead: "
+                      "nothing that spends happens before it")
+
+
 @check("token_held")
 def token_held(env, state, stage, run_dir):
     """A local-compute pipeline runs nothing until this run holds a live PASS
@@ -416,6 +460,9 @@ def token_held(env, state, stage, run_dir):
 
     cfg = env.pipeline(state["pipeline"])
     workload = cfg.get("workload")
+    if state.get("branch") == "remote":  # a rented GPU, through the vast plugin
+        lease_held(state)
+        return
     if cfg.get("local_workload"):  # a spend pipeline with a local branch
         branch = state.get("branch")
         if branch is None:
@@ -588,6 +635,7 @@ def create_run(env, args):
         "gate_written": None,
         "kept": [],
         "branch": None,
+        "lease": None,
         "events": [],
     }
     others = set_note(env, state, args.note) if args.note else []
@@ -853,6 +901,8 @@ def cmd_back(env, args):
     redone = set(ids[target:])
     state["confirmations"] = [given for given in state.get("confirmations", [])
                               if given["what"] not in redone]
+    if "execute" in redone:
+        state["lease"] = None
     state["completed_stages"] = state["completed_stages"][:target]
     state["next_stage_index"] = target
     if any(attesting_stage(stage) for stage in env.stages[target:]):
@@ -921,8 +971,10 @@ def cmd_keep(env, args):
 def cmd_branch(env, args):
     state = load_state(env, args.run_id)
     cfg = env.pipeline(state["pipeline"])
-    if not cfg.get("local_workload"):
-        raise Refused(f"`{state['pipeline']}` has no local branch to choose")
+    offered = branches_of(cfg)
+    if len(offered) < 2 or args.branch not in offered:
+        raise Refused(f"`{state['pipeline']}` has no {args.branch} branch to choose"
+                      + (f" (it has: {', '.join(offered)})" if len(offered) > 1 else ""))
     if state["status"] != "active":
         raise Refused(f"the run is {state['status']}")
     stage = current_stage(env, state)
@@ -930,11 +982,49 @@ def cmd_branch(env, args):
         raise Refused("the branch is chosen before execute is done")
     if any(c["what"] == "execute" for c in state.get("confirmations", [])) and state.get("branch") not in (None, args.branch):
         raise Refused("the execute go-ahead was given for the other branch. Say so to the author and confirm again.")
+    if state.get("branch") != args.branch:
+        state["lease"] = None
     state["branch"] = args.branch
     log_event(state, "branch", args.branch)
     save_state(env, state)
-    print(f"branch    {args.branch}"
-          + (f" (needs a consumed `{cfg['local_workload']}` compute token at execute)" if args.branch == "local" else ""))
+    workload = cfg.get("local_workload") or cfg.get("workload")
+    needs = {"local": f" (needs a consumed `{workload}` compute token at execute)",
+             "remote": " (needs a rented GPU claimed with `lease` after the execute go-ahead)"}
+    print(f"branch    {args.branch}" + needs.get(args.branch, ""))
+    return EXIT_OK
+
+
+def cmd_lease(env, args):
+    """Claim a rental from the vast ledger for this run's remote branch."""
+    import vast_lease  # beside this file
+
+    state = load_state(env, args.run_id)
+    if state["status"] != "active":
+        raise Refused(f"the run is {state['status']}")
+    if state.get("branch") != "remote":
+        raise Refused(f"the run is not on the remote branch: studio_run.py branch {state['run_id']} remote")
+    stage = current_stage(env, state)
+    if stage is None or stage["id"] != "execute":
+        raise Refused("a rental is claimed at execute")
+    given = execute_go_ahead_epoch(state)
+    if given is None:
+        raise Refused("there is no execute go-ahead yet. Nothing that spends happens before it.")
+    rental = vast_lease.rental(args.instance_id)
+    if rental is None:
+        raise Refused(f"the vast ledger has no rental {args.instance_id}. Rent through the vast plugin "
+                      "(quote, then rent with the author's yes), or set VAST_STATE_DIR to its ledger.")
+    if rental.get("ended") is not None:
+        raise Refused(f"rental {args.instance_id} has already ended")
+    if rental.get("started", 0) < given - 60:
+        raise Refused(f"rental {args.instance_id} began before the execute go-ahead")
+    moment = now()
+    state["lease"] = {"instance_id": str(args.instance_id), "claimed": stamp(moment),
+                      "claimed_epoch": moment.timestamp(), "dph": rental.get("dph"),
+                      "environment": rental.get("environment")}
+    log_event(state, "lease", str(args.instance_id))
+    save_state(env, state)
+    print(f"lease     vast instance {args.instance_id} ({rental.get('environment')}, ${rental.get('dph')}/hr) "
+          "is this run's GPU")
     return EXIT_OK
 
 
@@ -1098,10 +1188,15 @@ def build_parser():
     keep.add_argument("--role", required=True)
     keep.set_defaults(run=cmd_keep)
 
-    branch = commands.add_parser("branch", help="choose the cloud or local branch of a pipeline that has both")
+    branch = commands.add_parser("branch", help="choose the branch of a pipeline that has more than one")
     branch.add_argument("run_id")
-    branch.add_argument("branch", choices=("cloud", "local"))
+    branch.add_argument("branch", choices=("cloud", "local", "remote"))
     branch.set_defaults(run=cmd_branch)
+
+    lease = commands.add_parser("lease", help="claim a GPU rented through the vast plugin for the remote branch")
+    lease.add_argument("run_id")
+    lease.add_argument("instance_id", help="the Vast instance id, as the vast plugin's rent returned it")
+    lease.set_defaults(run=cmd_lease)
 
     park = commands.add_parser("park", help="stop a run on a constraint that cannot be resolved")
     park.add_argument("run_id")

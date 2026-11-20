@@ -1,0 +1,13 @@
+{
+  "_comment": "Spend limits the vast server enforces. Each band is a ceiling on $/hr (dph_total) with a budget of GPU hours over a rolling window of window_days. A rental counts against the band its price falls in. An offer above the highest band is refused. The author set these on 2026-11-19; change them here, not in code.",
+  "window_days": 14,
+  "quote_ttl_seconds": 900,
+  "price_tolerance": 0.02,
+  "bands": [
+    {"max_dph": 1.00, "hours": 100},
+    {"max_dph": 1.50, "hours": 50},
+    {"max_dph": 2.50, "hours": 30},
+    {"max_dph": 5.00, "hours": 10},
+    {"max_dph": 10.00, "hours": 4}
+  ]
+}

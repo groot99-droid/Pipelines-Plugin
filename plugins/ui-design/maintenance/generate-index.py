@@ -100,8 +100,9 @@ TOOL_PURPOSE = {
                "udgt, a teardown engine that pulls a game's repository apart into a dataset, "
                "chapters and an explorer page; reach, setup and routing skills for reading the "
                "internet through Agent Reach; video-editor, video editing by conversation with a "
-               "questionnaire-driven set of recipes and a dry-run publisher; and graphic-design, a print "
-               "and screen catalog with an SVG linter, a print preflight and a render helper.",
+               "questionnaire-driven set of recipes and a dry-run publisher; graphic-design, a print "
+               "and screen catalog with an SVG linter, a print preflight and a render helper; and vast, "
+               "an MCP server that rents cloud GPUs for headless Blender and ComfyUI within hour budgets.",
     "sound-library": "The author's own sound effects, catalogued by name, category, duration and hash; "
                      "the files live on GitHub Releases and are fetched on request.",
     "studio": "Checkpointed production pipelines and the notes they leave behind.",

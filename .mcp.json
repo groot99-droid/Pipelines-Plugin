@@ -16,6 +16,17 @@
         "-I",
         "brushes/pipeline/mcp_server.py"
       ]
+    },
+    "vast": {
+      "command": "python",
+      "args": [
+        "-I",
+        "plugins/vast/server/server.py"
+      ],
+      "env": {
+        "VAST_KEYS_FILE": "~/.rosw/keys.env",
+        "VAST_WORK_DIR": "studio/pipeline/runs"
+      }
     }
   }
 }

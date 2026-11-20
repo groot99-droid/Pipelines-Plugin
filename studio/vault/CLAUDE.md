@@ -233,6 +233,11 @@ them because they are "the studio's" is a category error.
   the spec, every tool it may call; it calls no other.
 - A connector returns a short-lived link. The file is downloaded into the run
   folder during execute; the link is never written down.
+- A run on a `remote` branch sends its inputs to a GPU rented through the vast
+  plugin. The recipe pastes the plugin's quote, which names what leaves and the
+  hours and price it may spend. The rental is made after the execute go-ahead
+  and claimed with `python studio/pipeline/studio_run.py lease <run-id> <instance-id>`.
+  The instance is destroyed once the files are downloaded into the run folder.
 
 ## Refusals
 
